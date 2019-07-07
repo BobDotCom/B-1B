@@ -40,9 +40,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.013</x-m>
-		<y-m>0.053</y-m>
-		<z-m>0.097</z-m>
+		<x-m>0.00542</x-m>
+		<y-m>0.05264</y-m>
+		<z-m>0.09826</z-m>
 	</center>
 </animation>
 <animation>
@@ -98,6 +98,7 @@ sweat by maggse
 <animation>
 	<type>material</type>
 	<object-name>fltdir</object-name>
+<object-name>pitch_steer</object-name>
 	<emission>
 		<red>0.7</red>
 		<green>0.4</green>

@@ -29,9 +29,9 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.005</x-m>
-		 <y-m>-0.449</y-m>
-		 <z-m>0.148</z-m>
+		 <x-m>0.00136</x-m>
+		 <y-m>-0.44896</y-m>
+		 <z-m>0.15779</z-m>
    </center>
  </animation>
  <animation>
@@ -125,9 +125,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
-		<y-m>-0.421</y-m>
-		<z-m>0.148</z-m>
+		<x-m>0.00136</x-m>
+		<y-m>-0.42175</y-m>
+		<z-m>0.15780</z-m>
 	</center>
 </animation>
 <animation>
@@ -220,9 +220,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
-		<y-m>-0.393</y-m>
-		<z-m>0.148</z-m>
+		<x-m>0.00136</x-m>
+		<y-m>-0.39317</y-m>
+		<z-m>0.15776</z-m>
 	</center>
 </animation>
 <animation>
@@ -314,9 +314,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
-		<y-m>-0.366</y-m>
-		<z-m>0.148</z-m>
+		<x-m>0.00136</x-m>
+		<y-m>-0.36587</y-m>
+		<z-m>0.15777</z-m>
 	</center>
 </animation>
 <animation>

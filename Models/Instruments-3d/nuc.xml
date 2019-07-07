@@ -26,9 +26,9 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.005</x-m>
-		 <y-m>0.165</y-m>
-		 <z-m>0.073</z-m>
+		 <x-m>0.00718</x-m>
+		 <y-m>0.16431</y-m>
+		 <z-m>0.06261</z-m>
 	 </center>
  </animation>
  <animation>
@@ -79,9 +79,9 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
-		<y-m>0.165</y-m>
-		<z-m>0.037</z-m>
+		<x-m>0.00655</x-m>
+		<y-m>0.16424</y-m>
+		<z-m>0.04509</z-m>
 	</center>
 </animation>
 <animation>

@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <!-- horizontal situation indicator -->
+  <name>HSI</name>
+  <path>A-10-HSI.ac</path>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>hsi</object-name>
+    <condition>
+      <greater-than>
+	<property>systems/electrical/outputs/hsi</property>
+	<value>24</value>
+      </greater-than>
+    </condition>
+    <property>orientation/heading-magnetic-deg</property>
+    <axis><x>1</x></axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>cdi</object-name>
+    <condition>
+      <greater-than>
+	<property>systems/electrical/outputs/hsi</property>
+	<value>24</value>
+      </greater-than>
+    </condition>
+    <property>orientation/heading-magnetic-deg</property>
+    <axis><x>1</x></axis>
+  </animation>
+
+  <!-- If tacan selected and in range, the needle points to the beacon -->
+  <animation>
+    <type>rotate</type>
+    <object-name>bearing-needle-1</object-name>
+    <condition>
+      <greater-than>
+	<property>systems/electrical/outputs/hsi</property>
+	<value>24</value>
+      </greater-than>
+      <or>
+        <and>
+          <property>instrumentation/tacan/serviceable</property>
+          <property>instrumentation/tacan/in-range</property>
+        </and>
+        <and>
+          <property>instrumentation/adf/serviceable</property>
+          <property>instrumentation/adf/in-range</property>
+        </and>
+      </or>
+    </condition>
+    <property>/instrumentation/hsi/bearing-needle-1-deg</property>
+    <axis><x>-1</x></axis>
+  </animation>
+
+  <!-- hide the distance indicator if neither tacan nor DME is serviceable or in range -->
+  <animation>
+    <type>select</type>
+    <object-name>miles-flag</object-name>
+    <condition>
+      <and>
+        <or>
+          <not>
+            <property>instrumentation/tacan/serviceable</property>
+          </not>
+          <not>
+            <property>instrumentation/tacan/in-range</property>
+          </not>
+        </or>
+        <or>
+          <not>
+            <property>instrumentation/nav/serviceable</property>
+          </not>
+          <not>
+            <property>instrumentation/nav/dme-in-range</property>
+          </not>
+        </or>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>off-flag</object-name>
+    <condition>
+      <less-than>
+	<property>systems/electrical/outputs/hsi</property>
+	<value>24</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- tacan distance digital display -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>miles-drum-1</object-name>
+    <property>instrumentation/hsi/indicated-distance-nm</property>
+    <factor>0.1</factor>
+    <offset>-1</offset>
+    <axis><y>-1</y></axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>miles-drum-2</object-name>
+    <property>instrumentation/hsi/indicated-distance-nm</property>
+    <factor>0.01</factor>
+    <offset>-10</offset>
+    <step>10</step>
+    <scroll>0.5</scroll>
+    <axis><y>-1</y></axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>miles-drum-3</object-name>
+    <property>instrumentation/hsi/indicated-distance-nm</property>
+    <factor>0.001</factor>
+    <offset>-100</offset>
+    <step>100</step>
+    <scroll>0.5</scroll>
+    <axis><y>-1</y></axis>
+  </animation>
+
+  
+  <!-- course digital display -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>course-drum-1</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <factor>0.1</factor>
+    <offset>-1</offset>
+    <axis><y>-1</y></axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>course-drum-2</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <factor>0.01</factor>
+    <offset>-10</offset>
+    <step>10</step>
+    <scroll>0.5</scroll>
+    <axis><y>-1</y></axis>
+  </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>course-drum-3</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <factor>0.001</factor>
+    <offset>-100</offset>
+    <step>100</step>
+    <scroll>0.5</scroll>
+    <axis><y>-1</y></axis>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>course-knob</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <center>
+      <y-m>0.0491</y-m>
+      <z-m>-0.0413</z-m>
+    </center>
+    <axis><x>-1</x></axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav[0]/radials/selected-deg</property>
+        <factor>1</factor>
+        <min>0</min>
+        <max>360</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>heading-set-knob</object-name>
+    <property>autopilot/settings/heading-bug-deg</property>
+    <center>
+      <y-m>-0.0491</y-m>
+      <z-m>-0.0413</z-m>
+    </center>
+    <axis><x>-1</x></axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>autopilot/settings/heading-bug-deg</property>
+        <factor>1</factor>
+        <min>0</min>
+        <max>361</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+  <!-- ============ CDI =========== -->
+
+  <!-- HSI-course-card -->
+  <animation>
+    <type>rotate</type>
+    <object-name>HSI-course-card</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <axis><x>-1</x></axis>
+  </animation>
+
+  <!--bearing-validity-flag-->
+  <animation>
+    <type>select</type>
+    <object-name>bearing-validity-flag</object-name>
+    <condition>
+      <greater-than>
+	<property>systems/electrical/outputs/hsi</property>
+	<value>24</value>
+      </greater-than>
+      <or>
+	<and>
+	  <not>
+	    <property>instrumentation/nav/in-range</property>
+	  </not>
+	  <property>instrumentation/nav/serviceable</property>
+	</and>
+	<and>
+	  <not>
+	    <property>instrumentation/tacan/in-range</property>
+	  </not>
+	  <property>instrumentation/tacan/serviceable</property>
+	</and>
+        </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bearing-validity-flag</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <axis><x>-1</x></axis>
+  </animation>
+
+  <!--course-deviation-indicator off (CDI)-->
+  <animation>
+    <type>select</type>
+    <object-name>course-deviation-indicator-off</object-name>
+    <condition>
+      <or>
+	<less-than>
+	  <property>systems/electrical/outputs/hsi</property>
+	  <value>24</value>
+	</less-than>
+	<and>
+	  <property>instrumentation/nav/serviceable</property>
+          <not>
+	    <property>instrumentation/nav/in-range</property>
+          </not>
+	</and>
+      </or>
+    </condition>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>course-deviation-indicator-off</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <axis><x>-1</x></axis>
+  </animation>
+
+  <!--  ILS on CDI  -->
+  <!-- ils course-deviation-indicator on-->
+  <animation>
+    <type>select</type>
+    <object-name>course-deviation-indicator-on</object-name>
+    <condition>
+      <property>instrumentation/nav/in-range</property>
+      <property>instrumentation/nav/serviceable</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>course-deviation-indicator-on</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <axis><x>-1</x></axis>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>course-deviation-indicator-on</object-name>
+    <property>instrumentation/nav[0]/heading-needle-deflection</property>
+    <interpolation>
+      <entry><ind>-10</ind><dep>-0.024</dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>10</ind><dep>0.024</dep></entry>
+    </interpolation>
+    <axis><y>1</y></axis>
+  </animation>
+  <!-- ils to-from (to)-->
+  <animation>
+    <type>select</type>
+    <object-name>to-from-to</object-name>
+    <condition>
+      <equals>
+	<property>instrumentation/nav[0]/to-flag</property>
+	<value>true</value>
+      </equals>
+      <greater-than>
+	<property>systems/electrical/outputs/hsi</property>
+	<value>24</value>
+      </greater-than>
+      <property>instrumentation/nav/serviceable</property>
+      <property>instrumentation/nav/in-range</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>to-from-to</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <axis><x>-1</x></axis>
+  </animation>
+  <!-- ils to-from (from)-->
+  <animation>
+    <type>select</type>
+    <object-name>to-from-from</object-name>
+    <condition>
+      <equals>
+	<property>instrumentation/nav[0]/from-flag</property>
+	<value>true</value>
+      </equals>
+      <greater-than>
+	<property>systems/electrical/outputs/hsi</property>
+	<value>24</value>
+      </greater-than>
+      <property>instrumentation/nav/serviceable</property>
+      <property>instrumentation/nav/in-range</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>to-from-from</object-name>
+    <property>instrumentation/nav[0]/radials/selected-deg</property>
+    <axis><x>-1</x></axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>tcn-course-deviation-indicator-on</object-name>
+    <object-name>tcn-to-from-from</object-name>
+    <object-name>tcn-to-from-to</object-name>
+    <condition>
+      <not>
+        <property>/sim/fdm-initialized</property>
+      </not>
+    </condition>
+  </animation>
+
+  <!-- lighting -->
+
+  <animation>
+    <object-name>panel</object-name>
+    <type>material</type>
+    <condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
+    <emission> 
+      <factor-prop>controls/lighting/panel-norm</factor-prop>
+      <red>0.385</red>
+      <green>0.168</green>
+      <blue>0.07</blue>
+    </emission>
+  </animation>
+  <animation>
+    <object-name>instrument</object-name>
+    <type>material</type>
+    <condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
+    <emission> 
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>0.55</red>
+      <green>0.24</green>
+      <blue>0.10</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>5</max-m>
+  </animation>
+
+</PropertyList>

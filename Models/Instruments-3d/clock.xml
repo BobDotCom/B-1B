@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>clock.ac</path>
+
+  <animation>
+    <object-name>AdjKnob</object-name>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>face</object-name>
+    <object-name>heures</object-name>
+    <object-name>minutes</object-name>
+    <object-name>secondes</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>AdjKnob</object-name>
+    <object-name>face</object-name>
+    <object-name>heures</object-name>
+    <object-name>minutes</object-name>
+    <object-name>secondes</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>heures</object-name>
+    <property>/instrumentation/clock/indicated-sec</property>
+    <factor>0.00833333333333333</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>minutes</object-name>
+    <property>/instrumentation/clock/indicated-sec</property>
+    <factor>0.1</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>secondes</object-name>
+    <property>/instrumentation/clock/indicated-sec</property>
+    <factor>6</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

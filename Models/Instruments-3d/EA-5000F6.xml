@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>EA-5000F6.ac</path>
+
+<animation>
+	<type>material</type>
+	<object-name>Background</object-name>
+	<object-name>Pitch</object-name>
+	<object-name>Markers</object-name>
+	<object-name>Ring</object-name>
+	<object-name>Base_01</object-name>
+	<object-name>Base_02</object-name>
+	<emission>
+		<red>0.7</red>
+		<green>0.7</green>
+		<blue>0.7</blue>
+		<factor-prop>controls/lighting/panel-norm</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<name>PitchTranslation</name>
+	<type>translate</type>
+	<object-name>Pitch</object-name>
+	<property>/instrumentation/attitude-indicator/indicated-pitch-deg</property>
+	<factor>-0.000530</factor>
+		<min-m>-0.01575</min-m>
+		<max-m>0.01575</max-m>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<name>BezelTranslation</name>
+	<type>translate</type>
+	<object-name>Markers</object-name>
+	<property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+	<factor>-0.000530</factor>
+		<min-m>-0.01575</min-m>
+		<max-m>0.01575</max-m>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Background</object-name>
+	<object-name>PitchTranslation</object-name>
+	<property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+	<factor>-1</factor>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+ <!-- 
+    This cannot be part of the same rotation as the others, or else
+    it screws up the alpha drawing order and hides the bezel.
+ -->
+<animation>
+	<type>rotate</type>
+	<object-name>Ring</object-name>
+	<property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+	<factor>-1</factor>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<!-- Label Text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Attitude Indicator</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.07</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.01</x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+</text>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
+</animation>
+
+</PropertyList>

@@ -27,9 +27,9 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
-		<y-m>0.165</y-m>
-		<z-m>0.064</z-m>
+		<x-m>0.00385</x-m>
+		<y-m>0.27739</y-m>
+		<z-m>0.06547</z-m>
 	</center>
 </animation>
 
@@ -67,9 +67,9 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
-		<y-m>0.165</y-m>
-		<z-m>0.064</z-m>
+		<x-m>0.00385</x-m>
+		<y-m>0.25923</y-m>
+		<z-m>0.06455</z-m>
 	</center>
 </animation>
 
@@ -107,9 +107,9 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
-		<y-m>0.165</y-m>
-		<z-m>0.064</z-m>
+		<x-m>0.00385</x-m>
+		<y-m>0.29017</y-m>
+		<z-m>0.06317</z-m>
 	</center>
 </animation>
 
@@ -147,9 +147,9 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
-		<y-m>0.165</y-m>
-		<z-m>0.064</z-m>
+		<x-m>0.00385</x-m>
+		<y-m>0.31693</y-m>
+		<z-m>0.06300</z-m>
 	</center>
 </animation>
 

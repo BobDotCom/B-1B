@@ -12,9 +12,9 @@
 		<factor>-0.1</factor>
 		<offset>1</offset>
 		<center>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
+			<x-m>0.01198</x-m>
+			<y-m>0.01005</y-m>
+			<z-m>0.00123</z-m>
 		</center>
 		<axis>
 			<x>0</x>
@@ -38,9 +38,9 @@
 			</entry>
 		</interpolation>
 		<center>
-			<x-m>0.016</x-m>
-			<y-m>0.009</y-m>
-			<z-m>0</z-m>
+			<x-m>0.01579</x-m>
+			<y-m>0.00841</y-m>
+			<z-m>0.00773</z-m>
 		</center>
 		<axis>
 			<x>0</x>
@@ -84,9 +84,9 @@
 		<factor>-0.1</factor>
 		<offset>1</offset>
 		<center>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
+			<x-m>0.01198</x-m>
+			<y-m>0.01744</y-m>
+			<z-m>0.00123</z-m>
 		</center>
 		<axis>
 			<x>0</x>
@@ -102,9 +102,9 @@
 		<factor>-0.1</factor>
 		<offset>1</offset>
 		<center>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
+			<x-m>0.01198</x-m>
+			<y-m>0.02485</y-m>
+			<z-m>0.00123</z-m>
 		</center>
 		<axis>
 			<x>0</x>
@@ -127,9 +127,9 @@
 			</entry>
 	        </interpolation>
 		<center>
-			<x-m>0.016</x-m>
-			<y-m>-0.050</y-m>
-			<z-m>0</z-m>
+			<x-m>0.01579</x-m>
+			<y-m>-0.04908</y-m>
+			<z-m>0.00063</z-m>
 		</center>
 		<axis>
 			<x>0</x>
@@ -215,7 +215,7 @@
 		<object-name>mount</object-name>
 		<type>material</type>
 		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 			<red>0.44</red>
 			<green>0.27</green>
 			<blue>0.15</blue>
@@ -226,7 +226,7 @@
 		<object-name>xy-knob</object-name>
 		<type>material</type>
 		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 			<red>0.35</red>
 			<green>0.24</green>
 			<blue>0.14</blue>
@@ -237,7 +237,7 @@
 		<object-name>select-knob</object-name>
 		<type>material</type>
 		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 			<red>0.35</red>
 			<green>0.24</green>
 			<blue>0.14</blue>
@@ -252,7 +252,7 @@
 		<object-name>test-button</object-name>
 		<object-name>test-lamp</object-name>
 		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 			<red>0.35</red>
 			<green>0.24</green>
 			<blue>0.14</blue>

@@ -28,9 +28,9 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.007</x-m>
-		 <y-m>-0.041</y-m>
-		 <z-m>0.223</z-m>
+		 <x-m>0.04808</x-m>
+		 <y-m>-0.04141</y-m>
+		 <z-m>0.22288</z-m>
    </center>
  </animation>
  
@@ -88,15 +88,15 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.007</x-m>
-		 <y-m>-0.041</y-m>
-		 <z-m>0.223</z-m>
+		 <x-m>0.00416</x-m>
+		 <y-m>-0.04141</y-m>
+		 <z-m>0.22288</z-m>
    </center>
  </animation>
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>knob_oh.003</object-name>
+	 <object-name>knob_oh.3</object-name>
 	 <property>controls/switches/refuel-slipway</property>
 	 <interpolation>
 		 <entry>
@@ -122,7 +122,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>knob_oh.003</object-name>
+	 <object-name>knob_oh.3</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -138,7 +138,7 @@ maggse
  
  <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.033</object-name>
+	 <object-name>switch_oh.33</object-name>
 	 <property>controls/electric/battery-switch</property>
 	 <interpolation>
 		 <entry>
@@ -164,7 +164,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.033</object-name>
+	 <object-name>switch_oh.33</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -175,12 +175,52 @@ maggse
 		 </binding>
 	 </action>
 </animation>
+<!--  External Power -->
+ <animation>
+	 <type>rotate</type>
+	 <object-name>ExtPowerSwitch</object-name>
+	 <property>controls/electric/external-power</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>10.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.00513</x-m>
+		 <y-m>-0.02386</y-m>
+		 <z-m>0.18099</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>ExtPowerSwitch</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/electric/external-power</property>
+		 </binding>
+	 </action>
+</animation>
 
 <!-- APU-->
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.006</object-name>
+	 <object-name>switch_oh.6</object-name>
 	 <property>controls/APU/APUL_running</property>
 	 <interpolation>
 		 <entry>
@@ -206,7 +246,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.006</object-name>
+	 <object-name>switch_oh.6</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -236,7 +276,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.007</object-name>
+	 <object-name>switch_oh.7</object-name>
 	 <property>controls/APU/APUR_running</property>
 	 <interpolation>
 		 <entry>
@@ -262,7 +302,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.007</object-name>
+	 <object-name>switch_oh.7</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -292,7 +332,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.002</object-name>
+	 <object-name>switch_oh.2</object-name>
 	 <property>controls/APU/APUL_couple</property>
 	 <interpolation>
 		 <entry>
@@ -318,7 +358,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.002</object-name>
+	 <object-name>switch_oh.2</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -340,7 +380,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.003</object-name>
+	 <object-name>switch_oh.3</object-name>
 	 <property>controls/APU/APUR_couple</property>
 	 <interpolation>
 		 <entry>
@@ -366,7 +406,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.003</object-name>
+	 <object-name>switch_oh.3</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -388,7 +428,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.005</object-name>
+	 <object-name>switch_oh.5</object-name>
 	 <property>controls/APU/APUL_bleed</property>
 	 <interpolation>
 		 <entry>
@@ -414,7 +454,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.005</object-name>
+	 <object-name>switch_oh.5</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -434,7 +474,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.004</object-name>
+	 <object-name>switch_oh.4</object-name>
 	 <property>controls/APU/APUR_bleed</property>
 	 <interpolation>
 		 <entry>
@@ -460,7 +500,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.004</object-name>
+	 <object-name>switch_oh.4</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -480,7 +520,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.001</object-name>
+	 <object-name>switch_oh.1</object-name>
 	 <property>controls/APU/APU_crossbleed</property>
 	 <interpolation>
 		 <entry>
@@ -506,7 +546,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.001</object-name>
+	 <object-name>switch_oh.1</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -534,7 +574,7 @@ maggse
 <!-- nav lights-->
  <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.050</object-name>
+	 <object-name>switch_oh.50</object-name>
 	 <property>controls/lighting/nav-lights</property>
 	 <interpolation>
 		 <entry>
@@ -559,7 +599,7 @@ maggse
  </animation>
  <animation>
 	 <type>material</type>
-	 <object-name>switch_oh.050</object-name>
+	 <object-name>switch_oh.50</object-name>
 	 <emission>
 		 <red>0.5</red>
 		 <green>0.3</green>
@@ -570,7 +610,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.050</object-name>
+	 <object-name>switch_oh.50</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -582,11 +622,11 @@ maggse
 	 </action>
 </animation>
 
-<!-- anti collission lights-->
+<!-- anti collision lights-->
 
 <animation>
 	<type>rotate</type>
-	<object-name>switch_oh.049</object-name>
+	<object-name>switch_oh.49</object-name>
 	<property>sim/multiplay/generic/int[0]</property>
 	<interpolation>
 		<entry>
@@ -611,7 +651,7 @@ maggse
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>switch_oh.049</object-name>
+	<object-name>switch_oh.49</object-name>
 	<emission>
 		<red>0.5</red>
 		<green>0.3</green>
@@ -622,7 +662,7 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>switch_oh.049</object-name>
+	<object-name>switch_oh.49</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -637,8 +677,8 @@ maggse
 <!-- instrument lights-->
 
 <animation>
-	<type>rotate</type>
-	<object-name>knob_oh.005</object-name>
+	<type>knob</type>
+	<object-name>knob_oh.5</object-name>
 	<property>controls/lighting/instruments-norm</property>
 	<interpolation>
 		<entry>
@@ -647,7 +687,7 @@ maggse
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-90.0</dep>
+			<dep>-250.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -660,10 +700,19 @@ maggse
 		<y-m>-0.194</y-m>
 		<z-m>0.126</z-m>
 	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/instruments-norm</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>knob_oh.005</object-name>
+	<object-name>knob_oh.5</object-name>
 	<emission>
 		<red>0.5</red>
 		<green>0.3</green>
@@ -672,33 +721,16 @@ maggse
 	</emission>
 </animation>
 
-<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-<animation>
-	<type>pick</type>
-	<object-name>knob_oh.005</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.5</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/lighting/instruments-norm</property>
-		</binding>
-	</action>
-</animation>
-
-
-<animation>
+ <animation>
 	<type>material</type>
-	<object-name>switch_oh.001</object-name>
-	<object-name>switch_oh.002</object-name>
-	<object-name>switch_oh.003</object-name>
-	<object-name>switch_oh.004</object-name>
-	<object-name>switch_oh.005</object-name>
-	<object-name>switch_oh.006</object-name>
-	<object-name>switch_oh.007</object-name>
-	<object-name>switch_oh.033</object-name>
+	<object-name>switch_oh.1</object-name>
+	<object-name>switch_oh.2</object-name>
+	<object-name>switch_oh.3</object-name>
+	<object-name>switch_oh.4</object-name>
+	<object-name>switch_oh.5</object-name>
+	<object-name>switch_oh.6</object-name>
+	<object-name>switch_oh.7</object-name>
+	<object-name>switch_oh.33</object-name>
 	<object-name>oh_panel</object-name>
 	<emission>
 		<red>0.5</red>
