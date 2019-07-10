@@ -1,0 +1,11 @@
+
+<PropertyList>
+
+ <path>AI-Frame.ac</path>
+
+ <animation>
+	 <type>material</type>
+	 <object-name>AI-Frame</object-name>
+</animation>
+
+</PropertyList>

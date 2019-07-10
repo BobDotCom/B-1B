@@ -36,6 +36,7 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>switch_firetest</object-name>
+     <object-name>face</object-name>
 	 <emission>
 		 <red>0.7</red>
 		 <green>0.4</green>

@@ -47,7 +47,7 @@ maggse
 	 <object-name>needle</object-name>
 	 <object-name>Face.001</object-name>
 	 <emission>
-		 <red>0.6</red>
+		 <red>0.8</red>
 		 <green>0.4</green>
 		 <blue>0.3</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>

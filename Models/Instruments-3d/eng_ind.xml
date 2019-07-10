@@ -33,7 +33,7 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>ind1</object-name>
 	 <emission>
-		 <red>0.8</red>
+		<red>0.8</red>
 		 <green>0.4</green>
 		 <blue>0.3</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>

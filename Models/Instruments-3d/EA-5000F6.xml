@@ -13,10 +13,10 @@
 	<object-name>Base_01</object-name>
 	<object-name>Base_02</object-name>
 	<emission>
-		<red>0.7</red>
-		<green>0.7</green>
-		<blue>0.7</blue>
-		<factor-prop>controls/lighting/panel-norm</factor-prop>
+		<red>0.8</red>
+		 <green>0.4</green>
+		 <blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 

@@ -1,0 +1,771 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+B-1B set file.
+
+2007-5-10 Markus Zojer
+************************************************************************
+-->
+
+<PropertyList>
+  <sim>
+
+    <startup>
+      <splash-texture>Aircraft/B-1B/bone.png</splash-texture>
+    </startup>
+
+    <flight-model>yasim</flight-model>
+    <status>alpha</status>
+    <author>Markus Zojer, Paul Jay Schrenker, pinto</author>
+    <aero>B-1B-yasim</aero>
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <description>Rockwell B-1B Lancer</description>
+
+    <number-views type="int" archive="y">6</number-views>
+
+    <chase-distance-m type="double" archive="y">-65.0</chase-distance-m>
+
+    <view n="0">
+      <internal archive="y">true</internal>
+      <config>
+	      <x-offset-m archive="y">-0.53</x-offset-m><!-- left-/right+ -0.67-->
+	<y-offset-m archive="y">1.15</y-offset-m><!-- up+/down- 1.37-->
+	<z-offset-m archive="y">7.12</z-offset-m><!-- back+ 7.15-->
+        <pitch-offset-deg>-6</pitch-offset-deg>
+        <default-field-of-view-deg>66</default-field-of-view-deg>
+      </config>
+    </view>
+
+    <view n="96000">
+      <name>DSO/OSO centered view</name>
+      <type>lookfrom</type>
+      <internal archive="y">true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+        <default-pitch-deg type="double">0</default-pitch-deg>
+        <default-heading-deg type="double">0</default-heading-deg>
+        <front-direction-deg type="double">0</front-direction-deg>
+        <front-left-direction-deg type="double">45</front-left-direction-deg>
+        <left-direction-deg type="double">90</left-direction-deg>
+        <back-left-direction-deg type="double">135</back-left-direction-deg>
+        <back-direction-deg type="double">180</back-direction-deg>
+        <back-right-direction-deg type="double">225</back-right-direction-deg>
+        <right-direction-deg type="double">270</right-direction-deg>
+        <front-right-direction-deg type="double">315</front-right-direction-deg>
+        <x-offset-m archive="y">0.0</x-offset-m>
+        <y-offset-m archive="y">1.14</y-offset-m>
+        <z-offset-m archive="y">9.50</z-offset-m>
+        <pitch-offset-deg>0</pitch-offset-deg>
+        <default-field-of-view-deg>55</default-field-of-view-deg>
+      </config>
+    </view>
+    
+     <view n="96001">
+      <name>OSO view</name>
+      <type>lookfrom</type>
+      <internal archive="y">true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+        <default-pitch-deg type="double">0</default-pitch-deg>
+        <default-heading-deg type="double">0</default-heading-deg>
+        <front-direction-deg type="double">0</front-direction-deg>
+        <front-left-direction-deg type="double">45</front-left-direction-deg>
+        <left-direction-deg type="double">90</left-direction-deg>
+        <back-left-direction-deg type="double">135</back-left-direction-deg>
+        <back-direction-deg type="double">180</back-direction-deg>
+        <back-right-direction-deg type="double">225</back-right-direction-deg>
+        <right-direction-deg type="double">270</right-direction-deg>
+        <front-right-direction-deg type="double">315</front-right-direction-deg>
+        <x-offset-m archive="y">0.65</x-offset-m>
+        <y-offset-m archive="y">1.28</y-offset-m>
+        <z-offset-m archive="y">9.60</z-offset-m>
+        <pitch-offset-deg>0</pitch-offset-deg>
+        <default-field-of-view-deg>55</default-field-of-view-deg>
+      </config>
+    </view>
+    
+    <view n="96003">
+      <name>Sniper Pod view</name>
+      <type>lookfrom</type>
+      <internal archive="y">true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+	<from-model-idx type="int">0</from-model-idx>
+        <x-offset-m archive="y">1.20</x-offset-m>
+        <y-offset-m archive="y">-1.67</y-offset-m>
+        <z-offset-m archive="y">11.20</z-offset-m>
+        <pitch-offset-deg>-10</pitch-offset-deg>
+        <default-pitch-deg type="double">-10</default-pitch-deg>
+        <default-field-of-view-deg>50</default-field-of-view-deg>
+      </config>
+    </view>
+    
+    
+
+<!-- Shift the camera target point back -->
+    <view n="1">
+      <config>
+        <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="2">
+      <config>
+        <x-offset-m archive="y" type="double">8.0</x-offset-m>
+        <z-offset-m archive="y">-19.7</z-offset-m>
+        <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="3">
+      <config>
+        <target-z-offset-m archive="y" type="double">20.0</target-z-offset-m>
+      </config>
+    </view>
+
+    <!--<view n="5">
+      <config>
+        <target-z-offset-m archive="y" type="double">2.0</target-z-offset-m>
+      </config>
+    </view>-->
+
+    <sound>
+      <audible>true</audible>
+      <path>Aircraft/B-1B/Sounds/b-1b-sound.xml</path>
+    </sound>
+    
+    <submodels>
+	    <serviceable type="bool">true</serviceable>
+	    <path>Aircraft/B-1B/Submodels/sub_lancer.xml</path>
+    </submodels>
+
+  <hud>
+   <path n="1">Huds/NTPS.xml</path>
+   <visibility n="0" type="bool">false</visibility>
+   <visibility n="1" type="bool">false</visibility>
+
+   <color>
+    <transparent type="bool">true</transparent>
+    <antialiased type="bool">true</antialiased>
+    <brightness type="float">0.85</brightness>
+    <alpha type="float">0.85</alpha>
+   </color>
+   <palette>
+    <color n="0">
+     <red type="float">0.38</red>
+     <green type="float">1.0</green>
+     <blue type="float">0.22</blue>
+    </color>
+    <color n="1">
+     <red type="float">1.0</red>
+     <green type="float">0.0</green>
+     <blue type="float">0.0</blue>
+    </color>
+   </palette>
+
+  </hud>
+
+  <model>
+    <path>Aircraft/B-1B/Models/B-1B.xml</path>
+      <A-6E>
+	<controls>
+	      <PHD>
+		<TCrange-switch type="int">2</TCrange-switch>
+		<TCrealistic-shadow type="bool">1</TCrealistic-shadow>
+		<off-stdby-on type="int">2</off-stdby-on>
+	      </PHD>
+	</controls>
+	<instrumentation>
+	  <PHD>
+		<TCrange type="double">1.5</TCrange>
+		<h-deviation type="double">0.0</h-deviation>
+		<v-deviation type="double">0.0</v-deviation>
+		<plots-out-of-range type="bool">0</plots-out-of-range>
+	  </PHD>
+	</instrumentation>
+      </A-6E>
+  </model>
+
+  <airport>
+        <runways> 
+              <start-offset-m>35</start-offset-m>
+        </runways>
+  </airport>
+  
+    <multiplay>
+	<generic>
+		<!--<float n="0">0</float> free  -->
+		<!--<float n="1">0</float> free  -->
+		<float n="2">0</float><!-- fwd baydoor   -->
+		<float n="3">0</float><!-- intmd baydoor    -->
+		<float n="4">0</float><!-- aft baydoor  -->
+		<float n="5">0</float><!-- refuel door -->
+		<!--<float n="6">0</float> free   -->
+		<!--<float n="7">0</float> free   -->
+		<!--<float n="8">0</float> free   -->
+		<!--<float n="9">0</float> free   -->
+		<!--<float n="10">0</float> free   -->
+		<!--<float n="11">0</float> free   -->
+		<!--<float n="12">0</float> free   -->
+		<int n="0" type="int">0</int><!-- anti collision lights  -->
+		<int n="1" type="int">0</int>     <!-- b-1b model nasal script loaded -->
+		<!--<int n="2" type="int">0</int>     free -->
+		<!--<int n="3" type="int">0</int>     free -->
+		<!--<int n="4" type="int">0</int>     free -->
+		<!--<int n="5" type="int">0</int>     free -->
+		<!--<int n="6" type="int">0</int>     free -->
+		<string n="0"></string> <!-- lat/lon of impact points-->
+	</generic>
+  </multiplay>
+
+
+  <menubar>
+        <default>
+            <menu n="10">
+                <label>B-1B</label>
+                <enabled type="bool">true</enabled>
+                <item n="0">
+                    <label>Autostart</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>controls/engines/engine[0]/cutoff</property>
+                    </binding>
+		    <binding>
+                        <command>property-toggle</command>
+                        <property>controls/engines/engine[1]/cutoff</property>
+                    </binding>
+		    <binding>
+                        <command>property-toggle</command>
+                        <property>controls/engines/engine[2]/cutoff</property>
+                    </binding>
+		    <binding>
+                        <command>property-toggle</command>
+                        <property>controls/engines/engine[3]/cutoff</property>
+                    </binding>
+                </item>
+                <item n="1">
+                    <label>Toggle Canopy Access</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>canopy/position-norm</property>
+                    </binding>
+                </item>
+		<item n="2">
+		  <label>Weapon/Fuel Management</label>
+		  <binding>
+			<command>nasal</command>
+			<script>weapons.weapon_select.open()</script>
+		  </binding>
+		</item>
+		<item n="3">
+		  <label>Repair Damage</label>
+		  <binding>
+		    <command>nasal</command>
+			<script>weapons.repair_damage()</script>
+		  </binding>
+		</item>
+		<item n="4">
+		  <label>Targetting Computer</label>
+		  <binding>
+		    <command>nasal</command>
+			<script>weapons.targetting_comp.open()</script>
+	      </binding>
+		</item>
+		<item n="10">
+                  <label>Pushback</label>
+                  <name>pushback</name>
+                  <binding>
+                    <command>dialog-show</command>
+                    <dialog-name>pushback</dialog-name>
+                  </binding>
+                </item>
+
+		<!--<item>
+		  <label>Failures</label>
+		  <binding>
+			<command>nasal</command>
+			<script>b1b.engine_failures.open()</script>
+		  </binding>
+		</item>-->
+            </menu>
+        </default>
+    </menubar>
+
+    <systems>
+      <electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+      <autopilot>
+        <path>Aircraft/B-1B/Systems/b1b-autopilot.xml</path>
+      </autopilot>
+    </systems>
+
+  <rendering>
+    <redout>
+      <enabled type="bool" userarchive="y">true</enabled>
+      <parameters>
+        <blackout-onset-g>3.0</blackout-onset-g>
+        <blackout-complete-g>7.0</blackout-complete-g>
+      </parameters>
+    </redout>
+  </rendering>
+    
+  <wing-sweep>
+    <setting>0.00</setting>
+    <setting>0.23</setting>
+    <setting>0.42</setting>
+    <setting>0.80</setting>
+    <setting>1.00</setting>
+  </wing-sweep>
+
+    <flaps>
+      <setting>0.0</setting>
+      <setting>0.5</setting>
+      <setting>1.0</setting>
+    </flaps>
+
+    <spoilers>
+      <setting>0.0</setting>
+      <setting>0.5</setting>
+      <setting>1.0</setting>
+    </spoilers>
+
+    <weight n="0">
+	    <name>wing pos fwd</name>
+	    <weight-lb type="float">20000</weight-lb>
+    </weight>
+    <weight n="1">
+	    <name>wing pos aft</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="2">
+	    <name>fuelwing fwd</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="3">
+	    <name>fuelwing aft</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="4">
+	    <name>bay fwd</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="5">
+	    <name>bay intmd</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+    <weight n="6">
+	    <name>bay aft</name>
+	    <weight-lb type="float">0</weight-lb>
+    </weight>
+
+  <!-- AoA Indexer target 1.0 deg -->
+     <aoa-indexer>
+       <too-slow-deg>2.5</too-slow-deg>  <!-- target +1.5 deg -->
+       <slow-deg>1.5</slow-deg>          <!-- target +0.5 deg -->         
+       <fast-deg>0.5</fast-deg>          <!-- target -0.5 deg -->         
+       <too-fast-deg>-0.5</too-fast-deg>  <!-- target -1.5 deg -->         
+     </aoa-indexer>
+
+    <help>
+      <title>B-1B Lancer</title>
+      <key>
+        <name>j/k</name>
+        <desc>decrease/increase spoilers</desc>
+      </key>
+      <key>
+	      <name>f</name>
+	      <desc>sweep wing back</desc>
+      </key>
+      <key>
+	      <name>F</name>
+	      <desc>sweep wing fwd</desc>
+      </key>
+      <key>
+	      <name>l</name>
+	      <desc>Flare out</desc>
+      </key>
+       <key> 
+	       <name>L</name>
+		       <desc>Weapon launch sequence</desc>
+       </key>
+       <key> 
+		       <name>r</name>
+		       <desc>Select next ordonance</desc>
+       </key>
+       <key> 
+		       <name>R</name>
+		       <desc>Select prev ordonance</desc>
+       </key>
+       <key> 
+		       <name>t</name>
+		       <desc>Assign target</desc>
+       </key>
+
+      <line>Afterburner(ab) auto applied at full throttle</line>
+      <line>For takeoff apply 1/2 flaps, full ab</line>
+      <line>Rotate at 165kts/takeoff at 170/180kts</line>
+      <line>---------------------------------------</line>
+      <line>Startup procedure:</line>
+      <line>1. Switch on Battery switch (overhead/middle)</line>
+      <line>2. Start APU left and/or right (overhead/right):switch APU MODE L/R to on/start</line>
+      <line>   NOTE: use 3a or 3b!</line>
+      <line>3a.Couple left and right drive by switching L/R DRIVE to 2/4 ADS COUPLE</line>
+      <line>3b.Switch on L/R BLEED AIR</line>
+      <line>   If only 1 APU active, switch to CRSVR AIR to start engines in other nacelle</line>
+      <line>4. Switch on Engines (middle console/back)</line>
+      <line>   NOTE: APU left powers engines 1,2 APU right -->3,4</line>
+      <line>5. Switch APU off when engines are on, or after climb</line>
+      <line>-</line>
+      <line>Terrain Following Systems TER FLW:</line>
+      <line>1. Adjust clearance SET CLR (200ft incr.)A=0, B=200ft, C=400ft to J=2000ft</line>
+      <line>...flatlands: down to 200ft, hills: 400/600ft,mountains: 800ft and above</line>
+      <line>2. switch -PRTY- to TER FLW (other setting MAP)</line>
+      <line>3. Toggle master switch TER FLW on</line>
+      <line>-</line>
+      <line>Terrain Avoidance Systems TER AVD:</line>
+      <line>1. Adjust obstancle clearance CLR PLN</line>
+      <line>...possible settings: 0, 100, 300, 500, 1000ft</line>
+      <line>2. Adjust distance RNG, currently 2.5 or 5nm</line>
+      <line>3. Toggle master switch TER AVD on</line>
+      <line>...plane clears obstancle, stays at new alt</line>
+      <line>-</line>
+      <line>Fuel Center of Gravity Management System FCGMS:(-working but experimental-)</line>
+      <line>1. Set CG SET to %MAC of desire -->visible at %MAC scale as orange marker</line>
+      <line>2. Switch SYS to ON --> CG %MAC visible as white marker</line>
+      <line>...works only within a certain margin, orange and white marker at same %MAC</line>
+      <line>-</line>
+      <line>Guided Weapon System:</line>
+      <line>1. Load weapons on the ground in the B-1B menu</line>
+      <line>2. Switch to OSO seat/view -> SMS panel ahead</line>
+      <line>3. Arm weapons by selecting bay and then station (on SMS) and ARM</line>
+      <line>...status visible on SMS display</line>
+      <line>4. get target coordinates (manual input:IKB panel or sniper pod + t/r)</line>
+      <line>5. Activate target tracking (BOMB/NAV panel--> STEER -->BOMB button)</line>
+      <line>6. Activate release mechanism (BOMB/NAV panel -->BOMB button(upper right))</line>
+      <line>7. Close bay doors</line>
+      <line>Good Luck!</line>
+    </help>
+    
+   <!--<ai>
+
+    </ai>-->
+</sim>
+
+  <systems>
+		<refuel>
+			<type>boom</type>
+            <serviceable type="bool">true</serviceable>
+            <report-contact type="bool">true</report-contact>
+
+            <max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
+            <contact-radius-m>8</contact-radius-m>
+            <offset-x-m>4</offset-x-m>
+            <offset-y-m>0</offset-y-m>
+            <offset-z-m>0.7</offset-z-m>
+		</refuel>
+  </systems>
+
+
+  <autopilot>
+    <settings>
+      <target-agl-ft type="float">1000</target-agl-ft>
+      <target-altitude-ft type="float">8000</target-altitude-ft>
+      <target-pitch-deg type="float">0</target-pitch-deg>
+      <target-vfps type="float">0</target-vfps>
+      <take-off-pitch-deg type="float">2.0</take-off-pitch-deg>
+      <target-speed-kt type="float">350.0</target-speed-kt>
+      <climb-out-initial-pitch-deg type="float">6.0</climb-out-initial-pitch-deg>
+      <climb-out-final-pitch-deg type="float">3.0</climb-out-final-pitch-deg>
+      <target-climb-rate-fpm type="float">2000.0</target-climb-rate-fpm>
+      <target-descent-rate-fpm type="float">2000.0</target-descent-rate-fpm>
+      <ground-roll-heading-deg type="float">-999.9</ground-roll-heading-deg>
+      <target-mach type="float">0.9</target-mach>
+      <target-aoa-deg type="float">1.0</target-aoa-deg>
+      <max-roll-deg type="float">60</max-roll-deg>
+    </settings>
+
+  </autopilot>
+
+<!-- Start with the Parking Brake off -->
+<controls>
+    <gear>
+      <brake-parking type="double">0.0</brake-parking>
+    </gear>
+    <flight>
+      <wing-sweep type="double">0.0</wing-sweep>
+      <flaps type="double">0.0</flaps>
+      <elevator-incidence-deg type="double">0.0</elevator-incidence-deg>
+    </flight>
+
+    <switches>
+      <engines>
+        <afterburner n="0">1</afterburner>
+	<afterburner n="1">1</afterburner>
+	<afterburner n="2">1</afterburner>
+	<afterburner n="3">1</afterburner>
+      </engines>
+    </switches>
+
+    <engines>
+	    <engine n="0">
+		    <cutoff type="double">0</cutoff>
+		    
+	    </engine>
+	    <engine n="1">
+		    <cutoff type="double">0</cutoff>
+		    
+	    </engine>
+	    <engine n="2">
+		    <cutoff type="double">0</cutoff>
+		    
+	    </engine>
+	    <engine n="3">
+		    <cutoff type="double">0</cutoff>
+		    
+	    </engine>
+	    
+  </engines>
+
+</controls>
+  
+<!-- Engine indexes -->
+  <engines>
+    <engine n="0">
+	    <engine-num type="int">0</engine-num>
+
+    </engine>
+    <engine n="1">
+	    <engine-num type="int">1</engine-num>
+
+    </engine>
+    <engine n="2">
+	    <engine-num type="int">2</engine-num>
+
+    </engine>
+    <engine n="3">
+	    <engine-num type="int">3</engine-num>
+
+    </engine>
+  </engines>
+
+<!-- Fuel -->
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <tank-num type="int">0</tank-num>
+        <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="1">
+        <tank-num type="int">1</tank-num>
+        <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="2">
+        <tank-num type="int">2</tank-num>
+        <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="3">
+	      <tank-num type="int">3</tank-num>
+	      <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="4">
+	      <tank-num type="int">4</tank-num>
+	      <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="5">
+	      <tank-num type="int">5</tank-num>
+	      <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="6">
+	      <tank-num type="int">6</tank-num>
+	      <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+      <tank n="7">
+	      <tank-num type="int">7</tank-num>
+	      <kill-when-empty type="bool">false</kill-when-empty>
+      </tank>
+    </fuel>
+  </consumables>
+
+  <instrumentation>
+    <radar>
+      <range type="int" archive="y">40</range>
+      <minimized type="bool" archive="y">false</minimized>
+    </radar>
+    <cdu900>
+      <line-selected type="int">0</line-selected>
+      <expr>
+        <leet type="int">1337</leet>
+	<oneone type="int">11</oneone>
+	<none type="int">0</none>
+      </expr>
+    </cdu900>
+    <wxradar>
+      <serviceable>true</serviceable>
+      <range type="int" archive="y">20</range>
+      <minimized type="bool" archive="y">false</minimized>
+      <switch archive="y">off</switch>
+      <mode archive="y">wx</mode>
+      <lightning type="bool" archive="y">true</lightning>
+      <display-mode archive="y">arc</display-mode>
+    </wxradar>
+  </instrumentation>
+  
+  <input>
+	  <keyboard>
+		  
+		  <!-- map keys for wingsweep -->
+		  
+		  <key n="102">
+			  <name>f</name>
+			  <desc>Increase sweep</desc>
+			  <binding>
+				  <command>nasal</command>
+				  <script>flightcontrols.wingSweep(-1)</script>
+			  </binding>
+			  <mod-up>
+				  <binding>
+					  <command>nasal</command>
+					  <script>flightcontrols.wingSweep(0)</script>
+				  </binding>
+			  </mod-up>
+		  </key>
+		  
+		  <key n="70">
+			  <name>F</name>
+			  <desc>Decrease sweep</desc>
+			  <binding>
+				  <command>nasal</command>
+				  <script>flightcontrols.wingSweep(1)</script>
+			  </binding>
+			  <mod-up>
+				  <binding>
+					  <command>nasal</command>
+					  <script>flightcontrols.wingSweep(0)</script>
+				  </binding>
+			  </mod-up>
+ </key>
+ 
+    <key n="108">
+	 <name>l</name>
+	 <desc>Flare out</desc>
+	 <binding>
+		 <command>property-toggle</command>
+		<property>controls/switches/flare</property>
+	 </binding>
+   </key>
+   
+   <key n="76"> 
+		<name>L</name>
+		       <desc>automated bomb launcher</desc>
+		       <binding> 
+			        <command>nasal</command>
+		  <script>weapons.rot_launch_rel()</script>
+		</binding>
+                <binding>
+		  <command>property-toggle</command>
+		  <property>armament/auto-release</property>
+		       </binding>
+  </key>
+  
+  <key n="84">
+				<name>T</name>
+				<desc>Autotrim cancel</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						setprop("controls/flight/elevator-trim",0);
+						setprop("controls/flight/aileron-trim",0);
+						setprop("controls/flight/rudder-trim",0);
+					</script>
+				</binding>
+  </key>
+  
+  <key n="114">
+				<name>r</name>
+				<desc>Select next Ordonance</desc>
+				<binding>
+					<command>nasal</command>
+					<script>weapons.target_number(1)</script>
+				</binding>
+  </key>
+  
+  <key n="82">
+				<name>R</name>
+				<desc>Select prev Ordonance</desc>
+				<binding>
+					<command>nasal</command>
+					<script>weapons.target_number(-1)</script>
+				</binding>
+  </key>
+  
+  <key n="116">
+				<name>t</name>
+				<desc>Target designator</desc>
+				<binding>
+					<command>nasal</command>
+					<script>weapons.target_des()</script>
+				</binding>
+  </key>
+    <key n="22">
+		<name>Ctrl-v</name>
+		<desc>Select pilot's view (view 0) or toggle between pilot's and OSO's view</desc>
+		<binding>
+			<command>nasal</command>
+			<script>b1b.toggle_cockpit_views();</script>
+		</binding>
+    </key>
+	  </keyboard>
+</input>
+
+
+<nasal>
+	<b1b>
+		<file>Aircraft/B-1B/Nasal/b1b.nas</file>
+		<file>Aircraft/B-1B/Nasal/cdu900.nas</file>
+	</b1b>	
+	<flightcontrols>
+		<file>Aircraft/B-1B/Nasal/flightcontrols.nas</file>
+	</flightcontrols>
+	<cg>
+		<file>Aircraft/B-1B/Nasal/cg.nas</file>
+	</cg>
+	<tfs>
+		<file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
+	</tfs>
+	<rain>
+		<file>Aircraft/B-1B/Nasal/rain.nas</file>
+	</rain>
+	<low>
+		<file>Aircraft/B-1B/Nasal/low.nas</file>
+	</low>
+	<radar>
+		<file>Aircraft/B-1B/Nasal/radar.nas</file>
+		<file>Aircraft/B-1B/Nasal/phd.nas</file>
+		<!--<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>-->
+	</radar>
+	<enginefire>
+		<file>Aircraft/B-1B/Nasal/enginefire.nas</file>
+	</enginefire>
+	<weapons>
+		<file>Aircraft/B-1B/Nasal/oso_management.nas</file>
+		<file>Aircraft/B-1B/Nasal/oso_ikb.nas</file>
+		<file>Aircraft/B-1B/Nasal/guide_to_target.nas</file>
+		<file>Aircraft/B-1B/Nasal/wso_mfd.nas</file>
+		<file>Aircraft/B-1B/Nasal/fuel_load.nas</file>
+		<file>Aircraft/B-1B/Nasal/target_monitor.nas</file>
+		<file>Aircraft/B-1B/Nasal/damage.nas</file>
+	</weapons>
+        <fuel>
+		<file>Aircraft/Generic/aar.nas</file>
+	</fuel>
+</nasal>
+
+</PropertyList>
