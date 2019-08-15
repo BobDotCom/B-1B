@@ -7,17 +7,17 @@
   <animation>
     <object-name>Boot</object-name>
     <object-name>NWS</object-name>   
-    <object-name>RH.PTT</object-name> 
+    <object-name>LH.Button</object-name> 
     <object-name>RHFS</object-name>
-    <object-name>RH.Trim</object-name>
+    <object-name>Trim</object-name>
   </animation>
 
   <animation>
     <type>material</type>
     <object-name>Boot</object-name>
     <object-name>NWS</object-name>
-    <object-name>RH.PTT</object-name>
-    <object-name>RH.Trim</object-name>
+    <object-name>LH.Button</object-name>
+    <object-name>Trim</object-name>
     <emission>
      <factor-prop>/controls/lighting/cabin-norm</factor-prop>
             <red>10</red>
@@ -29,9 +29,9 @@
  <animation>
   <type>rotate</type>
     <object-name>NWS</object-name>
-    <object-name>RH.PTT</object-name>
+    <object-name>LH.Button</object-name>
     <object-name>RHFS</object-name>
-    <object-name>RH.Trim</object-name>
+    <object-name>Trim</object-name>
   <property>controls/flight/aileron</property>         <!--property alias="/params/aileron"/-->
   <factor>-10</factor>
   <center>
@@ -47,9 +47,9 @@
  <animation>
   <type>rotate</type>
     <object-name>NWS</object-name>
-    <object-name>RH.PTT</object-name>
+    <object-name>LH.Button</object-name>
     <object-name>RHFS</object-name>
-    <object-name>RH.Trim</object-name>
+    <object-name>Trim</object-name>
   <property>controls/flight/elevator</property>          <!--property alias="/params/elevator"/-->
   <factor>-10</factor>
   <!-- offset-deg>-10.0</offset-deg -->

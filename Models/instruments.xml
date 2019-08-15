@@ -491,12 +491,24 @@ more to come :-)
 	  <name>tacan sw</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/ARN-118-tacan.xml</path>
 	  <offsets>
-		  <x-m>-17.975</x-m>
+		  <x-m>-17.970</x-m>
 		  <y-m>-0.290</y-m>
 		  <z-m>0.720</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
+
+  <model>
+	  <name>TO-LDG</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/TO-LDG.xml</path>
+	  <offsets>
+		  <x-m>-17.947</x-m>
+		  <y-m>-0.293</y-m>
+		  <z-m>0.723</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
   <model>
 	  <name>throttle</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/throttle.xml</path>
