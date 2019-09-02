@@ -737,9 +737,15 @@ B-1B set file.
 	<cg>
 		<file>Aircraft/B-1B/Nasal/cg.nas</file>
 	</cg>
+	<shake>
+		<file>Aircraft/B-1B/Nasal/shake.nas</file>
+	</shake>
 	<tfs>
 		<file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
 	</tfs>
+	<ts>
+		<!--<file>Aircraft/B-1B/Nasal/tyresmoke.nas</file>-->
+	</ts>
 	<rain>
 		<file>Aircraft/B-1B/Nasal/rain.nas</file>
 	</rain>
@@ -749,7 +755,7 @@ B-1B set file.
 	<radar>
 		<file>Aircraft/B-1B/Nasal/radar.nas</file>
 		<file>Aircraft/B-1B/Nasal/phd.nas</file>
-		<!--<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>-->
+		<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
 	</radar>
 	<enginefire>
 		<file>Aircraft/B-1B/Nasal/enginefire.nas</file>

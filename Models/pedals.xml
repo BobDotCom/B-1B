@@ -14,7 +14,7 @@
     </animation>
  <animation>
   <type>translate</type>
-  <object-name>LHPedal</object-name>
+  <object-name>LH.Pedal</object-name>
   <property>controls/flight/rudder</property>
   <factor>0.04</factor>
   <axis>
@@ -26,8 +26,7 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>LHPedal</object-name>
-  <object-name>LHHanger</object-name>
+  <object-name>LH.Pedal</object-name>
   <property>controls/gear/brake-left</property>
   <factor>-5</factor>
   <axis>
@@ -36,15 +35,15 @@
    <z>0.0</z>
   </axis>
   <center>
-   <x-m>-0.1</x-m>
-   <y-m>0</y-m>
-   <z-m>-0.9</z-m>
+   <x-m>0.00209</x-m>
+   <y-m>-0.17122</y-m>
+   <z-m>0.11021</z-m>
   </center>
  </animation>
 
  <animation>
   <type>translate</type>
-  <object-name>RHPedal</object-name>
+  <object-name>RH.Pedal</object-name>
   <property>controls/flight/rudder</property>
   <factor>-0.04</factor>
   <axis>
@@ -56,8 +55,7 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>RHPedal</object-name>
-  <object-name>RHHanger</object-name>
+  <object-name>RH.Pedal</object-name>
   <property>controls/gear/brake-right</property>
   <factor>-5</factor>
   <axis>
@@ -66,14 +64,14 @@
    <z>0.0</z>
   </axis>
   <center>
-   <x-m>-0.1</x-m>
-   <y-m>0</y-m>
-   <z-m>-0.9</z-m>
+   <x-m>0.00207</x-m>
+   <y-m>1.17882</y-m>
+   <z-m>0.11021</z-m>
   </center>
  </animation>
   <animation>
   <type>rotate</type>
-  <object-name>RHHanger</object-name>
+  <object-name>RH.Hanger</object-name>
   <property>controls/flight/rudder</property>                       <!--property alias="/params/rudder"/-->
   <factor>11</factor>
   <axis>
@@ -82,15 +80,15 @@
    <z>0</z>
   </axis>
   <center>
-   <x-m>0.00212</x-m>
-   <y-m>0.19469</y-m>
-   <z-m>0.31614</z-m>
+   <x-m>0.01048</x-m>
+   <y-m>0.16113</y-m>
+   <z-m>0.34937</z-m>
   </center>
  </animation>
 
  <animation>
   <type>rotate</type>
-  <object-name>LHHanger</object-name>
+  <object-name>LH.Hanger</object-name>
   <property>controls/flight/rudder</property>                     <!--property alias="/params/rudder"/-->
   <factor>-11</factor>
   <axis>
@@ -99,9 +97,9 @@
    <z>0</z>
   </axis>
   <center>
-   <x-m>0.00204</x-m>
-   <y-m>-0.18643</y-m>
-   <z-m>0.31614</z-m>
+   <x-m>0.01056</x-m>
+   <y-m>-0.17176</y-m>
+   <z-m>0.39940</z-m>
   </center>
  </animation>
   <!--animation>
