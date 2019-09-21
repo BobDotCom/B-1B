@@ -772,6 +772,9 @@ B-1B set file.
         <fuel>
 		<file>Aircraft/Generic/aar.nas</file>
 	</fuel>
+    <blacklist>
+        <file>Aircraft/B-1B/Nasal/blacklist.nas</file> 
+    </blacklist>
 </nasal>
 
 </PropertyList>
