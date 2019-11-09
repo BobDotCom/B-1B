@@ -1,0 +1,44 @@
+<?xml version="1.0"?> 
+
+<PropertyList> 
+
+ <path>Flt-Ctrl-Pwr.ac</path> 
+  <animation>
+    <object-name>Flt-Ctrl-Pwr</object-name>
+    <object-name>Flap-Slat-Resest</object-name>
+    <object-name>PTCH-AUG</object-name>
+    <object-name>PTCH-TRIM</object-name>
+    <object-name>ROLL-AUG</object-name>
+    <object-name>ROLL-TRIM</object-name>
+    <object-name>SMCS-Reset</object-name>
+    <object-name>SPD-BRK</object-name>
+    <object-name>SPOILERS</object-name>
+    <object-name>YAW-AUG</object-name>
+    <object-name>YAW-TRIM</object-name>
+    <object-name>ALT-WG-SWP</object-name>
+    <object-name>4screws</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Flt-Ctrl-Pwr</object-name>
+    <object-name>Flap-Slat-Resest</object-name>
+    <object-name>PTCH-AUG</object-name>
+    <object-name>PTCH-TRIM</object-name>
+    <object-name>ROLL-AUG</object-name>
+    <object-name>ROLL-TRIM</object-name>
+    <object-name>SMCS-Reset</object-name>
+    <object-name>SPD-BRK</object-name>
+    <object-name>SPOILERS</object-name>
+    <object-name>YAW-AUG</object-name>
+    <object-name>YAW-TRIM</object-name>
+    <object-name>ALT-WG-SWP</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+  </animation>
+
+</PropertyList>

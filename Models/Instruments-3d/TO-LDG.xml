@@ -1,6 +1,136 @@
-
+<?xml version="1.0"?>
+ 
 <PropertyList>
 
 <path>TO-LDG.ac</path>
+
+  <animation>
+    <object-name>Anti-skid-switch</object-name>
+    <object-name>Data-case-lt</object-name>
+    <object-name>Emerg</object-name>
+    <object-name>Nut.1</object-name>
+    <object-name>Nut.2</object-name>
+    <object-name>Nut.3</object-name>
+    <object-name>Parking-brake</object-name>
+    <object-name>PowerNut</object-name>
+    <object-name>TO-LD-Switch</object-name>
+    <object-name>TO-LDG-Panel</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Anti-skid-switch</object-name>
+    <object-name>Data-case-lt</object-name>
+    <object-name>Emerg</object-name>
+    <object-name>Nut-1</object-name>
+    <object-name>Nut-2</object-name>
+    <object-name>Nut-3</object-name>
+    <object-name>Parking-brake</object-name>
+    <object-name>PowerNut</object-name>
+    <object-name>TO-LD-Switch</object-name>
+    <object-name>TO-LDG-Panel</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+  </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>Parking-brake</object-name>
+   <property>/controls/gear/brake-parking</property>v
+   <factor>-0.002</factor>  
+   <center> 
+    <x-m>-0.026</x-m> 
+    <y-m>-0.001</y-m> 
+    <z-m>0.000</z-m> 
+   </center> 
+   <axis> 
+    <x>0</x> 
+    <y>0</y> 
+    <z>1</z> 
+   </axis> 
+  </animation>
+
+  <animation> 
+   <type>pick</type> 
+   <object-name>Parking-brake</object-name>
+   <action> 
+    <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/gear/brake-parking</property>                
+        <repeatable>false</repeatable>
+       </binding>
+    </action> 
+  </animation> 
+
+  <animation>
+   <type>rotate</type>
+   <object-name>Anti-skid-switch</object-name>
+   <property>/controls/gear/antiskid</property>v
+   <factor>-35</factor> 
+   <min>1</min>
+   <max>0</max>   
+   <center> 
+    <x-m>-0.02756</x-m> 
+    <y-m>-0.04686</y-m> 
+    <z-m>0.00555</z-m> 
+   </center> 
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis> 
+  </animation>
+
+  <animation> 
+   <type>pick</type> 
+   <object-name>Anti-skid-switch</object-name>
+   <action> 
+    <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/gear/antiskid</property>                
+        <repeatable>false</repeatable>
+      </binding>
+   </action> 
+  </animation> 
+
+  <animation>
+   <type>rotate</type>
+   <object-name>TO-LD-switch</object-name>
+   <property>gear/gear/caster-angle-deg</property>
+   <factor>50</factor> 
+   <min>0</min>
+   <max>1</max>   
+   <center> 
+    <x-m>0.04861</x-m> 
+    <y-m>0.00007</y-m> 
+    <z-m>0.0033</z-m> 
+   </center> 
+   <axis> 
+    <x>0</x> 
+    <y>1</y> 
+    <z>0</z> 
+   </axis> 
+  </animation>
+
+  <animation> 
+   <type>pick</type> 
+   <object-name>TO-LD-switch</object-name>
+   <action> 
+    <button>0</button>
+      <binding>
+        <command>property-multiply</command>
+        <property>gear/gear/caster-angle-deg</property>                
+        <factor>2</factor> 
+        <min>0</min> 
+        <max>1</max>
+      </binding>
+   </action> 
+ </animation>
 
 </PropertyList>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?> 
+<PropertyList> 
+ <path>Eng-Aux-Panel.ac</path>
+
+  <animation>
+    <object-name>ANTI-ICE</object-name>
+    <object-name>ENG-AUX-PANEL</object-name>
+    <object-name>IGN-CONT</object-name>
+    <object-name>Speed-Lock-Up</object-name>
+
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>ANTI-ICE</object-name>
+    <object-name>ENG-AUX-PANEL</object-name>
+    <object-name>IGN-CONT</object-name>
+    <object-name>Speed-Lock-Up</object-name>
+
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+  </animation> 
+</PropertyList>

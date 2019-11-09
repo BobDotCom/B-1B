@@ -1,0 +1,74 @@
+<?xml version="1.0"?> 
+<PropertyList> 
+ <path>ILS-Panel.ac</path> 
+
+  <animation>
+    <object-name>ILS-Panel</object-name>
+    <object-name>Cylinder.007</object-name>
+    <object-name>Cylinder.008</object-name>
+    <object-name>Cylinder.009</object-name>
+    <object-name>Cylinder.010</object-name>
+    <object-name>Cylinder.011</object-name>
+    <object-name>Knob-1</object-name>
+    <object-name>Knob-2</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>ILS-Panel</object-name>
+    <object-name>Cylinder.007</object-name>
+    <object-name>Cylinder.008</object-name>
+    <object-name>Cylinder.009</object-name>
+    <object-name>Cylinder.010</object-name>
+    <object-name>Cylinder.011</object-name>
+    <object-name>Knob-1</object-name>
+    <object-name>Knob-2</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+  </animation>
+
+ <animation> 
+  <type>rotate</type> 
+  <object-name>Cylinder.011</object-name> 
+  <property>instrumentation/nav/frequencies/selected-mhz-fmt</property> 
+  <interpolation> 
+   <entry><ind>000.00</ind><dep>0</dep></entry> 
+   <entry><ind>999.95</ind><dep>3599820</dep></entry>
+  </interpolation>
+  <center> 
+   <x-m>0</x-m> 
+   <y-m>0.008</y-m> 
+   <z-m>-0.013</z-m> 
+  </center> 
+  <axis> 
+   <x>0</x> 
+   <y>-1</y> 
+   <z>0</z> 
+  </axis> 
+ </animation>
+
+ <animation> 
+  <type>rotate</type> 
+  <object-name>Cylinder.010</object-name> 
+  <property>instrumentation/nav/frequencies/selected-mhz-fmt</property> 
+  <interpolation> 
+   <entry><ind>000.05</ind><dep>0</dep></entry> 
+   <entry><ind>999.90</ind><dep>36000</dep></entry> 
+  </interpolation>
+  <center> 
+   <x-m>0</x-m> 
+   <y-m>0.008</y-m> 
+   <z-m>-0.013</z-m> 
+  </center> 
+  <axis> 
+   <x>0</x> 
+   <y>-1</y> 
+   <z>0</z> 
+  </axis> 
+ </animation> 
+
+</PropertyList>

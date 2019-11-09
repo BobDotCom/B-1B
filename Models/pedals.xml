@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
   <PropertyList>
-    <path>Pedal.ac</path>
+    <path>XB-Pedals.ac</path>
         <params>
         <aileron>/aircraft/surface-positions/aileron-pos-norm</aileron>
         <elevator>/aircraft/surface-positions/elevator-pos-norm</elevator>

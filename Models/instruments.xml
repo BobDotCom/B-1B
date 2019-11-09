@@ -6,7 +6,7 @@ more to come :-)
 
 <PropertyList>
   
-	<path>Instruments-3d/sweep_scale.ac</path>
+	<path>Instruments-3d/sweep_scale.xml</path>
 	
   <offsets>
 	  <x-m>-0.42</x-m>
@@ -288,6 +288,17 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
+
+ <model>
+	  <name>Pump-panel</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/Pump-Panel.xml</path>   
+	  <offsets>
+		  <x-m>-18.205</x-m>
+		  <y-m>-0.035</y-m>
+		  <z-m>0.841</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model> 
   
   <model>
 	  <name>apmode</name>
@@ -360,7 +371,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/terflw_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.215</x-m>
-		  <y-m>0.105</y-m>
+		  <y-m>0.100</y-m>
 		  <z-m>0.910</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -381,9 +392,9 @@ more to come :-)
 	  <name>fuel indicator</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuel_ind.xml</path>
 	  <offsets>
-		  <x-m>-18.213</x-m>
+		  <x-m>-18.212</x-m>
 		  <y-m>0.088</y-m>
-		  <z-m>1.013</z-m>
+		  <z-m>1.019</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -405,7 +416,7 @@ more to come :-)
 	  <offsets>
 		  <x-m>-18.213</x-m>
 		  <y-m>0.012</y-m>
-		  <z-m>0.993</z-m>
+		  <z-m>0.998</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -487,24 +498,80 @@ more to come :-)
 		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
   </model>
+
   <model>
-	  <name>tacan sw</name>
+	  <name>ILS panel</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/ILS-Panel.xml</path>
+	  <offsets>
+		  <x-m>-18.162</x-m>
+		  <y-m>-0.290</y-m>
+		  <z-m>0.712</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+  <model>
+	  <name>tacan-sw</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/ARN-118-tacan.xml</path>
 	  <offsets>
-		  <x-m>-17.970</x-m>
-		  <y-m>-0.290</y-m>
+		  <x-m>-17.900</x-m>
+		  <y-m>-0.292</y-m>
 		  <z-m>0.720</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
 
   <model>
+	  <name>eng-aux-panel</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/Eng-Aux-Pwr.xml</path>
+	  <offsets>
+		  <x-m>-18.070</x-m>
+		  <y-m>-0.130</y-m>
+		  <z-m>0.710</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+  <model>
+	  <name>Flt Ctrl Pwr Panel</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/Flt-Ctrl-Pwr.xml</path>
+	  <offsets>
+		  <x-m>-18.071</x-m>
+		  <y-m> -0.120</y-m>
+		  <z-m>  0.711</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+  <model>
+	  <name>IFF panel</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/IFF-Panel.xml</path>
+	  <offsets>
+		  <x-m>-18.008</x-m>
+		  <y-m>-0.289</y-m>
+		  <z-m>0.710</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+  <model>
+	  <name>Rad alt panel</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/Rad-Alt.xml</path>
+	  <offsets>
+		  <x-m>-18.110</x-m>
+		  <y-m>-0.289</y-m>
+		  <z-m>0.709</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model> 
+
+  <model>
 	  <name>TO-LDG</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/TO-LDG.xml</path>
 	  <offsets>
-		  <x-m>-17.947</x-m>
-		  <y-m>-0.293</y-m>
-		  <z-m>0.723</z-m>
+		  <x-m>-17.792</x-m>
+		  <y-m>-0.288</y-m>
+		  <z-m> 0.709</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -514,8 +581,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/throttle.xml</path>
 	  <offsets>
 		  <x-m>-17.710</x-m>
-		  <y-m>0.185</y-m>
-		  <z-m>0.710</z-m>
+		  <y-m> 0.185</y-m>
+		  <z-m> 0.710</z-m>
 		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
   </model>
@@ -525,7 +592,7 @@ more to come :-)
 	  <offsets>
 		  <x-m>-17.810</x-m>
 		  <y-m>-0.263</y-m>
-		  <z-m>0.710</z-m>
+		  <z-m> 0.710</z-m>
 		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
   </model>

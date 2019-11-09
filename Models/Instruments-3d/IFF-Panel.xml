@@ -1,0 +1,47 @@
+<?xml version="1.0"?> 
+<PropertyList>
+ 
+ <path>IFF-Panel.ac</path>
+
+  <animation>
+    <object-name>IFF-PANEL</object-name>
+    <object-name>Knob-1</object-name>
+    <object-name>Knob-2</object-name>
+    <object-name>Left-hand-large-switch</object-name>
+    <object-name>Right-hand-large-switch</object-name>
+    <object-name>Small-knob1</object-name>
+    <object-name>Small-knob2</object-name>
+    <object-name>Switch-1</object-name>
+    <object-name>Switch-2</object-name>
+    <object-name>Switch-3</object-name>
+    <object-name>Switch-4</object-name>
+    <object-name>Switch-5</object-name>
+    <object-name>Switch-6</object-name>
+    <object-name>Switch-7</object-name>
+  </animation> 
+
+  <animation>
+    <type>material</type>
+    <object-name>IFF-PANEL</object-name>
+    <object-name>Knob-1</object-name>
+    <object-name>Knob-2</object-name>
+    <object-name>Left-hand-large-switch</object-name>
+    <object-name>Right-hand-large-switch</object-name>
+    <object-name>Small-knob-1</object-name>
+    <object-name>Small-knob-2</object-name>
+    <object-name>Switch-1</object-name>
+    <object-name>Switch-2</object-name>
+    <object-name>Switch-3</object-name>
+    <object-name>Switch-4</object-name>
+    <object-name>Switch-5</object-name>
+    <object-name>Switch-6</object-name>
+    <object-name>Switch-7</object-name>
+
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+  </animation>
+</PropertyList>
