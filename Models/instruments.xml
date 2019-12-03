@@ -466,6 +466,16 @@ more to come :-)
   </model>
 
   <model>
+	  <name>CP-FS</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/B-1BFS.xml</path>
+	  <offsets>
+		  <x-m>0.400</x-m>
+		  <y-m>0.885</y-m>
+		  <z-m>0.400</z-m>
+	  </offsets>
+  </model>
+
+  <model>
 	  <name>alter throt left</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/alter_throt_l.xml</path>
 	  <offsets>
