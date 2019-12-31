@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+<animation>
+        <type>rotate</type>
+        <object-name>Fuel-dump-switch</object-name> 
+        <property>controls/fuel/dump-valve</property>
+        <factor>60</factor> 
+        <center>
+            <x-m>-0.01050</x-m>
+            <y-m>-0.10123</y-m>
+            <z-m>0.04403</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>       
+  </animation>
+
+ <animation>
+ <type>pick</type>
+ <object-name>Fuel-dump-switch</object-name>
+ <action>
+  <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/fuel/dump-valve</property>  
+   </binding>
+  </action>
+ </animation> 
+
+  <animation>
+   <object-name>Fuel-Dump-cover</object-name>
+   <object-name>Fuel-dump-switch</object-name> 
+  </animation>
+
+</PropertyList>

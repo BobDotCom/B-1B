@@ -33,7 +33,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
 	  <offsets>
 		  <x-m>-18.214</x-m>
-		  <y-m>0.660</y-m>
+		  <y-m>0.663</y-m>
 		  <z-m>1.113</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -42,9 +42,9 @@ more to come :-)
 	  <name>ndb1-copilot</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
 	  <offsets>
-		  <x-m>-18.216</x-m>
-		  <y-m>0.565</y-m>
-		  <z-m>1.005</z-m>
+		  <x-m>-18.217</x-m>
+		  <y-m>0.595</y-m>
+		  <z-m>0.990</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -164,7 +164,7 @@ more to come :-)
 	  <offsets>
 		  <x-m>-18.214</x-m>
 		  <y-m>-0.198</y-m>
-		  <z-m>1.209</z-m>
+		  <z-m>1.214</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -207,8 +207,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
 	  <offsets>
 		  <x-m>-18.216</x-m>
-		  <y-m>-0.825</y-m>
-		  <z-m>1.005</z-m>
+		  <y-m>-0.840</y-m>
+		  <z-m>0.995</z-m>
 		  <pitch-deg>-1</pitch-deg>
 	  </offsets>
   </model>
@@ -217,7 +217,7 @@ more to come :-)
     <path>Aircraft/B-1B/Models/Instruments-3d/A-10-HSI.xml</path>
     <offsets>
       <x-m>-18.208</x-m>
-      <y-m>-0.675</y-m>
+      <y-m>-0.670</y-m>
       <z-m>1.026</z-m>
       <pitch-deg>-1</pitch-deg>
     </offsets>
@@ -229,7 +229,7 @@ more to come :-)
 	  <offsets>
 		  <x-m>-18.209</x-m>
 		  <y-m>-0.895</y-m>
-		  <z-m>1.113</z-m>
+		  <z-m>1.115</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -261,7 +261,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fltdir.xml</path>
 	  <offsets>
 		  <x-m>-18.218</x-m>
-		  <y-m>-0.755</y-m>
+		  <y-m>-0.750</y-m>
 		  <z-m>0.832</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
