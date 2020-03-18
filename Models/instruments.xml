@@ -5,17 +5,17 @@ more to come :-)
 -->
 
 <PropertyList>
-  
+
 	<path>Instruments-3d/sweep_scale.xml</path>
-	
+
   <offsets>
 	  <x-m>-0.42</x-m>
 	  <y-m>0.15</y-m>
           <z-m>-0.297</z-m>
     <pitch-deg>0</pitch-deg>
-    
+
   </offsets>
-  
+
   <animation>
 	  <type>select</type>
 	  <object-name>fuel_cov.007</object-name>
@@ -26,7 +26,7 @@ more to come :-)
 		  </greater-than>
 	  </condition>
  </animation>
-  
+
   <!--   cockpit -->
  <model>
 	  <name>copilot clock</name>
@@ -48,7 +48,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
     <model>
 	  <name>pfdb1-copilot</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb1.xml</path>
@@ -59,7 +59,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>hud alt-copilot</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/hud_alt.xml</path>
@@ -70,7 +70,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>hud mach-copilot</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/hud_mach.xml</path>
@@ -81,7 +81,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
     <model>
 	  <name>cautionind-copilot</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/caution_ind.xml</path>
@@ -124,7 +124,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>hud alt</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/hud_alt.xml</path>
@@ -135,7 +135,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>hud mach</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/hud_mach.xml</path>
@@ -146,7 +146,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>eng</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/eng_ind.xml</path>
@@ -157,7 +157,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>cg mac</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/mac_ind.xml</path>
@@ -168,7 +168,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>fcgms</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fcgms.xml</path>
@@ -190,7 +190,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>radaralt</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/radar_alt.xml</path>
@@ -201,7 +201,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>hsi</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
@@ -222,7 +222,7 @@ more to come :-)
       <pitch-deg>-1</pitch-deg>
     </offsets>
   </model>
-  
+
  <model>
 	  <name>clock</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
@@ -233,7 +233,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
  <model>
 	  <name>gearind</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/gear_ind.xml</path>
@@ -244,7 +244,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>cautionind</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/caution_ind.xml</path>
@@ -255,7 +255,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>fltdir</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fltdir.xml</path>
@@ -266,7 +266,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>reporter-lights</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/rep_lights.xml</path>
@@ -277,7 +277,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>fireind</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fire_ind.xml</path>
@@ -291,15 +291,15 @@ more to come :-)
 
  <model>
 	  <name>Pump-panel</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/Pump-Panel.xml</path>   
+	  <path>Aircraft/B-1B/Models/Instruments-3d/Pump-Panel.xml</path>
 	  <offsets>
 		  <x-m>-18.205</x-m>
 		  <y-m>-0.035</y-m>
 		  <z-m>0.841</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model> 
-  
+  </model>
+
   <model>
 	  <name>apmode</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/apmode.xml</path>
@@ -310,7 +310,7 @@ more to come :-)
 		  <roll-deg>-22</roll-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>alt</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/alt2-3d.xml</path>
@@ -321,7 +321,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>vsi</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/vsi-3d.xml</path>
@@ -332,7 +332,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>ai</name>
 	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
@@ -354,7 +354,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>bomb doors</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nuc.xml</path>
@@ -365,7 +365,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>terrain_flw</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/terflw_ind.xml</path>
@@ -376,7 +376,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>display big</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/display_big.xml</path>
@@ -387,7 +387,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>fuel indicator</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuel_ind.xml</path>
@@ -398,7 +398,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>fuel valves</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuelvalves.xml</path>
@@ -409,7 +409,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>fuel positions</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuelpos_ind.xml</path>
@@ -420,7 +420,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <!-- left console -->
         <model>
         <path>Aircraft/B-1B/Models/pedals.xml</path>
@@ -442,7 +442,7 @@ more to come :-)
 		  <heading-deg>-5</heading-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>throttle2</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/throttle_left.xml</path>
@@ -486,7 +486,7 @@ more to come :-)
 		  <roll-deg>-3</roll-deg>
 	  </offsets>
   </model>
-  
+
   <!-- middle console -->
   <model>
 	  <name>engine switch</name>
@@ -573,7 +573,7 @@ more to come :-)
 		  <z-m>0.709</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model> 
+  </model>
 
   <model>
 	  <name>TO-LDG</name>
@@ -606,9 +606,9 @@ more to come :-)
 		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <!-- overhead panel -->
-  
+
   <model>
 	  <name>overhead panel</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/overhead_panel.xml</path>
@@ -619,10 +619,10 @@ more to come :-)
 		  <pitch-deg>75</pitch-deg>
 	  </offsets>
   </model>
-  
-  
+
+
   <!-- WSO instruments xxxxxxxxxxxxxxxxxxxxxxxxx -->
-  
+
   <model>
 	  <name>DSO nd</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
@@ -639,7 +639,7 @@ more to come :-)
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>DSO screen1</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd_big.ac</path>
@@ -656,7 +656,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>DSO screen2</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd_big.ac</path>
@@ -673,7 +673,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>DSO alt</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/alt2-3d.xml</path>
@@ -690,7 +690,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>DSO ai</name>
 	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
@@ -707,8 +707,8 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
-<!-- OSO instrumentation -->
+
+<!-- WSO instrumentation -->
   <model>
 	  <name>OSO mfd</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/wso_mfd.xml</path>
@@ -731,7 +731,7 @@ more to come :-)
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>OSO sms</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/sms.xml</path>
@@ -754,7 +754,7 @@ more to come :-)
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>OSO smsmonitor</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/sms_monitor.xml</path>
@@ -777,7 +777,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>OSO ikb</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/ikb.xml</path>
@@ -800,7 +800,7 @@ more to come :-)
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>OSO bombnav</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/bombnav.xml</path>
@@ -817,13 +817,36 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.794</x-m>
+		  <x-m>-15.790</x-m>
 		  <y-m>0.275</y-m>
-		  <z-m>1.630</z-m>
+		  <z-m>1.635</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
+  <!--model>
+	  <name>OSO CITS</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/CITS.xml</path>
+	  <condition>
+	       <or>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
+		 </equals>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
+		 </equals>
+	       </or>
+	 </condition>
+	  <offsets>
+		  <x-m>-15.80383</x-m>
+		  <y-m>  0.09302</y-m>
+		  <z-m>  1.33974</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model-->
+
   <model>
 	  <name>OSO targetmonitor</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/target_monitor.xml</path>
@@ -846,7 +869,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>OSO alt</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/alt2-3d.xml</path>
@@ -869,7 +892,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>OSO ai</name>
 	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>

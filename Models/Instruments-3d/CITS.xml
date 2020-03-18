@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>CITS.ac</path>
+
+  <animation>
+    <object-name>CITS</object-name>
+    <object-name>CITS.mode</object-name>
+    <object-name>Nut.052</object-name>
+    <object-name>dis mode</object-name>
+    <object-name>dis reset</object-name>
+    <object-name>rcd init</object-name>
+    <object-name>screws</object-name>
+    <object-name>stim</object-name>
+    <object-name>test</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>CITS.mode</object-name>
+    <object-name>Nut.052</object-name>
+    <object-name>dis mode</object-name>
+    <object-name>dis reset</object-name>
+    <object-name>rcd init</object-name>
+    <object-name>stim</object-name>
+    <object-name>test</object-name>
+	<emission>
+		<red>0.6</red>
+		<green>0.3</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+  </animation>
+
+</PropertyList>
