@@ -13,69 +13,122 @@ var FALSE = 0;
 
 
 var cannon_types = {
-    " M70 rocket hit":        0.25, #135mm
-    " M55 cannon shell hit":  0.10, # 30mm
-    " KCA cannon shell hit":  0.10, # 30mm
-    " Gun Splash On ":        0.10, # 30mm
-    " M61A1 shell hit":       0.05, # 20mm
-    " GAU-8/A hit":           0.10, # 30mm
-    " BK27 cannon hit":       0.07, # 27mm
-    " GSh-30 hit":            0.10, # 30mm
-    " 7.62 hit":              0.005,# 7.62mm
-    " 50 BMG hit":            0.015,# 12.7mm
+    " M70 rocket hit":        0.250, #135mm
+    " S-5 rocket hit":        0.200, # 55mm
+    " M55 cannon shell hit":  0.100, # 30mm
+    " KCA cannon shell hit":  0.100, # 30mm
+    " Gun Splash On ":        0.100, # 30mm
+    " GSh-30 hit":            0.100, # 30mm
+    " GAU-8/A hit":           0.100, # 30mm
+    " Mk3Z hit":              0.100, # 30mm Jaguar
+    " BK27 cannon hit":       0.070, # 27mm
+    " GSh-23 hit":            0.065, # 23mm
+    " M61A1 shell hit":       0.050, # 20mm
+    " 50 BMG hit":            0.015, # 12.7mm (non-explosive)    
+    " 7.62 hit":              0.005, # 7.62mm (non-explosive)
+    " Hydra-70 hit":          0.250, # F-16
+    " SNEB hit":              0.250, # Jaguar
 };
     
     
     
 var warhead_lbs = {
-    "aim-120":              44.00,
-    "AIM120":               44.00,
-    "AIM-120":              44.00,
-    "RB-99":                44.00,
-    "aim-7":                88.00,
-    "AIM-7":                88.00,
-    "RB-71":                88.00,
-    "aim-9":                20.80,
-    "AIM9":                 20.80,
-    "AIM-9":                20.80,
-    "RB-24":                20.80,
-    "RB-24J":               20.80,
-    "RB-74":                20.80,
-    "R74":                  16.00,
-    "MATRA-R530":           55.00,
-    "Meteor":               55.00,
-    "AIM-54":              135.00,
-    "Matra R550 Magic 2":   27.00,
-    "MatraR550Magic2":      27.00,
-    "Matra MICA":           30.00,
-    "MatraMica":            30.00,
-    "MatraMicaIR":          30.00,
-    "RB-15F":              440.92,
-    "SCALP":               992.00,
-    "KN-06":               315.00,
+    # Anti-ground/marine warheads (sorted alphabetically)
+    "AGM-65":              126.00,
+    "AGM-84":              488.00,
+    "AGM-88":              146.00,
+    "AGM65":               200.00,
+    "AGM-119":             264.50,
+    "AGM-154A":            493.00,
+    "AGM-158":            1000.00,
+    "ALARM":               450.00,
+    "AM39-Exocet":         364.00, 
+    "AS-37-Martel":        330.00, 
+    "AS30L":               529.00,
+    "BL755":               100.00,# 800lb bomblet warhead. Mix of armour piecing and HE. 100 due to need to be able to kill buk-m2.    
+    "CBU-87":              100.00,# bomblet warhead. Mix of armour piecing and HE. 100 due to need to be able to kill buk-m2.    
+    "CBU-105":             100.00,# bomblet warhead. Mix of armour piecing and HE. 100 due to need to be able to kill buk-m2.    
+    "Exocet":              364.00,
+    "FAB-100":              92.59,
+    "FAB-250":             202.85,
+    "FAB-500":             564.38,
+    "GBU-12":              190.00,
+    "GBU-24":              945.00,
+    "GBU-31":              945.00,
+    "GBU-54":              190.00,
     "GBU12":               190.00,
     "GBU16":               450.00,
-    "Sea Eagle":           505.00,
-    "SeaEagle":            505.00,
-    "AGM65":               200.00,
-    "RB-04E":              661.00,
-    "RB-05A":              353.00,
-    "RB-75":               126.00,
-    "M90":                 500.00,
+    "HVAR":                  7.50,#P51
+    "KAB-500":             564.38,
+    "Kh-25MP":             197.53,
+    "Kh-66":               244.71,
+    "LAU-68":               10.00,
     "M71":                 200.00,
     "M71R":                200.00,
+    "M90":                  10.00,# bomblet warhead. x3 of real mass.
     "MK-82":               192.00,
-    "LAU-68":               10.00,
-    "M317":                145.00,
-    "GBU-31":              945.00,
-    "AIM132":               22.05,
-    "ALARM":               450.00,
+    "MK-83":               445.00,
+    "MK-83HD":             445.00,
+    "MK-84":               945.00,
+    "OFAB-100":             92.59,
+    "RB-04E":              661.00,
+    "RB-05A":              353.00,
+    "RB-15F":              440.92,
+    "RB-75":               126.00,
+    "RN-14T":              800.00, #fictional, thermobaeric replacement for the RN-24 nuclear bomb
+    "RN-18T":             1200.00, #fictional, thermobaeric replacement for the RN-28 nuclear bomb
+    "RS-2US":               28.66,
+    "S-21":                245.00,
+    "S-24":                271.00,
+    "SCALP":               992.00,
+    "Sea Eagle":           505.00,
+    "SeaEagle":            505.00,
     "STORMSHADOW":         850.00,
-    "R-60":                  6.60,
+    "ZB-250":              236.99,
+    "ZB-500":              473.99,
+    # Anti-air warheads (sorted alphabetically)
+    "aim-120":              44.00,
+    "AIM-120":              44.00,
+    "AIM-54":              135.00,
+    "aim-7":                88.00,
+    "AIM-7":                88.00,
+    "aim-9":                20.80,
+    "AIM-9":                20.80,
+    "AIM120":               44.00,
+    "AIM132":               22.05,
+    "AIM9":                 20.80,
+    "KN-06":               315.00,
+    "M317":                145.00,
+    "Magic-2":              27.00, 
+    "Majic":                26.45,
+    "Matra MICA":           30.00,
+    "Matra R550 Magic 2":   27.00,
+    "MATRA-R530":           55.00,
+    "MatraMica":            30.00,
+    "MatraMicaIR":          30.00,
+    "MatraR550Magic2":      27.00,
+    "Meteor":               55.00,
+    "MICA-EM":              30.00, 
+    "MICA-IR":              30.00, 
+    "R-13M":                16.31,
     "R-27R1":               85.98,
     "R-27T1":               85.98,
-    "FAB-500":             564.00,
-    "Exocet":              364.00,
+    "R-3R":                 16.31,
+    "R-3S":                 16.31,
+    "R-55":                 20.06,
+    "R-60":                  6.60,
+    "R-60M":                 7.70,
+    "R-73E":                16.31,
+    "R-77":                 49.60,
+    "R74":                  16.00,
+    "RB-05A":              353.00,
+    "RB-24":                20.80,
+    "RB-24J":               20.80,
+    "RB-71":                88.00,
+    "RB-74":                20.80,
+    "RB-99":                44.00,
+    "S530D":                66.00,
+    "S48N6":               330.00,# 48N6 from S-300pmu
 };
 
 var incoming_listener = func {
