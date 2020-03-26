@@ -12,7 +12,7 @@ Plane starts with:
 - engines off
 - parking brake off
 - with 190000lb of fuel (full), some space is required to be able to trim the aircraft
-- you can immidiately change fuel/weapon status in the B-1B menu, but only on the ground.
+- you can immediately change fuel/weapon status in the B-1B menu, but only on the ground.
 
 XXXX INSTRUCTIONS XXXX
 
@@ -33,7 +33,7 @@ Start engine:
 - 2nd Method:
 -   Switches to L/R BLEED AIR from OFF
 -   Switch engines ENG 1,2,3,4 to ON (middle console, aft)
-- Note: In case only one APU is running, switch to CRSVR AIR to allow engines 
+- Note: In case only one APU is running, switch to CRSVR AIR to allow engines
         in other nacelle to be started (left APU starts engine 1,2; right APU ->3,4
 - After engine start switch everything back to off, and switch off APUs now or
   after takeoff climb if you expect to use full power (short field takeoff)
@@ -54,7 +54,7 @@ Takeoff:
 Flight:
 
 - dependent on your altitude and speed choose 15/25/45/55/67 degrees wingweep (f/F)
-- max speed at sea level is mach 1.2, at altitude mach 1.4, short periods 
+- max speed at sea level is mach 1.2, at altitude mach 1.4, short periods
   at mach 1.5 for fast escape are possible, but you put the wings on danger to twist on maneuvering
 - typical performance speed is around mach 0.8 - 0.95 @sea level and mach 0.9 - 1.3 at altitude.
 
@@ -89,7 +89,7 @@ In Flight Refueling:
 Fire extinguish system:(not in use atm)
 
 - Set desired APU/engine on fire in top B-1B menu
-- Press warning button (panel middle), that automatically switches off the engine/APU 
+- Press warning button (panel middle), that automatically switches off the engine/APU
   and operates fire discharge bottle
 - When light extinguishes monitor if engine is down
 - Select emergency airport
@@ -98,7 +98,7 @@ Fire extinguish system:(not in use atm)
 Afterburner:
 
 Automatically engaged at full throttle, but with the switches directly behind the throttle levers (ALTER THROT)
- the afterburners for each engine can be deactivated (DECR) or activated (INCR). 
+ the afterburners for each engine can be deactivated (DECR) or activated (INCR).
 Important when using the autopilot: Switch the afterburners for eng 1 and 4 off, depending on flight also for
 eng 3 or/and eng 4. This prevents oscillations of the throttle levers.
 
@@ -133,7 +133,7 @@ You can access the main menus by direct selection on the uppermost row of button
 XXXX WEAPON SYSTEM XXXX
 
 This plane is equipped with a bomb guiding system currently working on the intermediate bay. First select weapons
- by going to B-1B/Weapons menu and select LOAD GUIDED(intmd bay loaded with 8 GBU-31 guidable weapons). 
+ by going to B-1B/Weapons menu and select LOAD GUIDED(intmd bay loaded with 8 GBU-31 guidable weapons).
 Switch to the OSO seat/view and you should see the GBU31 indicated on SMS display.
 
 
@@ -158,10 +158,10 @@ You can use up to 8 guided weapons independently, but I would advise to use 1 or
 7.)After releasing the bombs, click on the button with the triangle below BOMB in BOM/NAV panel to de-activate the release timer; and you have to stop the target tracking too if you do not intend to release further bombs; close bay doors manually;
 
 ad 2a.)Using the IKB for manual target coordinats input:
-- use left aerrow buttons for quick selection/navigation
-- top button (up aerrow) brings you back to main menu
-- select STATN1 --> click aerrow button right to SET IKB
-- now click on the num buttons of IKB to input coordinates, below you can see at wich pos you currently are
+- use left arrow buttons for quick selection/navigation
+- top button (up arrow) brings you back to main menu
+- select STATN1 --> click arrow button right to SET IKB
+- now click on the num buttons of IKB to input coordinates, below you can see at which pos you currently are
 - with the BS and AS you can change the digit to change (none visible means 0)
 - first digit (0) sets negative/positive coord -(press 0) or +(press 1) (+not shown)
 - then press AS to switch to next digit (1), now press 1(for eg 123.4567) or 0 for (023.4567 => 23.4567 shown)
