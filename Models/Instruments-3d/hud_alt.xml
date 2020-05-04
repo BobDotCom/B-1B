@@ -19,7 +19,7 @@ maggse
              <dep>0</dep>
      </entry>
      <entry>
-	     <ind>49000</ind>
+	     <ind>69000</ind>
 	     <dep>0.96</dep>
      </entry>
 </interpolation>
@@ -56,8 +56,8 @@ maggse
  <animation>
 	 <type>translate</type>
 	 <object-name>ind_alt_lmob</object-name>
-	 <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
-	 <!--<property>autopilot/settings/vertical-speed-fpm</property>-->
+	 <!--property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property-->
+	 <property>autopilot/settings/vertical-speed-fpm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>-10000</ind>
@@ -94,9 +94,9 @@ maggse
 		 <z>1</z>
 	 </axis>
 	 <center>
-		 <x-m>0.00</x-m>
-		 <y-m>0.00</y-m>
-		 <z-m>0.00</z-m>
+		 <x-m> 0.00216</x-m>
+		 <y-m>-0.26520</y-m>
+		 <z-m> 0.00856</z-m>
 	 </center>
  </animation>
  
@@ -112,7 +112,7 @@ maggse
 			 <property>autopilot/settings/target-altitude-ft</property>
 			 <step>100</step>
 			 <min>0.0</min>
-			 <max>49000</max>
+			 <max>69000</max>
 		 </binding>
 	 </action>
 	 <action>
@@ -124,7 +124,7 @@ maggse
 			 <property>autopilot/settings/target-altitude-ft</property>
 			 <step>-100</step>
 			 <min>0.0</min>
-			 <max>49000</max>
+			 <max>69000</max>
 		 </binding>
 	 </action>
  </animation>
@@ -195,6 +195,70 @@ maggse
  </animation>
  
  <animation>
+	<type>knob</type>
+	<object-name>knob_fcgms.001</object-name>
+	<property>autopilot/settings/vertical-speed-fpm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>-1.0</x>
+		<y> 0.0</y>
+		<z> 0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.00522</x-m>
+		<y-m>-0.26186</y-m>
+		<z-m>-0.08275</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>autopilot/settings/vertical-speed-fpm</property>
+                        <min>-10000</min>
+                        <max> 10000</max>
+                       <factor>250</factor>
+		</binding>
+	</action>
+</animation>
+ 
+  <animation>
+	 <type>knob</type>
+	 <object-name>knob_fcgms.001</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>autopilot/settings/vertical-speed-fpm</property>
+			 <step>100</step>
+			 <min>-10000</min>
+			 <max>10000</max>
+		 </binding>
+	 </action>
+	 <action>
+		 <button>1</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>autopilot/settings/vertical-speed-fpm</property>
+			 <step>-100</step>
+			 <min>-10000</min>
+			 <max> 10000</max>
+		 </binding>
+	 </action>
+ </animation>
+ 
+ <animation>
 	 <type>material</type>
 	 <object-name>ind_alt_t</object-name>
 	 <object-name>ind_alt_h</object-name>
@@ -207,12 +271,23 @@ maggse
 	 <object-name>ind_alt_lmob.001</object-name>
 	 <object-name>ind_alt_l</object-name>
 	 <object-name>ind_alt_lmob</object-name>
+	 <object-name>knob_fcgms.001</object-name>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.6</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
 

@@ -12,11 +12,21 @@
 	<object-name>Ring</object-name>
 	<object-name>Base_01</object-name>
 	<object-name>Base_02</object-name>
-	<emission>
-		<red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 

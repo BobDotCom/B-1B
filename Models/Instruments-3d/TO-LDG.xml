@@ -15,6 +15,7 @@
     <object-name>PowerNut</object-name>
     <object-name>TO-LD-Switch</object-name>
     <object-name>TO-LDG-Panel</object-name>
+    <object-name>light-land-toggle</object-name>
   </animation>
 
   <animation>
@@ -29,11 +30,22 @@
     <object-name>PowerNut</object-name>
     <object-name>TO-LD-Switch</object-name>
     <object-name>TO-LDG-Panel</object-name>
-	<emission>
-		<red>0.6</red>
-		<green>0.3</green>
-		<blue>0.2</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+    <object-name>light-land-toggle</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
 
@@ -98,6 +110,55 @@
       </binding>
    </action> 
   </animation> 
+  
+    <animation>
+   <type>rotate</type>
+   <object-name>light-land-toggle</object-name>
+   <property>controls/lighting/landing-lights</property>
+   <factor>30</factor> 
+   <min>0</min>
+   <max>1</max>   
+   <center> 
+    <x-m> 0.04688</x-m> 
+    <y-m> 0.04546</y-m> 
+    <z-m>-0.00388</z-m> 
+   </center> 
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis> 
+  </animation>
+
+  <animation> 
+   <type>pick</type> 
+   <object-name>light-land-toggle</object-name>
+   <action> 
+    <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/landing-lights</property>                
+        <factor>30</factor> 
+        <min>0</min> 
+        <max>1</max>
+      </binding>
+   </action> 
+ </animation>
+ 
+   <animation> 
+   <type>pick</type> 
+   <object-name>light-land-toggle</object-name>
+   <action> 
+    <button>1</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/taxi-light</property>                
+        <factor>-30</factor> 
+        <min>0</min> 
+        <max>1</max>
+      </binding>
+   </action> 
+ </animation>
 
   <animation>
    <type>rotate</type>

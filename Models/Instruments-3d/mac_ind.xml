@@ -34,12 +34,22 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>macind1</object-name>
 	 <object-name>macind2</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
 <animation>
@@ -67,11 +77,21 @@ sweat by maggse
 	<type>material</type>
 	<object-name>macind1</object-name>
 	<object-name>macind2</object-name>
-	<emission>
-		<red>0.8</red>
-		<green>0.4</green>
-		<blue>0.3</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
  <!-- total gross weight -->
@@ -191,11 +211,21 @@ sweat by maggse
 	<object-name>macfuel2</object-name>
 	<object-name>macfuel3</object-name>
 	<object-name>macfuel4</object-name>
-	<emission>
-		<red>0.7</red>
-		<green>0.4</green>
-		<blue>0.3</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
  

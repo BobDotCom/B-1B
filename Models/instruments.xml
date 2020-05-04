@@ -28,13 +28,24 @@ more to come :-)
  </animation>
 
   <!--   cockpit -->
+    <model>
+	  <name>copilot apmode</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/apmode.xml</path>
+	  <offsets>
+		  <x-m>-18.150</x-m>
+		  <y-m> 1.045</y-m>
+		  <z-m> 1.250</z-m>
+		  <roll-deg>18</roll-deg>
+	  </offsets>
+  </model>
+  
  <model>
 	  <name>copilot clock</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
 	  <offsets>
 		  <x-m>-18.214</x-m>
-		  <y-m>0.663</y-m>
-		  <z-m>1.113</z-m>
+		  <y-m> 0.663</y-m>
+		  <z-m> 1.113</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>

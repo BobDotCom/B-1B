@@ -32,12 +32,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		<red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -63,12 +73,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.001</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -94,12 +114,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.003</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -125,12 +155,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.002</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <!-- fan rpm/n1 -->
@@ -158,12 +198,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.007</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -189,12 +239,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.006</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -220,12 +280,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.004</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -251,12 +321,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.005</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
  <!-- egt -->
@@ -284,12 +364,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.008</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -315,12 +405,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.009</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -346,12 +446,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.011</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -377,12 +487,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.010</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
  <!-- FF -->
@@ -414,12 +534,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.015</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -449,12 +579,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.014</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -484,12 +624,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.012</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -519,12 +669,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.013</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
  <!-- oil press -->
@@ -552,12 +712,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.023</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -583,12 +753,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.022</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -614,12 +794,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.020</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -645,12 +835,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.021</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
  <!-- oil temp -->
@@ -709,12 +909,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.030</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -771,12 +981,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.029</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <!-- core rpm/n2 -->
@@ -804,12 +1024,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.016</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -835,12 +1065,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.017</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -866,12 +1106,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.019</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
  
  <animation>
@@ -897,12 +1147,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>ind1.018</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
 <animation>
@@ -913,11 +1173,21 @@ sweat by maggse
 	<object-name>glas_face.003</object-name>
 	<object-name>glas_face.004</object-name>
 	<object-name>glas_face.005</object-name>
-	<emission>
-		<red>0.7</red>
-		<green>0.4</green>
-		<blue>0.3</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
  

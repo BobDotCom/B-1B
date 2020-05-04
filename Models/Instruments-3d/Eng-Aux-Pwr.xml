@@ -16,12 +16,21 @@
     <object-name>ENG-AUX-PANEL</object-name>
     <object-name>IGN-CONT</object-name>
     <object-name>Speed-Lock-Up</object-name>
-
-	<emission>
-		<red>0.6</red>
-		<green>0.3</green>
-		<blue>0.2</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation> 
 </PropertyList>

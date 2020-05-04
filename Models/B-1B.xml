@@ -120,6 +120,25 @@ more to come :-)
   </offsets>
 </model>
 
+<!-- Ejection -->
+	 <animation>
+		 <type>translate</type>
+		 <object-name>Pilot</object-name>
+		 <object-name>seat</object-name>
+		 <property>controls/eject</property>
+		 <factor>20</factor>
+		 <center>
+			 <x-m>0</x-m>
+			 <y-m>0</y-m>
+			 <z-m>0</z-m>
+		 </center>
+		 <axis>
+			 <x>0</x>
+			 <y>0</y>
+			 <z>1</z>
+		 </axis>
+	 </animation>
+
   <!-- correct wing position -->
   <animation>
 	  <type>translate</type>
@@ -2717,7 +2736,7 @@ more to come :-)
 	 </axis>
  </animation>
  
-  <!-- Fwd Cadards -->
+  <!-- Fwd Canards -->
  <animation>
 	 <type>rotate</type>
 	 <object-name>canard_left</object-name>

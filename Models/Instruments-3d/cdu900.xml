@@ -258,28 +258,29 @@ sweat by maggse
   <object-name>line2_select</object-name>
   <object-name>line4_select</object-name>
   <object-name>line6_select</object-name>
-  <diffuse>
-    <red>0.2</red>
-    <green>0.4</green>
-    <blue>0.2</blue>
-  </diffuse>
-  <ambient>
-    <red>0.1</red>
-    <green>0.8</green>
-    <blue>0.1</blue>
-  </ambient>
-  <emission>
-    <red>0.4</red>
-    <green>0.9</green>
-    <blue>0.4</blue>
-  </emission>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
 </animation>
 
 <!-- menu buttons -->
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.051</object-name>
+  <object-name>cdu_b.Com</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -293,7 +294,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.052</object-name>
+  <object-name>cdu_b.Nav</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -307,7 +308,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.053</object-name>
+  <object-name>cdu_b.Iff</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -321,7 +322,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.054</object-name>
+  <object-name>cdu_b.M3</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -335,7 +336,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.055</object-name>
+  <object-name>cdu_b.Str</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -349,7 +350,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.056</object-name>
+  <object-name>cdu_b.Fplan</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -363,7 +364,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.057</object-name>
+  <object-name>cdu_b.Psn</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -377,7 +378,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.058</object-name>
+  <object-name>cdu_b.Dvr</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -468,7 +469,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.050</object-name>
+  <object-name>cdu_b.UP</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -482,7 +483,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.030</object-name>
+  <object-name>cdu_b.Down</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -496,7 +497,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.029</object-name>
+  <object-name>cdu_b.Right</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -510,7 +511,7 @@ sweat by maggse
 
 <animation>
   <type>pick</type>
-  <object-name>cdu_b.037</object-name>
+  <object-name>cdu_b.Left</object-name>
   <action>
     <button>0</button>
     <repeatable>true</repeatable>
@@ -524,39 +525,108 @@ sweat by maggse
 
  <animation>
 	<type>material</type>
-	<object-name>cdu_b.058</object-name>
-	<object-name>cdu_b.057</object-name>
-	<object-name>cdu_b.051</object-name>
-	<object-name>cdu_b.056</object-name>
-	<object-name>cdu_b.055</object-name>
-	<object-name>cdu_b.054</object-name>
-	<object-name>cdu_b.052</object-name>
-	<object-name>cdu_b.053</object-name>
-	<object-name>cdu_b.064</object-name>
+	<object-name>cdu_b.0</object-name>
 	<object-name>cdu_b.059</object-name>
+	<object-name>cdu_b.060</object-name>
+	<object-name>cdu_b.061</object-name>
+	<object-name>cdu_b.062</object-name>
 	<object-name>cdu_b.063</object-name>
+	<object-name>cdu_b.064</object-name>
 	<object-name>cdu_b.065</object-name>
 	<object-name>cdu_b.066</object-name>
-	<object-name>cdu_b.050</object-name>
-	<object-name>cdu_b.030</object-name>
-	<object-name>cdu_b.029</object-name>
-        <object-name>cdu_b.037</object-name>
-	<emission>
-		<red>0.6</red>
-		<green>0.3</green>
-		<blue>0.2</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	<object-name>cdu_b.1</object-name>
+	<object-name>cdu_b.2</object-name>
+	<object-name>cdu_b.3</object-name>
+	<object-name>cdu_b.4</object-name>
+	<object-name>cdu_b.5</object-name>
+	<object-name>cdu_b.6</object-name>
+	<object-name>cdu_b.7</object-name>
+    <object-name>cdu_b.8</object-name>
+    <object-name>cdu_b.9</object-name>
+	<object-name>cdu_b.A</object-name>
+	<object-name>cdu_b.B</object-name>
+	<object-name>cdu_b.C</object-name>
+	<object-name>cdu_b.Com</object-name>
+	<object-name>cdu_b.D</object-name>
+	<object-name>cdu_b.Down</object-name>
+    <object-name>cdu_b.Dvr</object-name>
+    <object-name>cdu_b.E</object-name>
+	<object-name>cdu_b.F</object-name>
+	<object-name>cdu_b.Fplan</object-name>
+	<object-name>cdu_b.G</object-name>
+	<object-name>cdu_b.H</object-name>
+	<object-name>cdu_b.I</object-name>
+	<object-name>cdu_b.Iff</object-name>
+    <object-name>cdu_b.J</object-name>
+    <object-name>cdu_b.K</object-name>
+	<object-name>cdu_b.L</object-name>
+	<object-name>cdu_b.Left</object-name>
+	<object-name>cdu_b.M</object-name>
+	<object-name>cdu_b.M3</object-name>
+	<object-name>cdu_b.N</object-name>
+	<object-name>cdu_b.O</object-name>
+	<object-name>cdu_b.P</object-name>
+    <object-name>cdu_b.Psn</object-name>
+    <object-name>cdu_b.Q</object-name>
+	<object-name>cdu_b.R</object-name>
+	<object-name>cdu_b.Right</object-name>
+	<object-name>cdu_b.S</object-name>
+	<object-name>cdu_b.Str</object-name>
+	<object-name>cdu_b.T</object-name>
+    <object-name>cdu_b.U</object-name>
+    <object-name>cdu_b.UP</object-name>
+	<object-name>cdu_b.V</object-name>
+	<object-name>cdu_b.W</object-name>
+	<object-name>cdu_b.X</object-name>
+	<object-name>cdu_b.Y</object-name>
+	<object-name>cdu_b.Z</object-name>
+	<object-name>cdu_b.blank</object-name>
+    <object-name>cdu_b.clr</object-name>
+    <object-name>cdu_b.data</object-name>
+	<object-name>cdu_b.edit</object-name>
+	<object-name>cdu_b.idx</object-name>
+	<object-name>cdu_b.mark</object-name>
+	<object-name>cdu_b.minus</object-name>
+	<object-name>cdu_b.msn</object-name>
+	<object-name>cdu_b.slash</object-name>
+    <object-name>cdu_b.stat</object-name>
+    <object-name>cdu_b.stop</object-name>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 
  <animation>
 	<type>material</type>
 	<object-name>Bezel.001</object-name>
-	<emission>
-		<red>0.4</red>
-		<green>0.2</green>
-		<blue>0.15</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 

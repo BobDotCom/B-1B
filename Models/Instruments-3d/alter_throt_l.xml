@@ -9,7 +9,7 @@ maggse
 <!-- afterburner switches -->
 <animation>
 	<type>rotate</type>
-	<object-name>alter_throt.017</object-name>
+	<object-name>alter_throt.1.L</object-name>
 	<property>controls/switches/engines/afterburner[0]</property>
 	<interpolation>
 		<entry>
@@ -35,7 +35,7 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>alter_throt.017</object-name>
+	<object-name>alter_throt.1.L</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -49,7 +49,7 @@ maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>alter_throt.016</object-name>
+	<object-name>alter_throt.2.L</object-name>
 	<property>controls/switches/engines/afterburner[1]</property>
 	<interpolation>
 		<entry>
@@ -75,7 +75,7 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>alter_throt.016</object-name>
+	<object-name>alter_throt.2.L</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -89,7 +89,7 @@ maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>alter_throt.015</object-name>
+	<object-name>alter_throt.3.L</object-name>
 	<property>controls/switches/engines/afterburner[2]</property>
 	<interpolation>
 		<entry>
@@ -115,7 +115,7 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>alter_throt.015</object-name>
+	<object-name>alter_throt.3.L</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -129,7 +129,7 @@ maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>alter_throt.014</object-name>
+	<object-name>alter_throt.4.L</object-name>
 	<property>controls/switches/engines/afterburner[3]</property>
 	<interpolation>
 		<entry>
@@ -155,7 +155,7 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>alter_throt.014</object-name>
+	<object-name>alter_throt.4.L</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -169,28 +169,71 @@ maggse
  
  <animation>
 	<type>material</type>
-	<object-name>alter_throt.017</object-name>
-	<object-name>alter_throt.016</object-name>
-        <object-name>alter_throt.015</object-name>
-	<object-name>alter_throt.014</object-name>
-	<emission>
-		<red>0.6</red>
-		<green>0.3</green>
-		<blue>0.2</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	<object-name>alter_throt.1.L</object-name>
+	<object-name>alter_throt.2.L</object-name>
+    <object-name>alter_throt.3.L</object-name>
+	<object-name>alter_throt.4.L</object-name>
+	<object-name>ADC</object-name>
+	<object-name>ADC-SEL</object-name>
+    <object-name>EMTR</object-name>
+	<object-name>FDC</object-name>	
+	<object-name>FDC-ADC</object-name>
+	<object-name>FLT-CONTR-TRIM</object-name>
+    <object-name>FLT-INST-TEST</object-name>
+	<object-name>HDG</object-name>
+	<object-name>HDG-ADC</object-name>
+	<object-name>HF</object-name>
+    <object-name>ICS</object-name>
+	<object-name>ICS-TFR</object-name>
+	<object-name>LS/TT</object-name>
+	<object-name>Stby-Pitch</object-name>
+    <object-name>StbyPitchLabel</object-name>
+	<object-name>TFR/TRR</object-name>
+	<object-name>Tacan</object-name>
+	<object-name>UHF.1</object-name>
+    <object-name>UHF.2</object-name>
+	<object-name>VSI</object-name>
+	<object-name>YamLabel</object-name>
+	<object-name>Yaw</object-name>
+    <object-name>switch_oh.059</object-name>
+	<object-name>switch_oh.065</object-name>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.98</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 
  <animation>
 	<type>material</type>
 	<object-name>fltdir.003</object-name>
-
-	<emission>
-		<red>0.4</red>
-		<green>0.2</green>
-		<blue>0.15</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>z
 </animation>
 
 </PropertyList>

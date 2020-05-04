@@ -6,7 +6,7 @@ sweat by maggse
 
  <path>display_big.ac</path>
  
- <!-- lights ind on off status 
+ <!--lights ind on off status 
 
  <animation>
 	 <type>select</type>
@@ -253,7 +253,7 @@ sweat by maggse
 		<blue>0.0</blue>
 		<factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
-</animation>-->
+</animation-->
 
 
 </PropertyList>

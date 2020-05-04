@@ -139,19 +139,35 @@ maggse
  
  <animation>
 	 <type>material</type>
-	 <object-name>ind_mach1</object-name>
+	 <object-name>ind_alt_l.001</object-name>
+	 <object-name>ind_alt_1mob.002</object-name>
+	 <object-name>ind_alt_lmob.003</object-name>
 	 <object-name>ind_knots1</object-name>
-	 <object-name>switch_fcgms_mode.002</object-name>
+	 <object-name>ind_mach1</object-name>
 	 <object-name>macfuel1.002</object-name>
+	 <object-name>macfuel1.003</object-name>
 	 <object-name>macfuel2.002</object-name>
+	 <object-name>macfuel2.003</object-name>
 	 <object-name>macfuel3.002</object-name>
-	 <object-name>ind_alt_lmob.002</object-name>
+	 <object-name>macfuel3.003</object-name>
+	 <object-name>switch_fcgms_mode.002</object-name>
+	 <object-name>switch_fcgms_mode.003</object-name>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.6</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
 

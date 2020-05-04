@@ -358,24 +358,44 @@
     <object-name>heading-set-knob</object-name>
     <type>material</type>
     <condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.385</red>
-      <green>0.168</green>
-      <blue>0.07</blue>
-    </emission>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
   </animation>
 
   <animation>
     <object-name>instrument</object-name>
     <type>material</type>
     <condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
-    <emission> 
-      <factor-prop>controls/lighting/instruments-norm</factor-prop>
-      <red>0.55</red>
-      <green>0.24</green>
-      <blue>0.10</blue>
-    </emission>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
   </animation>
 
   <animation>

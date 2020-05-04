@@ -120,4 +120,100 @@
            </binding>
         </action>
     </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>FUEL-DUMP</object-name> 
+        <property>controls/fuel/dump-valve</property>
+        <factor>30</factor>
+        <center>
+            <x-m>-0.00921</x-m>
+            <y-m>-0.10123</y-m>
+            <z-m> 0.04094</z-m>
+        </center>
+        <axis>
+            <x> 0</x>
+            <y>-1</y>
+            <z> 0</z>
+        </axis>       
+  </animation>
+
+ <animation>
+ <type>pick</type>
+ <object-name>FUEl-DUMP</object-name>
+ <action>
+  <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/fuel/dump-valve</property>  
+   </binding>
+  </action>
+ </animation> 
+ 
+     <animation>
+        <type>rotate</type>
+        <object-name>Fuel-Dump-Cover</object-name> 
+        <property>controls/switches/Fuel-Dump-Cover</property>
+        <factor>80</factor> 
+        <center>
+            <x-m>-0.01034</x-m>
+            <y-m>-0.10085</y-m>
+            <z-m> 0.06621</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>       
+  </animation>
+
+ <animation>
+ <type>pick</type>
+ <object-name>Fuel-Dump-Cover</object-name>
+ <action>
+  <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/switches/Fuel-Dump-Cover</property>  
+   </binding>
+  </action>
+ </animation> 
+    
+    <animation>
+  <type>material</type>
+  <object-name>AFT</object-name>
+  <object-name>BLST-TNK</object-name>
+  <object-name>CG-Test</object-name>
+  <object-name>CLG-SCO</object-name>
+  <object-name>FUEL-DUMP</object-name>
+  <object-name>Fuel-Dump-Cover</object-name>
+  <object-name>FWD</object-name>
+  <object-name>GRD-COOL</object-name>
+  <object-name>INTMD</object-name>
+  <object-name>Pump-1</object-name>
+  <object-name>Pump-2</object-name>
+  <object-name>Pump-3</object-name>
+  <object-name>Pump-4</object-name>
+  <object-name>Pump-5</object-name>
+  <object-name>Pump-6</object-name>
+  <object-name>Pump-Panel</object-name>
+  <object-name>SEQ-INIT</object-name>
+  <object-name>X-FEED</object-name>	 
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
 </PropertyList>

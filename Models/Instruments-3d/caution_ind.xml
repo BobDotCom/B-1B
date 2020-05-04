@@ -11,7 +11,7 @@ sweat by maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>switch_eject</object-name>
-	 <property>controls/switches/prep-eject</property>
+	 <property>controls/eject</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -45,7 +45,7 @@ sweat by maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/switches/prep-eject</property>
+			 <property>controls/eject</property>
 		 </binding>
 	 </action>
 </animation>
@@ -56,11 +56,21 @@ sweat by maggse
 <animation>
 	<type>material</type>
 	<object-name>rep_mstrcaution</object-name>
-	<emission>
-		<red>0.7</red>
-		<green>0.5</green>
-		<blue>0.5</blue>
-		<factor-prop>controls/switches/prep-eject</factor-prop>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 
@@ -422,22 +432,42 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>switch_eject</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.6</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
 <animation>
 	<type>material</type>
 	<object-name>fuel_cov.003</object-name>
-	<emission>
-		<red>0.2</red>
-		<green>0.1</green>
-		<blue>0.1</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 

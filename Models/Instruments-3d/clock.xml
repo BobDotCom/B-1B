@@ -22,11 +22,21 @@
     <object-name>heures</object-name>
     <object-name>minutes</object-name>
     <object-name>secondes</object-name>
-	<emission>
-		<red>0.6</red>
-		<green>0.3</green>
-		<blue>0.2</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
 
@@ -35,6 +45,11 @@
     <object-name>heures</object-name>
     <property>/instrumentation/clock/indicated-sec</property>
     <factor>0.00833333333333333</factor>
+      <center>
+   <x-m> 0.00479</x-m>
+   <y-m>-0.00990</y-m>
+   <z-m> 0.00922</z-m>
+  </center>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
@@ -47,6 +62,11 @@
     <object-name>minutes</object-name>
     <property>/instrumentation/clock/indicated-sec</property>
     <factor>0.1</factor>
+      <center>
+   <x-m> 0.00464</x-m>
+   <y-m>-0.00990</y-m>
+   <z-m> 0.00922</z-m>
+  </center>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
@@ -59,6 +79,11 @@
     <object-name>secondes</object-name>
     <property>/instrumentation/clock/indicated-sec</property>
     <factor>6</factor>
+      <center>
+   <x-m> 0.00446</x-m>
+   <y-m>-0.00990</y-m>
+   <z-m> 0.00921</z-m>
+  </center>
     <axis>
       <x> -1 </x>
       <y>  0 </y>

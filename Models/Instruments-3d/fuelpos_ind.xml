@@ -11,12 +11,22 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>glas_face.006</object-name>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
 	 <emission>
-		 <red>0.6</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
+	</emission>
 </animation>
 
  

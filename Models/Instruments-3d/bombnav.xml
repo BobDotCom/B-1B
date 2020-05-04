@@ -105,22 +105,42 @@ maggse
   <object-name>bombnav_button.020</object-name>
   <object-name>bombnav_button.021</object-name>
   <object-name>bombnav_button.022</object-name>
-	<emission>
-	<red>0.5</red>
-		<green>0.3</green>
-	<blue>0.3</blue>
-	<factor-prop>controls/lighting/instruments-norm</factor-prop>
-  </emission>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
 </animation>
 
 <animation>
   <type>material</type>
   <object-name>bombnav</object-name>
-  <emission>
-	<red>0.3</red>
-	<green>0.2</green>
-		<blue>0.2</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 

@@ -775,6 +775,11 @@ B-1B set file.
     <blacklist>
         <file>Aircraft/B-1B/Nasal/blacklist.nas</file> 
     </blacklist>
+  <instrumentation>
+   <iff>
+    <!--file>Aircraft/B-1B/Nasal/iff.nas</file -->
+   </iff>
+  </instrumentation>
 </nasal>
 
 </PropertyList>

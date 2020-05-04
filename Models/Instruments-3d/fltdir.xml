@@ -48,11 +48,21 @@ sweat by maggse
 <animation>
 	<type>material</type>
 	<object-name>knob_fltdir</object-name>
-	<emission>
-		<red>0.7</red>
-		<green>0.4</green>
-		<blue>0.3</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 
@@ -68,7 +78,7 @@ sweat by maggse
 		<binding>
 			<command>property-adjust</command>
 			<property>controls/switches/fltdir</property>
-			<step>0.25</step>
+			<step>0.15</step>
 			<min>0.0</min>
 			<max>1.00</max>
 		</binding>
@@ -99,11 +109,21 @@ sweat by maggse
 	<type>material</type>
 	<object-name>fltdir</object-name>
 <object-name>pitch_steer</object-name>
-	<emission>
-		<red>0.7</red>
-		<green>0.4</green>
-		<blue>0.3</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.8</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 

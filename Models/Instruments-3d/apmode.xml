@@ -343,22 +343,22 @@ sweat by maggse
 	 <object-name>spd_hold_txt</object-name>
 	 <object-name>spd_ptch_txt</object-name>
 	 <object-name>spd_ptch_hold_txt</object-name>
-	 
 	 <diffuse>
-	   <red>0.4</red>
-	   <green>0.9</green>
-	   <blue>0.4</blue>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
 	 </diffuse>
          <ambient>
-	   <red>0.4</red>
-	   <green>0.9</green>
-	   <blue>0.4</blue>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
 	 </ambient>
 	 <emission>
-		 <red>0.4</red>
-		 <green>0.9</green>
-		 <blue>0.4</blue>
-	 </emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
 </animation>
 
 <animation>
@@ -601,11 +601,21 @@ sweat by maggse
 <animation>
 	<type>material</type>
 	<object-name>apmode</object-name>
-	<emission>
-		<red>0.4</red>
-		<green>0.3</green>
-		<blue>0.2</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
  

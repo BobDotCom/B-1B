@@ -9,12 +9,22 @@
         <object-name>VSIface</object-name>
         <object-name>VSIneedle</object-name>
         <object-name>VSIKnob</object-name>
-        <emission>
-            <red>0.8</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
-            <factor-prop>controls/lighting/instruments-norm</factor-prop>
-        </emission>
+	 <diffuse>
+		<red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </diffuse>
+         <ambient>
+	   <red>0.9</red>
+	   <green>0.1</green>
+	   <blue>0.2</blue>
+	 </ambient>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
     </animation>
 
     <animation>
