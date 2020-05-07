@@ -123,9 +123,9 @@
     
     <animation>
         <type>rotate</type>
-        <object-name>FUEL-DUMP</object-name> 
+        <object-name>Fuel-Dump</object-name> 
         <property>controls/fuel/dump-valve</property>
-        <factor>30</factor>
+        <factor>50</factor>
         <center>
             <x-m>-0.00921</x-m>
             <y-m>-0.10123</y-m>
@@ -140,9 +140,21 @@
 
  <animation>
  <type>pick</type>
- <object-name>FUEl-DUMP</object-name>
+ <object-name>Fuel-Dump</object-name>
  <action>
   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/fuel/dump-valve</property>  
+   </binding>
+  </action>
+ </animation> 
+ 
+  <animation>
+ <type>pick</type>
+ <object-name>Fuel-Dump</object-name>
+ <action>
+  <button>1</button>
    <binding>
     <command>property-toggle</command>
      <property>controls/fuel/dump-valve</property>  

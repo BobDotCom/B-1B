@@ -2852,6 +2852,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>hatch_door</object-name>
 	 <object-name>hatch_door1</object-name>
+	 <object-name>hatch_door1_0</object-name>
 	 <object-name>hatch_handle</object-name>
 	 <property>canopy/position-norm</property>
 	 
@@ -2889,6 +2890,7 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>hatch_door1</object-name>
+	 <object-name>hatch_door1_0</object-name>
 	 <object-name>hatch_handle</object-name>
 	 <property>canopy/position-norm</property>
 	 
@@ -2947,9 +2949,9 @@ more to come :-)
 		 </entry>
 	 </interpolation>
 	 <center>
-		 <x-m>-15.16</x-m>
-		 <y-m>0.29</y-m>
-		 <z-m>0.01</z-m>
+		 <x-m>-15.36574</x-m>
+		 <y-m>0.19589</y-m>
+		 <z-m>0.01901</z-m>
 	 </center>
 	 <axis>
 		 <x>0</x>

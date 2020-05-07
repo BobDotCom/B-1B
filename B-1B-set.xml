@@ -497,7 +497,7 @@ B-1B set file.
 <!-- Start with the Parking Brake off -->
 <controls>
     <gear>
-      <brake-parking type="double">0.0</brake-parking>
+      <brake-parking type="double">1.0</brake-parking>
     </gear>
     <flight>
       <wing-sweep type="double">0.0</wing-sweep>

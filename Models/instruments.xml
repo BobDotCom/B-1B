@@ -576,7 +576,7 @@ more to come :-)
   </model>
 
   <model>
-	  <name>Rad alt panel</name>
+	  <name>Rad-Alt</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/Rad-Alt.xml</path>
 	  <offsets>
 		  <x-m>-18.110</x-m>
