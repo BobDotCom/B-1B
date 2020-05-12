@@ -634,6 +634,7 @@ more to come :-)
 
   <!-- WSO instruments xxxxxxxxxxxxxxxxxxxxxxxxx -->
 
+
   <model>
 	  <name>DSO nd</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
@@ -720,6 +721,29 @@ more to come :-)
   </model>
 
 <!-- WSO instrumentation -->
+
+  <!--model>
+	  <name>WSO mfd</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/CITS.xml</path>
+	  <condition>
+	       <or>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
+		 </equals>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
+		 </equals>
+	       </or>
+	 </condition>
+	  <offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model-->
   <model>
 	  <name>WSO mfd</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/wso_mfd.xml</path>

@@ -847,7 +847,7 @@ var oso_view_num = view.indexof("OSO view");
 ##
 var nuc = func {
   if (getprop("controls/switches/nuc") == 1) {
-    ltext = "Sorry, Duke Nukem not available yet on this plane(t)!";
+    ltext = "Duke Nukem not available yet on this plane(t)!";
   screen.log.write(ltext);
   }
 }

@@ -744,7 +744,7 @@ B-1B set file.
 		<file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
 	</tfs>
 	<ts>
-		<!--<file>Aircraft/B-1B/Nasal/tyresmoke.nas</file>-->
+		<file>Aircraft/B-1B/Nasal/tyresmoke.nas</file>
 	</ts>
 	<rain>
 		<file>Aircraft/B-1B/Nasal/rain.nas</file>
@@ -770,14 +770,14 @@ B-1B set file.
 		<file>Aircraft/B-1B/Nasal/damage.nas</file>
 	</weapons>
         <fuel>
-		<file>Aircraft/Generic/aar.nas</file>
+		<file>Aircraft/B-1B/Nasal/aar.nas</file>
 	</fuel>
     <blacklist>
         <file>Aircraft/B-1B/Nasal/blacklist.nas</file> 
     </blacklist>
   <instrumentation>
    <iff>
-    <!--file>Aircraft/B-1B/Nasal/iff.nas</file -->
+    <file>Aircraft/B-1B/Nasal/iff.nas</file>
    </iff>
   </instrumentation>
 </nasal>

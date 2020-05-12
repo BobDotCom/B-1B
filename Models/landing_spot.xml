@@ -58,7 +58,7 @@
 	 </condition>
 </animation>
 
-<!--animation>
+<!--<animation>
  <type>dist-scale</type>
  <object-name>spot_light2</object-name>
  <interpolation>
@@ -70,9 +70,9 @@
  <max>5.0</max>
  <center>
   <x-m>0.0</x-m>
-  <y-m>0.230</y-m>
+  <y-m>0.2320</y-m>
   <z-m>-2.664</z-m>
  </center>
-</animation-->
+</animation>-->
 
 </PropertyList>

@@ -28,7 +28,7 @@
 				<value>1.25</value>
 			</greater-than>
 			 <equals>
-				 <property>controls/lighting/nav-lights</property>
+				 <property>controls/lighting/landing-lights</property>
 				 <value>1.0</value>
 			 </equals>
 			 <equals>

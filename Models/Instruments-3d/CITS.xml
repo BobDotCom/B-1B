@@ -1,46 +1,280 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0"?> 
 
-<PropertyList>
+<PropertyList> 
+ <path>CITS.ac</path> 
 
-  <path>CITS.ac</path>
+ <!--animation> 
+  <type>rotate</type> 
+  <object-name>Cylinder.020</object-name>  
+  <condition> 
+   <equals>
+    <property>B-1B/fuel-tank-switch</property> 
+    <value>2</value> 
+   </equals> 
+  </condition> 
+  <property>consumables/fuel/total-fuel-lbs</property>
+  <factor>0.0036</factor>
+  <center>
+   <x-m>-0.01907</x-m> 
+   <y-m>-0.02714</y-m> 
+   <z-m>0.05934</z-m> 
+  </center> 
+  <axis> 
+   <x>0</x> 
+   <y>-1</y> 
+   <z>0</z> 
+  </axis>
+ </animation> 
+
+ <animation> 
+  <type>rotate</type> 
+  <object-name>Cylinder.020</object-name>  
+  <condition> 
+   <equals>
+    <property>B-1B/fuel-tank-switch</property> 
+    <value>3</value> 
+   </equals> 
+  </condition> 
+  <property>consumables/fuel/total-fuel-m3</property> 
+  <factor>0.0036</factor>
+  <center>
+   <x-m>-0.01907</x-m> 
+   <y-m>-0.02714</y-m> 
+   <z-m>0.05934</z-m> 
+  </center> 
+  <axis> 
+   <x>0</x> 
+   <y>-1</y> 
+   <z>0</z> 
+  </axis>
+ </animation>
+
+ <animation> 
+  <type>rotate</type> 
+  <object-name>Cylinder.020</object-name>  
+  <condition> 
+   <equals>
+    <property>B-1B/fuel-tank-switch</property> 
+    <value>4</value> 
+   </equals> 
+  </condition> 
+  <property>consumables/fuel/total-fuel-kg</property> 
+  <factor>0.0036</factor>
+  <center>
+   <x-m>-0.01907</x-m> 
+   <y-m>-0.02714</y-m> 
+   <z-m>0.05934</z-m> 
+  </center> 
+  <axis> 
+   <x>0</x> 
+   <y>-1</y> 
+   <z>0</z> 
+  </axis>
+ </animation> 
+
+ <animation> 
+  <type>rotate</type> 
+  <object-name>Cylinder.020</object-name>  
+  <condition> 
+   <equals>
+    <property>B-1B/fuel-tank-switch</property> 
+    <value>5</value> 
+   </equals> 
+  </condition> 
+  <property>consumables/fuel/tank[6]/level-lbs</property> 
+  <factor>0.0036</factor>
+  <center>
+   <x-m>-0.01907</x-m> 
+   <y-m>-0.02714</y-m> 
+   <z-m>0.05934</z-m> 
+  </center> 
+  <axis> 
+   <x>0</x> 
+   <y>-1</y> 
+   <z>0</z> 
+  </axis>
+ </animation> 
 
   <animation>
-    <object-name>CITS</object-name>
-    <object-name>CITS.mode</object-name>
-    <object-name>Nut.052</object-name>
-    <object-name>dis mode</object-name>
-    <object-name>dis reset</object-name>
-    <object-name>rcd init</object-name>
-    <object-name>screws</object-name>
-    <object-name>stim</object-name>
-    <object-name>test</object-name>
+        <type>knob</type>
+        <object-name>TNK-SEL</object-name>
+        <property>B-1B/fuel-tank-switch</property>
+        <factor>45</factor> 
+        <center>
+            <x-m>-0.00149</x-m>
+            <y-m>-0.03581</y-m>
+            <z-m>0.00074</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>        
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>B-1B/fuel-tank-switch</property> 
+                <min>0</min>
+                <max>5</max>                
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>Fuel-Dump</object-name> 
+        <property>controls/fuel/dump-valve</property>
+        <factor>50</factor>
+        <center>
+            <x-m>-0.00921</x-m>
+            <y-m>-0.10123</y-m>
+            <z-m> 0.04094</z-m>
+        </center>
+        <axis>
+            <x> 0</x>
+            <y>-1</y>
+            <z> 0</z>
+        </axis>       
   </animation>
 
+ <animation>
+ <type>pick</type>
+ <object-name>Fuel-Dump</object-name>
+ <action>
+  <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/fuel/dump-valve</property>  
+   </binding>
+  </action>
+ </animation> 
+ 
   <animation>
-    <type>material</type>
-    <object-name>CITS.mode</object-name>
-    <object-name>Nut.052</object-name>
-    <object-name>dis mode</object-name>
-    <object-name>dis reset</object-name>
-    <object-name>rcd init</object-name>
-    <object-name>stim</object-name>
-    <object-name>test</object-name>
+ <type>pick</type>
+ <object-name>Fuel-Dump</object-name>
+ <action>
+  <button>1</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/fuel/dump-valve</property>  
+   </binding>
+  </action>
+ </animation> 
+ 
+     <animation>
+        <type>rotate</type>
+        <object-name>Fuel-Dump-Cover</object-name> 
+        <property>controls/switches/Fuel-Dump-Cover</property>
+        <factor>80</factor> 
+        <center>
+            <x-m>-0.01034</x-m>
+            <y-m>-0.10085</y-m>
+            <z-m> 0.06621</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>       
+  </animation>
+
+ <animation>
+ <type>pick</type>
+ <object-name>Fuel-Dump-Cover</object-name>
+ <action>
+  <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/switches/Fuel-Dump-Cover</property>  
+   </binding>
+  </action>
+ </animation--> 
+    
+    <animation>
+  <type>material</type>
+  <object-name>0.1</object-name>
+  <object-name>1.1</object-name>
+  <object-name>2.1</object-name>
+  <object-name>3.1</object-name>
+  <object-name>4.1</object-name>
+  <object-name>5.1</object-name>
+  <object-name>6.1</object-name>
+  <object-name>7.1</object-name>
+  <object-name>8.1</object-name>
+  <object-name>9.1</object-name>
+  <object-name>A.1</object-name>
+  <object-name>ACUC.1</object-name>
+  <object-name>AFC.1</object-name>
+  <object-name>ALC_PS.1</object-name>
+  <object-name>B.1</object-name>
+  <object-name>BTTM_LTS.1</object-name>
+  <object-name>C.1</object-name>
+  <object-name>C/B.1</object-name>
+    <object-name>CITS_KNOB</object-name>
+  <object-name>CLR.1</object-name>
+  <object-name>CTC.1</object-name>
+  <object-name>CTR_LTS</object-name>
+  <object-name>D.1</object-name>
+  <object-name>DIS_MODE</object-name>
+  <object-name>DIS_RESET</object-name>
+  <object-name>DITS.1</object-name>
+  <object-name>ECS.1</object-name>
+  <object-name>ELEC_PWR.1</object-name>
+  <object-name>EMG.1</object-name>
+  <object-name>EMUX.1</object-name>
+  <object-name>ENG_ICE.1</object-name>
+  <object-name>ENG_INST.1</object-name>
+  <object-name>ENG_THRST.1</object-name>
+  <object-name>ENTR.1</object-name>
+  <object-name>EXCM.1</object-name>
+  <object-name>F.1</object-name>
+    <object-name>FAI_FLT.1</object-name>
+  <object-name>FRE_PROT.1</object-name>
+  <object-name>FRE_PRCSR.1</object-name>
+  <object-name>FUEL.1</object-name>
+  <object-name>IFAC_ROT.1</object-name>
+  <object-name>INS_SYS.1</object-name>
+  <object-name>LOC.1</object-name>
+  <object-name>OPR_ACE.1</object-name>
+  <object-name>OXY.1</object-name>
+  <object-name>PAGE_SW.1</object-name>
+  <object-name>R/E.1</object-name>
+  <object-name>RAD_ALT.1</object-name>
+  <object-name>RCD_INIT</object-name>
+  <object-name>RDR.1</object-name>
+  <object-name>RFS.1</object-name>
+  <object-name>SEC_FLT</object-name>
+  <object-name>SEC_PWR.1</object-name>
+  <object-name>SFR_MSC.1</object-name>
+    <object-name>SLOT.1</object-name>
+  <object-name>SLOT_R.H.1</object-name>
+  <object-name>SMS.1</object-name>
+  <object-name>STIM</object-name>
+  <object-name>T/T_SYS.1</object-name>
+  <object-name>TEST</object-name>
+  <object-name>TWS.1</object-name>
+  <object-name>UP_ARRW.1</object-name>
+  <object-name>WO3_CEM.1</object-name>
+  <object-name>WPN.1</object-name>
+  <object-name>WPN_SEVY.1</object-name>
+  <object-name>EWTR.1</object-name>
+  <object-name>h/3_PWR.1</object-name>	 
 	 <diffuse>
-		<red>0.9</red>
+		<red>0.8</red>
 	   <green>0.1</green>
 	   <blue>0.2</blue>
 	 </diffuse>
          <ambient>
-	   <red>0.9</red>
+	   <red>0.8</red>
 	   <green>0.1</green>
 	   <blue>0.2</blue>
 	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
-  </animation>
-
+</animation>
 </PropertyList>

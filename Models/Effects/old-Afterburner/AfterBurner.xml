@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>Aircraft/Generic/Effects/Flammes/thruster_flame.ac</path>
+ <nopreview/>
+
+ <animation>
+  <type>scale</type>
+  <object-name>Bounding_box</object-name>
+  <property>sim/multiplay/generic/float[19]</property><!-- throttle pos -->
+  <x-factor>0.85</x-factor>
+  <y-factor>0.85</y-factor>
+  <z-factor>0.85</z-factor>
+ </animation>
+
+
+
+ <effect>
+  <inherits-from>Aircraft/Jaguar/Models/Effects/flammesG.xml</inherits-from>
+  <object-name>Bounding_box</object-name>
+ </effect>
+
+</PropertyList>

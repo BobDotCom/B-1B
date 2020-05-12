@@ -196,11 +196,10 @@
   <object-name>AFT</object-name>
   <object-name>BLST-TNK</object-name>
   <object-name>CG-Test</object-name>
-  <object-name>CLG-SCO</object-name>
-  <object-name>FUEL-DUMP</object-name>
-  <object-name>Fuel-Dump-Cover</object-name>
+  <object-name>CLG_SCO</object-name>
   <object-name>FWD</object-name>
-  <object-name>GRD-COOL</object-name>
+  <object-name>Fuel-Dump</object-name>
+  <object-name>Grd-Cool</object-name>
   <object-name>INTMD</object-name>
   <object-name>Pump-1</object-name>
   <object-name>Pump-2</object-name>
@@ -208,9 +207,8 @@
   <object-name>Pump-4</object-name>
   <object-name>Pump-5</object-name>
   <object-name>Pump-6</object-name>
-  <object-name>Pump-Panel</object-name>
   <object-name>SEQ-INIT</object-name>
-  <object-name>X-FEED</object-name>	 
+  <object-name>X-FEED</object-name>
 	 <diffuse>
 		<red>0.8</red>
 	   <green>0.1</green>

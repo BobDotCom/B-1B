@@ -406,7 +406,7 @@ sweat by maggse
  <animation>
 	 <type>spin</type>
 	 <object-name>turbine_1.001</object-name>
-	 <property>engines/engine[0]/n2</property>
+	 <property>engines/engine[0]/thrust-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>72.0</ind>
@@ -436,7 +436,7 @@ sweat by maggse
  <animation>
 	 <type>spin</type>
 	 <object-name>turbine_2.001</object-name>
-	 <property>engines/engine[1]/n2</property>
+	 <property>engines/engine[1]/thrust-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>72.0</ind>
@@ -466,7 +466,7 @@ sweat by maggse
  <animation>
 	 <type>spin</type>
 	 <object-name>turbine_3.001</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/thrust-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>72.0</ind>
@@ -496,7 +496,7 @@ sweat by maggse
  <animation>
 	 <type>spin</type>
 	 <object-name>turbine_4.001</object-name>
-	 <property>engines/engine[3]/n2</property>
+	 <property>engines/engine[3]/thrust-lbs</property>
 	 <interpolation>
 		 <entry>
 			 <ind>72.0</ind>
