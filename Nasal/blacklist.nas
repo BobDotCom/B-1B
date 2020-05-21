@@ -8,6 +8,7 @@ var view_distance = 500; # in nautical miles
 
 var callsignsToIgnore = [
 	"thegood",
+	"hermano",
 ];
 
 var planesToIgnore = [
