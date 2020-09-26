@@ -12,7 +12,6 @@ Syd Adams
     <object-name>APspeed</object-name>
     <object-name>APlnav</object-name>
     <object-name>APvnav</object-name>
-    <!--<object-name>RAtape</object-name>-->
     <object-name>VSIscale</object-name>
     <object-name>HDGface</object-name>
     <object-name>AI</object-name>
@@ -104,48 +103,6 @@ Syd Adams
    <z>0</z>
   </axis>
  </animation>
-
-
-
- <!--<animation>
-   <type>rotate</type>
-   <object-name>pfdhdg</object-name>
-   <property>autopilot/internal/fdm-heading-bug-error-deg</property>
-   <interpolation>
-     <entry>
-       <ind> -180.0</ind>
-       <dep>-50.0</dep>
-     </entry>
-     <entry>
-       <ind>-50.0</ind>
-       <dep>-50.0</dep>
-     </entry>
-     <entry>
-       <ind> 0.0</ind>
-       <dep>0.0</dep>
-     </entry>
-     <entry>
-       <ind> 50.0</ind>
-       <dep>50.0</dep>
-     </entry>
-     <entry>
-       <ind>180.0</ind>
-       <dep>50.0</dep>
-     </entry>
-   </interpolation>
-<axis>
-     <x>-1.0</x>
-     <y>0.0</y>
-     <z>0.0</z>
-   </axis>
-   <center>
-     <x-m>0.007</x-m>
-     <y-m>-0.013</y-m>
-     <z-m>-0.135</z-m>
-   </center>
- </animation>-->
-
-
 
  <animation>
    <type>rotate</type>
@@ -251,48 +208,6 @@ Syd Adams
 	   <z>0.0</z>
    </center>
  </animation>
-<!-- 
-  <animation>
-   <type>rotate</type>
-   <object-name>hdgbug</object-name>
-   <property>/autopilot/internal/fdm-heading-bug-error-deg</property>
-   <axis>
-     <x>-1.0</x>
-     <y>0.0</y>
-     <z>0.0</z>
-   </axis>
-   <center>
-     <x-m>0.002</x-m>
-     <y-m>0</y-m>
-     <z-m>-0.040</z-m>
-   </center>
- </animation>
- 
-  <animation>
-   <type>translate</type>
-   <object-name>GSneedle</object-name>
-   <property>/instrumentation/nav/gs-needle-deflection</property>
-   <interpolation>
-     <entry>
-       <ind>-10.0</ind>
-       <dep>-0.0160</dep>
-     </entry>
-     <entry>
-       <ind>0.0</ind>
-       <dep>0.0</dep>
-     </entry>
-     <entry>
-       <ind>10.0</ind>
-       <dep>0.0160</dep>
-     </entry>
-   </interpolation>
-   <axis>
-     <x>0.0</x>
-     <y>0.0</y>
-     <z>1.0</z>
-   </axis>
- </animation>
--->
  
  <animation>
    <type>textranslate</type>
@@ -319,8 +234,7 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
- 
+  
  <animation>
    <type>textranslate</type>
    <object-name>Asitext.002</object-name>
@@ -332,10 +246,7 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
 
- 
- 
   <animation>
    <type>textranslate</type>
    <object-name>Alt10</object-name>
@@ -390,175 +301,6 @@ Syd Adams
    </axis>
  </animation>
 
- 
-
-  <!--<animation>
-   <type>textranslate</type>
-   <object-name>alttext</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
-   <factor>0.00001</factor>
-   <step>10000</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>alttext.001</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
-   <factor>0.0001</factor>
-   <step>1000</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
- 
- <animation>
-   <type>textranslate</type>
-   <object-name>alttext.002</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
-   <factor>0.001</factor>
-   <step>100</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>alttext.003</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
-   <factor>0.01</factor>
-   <step>10</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>alttext.004</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
-   <factor>0.1</factor>
-   <step>1</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>pitch.001</object-name>
-   <property>instrumentation/efis/fixed-pitch</property>
-   <factor>0.01</factor>
-   <step>10</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>pitch.002</object-name>
-   <property>instrumentation/efis/fixed-pitch</property>
-   <factor>0.1</factor>
-   <step>1</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>inhg</object-name>
-   <property>instrumentation/efis/baro-mode</property>
-   <factor>0.059</factor>
-   <axis>
-     <x>0</x>
-     <y>-1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>inhg01</object-name>
-   <property>instrumentation/efis/baro</property>
-   <factor>0.0001</factor>
-   <step>1000</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>inhg01.001</object-name>
-   <property>instrumentation/efis/baro</property>
-   <factor>0.001</factor>
-   <step>100</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>inhg01.002</object-name>
-   <property>instrumentation/efis/baro</property>
-   <factor>0.01</factor>
-   <step>10</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>inhg01.003</object-name>
-   <property>instrumentation/efis/baro</property>
-   <factor>0.1</factor>
-   <step>1</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>pitch.003</object-name>
-   <condition>
-<less-than>   
-<property>orientation/pitch-deg</property>
-   <value>0.0</value>
-   </less-than>
-</condition>
- </animation>-->
-
-
   <animation>
    <type>textranslate</type>
    <object-name>bugtxt</object-name>
@@ -598,45 +340,6 @@ Syd Adams
    </axis>
  </animation>
 
-  <!--<animation>
-   <type>textranslate</type>
-   <object-name>iastext</object-name>
-   <property>autopilot/settings/target-speed-kt</property>
-   <factor>0.001</factor>
-   <step>100</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>iastext.001</object-name>
-   <property>autopilot/settings/target-speed-kt</property>
-   <factor>0.01</factor>
-   <step>10</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>iastext.002</object-name>
-   <property>autopilot/settings/target-speed-kt</property>
-   <factor>0.1</factor>
-   <step>1</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>-->
-
   <animation>
    <type>textranslate</type>
    <object-name>mach.001</object-name>
@@ -675,32 +378,6 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
-
-
- <!-- <animation>
-   <type>textranslate</type>
-   <object-name>RAtape</object-name>
-   <property>/position/altitude-agl-ft</property>
-   <interpolation>
-     <entry>
-       <ind> 0.0</ind>
-       <dep>0.0</dep>
-     </entry>
-     <entry>
-       <ind> 2500.0</ind>
-       <dep>0.2400</dep>
-     </entry>
-     <entry>
-       <ind> 99000.0</ind>
-       <dep>0.2480</dep>
-     </entry>
-</interpolation>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
-</animation>-->
 
   <animation>
    <type>textranslate</type>

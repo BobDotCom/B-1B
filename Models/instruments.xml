@@ -349,8 +349,8 @@ more to come :-)
 	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
 	  <offsets>
 		  <x-m>-18.212</x-m>
-		  <y-m>-0.400</y-m>
-		  <z-m>1.260</z-m>
+		  <y-m>-0.420</y-m>
+		  <z-m>1.265</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>

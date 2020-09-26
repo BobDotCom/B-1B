@@ -70,50 +70,6 @@ hacked by maggse
      <z-m>-0.040</z-m>
    </center>
  </animation>
-
-<!--
-  <animation>
-   <type>textranslate</type>
-   <object-name>alttext</object-name>
-   <property>/autopilot/settings/target-altitude-ft</property>
-   <factor>0.00001</factor>
-   <step>10000</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>alttext.001</object-name>
-   <property>/autopilot/settings/target-altitude-ft</property>
-   <factor>0.0001</factor>
-   <step>1000</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
- 
- <animation>
-   <type>textranslate</type>
-   <object-name>alttext.002</object-name>
-   <property>/autopilot/settings/target-altitude-ft</property>
-   <factor>0.001</factor>
-   <step>100</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
-
-
--->
  
  <animation>
    <type>textranslate</type>
@@ -170,33 +126,6 @@ hacked by maggse
    </center>
 </animation>
 
-<!--<animation>
-   <type>select</type>
-<object-name>rng.001</object-name>
-<object-name>rng.002</object-name>
-<object-name>rng.003</object-name>
-<object-name>wxr.annun</object-name>
-<condition>
-<equals>
-<property>/instrumentation/wxradar/switch</property>
-<value>on</value>
-</equals>
-</condition>
- </animation>
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>rng.001</object-name>
-   <property>/instrumentation/wxradar/range</property>
-   <factor>0.001</factor>
-   <step>100</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
   <animation>
    <type>textranslate</type>
    <object-name>rng.002</object-name>
@@ -221,7 +150,7 @@ hacked by maggse
      <y>1</y>
      <z>0</z>
    </axis>
- </animation>-->
+ </animation>
  
  <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrradar range adjustments -->
  

@@ -134,48 +134,6 @@ hacked by maggse
 	 </action>
  </animation>
 
-<!--
-  <animation>
-   <type>textranslate</type>
-   <object-name>alttext</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
-   <factor>0.00001</factor>
-   <step>10000</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>textranslate</type>
-   <object-name>alttext.001</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
-   <factor>0.0001</factor>
-   <step>1000</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
- 
- <animation>
-   <type>textranslate</type>
-   <object-name>alttext.002</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
-   <factor>0.001</factor>
-   <step>100</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
--->
- 
-
  <animation>
    <type>textranslate</type>
    <object-name>hdgtext</object-name>
@@ -230,59 +188,6 @@ hacked by maggse
      <z-m>-0.047</z-m>
    </center>
 </animation>
-
-<!--<animation>
-   <type>select</type>
-<object-name>rng.001</object-name>
-<object-name>rng.002</object-name>
-<object-name>rng.003</object-name>
-<object-name>wxr.annun</object-name>
-<condition>
-<equals>
-<property>/instrumentation/wxradar/switch</property>
-<value>on</value>
-</equals>
-</condition>
- </animation>
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>rng.001</object-name>
-   <property>/instrumentation/wxradar/range</property>
-   <factor>0.001</factor>
-   <step>100</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>rng.002</object-name>
-   <property>/instrumentation/wxradar/range</property>
-   <factor>0.01</factor>
-   <step>10</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
- 
-   <animation>
-   <type>textranslate</type>
-   <object-name>rng.003</object-name>
-   <property>/instrumentation/wxradar/range</property>
-   <factor>0.1</factor>
-   <step>1</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>-->
  
  <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrradar range adjustments -->
  
@@ -2846,39 +2751,12 @@ hacked by maggse
      <z-m>-0.047</z-m>
    </center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP1a</object-name>
-	<property>ai/models/multiplayer[0]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
-
 
 <animation>
 <type>select</type>
 <object-name>MP2a</object-name>
 <condition>
 <and>
-
 <equals>
 <property>instrumentation/radar/targets/target[1]/in-range</property>
 <value>true</value>
@@ -2962,39 +2840,12 @@ hacked by maggse
      <z-m>-0.047</z-m>
    </center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP2a</object-name>
-	<property>ai/models/multiplayer[1]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
-
 
 <animation>
 <type>select</type>
 <object-name>MP3a</object-name>
 <condition>
 <and>
-
 <equals>
 <property>instrumentation/radar/targets/target[2]/in-range</property>
 <value>true</value>
@@ -3078,38 +2929,12 @@ hacked by maggse
      <z-m>-0.047</z-m>
    </center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP3a</object-name>
-	<property>ai/models/multiplayer[2]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
 
 <animation>
 <type>select</type>
 <object-name>MP4a</object-name>
 <condition>
 <and>
-
 <equals>
 <property>instrumentation/radar/targets/target[3]/in-range</property>
 <value>true</value>
@@ -3193,44 +3018,15 @@ hacked by maggse
      <z-m>-0.047</z-m>
    </center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP4a</object-name>
-	<property>ai/models/multiplayer[3]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
-
 
 <animation>
 <type>select</type>
 <object-name>MP5a</object-name>
 <condition>
-
-
 <equals>
 <property>instrumentation/radar/targets/target[4]/in-range</property>
 <value>true</value>
 </equals>
-
 </condition>
  </animation>
 
@@ -3309,43 +3105,15 @@ hacked by maggse
      <z-m>-0.047</z-m>
    </center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP5a</object-name>
-	<property>ai/models/multiplayer[4]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
 
 <animation>
 <type>select</type>
 <object-name>MP6a</object-name>
 <condition>
-
-
 <equals>
 <property>instrumentation/radar/targets/target[5]/in-range</property>
 <value>true</value>
 </equals>
-
 </condition>
  </animation>
 
@@ -3424,43 +3192,15 @@ hacked by maggse
      <z-m>-0.047</z-m>
    </center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP6a</object-name>
-	<property>ai/models/multiplayer[5]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
 
 <animation>
 	<type>select</type>
 	<object-name>MP7a</object-name>
-	<condition>
-		
-		
+	<condition>				
 		<equals>
 			<property>instrumentation/radar/targets/target[6]/in-range</property>
 			<value>true</value>
-		</equals>
-		
+		</equals>		
 	</condition>
 </animation>
 
@@ -3539,43 +3279,15 @@ hacked by maggse
 		<z-m>-0.047</z-m>
 	</center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP7a</object-name>
-	<property>ai/models/multiplayer[6]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
 
 <animation>
 	<type>select</type>
 	<object-name>MP8a</object-name>
-	<condition>
-		
-		
+	<condition>				
 		<equals>
 			<property>instrumentation/radar/targets/target[7]/in-range</property>
 			<value>true</value>
-		</equals>
-		
+		</equals>		
 	</condition>
 </animation>
 
@@ -3654,43 +3366,15 @@ hacked by maggse
 		<z-m>-0.047</z-m>
 	</center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP8a</object-name>
-	<property>ai/models/multiplayer[7]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
 
 <animation>
 	<type>select</type>
 	<object-name>MP9a</object-name>
-	<condition>
-		
-		
+	<condition>				
 		<equals>
 			<property>instrumentation/radar/targets/target[8]/in-range</property>
 			<value>true</value>
-		</equals>
-		
+		</equals>		
 	</condition>
 </animation>
 
@@ -3769,43 +3453,15 @@ hacked by maggse
 		<z-m>-0.047</z-m>
 	</center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP9a</object-name>
-	<property>ai/models/multiplayer[8]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
 
 <animation>
 	<type>select</type>
 	<object-name>MP10a</object-name>
-	<condition>
-		
-		
+	<condition>		
 		<equals>
 			<property>instrumentation/radar/targets/target[9]/in-range</property>
 			<value>true</value>
-		</equals>
-		
+		</equals>		
 	</condition>
 </animation>
 
@@ -3884,43 +3540,15 @@ hacked by maggse
 		<z-m>-0.047</z-m>
 	</center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP10a</object-name>
-	<property>ai/models/multiplayer[9]/position/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
 
 <animation>
 	<type>select</type>
 	<object-name>MP11a</object-name>
-	<condition>
-		
-		
+	<condition>		
 		<equals>
 			<property>instrumentation/radar/targets/target[10]/in-range</property>
 			<value>true</value>
-		</equals>
-		
+		</equals>		
 	</condition>
 </animation>
 
@@ -3999,43 +3627,15 @@ hacked by maggse
 		<z-m>-0.047</z-m>
 	</center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP11a</object-name>
-	<property>instrumentation/radar/targets/target[10]/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
 
 <animation>
 	<type>select</type>
 	<object-name>MP12a</object-name>
 	<condition>
-		
-		
 		<equals>
 			<property>instrumentation/radar/targets/target[11]/in-range</property>
 			<value>true</value>
-		</equals>
-		
+		</equals>		
 	</condition>
 </animation>
 
@@ -4114,49 +3714,14 @@ hacked by maggse
 		<z-m>-0.047</z-m>
 	</center>
 </animation>
-<!--
-<animation> 
-	<type>textranslate</type>
-	<object-name>MP12a</object-name>
-	<property>instrumentation/radar/targets/target[11]/rel-altitude-ft</property>
-	<interpolation>
-		<entry>
-			<ind>-3000.0</ind>
-			<dep>0.07</dep>
-		</entry>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.00</dep>
-		</entry>
-		<entry>
-			<ind>3000.0</ind>
-			<dep>-0.07</dep>
-		</entry>
-	</interpolation>
-	<axis> 
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-</animation>-->
 
  <animation>
 	<type>material</type>
 	<object-name>hdg_knob</object-name>
 	<object-name>btn_rrngu</object-name>
 	<object-name>btn_rrngd</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>

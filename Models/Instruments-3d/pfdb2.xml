@@ -298,48 +298,7 @@ Syd Adams
      <z>-1</z>
    </axis>
  </animation>
-<!-- 
-  <animation>
-   <type>rotate</type>
-   <object-name>hdgbug</object-name>
-   <property>/autopilot/internal/fdm-heading-bug-error-deg</property>
-   <axis>
-     <x>-1.0</x>
-     <y>0.0</y>
-     <z>0.0</z>
-   </axis>
-   <center>
-     <x-m>0.002</x-m>
-     <y-m>0</y-m>
-     <z-m>-0.040</z-m>
-   </center>
- </animation>
- 
-  <animation>
-   <type>translate</type>
-   <object-name>GSneedle</object-name>
-   <property>/instrumentation/nav/gs-needle-deflection</property>
-   <interpolation>
-     <entry>
-       <ind>-10.0</ind>
-       <dep>-0.0160</dep>
-     </entry>
-     <entry>
-       <ind>0.0</ind>
-       <dep>0.0</dep>
-     </entry>
-     <entry>
-       <ind>10.0</ind>
-       <dep>0.0160</dep>
-     </entry>
-   </interpolation>
-   <axis>
-     <x>0.0</x>
-     <y>0.0</y>
-     <z>1.0</z>
-   </axis>
- </animation>
--->
+
   <animation>
    <type>textranslate</type>
    <object-name>ASIribbon</object-name>
@@ -833,32 +792,6 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
-
-
- <!-- <animation>
-   <type>textranslate</type>
-   <object-name>RAtape</object-name>
-   <property>/position/altitude-agl-ft</property>
-   <interpolation>
-     <entry>
-       <ind> 0.0</ind>
-       <dep>0.0</dep>
-     </entry>
-     <entry>
-       <ind> 2500.0</ind>
-       <dep>0.2400</dep>
-     </entry>
-     <entry>
-       <ind> 99000.0</ind>
-       <dep>0.2480</dep>
-     </entry>
-</interpolation>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
-</animation>-->
 
   <animation>
    <type>textranslate</type>

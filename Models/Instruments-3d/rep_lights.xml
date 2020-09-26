@@ -312,18 +312,8 @@ sweat by maggse
 	 <object-name>rep_light.015</object-name>
 	 <object-name>rep_light.016</object-name>
 	 <object-name>rep_light.017</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
@@ -333,18 +323,8 @@ sweat by maggse
 <animation>
 	<type>material</type>
 	<object-name>report_lights</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>

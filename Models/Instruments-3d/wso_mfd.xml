@@ -966,18 +966,8 @@ sweat by maggse
   <object-name>line81</object-name>
   <object-name>line82</object-name>
   <object-name>line83</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>

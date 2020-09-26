@@ -258,16 +258,6 @@ sweat by maggse
   <object-name>line2_select</object-name>
   <object-name>line4_select</object-name>
   <object-name>line6_select</object-name>
-	 <diffuse>
-		<red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
 		 <red>0.8</red>
 		 <green>0.1</green>
@@ -591,16 +581,6 @@ sweat by maggse
 	<object-name>cdu_b.slash</object-name>
     <object-name>cdu_b.stat</object-name>
     <object-name>cdu_b.stop</object-name>
-	 <diffuse>
-		<red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
 		 <red>0.8</red>
 		 <green>0.1</green>
@@ -612,16 +592,6 @@ sweat by maggse
  <animation>
 	<type>material</type>
 	<object-name>Bezel.001</object-name>
-	 <diffuse>
-		<red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
 		 <red>0.8</red>
 		 <green>0.1</green>

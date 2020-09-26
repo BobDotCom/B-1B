@@ -1196,18 +1196,8 @@ sweat by maggse
   <object-name>tgt7_dist</object-name>
   <object-name>tgt8</object-name>
   <object-name>tgt8_dist</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>

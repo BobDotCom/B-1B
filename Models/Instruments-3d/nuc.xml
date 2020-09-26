@@ -34,16 +34,6 @@ maggse
  <animation>
 	 <type>material</type>
 	 <object-name>rep_eng1.014</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.1</green>
@@ -97,18 +87,8 @@ maggse
 <animation>
 	<type>material</type>
 	<object-name>switch_eject.002</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
@@ -138,18 +118,8 @@ maggse
 <animation>
 	<type>material</type>
 	<object-name>fltdir.001</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
@@ -160,7 +130,7 @@ maggse
 	 <type>material</type>
 	 <object-name>nuc_close.001</object-name>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.1</blue>
 		 <factor-prop>sim/multiplay/generic/float[2]</factor-prop>
@@ -171,7 +141,7 @@ maggse
 	 <type>material</type>
 	 <object-name>nuc_close.002</object-name>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.1</blue>
 		 <factor-prop>sim/multiplay/generic/float[3]</factor-prop>
@@ -182,7 +152,7 @@ maggse
 	 <type>material</type>
 	 <object-name>nuc_close.003</object-name>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.1</blue>
 		 <factor-prop>sim/multiplay/generic/float[4]</factor-prop>
@@ -193,18 +163,8 @@ maggse
 <animation>
 	<type>material</type>
 	<object-name>nuc_close</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
@@ -359,18 +319,8 @@ maggse
 	<object-name>nuc_pt.006</object-name>
 	<object-name>nuc_pt.007</object-name>
 	<object-name>nuc_pt.008</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>

@@ -12,16 +12,6 @@
         <object-name>needle10000</object-name>
         <object-name>inhg</object-name>
         <object-name>InhgKnob</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.1</green>

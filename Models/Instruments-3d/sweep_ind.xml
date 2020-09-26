@@ -6,17 +6,6 @@ maggse
 
  <path>sweep_ind.ac</path>
 
- <!--<animation>
-    <name>Alpha Sort</name>
-    <object-name>APspeed</object-name>
-    <object-name>APlnav</object-name>
-    <object-name>APvnav</object-name>
-    <object-name>ASIribbon</object-name>
-    <object-name>ALTribbon</object-name>
-
-</animation>-->
- 
-
  <animation>
    <type>rotate</type>
    <object-name>sweep</object-name>
@@ -311,7 +300,6 @@ maggse
 	 </axis>
 	 
  </animation>
-
  
  <animation>
 	 <type>material</type>
@@ -330,24 +318,12 @@ maggse
 	 <object-name>spoiler_r_1.003</object-name>
 	 <object-name>stab</object-name>
 	 <object-name>glas_face.007</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
-
-
 
 </PropertyList>

@@ -453,8 +453,6 @@ sweat by maggse
 	</action>
 </animation>
 
-
-
 <animation>
 	<type>material</type>
 	<object-name>switch_terflw</object-name>
@@ -465,54 +463,13 @@ sweat by maggse
 	<object-name>knob_setclr</object-name>
 	<object-name>knob_smh</object-name>
 	<object-name>fuel_valves.001</object-name>
-	 <diffuse>
-		<red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.9</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
-		 <red>0.9</red>
+		 <red>0.8</red>
 		 <green>0.1</green>
 		 <blue>0.2</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
-<!--
-<animation>
-	<type>pick</type>
-	<object-name>ALT.minus</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.1</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property>/instrumentation/altimeter/setting-inhg</property>
-			<step>-0.01</step>
-			<min>26.0</min>
-			<max>33.0</max>
-			<wrap>false</wrap>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.1</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property>/instrumentation/altimeter/setting-inhg</property>
-			<step>-0.1</step>
-			<min>26.0</min>
-			<max>33.0</max>
-			<wrap>false</wrap>
-		</binding>
-	</action>
-</animation>
- -->
+
 
 </PropertyList>

@@ -22,16 +22,6 @@
     <object-name>Low-Alt-Warning-1</object-name>
     <object-name>Rotational-switch</object-name>
     <object-name>Test-button</object-name>
-	 <diffuse>
-		<red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
 		 <red>0.8</red>
 		 <green>0.1</green>

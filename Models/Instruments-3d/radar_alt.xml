@@ -27,7 +27,7 @@ maggse
        <dep>-205</dep>
      </entry>
      <entry>
-	     <ind>4000</ind>
+	     <ind>40000</ind>
 	     <dep>-324</dep>
      </entry>
 </interpolation>
@@ -46,16 +46,6 @@ maggse
 	 <type>material</type>
 	 <object-name>needle</object-name>
 	 <object-name>Face.001</object-name>
-	 <diffuse>
-		<red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </diffuse>
-         <ambient>
-	   <red>0.8</red>
-	   <green>0.1</green>
-	   <blue>0.2</blue>
-	 </ambient>
 	 <emission>
 		 <red>0.8</red>
 		 <green>0.1</green>
