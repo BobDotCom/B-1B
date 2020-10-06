@@ -34,9 +34,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>fuel1</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -66,9 +66,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>fuel2</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -98,9 +98,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>fuel3</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -130,9 +130,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>fuel4</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -162,9 +162,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>fuell</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -194,9 +194,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>fuelr</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -228,9 +228,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>fuelmainl</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -260,9 +260,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>fuelmainr</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -271,9 +271,9 @@ sweat by maggse
 	<type>material</type>
 	<object-name>fuel_face</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

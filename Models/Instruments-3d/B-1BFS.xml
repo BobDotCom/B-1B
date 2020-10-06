@@ -23,9 +23,9 @@
     <object-name>Wings</object-name>
     <object-name>screws</object-name>
 	<emission>
-		<red>0.6</red>
-		<green>0.4</green>
-		<blue>0.3</blue>
+		<red>0.1</red>
+		<green>0.0</green>
+		<blue>0.0</blue>
 		<factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>

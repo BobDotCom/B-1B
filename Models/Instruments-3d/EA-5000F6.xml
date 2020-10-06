@@ -28,9 +28,9 @@
 	<object-name>Ring</object-name>
 	<object-name>Front</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -123,8 +123,8 @@
 	<type>material</type>
 		<object-name>LabelText</object-name>
 	<emission>
-		<red>1.0</red>
-		<green>0.8</green>
+		<red>0.3</red>
+		<green>0.0</green>
 		<blue>0.0</blue>
 	</emission>
 </animation>

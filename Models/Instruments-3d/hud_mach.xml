@@ -153,9 +153,9 @@ maggse
 	 <object-name>switch_fcgms_mode.002</object-name>
 	 <object-name>switch_fcgms_mode.003</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

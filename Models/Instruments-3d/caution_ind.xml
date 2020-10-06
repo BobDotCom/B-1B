@@ -57,9 +57,9 @@ sweat by maggse
 	<type>material</type>
 	<object-name>rep_mstrcaution</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -90,9 +90,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_eject</object-name>
 	 <emission>
-		 <red>0.7</red>
-		 <green>0.5</green>
-		 <blue>0.5</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/switches/prep-eject</factor-prop>
 	 </emission>
 </animation>
@@ -111,9 +111,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_terraviod</object-name>
 	 <emission>
-		 <red>0.7</red>
-		 <green>0.6</green>
-		 <blue>0.5</blue>
+		 <red>0.3</red>
+		 <green>0.1</green>
+		 <blue>0.1</blue>
 		 <factor-prop>controls/switches/terra-report</factor-prop>
 	 </emission>
 </animation>
@@ -153,9 +153,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_aftburner</object-name>
 	 <emission>
-		 <red>0.7</red>
-		 <green>0.6</green>
-		 <blue>0.5</blue>
+		 <red>0.3</red>
+		 <green>0.1</green>
+		 <blue>0.1</blue>
 		 <factor-prop>controls/engines/engine[0]/afterburner</factor-prop>
 	 </emission>
 </animation>
@@ -190,9 +190,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_brake</object-name>
 	 <emission>
-		 <red>0.7</red>
-		 <green>0.6</green>
-		 <blue>0.5</blue>
+		 <red>0.3</red>
+		 <green>0.1</green>
+		 <blue>0.1</blue>
 		 <factor-prop>gear/gear[0]/wow</factor-prop>
 	 </emission>
 </animation>
@@ -244,9 +244,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_eng1</object-name>
 	 <emission>
-		 <red>0.7</red>
-		 <green>0.5</green>
-		 <blue>0.5</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <condition>
 			 <or>
 				 <equals>
@@ -294,9 +294,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_eng2.001</object-name>
 	 <emission>
-		 <red>0.7</red>
-		 <green>0.5</green>
-		 <blue>0.5</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <condition>
 			 <or>
 				 <equals>
@@ -344,9 +344,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_eng3</object-name>
 	 <emission>
-		 <red>0.7</red>
-		 <green>0.5</green>
-		 <blue>0.5</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <condition>
 			 <or>
 				 <equals>
@@ -394,9 +394,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_eng4</object-name>
 	 <emission>
-		 <red>0.7</red>
-		 <green>0.5</green>
-		 <blue>0.5</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <condition>
 			 <or>
 				 <equals>
@@ -423,9 +423,9 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>switch_eject</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -434,9 +434,9 @@ sweat by maggse
 	<type>material</type>
 	<object-name>fuel_cov.003</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

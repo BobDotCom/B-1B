@@ -13,9 +13,9 @@
         <object-name>inhg</object-name>
         <object-name>InhgKnob</object-name>
 	 <emission>
-		 <red>0.9</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
     </animation>
