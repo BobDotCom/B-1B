@@ -123,8 +123,8 @@ more to come :-)
 <!-- Ejection -->
 	 <animation>
 		 <type>translate</type>
-		 <object-name>Pilot</object-name>
-		 <object-name>seat</object-name>
+		 <object-name>Pilots</object-name>
+		 <object-name>SEATS</object-name>
 		 <property>controls/eject</property>
 		 <factor>20</factor>
 		 <center>

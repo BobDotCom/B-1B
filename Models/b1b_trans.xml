@@ -7,11 +7,11 @@ sweat by maggse
  <path>b1b_trans.ac</path>
  
  
-<!-- pilot and seat taken from the f-14b -->
+<!-- pilot and seat by NC-687 -->
  
  <model>
 	 <name>captain</name>
-	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <path>Aircraft/B-1B/Models/Pilot.xml</path>
 	 
 	 <offsets>
 		 <x-m>-18.25</x-m>
@@ -23,7 +23,7 @@ sweat by maggse
  
  <model>
 	 <name>captain_seat</name>
-	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 <path>Aircraft/B-1B/Models/Seat.xml</path>
 	 
 	 <offsets>
 		 <x-m>-17.85</x-m>
@@ -35,7 +35,7 @@ sweat by maggse
  
  <model>
 	 <name>pilot</name>
-	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <path>Aircraft/B-1B/Models/Pilot.xml</path>
 	 <condition>
 		 <not>
 		 <equals>
@@ -54,7 +54,7 @@ sweat by maggse
  
  <model>
 	 <name>pilot_seat</name>
-	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 <path>Aircraft/B-1B/Models/Seat.xml</path>
 	 
 	 <offsets>
 		 <x-m>-17.85</x-m>
@@ -66,7 +66,7 @@ sweat by maggse
  
  <model>
 	 <name>OSO</name>
-	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <path>Aircraft/B-1B/Models/Pilot.xml</path>
 	 <offsets>
 		 <x-m>-15.45</x-m>
 		 <y-m>-0.58</y-m>
@@ -77,7 +77,7 @@ sweat by maggse
  
  <model>
 	 <name>OSO_seat</name>
-	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 <path>Aircraft/B-1B/Models/Seat.xml</path>
 	 
 	 <offsets>
 		 <x-m>-15.05</x-m>
@@ -89,7 +89,7 @@ sweat by maggse
  
  <model>
 	 <name>DSO</name>
-	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <path>Aircraft/B-1B/Models/Pilot.xml</path>
 	 <offsets>
 		 <x-m>-15.45</x-m>
 		 <y-m>0.63</y-m>
@@ -100,7 +100,7 @@ sweat by maggse
  
  <model>
 	 <name>DSO_seat</name>
-	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 <path>Aircraft/B-1B/Models/Seat.xml</path>
 	 
 	 <offsets>
 		 <x-m>-15.05</x-m>
