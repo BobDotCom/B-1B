@@ -71,7 +71,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_fcgms_mode.002</object-name>
+	 <object-name>set_speed</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -150,8 +150,8 @@ maggse
 	 <object-name>macfuel2.003</object-name>
 	 <object-name>macfuel3.002</object-name>
 	 <object-name>macfuel3.003</object-name>
-	 <object-name>switch_fcgms_mode.002</object-name>
-	 <object-name>switch_fcgms_mode.003</object-name>
+	 <object-name>set_speed</object-name>
+	 <object-name>set_mach</object-name>
 	 <emission>
 		 <red>0.3</red>
 		 <green>0.0</green>

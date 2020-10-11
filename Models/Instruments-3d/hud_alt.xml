@@ -56,7 +56,6 @@ maggse
  <animation>
 	 <type>translate</type>
 	 <object-name>ind_alt_lmob</object-name>
-	 <!--property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property-->
 	 <property>autopilot/settings/vertical-speed-fpm</property>
 	 <interpolation>
 		 <entry>
@@ -102,7 +101,7 @@ maggse
  
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_fcgms_mode.001</object-name>
+	 <object-name>switch_alt_set</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -196,7 +195,7 @@ maggse
  
  <animation>
 	<type>knob</type>
-	<object-name>knob_fcgms.001</object-name>
+	<object-name>VFP_set</object-name>
 	<property>autopilot/settings/vertical-speed-fpm</property>
 	<interpolation>
 		<entry>
@@ -231,7 +230,7 @@ maggse
  
   <animation>
 	 <type>knob</type>
-	 <object-name>knob_fcgms.001</object-name>
+	 <object-name>VFP_set</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -262,7 +261,7 @@ maggse
 	 <type>material</type>
 	 <object-name>ind_alt_t</object-name>
 	 <object-name>ind_alt_h</object-name>
-	 <object-name>switch_fcgms_mode.001</object-name>
+	 <object-name>switch_alt_set</object-name>
 	 <object-name>altft_1</object-name>
 	 <object-name>altft_10</object-name>
 	 <object-name>altft_100</object-name>
@@ -271,7 +270,7 @@ maggse
 	 <object-name>ind_alt_lmob.001</object-name>
 	 <object-name>ind_alt_l</object-name>
 	 <object-name>ind_alt_lmob</object-name>
-	 <object-name>knob_fcgms.001</object-name>
+	 <object-name>VFP_set</object-name>
 	 <emission>
 		 <red>0.3</red>
 		 <green>0.0</green>
