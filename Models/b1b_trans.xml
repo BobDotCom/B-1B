@@ -100,7 +100,7 @@ sweat by maggse
  
  <model>
 	 <name>DSO_seat</name>
-	 <path>Aircraft/B-1B/Models/Seat.xml</path>
+	 <path>Aircraft/B-1B/Models/Seat.ac</path>
 	 
 	 <offsets>
 		 <x-m>-15.05</x-m>

@@ -1,0 +1,12 @@
+
+<PropertyList>
+
+ <path>seat.ac</path>
+
+  <animation>
+          <name>SEATS</name>
+    <object-name>chair</object-name>
+    <object-name>mk-gru-7</object-name>
+  </animation>
+
+</PropertyList>
