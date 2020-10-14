@@ -346,10 +346,10 @@ more to come :-)
 
   <model>
 	  <name>ai</name>
-	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>
 	  <offsets>
-		  <x-m>-18.212</x-m>
-		  <y-m>-0.420</y-m>
+		  <x-m>-18.233</x-m>
+		  <y-m>-0.435</y-m>
 		  <z-m>1.265</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -705,7 +705,7 @@ more to come :-)
 
   <model>
 	  <name>DSO ai</name>
-	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>
 	  <condition>
 		 <equals>
 			 <property>sim/current-view/name</property>
@@ -713,7 +713,7 @@ more to come :-)
 		 </equals>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.770</x-m>
+		  <x-m>-15.812</x-m>
 		  <y-m>-0.620</y-m>
 		  <z-m>1.830</z-m>
 		  <pitch-deg>0</pitch-deg>
@@ -899,15 +899,15 @@ more to come :-)
 	 </condition>
 	  <offsets>
 		  <x-m>-15.770</x-m>
-		  <y-m>0.470</y-m>
-		  <z-m>1.830</z-m>
+		  <y-m>0.450</y-m>
+		  <z-m>1.810</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
 
   <model>
 	  <name>OSO ai</name>
-	  <path>Aircraft/Instruments-3d/attitude-indicator.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>
 	  <condition>
 	       <or>
 		 <equals>
@@ -921,9 +921,9 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.770</x-m>
-		  <y-m>0.560</y-m>
-		  <z-m>1.830</z-m>
+		  <x-m>-15.812</x-m>
+		  <y-m>0.550</y-m>
+		  <z-m>1.810</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
