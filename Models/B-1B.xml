@@ -126,7 +126,7 @@ more to come :-)
 		 <object-name>Pilots</object-name>
 		 <object-name>SEATS</object-name>
 		 <property>controls/eject</property>
-		 <factor>20</factor>
+		 <factor>30</factor>
 		 <center>
 			 <x-m>0</x-m>
 			 <y-m>0</y-m>
