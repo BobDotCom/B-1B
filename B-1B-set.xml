@@ -494,7 +494,7 @@ B-1B set file.
 
   </autopilot>
 
-<!-- Start with the Parking Brake off -->
+<!-- Start with the Parking Brake On -->
 <controls>
     <gear>
       <brake-parking type="double">1.0</brake-parking>

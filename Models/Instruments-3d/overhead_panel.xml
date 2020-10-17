@@ -10,7 +10,7 @@ maggse
 
  <animation>
 	 <type>translate</type>
-	 <object-name>knob_oh.013</object-name>
+	 <object-name>refuel-lid</object-name>
 	 <property>controls/switches/refuel-lid</property>
 	 <interpolation>
 		 <entry>
@@ -36,7 +36,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>knob_oh.013</object-name>
+	 <object-name>refuel-lid</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -70,7 +70,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>knob_oh.013</object-name>
+	 <object-name>refuel-lid</object-name>
 	 <property>controls/switches/refuel-lid</property>
 	 <interpolation>
 		 <entry>
@@ -96,7 +96,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>knob_oh.3</object-name>
+	 <object-name>refuel-slipway</object-name>
 	 <property>controls/switches/refuel-slipway</property>
 	 <interpolation>
 		 <entry>
@@ -122,7 +122,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>knob_oh.3</object-name>
+	 <object-name>refuel-slipway</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -138,7 +138,7 @@ maggse
 
  <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.33</object-name>
+	 <object-name>BATT</object-name>
 	 <property>controls/electric/battery-switch</property>
 	 <interpolation>
 		 <entry>
@@ -152,7 +152,7 @@ maggse
 	 </interpolation>
 	 <axis>
 		 <x>0.0</x>
-		 <y>1.0</y>
+		 <y>-1.0</y>
 		 <z>0.0</z>
 	 </axis>
 	 <center>
@@ -164,7 +164,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.33</object-name>
+	 <object-name>BATT</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -192,7 +192,7 @@ maggse
 	 </interpolation>
 	 <axis>
 		 <x>0.0</x>
-		 <y>1.0</y>
+		 <y>-1.0</y>
 		 <z>0.0</z>
 	 </axis>
 	 <center>
@@ -220,7 +220,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.6</object-name>
+	 <object-name>APUL</object-name>
 	 <property>controls/APU/APUL_running</property>
 	 <interpolation>
 		 <entry>
@@ -246,7 +246,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.6</object-name>
+	 <object-name>APUL</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -276,7 +276,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.7</object-name>
+	 <object-name>APUR</object-name>
 	 <property>controls/APU/APUR_running</property>
 	 <interpolation>
 		 <entry>
@@ -302,7 +302,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.7</object-name>
+	 <object-name>APUR</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -332,7 +332,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.2</object-name>
+	 <object-name>APUL_couple</object-name>
 	 <property>controls/APU/APUL_couple</property>
 	 <interpolation>
 		 <entry>
@@ -358,7 +358,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.2</object-name>
+	 <object-name>APUL_couple</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -380,7 +380,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.3</object-name>
+	 <object-name>APU_couple</object-name>
 	 <property>controls/APU/APUR_couple</property>
 	 <interpolation>
 		 <entry>
@@ -406,7 +406,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.3</object-name>
+	 <object-name>APU_couple</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -428,7 +428,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.5</object-name>
+	 <object-name>APUL_bleed</object-name>
 	 <property>controls/APU/APUL_bleed</property>
 	 <interpolation>
 		 <entry>
@@ -454,7 +454,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.5</object-name>
+	 <object-name>APUL_bleed</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -474,7 +474,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.4</object-name>
+	 <object-name>APUR_bleed</object-name>
 	 <property>controls/APU/APUR_bleed</property>
 	 <interpolation>
 		 <entry>
@@ -500,7 +500,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.4</object-name>
+	 <object-name>APUR_bleed</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -520,7 +520,7 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.1</object-name>
+	 <object-name>APU_X_Bleed</object-name>
 	 <property>controls/APU/APU_crossbleed</property>
 	 <interpolation>
 		 <entry>
@@ -546,7 +546,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.1</object-name>
+	 <object-name>APU_X_Bleed</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -574,7 +574,7 @@ maggse
 <!-- nav lights-->
  <animation>
 	 <type>rotate</type>
-	 <object-name>switch_oh.50</object-name>
+	 <object-name>Nav_Lights</object-name>
 	 <property>controls/lighting/nav-lights</property>
 	 <interpolation>
 		 <entry>
@@ -588,7 +588,7 @@ maggse
 	 </interpolation>
 	 <axis>
 		 <x>0.0</x>
-		 <y>1.0</y>
+		 <y>-1.0</y>
 		 <z>0.0</z>
 	 </axis>
 	 <center>
@@ -599,7 +599,7 @@ maggse
  </animation>
  <animation>
 	 <type>material</type>
-	 <object-name>switch_oh.50</object-name>
+	 <object-name>Nav_Lights</object-name>
 	 <emission>
 		 <red>0.3</red>
 		 <green>0.0</green>
@@ -610,7 +610,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_oh.50</object-name>
+	 <object-name>Nav_Lights</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -626,7 +626,7 @@ maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>switch_oh.49</object-name>
+	<object-name>Anti_Coll_Lights</object-name>
 	<property>sim/multiplay/generic/int[0]</property>
 	<interpolation>
 		<entry>
@@ -651,7 +651,7 @@ maggse
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>switch_oh.49</object-name>
+	<object-name>Anti_Coll_Lights</object-name>
 	<emission>
 		 <red>0.3</red>
 		 <green>0.0</green>
@@ -662,7 +662,7 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>switch_oh.49</object-name>
+	<object-name>Anti_Coll_Lights</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -678,7 +678,7 @@ maggse
 
 <animation>
 	<type>knob</type>
-	<object-name>knob_oh.5</object-name>
+	<object-name>Panel_Lights</object-name>
 	<property>controls/lighting/instruments-norm</property>
 	<interpolation>
 		<entry>
@@ -713,22 +713,112 @@ maggse
 
  <animation>
 	<type>material</type>
-	<object-name>switch_oh.5</object-name>
-	<object-name>switch_oh.1</object-name>
-	<object-name>switch_oh.2</object-name>
-	<object-name>switch_oh.3</object-name>
-	<object-name>switch_oh.4</object-name>
-	<object-name>switch_oh.5</object-name>
-	<object-name>switch_oh.6</object-name>
-	<object-name>switch_oh.7</object-name>
-	<object-name>switch_oh.33</object-name>
-	<object-name>switch_oh.49</object-name>
-	<object-name>switch_oh.50</object-name>
+	<object-name>Panel_Lights</object-name>
+	<object-name>APU_X_Bleed</object-name>
+    <object-name>APU_couple</object-name>
+	<object-name>APUL_couple</object-name>
+	<object-name>APUR_couple</object-name>
+	<object-name>APUR_bleed</object-name>
+	<object-name>APUL_bleed</object-name>
+	<object-name>APUL</object-name>
+	<object-name>APUR</object-name>
+	<object-name>BATT</object-name>
+	<object-name>Anti_Coll_Lights</object-name>
+	<object-name>Nav_Lights</object-name>
 	<object-name>ExtPowerSwitch</object-name>
 	<object-name>Clkface</object-name>
 	<object-name>Clkheures</object-name>
 	<object-name>Clkminutes</object-name>
 	<object-name>Clksecondes</object-name>
+    <object-name>refuel-slipway</object-name>
+    <object-name>refuel-lid</object-name>
+	<object-name>1CSD</object-name>
+	<object-name>2CSD</object-name>
+	<object-name>2CSD.002</object-name>
+	<object-name>4CSD</object-name>
+	<object-name>AdjKnob</object-name>
+	<object-name>AmpRim</object-name>
+	<object-name>Ess.Bus</object-name>
+	<object-name>Fire-Detr</object-name>
+	<object-name>Fuel-Gals</object-name>
+	<object-name>Fuel-Gauge</object-name>
+	<object-name>Fuel-PSI</object-name>
+	<object-name>Fuel-Press</object-name>
+	<object-name>Grey</object-name>
+	<object-name>Needles</object-name>
+	<object-name>OH lock</object-name>
+	<object-name>OvHdHyd</object-name>
+    <object-name>button</object-name>
+    <object-name>button.001</object-name>
+	<object-name>button.002</object-name>
+	<object-name>knob_oh</object-name>
+	<object-name>knob_oh.014</object-name>
+	<object-name>knob_oh.015</object-name>
+	<object-name>knob_oh.1</object-name>
+	<object-name>knob_oh.10</object-name>
+    <object-name>knob_oh.11</object-name>
+    <object-name>knob_oh.12</object-name>
+	<object-name>knob_oh.2</object-name>
+	<object-name>knob_oh.4</object-name>
+	<object-name>knob_oh.6</object-name>
+	<object-name>knob_oh.7</object-name>
+	<object-name>knob_oh.8</object-name>
+	<object-name>safety.1</object-name>
+	<object-name>safety.2</object-name>
+	<object-name>safety.3</object-name>
+	<object-name>speaker_rim</object-name>
+	<object-name>switch_oh.000</object-name>
+	<object-name>switch_oh.026</object-name>
+	<object-name>switch_oh.035</object-name>
+	<object-name>switch_oh.052</object-name>
+	<object-name>switch_oh.057</object-name>
+	<object-name>switch_oh.059</object-name>
+	<object-name>switch_oh.060</object-name>
+    <object-name>switch_oh.061</object-name>
+    <object-name>switch_oh.10</object-name>
+	<object-name>switch_oh.11</object-name>
+	<object-name>switch_oh.12</object-name>
+	<object-name>switch_oh.13</object-name>
+	<object-name>switch_oh.14</object-name>
+	<object-name>switch_oh.15</object-name>
+	<object-name>switch_oh.16</object-name>
+	<object-name>switch_oh.17</object-name>
+    <object-name>switch_oh.18</object-name>
+    <object-name>switch_oh.19</object-name>
+	<object-name>switch_oh.20</object-name>
+	<object-name>switch_oh.21</object-name>
+	<object-name>switch_oh.22</object-name>
+	<object-name>switch_oh.23</object-name>
+	<object-name>switch_oh.24</object-name>
+	<object-name>switch_oh.25</object-name>
+	<object-name>switch_oh.27</object-name>
+    <object-name>switch_oh.28</object-name>
+    <object-name>switch_oh.29</object-name>
+    <object-name>switch_oh.30</object-name>
+	<object-name>switch_oh.31</object-name>
+	<object-name>switch_oh.32</object-name>
+	<object-name>switch_oh.34</object-name>
+	<object-name>switch_oh.36</object-name>
+	<object-name>switch_oh.37</object-name>
+	<object-name>switch_oh.38</object-name>
+	<object-name>switch_oh.39</object-name>
+    <object-name>switch_oh.40</object-name>
+    <object-name>switch_oh.41</object-name>
+	<object-name>switch_oh.42</object-name>
+	<object-name>switch_oh.43</object-name>
+	<object-name>switch_oh.44</object-name>
+	<object-name>switch_oh.45</object-name>
+	<object-name>switch_oh.47</object-name>
+	<object-name>switch_oh.48</object-name>
+	<object-name>switch_oh.51</object-name>
+    <object-name>switch_oh.53</object-name>
+    <object-name>switch_oh.54</object-name>
+	<object-name>switch_oh.55</object-name>
+	<object-name>switch_oh.56</object-name>
+	<object-name>switch_oh.8</object-name>
+	<object-name>switch_oh.9</object-name>
+    <object-name>Fire_LAPU</object-name>
+    <object-name>switch_oh.46</object-name>
 	 <emission>
 		 <red>0.3</red>
 		 <green>0.0</green>

@@ -145,6 +145,8 @@ more to come :-)
 	  <object-name>wing_right</object-name>
 	  <object-name>wing_right.001</object-name>
 	  <object-name>slat_right</object-name>
+      <object-name>left_poslight</object-name>
+      <object-name>right_poslight</object-name>
 	  <object-name>slat_right_up</object-name>
 	  <object-name>flap_right1</object-name>
 	  <object-name>flap_right2</object-name>
@@ -180,6 +182,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>wing_left</object-name>
 	 <object-name>wing_left.001</object-name>
+     <object-name>left_poslight</object-name>
 	 <object-name>slat_left</object-name>
 	 <object-name>slat_left_up</object-name>
 	 <object-name>flap_left1</object-name>
@@ -217,6 +220,7 @@ more to come :-)
 	  <type>rotate</type>
 	  <object-name>wing_right</object-name>
 	  <object-name>wing_right.001</object-name>
+      <object-name>right_poslight</object-name>
 	  <property>rotors/main/blade[0]/position-deg</property>
 	  
 	  <interpolation>
@@ -692,6 +696,7 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>wing_left</object-name>
 	 <object-name>wing_left.001</object-name>
+     <object-name>left_poslight</object-name>
 	 <property>rotors/main/blade[0]/position-deg</property>
 	 
 	 <interpolation>
