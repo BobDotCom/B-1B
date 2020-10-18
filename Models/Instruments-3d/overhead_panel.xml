@@ -192,7 +192,7 @@ maggse
 	 </interpolation>
 	 <axis>
 		 <x>0.0</x>
-		 <y>-1.0</y>
+		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
 	 <center>
@@ -673,6 +673,45 @@ maggse
 		</binding>
 	</action>
 </animation>
+                   <!--STROBES--> 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>Flash</object-name>
+	 <property>controls/lighting/strobe</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x> 0.0</x>
+		 <y>-1.0</y>
+		 <z> 0.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.00576</x-m>
+		 <y-m>-0.12718</y-m>
+		 <z-m> 0.18832</z-m>
+   </center>
+ </animation>
+ <animation>
+	 <type>pick</type>
+	 <object-name>Flash</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/lighting/strobe</property>
+		 </binding>
+	 </action>
+</animation>
 
 <!-- instrument lights-->
 
@@ -724,6 +763,7 @@ maggse
 	<object-name>APUR</object-name>
 	<object-name>BATT</object-name>
 	<object-name>Anti_Coll_Lights</object-name>
+    <object-name>Flash</object-name>
 	<object-name>Nav_Lights</object-name>
 	<object-name>ExtPowerSwitch</object-name>
 	<object-name>Clkface</object-name>
@@ -810,7 +850,6 @@ maggse
 	<object-name>switch_oh.45</object-name>
 	<object-name>switch_oh.47</object-name>
 	<object-name>switch_oh.48</object-name>
-	<object-name>switch_oh.51</object-name>
     <object-name>switch_oh.53</object-name>
     <object-name>switch_oh.54</object-name>
 	<object-name>switch_oh.55</object-name>

@@ -52,7 +52,7 @@
 	 <object-name>glow</object-name>
 	 <condition>
 			 <equals>
-				 <property>sim/multiplay/generic/int[0]</property>
+				 <property>controls/lighting/strobe</property>
 				 <value>1.0</value>
 			 </equals>
 	 </condition>

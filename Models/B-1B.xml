@@ -221,8 +221,7 @@ more to come :-)
 	  <object-name>wing_right</object-name>
 	  <object-name>wing_right.001</object-name>
       <object-name>right_poslight</object-name>
-	  <property>rotors/main/blade[0]/position-deg</property>
-	  
+	  <property>rotors/main/blade[0]/position-deg</property>  
 	  <interpolation>
 		  <entry>
 			  <ind>0.0</ind>
@@ -242,10 +241,8 @@ more to come :-)
 		  <x>0</x>
 		  <y>0</y>
 		  <z>1</z>
-	  </axis>
-	  
- </animation>
-
+	  </axis>	  
+ </animation>  
  <animation>
 	 <type>rotate</type>
 	 <object-name>slat_right</object-name>

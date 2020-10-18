@@ -681,7 +681,7 @@ sweep = getprop("controls/flight/wing-sweep");
 if ((flapsetting != 0) and (sweep != 1)) {
 
   controls.flapsDown(-1);
-  ltext = "Flaps can only be exteded at minimum wingsweep!";
+  ltext = "Flaps can only be extended at minimum wingsweep!";
   screen.log.write(ltext);
 }
 }

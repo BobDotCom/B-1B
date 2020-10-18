@@ -13,16 +13,26 @@
 	 <object-name>right_poslight</object-name>
 	 <spherical type="bool">true</spherical>
 </animation>
- 
 
  <animation>
 	 <type>alpha-test</type>
 	 <object-name>right_poslight</object-name>
 	 <alpha-factor>0.001</alpha-factor>
  </animation>
+
  <!--animation>
-	 <type>select</type>
+	 <type>rotate</type>
 	 <object-name>right_poslight</object-name>
+	 <axis>
+		 <x> 0.0</x>
+		 <y> 0.0</y>
+		 <z>-1.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.0</x-m>
+		 <y-m>-0.0</y-m>
+		 <z-m> 0.0</z-m>
+   </center>
 	 <condition>
 		 <and>
 			 <equals>

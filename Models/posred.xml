@@ -21,7 +21,7 @@
 	 <alpha-factor>0.001</alpha-factor>
  </animation>
  
- <!--animation>
+ <animation>
 	 <type>select</type>
 	 <object-name>left_poslight</object-name>
 	 <condition>
@@ -36,6 +36,6 @@
 			 </equals>
 		 </and>
 	 </condition>
-  </animation-->
+  </animation>
 
 </PropertyList>

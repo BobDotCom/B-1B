@@ -9,9 +9,9 @@ more to come :-)
 	<path>Instruments-3d/sweep_scale.xml</path>
 
   <offsets>
-	  <x-m>-0.42</x-m>
-	  <y-m>0.15</y-m>
-          <z-m>-0.297</z-m>
+	  <x-m>-0.420</x-m>
+	  <y-m> 0.150</y-m>
+      <z-m>-0.297</z-m>
     <pitch-deg>0</pitch-deg>
 
   </offsets>
