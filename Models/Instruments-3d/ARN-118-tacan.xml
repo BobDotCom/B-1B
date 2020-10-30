@@ -249,6 +249,7 @@
 		<object-name>vol-knob</object-name>
 		<object-name>unit-knob</object-name>
 		<object-name>tenth-knob</object-name>
+        <object-name>tenth-knob.001</object-name>
 		<object-name>test-button</object-name>
 		<object-name>test-lamp</object-name>
 	 <emission>
