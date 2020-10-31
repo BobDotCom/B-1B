@@ -722,6 +722,12 @@ sweat by maggse
 <model>
   <name>afterburner1</name>
   <path>Aircraft/B-1B/Models/Effects/afterburner1.xml</path>
+	 <condition>
+		 <greater-than>
+			 <property>/sim/time/sun-angle-rad</property>
+			 <value>1.53</value>
+		 </greater-than>
+	 </condition>
 	<offsets>
     <x-m>8.700</x-m>
 		<y-m>-4.11</y-m>
@@ -735,6 +741,12 @@ sweat by maggse
 <model>
   <name>afterburner2</name>
   <path>Aircraft/B-1B/Models/Effects/afterburner2.xml</path>
+	 <condition>
+		 <greater-than>
+			 <property>/sim/time/sun-angle-rad</property>
+			 <value>1.53</value>
+		 </greater-than>
+	 </condition>
 	<offsets>
     <x-m>8.700</x-m>
 		<y-m>-2.48</y-m>
@@ -748,6 +760,12 @@ sweat by maggse
 <model>
   <name>afterburner3</name>
   <path>Aircraft/B-1B/Models/Effects/afterburner3.xml</path>
+	 <condition>
+		 <greater-than>
+			 <property>/sim/time/sun-angle-rad</property>
+			 <value>1.53</value>
+		 </greater-than>
+	 </condition>
   <offsets>
     <x-m>8.700</x-m>
     <y-m>2.48</y-m>
@@ -761,6 +779,88 @@ sweat by maggse
 <model>
   <name>afterburner4</name>
   <path>Aircraft/B-1B/Models/Effects/afterburner4.xml</path>
+	 <condition>
+		 <greater-than>
+			 <property>/sim/time/sun-angle-rad</property>
+			 <value>1.53</value>
+		 </greater-than>
+	 </condition>
+  <offsets>
+    <x-m>8.700</x-m>
+    <y-m>4.11</y-m>
+    <z-m>-1.68</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+	
+<model>
+  <name>afterburner5</name>
+  <path>Aircraft/B-1B/Models/Effects/afterburner5.xml</path>
+	 <condition>
+		 <less-than>
+			 <property>/sim/time/sun-angle-rad</property>
+			 <value>1.53</value>
+		 </less-than>
+	  </condition>
+	<offsets>
+    <x-m>8.700</x-m>
+		<y-m>-4.11</y-m>
+		<z-m>-1.68</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+	</offsets>
+</model>
+	
+<model>
+  <name>afterburner6</name>
+  <path>Aircraft/B-1B/Models/Effects/afterburner6.xml</path>
+  	 <condition>
+		 <less-than>
+			 <property>/sim/time/sun-angle-rad</property>
+			 <value>1.53</value>
+		 </less-than>
+      </condition>
+	<offsets>
+    <x-m>8.700</x-m>
+		<y-m>-2.48</y-m>
+		<z-m>-1.68</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+	</offsets>
+</model>
+	
+<model>
+  <name>afterburner7</name>
+  <path>Aircraft/B-1B/Models/Effects/afterburner7.xml</path>
+  	 <condition>
+		 <less-than>
+			 <property>/sim/time/sun-angle-rad</property>
+			 <value>1.53</value>
+		 </less-than>
+	 </condition>
+  <offsets>
+    <x-m>8.700</x-m>
+    <y-m>2.48</y-m>
+    <z-m>-1.68</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+	
+<model>
+  <name>afterburner8</name>
+  <path>Aircraft/B-1B/Models/Effects/afterburner8.xml</path>
+  	 <condition>
+		 <less-than>
+			 <property>/sim/time/sun-angle-rad</property>
+			 <value>1.53</value>
+		 </less-than>
+	 </condition>
   <offsets>
     <x-m>8.700</x-m>
     <y-m>4.11</y-m>
