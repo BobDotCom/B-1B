@@ -17,12 +17,12 @@
 			<and>
 				<equals>
 					<!--<property>controls/engines/engine[0]/afterburner</property>-->
-					<property>engines/engine[7]/n1</property>
+					<property>engines/engine[5]/n1</property>
 					<value>1</value>
 				</equals>
 				<equals>
 					<!--<property>controls/engines/engine[0]/cutoff</property>-->
-					<property>engines/engine[7]/n2</property>
+					<property>engines/engine[5]/n2</property>
 					<value>0</value>
 				</equals>
 			</and>
