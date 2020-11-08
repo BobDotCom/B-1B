@@ -737,9 +737,9 @@ B-1B set file.
 	<cg>
 		<file>Aircraft/B-1B/Nasal/cg.nas</file>
 	</cg>
-	<shake>
+	<!-- <GMM>
 		<file>Aircraft/B-1B/Nasal/weapons.nas</file>
-	</shake>
+	</GMM> -->
 	<tfs>
 		<file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
 	</tfs>
