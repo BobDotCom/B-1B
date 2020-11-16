@@ -123,18 +123,7 @@ sweat by maggse
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
  </model>
- 
- <model>
-	 <name>landing spot cone</name>
-	 <path>Aircraft/B-1B/Models/landing_cone.xml</path>
-	 
-	 <offsets>
-		 <x-m>0.00</x-m>
-		 <y-m>0</y-m>
-		 <z-m>0</z-m>
-		 <pitch-deg>0</pitch-deg>
-	 </offsets>
- </model>
+
  <!-- position lights -->
 <!--model>
 	 <name>posleft</name>
