@@ -65,8 +65,8 @@ var iff_hash = {
 			me.time = me.int_systime - me.update_time;
 			node.hash.setValue(_calculate_hash(me.time, me.callsign, node.channel.getValue()));
 		} else {
-			me.timer.stop();
 			node.hash.setValue("");
+			me.timer.stop();
 		}
 	},
 };

@@ -87,13 +87,6 @@ more to come :-)
 	  </offsets>
   </model>
   
-  <animation>
-    <type>range</type>
-    <object-name>instruments</object-name>
-    <min-m>0</min-m>
-    <max-m>25</max-m>
-  </animation>
-  
   <!-- trans parts -->
   <model>
 	  <name>transparent_parts</name>
@@ -138,6 +131,128 @@ more to come :-)
 			 <z>1</z>
 		 </axis>
 	 </animation>
+
+<!-- <Eng_Inlets> -->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>eng_inlet.002</object-name>
+	 <property>engines/engine[0]/thrust-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>52.0</ind>
+			 <dep>2</dep>
+		 </entry>
+		 <entry>
+			 <ind>58.0</ind>
+			 <dep>10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>80.0</ind>
+			 <dep>90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-0.07023</x-m>
+		 <y-m>-4.32342</y-m>
+		 <z-m>-1.70566</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>eng_inlet.003</object-name>
+	 <property>engines/engine[0]/thrust-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>52.0</ind>
+			 <dep>2</dep>
+		 </entry>
+		 <entry>
+			 <ind>58.0</ind>
+			 <dep>10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>80.0</ind>
+			 <dep>90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-0.07940</x-m>
+		 <y-m>-2.96858</y-m>
+		 <z-m>-1.69193</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>eng_inlet.001</object-name>
+	 <property>engines/engine[0]/thrust-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>52.0</ind>
+			 <dep>2</dep>
+		 </entry>
+		 <entry>
+			 <ind>58.0</ind>
+			 <dep>10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>80.0</ind>
+			 <dep>90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-0.06923</x-m>
+		 <y-m> 3.01070</y-m>
+		 <z-m>-1.70542  </z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+ </animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>eng_inlet</object-name>
+	 <property>engines/engine[0]/thrust-lbs</property>
+	 <interpolation>
+		 <entry>
+			 <ind>52.0</ind>
+			 <dep>2</dep>
+		 </entry>
+		 <entry>
+			 <ind>58.0</ind>
+			 <dep>10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>80.0</ind>
+			 <dep>90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-0.03763</x-m>
+		 <y-m> 4.38326</y-m>
+		 <z-m>-1.72107</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+ </animation>  
 
   <!-- correct wing position -->
   <animation>

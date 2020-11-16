@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>b1b.ac</path>
+
+<animation>
+ <type>material</type>
+ <object-name>eng_inlet</object-name>
+<object-name>eng_inlet.001</object-name>
+<object-name>eng_inlet.002</object-name>
+<object-name>eng_inlet.003</object-name>
+ </animation>
+
+
+
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>eng_inlet</object-name>
+	 <property>engines/engine[4 ]/n2</property>
+     <factor>90</factor>
+	 <interpolation>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>2</dep>
+		 </entry>
+		 <entry>
+			 <ind>78.0</ind>
+			 <dep>10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>50.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-0.07023</x-m>
+		 <y-m>-4.32342</y-m>
+		 <z-m>-1.70566</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+ </animation>
+
+</PropertyList>

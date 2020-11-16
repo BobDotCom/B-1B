@@ -100,7 +100,7 @@ sweat by maggse
  
  <model>
 	 <name>DSO_seat</name>
-	 <path>Aircraft/B-1B/Models/Seat.ac</path>
+	 <path>Aircraft/B-1B/Models/Seat.xml</path>
 	 
 	 <offsets>
 		 <x-m>-15.05</x-m>
@@ -192,7 +192,35 @@ sweat by maggse
 </animation-->
  
  <!-- strobes -->
- 
+  <animation>
+	 <type>spin</type>
+	 <object-name>turbine_4.001</object-name>
+	 <property>engines/engine[3]/n2</property>
+	 <!--<interpolation>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>2</dep>
+		 </entry>
+		 <entry>
+			 <ind>78.0</ind>
+			 <dep>10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>50.0</dep>
+		 </entry>
+	 </interpolation>-->
+	 <center>
+		 <x-m>-15.993</x-m>
+		 <y-m>4.160</y-m>
+		 <z-m>-1.680</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
  <model>
 	 <name>strobe2</name>
 	 <path>Aircraft/B-1B/Models/strobe.xml</path>
@@ -388,8 +416,8 @@ sweat by maggse
  <animation>
 	 <type>spin</type>
 	 <object-name>turbine_1.001</object-name>
-	 <property>engines/engine[0]/thrust-lbs</property>
-	 <interpolation>
+	 <property>engines/engine[0]/n2</property>
+	 <!-- <interpolation>
 		 <entry>
 			 <ind>72.0</ind>
 			 <dep>-2.0</dep>
@@ -402,7 +430,7 @@ sweat by maggse
 			 <ind>100.0</ind>
 			 <dep>-50.0</dep>
 		 </entry>
-	 </interpolation>
+	 </interpolation -->
 	 <center>
 		 <x-m>-15.993</x-m>
 		 <y-m>-4.112</y-m>
@@ -418,8 +446,8 @@ sweat by maggse
  <animation>
 	 <type>spin</type>
 	 <object-name>turbine_2.001</object-name>
-	 <property>engines/engine[1]/thrust-lbs</property>
-	 <interpolation>
+	 <property>engines/engine[1]/n2</property>
+	 <!--<interpolation>
 		 <entry>
 			 <ind>72.0</ind>
 			 <dep>2</dep>
@@ -432,7 +460,7 @@ sweat by maggse
 			 <ind>100.0</ind>
 			 <dep>50.0</dep>
 		 </entry>
-	 </interpolation>
+	 </interpolation>-->
 	 <center>
 		 <x-m>-15.993</x-m>
 		 <y-m>-2.492</y-m>
@@ -448,8 +476,8 @@ sweat by maggse
  <animation>
 	 <type>spin</type>
 	 <object-name>turbine_3.001</object-name>
-	 <property>engines/engine[2]/thrust-lbs</property>
-	 <interpolation>
+	 <property>engines/engine[2]/n2</property>
+	 <!--<interpolation>
 		 <entry>
 			 <ind>72.0</ind>
 			 <dep>-2</dep>
@@ -462,7 +490,7 @@ sweat by maggse
 			 <ind>100.0</ind>
 			 <dep>-50.0</dep>
 		 </entry>
-	 </interpolation>
+	 </interpolation>-->
 	 <center>
 		 <x-m>-15.993</x-m>
 		 <y-m>2.533</y-m>
@@ -478,8 +506,8 @@ sweat by maggse
  <animation>
 	 <type>spin</type>
 	 <object-name>turbine_4.001</object-name>
-	 <property>engines/engine[3]/thrust-lbs</property>
-	 <interpolation>
+	 <property>engines/engine[3]/n2</property>
+	 <!--<interpolation>
 		 <entry>
 			 <ind>72.0</ind>
 			 <dep>2</dep>
@@ -492,7 +520,7 @@ sweat by maggse
 			 <ind>100.0</ind>
 			 <dep>50.0</dep>
 		 </entry>
-	 </interpolation>
+	 </interpolation>-->
 	 <center>
 		 <x-m>-15.993</x-m>
 		 <y-m>4.160</y-m>
