@@ -101,10 +101,10 @@
    </action> 
   </animation> 
   
-    <animation>
+  <animation>
    <type>rotate</type>
    <object-name>light-land-toggle</object-name>
-   <property>controls/lighting/landing-lights</property>
+   <property>/sim/rendering/als-secondary-lights/use-landing-light</property>
    <factor>30</factor> 
    <min>0</min>
    <max>1</max>   
@@ -127,7 +127,7 @@
     <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>controls/lighting/landing-lights</property>                
+        <property>/sim/rendering/als-secondary-lights/use-landing-light</property>                
         <factor>30</factor> 
         <min>0</min> 
         <max>1</max>
@@ -142,10 +142,10 @@
     <button>1</button>
       <binding>
         <command>property-toggle</command>
-        <property>controls/lighting/taxi-light</property>                
-        <factor>-30</factor> 
+        <property>/sim/rendering/als-secondary-lights/use-landing-light</property>
+        <factor>30</factor> 
         <min>0</min> 
-        <max>1</max>
+        <max>1</max>                
       </binding>
    </action> 
  </animation>
