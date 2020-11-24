@@ -2,11 +2,11 @@
 <PropertyList>
 
  <path>poslightgreen.ac</path>
- <offsets>
-    <x-m> 0.0 </x-m>
-    <y-m> 0.0 </y-m>
-    <z-m> 0.0 </z-m>
- </offsets>
+ <!--<offsets>
+    <x-m> 14.22443 </x-m>
+    <y-m> 11.30613 </y-m>
+    <z-m>-0.96628 </z-m>
+ </offsets>-->
 
 <animation>
 	 <type>billboard</type>
@@ -20,13 +20,13 @@
 	 <alpha-factor>0.001</alpha-factor>
  </animation>
 
- <!--animation>
+ <animation>
 	 <type>rotate</type>
 	 <object-name>right_poslight</object-name>
 	 <axis>
-		 <x> 0.0</x>
+		 <x>-1.0</x>
 		 <y> 0.0</y>
-		 <z>-1.0</z>
+		 <z> 0.0</z>
 	 </axis>
 	 <center>
 		 <x-m> 0.0</x-m>
@@ -36,7 +36,7 @@
 	 <condition>
 		 <and>
 			 <equals>
-				 <property>controls/flight/wing-sweep</property>
+				 <property>rotors/main/blade[0]/position-deg</property>
 				 <value>1.0</value>
 			 </equals>
 			 <equals>
@@ -45,6 +45,6 @@
 			 </equals>
 		 </and>
 	 </condition>
-  </animation-->
+  </animation>
 
 </PropertyList>

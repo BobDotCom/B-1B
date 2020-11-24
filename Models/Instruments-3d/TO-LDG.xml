@@ -152,15 +152,15 @@
 
   <animation>
    <type>rotate</type>
-   <object-name>TO-LD-switch</object-name>
-   <property>gear/gear/caster-angle-deg</property>
-   <factor>50</factor> 
+   <object-name>TO-LD-Switch</object-name>
+   <property>controls/gear/nose-wheel-steering</property>
+   <factor>30</factor> 
    <min>0</min>
    <max>1</max>   
    <center> 
     <x-m>0.04821</x-m> 
     <y-m>0.00014</y-m> 
-    <z-m>0.00275</z-m> 
+    <z-m>0.00276</z-m> 
    </center> 
    <axis> 
     <x>0</x> 
@@ -171,13 +171,13 @@
 
   <animation> 
    <type>pick</type> 
-   <object-name>TO-LD-switch</object-name>
+   <object-name>TO-LD-Switch</object-name>
    <action> 
     <button>0</button>
       <binding>
-        <command>property-multiply</command>
-        <property>gear/gear/caster-angle-deg</property>                
-        <factor>2</factor> 
+        <command>property-toggle</command>
+        <property>controls/gear/nose-wheel-steering</property>                
+        <factor>30</factor> 
         <min>0</min> 
         <max>1</max>
       </binding>

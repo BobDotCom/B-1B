@@ -3,27 +3,66 @@
 
  <path>poslightleft.ac</path>
  <offsets>
-    <x-m> 0.0 </x-m>
-    <y-m> 0.0 </y-m>
-    <z-m> 0.0 </z-m>
+    <x-m> 14.22614 </x-m>
+    <y-m>-11.25459 </y-m>
+    <z-m>-0.97017 </z-m>
  </offsets>
 
-<animation>
-	 <type>billboard</type>
+  <animation>
+	 <type>timed</type>
 	 <object-name>left_poslight</object-name>
-	 <spherical type="bool">true</spherical>
-</animation>
+	 <use-personality type="bool">true</use-personality>
+	 <branch-duration-sec>
+		 <random>
+			 <min>0.1</min>
+			 <max>0.1</max>
+		 </random>
+	 </branch-duration-sec>
+	 <branch-duration-sec>
+		 <random>
+			 <min>2.0</min>
+			 <max>2.2</max>
+		 </random>
+	 </branch-duration-sec>
+ </animation>
  
+<animation>
+	<type>billboard</type>
+	<object-name>left_poslight</object-name>
+	<spherical type="bool">true</spherical>
+</animation>
 
  <animation>
 	 <type>alpha-test</type>
 	 <object-name>left_poslight</object-name>
 	 <alpha-factor>0.001</alpha-factor>
  </animation>
- 
- <animation>
-	 <type>select</type>
+
+<!--<animation>
+	 <type>billboard</type>
 	 <object-name>left_poslight</object-name>
+	 <spherical type="bool">true</spherical>
+</animation>
+
+ <animation>
+	 <type>alpha-test</type>
+	 <object-name>left_poslight</object-name>
+	 <alpha-factor>0.001</alpha-factor>
+ </animation>-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>left_poslight</object-name>
+	 <axis>
+		 <x> 0.0</x>
+		 <y> 0.0</y>
+		 <z>-1.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.0</x-m>
+		 <y-m>-0.0</y-m>
+		 <z-m> 0.0</z-m>
+   </center>
 	 <condition>
 		 <and>
 			 <equals>

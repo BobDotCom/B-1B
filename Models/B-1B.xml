@@ -164,6 +164,7 @@ more to come :-)
 	 </axis>
  </animation>
 
+   <!-- <###########################################<Engine Intakes>###############################################>-->
  <animation>
 	 <type>rotate</type>
 	 <object-name>eng_inlet.003</object-name>
@@ -260,7 +261,6 @@ more to come :-)
 	  <object-name>wing_right</object-name>
 	  <object-name>wing_right.001</object-name>
 	  <object-name>slat_right</object-name>
-      <object-name>left_poslight</object-name>
       <object-name>right_poslight</object-name>
 	  <object-name>slat_right_up</object-name>
 	  <object-name>flap_right1</object-name>

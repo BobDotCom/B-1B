@@ -125,7 +125,7 @@ sweat by maggse
  </model>
 
  <!-- position lights -->
-<!--model>
+<!--<model>
 	 <name>posleft</name>
 	 <path>Aircraft/B-1B/Models/posred.xml</path>
 	 
@@ -178,9 +178,9 @@ sweat by maggse
     <y-m>21.05</y-m>
     <z-m>0.0</z-m>
   </center>
-</animation-->
+</animation>-->
  
- <!-- strobes -->
+ 
   <animation>
 	 <type>spin</type>
 	 <object-name>turbine_4.001</object-name>
