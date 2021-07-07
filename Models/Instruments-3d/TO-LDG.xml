@@ -105,13 +105,13 @@
    <type>rotate</type>
    <object-name>light-land-toggle</object-name>
    <property>/sim/rendering/als-secondary-lights/use-landing-light</property>
-   <factor>30</factor> 
+   <factor>25</factor> 
    <min>0</min>
    <max>1</max>   
    <center> 
-    <x-m> 0.04688</x-m> 
-    <y-m> 0.04546</y-m> 
-    <z-m>-0.00114</z-m> 
+    <x-m> 0.04699</x-m> 
+    <y-m> 0.045522</y-m> 
+    <z-m> 0.005078</z-m> 
    </center> 
    <axis> 
     <x>0</x> 
