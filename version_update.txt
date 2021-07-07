@@ -89,7 +89,7 @@ XXXXXX  Version Nr: 0011 24112007 XXXXXX
 
 News/updates: Major update
 
-- Improoved and adjusted FDM
+- Improved and adjusted FDM
 - Instrument lights switchable
 - Added strobe and position lights (switchable)
 - Remapping/Misuse of properties in order to get them displayed correctly in multiplayer

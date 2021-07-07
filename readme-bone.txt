@@ -33,7 +33,7 @@ Start engine:
 - 2nd Method:
 -   Switches to L/R BLEED AIR from OFF
 -   Switch engines ENG 1,2,3,4 to ON (middle console, aft)
-- Note: In case only one APU is running, switch to CRSVR AIR to allow engines
+- Note: In case only one APU is running, switch to CRSVR AIR to allow engineslogitech
         in other nacelle to be started (left APU starts engine 1,2; right APU ->3,4
 - After engine start switch everything back to off, and switch off APUs now or
   after takeoff climb if you expect to use full power (short field takeoff)
@@ -132,12 +132,13 @@ You can access the main menus by direct selection on the uppermost row of button
 
 XXXX WEAPON SYSTEM XXXX
 
-This plane is equipped with a bomb guiding system currently working on the intermediate bay. First select weapons
- by going to B-1B/Weapons menu and select LOAD GUIDED(intmd bay loaded with 8 GBU-31 guidable weapons).
+This plane is equipped with a bomb guiding system. 
+First select weapons
+ by going to B-1B/Weapons menu and select LOAD GUIDED( bay loaded with 8 GBU-31 guidable weapons).
 Switch to the OSO seat/view and you should see the GBU31 indicated on SMS display.
 
 
-Release of guided weapons(only intmd bay currently):
+Release of guided weapons:
 
 In air prior to release arm your weapons by using the SMS panel. First click on the BAY (should be highlighted when selected),
  then on the station number to arm, then press ARM button(indicated on panel) or SAFE the weapon.
@@ -152,7 +153,7 @@ You can use up to 8 guided weapons independently, but I would advise to use 1 or
 2a.)Type in manually at the OSO view position via the IKB (can be done long before reaching target) or
 2b.)Switch to sniper pod view and click with your mouse on target and press t to confirm, next target: press r, then click on target and press t again (should always see confirmation dialog on screen);
 3.)Activate target tracking by clicking (in BOMB/NAV panel/ -->STEER --> BOMB button with triangle) the left/upper button  - should be highlighted when active. Typically done at ~25nm to target.
-4.)Intmd bay door opening is automated now
+4.)Bomb bay door opening is automated now
 5.)When about 15nm away from target, click on the button with the triangle below -->BOMB in BOM/NAV panel to activate the release timer;
 6.)Wait for the realease of the weapons, then you can take control of the aircraft and change course if you wish
 7.)After releasing the bombs, click on the button with the triangle below BOMB in BOM/NAV panel to de-activate the release timer; and you have to stop the target tracking too if you do not intend to release further bombs; close bay doors manually;
@@ -208,7 +209,6 @@ Terms of usage: Released under terms of GPL v2. Falls under the term of "other w
 This model was created via use of Wings3D. Wings3D is an open source 3D modeler and may be found at www.wings3d.com
 
 FDM/Instruments/Animations/3D modelling by Markus Zojer
-
 Many thanks to XIII,jano,mfranz,AndersG for support.
 
 Terms of usage: Released under terms of GPL v2.

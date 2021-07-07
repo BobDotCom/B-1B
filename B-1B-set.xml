@@ -9,6 +9,7 @@ B-1B set file.
 
 <PropertyList>
   <sim>
+  <minimum-fg-version>2017+</minimum-fg-version>
 
     <startup>
       <splash-texture>Aircraft/B-1B/bone.png</splash-texture>
@@ -740,6 +741,11 @@ B-1B set file.
 	<!-- <GMM>
 		<file>Aircraft/B-1B/Nasal/weapons.nas</file>
 	</GMM> -->
+	<emesary>
+		<file>Aircraft/B-1B/Nasal/emesary.nas</file>
+        <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>
+        <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
+	</emesary>
 	<tfs>
 		<file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
 	</tfs>

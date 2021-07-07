@@ -83,5 +83,73 @@
         </axis>
     </animation>
 
+  <animation>
+    <type>pick</type>
+    <object-name>InhgKnob</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step>  0.01 </step>
+        <min>  27.50 </min>
+        <max>  31.00 </max>
+        <wrap>  0.00 </wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>InhgKnob</object-name>
+    <action>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.1</interval-sec>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step> -0.01 </step>
+        <min>  27.50 </min>
+        <max>  31.00 </max>
+        <wrap>  0.00 </wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>InhgKnob</object-name>
+    <action>
+      <button>3</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step> 0.01 </step>
+        <min> 27.50 </min>
+        <max> 31.00 </max>
+        <wrap> 0.00 </wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>InhgKnob</object-name>
+    <action>
+      <button>4</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step> -0.01 </step>
+        <min>  27.50 </min>
+        <max>  31.00 </max>
+        <wrap>  0.00  </wrap>
+      </binding>
+    </action>
+  </animation>
+
 </PropertyList>
 
