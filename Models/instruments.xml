@@ -45,7 +45,7 @@ more to come :-)
 	  <offsets>
 		  <x-m>-18.214</x-m>
 		  <y-m> 0.663</y-m>
-		  <z-m> 1.113</z-m>
+		  <z-m> 1.110</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -238,9 +238,9 @@ more to come :-)
 	  <name>clock</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
 	  <offsets>
-		  <x-m>-18.209</x-m>
+		  <x-m>-18.185</x-m>
 		  <y-m>-0.895</y-m>
-		  <z-m>1.115</z-m>
+		  <z-m> 1.125</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -513,9 +513,9 @@ more to come :-)
 	  <name>cdu900</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/cdu900.xml</path>
 	  <offsets>
-		  <x-m>-17.930</x-m>
-		  <y-m>-0.137</y-m>
-		  <z-m>0.710</z-m>
+		  <x-m>-17.936</x-m>
+		  <y-m>-0.140</y-m>
+		  <z-m>0.705</z-m>
 		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
   </model>
@@ -590,7 +590,7 @@ more to come :-)
 	  <name>TO-LDG</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/TO-LDG.xml</path>
 	  <offsets>
-		  <x-m>-17.792</x-m>
+		  <x-m>-17.795</x-m>
 		  <y-m>-0.288</y-m>
 		  <z-m> 0.709</z-m>
 		  <pitch-deg>0</pitch-deg>

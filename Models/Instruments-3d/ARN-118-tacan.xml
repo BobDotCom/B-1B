@@ -214,6 +214,7 @@
 
 	<animation>
 		<type>material</type>
+        <object-name>mount</object-name>
 		<object-name>vol-knob</object-name>
 		<object-name>unit-knob</object-name>
 		<object-name>tenth-knob</object-name>
