@@ -17,7 +17,7 @@ B-1B set file.
 
     <flight-model>yasim</flight-model>
     <status>alpha</status>
-    <author>Markus Zojer, Paul Jay Schrenker, pinto</author>
+    <author>Markus Zojer, Paul Jay Schrenker, pinto, NC-687, Zorka</author>
     <aero>B-1B-yasim</aero>
     <fuel-fraction>1.0</fuel-fraction>
 
@@ -786,6 +786,9 @@ B-1B set file.
     <file>Aircraft/B-1B/Nasal/iff.nas</file>
    </iff>
   </instrumentation>
+  <liveries>
+    <file>Aircraft/B-1B/Nasal/liveries.nas</file>
+  </liveries>
 </nasal>
 
 </PropertyList>
