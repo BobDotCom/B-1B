@@ -722,9 +722,9 @@ more to come :-)
 
 <!-- WSO instrumentation -->
 
-  <!--model>
-	  <name>WSO mfd</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/CITS.xml</path>
+  <model>
+	  <name>WSO radar</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/WSO radar.xml</path>
 	  <condition>
 	       <or>
 		 <equals>
@@ -738,12 +738,12 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>0.0</x-m>
-		  <y-m>0.0</y-m>
-		  <z-m>0.0</z-m>
-		  <pitch-deg>0</pitch-deg>
+		  <x-m>-15.710</x-m>
+		  <y-m> 0.196</y-m>
+		  <z-m>1.380</z-m>
+		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
-  </model-->
+  </model>
   <model>
 	  <name>WSO mfd</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/wso_mfd.xml</path>

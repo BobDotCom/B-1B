@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+  <path>WSO radar.ac</path>
+
+	<!-- lighting -->
+
+	<animation>
+		<type>material</type>
+        <object-name>AIRBCN</object-name>
+		<object-name>ATTEN</object-name>
+		<object-name>CONT</object-name>
+		<object-name>DIS</object-name>
+        <object-name>EXP</object-name>
+		<object-name>FADE</object-name>
+		<object-name>FWD</object-name>
+        <object-name>GMTI</object-name>
+        <object-name>GNDBCN</object-name>
+        <object-name>HI-RES</object-name>
+		<object-name>L</object-name>
+		<object-name>LK</object-name>
+		<object-name>MAP</object-name>
+        <object-name>R</object-name>
+		<object-name>RNDVS</object-name>
+		<object-name>SCT</object-name>
+        <object-name>TILT</object-name>
+        <object-name>UP/DN</object-name>
+        <object-name>VDR</object-name>
+        <object-name>WX</object-name>
+	 <emission>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+	</animation>
+
+
+</PropertyList>
