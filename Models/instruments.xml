@@ -738,10 +738,10 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.710</x-m>
-		  <y-m> 0.196</y-m>
-		  <z-m>1.380</z-m>
-		  <pitch-deg>-35</pitch-deg>
+		  <x-m>-15.704</x-m>
+		  <y-m> 0.208</y-m>
+		  <z-m>1.379</z-m>
+		  <pitch-deg>-34</pitch-deg>
 	  </offsets>
   </model>
   <model>
@@ -760,9 +760,9 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.715</x-m>
-		  <y-m>0.355</y-m>
-		  <z-m>1.385</z-m>
+		  <x-m>-15.711</x-m>
+		  <y-m>0.373</y-m>
+		  <z-m>1.378</z-m>
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
   </model>
@@ -783,8 +783,8 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.710</x-m>
-		  <y-m>0.660</y-m>
+		  <x-m>-15.704</x-m>
+		  <y-m>0.675</y-m>
 		  <z-m>1.380</z-m>
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
@@ -807,8 +807,8 @@ more to come :-)
 	 </condition>
 	  <offsets>
 		  <x-m>-15.793</x-m>
-		  <y-m>0.615</y-m>
-		  <z-m>1.640</z-m>
+		  <y-m>0.605</y-m>
+		  <z-m>1.635</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -829,9 +829,9 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.710</x-m>
-		  <y-m>0.485</y-m>
-		  <z-m>1.380</z-m>
+		  <x-m>-15.706</x-m>
+		  <y-m>0.503</y-m>
+		  <z-m>1.379</z-m>
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
   </model>
@@ -852,9 +852,9 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.790</x-m>
-		  <y-m>0.275</y-m>
-		  <z-m>1.635</z-m>
+		  <x-m>-15.780</x-m>
+		  <y-m>0.278</y-m>
+		  <z-m>1.642</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -875,9 +875,9 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.793</x-m>
-		  <y-m>0.380</y-m>
-		  <z-m>1.640</z-m>
+		  <x-m>-15.788</x-m>
+		  <y-m>0.378</y-m>
+		  <z-m>1.637</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -887,7 +887,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/alt2-3d.xml</path>
 	  <condition>
 	       <or>
-		 <equals>
+		 <equals>ikb
 			 <property>sim/current-view/name</property>
 			 <value>OSO view</value>
 		 </equals>
@@ -907,7 +907,7 @@ more to come :-)
 
   <model>
 	  <name>OSO ai</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>target
 	  <condition>
 	       <or>
 		 <equals>
@@ -991,7 +991,7 @@ more to come :-)
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.788</x-m>
+		  <x-m>-15.790</x-m>
 		  <y-m>-0.798</y-m>
 		  <z-m> 1.640</z-m>
 		  <pitch-deg>0</pitch-deg>

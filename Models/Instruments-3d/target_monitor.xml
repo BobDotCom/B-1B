@@ -854,7 +854,7 @@ sweat by maggse
   <name>tgt1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.085</y-m>
     <z-m>-0.030</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -872,7 +872,7 @@ sweat by maggse
   <name>tgt1_dist</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.040</y-m>
+    <y-m>-0.035</y-m>
     <z-m>-0.030</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -895,7 +895,7 @@ sweat by maggse
   <name>tgt2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.085</y-m>
     <z-m>-0.039</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -913,7 +913,7 @@ sweat by maggse
   <name>tgt2_dist</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.040</y-m>
+    <y-m>-0.035</y-m>
     <z-m>-0.039</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -936,7 +936,7 @@ sweat by maggse
   <name>tgt3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.085</y-m>
     <z-m>-0.048</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -954,7 +954,7 @@ sweat by maggse
   <name>tgt3_dist</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.040</y-m>
+    <y-m>-0.035</y-m>
     <z-m>-0.048</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -977,7 +977,7 @@ sweat by maggse
   <name>tgt4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.085</y-m>
     <z-m>-0.057</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -995,7 +995,7 @@ sweat by maggse
   <name>tgt4_dist</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.040</y-m>
+    <y-m>-0.035</y-m>
     <z-m>-0.057</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1018,7 +1018,7 @@ sweat by maggse
   <name>tgt5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.085</y-m>
     <z-m>-0.066</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1036,7 +1036,7 @@ sweat by maggse
   <name>tgt5_dist</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.040</y-m>
+    <y-m>-0.035</y-m>
     <z-m>-0.066</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1059,7 +1059,7 @@ sweat by maggse
   <name>tgt6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.085</y-m>
     <z-m>-0.075</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1077,7 +1077,7 @@ sweat by maggse
   <name>tgt6_dist</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.040</y-m>
+    <y-m>-0.035</y-m>
     <z-m>-0.075</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1100,7 +1100,7 @@ sweat by maggse
   <name>tgt7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.085</y-m>
     <z-m>-0.084</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1118,7 +1118,7 @@ sweat by maggse
   <name>tgt7_dist</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.040</y-m>
+    <y-m>-0.035</y-m>
     <z-m>-0.084</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1141,7 +1141,7 @@ sweat by maggse
   <name>tgt8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.085</y-m>
     <z-m>-0.093</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1159,7 +1159,7 @@ sweat by maggse
   <name>tgt8_dist</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.040</y-m>
+    <y-m>-0.035</y-m>
     <z-m>-0.093</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>

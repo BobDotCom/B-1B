@@ -12,7 +12,7 @@ sweat by maggse
   <name>position</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.071</y-m>
     <z-m>0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -23,14 +23,14 @@ sweat by maggse
   <layout>left-to-right</layout>
  
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+    <y-m>-0.050</y-m>
     <z-m>0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -41,14 +41,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>state</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+    <y-m>-0.023</y-m>
     <z-m>0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -59,14 +59,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>distance</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.010</y-m>
+    <y-m>0.015</y-m>
     <z-m>0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -77,14 +77,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>time</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.070</y-m>
+    <y-m>0.053</y-m>
     <z-m>0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -95,7 +95,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 
@@ -104,7 +104,7 @@ sweat by maggse
   <name>fwd1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+    <y-m>-0.085</y-m>
     <z-m>0.083</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -115,14 +115,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_fwd1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+    <y-m>-0.055</y-m>
     <z-m>0.083</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -133,7 +133,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -150,7 +150,7 @@ sweat by maggse
   <name>state_fwd1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+    <y-m>-0.025</y-m>
     <z-m>0.083</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -161,7 +161,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -178,7 +178,7 @@ sweat by maggse
   <name>bay0_dist1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+     <y-m>0.033</y-m>
     <z-m>0.083</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -193,14 +193,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay0_time1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+        <y-m>0.090</y-m>
     <z-m>0.083</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -215,7 +215,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -223,7 +223,7 @@ sweat by maggse
   <name>fwd2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.075</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -234,14 +234,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_fwd2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.075</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -252,7 +252,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -269,7 +269,7 @@ sweat by maggse
   <name>state_fwd2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.075</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -280,7 +280,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -297,7 +297,7 @@ sweat by maggse
   <name>bay0_dist2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.075</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -312,14 +312,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay0_time2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.075</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -334,7 +334,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -343,7 +343,7 @@ sweat by maggse
   <name>fwd3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.067</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -354,14 +354,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_fwd3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.067</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -372,7 +372,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -389,7 +389,7 @@ sweat by maggse
   <name>state_fwd3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.067</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -400,7 +400,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -417,7 +417,7 @@ sweat by maggse
   <name>bay0_dist3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.067</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -432,14 +432,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay0_time3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.067</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -454,7 +454,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -462,7 +462,7 @@ sweat by maggse
   <name>fwd4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.059</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -473,14 +473,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_fwd4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.059</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -491,7 +491,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -508,7 +508,7 @@ sweat by maggse
   <name>state_fwd4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.059</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -519,7 +519,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -536,7 +536,7 @@ sweat by maggse
   <name>bay0_dist4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.059</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -551,14 +551,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay0_time4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.059</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -573,7 +573,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
  
@@ -581,7 +581,7 @@ sweat by maggse
   <name>fwd5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.051</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -592,14 +592,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_fwd5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.051</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -610,7 +610,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -627,7 +627,7 @@ sweat by maggse
   <name>state_fwd5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.051</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -638,7 +638,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -655,7 +655,7 @@ sweat by maggse
   <name>bay0_dist5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.051</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -670,14 +670,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay0_time5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.051</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -692,7 +692,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -700,7 +700,7 @@ sweat by maggse
   <name>fwd6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.043</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -711,14 +711,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_fwd6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.043</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -729,7 +729,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -746,7 +746,7 @@ sweat by maggse
   <name>state_fwd6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.043</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -757,7 +757,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -774,7 +774,7 @@ sweat by maggse
   <name>bay0_dist6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.043</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -789,14 +789,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay0_time6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.043</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -811,7 +811,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -819,7 +819,7 @@ sweat by maggse
   <name>fwd7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.035</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -830,14 +830,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_fwd7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.035</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -848,7 +848,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -865,7 +865,7 @@ sweat by maggse
   <name>state_fwd7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.035</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -876,7 +876,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -893,7 +893,7 @@ sweat by maggse
   <name>bay0_dist7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.035</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -908,14 +908,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay0_time7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.035</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -930,7 +930,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -938,7 +938,7 @@ sweat by maggse
   <name>fwd8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.027</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -949,14 +949,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_fwd8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.027</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -967,7 +967,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -984,7 +984,7 @@ sweat by maggse
   <name>state_fwd8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.027</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -995,7 +995,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1012,7 +1012,7 @@ sweat by maggse
   <name>bay0_dist8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.027</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1027,14 +1027,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay0_time8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.027</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1049,7 +1049,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -1058,7 +1058,7 @@ sweat by maggse
   <name>imd1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1069,14 +1069,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_imd1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1087,7 +1087,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1104,7 +1104,7 @@ sweat by maggse
   <name>state_imd1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1115,7 +1115,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1132,7 +1132,7 @@ sweat by maggse
   <name>bay1_dist1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1147,14 +1147,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay1_time1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1169,7 +1169,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -1177,7 +1177,7 @@ sweat by maggse
   <name>imd2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1188,14 +1188,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_imd2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1206,7 +1206,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1223,7 +1223,7 @@ sweat by maggse
   <name>state_imd2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1234,7 +1234,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1251,7 +1251,7 @@ sweat by maggse
   <name>bay1_dist2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1266,14 +1266,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay1_time2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1288,7 +1288,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -1296,7 +1296,7 @@ sweat by maggse
   <name>imd3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>0.000</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1307,14 +1307,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_imd3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>0.000</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1325,7 +1325,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1342,7 +1342,7 @@ sweat by maggse
   <name>state_imd3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>0.000</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1353,7 +1353,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1370,7 +1370,7 @@ sweat by maggse
   <name>bay1_dist3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>0.000</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1385,14 +1385,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay1_time3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>0.000</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1407,7 +1407,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -1415,7 +1415,7 @@ sweat by maggse
   <name>imd4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1426,14 +1426,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_imd4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1444,7 +1444,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1461,7 +1461,7 @@ sweat by maggse
   <name>state_imd4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1472,7 +1472,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1489,7 +1489,7 @@ sweat by maggse
   <name>bay1_dist4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1504,14 +1504,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay1_time4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1526,7 +1526,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -1534,7 +1534,7 @@ sweat by maggse
   <name>imd5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1545,14 +1545,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_imd5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1563,7 +1563,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1580,7 +1580,7 @@ sweat by maggse
   <name>state_imd5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1591,7 +1591,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1608,7 +1608,7 @@ sweat by maggse
   <name>bay1_dist5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1623,14 +1623,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay1_time5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1645,7 +1645,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -1653,7 +1653,7 @@ sweat by maggse
   <name>imd6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.024</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1664,14 +1664,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_imd6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.024</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1682,7 +1682,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1699,7 +1699,7 @@ sweat by maggse
   <name>state_imd6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.024</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1710,7 +1710,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1727,7 +1727,7 @@ sweat by maggse
   <name>bay1_dist6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.024</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1742,14 +1742,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay1_time6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.024</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1764,7 +1764,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -1772,7 +1772,7 @@ sweat by maggse
   <name>imd7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.032</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1783,14 +1783,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_imd7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.032</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1801,7 +1801,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1818,7 +1818,7 @@ sweat by maggse
   <name>state_imd7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.032</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1829,7 +1829,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1846,7 +1846,7 @@ sweat by maggse
   <name>bay1_dist7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.032</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1861,14 +1861,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay1_time7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.032</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1883,7 +1883,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -1891,7 +1891,7 @@ sweat by maggse
   <name>imd8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.040</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1902,14 +1902,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_imd8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.040</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1920,7 +1920,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1937,7 +1937,7 @@ sweat by maggse
   <name>state_imd8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.040</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1948,7 +1948,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -1965,7 +1965,7 @@ sweat by maggse
   <name>bay1_dist8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.040</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1980,14 +1980,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay1_time8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.040</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2002,7 +2002,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -2012,7 +2012,7 @@ sweat by maggse
   <name>aft1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.054</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2023,14 +2023,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_aft1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.054</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2041,7 +2041,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2058,7 +2058,7 @@ sweat by maggse
   <name>state_aft1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.054</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2069,7 +2069,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2086,7 +2086,7 @@ sweat by maggse
   <name>bay2_dist1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.054</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2101,14 +2101,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay2_time1</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.054</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2123,7 +2123,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -2131,7 +2131,7 @@ sweat by maggse
   <name>aft2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.062</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2142,14 +2142,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_aft2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.062</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2160,7 +2160,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2177,7 +2177,7 @@ sweat by maggse
   <name>state_aft2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.062</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2188,7 +2188,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2205,7 +2205,7 @@ sweat by maggse
   <name>bay2_dist2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.062</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2220,14 +2220,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay2_time2</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.062</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2242,7 +2242,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -2251,7 +2251,7 @@ sweat by maggse
   <name>aft3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.070</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2262,14 +2262,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_aft3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.070</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2280,7 +2280,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2297,7 +2297,7 @@ sweat by maggse
   <name>state_aft3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.070</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2308,7 +2308,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2325,7 +2325,7 @@ sweat by maggse
   <name>bay2_dist3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.070</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2340,14 +2340,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay2_time3</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.070</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2362,7 +2362,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -2370,7 +2370,7 @@ sweat by maggse
   <name>aft4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.078</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2381,14 +2381,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_aft4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.078</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2399,7 +2399,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2416,7 +2416,7 @@ sweat by maggse
   <name>state_aft4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.078</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2427,7 +2427,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2444,7 +2444,7 @@ sweat by maggse
   <name>bay2_dist4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.078</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2459,14 +2459,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay2_time4</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.078</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2481,7 +2481,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
  
@@ -2489,7 +2489,7 @@ sweat by maggse
   <name>aft5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.086</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2500,14 +2500,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_aft5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.086</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2518,7 +2518,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2535,7 +2535,7 @@ sweat by maggse
   <name>state_aft5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.086</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2546,7 +2546,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2563,7 +2563,7 @@ sweat by maggse
   <name>bay2_dist5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.086</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2578,14 +2578,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay2_time5</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.086</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2600,7 +2600,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -2608,7 +2608,7 @@ sweat by maggse
   <name>aft6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2619,14 +2619,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_aft6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2637,7 +2637,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2654,7 +2654,7 @@ sweat by maggse
   <name>state_aft6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2665,7 +2665,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2682,7 +2682,7 @@ sweat by maggse
   <name>bay2_dist6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2697,14 +2697,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay2_time6</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2719,7 +2719,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -2727,7 +2727,7 @@ sweat by maggse
   <name>aft7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.102</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2738,14 +2738,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_aft7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.102</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2756,7 +2756,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2773,7 +2773,7 @@ sweat by maggse
   <name>state_aft7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.102</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2784,7 +2784,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2801,7 +2801,7 @@ sweat by maggse
   <name>bay2_dist7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.102</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2816,14 +2816,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay2_time7</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.102</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2838,7 +2838,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
@@ -2846,7 +2846,7 @@ sweat by maggse
   <name>aft8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.098</y-m>
+     <y-m>-0.085</y-m>
     <z-m>-0.110</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2857,14 +2857,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <text>
   <name>type_aft8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.065</y-m>
+     <y-m>-0.055</y-m>
     <z-m>-0.110</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2875,7 +2875,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2892,7 +2892,7 @@ sweat by maggse
   <name>state_aft8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.030</y-m>
+     <y-m>-0.025</y-m>
     <z-m>-0.110</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2903,7 +2903,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 <animation>
@@ -2920,7 +2920,7 @@ sweat by maggse
   <name>bay2_dist8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.040</y-m>
+      <y-m>0.033</y-m>
     <z-m>-0.110</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2935,14 +2935,14 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
   <name>bay2_time8</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.095</y-m>
+         <y-m>0.090</y-m>
     <z-m>-0.110</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2957,7 +2957,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.007</character-size>
+  <character-size type="double">0.006</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
