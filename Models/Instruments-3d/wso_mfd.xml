@@ -10,7 +10,7 @@ sweat by maggse
   <name>position</name>
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.090</y-m>
+    <y-m>-0.085</y-m>
     <z-m>0.070</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -21,7 +21,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.2</character-aspect-ratio>
 </text>
 
@@ -41,15 +41,15 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <!-- footer -->
 <text>
-  <name>line01</name>
+  <name>line01</name> <!-- MENU CHANGE -->
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>0.100</y-m>
+    <y-m>0.084</y-m>
     <z-m>-0.060</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -61,16 +61,16 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 
 <!-- line 1 -->
 <text>
-  <name>line10</name>
+  <name>line10</name>  <!-- FWD,INTMD,AFT -->
   <offsets>
     <x-m>0.008</x-m>
-    <y-m>-0.090</y-m>
+    <y-m>-0.085</y-m>
     <z-m>0.047</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -82,7 +82,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -104,7 +104,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -135,7 +135,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -157,7 +157,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -190,7 +190,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -212,7 +212,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -243,7 +243,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -265,7 +265,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -298,7 +298,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -320,7 +320,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -351,7 +351,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -373,7 +373,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -406,7 +406,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -428,7 +428,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -459,7 +459,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -481,7 +481,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -514,7 +514,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -536,7 +536,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -567,7 +567,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -589,7 +589,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -622,7 +622,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -644,7 +644,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -675,7 +675,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -697,7 +697,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -730,7 +730,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -752,7 +752,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -783,7 +783,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -805,7 +805,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -838,7 +838,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -860,7 +860,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>
@@ -891,7 +891,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <text>
@@ -913,7 +913,7 @@ sweat by maggse
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
-  <character-size type="double">0.008</character-size>
+  <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
 </text>
 <animation>

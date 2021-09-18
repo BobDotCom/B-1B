@@ -178,7 +178,7 @@ sweat by maggse
   <name>bay0_dist1</name>
   <offsets>
     <x-m>0.008</x-m>
-     <y-m>0.033</y-m>
+     <y-m>0.028</y-m>
     <z-m>0.083</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -200,7 +200,7 @@ sweat by maggse
   <name>bay0_time1</name>
   <offsets>
     <x-m>0.008</x-m>
-        <y-m>0.090</y-m>
+    <y-m>0.080</y-m>
     <z-m>0.083</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -297,7 +297,7 @@ sweat by maggse
   <name>bay0_dist2</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.075</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -319,7 +319,7 @@ sweat by maggse
   <name>bay0_time2</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+     <y-m>0.080</y-m>
     <z-m>0.075</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -417,7 +417,7 @@ sweat by maggse
   <name>bay0_dist3</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.067</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -439,7 +439,7 @@ sweat by maggse
   <name>bay0_time3</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+    <y-m>0.080</y-m>
     <z-m>0.067</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -536,7 +536,7 @@ sweat by maggse
   <name>bay0_dist4</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.059</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -558,7 +558,7 @@ sweat by maggse
   <name>bay0_time4</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>0.059</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -655,7 +655,7 @@ sweat by maggse
   <name>bay0_dist5</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.051</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -677,7 +677,7 @@ sweat by maggse
   <name>bay0_time5</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>0.051</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -774,7 +774,7 @@ sweat by maggse
   <name>bay0_dist6</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.043</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -796,7 +796,7 @@ sweat by maggse
   <name>bay0_time6</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>0.043</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -893,7 +893,7 @@ sweat by maggse
   <name>bay0_dist7</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.035</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -915,7 +915,7 @@ sweat by maggse
   <name>bay0_time7</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>0.035</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1012,7 +1012,7 @@ sweat by maggse
   <name>bay0_dist8</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.027</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1034,7 +1034,7 @@ sweat by maggse
   <name>bay0_time8</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>0.027</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1132,7 +1132,7 @@ sweat by maggse
   <name>bay1_dist1</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1154,7 +1154,7 @@ sweat by maggse
   <name>bay1_time1</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1251,7 +1251,7 @@ sweat by maggse
   <name>bay1_dist2</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1273,7 +1273,7 @@ sweat by maggse
   <name>bay1_time2</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1370,7 +1370,7 @@ sweat by maggse
   <name>bay1_dist3</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>0.000</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1392,7 +1392,7 @@ sweat by maggse
   <name>bay1_time3</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>0.000</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1489,7 +1489,7 @@ sweat by maggse
   <name>bay1_dist4</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1511,7 +1511,7 @@ sweat by maggse
   <name>bay1_time4</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.008</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1608,7 +1608,7 @@ sweat by maggse
   <name>bay1_dist5</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1630,7 +1630,7 @@ sweat by maggse
   <name>bay1_time5</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.016</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1727,7 +1727,7 @@ sweat by maggse
   <name>bay1_dist6</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.024</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1749,7 +1749,7 @@ sweat by maggse
   <name>bay1_time6</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.024</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1846,7 +1846,7 @@ sweat by maggse
   <name>bay1_dist7</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.032</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1868,7 +1868,7 @@ sweat by maggse
   <name>bay1_time7</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.032</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1965,7 +1965,7 @@ sweat by maggse
   <name>bay1_dist8</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.040</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -1987,7 +1987,7 @@ sweat by maggse
   <name>bay1_time8</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.040</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2086,7 +2086,7 @@ sweat by maggse
   <name>bay2_dist1</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.054</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2108,7 +2108,7 @@ sweat by maggse
   <name>bay2_time1</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.054</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2205,7 +2205,7 @@ sweat by maggse
   <name>bay2_dist2</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.062</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2227,7 +2227,7 @@ sweat by maggse
   <name>bay2_time2</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.062</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2325,7 +2325,7 @@ sweat by maggse
   <name>bay2_dist3</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.070</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2347,7 +2347,7 @@ sweat by maggse
   <name>bay2_time3</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.070</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2444,7 +2444,7 @@ sweat by maggse
   <name>bay2_dist4</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.078</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2466,7 +2466,7 @@ sweat by maggse
   <name>bay2_time4</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.078</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2563,7 +2563,7 @@ sweat by maggse
   <name>bay2_dist5</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.086</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2585,7 +2585,7 @@ sweat by maggse
   <name>bay2_time5</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.086</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2682,7 +2682,7 @@ sweat by maggse
   <name>bay2_dist6</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2704,7 +2704,7 @@ sweat by maggse
   <name>bay2_time6</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.094</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2801,7 +2801,7 @@ sweat by maggse
   <name>bay2_dist7</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.102</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2823,7 +2823,7 @@ sweat by maggse
   <name>bay2_time7</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.102</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2920,7 +2920,7 @@ sweat by maggse
   <name>bay2_dist8</name>
   <offsets>
     <x-m>0.008</x-m>
-      <y-m>0.033</y-m>
+      <y-m>0.028</y-m>
     <z-m>-0.110</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
@@ -2942,7 +2942,7 @@ sweat by maggse
   <name>bay2_time8</name>
   <offsets>
     <x-m>0.008</x-m>
-         <y-m>0.090</y-m>
+         <y-m>0.080</y-m>
     <z-m>-0.110</z-m>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
