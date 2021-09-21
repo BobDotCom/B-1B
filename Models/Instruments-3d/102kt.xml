@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<type>material</type>
+
+   <name>102kt</name>
+      <path>102kt.ac</path>
+
+   <animation>
+       <object-name>cube</object-name>
+    </animation>
+
+</PropertyList>
+
+

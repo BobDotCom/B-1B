@@ -135,6 +135,16 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
+  <model>
+	  <name>102kt</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/102kt.xml</path>
+	  <offsets>
+		  <x-m>-18.212</x-m>
+		  <y-m>-0.346</y-m>
+		  <z-m>1.259</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
 
   <model>
 	  <name>hud alt</name>
@@ -142,7 +152,7 @@ more to come :-)
 	  <offsets>
 		  <x-m>-18.210</x-m>
 		  <y-m>-0.286</y-m>
-		  <z-m>1.185</z-m>
+		  <z-m>1.184</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -338,7 +348,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/vsi-3d.xml</path>
 	  <offsets>
 		  <x-m>-18.212</x-m>
-		  <y-m>-0.433</y-m>
+		  <y-m>-0.434</y-m>
 		  <z-m>1.170</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -348,9 +358,9 @@ more to come :-)
 	  <name>ai</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>
 	  <offsets>
-		  <x-m>-18.233</x-m>
+		  <x-m>-18.238</x-m>
 		  <y-m>-0.435</y-m>
-		  <z-m>1.265</z-m>
+		  <z-m>1.272</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>

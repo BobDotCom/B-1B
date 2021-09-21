@@ -9,28 +9,20 @@ sweat by maggse
  <!-- fire test switch -->
  
  <animation>
-	 <type>rotate</type>
+	 <type>translate</type>
 	 <object-name>switch_firetest</object-name>
 	 <property>controls/switches/fire</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+
 	 <center>
-		 <x-m>-0.028</x-m>
-		 <y-m>-0.298</y-m>
-		 <z-m>0.078</z-m>
+		 <x-m>-0.03011</x-m>
+		 <y-m>-0.29957</y-m>
+		 <z-m>0.07476</z-m>
 	 </center>
  </animation>
  <animation>
