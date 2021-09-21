@@ -5,6 +5,16 @@ sweat by maggse
 <PropertyList>
 
  <path>fcgms.ac</path>
+  <animation>
+    <object-name>nut</object-name>
+    <object-name>fcgms</object-name>
+    <object-name>face_fcgms</object-name>
+    <object-name>knob_fcgms</object-name>
+	<object-name>switch_fcgms</object-name>
+	<object-name>switch_fcgms</object-name>
+	<object-name>switch_fcgms_mode</object-name>
+
+  </animation>
  
 
  <!-- fcgms switch on/off -->
@@ -29,9 +39,9 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.005</x-m>
-		 <y-m>0.485</y-m>
-		 <z-m>0.100</z-m>
+		 <x-m>0.00594</x-m>
+		 <y-m>0.48808</y-m>
+		 <z-m>0.08813</z-m>
    </center>
  </animation>
  
@@ -56,10 +66,6 @@ sweat by maggse
 </animation>
 
 
-
-
-<!-- terrain avoidance set clr setting -->
-
 <animation>
 	<type>rotate</type>
 	<object-name>knob_fcgms</object-name>
@@ -81,9 +87,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.013</x-m>
-		<y-m>0.466</y-m>
-		<z-m>0.036</z-m>
+		<x-m>0.00475</x-m>
+		<y-m>0.46835</y-m>
+		<z-m>0.02491</z-m>
 	</center>
 </animation>
 

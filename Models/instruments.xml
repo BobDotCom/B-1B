@@ -173,9 +173,9 @@ more to come :-)
 	  <name>cg mac</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/mac_ind.xml</path>
 	  <offsets>
-		  <x-m>-18.214</x-m>
-		  <y-m>-0.198</y-m>
-		  <z-m>1.214</z-m>
+		  <x-m>-18.212</x-m>
+		  <y-m>-0.193</y-m>
+		  <z-m>1.204</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -184,9 +184,9 @@ more to come :-)
 	  <name>fcgms</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fcgms.xml</path>
 	  <offsets>
-		  <x-m>-18.216</x-m>
-		  <y-m>-0.268</y-m>
-		  <z-m>1.195</z-m>
+		  <x-m>-18.214</x-m>
+		  <y-m>-0.265</y-m>
+		  <z-m>1.196</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
