@@ -8,107 +8,24 @@ sweat by maggse
 
 <!-- flap switch -->
 
-<animation>
-	<type>rotate</type>
-	<object-name>switch_flaps.002</object-name>
-	<property>controls/flight/flaps</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.0</dep>
-		</entry>
-		<entry>
-			<ind>0.5</ind>
-			<dep>38</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>65.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
-		<z>0.0</z>
-	</axis>
-	<center>
-		<x-m>0.05554</x-m>
-		<y-m>-0.21275</y-m>
-		<z-m>0.25266</z-m>
-	</center>
-</animation>
-<animation>
-	<type>material</type>
-	<object-name>switch_flaps.002</object-name>
-	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+
+
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
-<animation>
-	<type>pick</type>
-	<object-name>switch_flaps.002</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.2</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property>controls/flight/flaps</property>
-			<step>0.5</step>
-			<min>0.0</min>
-			<max>1.0</max>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>controls.flapsDown(1)</script>
-		</binding>
-		<mod-up>
-			<binding>
-				<command>nasal</command>
-				<script>controls.flapsDown(0)</script>
-			</binding>
-                </mod-up>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.2</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property>controls/flight/flaps</property>
-			<step>-0.5</step>
-			<min>0.0</min>
-			<max>1.0</max>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>controls.flapsDown(-1)</script>
-		</binding>
-		<mod-up>
-			<binding>
-				<command>nasal</command>
-				<script>controls.flapsDown(0)</script>
-			</binding>
-                </mod-up>
-	</action>
-</animation>
+
 
 <!-- throttle switches -->
 
 <animation>
 	<type>rotate</type>
-	<object-name>throttle_lever_1</object-name>
+	<object-name>throttle_lever_1_0</object-name>
+    <object-name>throttle_lever_1_1</object-name>
 	<property>controls/engines/engine[0]/throttle-lever</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>20.0</dep>
+			<dep>30.0</dep>
 		</entry>
 		<entry>
 			<ind>0.5</ind>
@@ -116,7 +33,7 @@ sweat by maggse
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-25.0</dep>
+			<dep>-30.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -125,9 +42,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.001</x-m>
-		<y-m>-0.205</y-m>
-		<z-m>0.250</z-m>
+		<x-m>0.03</x-m>
+		<y-m>-0.02</y-m>
+		<z-m>0.23</z-m>
 	</center>
 </animation>
 <animation>
@@ -172,12 +89,13 @@ sweat by maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>throttle_lever_2</object-name>
+	<object-name>throttle_lever_2_0</object-name>
+    <object-name>throttle_lever_2_1</object-name>
 	<property>controls/engines/engine[1]/throttle-lever</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>20.0</dep>
+			<dep>30.0</dep>
 		</entry>
 		<entry>
 			<ind>0.5</ind>
@@ -185,7 +103,7 @@ sweat by maggse
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-25.0</dep>
+			<dep>-30.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -194,9 +112,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.001</x-m>
-		<y-m>-0.205</y-m>
-		<z-m>0.250</z-m>
+		<x-m>0.03</x-m>
+		<y-m>-0.19</y-m>
+		<z-m>0.23</z-m>
 	</center>
 </animation>
 <animation>
@@ -243,12 +161,13 @@ sweat by maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>throttle_lever_3</object-name>
+	<object-name>throttle_lever_3_0</object-name>
+    <object-name>throttle_lever_3_1</object-name>
 	<property>controls/engines/engine[2]/throttle-lever</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>20.0</dep>
+			<dep>30.0</dep>
 		</entry>
 		<entry>
 			<ind>0.5</ind>
@@ -256,7 +175,7 @@ sweat by maggse
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-25.0</dep>
+			<dep>-30.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -265,9 +184,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.001</x-m>
-		<y-m>-0.205</y-m>
-		<z-m>0.250</z-m>
+		<x-m>0.03</x-m>
+		<y-m>-0.18</y-m>
+		<z-m>0.23</z-m>
 	</center>
 </animation>
 <animation>
@@ -314,12 +233,13 @@ sweat by maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>throttle_lever_4</object-name>
+	<object-name>throttle_lever_4_0</object-name>
+    <object-name>throttle_lever_4_1</object-name>
 	<property>controls/engines/engine[3]/throttle-lever</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>20.0</dep>
+			<dep>30.0</dep>
 		</entry>
 		<entry>
 			<ind>0.5</ind>
@@ -327,7 +247,7 @@ sweat by maggse
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-25.0</dep>
+			<dep>-30.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -336,9 +256,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.001</x-m>
-		<y-m>-0.205</y-m>
-		<z-m>0.250</z-m>
+		<x-m> 0.03</x-m>
+		<y-m>-0.1668</y-m>
+		<z-m>0.2334</z-m>
 	</center>
 </animation>
 <animation>

@@ -29,7 +29,7 @@ sweat by maggse
 
 <!-- osg text animation-->
 
-<text>
+<!-- text>
   <name>alt_txt</name>
   <offsets>
     <x-m>-0.025</x-m>
@@ -323,7 +323,7 @@ sweat by maggse
   <font>lucida.txf</font>
   <character-size type="double">0.007</character-size>
   <character-aspect-ratio type="double">1.1</character-aspect-ratio>
-</text>
+</text -->
 
 <animation>
 	 <type>material</type>
@@ -604,17 +604,6 @@ sweat by maggse
 		 </binding>
 	      </action>
       </animation>
-
-<animation>
-	<type>material</type>
-	<object-name>apmode</object-name>
-	 <emission>
-		 <red>0.8</red>
-		 <green>0.1</green>
-		 <blue>0.2</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
  
 
 </PropertyList>
