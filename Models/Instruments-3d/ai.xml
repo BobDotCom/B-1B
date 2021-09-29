@@ -17,15 +17,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Every software has a developer, also free software. 
-As a gesture of courtesy and respect, I would be delighted 
-if you contacted me before making any changes to this software. 
+Every software has a developer, also free software.
+As a gesture of courtesy and respect, I would be delighted
+if you contacted me before making any changes to this software.
 <info (at) marc-kraus.de> April, 2017
 ########################################################################-->
 <PropertyList>
 
   <path>ai.ac</path>
-  
+
 	<animation>
 		<type>material</type>
 		<object-name>bank-index</object-name>
@@ -46,7 +46,7 @@ if you contacted me before making any changes to this software.
 			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<animation>
 		<type>material</type>
 		<object-name>sphere</object-name>
@@ -54,16 +54,15 @@ if you contacted me before making any changes to this software.
 			<less-than><property>controls/lighting/instruments-norm</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
-			<red>0.3</red>
+			<red>0.2</red>
 			<green>0.0</green>
 			<blue>0.0</blue>
 			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<animation>
 		<type>material</type>
-		<object-name>mount</object-name>
 		<object-name>dir-knob</object-name>
 		<object-name>adi-knob</object-name>
 		<condition>
@@ -76,7 +75,7 @@ if you contacted me before making any changes to this software.
 			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<animation>
 		<type>material</type>
 		<object-name>bank-index</object-name>
@@ -101,7 +100,7 @@ if you contacted me before making any changes to this software.
 		  <factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<animation>
 		<type>material</type>
 		<object-name>dir-knob</object-name>
@@ -116,8 +115,8 @@ if you contacted me before making any changes to this software.
 		  <blue>0.05</blue>
 		  <factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
-	</animation>		
- 
+	</animation>
+
 	<animation>
 		<type>noshadow</type>
 		<object-name>ai-ring-shadow</object-name>
@@ -153,7 +152,7 @@ if you contacted me before making any changes to this software.
 		    <ind>24</ind>
 		    <dep>31</dep>
 		  </entry>
-		</interpolation>   
+		</interpolation>
 		<center>
 		 <x-m>0.0</x-m>
 		 <y-m>0.032</y-m>
@@ -199,7 +198,7 @@ if you contacted me before making any changes to this software.
     </center>
     <axis><x>1</x></axis>
   </animation>
-  
+
 	<animation>
 		<type>select</type>
 		<object-name>off-nav</object-name>
@@ -227,7 +226,7 @@ if you contacted me before making any changes to this software.
 			</or>
 		</condition>
 	</animation>
-  
+
 	<animation>
 		<type>select</type>
 		<object-name>ZR.Alt</object-name>
@@ -275,11 +274,11 @@ if you contacted me before making any changes to this software.
 						<property>instrumentation/nav[0]/nav-distance</property>
 						<value>45000</value>
 					</less-than>
-				</and>				
+				</and>
 				<and>
 					<property>instrumentation/nav[0]/nav-loc</property>
 					<property>instrumentation/nav[0]/in-range</property>
-				</and>					
+				</and>
 			</or>
 		</condition>
 	</animation>
@@ -304,7 +303,7 @@ if you contacted me before making any changes to this software.
 		  <z-m>0</z-m>
 		</center>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>reticl</object-name>
@@ -347,7 +346,7 @@ if you contacted me before making any changes to this software.
 		      <property>instrumentation/attitude-indicator/horizon-offset-deg</property>
 		      <value>0</value>
 		    </binding>
-		  </action>      
+		  </action>
 		  <action>
 		    <name>calibrate fine dec</name>
 		    <button>3</button>
@@ -375,7 +374,7 @@ if you contacted me before making any changes to this software.
 		    </binding>
 		  </action>
 	</animation>
-	
+
 	<!-- dir -->
 		<animation>
 		<type>translate</type>
@@ -419,7 +418,7 @@ if you contacted me before making any changes to this software.
 		      <property>instrumentation/attitude-indicator/dir-offset-deg</property>
 		      <value>0</value>
 		    </binding>
-		  </action>      
+		  </action>
 		  <action>
 		    <name>calibrate fine dec d</name>
 		    <button>3</button>

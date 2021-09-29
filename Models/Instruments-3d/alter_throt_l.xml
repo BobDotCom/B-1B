@@ -166,7 +166,7 @@ maggse
 		</binding>
 	</action>
 </animation>
- 
+
  <animation>
 	<type>material</type>
 	<object-name>alter_throt.1.L</object-name>
@@ -176,7 +176,7 @@ maggse
 	<object-name>ADC</object-name>
 	<object-name>ADC-SEL</object-name>
     <object-name>EMTR</object-name>
-	<object-name>FDC</object-name>	
+	<object-name>FDC</object-name>
 	<object-name>FDC-ADC</object-name>
 	<object-name>FLT-CONTR-TRIM</object-name>
     <object-name>FLT-INST-TEST</object-name>
@@ -189,7 +189,7 @@ maggse
 	<object-name>Stby-Pitch</object-name>
     <object-name>StbyPitchLabel</object-name>
 	<object-name>TFR/TRR</object-name>
-	<object-name>Tacan</object-name>
+	<object-name>TACAN</object-name>
 	<object-name>UHF.1</object-name>
     <object-name>UHF.2</object-name>
 	<object-name>VSI</object-name>

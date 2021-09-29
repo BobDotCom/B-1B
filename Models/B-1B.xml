@@ -60,9 +60,19 @@ more to come :-)
 	  <x-m>25.0</x-m><!-- was 25 -->
 	  <y-m>0.0</y-m>
           <z-m>0.0</z-m><!-- was 0.24 -->
-    <pitch-deg>0</pitch-deg>
-    
+    <pitch-deg>0</pitch-deg>    
   </offsets>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Models/Liveries", 10);
+    </load>
+
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
   <multiplay>
       <refuel>
         <offset-x-m type="double">4.0</offset-x-m>

@@ -9,7 +9,7 @@ sweat by maggse
  
 <!-- pilot and seat by NC-687 -->
  
- <model>
+ <!-- model>
 	 <name>captain</name>
 	 <path>Aircraft/B-1B/Models/Pilot.xml</path>
 	 
@@ -19,7 +19,7 @@ sweat by maggse
 		 <z-m>0.70</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
- </model>
+ </model -->
  
  <model>
 	 <name>captain_seat</name>
@@ -33,7 +33,7 @@ sweat by maggse
 	 </offsets>
  </model>
  
- <model>
+ <!-- model>
 	 <name>pilot</name>
 	 <path>Aircraft/B-1B/Models/Pilot.xml</path>
 	 <condition>
@@ -50,7 +50,7 @@ sweat by maggse
 		 <z-m>0.70</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
- </model>
+ </model -->
  
  <model>
 	 <name>pilot_seat</name>
@@ -64,7 +64,7 @@ sweat by maggse
 	 </offsets>
  </model>
  
- <model>
+ <!-- model>
 	 <name>OSO</name>
 	 <path>Aircraft/B-1B/Models/Pilot.xml</path>
 	 <offsets>
@@ -73,7 +73,7 @@ sweat by maggse
 		 <z-m>0.85</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
- </model>
+ </model -->
  
  <model>
 	 <name>OSO_seat</name>
@@ -87,7 +87,7 @@ sweat by maggse
 	 </offsets>
  </model>
  
- <model>
+ <!-- model>
 	 <name>DSO</name>
 	 <path>Aircraft/B-1B/Models/Pilot.xml</path>
 	 <offsets>
@@ -96,7 +96,7 @@ sweat by maggse
 		 <z-m>0.85</z-m>
 		 <pitch-deg>0</pitch-deg>
 	 </offsets>
- </model>
+ </model -->
  
  <model>
 	 <name>DSO_seat</name>

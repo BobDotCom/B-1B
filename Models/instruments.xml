@@ -38,7 +38,7 @@ more to come :-)
 		  <roll-deg>22</roll-deg>
 	  </offsets>
   </model>
-  
+
  <model>
 	  <name>copilot clock</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
@@ -468,11 +468,11 @@ more to come :-)
 	  <name>throttle2</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/throttle_left.xml</path>
 	  <offsets>
-		  <x-m>-17.542</x-m>
-		  <y-m>-0.798</y-m>
+		  <x-m>-17.535</x-m>
+		  <y-m>-0.810</y-m>
 		  <z-m>0.812</z-m>
 		  <pitch-deg>-89</pitch-deg>
-		  <heading-deg>-1</heading-deg>
+		  <heading-deg>-3</heading-deg>
 	  </offsets>
   </model>
 
@@ -480,31 +480,32 @@ more to come :-)
 	  <name>B-1BFS</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/B-1BFS.xml</path>
 	  <offsets>
-		  <x-m>0.400</x-m>
+		  <x-m>0.465</x-m>
 		  <y-m>-0.160</y-m>
-		  <z-m>0.410</z-m>
+		  <z-m>0.465</z-m>
 	  </offsets>
   </model>
-
+B-1BFS
   <model>
 	  <name>CP-FS</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/B-1BFS.xml</path>
 	  <offsets>
-		  <x-m>0.400</x-m>
-		  <y-m>0.885</y-m>
-		  <z-m>0.400</z-m>
+		  <x-m>0.465</x-m>
+		  <y-m>0.900</y-m>
+		  <z-m>0.465</z-m>
 	  </offsets>
   </model>
 
-  <model>
+ <model>
 	  <name>alter throt left</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/alter_throt_l.xml</path>
 	  <offsets>
-		  <x-m>-17.582</x-m>
-		  <y-m>-1.266</y-m>
-		  <z-m>0.885</z-m>
-		  <pitch-deg>-90</pitch-deg>
-		  <heading-deg>-2</heading-deg>
+		  <x-m>-17.588</x-m>
+		  <y-m>-1.262</y-m>
+		  <z-m>0.910</z-m>
+		  <pitch-deg>-89</pitch-deg>
+		  <roll-deg>-5</roll-deg>
+          <heading-deg>-4</heading-deg>
 	  </offsets>
   </model>
 

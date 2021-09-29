@@ -40,9 +40,9 @@
   <property>controls/flight/aileron</property>         <!--property alias="/params/aileron"/-->
   <factor>-10</factor>
   <center>
-   <x-m>-18.46689</x-m>
-   <y-m>-0.51773</y-m>
-   <z-m>-0.05691</z-m>
+   <x-m>-18.47</x-m>
+   <y-m>-0.5184</y-m>
+   <z-m> 0.1275</z-m>
   </center>
   <axis>
    <x>1.0</x>
@@ -62,9 +62,9 @@
   <factor>-10</factor>
   <!-- offset-deg>-10.0</offset-deg -->
   <center>
-   <x-m>-18.46689</x-m>
-   <y-m>-0.51773</y-m>
-   <z-m>-0.05691</z-m>
+   <x-m>-18.47</x-m>
+   <y-m>-0.5184</y-m>
+   <z-m> 0.1275</z-m>
   </center>
   <axis>
    <y>1.0</y>

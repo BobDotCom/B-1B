@@ -288,13 +288,13 @@ B-1B set file.
                   </binding>
                 </item>
 
-		<!--<item>
-		  <label>Failures</label>
-		  <binding>
-			<command>nasal</command>
-			<script>b1b.engine_failures.open()</script>
-		  </binding>
-		</item>-->
+          <item n="11">
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+            </binding>
+          </item>
             </menu>
         </default>
     </menubar>
