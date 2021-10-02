@@ -10,7 +10,7 @@ sweat by maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>switch_sweep.002</object-name>
+	<object-name>sweep_lever</object-name>
 	<property>controls/flight/wing-sweep</property>
 	<interpolation>
 		<entry>
@@ -47,7 +47,7 @@ sweat by maggse
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>switch_sweep.002</object-name>
+	<object-name>sweep_lever</object-name>
 	 <emission>
 		 <red>0.3</red>
 		 <green>0.0</green>
@@ -60,7 +60,7 @@ sweat by maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>switch_sweep.002</object-name>
+	<object-name>sweep_lever</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>

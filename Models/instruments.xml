@@ -6,12 +6,12 @@ more to come :-)
 
 <PropertyList>
 
-	<path>Instruments-3d/sweep_scale.xml</path>
+	<path>Instruments-3d/sweep_scale.ac</path>
 
   <offsets>
-	  <x-m>-0.420</x-m>
-	  <y-m> 0.150</y-m>
-      <z-m>-0.297</z-m>
+	  <x-m>-0.42</x-m>
+	  <y-m>0.15</y-m>
+          <z-m>-0.297</z-m>
     <pitch-deg>0</pitch-deg>
 
   </offsets>
@@ -28,6 +28,17 @@ more to come :-)
  </animation>
 
   <!--   cockpit -->
+  <!-- model>
+	  <name>AirPath</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/Compass.xml</path>
+	  <offsets>
+		  <x-m>-18.105</x-m>
+		  <y-m>-0.140</y-m>
+		  <z-m> 1.750</z-m>
+		  <pitch-deg>95</pitch-deg>
+	  </offsets>
+  </model -->
+
     <model>
 	  <name>copilot apmode</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/apmode.xml</path>
