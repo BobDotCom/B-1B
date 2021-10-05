@@ -8,7 +8,7 @@ maggse
 
  <animation>
 	 <type>rotate</type>
-	 <object-name>rep_eng1.014</object-name>
+	 <object-name>nuc_sw_cover</object-name>
 	 <property>controls/switches/nucover</property>
 	 <interpolation>
 		 <entry>
@@ -26,14 +26,14 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.00718</x-m>
-		 <y-m>0.16431</y-m>
-		 <z-m>0.06261</z-m>
+		 <x-m>0.007187</x-m>
+		 <y-m>0.1644</y-m>
+		 <z-m>0.0669</z-m>
 	 </center>
  </animation>
  <animation>
 	 <type>material</type>
-	 <object-name>rep_eng1.014</object-name>
+	 <object-name>nuc_sw_cover</object-name>
 	 <emission>
 		 <red>0.3</red>
 		 <green>0.0</green>
@@ -41,12 +41,12 @@ maggse
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
- 
+
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
+
  <animation>
 	 <type>pick</type>
-	 <object-name>rep_eng1.014</object-name>
+	 <object-name>nuc_sw_cover</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
@@ -219,7 +219,7 @@ maggse
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>nuc_pt.002</object-name>
@@ -232,7 +232,7 @@ maggse
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>nuc_pt.004</object-name>
@@ -245,7 +245,7 @@ maggse
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>nuc_pt.005</object-name>
@@ -307,7 +307,7 @@ maggse
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	<type>material</type>
 	<object-name>nuc_pt</object-name>

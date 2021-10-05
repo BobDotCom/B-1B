@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>co_pilot_ap.ac</path>
+
+ <!-- apmode button animations -->
+
+<!-- osg text animation-->
+
+<text>
+  <name>alt_txt</name>
+  <offsets>
+    <x-m>-0.0268</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.1431</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>alt_hold_txt</name>
+  <offsets>
+    <x-m>-0.0268</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.1424</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>vfpm_txt</name>
+  <offsets>
+    <x-m>-0.0268</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.1256</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>vfpm_hold_txt</name>
+  <offsets>
+    <x-m>-0.0268</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.1249</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>ptch_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.1084</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>ptch_hold_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.1084</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>terr_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.09091</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+</text>
+<text>
+  <name>flw_hold_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.09084</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+</text>
+
+<text>
+  <name>bhdg_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.07345</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>bhdg_hold_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.07338</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>thdg_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.05617</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>thdg_hold_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.05610</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>spd_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.02144</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+  <font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>spd_hold_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.02137</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+<font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<text>
+  <name>spd_ptch_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.003704</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+<font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+<text>
+  <name>spd_ptch_hold_txt</name>
+  <offsets>
+    <x-m>-0.02682</x-m>
+    <y-m>-0.3746</y-m>
+    <z-m> 0.003697</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <alignment>center-center</alignment>
+<font>lucida.txf</font>
+  <character-size type="double">0.006</character-size>
+  <character-aspect-ratio type="double">1.1</character-aspect-ratio>
+</text>
+
+<animation>
+	 <type>material</type>
+	 <object-name>alt_txt</object-name>
+	 <object-name>alt_hold_txt</object-name>
+	 <object-name>vfpm_txt</object-name>
+	 <object-name>vfpm_hold_txt</object-name>
+	 <object-name>ptch_txt</object-name>
+	 <object-name>ptch_hold_txt</object-name>
+	 <object-name>terr_txt</object-name>
+	 <object-name>flw_hold_txt</object-name>
+	 <object-name>bhdg_txt</object-name>
+	 <object-name>bhdg_hold_txt</object-name>
+	 <object-name>thdg_txt</object-name>
+	 <object-name>thdg_hold_txt</object-name>
+	 <object-name>spd_txt</object-name>
+	 <object-name>spd_hold_txt</object-name>
+	 <object-name>spd_ptch_txt</object-name>
+	 <object-name>spd_ptch_hold_txt</object-name>
+	 <emission>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	 <type>material</type>
+	 <object-name>apmode_alt</object-name>
+	 <object-name>apmode_button</object-name>
+
+	 <emission>
+		 <red>0.8</red>
+		 <green>1.0</green>
+		 <blue>0.7</blue>
+		 <!--<factor-prop>controls/lighting/instruments-norm</factor-prop>-->
+		 <factor-prop>controls/switches/apmode/alt-hold</factor-prop>
+	 </emission>
+</animation>
+
+ <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_alt</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/alt-hold</property>
+		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
+	      </action>
+      </animation>
+
+      <animation>
+	      <type>material</type>
+	      <object-name>apmode_vfpm</object-name>
+	      <object-name>apmode_btn_vfpm</object-name>
+	      <emission>
+		      <red>0.8</red>
+		      <green>1.0</green>
+		      <blue>0.7</blue>
+		      <factor-prop>controls/switches/apmode/vfpm-hold</factor-prop>
+	      </emission>
+</animation>
+
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_vfpm</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/vfpm-hold</property>
+		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
+	      </action>
+      </animation>
+
+      <animation>
+	      <type>material</type>
+	      <object-name>apmode_ptch</object-name>
+	      <object-name>apmode_button.002</object-name>
+	      <emission>
+		      <red>0.8</red>
+		      <green>1.0</green>
+		      <blue>0.7</blue>
+		      <factor-prop>controls/switches/apmode/ptch-hold</factor-prop>
+	      </emission>
+</animation>
+
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_ptch</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/ptch-hold</property>
+		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
+	      </action>
+      </animation>
+
+      <animation>
+	      <type>material</type>
+	      <object-name>apmode_bhdg</object-name>
+	      <object-name>apmode_button.004</object-name>
+	      <emission>
+		      <red>0.8</red>
+		      <green>1.0</green>
+		      <blue>0.7</blue>
+		      <factor-prop>controls/switches/apmode/bhdg-hold</factor-prop>
+	      </emission>
+</animation>
+
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_bhdg</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/bhdg-hold</property>
+		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
+	      </action>
+      </animation>
+
+      <animation>
+	      <type>material</type>
+	      <object-name>apmode_thdg</object-name>
+	      <object-name>apmode_button.005</object-name>
+	      <emission>
+		      <red>0.8</red>
+		      <green>1.0</green>
+		      <blue>0.7</blue>
+		      <factor-prop>controls/switches/apmode/thdg-hold</factor-prop>
+	      </emission>
+</animation>
+
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_thdg</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/thdg-hold</property>
+		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
+	      </action>
+      </animation>
+
+      <animation>
+	      <type>material</type>
+	      <object-name>apmode_spd</object-name>
+	      <object-name>apmode_button.007</object-name>
+	      <emission>
+		      <red>0.8</red>
+		      <green>1.0</green>
+		      <blue>0.7</blue>
+		      <factor-prop>controls/switches/apmode/spd-hold</factor-prop>
+	      </emission>
+</animation>
+
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_spd</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/spd-hold</property>
+		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
+	      </action>
+      </animation>
+
+      <animation>
+	      <type>material</type>
+	      <object-name>apmode_spdptch</object-name>
+	      <object-name>apmode_button.008</object-name>
+	      <emission>
+		      <red>0.8</red>
+		      <green>1.0</green>
+		      <blue>0.7</blue>
+		      <factor-prop>controls/switches/apmode/spdptch-hold</factor-prop>
+	      </emission>
+</animation>
+
+      <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_spdptch</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/apmode/spdptch-hold</property>
+		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
+	      </action>
+      </animation>
+
+      <animation>
+	      <type>material</type>
+	      <object-name>apmode_terrflw</object-name>
+	      <emission>
+		      <red>0.8</red>
+		      <green>1.0</green>
+		      <blue>0.7</blue>
+		      <factor-prop>controls/switches/terrain-follow</factor-prop>
+	      </emission>
+</animation>
+      <animation>
+	      <type>pick</type>
+	      <object-name>apmode_terrflw</object-name>
+	      <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.5</interval-sec>
+		      <binding>
+			      <command>property-toggle</command>
+			      <property>controls/switches/terrain-follow</property>
+		      </binding>
+		      <binding>
+			      <command>nasal</command>
+			      <script>b1b.checkapmode()</script>
+		 </binding>
+	      </action>
+      </animation>
+
+<animation>
+	<type>material</type>
+	<object-name>apmode</object-name>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.1</green>
+		 <blue>0.2</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+
+</PropertyList>

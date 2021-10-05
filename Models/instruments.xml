@@ -41,12 +41,12 @@ more to come :-)
 
     <model>
 	  <name>copilot apmode</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/apmode.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/cp_apmode.xml</path>
 	  <offsets>
-		  <x-m>-18.150</x-m>
+		  <x-m>-18.090</x-m>
 		  <y-m> 1.050</y-m>
-		  <z-m> 1.300</z-m>
-		  <roll-deg>22</roll-deg>
+		  <z-m> 1.325</z-m>
+		  <roll-deg>23</roll-deg>
 	  </offsets>
   </model>
 
@@ -55,7 +55,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
 	  <offsets>
 		  <x-m>-18.214</x-m>
-		  <y-m> 0.663</y-m>
+		  <y-m> 0.673</y-m>
 		  <z-m> 1.110</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -336,10 +336,11 @@ more to come :-)
 	  <name>apmode</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/apmode.xml</path>
 	  <offsets>
-		  <x-m>-18.155</x-m>
-		  <y-m>-0.635</y-m>
+		  <x-m>-18.045</x-m>
+		  <y-m>-0.638</y-m>
 		  <z-m>1.000</z-m>
-		  <roll-deg>-27</roll-deg>
+		  <roll-deg>-26</roll-deg>
+          <heading-deg>-6</heading-deg>
 	  </offsets>
   </model>
 
@@ -874,9 +875,9 @@ B-1BFS
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.780</x-m>
-		  <y-m>0.278</y-m>
-		  <z-m>1.642</z-m>
+		  <x-m>-15.770</x-m>
+		  <y-m>0.280</y-m>
+		  <z-m>1.640</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
