@@ -1,0 +1,13 @@
+TO get the Jet working and into Flightgear
+
+It MUSt be renamed from B1B-master to B1B.
+
+For example, make a folder somewhere on the computer, in My Docs or Desktop, anywhere suitable,
+
+Name it as you would like,
+
+EG:- B1B, My Planes, Flightgear FG-Gear, doesn't matter,
+
+Extract the ZIP file  or git clone, into that folder which will give you a folder inside called B1B-master, delete the master part so it's called B1B,
+
+go to Addons and add the first Folder with B1B inside it, so add My Planes or Flightgear, or FG-Gear, which ever has the B1B inside and have fun!
