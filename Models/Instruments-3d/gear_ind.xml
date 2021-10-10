@@ -5,9 +5,9 @@ sweat by maggse
 <PropertyList>
 
  <path>gear_ind.ac</path>
- 
+
  <!-- gear switch -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>switch_gear</object-name>
@@ -15,7 +15,7 @@ sweat by maggse
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
+			 <dep>-90.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
@@ -28,9 +28,9 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.00026</x-m>
+		 <x-m> 0.00061</x-m>
 		 <y-m>-0.15600</y-m>
-		 <z-m>0.11447</z-m>
+		 <z-m> 0.10550</z-m>
 	 </center>
  </animation>
  <animation>
@@ -44,9 +44,9 @@ sweat by maggse
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
- 
+
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_gear</object-name>
@@ -66,7 +66,7 @@ sweat by maggse
 		 </binding>
 	 </action>
 </animation>
- 
+
 <!-- gear ind -->
 
  <animation>
@@ -83,13 +83,13 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>gearind_fr</object-name>
 	 <emission>
-		 <red>0.6</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.0</red>
+		 <green>0.8</green>
+		 <blue>0.0</blue>
 		 <factor-prop>gear/gear[0]/position-norm</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>gearind_bl</object-name>
@@ -104,13 +104,13 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>gearind_bl</object-name>
 	 <emission>
-		 <red>0.6</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.0</red>
+		 <green>0.8</green>
+		 <blue>0.0</blue>
 		 <factor-prop>gear/gear[1]/position-norm</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>gearind_br</object-name>
@@ -125,13 +125,11 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>gearind_br</object-name>
 	 <emission>
-		 <red>0.6</red>
-		 <green>0.4</green>
-		 <blue>0.3</blue>
+		 <red>0.0</red>
+		 <green>0.8</green>
+		 <blue>0.0</blue>
 		 <factor-prop>gear/gear[3]/position-norm</factor-prop>
 	 </emission>
 </animation>
-
-
 
 </PropertyList>

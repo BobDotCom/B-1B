@@ -5,9 +5,9 @@ sweat by maggse
 <PropertyList>
 
  <path>fire_ind.ac</path>
- 
+
  <!-- fire test switch -->
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>switch_firetest</object-name>
@@ -18,11 +18,10 @@ sweat by maggse
 			<y> 0 </y>
 			<z> 0 </z>
 		</axis>
-
 	 <center>
-		 <x-m>-0.03011</x-m>
-		 <y-m>-0.29957</y-m>
-		 <z-m>0.07476</z-m>
+		 <x-m>-0.02538</x-m>
+		 <y-m>-0.28511</y-m>
+		 <z-m> 0.07045</z-m>
 	 </center>
  </animation>
  <animation>
@@ -36,9 +35,9 @@ sweat by maggse
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
- 
+
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_firetest</object-name>
@@ -52,7 +51,7 @@ sweat by maggse
 		 </binding>
 	 </action>
 </animation>
- 
+
 
 <!-- fire ind -->
 
@@ -89,7 +88,7 @@ sweat by maggse
 		 </binding>
 	 </action>
 </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>rep_fire1</object-name>
@@ -100,7 +99,7 @@ sweat by maggse
 		 <factor-prop>controls/engines/engine[0]/on-fire</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_fire2</object-name>
@@ -117,7 +116,7 @@ sweat by maggse
 	         </or>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>rep_fire2</object-name>
@@ -135,7 +134,7 @@ sweat by maggse
 		 </binding>
 	 </action>
 </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>rep_fire2</object-name>
@@ -146,7 +145,7 @@ sweat by maggse
 		 <factor-prop>controls/engines/engine[1]/on-fire</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_fire3</object-name>
@@ -163,7 +162,7 @@ sweat by maggse
 	         </or>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>rep_fire3</object-name>
@@ -181,7 +180,7 @@ sweat by maggse
 		 </binding>
 	 </action>
 </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>rep_fire3</object-name>
@@ -192,7 +191,7 @@ sweat by maggse
 		 <factor-prop>controls/engines/engine[2]/on-fire</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_fire4</object-name>
@@ -209,7 +208,7 @@ sweat by maggse
 	         </or>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>rep_fire4</object-name>
@@ -227,7 +226,7 @@ sweat by maggse
 		 </binding>
 	 </action>
 </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>rep_fire4</object-name>
@@ -238,7 +237,7 @@ sweat by maggse
 		 <factor-prop>controls/engines/engine[3]/on-fire</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_fire5</object-name>
@@ -260,7 +259,7 @@ sweat by maggse
 	 </emission>
 </animation>
 
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_fire6</object-name>
@@ -298,7 +297,7 @@ sweat by maggse
 	         </or>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>rep_firelapu</object-name>
@@ -316,7 +315,7 @@ sweat by maggse
 		 </binding>
 	 </action>
 </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>rep_firelapu</object-name>
@@ -327,7 +326,7 @@ sweat by maggse
 		 <factor-prop>controls/APU/APUL-fire</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_firerapu</object-name>
@@ -337,7 +336,7 @@ sweat by maggse
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
-		 
+
 		 <equals>
 			 <property>controls/APU/APUR-fire</property>
 			 <value type="double">1.0</value>
@@ -345,7 +344,7 @@ sweat by maggse
 	         </or>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>rep_firerapu</object-name>
@@ -363,7 +362,7 @@ sweat by maggse
 		 </binding>
 	 </action>
 </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>rep_firerapu</object-name>
@@ -374,24 +373,5 @@ sweat by maggse
 		 <factor-prop>controls/APU/APUR-fire</factor-prop>
 	 </emission>
 </animation>
-
-<!--<animation>
-	<type>material</type>
-	<object-name>rep_fire1</object-name>
-	<object-name>rep_fire2</object-name>
-	<object-name>rep_fire3</object-name>
-	<object-name>rep_fire4</object-name>
-	<object-name>rep_fire5</object-name>
-	<object-name>rep_fire6</object-name>
-	<object-name>rep_firelapu</object-name>
-	<object-name>rep_firerapu</object-name>
-	<object-name>fire.001</object-name>
-	<emission>
-		<red>0.5</red>
-		<green>0.3</green>
-		<blue>0.2</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>-->
 
 </PropertyList>

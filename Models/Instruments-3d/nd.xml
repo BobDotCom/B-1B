@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 Syd Adams, Josh Wilson
-787 ND 
+787 ND
 hacked by maggse
 -->
 
@@ -32,7 +32,7 @@ hacked by maggse
      <z>-1</z>
    </axis>
  </animation>
- 
+
 
 <animation>
    <type>rotate</type>
@@ -71,7 +71,7 @@ hacked by maggse
      <z-m>-0.040</z-m>
    </center>
  </animation>
- 
+
  <animation>
    <type>textranslate</type>
    <object-name>hdg_bug</object-name>
@@ -110,7 +110,7 @@ hacked by maggse
      <z>0</z>
    </axis>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>hdg_knob</object-name>
@@ -173,11 +173,11 @@ hacked by maggse
    </axis>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>slip</object-name>
-	<property>orientation/side-slip-deg[0]</property>
-	<axis> 
+	<property>orientation/side-slip-rad</property>
+	<axis>
 	<x>-1</x> <!-- inverted after a change in side-slip sign (bug #901) -->
 	<y>0</y>
 	<z>0</z>
@@ -188,9 +188,9 @@ hacked by maggse
      <z-m>-0.047</z-m>
    </center>
 </animation>
- 
+
  <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrradar range adjustments -->
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>btn_rrng20</object-name>
@@ -203,7 +203,7 @@ hacked by maggse
 
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>btn_rrng40</object-name>
@@ -216,7 +216,7 @@ hacked by maggse
 		 </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>btn_rrng80</object-name>
@@ -229,7 +229,7 @@ hacked by maggse
 		 </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>btn_rrng160</object-name>
@@ -242,7 +242,7 @@ hacked by maggse
 		 </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>btn_rrng320</object-name>
@@ -255,7 +255,7 @@ hacked by maggse
 		 </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>btn_rrngu</object-name>
@@ -276,7 +276,7 @@ hacked by maggse
 		 </binding>
 	 </action>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>btn_rrngd</object-name>
@@ -298,7 +298,7 @@ hacked by maggse
 	 </action>
  </animation>
 
- 
+
  <!-- wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwaypoints -->
 
 <animation>
@@ -322,11 +322,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1a</object-name>
 	<property>autopilot/settings/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -338,11 +338,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -354,12 +354,12 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>waypoint1a</object-name>
 	<property>autopilot/route-manager/wp/dist[0]</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
@@ -387,11 +387,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1b</object-name>
 	<property>autopilot/settings/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -403,11 +403,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1b</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -419,12 +419,12 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>waypoint1b</object-name>
 	<property>autopilot/route-manager/wp/dist[0]</property>
 <factor>0.0040</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
@@ -452,11 +452,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1c</object-name>
 	<property>autopilot/settings/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -468,11 +468,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1c</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -484,12 +484,12 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>waypoint1c</object-name>
 	<property>autopilot/route-manager/wp/dist[0]</property>
 <factor>0.0020</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
@@ -517,11 +517,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1d</object-name>
 	<property>autopilot/settings/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -533,11 +533,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1d</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -549,12 +549,12 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>waypoint1d</object-name>
 	<property>autopilot/route-manager/wp/dist[0]</property>
 <factor>0.0010</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
@@ -582,11 +582,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1e</object-name>
 	<property>autopilot/settings/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -598,11 +598,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1e</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -614,12 +614,12 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>waypoint1e</object-name>
 	<property>autopilot/route-manager/wp/dist[0]</property>
 <factor>0.0005</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
@@ -647,11 +647,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1f</object-name>
 	<property>autopilot/settings/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -663,11 +663,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1f</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -679,12 +679,12 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>waypoint1f</object-name>
 	<property>autopilot/route-manager/wp/dist[0]</property>
 <factor>0.00025</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
@@ -712,11 +712,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1g</object-name>
 	<property>autopilot/settings/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -728,11 +728,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>waypoint1g</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -744,12 +744,12 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>waypoint1g</object-name>
 	<property>autopilot/route-manager/wp/dist[0]</property>
 <factor>0.00018125</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
@@ -779,11 +779,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1a</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -795,11 +795,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -811,23 +811,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav1a</object-name>
 	<property>instrumentation/nav/nav-distance[0]</property>
 <factor>0.0000043</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1a</object-name>
 	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -839,11 +839,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1a</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -877,11 +877,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2a</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -893,11 +893,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -909,23 +909,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav2a</object-name>
 	<property>instrumentation/nav[1]/nav-distance[0]</property>
 <factor>0.0000043</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2a</object-name>
 	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -937,11 +937,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2a</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -974,11 +974,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1b</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -990,11 +990,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1b</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1006,23 +1006,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav1b</object-name>
 	<property>instrumentation/nav/nav-distance[0]</property>
 <factor>0.00000215</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1b</object-name>
 	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1034,11 +1034,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1b</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1071,11 +1071,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2b</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1087,11 +1087,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2b</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1103,23 +1103,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav2b</object-name>
 	<property>instrumentation/nav[1]/nav-distance[0]</property>
 <factor>0.00000215</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2b</object-name>
 	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1131,11 +1131,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2b</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1168,11 +1168,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1c</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1184,11 +1184,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1c</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1200,23 +1200,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav1c</object-name>
 	<property>instrumentation/nav/nav-distance[0]</property>
 <factor>0.000001075</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1c</object-name>
 	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1228,11 +1228,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1c</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1265,11 +1265,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2c</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1281,11 +1281,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2c</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1297,23 +1297,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav2c</object-name>
 	<property>instrumentation/nav[1]/nav-distance[0]</property>
 <factor>0.000001075</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2c</object-name>
 	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1325,11 +1325,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2c</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1363,11 +1363,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1d</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1379,11 +1379,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1d</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1395,23 +1395,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav1d</object-name>
 	<property>instrumentation/nav/nav-distance[0]</property>
 <factor>0.0000005375</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1d</object-name>
 	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1423,11 +1423,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1d</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1461,11 +1461,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2d</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1477,11 +1477,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2d</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1493,23 +1493,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav2d</object-name>
 	<property>instrumentation/nav[1]/nav-distance[0]</property>
 <factor>0.0000005375</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2d</object-name>
 	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1521,11 +1521,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2d</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1559,11 +1559,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1e</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1575,11 +1575,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1e</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1591,23 +1591,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav1e</object-name>
 	<property>instrumentation/nav/nav-distance[0]</property>
 <factor>0.000000268</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1e</object-name>
 	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1619,11 +1619,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1e</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1657,11 +1657,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2e</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1673,11 +1673,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2e</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1689,23 +1689,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav2e</object-name>
 	<property>instrumentation/nav[1]/nav-distance[0]</property>
 <factor>0.000000268</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2e</object-name>
 	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1717,11 +1717,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2e</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1755,11 +1755,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1f</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1771,11 +1771,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1f</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1787,23 +1787,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav1f</object-name>
 	<property>instrumentation/nav/nav-distance[0]</property>
 <factor>0.000000134</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1f</object-name>
 	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1815,11 +1815,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1f</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1853,11 +1853,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2f</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1869,11 +1869,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2f</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1885,23 +1885,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav2f</object-name>
 	<property>instrumentation/nav[1]/nav-distance[0]</property>
 <factor>0.000000134</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2f</object-name>
 	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1913,11 +1913,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2f</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1950,11 +1950,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1g</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1966,11 +1966,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1g</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -1982,23 +1982,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav1g</object-name>
 	<property>instrumentation/nav/nav-distance[0]</property>
 <factor>0.000000098</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1g</object-name>
 	<property>instrumentation/nav/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2010,11 +2010,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav1g</object-name>
 	<property>instrumentation/nav/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2047,11 +2047,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2g</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2063,11 +2063,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2g</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2079,23 +2079,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>nav2g</object-name>
 	<property>instrumentation/nav[1]/nav-distance[0]</property>
 <factor>0.000000098</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2g</object-name>
 	<property>instrumentation/nav[1]/radials/target-radial-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2107,11 +2107,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>nav2g</object-name>
 	<property>instrumentation/nav[1]/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2136,11 +2136,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>adf</object-name>
 	<property>instrumentation/adf/indicated-bearing-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2181,11 +2181,11 @@ hacked by maggse
 	</axis>
   </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacan</object-name>
 	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2266,12 +2266,12 @@ hacked by maggse
 		 </and>
 	 </condition>
 </animation>
- 
-<animation> 
+
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1a</object-name>
 	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2283,11 +2283,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2299,12 +2299,12 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>tacanpoint1a</object-name>
 	<property>instrumentation/tacan/indicated-distance-nm</property>
 	<factor>0.0080</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
@@ -2328,11 +2328,11 @@ hacked by maggse
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1b</object-name>
 	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2344,11 +2344,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1b</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2360,12 +2360,12 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>tacanpoint1b</object-name>
 	<property>instrumentation/tacan/indicated-distance-nm</property>
 	<factor>0.0040</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
@@ -2389,11 +2389,11 @@ hacked by maggse
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1c</object-name>
 	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2405,11 +2405,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1c</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2421,12 +2421,12 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>tacanpoint1c</object-name>
 	<property>instrumentation/tacan/indicated-distance-nm</property>
 	<factor>0.0020</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
@@ -2450,11 +2450,11 @@ hacked by maggse
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1d</object-name>
 	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2466,11 +2466,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1d</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2482,12 +2482,12 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>tacanpoint1d</object-name>
 	<property>instrumentation/tacan/indicated-distance-nm</property>
 	<factor>0.0010</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
@@ -2511,11 +2511,11 @@ hacked by maggse
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1e</object-name>
 	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2527,11 +2527,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1e</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2543,12 +2543,12 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>tacanpoint1e</object-name>
 	<property>instrumentation/tacan/indicated-distance-nm</property>
 	<factor>0.0005</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
@@ -2572,11 +2572,11 @@ hacked by maggse
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1f</object-name>
 	<property>instrumentation/tacan/indicated-bearing-true-deg</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2588,11 +2588,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>tacanpoint1f</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -2604,12 +2604,12 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>tacanpoint1f</object-name>
 	<property>instrumentation/tacan/indicated-distance-nm</property>
 	<factor>0.00025</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
@@ -2629,11 +2629,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>adf2</object-name>
 	<property>instrumentation/adf/rotation-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2645,11 +2645,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>adf2</object-name>
 	<property>orientation/heading-magnetic-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2680,7 +2680,7 @@ hacked by maggse
   <type>rotate</type>
   <object-name>MP1a</object-name>
   <property>instrumentation/radar/targets/target[0]/bearing-deg</property>
-    <axis> 
+    <axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2692,11 +2692,11 @@ hacked by maggse
     </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP1a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2708,23 +2708,23 @@ hacked by maggse
    </center>
 </animation>
 
-<animation> 
+<animation>
   <type>translate</type>
   <object-name>MP1a</object-name>
   <property>instrumentation/radar/targets/target[0]/draw-range-nm</property>
   <factor>1</factor>
-  <axis> 
+  <axis>
     <x>0</x>
     <y>0</y>
     <z>1</z>
   </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP1a</object-name>
 	<property>instrumentation/radar/targets/target[0]/true-heading-deg</property>
-	<axis> 
+	<axis>
 	  <x>-1</x>
 	  <y>0</y>
 	  <z>0</z>
@@ -2736,11 +2736,11 @@ hacked by maggse
         </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP1a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2765,11 +2765,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP2a</object-name>
 	<property>instrumentation/radar/targets/target[1]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2781,11 +2781,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP2a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2797,23 +2797,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>MP2a</object-name>
 	<property>instrumentation/radar/targets/target[1]/draw-range-nm[0]</property>
 <factor>1</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP2a</object-name>
 	<property>instrumentation/radar/targets/target[1]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2825,11 +2825,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP2a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2854,11 +2854,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP3a</object-name>
 	<property>instrumentation/radar/targets/target[2]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2870,11 +2870,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP3a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2886,23 +2886,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>MP3a</object-name>
 	<property>instrumentation/radar/targets/target[2]/draw-range-nm[0]</property>
 <factor>1</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP3a</object-name>
 	<property>instrumentation/radar/targets/target[2]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2914,11 +2914,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP3a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2943,11 +2943,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP4a</object-name>
 	<property>instrumentation/radar/targets/target[3]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2959,11 +2959,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP4a</object-name>
 	<property>orientation/heading-deg[3]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -2975,23 +2975,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>MP4a</object-name>
 	<property>instrumentation/radar/targets/target[3]/draw-range-nm[0]</property>
 <factor>1</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP4a</object-name>
 	<property>instrumentation/radar/targets/target[3]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3003,11 +3003,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP4a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3030,11 +3030,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP5a</object-name>
 	<property>instrumentation/radar/targets/target[4]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3046,11 +3046,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP5a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3062,23 +3062,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>MP5a</object-name>
 	<property>instrumentation/radar/targets/target[4]/draw-range-nm[0]</property>
 <factor>1</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP5a</object-name>
 	<property>instrumentation/radar/targets/target[4]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3090,11 +3090,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP5a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3117,11 +3117,11 @@ hacked by maggse
 </condition>
  </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP6a</object-name>
 	<property>instrumentation/radar/targets/target[5]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3133,11 +3133,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP6a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3149,23 +3149,23 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>MP6a</object-name>
 	<property>instrumentation/radar/targets/target[5]/draw-range-nm[0]</property>
 <factor>1</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP6a</object-name>
 	<property>instrumentation/radar/targets/target[5]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>-1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3177,11 +3177,11 @@ hacked by maggse
    </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>rotate</type>
 	<object-name>MP6a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 	<x>1</x>
 	<y>0</y>
 	<z>0</z>
@@ -3196,19 +3196,19 @@ hacked by maggse
 <animation>
 	<type>select</type>
 	<object-name>MP7a</object-name>
-	<condition>				
+	<condition>
 		<equals>
 			<property>instrumentation/radar/targets/target[6]/in-range</property>
 			<value>true</value>
-		</equals>		
+		</equals>
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP7a</object-name>
 	<property>instrumentation/radar/targets/target[6]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3220,11 +3220,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP7a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3236,23 +3236,23 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>MP7a</object-name>
 	<property>instrumentation/radar/targets/target[6]/draw-range-nm[0]</property>
 	<factor>1</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
 	</axis>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP7a</object-name>
 	<property>instrumentation/radar/targets/target[6]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3264,11 +3264,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP7a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3283,19 +3283,19 @@ hacked by maggse
 <animation>
 	<type>select</type>
 	<object-name>MP8a</object-name>
-	<condition>				
+	<condition>
 		<equals>
 			<property>instrumentation/radar/targets/target[7]/in-range</property>
 			<value>true</value>
-		</equals>		
+		</equals>
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP8a</object-name>
 	<property>instrumentation/radar/targets/target[7]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3307,11 +3307,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP8a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3323,23 +3323,23 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>MP8a</object-name>
 	<property>instrumentation/radar/targets/target[7]/draw-range-nm[0]</property>
 	<factor>1</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
 	</axis>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP8a</object-name>
 	<property>instrumentation/radar/targets/target[7]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3351,11 +3351,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP8a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3370,19 +3370,19 @@ hacked by maggse
 <animation>
 	<type>select</type>
 	<object-name>MP9a</object-name>
-	<condition>				
+	<condition>
 		<equals>
 			<property>instrumentation/radar/targets/target[8]/in-range</property>
 			<value>true</value>
-		</equals>		
+		</equals>
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP9a</object-name>
 	<property>instrumentation/radar/targets/target[8]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3394,11 +3394,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP9a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3410,23 +3410,23 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>MP9a</object-name>
 	<property>instrumentation/radar/targets/target[8]/draw-range-nm[0]</property>
 	<factor>1</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
 	</axis>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP9a</object-name>
 	<property>instrumentation/radar/targets/target[8]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3438,11 +3438,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP9a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3457,19 +3457,19 @@ hacked by maggse
 <animation>
 	<type>select</type>
 	<object-name>MP10a</object-name>
-	<condition>		
+	<condition>
 		<equals>
 			<property>instrumentation/radar/targets/target[9]/in-range</property>
 			<value>true</value>
-		</equals>		
+		</equals>
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP10a</object-name>
 	<property>instrumentation/radar/targets/target[9]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3481,11 +3481,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP10a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3497,23 +3497,23 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>MP10a</object-name>
 	<property>instrumentation/radar/targets/target[9]/draw-range-nm[0]</property>
 	<factor>1</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
 	</axis>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP10a</object-name>
 	<property>instrumentation/radar/targets/target[9]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3525,11 +3525,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP10a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3544,19 +3544,19 @@ hacked by maggse
 <animation>
 	<type>select</type>
 	<object-name>MP11a</object-name>
-	<condition>		
+	<condition>
 		<equals>
 			<property>instrumentation/radar/targets/target[10]/in-range</property>
 			<value>true</value>
-		</equals>		
+		</equals>
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP11a</object-name>
 	<property>instrumentation/radar/targets/target[10]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3568,11 +3568,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP11a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3584,23 +3584,23 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>MP11a</object-name>
 	<property>instrumentation/radar/targets/target[10]/draw-range-nm[0]</property>
 	<factor>1</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
 	</axis>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP11a</object-name>
 	<property>instrumentation/radar/targets/target[10]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3612,11 +3612,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP11a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3635,15 +3635,15 @@ hacked by maggse
 		<equals>
 			<property>instrumentation/radar/targets/target[11]/in-range</property>
 			<value>true</value>
-		</equals>		
+		</equals>
 	</condition>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP12a</object-name>
 	<property>instrumentation/radar/targets/target[11]/bearing-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3655,11 +3655,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP12a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3671,23 +3671,23 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>MP12a</object-name>
 	<property>instrumentation/radar/targets/target[11]/draw-range-nm[0]</property>
 	<factor>1</factor>
-	<axis> 
+	<axis>
 		<x>0</x>
 		<y>0</y>
 		<z>1</z>
 	</axis>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP12a</object-name>
 	<property>instrumentation/radar/targets/target[11]/true-heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
@@ -3699,11 +3699,11 @@ hacked by maggse
 	</center>
 </animation>
 
-<animation> 
+<animation>
 	<type>rotate</type>
 	<object-name>MP12a</object-name>
 	<property>orientation/heading-deg[0]</property>
-	<axis> 
+	<axis>
 		<x>1</x>
 		<y>0</y>
 		<z>0</z>

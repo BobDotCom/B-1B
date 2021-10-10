@@ -5,7 +5,7 @@ sweat by maggse
 <PropertyList>
 
  <path>terflw_ind.ac</path>
- 
+
 
  <!-- terrain follow switch on/off -->
 
@@ -29,14 +29,14 @@ sweat by maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.00455</x-m>
-		 <y-m>-0.43570</y-m>
-		 <z-m>-0.01785</z-m>
+		 <x-m>-18.46675</x-m>
+		 <y-m>-0.01946</y-m>
+		 <z-m>-0.14178</z-m>
    </center>
  </animation>
- 
+
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_terflw</object-name>
@@ -77,9 +77,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00377</x-m>
-		<y-m>-0.38106</y-m>
-		<z-m>-0.01799</z-m>
+		<x-m>-18.46581</x-m>
+		<y-m> 0.05850</y-m>
+		<z-m>-0.14174</z-m>
 	</center>
 </animation>
 
@@ -126,9 +126,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00430</x-m>
-		<y-m>-0.33586</y-m>
-		<z-m>-0.01836</z-m>
+		<x-m>-18.46667</x-m>
+		<y-m> 0.12440</y-m>
+		<z-m>-0.14189</z-m>
 	</center>
 </animation>
 
@@ -174,9 +174,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00508</x-m>
-		<y-m>-0.33511</y-m>
-		<z-m>-0.05911</z-m>
+		<x-m>-18.44931</x-m>
+		<y-m> 0.12314</y-m>
+		<z-m>-0.20553</z-m>
 	</center>
 </animation>
 
@@ -234,9 +234,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00484</x-m>
-		<y-m>-0.29983</y-m>
-		<z-m>-0.03265</z-m>
+		<x-m>-18.46887</x-m>
+		<y-m> 0.17485</y-m>
+		<z-m>-0.16412</z-m>
 	</center>
 </animation>
 
@@ -337,9 +337,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00591</x-m>
-		<y-m>-0.40749</y-m>
-		<z-m>-0.03300</z-m>
+		<x-m>-18.46868</x-m>
+		<y-m> 0.02010</y-m>
+		<z-m>-0.16212</z-m>
 	</center>
 </animation>
 
@@ -408,9 +408,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00508</x-m>
-		<y-m>-0.43464</y-m>
-		<z-m>-0.05798</z-m>
+		<x-m>-18.46616</x-m>
+		<y-m>-0.01999</y-m>
+		<z-m>-0.20181</z-m>
 	</center>
 </animation>
 

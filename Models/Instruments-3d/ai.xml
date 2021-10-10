@@ -154,9 +154,9 @@ if you contacted me before making any changes to this software.
 		  </entry>
 		</interpolation>
 		<center>
-		 <x-m>0.0</x-m>
-		 <y-m>0.032</y-m>
-		 <z-m>0.037</z-m>
+		 <x-m>0.03128</x-m>
+		 <y-m>0.02722</y-m>
+		 <z-m>0.03183</z-m>
 		</center>
 		<axis>
 		 <x>1</x>
@@ -170,9 +170,9 @@ if you contacted me before making any changes to this software.
     <object-name>sphere</object-name>
     <property>orientation/roll-deg</property>
     <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
+      <x-m>0.00059</x-m>
+      <y-m>0.00176</y-m>
+      <z-m>0.00067</z-m>
     </center>
     <axis><x>1</x></axis>
   </animation>
@@ -181,9 +181,9 @@ if you contacted me before making any changes to this software.
     <object-name>sphere</object-name>
     <property>orientation/pitch-deg</property>
     <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
+      <x-m>0.00059</x-m>
+      <y-m>0.00176</y-m>
+      <z-m>0.00067</z-m>
     </center>
     <axis><y>1</y></axis>
   </animation>
@@ -192,9 +192,9 @@ if you contacted me before making any changes to this software.
     <object-name>bank-index</object-name>
     <property>orientation/roll-deg</property>
     <center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 0.0</z-m>
     </center>
     <axis><x>1</x></axis>
   </animation>
@@ -322,9 +322,9 @@ if you contacted me before making any changes to this software.
 		<property>instrumentation/attitude-indicator/horizon-offset-deg</property>
 		<factor>25</factor>
 		<center>
-		  <x-m>0</x-m>
-		  <y-m>0.041</y-m>
-		  <z-m>-0.0389</z-m>
+		  <x-m> 0.03173</x-m>
+		  <y-m> 0.03015</y-m>
+		  <z-m>-0.02828</z-m>
 		</center>
 		<axis>
 		  <x>-1</x>
@@ -394,9 +394,9 @@ if you contacted me before making any changes to this software.
 		<property>instrumentation/attitude-indicator/dir-offset-deg</property>
 		<factor>25</factor>
 		<center>
-		  <x-m>0</x-m>
-		  <y-m>-0.037</y-m>
-		  <z-m>-0.039</z-m>
+		  <x-m> 0.03173</x-m>
+		  <y-m>-0.02665</y-m>
+		  <z-m>-0.02828</z-m>
 		</center>
 		<axis>
 		  <x>-1</x>

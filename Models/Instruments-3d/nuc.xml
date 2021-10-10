@@ -61,7 +61,7 @@ maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>switch_eject.002</object-name>
+	<object-name>NUC_SW</object-name>
 	<property>controls/switches/nuc</property>
 	<interpolation>
 		<entry>
@@ -79,14 +79,14 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00655</x-m>
-		<y-m>0.16424</y-m>
-		<z-m>0.04509</z-m>
+		<x-m>0.007337</x-m>
+		<y-m>0.1663</y-m>
+		<z-m>0.04937</z-m>
 	</center>
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>switch_eject.002</object-name>
+	<object-name>NUC_SW</object-name>
 	 <emission>
 		 <red>0.3</red>
 		 <green>0.0</green>
@@ -99,7 +99,7 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>switch_eject.002</object-name>
+	<object-name>NUC_SW</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -116,22 +116,11 @@ maggse
 </animation>
 
 <animation>
-	<type>material</type>
-	<object-name>fltdir.001</object-name>
-	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
-
-<animation>
 	 <type>material</type>
 	 <object-name>nuc_close.001</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
+		 <red>0.</red>
+		 <green>0.8</green>
 		 <blue>0.0</blue>
 		 <factor-prop>sim/multiplay/generic/float[2]</factor-prop>
 	 </emission>
@@ -141,8 +130,8 @@ maggse
 	 <type>material</type>
 	 <object-name>nuc_close.002</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
+		 <red>0.0</red>
+		 <green>0.8</green>
 		 <blue>0.0</blue>
 		 <factor-prop>sim/multiplay/generic/float[3]</factor-prop>
 	 </emission>
@@ -152,17 +141,86 @@ maggse
 	 <type>material</type>
 	 <object-name>nuc_close.003</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
+		 <red>0.0</red>
+		 <green>0.8</green>
 		 <blue>0.0</blue>
 		 <factor-prop>sim/multiplay/generic/float[4]</factor-prop>
 	 </emission>
 </animation>
 
 <!-- door close -->
+ <animation>
+	 <type>rotate</type>
+	 <object-name>close_cover</object-name>
+	 <property>controls/switches/close_cover</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-120.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.008139</x-m>
+		 <y-m> 0.1455</y-m>
+		 <z-m>-0.04909</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>material</type>
+	 <object-name>close_cover</object-name>
+	 <emission>
+		 <red>0.3</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+ <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>close_cover</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/close_cover</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>doors</object-name>
+	 <property>controls/switches/doors</property>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m> 0.0102</x-m>
+		 <y-m> 0.1454</y-m>
+		 <z-m>-0.05958</z-m>
+	 </center>
+ </animation>
 <animation>
 	<type>material</type>
-	<object-name>nuc_close</object-name>
+	<object-name>doors</object-name>
 	 <emission>
 		 <red>0.3</red>
 		 <green>0.0</green>
@@ -173,7 +231,7 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>nuc_close</object-name>
+	<object-name>doors</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>

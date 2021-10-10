@@ -442,75 +442,75 @@ maggse
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	</animation>  
+	</animation>
   <animation>
    <type>rotate</type>
    <object-name>safety.006</object-name>
    <property>controls/switches/safety.006</property>
-   <factor>90</factor> 
+   <factor>30</factor>
    <min>0</min>
-   <max>1</max>   
-   <center> 
-    <x-m> 0.00678</x-m> 
-    <y-m> 0.05850</y-m> 
-    <z-m>-0.06081</z-m> 
-   </center> 
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis> 
+   <max>1</max>
+   <center>
+    <x-m> 0.00678</x-m>
+    <y-m> 0.05850</y-m>
+    <z-m>-0.06081</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+   </axis>
   </animation>
 
-  <animation> 
-   <type>pick</type> 
+  <animation>
+   <type>pick</type>
    <object-name>safety.006</object-name>
-   <action> 
+   <action>
     <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>controls/switches/safety.006</property>                
-        <factor>90</factor> 
-        <min>0</min> 
+        <property>controls/switches/safety.006</property>
+        <factor>90</factor>
+        <min>0</min>
         <max>1</max>
       </binding>
-   </action> 
+   </action>
  </animation>
- 
+
  <animation>
    <type>rotate</type>
-   <object-name>switch_oh.059</object-name>
-   <property>controls/armament/station/jettison-all</property>
-   <factor>90</factor> 
+   <object-name>jettison</object-name>
+   <property>controls/armament/release-all</property>
+   <factor>45</factor>
    <min>0</min>
-   <max>1</max>   
-   <center> 
-    <x-m> 0.00696</x-m> 
-    <y-m> 0.05882</y-m> 
-    <z-m>-0.08370</z-m> 
-   </center> 
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis> 
+   <max>1</max>
+   <center>
+    <x-m> 0.00696</x-m>
+    <y-m> 0.05882</y-m>
+    <z-m>-0.08370</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+   </axis>
   </animation>
 
-  <animation> 
-   <type>pick</type> 
-   <object-name>switch_oh.059</object-name>
-   <action> 
+  <animation>
+   <type>pick</type>
+   <object-name>jettison</object-name>
+   <action>
     <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>controls/armament/station/jettison-all</property>                
-        <factor>0</factor> 
-        <min>0</min> 
+        <property>controls/armament/release-all</property>
+        <factor>0</factor>
+        <min>0</min>
         <max>1</max>
       </binding>
-   </action> 
+   </action>
  </animation>
- 
+
 <animation>
 	<type>material</type>
   <object-name>sms_button</object-name>

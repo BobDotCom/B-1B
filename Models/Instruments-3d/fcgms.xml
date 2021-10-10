@@ -15,7 +15,7 @@ sweat by maggse
 	<object-name>switch_fcgms_mode</object-name>
 
   </animation>
- 
+
 
  <!-- fcgms switch on/off -->
 
@@ -40,13 +40,13 @@ sweat by maggse
 	 </axis>
 	 <center>
 		 <x-m>0.00594</x-m>
-		 <y-m>0.48808</y-m>
-		 <z-m>0.08813</z-m>
+		 <y-m>0.48866</y-m>
+		 <z-m>0.08550</z-m>
    </center>
  </animation>
- 
+
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_fcgms</object-name>
@@ -75,7 +75,7 @@ sweat by maggse
 			<ind>10.0</ind>
 			<dep>0.0</dep>
 		</entry>
-		
+
 		<entry>
 			<ind>60.0</ind>
 			<dep>-250.0</dep>
@@ -87,9 +87,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00475</x-m>
-		<y-m>0.46835</y-m>
-		<z-m>0.02491</z-m>
+		<x-m>0.00831</x-m>
+		<y-m>0.46518</y-m>
+		<z-m>0.02991</z-m>
 	</center>
 </animation>
 
@@ -124,6 +124,8 @@ sweat by maggse
 	</action>
 </animation>
 
+          <!-- mode switch centres x 0.00649 y 0.044677 z 0.08504
+                              opt cruise and set -->
 <animation>
 	<type>material</type>
 	<object-name>switch_fcgms</object-name>
