@@ -7,7 +7,7 @@ maggse
  <path>hud_alt.ac</path>
 
 
- 
+
 
  <animation>
    <type>textranslate</type>
@@ -34,7 +34,7 @@ maggse
 	  <z-m>0.00</z-m>
    </center>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind_alt_h</object-name>
@@ -52,7 +52,7 @@ maggse
 			 <z-m>0.00</z-m>
 		 </center>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>ind_alt_lmob</object-name>
@@ -98,7 +98,7 @@ maggse
 		 <z-m> 0.00856</z-m>
 	 </center>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_alt_set</object-name>
@@ -127,7 +127,7 @@ maggse
 		 </binding>
 	 </action>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>altft_10000</object-name>
@@ -140,7 +140,7 @@ maggse
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>altft_1000</object-name>
@@ -153,7 +153,7 @@ maggse
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>altft_100</object-name>
@@ -166,7 +166,7 @@ maggse
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>altft_10</object-name>
@@ -179,7 +179,7 @@ maggse
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>altft_1</object-name>
@@ -192,7 +192,7 @@ maggse
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	<type>knob</type>
 	<object-name>VFP_set</object-name>
@@ -213,9 +213,9 @@ maggse
 		<z> 0.0</z>
 	</axis>
 	<center>
-		<x-m> 0.00522</x-m>
-		<y-m>-0.26186</y-m>
-		<z-m>-0.08275</z-m>
+		<x-m> 0.00747</x-m>
+		<y-m>-0.2589</y-m>
+		<z-m>-0.08963</z-m>
 	</center>
 	<action>
 		<binding>
@@ -227,7 +227,7 @@ maggse
 		</binding>
 	</action>
 </animation>
- 
+
   <animation>
 	 <type>knob</type>
 	 <object-name>VFP_set</object-name>
@@ -256,7 +256,7 @@ maggse
 		 </binding>
 	 </action>
  </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>ind_alt_t</object-name>

@@ -64,7 +64,7 @@ B-1B set file.
         <default-field-of-view-deg>55</default-field-of-view-deg>
       </config>
     </view>
-    
+
      <view n="96001">
       <name>OSO view</name>
       <type>lookfrom</type>
@@ -91,7 +91,7 @@ B-1B set file.
         <default-field-of-view-deg>55</default-field-of-view-deg>
       </config>
     </view>
-    
+
     <view n="96003">
       <name>Sniper Pod view</name>
       <type>lookfrom</type>
@@ -107,8 +107,8 @@ B-1B set file.
         <default-field-of-view-deg>50</default-field-of-view-deg>
       </config>
     </view>
-    
-    
+
+
 
 <!-- Shift the camera target point back -->
     <view n="1">
@@ -141,7 +141,7 @@ B-1B set file.
       <audible>true</audible>
       <path>Aircraft/B-1B/Sounds/b-1b-sound.xml</path>
     </sound>
-    
+
     <submodels>
 	    <serviceable type="bool">true</serviceable>
 	    <path>Aircraft/B-1B/Submodels/sub_lancer.xml</path>
@@ -195,11 +195,11 @@ B-1B set file.
   </model>
 
   <airport>
-        <runways> 
+        <runways>
               <start-offset-m>35</start-offset-m>
         </runways>
   </airport>
-  
+
     <multiplay>
 	<generic>
 		<!--<float n="0">0</float> free  -->
@@ -317,7 +317,7 @@ B-1B set file.
       </parameters>
     </redout>
   </rendering>
-    
+
   <wing-sweep>
     <setting>0.00</setting>
     <setting>0.23</setting>
@@ -370,9 +370,9 @@ B-1B set file.
   <!-- AoA Indexer target 1.0 deg -->
      <aoa-indexer>
        <too-slow-deg>2.5</too-slow-deg>  <!-- target +1.5 deg -->
-       <slow-deg>1.5</slow-deg>          <!-- target +0.5 deg -->         
-       <fast-deg>0.5</fast-deg>          <!-- target -0.5 deg -->         
-       <too-fast-deg>-0.5</too-fast-deg>  <!-- target -1.5 deg -->         
+       <slow-deg>1.5</slow-deg>          <!-- target +0.5 deg -->
+       <fast-deg>0.5</fast-deg>          <!-- target -0.5 deg -->
+       <too-fast-deg>-0.5</too-fast-deg>  <!-- target -1.5 deg -->
      </aoa-indexer>
 
     <help>
@@ -393,19 +393,19 @@ B-1B set file.
 	      <name>l</name>
 	      <desc>Flare out</desc>
       </key>
-       <key> 
+       <key>
 	       <name>L</name>
 		       <desc>Weapon launch sequence</desc>
        </key>
-       <key> 
+       <key>
 		       <name>r</name>
 		       <desc>Select next ordonance</desc>
        </key>
-       <key> 
+       <key>
 		       <name>R</name>
 		       <desc>Select prev ordonance</desc>
        </key>
-       <key> 
+       <key>
 		       <name>t</name>
 		       <desc>Assign target</desc>
        </key>
@@ -454,7 +454,7 @@ B-1B set file.
       <line>7. Close bay doors</line>
       <line>Good Luck!</line>
     </help>
-    
+
    <!--<ai>
 
     </ai>-->
@@ -518,25 +518,25 @@ B-1B set file.
     <engines>
 	    <engine n="0">
 		    <cutoff type="double">0</cutoff>
-		    
+
 	    </engine>
 	    <engine n="1">
 		    <cutoff type="double">0</cutoff>
-		    
+
 	    </engine>
 	    <engine n="2">
 		    <cutoff type="double">0</cutoff>
-		    
+
 	    </engine>
 	    <engine n="3">
 		    <cutoff type="double">0</cutoff>
-		    
+
 	    </engine>
-	    
+
   </engines>
 
 </controls>
-  
+
 <!-- Engine indexes -->
   <engines>
     <engine n="0">
@@ -618,12 +618,12 @@ B-1B set file.
       <display-mode archive="y">arc</display-mode>
     </wxradar>
   </instrumentation>
-  
+
   <input>
 	  <keyboard>
-		  
+
 		  <!-- map keys for wingsweep -->
-		  
+
 		  <key n="102">
 			  <name>f</name>
 			  <desc>Increase sweep</desc>
@@ -638,7 +638,7 @@ B-1B set file.
 				  </binding>
 			  </mod-up>
 		  </key>
-		  
+
 		  <key n="70">
 			  <name>F</name>
 			  <desc>Decrease sweep</desc>
@@ -653,7 +653,7 @@ B-1B set file.
 				  </binding>
 			  </mod-up>
  </key>
- 
+
     <key n="108">
 	 <name>l</name>
 	 <desc>Flare out</desc>
@@ -662,11 +662,11 @@ B-1B set file.
 		<property>controls/switches/flare</property>
 	 </binding>
    </key>
-   
-   <key n="76"> 
+
+   <key n="76">
 		<name>L</name>
 		       <desc>automated bomb launcher</desc>
-		       <binding> 
+		       <binding>
 			        <command>nasal</command>
 		  <script>weapons.rot_launch_rel()</script>
 		</binding>
@@ -675,7 +675,7 @@ B-1B set file.
 		  <property>armament/auto-release</property>
 		       </binding>
   </key>
-  
+
   <key n="84">
 				<name>T</name>
 				<desc>Autotrim cancel</desc>
@@ -688,7 +688,7 @@ B-1B set file.
 					</script>
 				</binding>
   </key>
-  
+
   <key n="114">
 				<name>r</name>
 				<desc>Select next Ordonance</desc>
@@ -697,7 +697,7 @@ B-1B set file.
 					<script>weapons.target_number(1)</script>
 				</binding>
   </key>
-  
+
   <key n="82">
 				<name>R</name>
 				<desc>Select prev Ordonance</desc>
@@ -706,7 +706,7 @@ B-1B set file.
 					<script>weapons.target_number(-1)</script>
 				</binding>
   </key>
-  
+
   <key n="116">
 				<name>t</name>
 				<desc>Target designator</desc>
@@ -731,7 +731,7 @@ B-1B set file.
 	<b1b>
 		<file>Aircraft/B-1B/Nasal/b1b.nas</file>
 		<file>Aircraft/B-1B/Nasal/cdu900.nas</file>
-	</b1b>	
+	</b1b>
 	<flightcontrols>
 		<file>Aircraft/B-1B/Nasal/flightcontrols.nas</file>
 	</flightcontrols>
@@ -779,7 +779,7 @@ B-1B set file.
 		<file>Aircraft/B-1B/Nasal/aar.nas</file>
 	</fuel>
     <blacklist>
-        <file>Aircraft/B-1B/Nasal/blacklist.nas</file> 
+        <file>Aircraft/B-1B/Nasal/blacklist.nas</file>
     </blacklist>
   <instrumentation>
    <iff>

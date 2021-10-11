@@ -15,17 +15,17 @@ sweat by maggse
 	 <property>consumables/fuel/tank[2]/selected</property>
 	 <interpolation>
 		<entry>
-			<ind>0.0</ind>
-			<dep>25.0</dep>
+			<ind> 0.0</ind>
+			<dep>-25.0</dep>
 		</entry>
 		<entry>
-			<ind>1.0</ind>
-			<dep>-25.0</dep>
+			<ind> 1.0</ind>
+			<dep> 25.0</dep>
 		</entry>
 	 </interpolation>
 	 <axis>
 		 <x>0.0</x>
-		 <y>1.0</y>
+		 <y>-1.0</y>
 		 <z>0.0</z>
 	 </axis>
 	 <center>
