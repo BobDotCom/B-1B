@@ -21,7 +21,7 @@
  </animation>
 
  <animation>
-	 <type>rotate</type>
+	 <type>translate</type>
 	 <object-name>right_poslight</object-name>
 	 <axis>
 		 <x>-1.0</x>

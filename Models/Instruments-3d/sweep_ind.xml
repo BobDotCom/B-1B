@@ -38,12 +38,12 @@ maggse
    <z>0</z>
   </axis>
   <center>
-	  <x-m>0.000</x-m>
-	  <y-m>-0.008</y-m>
-	  <z-m>-0.031</z-m>
+	  <x-m> 0.00165</x-m>
+	  <y-m>-0.01264</y-m>
+	  <z-m>-0.02770</z-m>
    </center>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>flaps</object-name>
@@ -55,11 +55,11 @@ maggse
 		 </entry>
 		 <entry>
 			 <ind>0.5</ind>
-			 <dep>-15</dep>
+			 <dep>-12</dep>
 		 </entry>
 		 <entry>
 			 <ind>1</ind>
-			 <dep>-30</dep>
+			 <dep>-24</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -68,13 +68,13 @@ maggse
 		 <z>0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.000</x-m>
-		 <y-m>-0.064</y-m>
-		 <z-m>-0.052</z-m>
+		 <x-m> 0.00165</x-m>
+		 <y-m>-0.06182</y-m>
+		 <z-m>-0.04580</z-m>
    </center>
 
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoilerr</object-name>
@@ -99,13 +99,13 @@ maggse
 		 <z>0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.000</x-m>
-		 <y-m>0.012</y-m>
-		 <z-m>0.028</z-m>
+		 <x-m>0.001758</x-m>
+		 <y-m>0.006693</y-m>
+		 <z-m>0.02549</z-m>
 	 </center>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoilerl</object-name>
@@ -117,11 +117,11 @@ maggse
 		 </entry>
 		 <entry>
 			 <ind>0.5</ind>
-			 <dep>-28</dep>
+			 <dep>-30</dep>
 		 </entry>
 		 <entry>
 			 <ind>1</ind>
-			 <dep>-55</dep>
+			 <dep>-60</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -130,16 +130,16 @@ maggse
 		 <z>0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.000</x-m>
-		 <y-m>0.012</y-m>
-		 <z-m>0.028</z-m>
+		 <x-m>0.00165</x-m>
+		 <y-m>0.009333</y-m>
+		 <z-m>0.02549</z-m>
 	 </center>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
-	 <object-name>sweep.006</object-name>
+	 <object-name>rudder</object-name>
 	 <property>controls/flight/rudder</property>
 	 <interpolation>
 		 <entry>
@@ -161,13 +161,13 @@ maggse
 		 <z>0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.045</x-m>
-		 <y-m>-0.046</y-m>
-		 <z-m>0.016</z-m>
+		 <x-m> 0.00165</x-m>
+		 <y-m>-0.04392</y-m>
+		 <z-m> 0.01646</z-m>
 	 </center>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>spoiler_l_1</object-name>
@@ -194,9 +194,9 @@ maggse
 		 <y>1</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>spoiler_r_1.002</object-name>
@@ -220,9 +220,9 @@ maggse
 		 <y>1</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>spoiler_r_1.003</object-name>
@@ -246,7 +246,7 @@ maggse
 		 <y>1</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
 
  <animation>
@@ -272,9 +272,9 @@ maggse
 		 <y>1</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>spoiler_l_1.003</object-name>
@@ -298,16 +298,16 @@ maggse
 		 <y>1</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>sweep</object-name>
 	 <object-name>flaps</object-name>
 	 <object-name>spoilerr</object-name>
 	 <object-name>spoilerl</object-name>
-	 <object-name>sweep.006</object-name>
+	 <object-name>rudder</object-name>
 	 <object-name>spoiler_l_1</object-name>
 	 <object-name>spoiler_l_1.001</object-name>
 	 <object-name>spoiler_r_1</object-name>

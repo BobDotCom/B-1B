@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-  
+
 <fx>
 
 <!-- engine0 -->
 
 <engine>
 	<name>engine0</name>
-	<path>Sounds/jet.wav</path>
+	<path>Aircraft/B-1B/Sounds/whine.wav</path>
 	<mode>looped</mode>
 	<condition>
 		<equals>
@@ -40,7 +40,7 @@
 
 <engine>
 	<name>external whine0</name>
-	<path>Sounds/turbojet_fan.wav</path>
+	<path>Aircraft/B-1B/Sounds/whine.wav</path>
 	<mode>looped</mode>
 	<condition>
 		<and>
@@ -81,7 +81,7 @@
 
 <engine>
 	<name>engine_burn0</name>
-	<path>Sounds/jet.wav</path>
+	<path>Aircraft/B-1B/Sounds/reheat.wav</path>
 	<mode>looped</mode>
 	<condition>
 		<and>
@@ -95,7 +95,7 @@
 		</equals>
 	        </and>
 	</condition>
-	
+
 	<position>
 		<x>32.0</x>
 		<y>4.5</y>
@@ -123,7 +123,7 @@
 
 <engine>
 	<name>internal whine0</name>
-	<path>Sounds/whine.wav</path>
+	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
 	<mode>looped</mode>
 	<condition>
 		<and>
@@ -149,12 +149,12 @@
 		<max>0.5</max>
 	</volume>
   </engine>
-  
+
   <!-- engine1 -->
-  
+
   <engine>
 	  <name>engine1</name>
-	  <path>Sounds/jet.wav</path>
+	  <path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 			  <equals>
@@ -180,12 +180,12 @@
 		  <factor>0.000066</factor>
 	  </volume>
   </engine>
-  
-  
-  
+
+
+
   <engine>
 	  <name>external whine1</name>
-	  <path>Sounds/turbojet_fan.wav</path>
+	  <path>SAircraft/B-1B/Sounds/engine-lowfreq.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 		  <and>
@@ -223,10 +223,10 @@
 		  <max>0.6</max>
 	  </volume>
   </engine>
-  
+
   <engine>
 	  <name>engine_burn1</name>
-	  <path>Sounds/jet.wav</path>
+	  <path>Aircraft/B-1B/Sounds/reheat.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 		  <and>
@@ -240,7 +240,7 @@
 			  </equals>
 	          </and>
 	  </condition>
-	  
+
 	  <position>
 		  <x>25</x>
 		  <y>4.0</y>
@@ -265,10 +265,10 @@
 		  <factor>.05</factor>
 	  </pitch>
 </engine>
-  
+
   <engine>
 	  <name>internal whine1</name>
-	  <path>Sounds/whine.wav</path>
+	  <path>Aircraft/B-1B/Sounds/engine-int.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 		  <and>
@@ -284,7 +284,7 @@
 		  <y>4.0</y>
 		  <z>-2.0</z>
 	  </position>
-	  
+
 	  <pitch>
 		  <property>/engines/engine[1]/n1</property>
 		  <offset>0.5</offset>
@@ -294,12 +294,12 @@
 		  <max>0.5</max>
 	  </volume>
   </engine>
-  
+
   <!-- engine2 -->
-  
+
   <engine>
 	  <name>engine2</name>
-	  <path>Sounds/jet.wav</path>
+	  <path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 			  <equals>
@@ -325,12 +325,12 @@
 		  <factor>0.000066</factor>
 	  </volume>
   </engine>
-  
-  
-  
+
+
+
   <engine>
 	  <name>external whine2</name>
-	  <path>Sounds/turbojet_fan.wav</path>
+	  <path>Aircraft/B-1B/Sounds/engine-lowfreq.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 		  <and>
@@ -368,10 +368,10 @@
 		  <max>0.6</max>
 	  </volume>
   </engine>
-  
+
   <engine>
 	  <name>engine_burn2</name>
-	  <path>Sounds/jet.wav</path>
+	  <path>Aircraft/B-1B/Sounds/reheat.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 		  <and>
@@ -385,7 +385,7 @@
 			  </equals>
 	          </and>
 	  </condition>
-	  
+
 	  <position>
 		  <x>32.0</x>
 		  <y>-4.0</y>
@@ -411,10 +411,10 @@
 	  </pitch>
   </engine>
 
-  
+
   <engine>
 	  <name>internal whine2</name>
-	  <path>Sounds/whine.wav</path>
+	  <path>Aircraft/B-1B/Sounds/engine-int.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 		  <and>
@@ -430,7 +430,7 @@
 		  <y>-4.0</y>
 		  <z>-2.0</z>
 	  </position>
-	  
+
 	  <pitch>
 		  <property>/engines/engine[2]/n1</property>
 		  <offset>0.5</offset>
@@ -440,12 +440,12 @@
 		  <max>0.5</max>
 	  </volume>
   </engine>
-  
+
   <!-- engine3 -->
-  
+
   <engine>
 	  <name>engine3</name>
-	  <path>Sounds/jet.wav</path>
+	  <path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 			  <equals>
@@ -472,12 +472,12 @@
 		  <factor>0.000066</factor>
 	  </volume>
   </engine>
-  
-  
-  
+
+
+
   <engine>
 	  <name>external whine3</name>
-	  <path>Sounds/turbojet_fan.wav</path>
+	  <path>Aircraft/B-1B/Sounds/engine-lowfreq.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 		  <and>
@@ -515,10 +515,10 @@
 		  <max>0.6</max>
 	  </volume>
   </engine>
-  
+
   <engine>
 	  <name>engine_burn3</name>
-	  <path>Sounds/jet.wav</path>
+	  <path>Aircraft/B-1B/Sounds/reheat.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 		  <and>
@@ -532,7 +532,7 @@
 			  </equals>
 	          </and>
 	  </condition>
-	  
+
 	  <position>
 		  <x>32.0</x>
 		  <y>-4.5</y>
@@ -557,10 +557,10 @@
 		  <factor>.05</factor>
 	  </pitch>
   </engine>
-  
+
   <engine>
 	  <name>internal whine3</name>
-	  <path>Sounds/whine.wav</path>
+	  <path>Aircraft/B-1B/Sounds/engine-int.wav</path>
 	  <mode>looped</mode>
 	  <condition>
 		  <and>
@@ -576,7 +576,7 @@
 		  <y>-4.5</y>
 		  <z>-2.0</z>
 	  </position>
-	  
+
 	  <pitch>
 		  <property>/engines/engine[3]/n1</property>
 		  <ofset>0.7</ofset>
@@ -586,14 +586,14 @@
 		  <max>0.5</max>
 	  </volume>
   </engine>
-  
+
 
 
 <!-- Rumble -->
     <rumble>
       <name>rumble0</name>
       <mode>looped</mode>
-      <path>Sounds/rumble.wav</path>
+      <path>Aircraft/B-1B/Sounds/ground-roll.wav</path>
       <condition>
         <property>/gear/gear[0]/wow</property>
       </condition>
@@ -607,7 +607,7 @@
     <rumble>
       <name>rumble1</name>
       <mode>looped</mode>
-      <path>Sounds/rumble.wav</path>
+      <path>Aircraft/B-1B/Sounds/ground-roll.wav</path>
       <condition>
         <property>/gear/gear[1]/wow</property>
       </condition>
@@ -621,7 +621,7 @@
     <rumble>
       <name>rumble2</name>
       <mode>looped</mode>
-      <path>Sounds/rumble.wav</path>
+      <path>Aircraft/B-1B/Sounds/ground-roll.wav</path>
       <condition>
         <property>/gear/gear[2]/wow</property>
       </condition>
@@ -636,7 +636,7 @@
     <gear>
       <name>gear0</name>
       <mode>in-transit</mode>
-      <path>Sounds/gear.wav</path>
+      <path>Aircraft/B-1B/Sounds/gear-transit-internal.wav</path>
       <property>/gear/gear[0]/position-norm</property>
       <pitch>
         <internal>dt_play</internal>
@@ -651,7 +651,7 @@
 
     <gear>
       <name>gear-lock0</name>
-      <path>Sounds/gear-lck.wav</path>
+      <path>Aircraft/B-1B/Sounds/gear-lock.wav</path>
       <condition>
         <equals>
           <property>/gear/gear[0]/position-norm</property>
@@ -662,7 +662,7 @@
 
     <gear>
       <name>gear-lock0a</name>
-      <path>Sounds/gear-lck.wav</path>
+      <path>Aircraft/B-1B/Sounds/gear-lock.wav</path>
       <condition>
         <equals>
           <property>/gear/gear[0]/position-norm</property>
@@ -675,7 +675,7 @@
 <!-- Squeal -->
     <squeal>
       <name>squeal0</name>
-      <path>Sounds/squeal.wav</path>
+      <path>Aircraft/B-1B/Sounds/touchdown.wav</path>
       <condition>
         <property>/gear/gear[0]/wow</property>
       </condition>
@@ -701,7 +701,7 @@
 
     <squeal>
       <name>squeal1</name>
-      <path>Sounds/squeal.wav</path>
+      <path>Aircraft/B-1B/Sounds/touchdown.wav</path>
       <condition>
         <property>/gear/gear[1]/wow</property>
       </condition>
@@ -727,7 +727,7 @@
 
     <squeal>
       <name>squeal2</name>
-      <path>Sounds/squeal.wav</path>
+      <path>Aircraft/B-1B/Sounds/touchdown.wav</path>
       <condition>
         <property>/gear/gear[2]/wow</property>
       </condition>
@@ -753,7 +753,7 @@
 
     <squeal>
       <name>squeal3</name>
-      <path>Sounds/squeal.wav</path>
+      <path>Aircraft/B-1B/Sounds/touchdown.wav</path>
       <condition>
         <property>/gear/gear[3]/wow</property>
       </condition>
@@ -776,10 +776,10 @@
         <offset>1.2</offset>
       </pitch>
     </squeal>
-    
+
     <squeal>
 	    <name>squeal4</name>
-	    <path>Sounds/squeal.wav</path>
+	    <path>Aircraft/B-1B/Sounds/touchdown.wav</path>
 	    <condition>
 		    <property>/gear/gear[4]/wow</property>
 	    </condition>
@@ -803,52 +803,52 @@
 	    </pitch>
     </squeal>
 
-<!-- Flaps 
+<!-- Flaps -->
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
-      <path>Sounds/flaps.wav</path>
-      <property>/surface-positions/left-flap-pos-norm</property>
+      <path>Aircraft/B-1B/Sounds/flap.wav</path>
+      <property>/surface-positions/flap-pos-norm</property>
       <volume>
-        <factor>0.15</factor>
+        <factor>5</factor>
       </volume>
     </flap>
 
-    <flap>
+    <!--flap>
       <name>flaps</name>
       <mode>in-transit</mode>
-      <path>Sounds/flaps.wav</path>
-      <property>/surface-positions/right-flap-pos-norm</property>
+      <path>Aircraft/B-1B/Sounds/flap.wav</path>
+      <property>/surface-positions/flap-pos-norm</property>
       <volume>
-        <factor>0.25</factor>
+        <factor>5</factor>
       </volume>
-    </flap>-->
+    </flap-->
 
-<!-- Spoilers 
-    <spoiler>
+<!-- Spoilers -->
+    <!--spoiler>
       <name>spoilers</name>
       <mode>in-transit</mode>
-      <path>Sounds/flaps.wav</path>
+      <path>Aircraft/B-1B/Sounds/flap.wav</path>
       <property>/surface-positions/left-spoiler-pos-norm</property>
       <volume>
-        <factor>0.15</factor>
+        <factor>5</factor>
       </volume>
-    </spoiler>
+    </spoiler-->
 
     <spoiler>
       <name>spoilers</name>
       <mode>in-transit</mode>
-      <path>Sounds/flaps.wav</path>
+      <path>Aircraft/B-1B/Sounds/flap.wav</path>
       <property>/surface-positions/right-spoiler-pos-norm</property>
       <volume>
-        <factor>0.25</factor>
+        <factor>5</factor>
       </volume>
-    </spoiler>-->
+    </spoiler>
 
     <wind>
       <name>wind</name>
       <mode>looped</mode>
-      <path>Sounds/wind.wav</path>
+      <path>Aircraft/B-1B/Sounds/speedbrake-wind.wav</path>
       <property>/velocities/airspeed-kt</property>
       <volume>
         <property>/velocities/airspeed-kt</property>
@@ -865,14 +865,14 @@
 
     <stall>
       <name>stall</name>
-      <path>Sounds/stall.wav</path>
+      <path>Aircraft/B-1B/Sounds/stall.wav</path>
       <property>/sim/alarms/stall-warning</property>
       <volume>
         <property>/velocities/airspeed-kt</property>
         <min>90.0</min>
       </volume>
     </stall>
-    
+
     <rain>
 	    <name>rain</name>
 	    <mode>looped</mode>
@@ -908,7 +908,7 @@
 		    <offset>1.0</offset>
             </pitch>
     </rain>
-    
+
     <seperation>
 	    <name>rack0</name>
 	    <path>Sounds/door_close.wav</path>
@@ -1046,7 +1046,7 @@
 	    </volume>
     </seperation>
 
-    
+
     <seperation>
 	    <name>rack0i</name>
 	    <path>Sounds/door_close.wav</path>
@@ -1186,10 +1186,55 @@
 <!-- no binding yet?
     <click>
       <name>click</name>
-      <path>Sounds/click.wav</path>
-    </click>
--->
+      <path>SAircraft/B-1B/Sounds/detent.wav</path>
+    </click-->
 
-  </fx>
+	<!-- flyby -->
+		<flyby>
+			<name>fly-by</name>
+			<mode>looped</mode>
+			<path>Aircraft/B-1B/Sounds/flyby.wav</path>
+			<condition>
+			<and>
+	    <greater-than>
+	     	<property>velocities/mach</property>
+	     	<value>0.5</value>
+	    </greater-than>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>6</value>
+				</equals>
+				</and>
+				<not>
+         	<property>/sim/current-view/internal</property>
+	 	<property>/engines/engine/out-of-fuel</property>
+     	</not>
+		</condition>
+			 <volume>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.001</factor>
+			</volume>
+		</flyby>
 
+		 <!-- Sonic Boom -->
+  <sonicboom>
+   <name>Sonic Boom</name>
+	<mode>once</mode>
+   <path>Aircraft/B-1B/Sounds/sonicboom.wav</path>
+   <condition>
+   <and>
+	    <greater-than>
+	     	<property>/velocities/mach</property>
+	     	<value>1.0</value>
+	    </greater-than>
+	    <equals>
+		    <property>/sim/current-view/internal</property>
+		    <value>false</value>
+		</equals>
+	</and>
+   </condition>
+    <reference-dist>600.0</reference-dist>
+    <max-dist>6000.0</max-dist>
+  </sonicboom>
+</fx>
 </PropertyList>

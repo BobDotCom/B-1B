@@ -9,12 +9,12 @@
  </offsets>
 
 
- 
+
 
  <animation>
 	 <type>alpha-test</type>
 	 <object-name>spot_light1</object-name>
-	 <alpha-factor>0.002</alpha-factor>
+	 <alpha-factor>0.009</alpha-factor>
  </animation>
  <animation>
 	 <type>select</type>
@@ -34,12 +34,12 @@
 </animation>
 
 
- 
+
 
  <animation>
 	 <type>alpha-test</type>
 	 <object-name>spot_light2</object-name>
-	 <alpha-factor>0.002</alpha-factor>
+	 <alpha-factor>0.009</alpha-factor>
  </animation>
  <animation>
 	 <type>select</type>
@@ -58,7 +58,7 @@
 	 </condition>
 </animation>
 
-<!--<animation>
+<!--animation>
  <type>dist-scale</type>
  <object-name>spot_light2</object-name>
  <interpolation>
@@ -73,6 +73,6 @@
   <y-m>0.2320</y-m>
   <z-m>-2.664</z-m>
  </center>
-</animation>-->
+</animation-->
 
 </PropertyList>

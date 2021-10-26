@@ -5,7 +5,7 @@ sweat by maggse
 <PropertyList>
 
  <path>fltdir.ac</path>
- 
+
  <!-- flt dir mode toggle -->
 
 <animation>
@@ -68,7 +68,7 @@ sweat by maggse
 		<binding>
 			<command>property-adjust</command>
 			<property>controls/switches/fltdir</property>
-			<step>0.15</step>
+			<step>0.25</step>
 			<min>0.0</min>
 			<max>1.00</max>
 		</binding>

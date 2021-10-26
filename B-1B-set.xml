@@ -508,10 +508,10 @@ B-1B set file.
 
     <switches>
       <engines>
-        <afterburner n="0">1</afterburner>
-	<afterburner n="1">1</afterburner>
-	<afterburner n="2">1</afterburner>
-	<afterburner n="3">1</afterburner>
+        <afterburner n="0">0</afterburner>
+	<afterburner n="1">0</afterburner>
+	<afterburner n="2">0</afterburner>
+	<afterburner n="3">0</afterburner>
       </engines>
     </switches>
 
@@ -761,7 +761,8 @@ B-1B set file.
 	<radar>
 		<file>Aircraft/B-1B/Nasal/radar.nas</file>
 		<file>Aircraft/B-1B/Nasal/phd.nas</file>
-		<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+		<file>Aircraft/B-1B/Nasal/radardist.nas</file>
+        <file>Aircraft/B-1B/Nasal/rwr.nas</file>
 	</radar>
 	<enginefire>
 		<file>Aircraft/B-1B/Nasal/enginefire.nas</file>

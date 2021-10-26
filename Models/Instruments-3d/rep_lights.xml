@@ -5,12 +5,12 @@ sweat by maggse
 <PropertyList>
 
  <path>rep_lights.ac</path>
- 
+
  <!-- lights ind on off status -->
 
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light</object-name>
+	 <object-name>g-force</object-name>
 	 <condition>
 		 <equals>
 			 <property>controls/switches/fire</property>
@@ -18,10 +18,10 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light.001</object-name>
+	 <object-name>g-force.2</object-name>
 	 <condition>
 		 <equals>
 			 <property>controls/switches/fire</property>
@@ -29,10 +29,10 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light_eng1</object-name>
+	 <object-name>rep_eng1</object-name>
 	 <condition>
 		 <and>
 		 <equals>
@@ -46,7 +46,7 @@ sweat by maggse
 	         </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_eng2</object-name>
@@ -63,10 +63,10 @@ sweat by maggse
 	         </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light_eng3</object-name>
+	 <object-name>rep_eng3</object-name>
 	 	 <condition>
 		 <and>
 		 <equals>
@@ -80,10 +80,10 @@ sweat by maggse
 	         </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light_eng4</object-name>
+	 <object-name>rep_eng4</object-name>
 	 	 	 <condition>
 		 <and>
 		 <equals>
@@ -97,17 +97,17 @@ sweat by maggse
 	         </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light_battl</object-name>
+	 <object-name>rep_battl</object-name>
 	 <condition>
 		 <and>
 		 <equals>
 			 <property>controls/electric/battery-switch</property>
 			 <value>1.0</value>
 		 </equals>
-		 
+
 		 <equals>
 			 <property>controls/APU/APUL_running</property>
 			 <value>0.0</value>
@@ -116,8 +116,6 @@ sweat by maggse
 			 <property>controls/APU/APUR_running</property>
 			 <value>0.0</value>
 		 </equals>
-	         
-		 
 		 <equals>
 			 <property>controls/engines/engine[0]/cutoff</property>
 			 <value>1.0</value>
@@ -130,14 +128,13 @@ sweat by maggse
 			 <property>controls/engines/engine[3]/cutoff</property>
 			 <value>1.0</value>
 		 </equals>
-	         
 	         </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light_apul</object-name>
+	 <object-name>rep_apul</object-name>
 	 <condition>
 		 <equals>
 			 <property>controls/APU/APUL_running</property>
@@ -145,17 +142,16 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light_battr</object-name>
+	 <object-name>rep_battr</object-name>
 	 <condition>
 		 <and>
 		 <equals>
 			 <property>controls/electric/battery-switch</property>
 			 <value>1.0</value>
 		 </equals>
-		 
 		 <equals>
 			 <property>controls/APU/APUL_running</property>
 			 <value>0.0</value>
@@ -164,8 +160,6 @@ sweat by maggse
 			 <property>controls/APU/APUR_running</property>
 			 <value>0.0</value>
 		 </equals>
-	         
-		 
 		 <equals>
 			 <property>controls/engines/engine[0]/cutoff</property>
 			 <value>1.0</value>
@@ -178,14 +172,13 @@ sweat by maggse
 			 <property>controls/engines/engine[3]/cutoff</property>
 			 <value>1.0</value>
 		 </equals>
-	         
 	         </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light_apur</object-name>
+	 <object-name>rep_apur</object-name>
 	 <condition>
 		 <equals>
 			 <property>controls/APU/APUR_running</property>
@@ -193,7 +186,7 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_light.010</object-name>
@@ -204,10 +197,10 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light.011</object-name>
+	 <object-name>ter-fl</object-name>
 	 <condition>
 		 <equals>
 			 <property>controls/switches/terrain-follow</property>
@@ -215,10 +208,10 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light.012</object-name>
+	 <object-name>ter-av</object-name>
 	 <condition>
 		 <equals>
 			 <property>controls/switches/terrain-avoid</property>
@@ -226,10 +219,10 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light.013</object-name>
+	 <object-name>fcgms</object-name>
 	 <condition>
 		 <equals>
 			 <property>controls/switches/cg-adjust</property>
@@ -237,10 +230,10 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light.015</object-name>
+	 <object-name>bay_op</object-name>
 	 <condition>
 		 <equals>
 			 <property>canopy/position-norm</property>
@@ -248,10 +241,10 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light.014</object-name>
+	 <object-name>htc_op</object-name>
 	 <condition>
 		 <equals>
 			 <property>doors/bay_fwd/position-norm</property>
@@ -259,10 +252,10 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light.017</object-name>
+	 <object-name>ldg_dn</object-name>
 	 <condition>
 		 <equals>
 			 <property>gear/gear[0]/position-norm</property>
@@ -270,10 +263,10 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
-	 <object-name>rep_light.016</object-name>
+	 <object-name>ldg_up</object-name>
 	 <condition>
 		 <and>
 		 <equals>
@@ -291,7 +284,7 @@ sweat by maggse
 	         </and>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>rep_light</object-name>

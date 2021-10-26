@@ -50,6 +50,18 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
+
+    <model>
+	  <name>airpath_compass</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/Compass.xml</path>
+	  <offsets>
+		  <x-m>-18.093</x-m>
+		  <y-m>-0.128</y-m>
+		  <z-m> 1.665</z-m>
+		<roll-deg>0</roll-deg>
+       <pitch-deg>10</pitch-deg>
+	  </offsets>
+  </model>
   <model>
 	  <name>ndb1-copilot</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
@@ -288,15 +300,25 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
+  <!--model>
+	  <name>rwr</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/rwr/rwr.xml</path>
+	  <offsets>
+		  <x-m>-19.200</x-m>
+		  <y-m> 0.000</y-m>
+		  <z-m> 0.750</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model-->
 
   <model>
 	  <name>reporter-lights</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/rep_lights.xml</path>
 	  <offsets>
-		  <x-m>-18.217</x-m>
-		  <y-m>-0.614</y-m>
-		  <z-m> 0.832</z-m>
-		  <pitch-deg>0</pitch-deg>
+		  <x-m>-18.212aa</x-m>
+		  <y-m>-0.624</y-m>
+		  <z-m> 0.834</z-m>
+		  <pitch-deg>-1</pitch-deg>
 	  </offsets>
   </model>
 
@@ -416,8 +438,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuel_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.212</x-m>
-		  <y-m> 0.088</y-m>
-		  <z-m> 1.019</z-m>
+		  <y-m> 0.13890</y-m>
+		  <z-m> 1.055</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -428,7 +450,7 @@ more to come :-)
 	  <offsets>
 		  <x-m> 0.2630</x-m>
 		  <y-m>-0.3450</y-m>
-		  <z-m> 1.0200</z-m>
+		  <z-m> 1.025</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -437,9 +459,9 @@ more to come :-)
 	  <name>fuel positions</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuelpos_ind.xml</path>
 	  <offsets>
-		  <x-m>-18.213</x-m>
-		  <y-m>0.012</y-m>
-		  <z-m>0.998</z-m>
+		  <x-m>-18.212</x-m>
+		  <y-m> 0.062</y-m>
+		  <z-m> 1.0228</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -470,11 +492,11 @@ more to come :-)
 	  <name>throttle2</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/throttle_left.xml</path>
 	  <offsets>
-		  <x-m>-17.535</x-m>
-		  <y-m>-0.810</y-m>
+		  <x-m>-17.572</x-m>
+		  <y-m>-0.794</y-m>
 		  <z-m>0.798</z-m>
-		  <pitch-deg>-89</pitch-deg>
-		  <heading-deg>-3</heading-deg>
+		  <pitch-deg>-90</pitch-deg>
+		  <heading-deg>-2</heading-deg>
 	  </offsets>
   </model>
 
@@ -502,12 +524,12 @@ B-1BFS
 	  <name>alter throt left</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/alter_throt_l.xml</path>
 	  <offsets>
-		  <x-m>-17.588</x-m>
-		  <y-m>-1.262</y-m>
-		  <z-m>0.910</z-m>
-		  <pitch-deg>-89</pitch-deg>
-		  <roll-deg>-5</roll-deg>
-          <heading-deg>-4</heading-deg>
+		  <x-m>-17.610</x-m>
+		  <y-m>-1.242</y-m>
+		  <z-m>0.877</z-m>
+		  <pitch-deg>-90</pitch-deg>
+		  <roll-deg>0</roll-deg>
+          <heading-deg>-2</heading-deg>
 	  </offsets>
   </model>
 
@@ -637,10 +659,10 @@ B-1BFS
 	  <name>overhead panel</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/overhead_panel.xml</path>
 	  <offsets>
-		  <x-m>-17.920</x-m>
+		  <x-m>-17.720</x-m>
 		  <y-m>-0.126</y-m>
-		  <z-m>1.780</z-m>
-		  <pitch-deg>75</pitch-deg>
+		  <z-m>1.805</z-m>
+		  <pitch-deg>78</pitch-deg>
 	  </offsets>
   </model>
 

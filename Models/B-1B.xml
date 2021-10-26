@@ -11,18 +11,18 @@ more to come :-)
 	<nasal>
 	  <load>
 		<![CDATA[
-		
+
 			#loads the crater and smoke models over mp.
-			
+
 			print("~~~B-1B Crater Over Multiplayer is loaded~~~");
 			print("!!!B-1B's can create craters on airports!!!!");
 			print("***Use the MP Pilot List to "ignore" trolls to prevent this from happening!***");
-		
+
 			var listener_prop = "/sim/multiplay/b-1b/listener-set";
 			var history_prop = "/sim/multiplay/chat-history";
-			
+
 			props.globals.initNode(listener_prop,0);
-			
+
 			var load_bomb_exploded_models = func () {
 				var history = getprop("/sim/multiplay/chat-history");
 				var hist_vector = split("\n", history);
@@ -44,23 +44,23 @@ more to come :-)
 					}
 				}
 
-				
+
 			}
-			
+
 			if ( props.globals.getNode(listener_prop).getValue() == 0 ) {
 				setlistener(history_prop, func { load_bomb_exploded_models(); } );
 				props.globals.getNode(listener_prop).setValue(1);
-			}				
-			
-		]]>	   
+			}
+
+		]]>
 	  </load>
 	</nasal>
-  
+
   <offsets>
 	  <x-m>25.0</x-m><!-- was 25 -->
 	  <y-m>0.0</y-m>
           <z-m>0.0</z-m><!-- was 0.24 -->
-    <pitch-deg>0</pitch-deg>    
+    <pitch-deg>0</pitch-deg>
   </offsets>
 
   <nasal>
@@ -81,9 +81,9 @@ more to come :-)
         <type type="string">boom</type>
       </refuel>
   </multiplay>
-  
+
   <!-- cockpit instruments -->
-  
+
   <model>
 	  <name>instruments</name>
 	  <path>Aircraft/B-1B/Models/instruments.xml</path>
@@ -96,7 +96,7 @@ more to come :-)
 		  </offsets>
 	  </offsets>
   </model>
-  
+
   <!-- trans parts -->
   <model>
 	  <name>transparent_parts</name>
@@ -112,7 +112,7 @@ more to come :-)
   </model>
 
 <!-- pushback -->
-  
+
 <model>
   <name>Pushback</name>
   <path>Models\Airport\Pushback\Military.xml</path>
@@ -129,7 +129,7 @@ more to come :-)
 		 <object-name>Pilots</object-name>
 		 <object-name>SEATS</object-name>
 		 <property>controls/eject</property>
-		 <factor>30</factor>
+		 <factor>50</factor>
 		 <center>
 			 <x-m>0</x-m>
 			 <y-m>0</y-m>
@@ -233,7 +233,7 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
- </animation> 
+ </animation>
 
  <animation>
 	 <type>rotate</type>
@@ -263,7 +263,7 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
- </animation>  
+ </animation>
 
   <!-- correct wing position -->
   <animation>
@@ -284,7 +284,7 @@ more to come :-)
 	 <object-name>spoiler_right3</object-name>
 	 <object-name>spoiler_right4</object-name>
 	  <property>rotors/main/blade[0]/position-deg</property>
-	  
+
 	  <interpolation>
 		  <entry>
 			  <ind>0.0</ind>
@@ -300,9 +300,9 @@ more to come :-)
 		  <y>0</y>
 		  <z>0</z>
 	  </axis>
-	  
+
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>wing_left</object-name>
@@ -321,7 +321,7 @@ more to come :-)
 	 <object-name>spoiler_left3</object-name>
 	 <object-name>spoiler_left4</object-name>
 	 <property>rotors/main/blade[0]/position-deg</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -337,16 +337,16 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
   <!-- wing sweep -->
-  
+
   <animation>
 	  <type>rotate</type>
 	  <object-name>wing_right</object-name>
 	  <object-name>wing_right.001</object-name>
       <object-name>right_poslight</object-name>
-	  <property>rotors/main/blade[0]/position-deg</property>  
+	  <property>rotors/main/blade[0]/position-deg</property>
 	  <interpolation>
 		  <entry>
 			  <ind>0.0</ind>
@@ -366,8 +366,8 @@ more to come :-)
 		  <x>0</x>
 		  <y>0</y>
 		  <z>1</z>
-	  </axis>	  
- </animation>  
+	  </axis>
+ </animation>
  <animation>
 	 <type>rotate</type>
 	 <object-name>slat_right</object-name>
@@ -379,37 +379,7 @@ more to come :-)
 	 <object-name>flap_right2_up</object-name>
 	 <object-name>flap_right3_up</object-name>
 	 <property>rotors/main/blade[0]/position-deg</property>
-	 
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>52.0</dep>
-		 </entry>
-	 </interpolation>
-	 <center>
-		 <x-m>-1.66</x-m>
-		 <y-m>3.99</y-m>
-		 <z-m>0.00</z-m>
-	 </center>
-	 <axis>
-		 <x>0</x>
-		 <y>0</y>
-		 <z>1</z>
-	 </axis>	 
- </animation>
- 
- <animation>
-	 <type>rotate</type>
-	 <object-name>spoiler_right1</object-name>
-	 <object-name>spoiler_right2</object-name>
-	 <object-name>spoiler_right3</object-name>
-	 <object-name>spoiler_right4</object-name>
-	 <property>rotors/main/blade[0]/position-deg</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -430,10 +400,40 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
-	 
  </animation>
 
- 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>spoiler_right1</object-name>
+	 <object-name>spoiler_right2</object-name>
+	 <object-name>spoiler_right3</object-name>
+	 <object-name>spoiler_right4</object-name>
+	 <property>rotors/main/blade[0]/position-deg</property>
+
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>52.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.66</x-m>
+		 <y-m>3.99</y-m>
+		 <z-m>0.00</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>0</y>
+		 <z>1</z>
+	 </axis>
+
+ </animation>
+
+
  <!-- right flaps-->
  <animation>
 	 <type>translate</type>
@@ -456,19 +456,19 @@ more to come :-)
 			 <dep>-0.5</dep>
 		 </entry>
 	 </interpolation>
-	 
+
 	 <axis>
 		 <x>-0.7</x>
 		 <y>1.1</y>
 		 <z>0.0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>flap_right1</object-name>
-	 <object-name>flap_right1_up</object-name> 
+	 <object-name>flap_right1_up</object-name>
 	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
@@ -496,9 +496,9 @@ more to come :-)
 		 <y>0.8</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>flap_right2</object-name>
@@ -520,15 +520,15 @@ more to come :-)
 			 <dep>-0.5</dep>
 		 </entry>
 	 </interpolation>
-	 
+
 	 <axis>
 		 <x>-3</x>
 		 <y>5</y>
 		 <z>-1.0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>flap_right2</object-name>
@@ -560,9 +560,9 @@ more to come :-)
 		 <y>3</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>flap_right3</object-name>
@@ -584,15 +584,15 @@ more to come :-)
 			 <dep>-0.5</dep>
 		 </entry>
 	 </interpolation>
-	 
+
 	 <axis>
 		 <x>-3</x>
 		 <y>5</y>
 		 <z>0.0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>flap_right3</object-name>
@@ -624,11 +624,11 @@ more to come :-)
 		 <y>3</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <!-- right slats-->
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>slat_right_up</object-name>
@@ -655,9 +655,9 @@ more to come :-)
 		 <y>7.2</y>
 		 <z>-6.0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>slat_right_up</object-name>
@@ -688,17 +688,17 @@ more to come :-)
 		 <y>2.22</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <!-- right spoilers -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_right1</object-name>
 	 <object-name>spoiler_right2</object-name>
 	 <property>surface-positions/right-spoiler-pos-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -719,15 +719,15 @@ more to come :-)
 		 <y>2</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_right3</object-name>
 	 <object-name>spoiler_right4</object-name>
 	 <property>surface-positions/right-spoiler-pos-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -748,14 +748,14 @@ more to come :-)
 		 <y>2</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_right3</object-name>
 	 <property>surface-positions/right-aileron-pos-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -780,14 +780,14 @@ more to come :-)
 		 <y>2</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_right4</object-name>
 	 <property>surface-positions/right-aileron-pos-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -808,18 +808,18 @@ more to come :-)
 		 <y>2</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <!-- left wing sweep -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>wing_left</object-name>
 	 <object-name>wing_left.001</object-name>
      <object-name>left_poslight</object-name>
 	 <property>rotors/main/blade[0]/position-deg</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -840,9 +840,9 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>slat_left</object-name>
@@ -854,7 +854,7 @@ more to come :-)
 	 <object-name>flap_left2_up</object-name>
 	 <object-name>flap_left3_up</object-name>
 	 <property>rotors/main/blade[0]/position-deg</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -875,9 +875,9 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_left1</object-name>
@@ -885,7 +885,7 @@ more to come :-)
 	 <object-name>spoiler_left3</object-name>
 	 <object-name>spoiler_left4</object-name>
 	 <property>rotors/main/blade[0]/position-deg</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -906,15 +906,15 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_left1</object-name>
 	 <object-name>spoiler_left2</object-name>
 	 <property>surface-positions/right-spoiler-pos-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -935,15 +935,15 @@ more to come :-)
 		 <y>-2</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_left3</object-name>
 	 <object-name>spoiler_left4</object-name>
 	 <property>surface-positions/right-spoiler-pos-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -964,14 +964,14 @@ more to come :-)
 		 <y>-2</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_left3</object-name>
 	 <property>surface-positions/left-aileron-pos-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -996,14 +996,14 @@ more to come :-)
 		 <y>-2</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>spoiler_left4</object-name>
 	 <property>surface-positions/left-aileron-pos-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -1024,9 +1024,9 @@ more to come :-)
 		 <y>-2</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <!-- left slats-->
  <animation>
 	 <type>translate</type>
@@ -1048,15 +1048,15 @@ more to come :-)
 			 <dep>0.40</dep>
 		 </entry>
 	 </interpolation>
-	 
+
 	 <axis>
 		 <x>-2.8</x>
 		 <y>-7.2</y>
 		 <z>-6.0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>slat_left_up</object-name>
@@ -1087,9 +1087,9 @@ more to come :-)
 		 <y>-2.22</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <!-- left flaps-->
  <animation>
 	 <type>translate</type>
@@ -1112,19 +1112,19 @@ more to come :-)
 			 <dep>-0.5</dep>
 		 </entry>
 	 </interpolation>
-	 
+
 	 <axis>
 		 <x>-0.7</x>
 		 <y>-1.1</y>
 		 <z>0.0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>flap_left1</object-name>
-	 <object-name>flap_left1_up</object-name> 
+	 <object-name>flap_left1_up</object-name>
 	 <property>surface-positions/flap-pos-norm</property>
 	 <condition>
 		 <equals>
@@ -1152,9 +1152,9 @@ more to come :-)
 		 <y>-0.8</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>flap_left2</object-name>
@@ -1176,15 +1176,15 @@ more to come :-)
 			 <dep>-0.5</dep>
 		 </entry>
 	 </interpolation>
-	 
+
 	 <axis>
 		 <x>-3</x>
 		 <y>-5</y>
 		 <z>-1.0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>flap_left2</object-name>
@@ -1216,9 +1216,9 @@ more to come :-)
 		 <y>-3</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>flap_left3</object-name>
@@ -1240,15 +1240,15 @@ more to come :-)
 			 <dep>-0.5</dep>
 		 </entry>
 	 </interpolation>
-	 
+
 	 <axis>
 		 <x>-3</x>
 		 <y>-5</y>
 		 <z>0.0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>flap_left3</object-name>
@@ -1280,11 +1280,11 @@ more to come :-)
 		 <y>-3</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <!-- rudder -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>rudder2</object-name>
@@ -1314,12 +1314,12 @@ more to come :-)
 		 <y>0</y>
 		 <z>2.2</z>
 	 </axis>
-	 
+
  </animation>
  <!-- gear management -->
- 
+
  <!-- gear visibility -->
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>tyre.008</object-name>
@@ -1341,7 +1341,7 @@ more to come :-)
 		 </greater-than>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>gear_l_up.002</object-name>
@@ -1356,7 +1356,7 @@ more to come :-)
 		 </greater-than>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>gear_r_up.002</object-name>
@@ -1371,8 +1371,8 @@ more to come :-)
 		 </greater-than>
 	 </condition>
  </animation>
- 
- 
+
+
  <animation>
 	 <type>select</type>
 	 <object-name>axle</object-name>
@@ -1385,7 +1385,7 @@ more to come :-)
 		 </greater-than>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>axle.002</object-name>
@@ -1398,7 +1398,7 @@ more to come :-)
 		 </greater-than>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>axle.003</object-name>
@@ -1411,7 +1411,7 @@ more to come :-)
 		 </greater-than>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>axle.001</object-name>
@@ -1424,7 +1424,7 @@ more to come :-)
 		 </greater-than>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>tyre.008</object-name>
@@ -1438,7 +1438,7 @@ more to come :-)
 		 </greater-than>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>gear_fr_up</object-name>
@@ -1456,9 +1456,9 @@ more to come :-)
 	 </condition>
  </animation>
 
- 
+
  <!-- front gear-->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>tyre.008</object-name>
@@ -1493,7 +1493,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_fr_up</object-name>
@@ -1529,7 +1529,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_fr_up_hydr</object-name>
@@ -1559,7 +1559,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <!-- Compression -->
  <animation>
 	 <type>translate</type>
@@ -1576,9 +1576,9 @@ more to come :-)
 		 <z>1</z>
 	 </axis>
  </animation>
-      
+
       <!-- steering -->
-      
+
       <animation>
 	      <type>rotate</type>
 	      <object-name>tyre.008</object-name>
@@ -1604,7 +1604,7 @@ more to come :-)
 		      <z>1</z>
 	      </axis>
  </animation>
- 
+
  <animation>
 	 <type>spin</type>
 	 <object-name>tyre.008</object-name>
@@ -1631,10 +1631,10 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
 
  <!-- front gear covers -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_cover</object-name>
@@ -1664,7 +1664,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_cover_front</object-name>
@@ -1724,9 +1724,9 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <!-- rear gear covers -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>geardoor_right</object-name>
@@ -1760,7 +1760,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>geardoor_right.001</object-name>
@@ -1790,7 +1790,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>geardoor_right.002</object-name>
@@ -1817,7 +1817,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
   <animation>
 	 <type>rotate</type>
 	 <object-name>geardoor_right.002</object-name>
@@ -1844,7 +1844,7 @@ more to come :-)
 		 <z>1</z>
 	 </axis>
  </animation>
- 
+
 <animation>
 	 <type>rotate</type>
 	 <object-name>geardoor_left</object-name>
@@ -1878,7 +1878,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>geardoor_left.001</object-name>
@@ -1908,7 +1908,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>geardoor_left.002</object-name>
@@ -1935,7 +1935,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>geardoor_left.002</object-name>
@@ -1962,7 +1962,7 @@ more to come :-)
 		 <z>1</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>geardoor_bl.001</object-name>
@@ -1994,11 +1994,11 @@ more to come :-)
 	 </axis>
  </animation>
 
- 
+
  <!-- left gear-->
- 
+
  <!-- left gear 1st move-->
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_l_low</object-name>
@@ -2022,7 +2022,7 @@ more to come :-)
 		 <z>0.5</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>axle</object-name>
@@ -2045,7 +2045,7 @@ more to come :-)
 		 <z>0.5</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_l_up</object-name>
@@ -2072,11 +2072,11 @@ more to come :-)
 		 <z>0.5</z>
 	 </axis>
  </animation>
- 
- 
- 
+
+
+
  <!-- left gear 2nd move-->
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_l_low</object-name>
@@ -2100,7 +2100,7 @@ more to come :-)
 		 <z>0.6</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>axle</object-name>
@@ -2123,7 +2123,7 @@ more to come :-)
 		 <z>0.6</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_l_up</object-name>
@@ -2150,9 +2150,9 @@ more to come :-)
 		 <z>0.6</z>
 	 </axis>
  </animation>
- 
+
  <!-- rotations -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up.002</object-name>
@@ -2182,7 +2182,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up.002</object-name>
@@ -2208,7 +2208,7 @@ more to come :-)
 		 <z>1</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up1</object-name>
@@ -2234,8 +2234,8 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
- 
+
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up1.003</object-name>
@@ -2267,7 +2267,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up1.002</object-name>
@@ -2294,7 +2294,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_l_up1.001</object-name>
@@ -2324,12 +2324,12 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
- 
+
+
  <!-- right gear-->
- 
+
  <!-- right gear first move-->
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_r_low</object-name>
@@ -2353,7 +2353,7 @@ more to come :-)
 		 <z>0.4</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>axle.003</object-name>
@@ -2376,7 +2376,7 @@ more to come :-)
 		 <z>0.4</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_r_up</object-name>
@@ -2403,9 +2403,9 @@ more to come :-)
 		 <z>0.4</z>
 	 </axis>
  </animation>
- 
+
   <!-- right gear 2nd move-->
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_r_low</object-name>
@@ -2429,7 +2429,7 @@ more to come :-)
 		 <z>0.6</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>axle.003</object-name>
@@ -2452,7 +2452,7 @@ more to come :-)
 		 <z>0.6</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>gear_r_up</object-name>
@@ -2479,9 +2479,9 @@ more to come :-)
 		 <z>0.6</z>
 	 </axis>
  </animation>
- 
+
  <!-- rotations -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_r_up.002</object-name>
@@ -2511,7 +2511,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_r_up.002</object-name>
@@ -2537,7 +2537,7 @@ more to come :-)
 		 <z>1</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_r_up1</object-name>
@@ -2563,8 +2563,8 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
- 
+
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_r_up1.001</object-name>
@@ -2596,7 +2596,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_r_up1.001</object-name>
@@ -2623,7 +2623,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gear_r_up1.001</object-name>
@@ -2653,8 +2653,8 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
- 
+
+
  <!-- Compression left gear front and aft-->
  <animation>
 	 <type>translate</type>
@@ -2671,7 +2671,7 @@ more to come :-)
 		 <z>1</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <name>l_gear_comp_aft</name>
@@ -2686,7 +2686,7 @@ more to come :-)
 		 <z>1</z>
 	 </axis>
  </animation>
- 
+
  <!-- Compression right front and aft-->
  <animation>
 	 <type>translate</type>
@@ -2703,7 +2703,7 @@ more to come :-)
 		 <z>1</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <name>r_gear_comp_aft</name>
@@ -2718,7 +2718,7 @@ more to come :-)
 		 <z>1</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>spin</type>
 	 <object-name>tyre.004</object-name>
@@ -2745,7 +2745,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>spin</type>
 	 <object-name>tyre.002</object-name>
@@ -2799,7 +2799,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <animation>
 	 <type>spin</type>
 	 <object-name>tyre.006</object-name>
@@ -2826,7 +2826,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
  <!-- Elevator bits -->
  <animation>
 	 <type>rotate</type>
@@ -2844,7 +2844,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
   <animation>
 	 <type>rotate</type>
 	 <object-name>elevator_right</object-name>
@@ -2861,7 +2861,7 @@ more to come :-)
 		 <z>0</z>
 	 </axis>
  </animation>
- 
+
   <!-- Fwd Canards -->
  <animation>
 	 <type>rotate</type>
@@ -2879,7 +2879,7 @@ more to come :-)
 		 <z>-1</z>
 	 </axis>
  </animation>
- 
+
   <animation>
 	 <type>rotate</type>
 	 <object-name>canard_right</object-name>
@@ -2896,15 +2896,15 @@ more to come :-)
 		 <z>-1</z>
 	 </axis>
  </animation>
- 
+
  <!-- Canopy door and ladder -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>canopy_door</object-name>
 	 <object-name>canopy_door.001</object-name>
 	 <property>canopy/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -2933,14 +2933,14 @@ more to come :-)
 		 <y>1</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>canopy_door.001</object-name>
 	 <property>canopy/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -2969,11 +2969,11 @@ more to come :-)
 		 <y>1</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <!-- Hatch door -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>hatch_door</object-name>
@@ -2981,7 +2981,7 @@ more to come :-)
 	 <object-name>hatch_door1_0</object-name>
 	 <object-name>hatch_handle</object-name>
 	 <property>canopy/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3010,16 +3010,16 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>hatch_door1</object-name>
 	 <object-name>hatch_door1_0</object-name>
 	 <object-name>hatch_handle</object-name>
 	 <property>canopy/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3048,14 +3048,14 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>hatch_handle</object-name>
 	 <property>canopy/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3084,9 +3084,9 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	      <type>pick</type>
 	      <object-name>hatch_handle</object-name>
@@ -3100,8 +3100,8 @@ more to come :-)
 		 </binding>
 	      </action>
       </animation>
-  
-      
+
+
   <!-- bay doors -->
   <animation>
 	 <type>translate</type>
@@ -3109,7 +3109,7 @@ more to come :-)
 	 <object-name>bay_fwd.002</object-name>
 	 <property>sim/multiplay/generic/float[2]</property>
 	 <property>doors/bay_fwd/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3130,15 +3130,15 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
-	 
+
  </animation>
-  
+
   <animation>
 	 <type>rotate</type>
 	 <object-name>bay_fwd.001</object-name>
 	 <property>sim/multiplay/generic/float[2]</property>
 	 <property>doors/bay_fwd/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3159,15 +3159,15 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>bay_fwd.002</object-name>
 	 <property>sim/multiplay/generic/float[2]</property>
 	 <property>doors/bay_fwd/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3188,16 +3188,16 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>bay_intmd.001</object-name>
 	 <object-name>bay_intmd.002</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
 	 <property>doors/bay_fwd/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3218,15 +3218,15 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>bay_intmd.001</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
 	 <property>doors/bay_intmd/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3247,15 +3247,15 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>bay_intmd.002</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
 	 <property>doors/bay_intmd/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3276,16 +3276,16 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>translate</type>
 	 <object-name>bay_aft.001</object-name>
 	 <object-name>bay_aft.002</object-name>
 	 <property>sim/multiplay/generic/float[4]</property>
 	 <property>doors/bay_fwd/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3306,15 +3306,15 @@ more to come :-)
 		 <y>0</y>
 		 <z>1</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>bay_aft.001</object-name>
 	 <property>sim/multiplay/generic/float[4]</property>
 	 <property>doors/bay_aft/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3335,15 +3335,15 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>bay_aft.002</object-name>
 	 <property>sim/multiplay/generic/float[4]</property>
 	 <property>doors/bay_aft/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3364,16 +3364,16 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
- 
+
+
  <animation>
 	 <type>translate</type>
 	 <object-name>refuel_door</object-name>
 	 <property>sim/multiplay/generic/float[5]</property>
 	 <property>doors/refuel_door/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3394,11 +3394,11 @@ more to come :-)
 		 <y>0</y>
 		 <z>-0.25</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <!-- weapon system animation XXXXXX -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>rot_launcher</object-name>
@@ -3411,7 +3411,7 @@ more to come :-)
 	 <object-name>gbu-31.006</object-name>
 	 <object-name>gbu-31.007</object-name>
 	 <property>armament/bay0/launcher-pos-anim</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3432,9 +3432,9 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>gbu-31</object-name>
@@ -3515,8 +3515,8 @@ more to come :-)
 		 </equals>
 	 </condition>
  </animation>
- 
- 
+
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>rot_launcher.001</object-name>
@@ -3529,7 +3529,7 @@ more to come :-)
 	 <object-name>gbu-31.009</object-name>
 	 <object-name>gbu-31.008</object-name>
 	 <property>armament/bay1/launcher-pos-anim</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3550,9 +3550,9 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>gbu-31.015</object-name>
@@ -3633,7 +3633,7 @@ more to come :-)
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>rot_launcher.002</object-name>
@@ -3646,7 +3646,7 @@ more to come :-)
 	 <object-name>gbu-31.022</object-name>
 	 <object-name>gbu-31.023</object-name>
 	 <property>armament/bay2/launcher-pos-anim</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3667,9 +3667,9 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>gbu-31.016</object-name>
@@ -3750,16 +3750,16 @@ more to come :-)
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <!-- sniper pod -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>sniper_pod_head</object-name>
 	 <object-name>sniper_pod_sapphire</object-name>
 	 <object-name>sniper_pod_sapinn</object-name>
 	 <property>armament/sniper-pod/position-norm</property>
-	 
+
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -3796,9 +3796,9 @@ more to come :-)
 		 <y>0</y>
 		 <z>0</z>
 	 </axis>
-	 
+
  </animation>
- 
+
  <animation>
 	<type>pick</type>
 	<object-name>sniper_pod_head</object-name>
@@ -3823,7 +3823,7 @@ more to come :-)
 </animation>
 
 <!-- glass cockpit shaders -->
- 
+
 <animation>
 	<type>shader</type>
 	<shader>chrome</shader>
