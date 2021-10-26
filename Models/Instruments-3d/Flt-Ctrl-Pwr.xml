@@ -1,8 +1,8 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 
-<PropertyList> 
+<PropertyList>
 
- <path>Flt-Ctrl-Pwr.ac</path> 
+ <path>Flt-Ctrl-Pwr.ac</path>
   <animation>
     <object-name>Flt-Ctrl-Pwr</object-name>
     <object-name>Flap-Slat-Resest</object-name>
@@ -40,7 +40,7 @@
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
-  
+
    <animation>
 	 <type>rotate</type>
 	 <object-name>SPOILERS</object-name>
@@ -66,9 +66,9 @@
 		 <z-m> 0.00165/</z-m>
    </center>
  </animation>
- 
+
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>SPOILERS</object-name>
@@ -81,6 +81,50 @@
 			 <property>controls/flight/spoilers</property>
 		 </binding>
 	 </action>
+</animation>
+
+
+<!-- Label Text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Flt-CTRL-PWR</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.07</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.04</x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+</text>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
 </animation>
 
 </PropertyList>

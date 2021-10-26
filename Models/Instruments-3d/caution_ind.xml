@@ -5,9 +5,9 @@ sweat by maggse
 <PropertyList>
 
  <path>caution_ind.ac</path>
- 
+
  <!-- eject switch -->
- 
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>switch_eject</object-name>
@@ -33,9 +33,9 @@ sweat by maggse
 		 <z-m>0.084</z-m>
 	 </center>
  </animation>
- 
+
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_eject</object-name>
@@ -49,7 +49,7 @@ sweat by maggse
 		 </binding>
 	 </action>
 </animation>
- 
+
 
 <!-- caution ind -->
 
@@ -75,7 +75,7 @@ sweat by maggse
 		 </equals>
 	 </condition>
  </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_eject</object-name>
@@ -96,7 +96,7 @@ sweat by maggse
 		 <factor-prop>controls/switches/prep-eject</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_terraviod</object-name>
@@ -117,7 +117,7 @@ sweat by maggse
 		 <factor-prop>controls/switches/terra-report</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_refuel</object-name>
@@ -138,7 +138,7 @@ sweat by maggse
 		 <factor-prop>systems/refuel/contact</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_aftburner</object-name>
@@ -159,7 +159,7 @@ sweat by maggse
 		 <factor-prop>controls/engines/engine[0]/afterburner</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_brake</object-name>
@@ -196,7 +196,7 @@ sweat by maggse
 		 <factor-prop>gear/gear[0]/wow</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_gforce</object-name>
@@ -217,7 +217,7 @@ sweat by maggse
 		 <factor-prop>accelerations/pilot-g</factor-prop>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_eng1</object-name>
@@ -267,7 +267,7 @@ sweat by maggse
 	 </condition>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_eng2.001</object-name>
@@ -317,7 +317,7 @@ sweat by maggse
 		 </condition>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_eng3</object-name>
@@ -367,7 +367,7 @@ sweat by maggse
 		 </condition>
 	 </emission>
 </animation>
- 
+
  <animation>
 	 <type>select</type>
 	 <object-name>rep_eng4</object-name>
@@ -417,8 +417,8 @@ sweat by maggse
 		 </condition>
 	 </emission>
  </animation>
- 
- 
+
+
  <animation>
 	 <type>material</type>
 	 <object-name>switch_eject</object-name>
@@ -439,6 +439,49 @@ sweat by maggse
 		 <blue>0.0</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
+</animation>
+
+<!-- Label Text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Caution</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.07</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.04</x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+</text>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
 </animation>
 
 
