@@ -64,7 +64,7 @@ B-1B set file.
         <default-field-of-view-deg>55</default-field-of-view-deg>
       </config>
     </view>
-    
+
      <view n="96001">
       <name>OSO view</name>
       <type>lookfrom</type>
@@ -91,7 +91,7 @@ B-1B set file.
         <default-field-of-view-deg>55</default-field-of-view-deg>
       </config>
     </view>
-    
+
     <view n="96003">
       <name>Sniper Pod view</name>
       <type>lookfrom</type>
@@ -107,8 +107,8 @@ B-1B set file.
         <default-field-of-view-deg>50</default-field-of-view-deg>
       </config>
     </view>
-    
-    
+
+
 
 <!-- Shift the camera target point back -->
     <view n="1">
@@ -141,7 +141,7 @@ B-1B set file.
       <audible>true</audible>
       <path>Aircraft/B-1B/Sounds/b-1b-sound.xml</path>
     </sound>
-    
+
     <submodels>
 	    <serviceable type="bool">true</serviceable>
 	    <path>Aircraft/B-1B/Submodels/sub_lancer.xml</path>
@@ -195,11 +195,11 @@ B-1B set file.
   </model>
 
   <airport>
-        <runways> 
+        <runways>
               <start-offset-m>35</start-offset-m>
         </runways>
   </airport>
-  
+
     <multiplay>
 	<generic>
 		<!--<float n="0">0</float> free  -->
@@ -287,6 +287,14 @@ B-1B set file.
                     <dialog-name>pushback</dialog-name>
                   </binding>
                 </item>
+        <item n="11">
+            <label>MP damage log</label>
+            <name>flightlog</name>
+            <binding>
+                <command>dialog-show</command>
+                <dialog-name>flightlog</dialog-name>
+            </binding>
+        </item>
 
           <item n="11">
             <label>Select Livery</label>
@@ -317,7 +325,7 @@ B-1B set file.
       </parameters>
     </redout>
   </rendering>
-    
+
   <wing-sweep>
     <setting>0.00</setting>
     <setting>0.23</setting>
@@ -370,9 +378,9 @@ B-1B set file.
   <!-- AoA Indexer target 1.0 deg -->
      <aoa-indexer>
        <too-slow-deg>2.5</too-slow-deg>  <!-- target +1.5 deg -->
-       <slow-deg>1.5</slow-deg>          <!-- target +0.5 deg -->         
-       <fast-deg>0.5</fast-deg>          <!-- target -0.5 deg -->         
-       <too-fast-deg>-0.5</too-fast-deg>  <!-- target -1.5 deg -->         
+       <slow-deg>1.5</slow-deg>          <!-- target +0.5 deg -->
+       <fast-deg>0.5</fast-deg>          <!-- target -0.5 deg -->
+       <too-fast-deg>-0.5</too-fast-deg>  <!-- target -1.5 deg -->
      </aoa-indexer>
 
     <help>
@@ -393,19 +401,19 @@ B-1B set file.
 	      <name>l</name>
 	      <desc>Flare out</desc>
       </key>
-       <key> 
+       <key>
 	       <name>L</name>
 		       <desc>Weapon launch sequence</desc>
        </key>
-       <key> 
+       <key>
 		       <name>r</name>
 		       <desc>Select next ordonance</desc>
        </key>
-       <key> 
+       <key>
 		       <name>R</name>
 		       <desc>Select prev ordonance</desc>
        </key>
-       <key> 
+       <key>
 		       <name>t</name>
 		       <desc>Assign target</desc>
        </key>
@@ -454,7 +462,7 @@ B-1B set file.
       <line>7. Close bay doors</line>
       <line>Good Luck!</line>
     </help>
-    
+
    <!--<ai>
 
     </ai>-->
@@ -474,6 +482,27 @@ B-1B set file.
 		</refuel>
   </systems>
 
+  <payload>
+         <armament>
+             <models>Aircraft/B-1B/Models/emesary/</models>
+             <MLW-count>0</MLW-count>
+             <msg type="bool">false</msg>
+         </armament>
+         <d-config>
+             <full_damage_dist_m type="double">3</full_damage_dist_m>
+             <use_hitpoints_instead_of_failure_modes_bool type="bool">false</use_hitpoints_instead_of_failure_modes_bool>
+             <hp_max type="double">80</hp_max>
+             <hitable_by_air_munitions type="bool">true</hitable_by_air_munitions>
+             <hitable_by_cannon type="bool">true</hitable_by_cannon>
+             <is_fleet type="bool">false</is_fleet>
+             <rwr_to_screen type="bool">true</rwr_to_screen>
+             <rwr_audio_extended type="bool">false</rwr_audio_extended>
+             <tacview_supported type="bool">false</tacview_supported>
+             <m28_auto type="bool">false</m28_auto>
+             <mlw_max type="double">2.25</mlw_max>
+             <auto_flare_caller type="bool">true</auto_flare_caller>
+         </d-config>
+     </payload>
 
   <autopilot>
     <settings>
@@ -518,25 +547,25 @@ B-1B set file.
     <engines>
 	    <engine n="0">
 		    <cutoff type="double">0</cutoff>
-		    
+
 	    </engine>
 	    <engine n="1">
 		    <cutoff type="double">0</cutoff>
-		    
+
 	    </engine>
 	    <engine n="2">
 		    <cutoff type="double">0</cutoff>
-		    
+
 	    </engine>
 	    <engine n="3">
 		    <cutoff type="double">0</cutoff>
-		    
+
 	    </engine>
-	    
+
   </engines>
 
 </controls>
-  
+
 <!-- Engine indexes -->
   <engines>
     <engine n="0">
@@ -618,12 +647,12 @@ B-1B set file.
       <display-mode archive="y">arc</display-mode>
     </wxradar>
   </instrumentation>
-  
+
   <input>
 	  <keyboard>
-		  
+
 		  <!-- map keys for wingsweep -->
-		  
+
 		  <key n="102">
 			  <name>f</name>
 			  <desc>Increase sweep</desc>
@@ -638,7 +667,7 @@ B-1B set file.
 				  </binding>
 			  </mod-up>
 		  </key>
-		  
+
 		  <key n="70">
 			  <name>F</name>
 			  <desc>Decrease sweep</desc>
@@ -653,7 +682,7 @@ B-1B set file.
 				  </binding>
 			  </mod-up>
  </key>
- 
+
     <key n="108">
 	 <name>l</name>
 	 <desc>Flare out</desc>
@@ -662,11 +691,11 @@ B-1B set file.
 		<property>controls/switches/flare</property>
 	 </binding>
    </key>
-   
-   <key n="76"> 
+
+   <key n="76">
 		<name>L</name>
 		       <desc>automated bomb launcher</desc>
-		       <binding> 
+		       <binding>
 			        <command>nasal</command>
 		  <script>weapons.rot_launch_rel()</script>
 		</binding>
@@ -675,7 +704,7 @@ B-1B set file.
 		  <property>armament/auto-release</property>
 		       </binding>
   </key>
-  
+
   <key n="84">
 				<name>T</name>
 				<desc>Autotrim cancel</desc>
@@ -688,7 +717,7 @@ B-1B set file.
 					</script>
 				</binding>
   </key>
-  
+
   <key n="114">
 				<name>r</name>
 				<desc>Select next Ordonance</desc>
@@ -697,7 +726,7 @@ B-1B set file.
 					<script>weapons.target_number(1)</script>
 				</binding>
   </key>
-  
+
   <key n="82">
 				<name>R</name>
 				<desc>Select prev Ordonance</desc>
@@ -706,7 +735,7 @@ B-1B set file.
 					<script>weapons.target_number(-1)</script>
 				</binding>
   </key>
-  
+
   <key n="116">
 				<name>t</name>
 				<desc>Target designator</desc>
@@ -731,7 +760,7 @@ B-1B set file.
 	<b1b>
 		<file>Aircraft/B-1B/Nasal/b1b.nas</file>
 		<file>Aircraft/B-1B/Nasal/cdu900.nas</file>
-	</b1b>	
+	</b1b>
 	<flightcontrols>
 		<file>Aircraft/B-1B/Nasal/flightcontrols.nas</file>
 	</flightcontrols>
@@ -741,10 +770,12 @@ B-1B set file.
 	<!-- <GMM>
 		<file>Aircraft/B-1B/Nasal/weapons.nas</file>
 	</GMM> -->
+    <damage>
+        <file>Aircraft/B-1B/Nasal/damage.nas</file>
+    </damage>
 	<emesary>
 		<file>Aircraft/B-1B/Nasal/emesary.nas</file>
         <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>
-        <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
 	</emesary>
 	<tfs>
 		<file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
@@ -773,22 +804,25 @@ B-1B set file.
 		<file>Aircraft/B-1B/Nasal/wso_mfd.nas</file>
 		<file>Aircraft/B-1B/Nasal/fuel_load.nas</file>
 		<file>Aircraft/B-1B/Nasal/target_monitor.nas</file>
-		<file>Aircraft/B-1B/Nasal/damage.nas</file>
 	</weapons>
         <fuel>
 		<file>Aircraft/B-1B/Nasal/aar.nas</file>
 	</fuel>
     <blacklist>
-        <file>Aircraft/B-1B/Nasal/blacklist.nas</file> 
+        <file>Aircraft/B-1B/Nasal/blacklist.nas</file>
     </blacklist>
-  <instrumentation>
-   <iff>
-    <file>Aircraft/B-1B/Nasal/iff.nas</file>
-   </iff>
-  </instrumentation>
-  <liveries>
-    <file>Aircraft/B-1B/Nasal/liveries.nas</file>
-  </liveries>
+    <instrumentation>
+        <iff>
+            <file>Aircraft/B-1B/Nasal/iff.nas</file>
+        </iff>
+    </instrumentation>
+    <liveries>
+        <file>Aircraft/B-1B/Nasal/liveries.nas</file>
+    </liveries>
+    <notifications>
+        <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
+        <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
+    </notifications>
 </nasal>
 
 </PropertyList>
