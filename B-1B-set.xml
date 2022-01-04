@@ -781,10 +781,6 @@ B-1B set file.
     <damage>
         <file>Aircraft/B-1B/Nasal/damage.nas</file>
     </damage>
-	<emesary>
-		<file>Aircraft/B-1B/Nasal/emesary.nas</file>
-        <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>
-	</emesary>
 	<tfs>
 		<file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
 	</tfs>
@@ -833,7 +829,7 @@ B-1B set file.
     </notifications>
     <vector>
         <file>Aircraft/B-1B/Nasal/vector.nas</file>
-    </vector>    
+    </vector>
 </nasal>
 
 </PropertyList>
