@@ -492,6 +492,7 @@ B-1B set file.
              <MAW-bearing type="double">0</MAW-bearing>
              <MAW-active type="bool">false</MAW-active>
              <msg type="bool">false</msg>
+             <spike type="bool">false</spike>
          </armament>
          <d-config>
              <full_damage_dist_m type="double">3</full_damage_dist_m>
