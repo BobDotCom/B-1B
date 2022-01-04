@@ -762,6 +762,13 @@ B-1B set file.
 
 
 <nasal>
+    <notifications>
+        <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
+        <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
+    </notifications>
+    <vector>
+        <file>Aircraft/B-1B/Nasal/vector.nas</file>
+    </vector>
     <armament>
         <file>Aircraft/B-1B/Nasal/missile-code.nas</file>
     </armament>
@@ -823,13 +830,6 @@ B-1B set file.
     <liveries>
         <file>Aircraft/B-1B/Nasal/liveries.nas</file>
     </liveries>
-    <notifications>
-        <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
-        <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
-    </notifications>
-    <vector>
-        <file>Aircraft/B-1B/Nasal/vector.nas</file>
-    </vector>
 </nasal>
 
 </PropertyList>
