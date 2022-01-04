@@ -2,6 +2,15 @@ _setlistener("/sim/signals/fdm-initialized", func {
 	init_b1b();
 });
 
+var e0 = compat_failure_modes.fail_engine("engine");#
+    FailureMgr.add_failure_mode("engines/engine", "Engine 1", e0);#
+    var e1 = compat_failure_modes.fail_engine("engine[1]");#
+    FailureMgr.add_failure_mode("engines/engine[1]", "Engine 2", e1);#
+    var e2 = compat_failure_modes.fail_engine("engine[2]");#
+    FailureMgr.add_failure_mode("engines/engine[2]", "Engine 3", e2);#
+    var e3 = compat_failure_modes.fail_engine("engine[3]");#
+    FailureMgr.add_failure_mode("engines/engine[3]", "Engine 4", e3);#
+
 var init_b1b = func {
 setprop("systems/refuel/serviceable", 'false');
 setprop("instrumentation/teravd/target-vfpm-exec", 0);
