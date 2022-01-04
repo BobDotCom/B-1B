@@ -485,7 +485,12 @@ B-1B set file.
   <payload>
          <armament>
              <models>Aircraft/B-1B/Models/emesary/</models>
-             <MLW-count>0</MLW-count>
+             <enable-craters type="bool">true</enable-craters>
+             <MLW-bearing type="double">0</MLW-bearing>
+             <MLW-count type="int">0</MLW-count>
+             <MLW-launcher type="string"></MLW-launcher>
+             <MAW-bearing type="double">0</MAW-bearing>
+             <MAW-active type="bool">false</MAW-active>
              <msg type="bool">false</msg>
          </armament>
          <d-config>
@@ -757,6 +762,9 @@ B-1B set file.
 
 
 <nasal>
+    <armament>
+        <file>Aircraft/B-1B/Nasal/missile-code.nas</file>
+    </armament>
 	<b1b>
 		<file>Aircraft/B-1B/Nasal/b1b.nas</file>
 		<file>Aircraft/B-1B/Nasal/cdu900.nas</file>
@@ -823,6 +831,9 @@ B-1B set file.
         <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
         <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
     </notifications>
+    <vector>
+        <file>Aircraft/B-1B/Nasal/vector.nas</file>
+    </vector>    
 </nasal>
 
 </PropertyList>
