@@ -3,7 +3,7 @@
  <name>weapons</name>
  <modal>false</modal>
  <layout>vbox</layout>
- 
+
  <text>
     <label>Fuel Management</label>
  </text>
@@ -46,9 +46,9 @@
   <text>
     <label>Weapon Management</label>
   </text>
-	  
+
  <hrule/>
- 
+
   <!--<nasal>
     <open>
 	#nasal
@@ -64,12 +64,12 @@
    </text>
   <group>
    <layout>vbox</layout>
-    
+
     <text>
     <label>Load bays with 8 guidable GBU-31 2000lb bombs</label>
     <halign>left</halign>
    </text>
-   
+
   <button>
 	<legend>Load Guided Ordonance - FWD</legend>
 	<default>true</default>
@@ -107,36 +107,10 @@
           </binding>
   </button>
   </group>
-  
-  <button>
-	<legend>Enable/Disable MP-Messaging</legend>
-	<default>true</default>
-	<pref-width>230</pref-width>
-	  <binding>
-		<command>nasal</command>
-		<script>weapons.mp_messaged()</script>
-	  </binding>
-          <binding>
-            <command>dialog-apply</command>
-          </binding>
-  </button>
-  
-  <button>
-	<legend>Enable/Disable Combat Damage</legend>
-	<default>true</default>
-	<pref-width>230</pref-width>
-	  <binding>
-		<command>nasal</command>
-		<script>weapons.mp_damage()</script>
-	  </binding>
-          <binding>
-            <command>dialog-apply</command>
-          </binding>
-  </button>
-  
+
   <hrule/>
-    
-    
+
+
     <text>
     <label>Target Coordinates</label>
     </text>
@@ -152,9 +126,9 @@
     <text>
     <label></label>
     </text>
-    
+
   <hrule/>
-  
+
   <button>
     <legend>Close</legend>
     <binding>
