@@ -175,16 +175,22 @@ foreach(var mp; props.globals.getNode("/ai/models").getChildren("multiplayer")){
 	if (distance < 100) {
 		typeOrd = "GBU-31";
 		mp_found = 1;
-		if ( getprop("armament/mp-messaging") == 0 ) {
+		if ( getprop("payload/armament/msg") == 0 ) {
 			screen.log.write(typeOrd ~ " hit: " ~  mp.getNode("callsign").getValue());
 		} else {
-			defeatSpamFilter(sprintf( typeOrd~" exploded: %01.1f", distance) ~ " meters from: " ~ mp.getNode("callsign").getValue());
+			var msg = notifications.ArmamentNotification.new("mhit", 4, 21+20);#typeID should match the ordnance number in damage.nas
+        msg.RelativeAltitude = 0;
+        msg.Bearing = 0;
+        msg.Distance = distance;
+        msg.RemoteCallsign = mp.getNode("callsign").getValue();
+        notifications.hitBridgedTransmitter.NotifyAll(msg);
+        damage.damageLog.push(sprintf( typeOrd~" exploded: %01.1f", distance) ~ " meters from: " ~ mp.getNode("callsign").getValue());
 		}
 	}
 }
 
 if ( mp_found == 0 ) {
-	if ( getprop("armament/mp-messaging") == 0 ) {
+	if ( getprop("payload/armament/msg") == 0 ) {
 		screen.log.write(b_string ~ " - Rack "~p_string~": GBU-31 positive impact");
 	} else {
 		setprop("/sim/multiplay/chat",b_string ~ " - Rack "~p_string~": GBU-31 positive impact");
