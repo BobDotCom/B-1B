@@ -4,9 +4,9 @@
 # 2.) confirm/load coordinates by launching target_des() - (I bound the t key to launch the function)
 #     first click/target_des() stores coordinates for bomb0, next click/target_des() for bomb1 (up to 3)
 # 3.) Then launch this script (function: launch()) (requires the B-1B(cvs) and Vulcan to be installed)
-# The script will guide up to 4 models to preselected targets (for each model the script has to be 
+# The script will guide up to 4 models to preselected targets (for each model the script has to be
 # called) (by mouseclick/target_des()) and scan for impact;
-# If an impact is detected, an impact report is created (compatible with submodels) 
+# If an impact is detected, an impact report is created (compatible with submodels)
 # and crater models placed (from vulcan)
 # In case you want to change the objects model, change file/path "Aircraft/B-1B/Models/gbu-31i.xml"
 # in the script below (block bomb model placing)
@@ -171,7 +171,7 @@ foreach(var mp; props.globals.getNode("/ai/models").getChildren("multiplayer")){
 	var malt = mp.getNode("position/altitude-ft").getValue() * FT2M;
 	var selectionPos = geo.Coord.new().set_latlon(mlat, mlon, malt);
 	var distance = impactPos.distance_to(selectionPos);
-	
+
 	if (distance < 100) {
 		typeOrd = "GBU-31";
 		mp_found = 1;
@@ -193,7 +193,7 @@ if ( mp_found == 0 ) {
 	if ( getprop("payload/armament/msg") == 0 ) {
 		screen.log.write(b_string ~ " - Rack "~p_string~": GBU-31 positive impact");
 	} else {
-		setprop("/sim/multiplay/chat",b_string ~ " - Rack "~p_string~": GBU-31 positive impact");
+		damage.damageLog.push("GBU-31 positive impact.");
 	}
 }
 
@@ -242,7 +242,7 @@ var defeatSpamFilter = func (str) {
   for (var i = 0; i < size(spamList); i += 1) {
     append(newList, spamList[i]);
   }
-  spamList = newList;  
+  spamList = newList;
 }
 
 var spamLoop = func {
