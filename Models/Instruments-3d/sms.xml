@@ -18,6 +18,12 @@ maggse
 			      <command>nasal</command>
 			      <script>b1b.bay_fwd(1)</script>
 		 </binding>
+	 <emission>
+		 <red>0.0</red>
+		 <green>0.9</green>
+		 <blue>0.0</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
 
 	 </action>
 </animation>
@@ -447,7 +453,7 @@ maggse
    <type>rotate</type>
    <object-name>safety.006</object-name>
    <property>controls/switches/safety.006</property>
-   <factor>30</factor>
+   <factor>45</factor>
    <min>0</min>
    <max>1</max>
    <center>
@@ -470,7 +476,7 @@ maggse
       <binding>
         <command>property-toggle</command>
         <property>controls/switches/safety.006</property>
-        <factor>90</factor>
+        <factor>45</factor>
         <min>0</min>
         <max>1</max>
       </binding>
@@ -542,8 +548,8 @@ maggse
   <object-name>sms_button.026</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
+		 <green>0.0</green>
+		 <blue>0.3</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

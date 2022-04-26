@@ -107,8 +107,8 @@ maggse
   <object-name>bombnav_button.022</object-name>
 	 <emission>
 		<red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
+		 <green>0.0</green>
+		 <blue>0.3</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
