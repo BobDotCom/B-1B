@@ -480,7 +480,7 @@ maggse
  <animation>
    <type>rotate</type>
    <object-name>jettison</object-name>
-   <property>controls/armament/release-all</property>
+   <property>armament/oso/auto-release</property>
    <factor>45</factor>
    <min>0</min>
    <max>1</max>
@@ -503,7 +503,7 @@ maggse
     <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>controls/armament/release-all</property>
+        <property>armament/oso/auto-release</property>
         <factor>0</factor>
         <min>0</min>
         <max>1</max>
@@ -541,9 +541,9 @@ maggse
   <object-name>sms_button.025</object-name>
   <object-name>sms_button.026</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

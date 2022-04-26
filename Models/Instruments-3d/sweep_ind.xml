@@ -163,7 +163,7 @@ maggse
 	 <center>
 		 <x-m> 0.00165</x-m>
 		 <y-m>-0.04392</y-m>
-		 <z-m> 0.01646</z-m>
+		 <z-m> 0.02134</z-m>
 	 </center>
 
  </animation>
@@ -308,6 +308,9 @@ maggse
 	 <object-name>spoilerr</object-name>
 	 <object-name>spoilerl</object-name>
 	 <object-name>rudder</object-name>
+     <object-name>slats</object-name>
+     <object-name>slats.001</object-name>
+     <object-name>speed_brake</object-name>
 	 <object-name>spoiler_l_1</object-name>
 	 <object-name>spoiler_l_1.001</object-name>
 	 <object-name>spoiler_r_1</object-name>
@@ -319,9 +322,9 @@ maggse
 	 <object-name>stab</object-name>
 	 <object-name>glas_face.007</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

@@ -66,9 +66,9 @@ hacked by maggse
      <z>0.0</z>
    </axis>
    <center>
-     <x-m>0.002</x-m>
-     <y-m>-0.002</y-m>
-     <z-m>-0.040</z-m>
+     <x-m> 0.00584</x-m>
+     <y-m> 0.000025</y-m>
+     <z-m>-0.04049</z-m>
    </center>
  </animation>
 
@@ -183,10 +183,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrradar range adjustments -->
@@ -332,10 +332,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -348,10 +348,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -397,10 +397,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -413,10 +413,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -462,10 +462,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -478,10 +478,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -527,10 +527,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -543,10 +543,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -592,10 +592,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -608,10 +608,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -657,10 +657,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -673,10 +673,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -722,10 +722,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -738,10 +738,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -789,10 +789,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -805,10 +805,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -833,10 +833,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -849,10 +849,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -887,10 +887,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -903,10 +903,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -931,10 +931,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -947,10 +947,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -984,10 +984,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1000,10 +1000,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1028,10 +1028,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1044,10 +1044,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1081,10 +1081,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1097,10 +1097,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1125,10 +1125,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1141,10 +1141,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1178,10 +1178,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1194,10 +1194,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1222,10 +1222,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1238,10 +1238,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1275,10 +1275,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1291,10 +1291,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1319,10 +1319,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1335,10 +1335,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1373,10 +1373,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1389,10 +1389,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1417,10 +1417,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1433,10 +1433,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1471,10 +1471,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1487,10 +1487,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1515,10 +1515,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1531,10 +1531,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1569,10 +1569,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1585,10 +1585,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1613,10 +1613,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1629,10 +1629,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1667,10 +1667,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1683,10 +1683,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1711,10 +1711,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1727,10 +1727,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1765,10 +1765,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1781,10 +1781,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1809,10 +1809,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1825,10 +1825,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1863,10 +1863,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1879,10 +1879,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1907,10 +1907,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1923,10 +1923,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -1960,10 +1960,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -1976,10 +1976,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2004,10 +2004,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2020,10 +2020,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -2056,11 +2056,11 @@ hacked by maggse
 	<y>0</y>
 	<z>0</z>
 	</axis>
-	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+    <center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2073,10 +2073,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2101,10 +2101,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2117,10 +2117,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000083</y-m>
+		<z-m>-0.03695</z-m>
+	</center>
 </animation>
 
 <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadf -->
@@ -2146,10 +2146,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00436</x-m>
+		<y-m> 0.000061</y-m>
+		<z-m>-0.03104</z-m>
+	</center>
 </animation>
 
 <!-- tacannnnnnnnnnnnn -->
@@ -2170,9 +2170,9 @@ hacked by maggse
 	<object-name>tacan</object-name>
 	<property>orientation/heading-deg</property>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00383</x-m>
+		<y-m> 0.000057</y-m>
+		<z-m>-0.02901</z-m>
 	</center>
 	<axis>
 		<x>1</x>
@@ -2191,9 +2191,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00383</x-m>
+		<y-m> 0.000057</y-m>
+		<z-m>-0.02901</z-m>
 	</center>
 </animation>
 
@@ -2277,9 +2277,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2293,9 +2293,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2338,9 +2338,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2354,9 +2354,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2399,9 +2399,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2415,9 +2415,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2460,9 +2460,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2476,9 +2476,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2521,9 +2521,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2537,9 +2537,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2582,9 +2582,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2598,9 +2598,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00584</x-m>
+		<y-m> 0.000011</y-m>
+		<z-m>-0.03554</z-m>
 	</center>
 </animation>
 
@@ -2639,9 +2639,9 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
+	 <x-m> 0.00584</x-m>
+     <y-m> 0.000068</y-m>
+     <z-m>-0.03704</z-m>
    </center>
 </animation>
 
@@ -2655,9 +2655,9 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
+	 <x-m> 0.00584</x-m>
+     <y-m> 0.000068</y-m>
+     <z-m>-0.03704</z-m>
    </center>
 </animation>
 
@@ -2685,11 +2685,11 @@ hacked by maggse
 	<y>0</y>
 	<z>0</z>
     </axis>
-    <center>
-	  <x-m>0.0</x-m>
-          <y-m>0.0</y-m>
-          <z-m>-0.047</z-m>
-    </center>
+	<center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2702,10 +2702,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -2730,10 +2730,10 @@ hacked by maggse
 	  <z>0</z>
 	</axis>
 	<center>
-	  <x-m>0.0</x-m>
-          <y-m>0.0</y-m>
-          <z-m>-0.047</z-m>
-        </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2746,10 +2746,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -2775,10 +2775,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2791,10 +2791,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2819,10 +2819,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2835,10 +2835,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -2864,10 +2864,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2880,10 +2880,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2908,10 +2908,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2924,10 +2924,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -2953,10 +2953,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2969,10 +2969,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -2997,10 +2997,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -3013,10 +3013,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -3040,10 +3040,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -3056,10 +3056,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -3084,10 +3084,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -3100,10 +3100,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -3127,10 +3127,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -3143,10 +3143,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -3171,10 +3171,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
  <animation>
@@ -3187,10 +3187,10 @@ hacked by maggse
 	<z>0</z>
 	</axis>
 	<center>
-	 <x-m>0.0</x-m>
-     <y-m>0.0</y-m>
-     <z-m>-0.047</z-m>
-   </center>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
+	</center>
 </animation>
 
 <animation>
@@ -3214,9 +3214,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3230,9 +3230,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3258,9 +3258,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3274,9 +3274,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3301,9 +3301,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3317,9 +3317,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3345,9 +3345,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3361,9 +3361,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3388,9 +3388,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3404,9 +3404,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3432,9 +3432,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3448,9 +3448,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3475,9 +3475,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3491,9 +3491,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3519,9 +3519,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3535,9 +3535,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3562,9 +3562,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3578,9 +3578,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3606,9 +3606,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3622,9 +3622,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3649,9 +3649,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3665,9 +3665,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3693,9 +3693,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3709,9 +3709,9 @@ hacked by maggse
 		<z>0</z>
 	</axis>
 	<center>
-		<x-m>0.0</x-m>
-		<y-m>0.0</y-m>
-		<z-m>-0.047</z-m>
+		<x-m> 0.00528</x-m>
+		<y-m> 0.00000</y-m>
+		<z-m>-0.03626</z-m>
 	</center>
 </animation>
 
@@ -3721,9 +3721,9 @@ hacked by maggse
 	<object-name>btn_rrngu</object-name>
 	<object-name>btn_rrngd</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

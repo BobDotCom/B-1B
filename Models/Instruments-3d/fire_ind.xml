@@ -27,11 +27,14 @@ sweat by maggse
  <animation>
 	 <type>material</type>
 	 <object-name>switch_firetest</object-name>
-     <object-name>face</object-name>
+     <object-name>switch_ANN</object-name>
+     <object-name>FIRE_WARN</object-name>
+     <object-name>switch_lagent</object-name>
+     <object-name>switch_ragent</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -93,7 +96,7 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_fire1</object-name>
 	 <emission>
-		 <red>0.3</red>
+		 <red>0.9</red>
 		 <green>0.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>controls/engines/engine[0]/on-fire</factor-prop>
@@ -139,7 +142,7 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_fire2</object-name>
 	 <emission>
-		 <red>0.3</red>
+		 <red>0.9</red>
 		 <green>0.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>controls/engines/engine[1]/on-fire</factor-prop>
@@ -185,7 +188,7 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_fire3</object-name>
 	 <emission>
-		 <red>0.3</red>
+		 <red>0.9</red>
 		 <green>0.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>controls/engines/engine[2]/on-fire</factor-prop>
@@ -231,7 +234,7 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_fire4</object-name>
 	 <emission>
-		 <red>0.3</red>
+		 <red>0.9</red>
 		 <green>0.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>controls/engines/engine[3]/on-fire</factor-prop>
@@ -252,7 +255,7 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_fire5</object-name>
 	 <emission>
-		 <red>0.3</red>
+		 <red>0.9</red>
 		 <green>0.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>controls/switches/fire</factor-prop>
@@ -274,7 +277,7 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_fire6</object-name>
 	 <emission>
-		 <red>0.3</red>
+		 <red>0.9</red>
 		 <green>0.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>controls/switches/fire</factor-prop>
@@ -320,7 +323,7 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_firelapu</object-name>
 	 <emission>
-		 <red>0.3</red>
+		 <red>0.9</red>
 		 <green>0.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>controls/APU/APUL-fire</factor-prop>
@@ -367,7 +370,7 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_firerapu</object-name>
 	 <emission>
-		 <red>0.3</red>
+		 <red>0.9</red>
 		 <green>0.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>controls/APU/APUR-fire</factor-prop>
@@ -380,7 +383,7 @@ sweat by maggse
 <text>
 	<name>LabelText</name>
 	<type type="string">literal</type>
-		<text type="string">FIRE</text>
+		<text type="string">FIRE_WARN</text>
 	<draw-text type="bool">true</draw-text>
 	<font>Helvetica.txf</font>
 		<character-size type="double">0.012</character-size>
@@ -394,9 +397,9 @@ sweat by maggse
 	</font-resolution>
 	<alignment>center-center</alignment>
 	<offsets>
-		<x-m> 0.04</x-m>
-		<y-m> 0.0 </y-m>
-		<z-m> 0.0 </z-m>
+		<x-m> 0.20</x-m>
+		<y-m>-0.45</y-m>
+		<z-m> 0.14</z-m>
 	</offsets>
 </text>
 

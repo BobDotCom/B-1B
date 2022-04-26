@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-
-<type>material</type>
-
-   <name>102kt</name>
-      <path>102kt.ac</path>
-
+   <path>102kt.ac</path>
    <animation>
-       <object-name>cube</object-name>
+    <type>material</type>
+       <object-name>Cube</object-name>
+	   <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	  </emission>
     </animation>
 
 </PropertyList>
-
 

@@ -7,8 +7,8 @@
   <animation>
     <object-name>Boot</object-name>
     <object-name>Cargo</object-name>
-    <object-name>NWS_Base</object-name>   
-    <object-name>NWS_Switch</object-name> 
+    <object-name>NWS_Base</object-name>
+    <object-name>NWS_Switch</object-name>
     <object-name>RHFS</object-name>
     <object-name>Trim</object-name>
     <object-name>Wings</object-name>
@@ -16,23 +16,23 @@
   </animation>
 
   <animation>
-    <type>material</type>       
-    <object-name>NWS_Switch</object-name> 
+    <type>material</type>
+    <object-name>NWS_Switch</object-name>
     <object-name>Trim</object-name>
     <object-name>Wings</object-name>
 	<emission>
-		<red>0.1</red>
-		<green>0.0</green>
-		<blue>0.0</blue>
+		<red>0.9</red>
+		<green>0.5</green>
+		<blue>0.9</blue>
 		<factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
 
  <animation>
   <type>rotate</type>
-    <object-name>NWS_Base</object-name> 
-    <object-name>Cargo</object-name>  
-    <object-name>NWS_Switch</object-name> 
+    <object-name>NWS_Base</object-name>
+    <object-name>Cargo</object-name>
+    <object-name>NWS_Switch</object-name>
     <object-name>RHFS</object-name>
     <object-name>Trim</object-name>
     <object-name>Wings</object-name>
@@ -51,9 +51,9 @@
 
  <animation>
   <type>rotate</type>
-    <object-name>NWS_Base</object-name> 
-    <object-name>Cargo</object-name>   
-    <object-name>NWS_Switch</object-name> 
+    <object-name>NWS_Base</object-name>
+    <object-name>Cargo</object-name>
+    <object-name>NWS_Switch</object-name>
     <object-name>RHFS</object-name>
     <object-name>Trim</object-name>
     <object-name>Wings</object-name>

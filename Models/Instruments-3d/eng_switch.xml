@@ -5,7 +5,7 @@ sweat by maggse
 <PropertyList>
 
  <path>eng_switch.ac</path>
- 
+
 
  <!-- engines on/off -->
 
@@ -44,9 +44,9 @@ sweat by maggse
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
- 
+
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_eng0</object-name>
@@ -185,7 +185,7 @@ sweat by maggse
 			 <value>1</value>
 		   </equals>
 	          </and>
-		
+
 		  <equals>
 			 <property>controls/engines/engine[1]/cutoff</property>
 			 <value>0</value>
@@ -392,9 +392,9 @@ sweat by maggse
 	<type>material</type>
 	<object-name>fuel_cov.005</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

@@ -1,6 +1,6 @@
 <!--
 Syd Adams
-777-200 PFD 
+777-200 PFD
 -->
 
 <PropertyList>
@@ -16,8 +16,25 @@ Syd Adams
     <object-name>HDGface</object-name>
     <object-name>AI</object-name>
     <object-name>PFDscreen</object-name>
+    <object-name>brt</object-name>
+    <object-name>cont</object-name>
+    <object-name>gizmo</object-name>
+    <object-name>fuses</object-name>
 </animation>
 
+<animation>
+   <type>material</type>
+    <object-name>fuses</object-name>
+    <object-name>brt</object-name>
+    <object-name>cont</object-name>
+    <object-name>gizmo</object-name>
+   	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
  <animation>
    <type>select</type>
    <object-name>GSscale</object-name>
@@ -66,7 +83,7 @@ Syd Adams
      </equals>
    </condition>
  </animation>
- 
+
  <animation>
    <type>select</type>
    <object-name>LOCscale</object-name>
@@ -96,7 +113,7 @@ Syd Adams
        <ind> 10.0</ind>
        <dep>0.0253</dep>
      </entry>
-</interpolation> 
+</interpolation>
   <axis>
    <x>0</x>
    <y>1</y>
@@ -114,9 +131,9 @@ Syd Adams
      <z>0.0</z>
    </axis>
    <center>
-     <x-m>0.007</x-m>
-     <y-m>-0.014</y-m>
-     <z-m>0.005</z-m>
+     <x-m> 0.006970</x-m>
+     <y-m>-0.000016</y-m>
+     <z-m> 0.004380</z-m>
    </center>
  </animation>
 
@@ -131,9 +148,9 @@ Syd Adams
      <z>1.0</z>
    </axis>
    <center>
-     <x-m>0.007</x-m>
-     <y-m>-0.014</y-m>
-     <z-m>0.005</z-m>
+     <x-m> 0.000697</x-m>
+     <y-m>-0.000016</y-m>
+     <z-m> 0.00438</z-m>
    </center>
  </animation>
 
@@ -175,9 +192,9 @@ Syd Adams
      <z>0.0</z>
    </axis>
    <center>
-     <x-m>0.0</x-m>
-     <y-m>-0.014</y-m>
-     <z-m>0.005</z-m>
+     <x-m>0.02</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.12</z-m>
    </center>
  </animation>
 
@@ -208,7 +225,7 @@ Syd Adams
 	   <z>0.0</z>
    </center>
  </animation>
- 
+
  <animation>
    <type>textranslate</type>
    <object-name>Asitext</object-name>
@@ -221,7 +238,7 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
+
  <animation>
    <type>textranslate</type>
    <object-name>Asitext.001</object-name>
@@ -234,7 +251,7 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
-  
+
  <animation>
    <type>textranslate</type>
    <object-name>Asitext.002</object-name>
@@ -258,7 +275,7 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
+
  <animation>
    <type>textranslate</type>
    <object-name>Alt100</object-name>
@@ -272,7 +289,7 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
+
  <animation>
    <type>textranslate</type>
    <object-name>Alt1000</object-name>
@@ -286,7 +303,7 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
+
  <animation>
    <type>textranslate</type>
    <object-name>Alt10000</object-name>
@@ -643,7 +660,7 @@ Syd Adams
 		<condition>
 			<property>sim/model/A-6E/instrumentation/PHD/s[29]/visible</property>
 		</condition>
-	</animation> 
+	</animation>
 
 	<animation>
 		<type>select</type>
@@ -793,7 +810,7 @@ Syd Adams
 			<property>sim/model/A-6E/instrumentation/PHD/s[49]/visible</property>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>s0</object-name>
@@ -975,7 +992,7 @@ Syd Adams
 		<object-name>s29</object-name>
 		<property>sim/model/A-6E/instrumentation/PHD/s[29]/elevation_m</property>
 		<axis><x>0</x><y>0</y><z>1</z></axis>
-	</animation> 
+	</animation>
 
 	<animation>
 		<type>translate</type>

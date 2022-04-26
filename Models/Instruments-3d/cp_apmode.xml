@@ -536,9 +536,9 @@ sweat by maggse
 	</font-resolution>
 	<alignment>center-center</alignment>
 	<offsets>
-		<x-m> 0.04</x-m>
-		<y-m> 0.0 </y-m>
-		<z-m> 0.0 </z-m>
+		<x-m> 0.08</x-m>
+		<y-m>-0.600 </y-m>
+		<z-m> 0.20 </z-m>
 	</offsets>
 </text>
 

@@ -19,7 +19,7 @@ B-1B set file.
     <status>alpha</status>
     <author>Markus Zojer, Paul Jay Schrenker, pinto, NC-687, Zorka</author>
     <aero>B-1B-yasim</aero>
-    <fuel-fraction>1.0</fuel-fraction>
+    <fuel-fraction>0.0</fuel-fraction>
 
     <description>Rockwell B-1B Lancer</description>
 
@@ -31,10 +31,10 @@ B-1B set file.
       <internal archive="y">true</internal>
       <config>
 	      <x-offset-m archive="y">-0.53</x-offset-m><!-- left-/right+ -0.67-->
-	<y-offset-m archive="y">1.15</y-offset-m><!-- up+/down- 1.37-->
+	<y-offset-m archive="y">1.20</y-offset-m><!-- up+/down- 1.37-->
 	<z-offset-m archive="y">7.12</z-offset-m><!-- back+ 7.15-->
         <pitch-offset-deg>-6</pitch-offset-deg>
-        <default-field-of-view-deg>66</default-field-of-view-deg>
+        <default-field-of-view-deg>60</default-field-of-view-deg>
       </config>
     </view>
 
@@ -101,7 +101,7 @@ B-1B set file.
 	<from-model-idx type="int">0</from-model-idx>
         <x-offset-m archive="y">1.20</x-offset-m>
         <y-offset-m archive="y">-1.67</y-offset-m>
-        <z-offset-m archive="y">11.20</z-offset-m>
+        <z-offset-m archive="y">11.50</z-offset-m>
         <pitch-offset-deg>-10</pitch-offset-deg>
         <default-pitch-deg type="double">-10</default-pitch-deg>
         <default-field-of-view-deg>50</default-field-of-view-deg>
@@ -287,21 +287,27 @@ B-1B set file.
                     <dialog-name>pushback</dialog-name>
                   </binding>
                 </item>
-
-          <item n="11">
-            <label>Select Livery</label>
-            <binding>
-              <command>nasal</command>
-              <script>aircraft.livery.dialog.toggle()</script>
-            </binding>
-          </item>
-            </menu>
-        </default>
-    </menubar>
+                   <item>
+                        <label>Combat event log</label>
+                        <binding>
+                            <command>dialog-show</command>
+                            <dialog-name>flightlog</dialog-name>
+                        </binding>
+                    </item>
+                    <item>
+                        <label>Toggle Headshake</label>
+                        <binding>
+                            <command>property-toggle</command>
+                            <property>/sim/enable-headshake</property>
+                        </binding>
+                    </item>
+                </menu>
+            </default>
+        </menubar>
 
     <systems>
       <electrical>
-        <path>Aircraft/Generic/generic-electrical.xml</path>
+        <path>Aircraft/B-1B/Systems/generic-electrical.xml</path>
       </electrical>
       <autopilot>
         <path>Aircraft/B-1B/Systems/b1b-autopilot.xml</path>
@@ -482,10 +488,10 @@ B-1B set file.
       <target-pitch-deg type="float">0</target-pitch-deg>
       <target-vfps type="float">0</target-vfps>
       <take-off-pitch-deg type="float">2.0</take-off-pitch-deg>
-      <target-speed-kt type="float">350.0</target-speed-kt>
+      <target-speed-kt type="float">250.0</target-speed-kt>
       <climb-out-initial-pitch-deg type="float">6.0</climb-out-initial-pitch-deg>
       <climb-out-final-pitch-deg type="float">3.0</climb-out-final-pitch-deg>
-      <target-climb-rate-fpm type="float">2000.0</target-climb-rate-fpm>
+      <target-climb-rate-fpm type="float">2500.0</target-climb-rate-fpm>
       <target-descent-rate-fpm type="float">2000.0</target-descent-rate-fpm>
       <ground-roll-heading-deg type="float">-999.9</ground-roll-heading-deg>
       <target-mach type="float">0.9</target-mach>
@@ -501,17 +507,17 @@ B-1B set file.
       <brake-parking type="double">1.0</brake-parking>
     </gear>
     <flight>
-      <wing-sweep type="double">0.0</wing-sweep>
+      <wing-sweep type="double">-1.0</wing-sweep>
       <flaps type="double">0.0</flaps>
-      <elevator-incidence-deg type="double">0.0</elevator-incidence-deg>
+      <elevator-incidence-deg type="double">-1.0</elevator-incidence-deg>
     </flight>
 
     <switches>
       <engines>
         <afterburner n="0">0</afterburner>
-	<afterburner n="1">0</afterburner>
-	<afterburner n="2">0</afterburner>
-	<afterburner n="3">0</afterburner>
+	    <afterburner n="1">0</afterburner>
+	    <afterburner n="2">0</afterburner>
+	    <afterburner n="3">0</afterburner>
       </engines>
     </switches>
 
@@ -738,9 +744,9 @@ B-1B set file.
 	<cg>
 		<file>Aircraft/B-1B/Nasal/cg.nas</file>
 	</cg>
-	<!-- <GMM>
-		<file>Aircraft/B-1B/Nasal/weapons.nas</file>
-	</GMM> -->
+      <GCI>
+		<file>Aircraft/B-1B/Nasal/gci-listener.nas</file>
+	  </GCI>
 	<emesary>
 		<file>Aircraft/B-1B/Nasal/emesary.nas</file>
         <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>
@@ -759,14 +765,20 @@ B-1B set file.
 		<file>Aircraft/B-1B/Nasal/low.nas</file>
 	</low>
 	<radar>
-		<file>Aircraft/B-1B/Nasal/radar.nas</file>
+		<file>Aircraft/B-1B/Nasal/radar-system.nas</file>
 		<file>Aircraft/B-1B/Nasal/phd.nas</file>
-		<file>Aircraft/B-1B/Nasal/radardist.nas</file>
+		<!--file>Aircraft/B-1B/Nasal/radardist.nas</file-->
         <file>Aircraft/B-1B/Nasal/rwr.nas</file>
 	</radar>
+     <rcs>
+        <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
+     </rcs>
 	<enginefire>
 		<file>Aircraft/B-1B/Nasal/enginefire.nas</file>
 	</enginefire>
+       <vector>
+         <file>Aircraft/B-1B/Nasal/vector.nas</file>
+       </vector>
 	<weapons>
 		<file>Aircraft/B-1B/Nasal/oso_management.nas</file>
 		<file>Aircraft/B-1B/Nasal/oso_ikb.nas</file>
@@ -787,9 +799,6 @@ B-1B set file.
     <file>Aircraft/B-1B/Nasal/iff.nas</file>
    </iff>
   </instrumentation>
-  <liveries>
-    <file>Aircraft/B-1B/Nasal/liveries.nas</file>
-  </liveries>
 </nasal>
 
 </PropertyList>

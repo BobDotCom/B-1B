@@ -319,9 +319,9 @@ sweat by maggse
 	 <object-name>rep_light.016</object-name>
 	 <object-name>rep_light.017</object-name>
 	 <emission>
-		 <red>0.6</red>
-		 <green>0.4</green>
-		 <blue>0.4</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/electric/battery-switch</factor-prop>
 	 </emission>
 </animation>
@@ -330,9 +330,9 @@ sweat by maggse
 	<type>material</type>
 	<object-name>report_lights</object-name>
 	<emission>
-		<red>0.2</red>
+		<red>0.5</red>
 		<green>0.2</green>
-		<blue>0.0</blue>
+		<blue>0.5</blue>
 		<factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

@@ -40,9 +40,9 @@ if you contacted me before making any changes to this software.
 			<less-than><property>controls/lighting/instruments-norm</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
-			<red>0.2</red>
-			<green>0.0</green>
-			<blue>0.0</blue>
+			<red>0.9</red>
+			<green>0.5</green>
+			<blue>0.9</blue>
 			<factor-prop>controls/lighting/instruments-norm</factor-prop>
 		</emission>
 	</animation>

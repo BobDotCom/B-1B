@@ -706,7 +706,7 @@ var genericEmesaryGlobalTransmitterTransmit  = func(node)
 
 # Temporary bugfix -- FIXME
 #removecommand("emesary-transmit"); #in case of reload
-addcommand("emesary-transmit", genericEmesaryGlobalTransmitterTransmit); #########################################Error in this line###############################"
+addcommand("emesary-transmit", genericEmesaryGlobalTransmitterTransmit);
 
 #setprop("/sim/startup/terminal-ansi-colors",0);
 #for(i=-1;i<=1;i+=0.1)

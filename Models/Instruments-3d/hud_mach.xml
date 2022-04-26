@@ -7,7 +7,7 @@ maggse
  <path>hud_mach.ac</path>
 
 
- 
+
 
  <animation>
    <type>textranslate</type>
@@ -38,7 +38,7 @@ maggse
 	  <z-m>0.00</z-m>
    </center>
  </animation>
- 
+
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind_knots1</object-name>
@@ -68,7 +68,7 @@ maggse
 			 <z-m>0.00</z-m>
 		 </center>
  </animation>
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>set_speed</object-name>
@@ -136,7 +136,7 @@ maggse
 		<z>0</z>
 	</axis>
  </animation>
- 
+
  <animation>
 	 <type>material</type>
 	 <object-name>ind_alt_l.001</object-name>
@@ -153,9 +153,9 @@ maggse
 	 <object-name>set_speed</object-name>
 	 <object-name>set_mach</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

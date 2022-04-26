@@ -410,18 +410,19 @@ maggse
 
 <animation>
   <type>material</type>
+  <object-name>WSO radar</object-name>
   <object-name>sms_button.031</object-name>
-  <object-name>sms_button.056</object-name>
-  <object-name>sms_button.047</object-name>
-  <object-name>sms_button.037</object-name>
-  <object-name>sms_button.038</object-name>
-  <object-name>sms_button.039</object-name>
-  <object-name>sms_button.040</object-name>
-  <object-name>sms_button.041</object-name>
-  <object-name>sms_button.042</object-name>
-  <object-name>sms_button.043</object-name>
-  <object-name>sms_button.044</object-name>
-  <object-name>sms_button.045</object-name>
+  <object-name>sms_button.056_0</object-name>
+  <object-name>0</object-name>
+  <object-name>9</object-name>
+  <object-name>8</object-name>
+  <object-name>7</object-name>
+  <object-name>6</object-name>
+  <object-name>5</object-name>
+  <object-name>4</object-name>
+  <object-name>3</object-name>
+  <object-name>2</object-name>
+  <object-name>1</object-name>
   <object-name>sms_button.050</object-name>
   <object-name>sms_button.057</object-name>
   <object-name>sms_button.058</object-name>
@@ -433,20 +434,9 @@ maggse
   <object-name>sms_button.064</object-name>
   <object-name>sms_button.065</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
-
-<animation>
-  <type>material</type>
-  <object-name>ikb</object-name>
-	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -470,9 +460,9 @@ maggse
 	</font-resolution>
 	<alignment>center-center</alignment>
 	<offsets>
-		<x-m> 0.04</x-m>
-		<y-m> 0.0 </y-m>
-		<z-m> 0.0 </z-m>
+		<x-m> 0.06</x-m>
+		<y-m> 0.05 </y-m>
+		<z-m>-0.03 </z-m>
 	</offsets>
 </text>
 

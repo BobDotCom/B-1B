@@ -15,7 +15,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">literal</type>
   <text type="string">MENU:</text>
   <layout>left-to-right</layout>
@@ -34,7 +34,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line00</property>
   <format type="string">%s</format>
@@ -54,7 +54,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line01</property>
   <format type="string">%s</format>
@@ -75,7 +75,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line10</property>
   <format type="string">%s</format>
@@ -94,7 +94,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line11</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -128,7 +128,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line12</property>
   <format type="string">%s</format>
@@ -147,7 +147,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line13</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -183,7 +183,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line20</property>
   <format type="string">%s</format>
@@ -202,7 +202,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line21</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -236,7 +236,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line22</property>
   <format type="string">%s</format>
@@ -255,7 +255,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line23</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -291,7 +291,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line30</property>
   <format type="string">%s</format>
@@ -310,7 +310,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line31</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -344,7 +344,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line32</property>
   <format type="string">%s</format>
@@ -363,7 +363,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line33</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -399,7 +399,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line40</property>
   <format type="string">%s</format>
@@ -418,7 +418,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line41</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -452,7 +452,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line42</property>
   <format type="string">%s</format>
@@ -471,7 +471,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line43</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -507,7 +507,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line50</property>
   <format type="string">%s</format>
@@ -526,7 +526,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line51</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -560,7 +560,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line52</property>
   <format type="string">%s</format>
@@ -579,7 +579,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line53</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -615,7 +615,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line60</property>
   <format type="string">%s</format>
@@ -634,7 +634,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line61</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -668,7 +668,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line62</property>
   <format type="string">%s</format>
@@ -687,7 +687,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line63</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -723,7 +723,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line70</property>
   <format type="string">%s</format>
@@ -742,7 +742,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line71</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -776,7 +776,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line72</property>
   <format type="string">%s</format>
@@ -795,7 +795,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line73</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -831,7 +831,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line80</property>
   <format type="string">%s</format>
@@ -850,7 +850,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line81</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -884,7 +884,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">text-value</type>
   <property type="string">instrumentation/wso_mfd/line82</property>
   <format type="string">%s</format>
@@ -903,7 +903,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">instrumentation/wso_mfd/line83</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -967,9 +967,9 @@ sweat by maggse
   <object-name>line82</object-name>
   <object-name>line83</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

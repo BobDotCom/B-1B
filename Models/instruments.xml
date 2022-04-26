@@ -16,7 +16,7 @@ more to come :-)
 
   </offsets>
 
-  <animation>
+  <!--animation>
 	  <type>select</type>
 	  <object-name>fuel_cov.007</object-name>
 	  <condition>
@@ -25,7 +25,7 @@ more to come :-)
 			  <value>1.0</value>
 		  </greater-than>
 	  </condition>
- </animation>
+ </animation -->
 
   <!--   cockpit -->
 
@@ -55,11 +55,11 @@ more to come :-)
 	  <name>airpath_compass</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/Compass.xml</path>
 	  <offsets>
-		  <x-m>-18.093</x-m>
+		  <x-m>-18.098</x-m>
 		  <y-m>-0.128</y-m>
-		  <z-m> 1.665</z-m>
+		  <z-m> 1.668</z-m>
 		<roll-deg>0</roll-deg>
-       <pitch-deg>10</pitch-deg>
+       <pitch-deg>-2</pitch-deg>
 	  </offsets>
   </model>
   <model>
@@ -646,9 +646,9 @@ B-1BFS
 	  <name>alter throt</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/alter_throt.xml</path>
 	  <offsets>
-		  <x-m>-17.810</x-m>
-		  <y-m>-0.263</y-m>
-		  <z-m> 0.710</z-m>
+		  <x-m>-17.800</x-m>
+		  <y-m>-0.250</y-m>
+		  <z-m> 0.706</z-m>
 		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
   </model>

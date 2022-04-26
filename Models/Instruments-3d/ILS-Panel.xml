@@ -222,9 +222,9 @@
    <object-name>mount</object-name>
    <type>material</type>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
@@ -233,9 +233,9 @@
    <object-name>deci-knob</object-name>
    <type>material</type>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		<red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
@@ -244,9 +244,9 @@
    <object-name>units-knob</object-name>
    <type>material</type>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
@@ -256,9 +256,9 @@
     <object-name>drum-1</object-name>
     <type>material</type>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
@@ -266,9 +266,9 @@
     <object-name>drum-2</object-name>
     <type>material</type>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
@@ -276,9 +276,9 @@
     <object-name>drum-3</object-name>
     <type>material</type>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
@@ -286,9 +286,9 @@
     <object-name>drum-4</object-name>
     <type>material</type>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
@@ -296,9 +296,9 @@
     <object-name>drum-5</object-name>
     <type>material</type>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
@@ -306,9 +306,9 @@
     <object-name>deci-point</object-name>
     <type>material</type>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
@@ -332,9 +332,9 @@
 	</font-resolution>
 	<alignment>center-center</alignment>
 	<offsets>
-		<x-m> 0.04</x-m>
-		<y-m> 0.0 </y-m>
-		<z-m> 0.0 </z-m>
+		<x-m> 0.055</x-m>
+		<y-m>-0.03 </y-m>
+		<z-m> 0.05</z-m>
 	</offsets>
 </text>
 

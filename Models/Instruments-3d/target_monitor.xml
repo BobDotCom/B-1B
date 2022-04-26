@@ -5,7 +5,7 @@ sweat by maggse
 <PropertyList>
 
 <path>target_monitor.ac</path>
- 
+
 <!--targets-->
 
 <animation>
@@ -18,11 +18,11 @@ sweat by maggse
 	</less-than>
 	 </condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_01</object-name>
    <property>ai/models/aircraft[0]/radar/bearing-deg[0]</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -33,11 +33,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_01</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -48,19 +48,19 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_01</object-name>
 	<property>ai/models/aircraft[0]/radar/range-nm[0]</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_02</object-name>
   <condition>
@@ -70,11 +70,11 @@ sweat by maggse
 	</less-than>
   </condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_02</object-name>
    <property>ai/models/aircraft[1]/radar/bearing-deg[0]</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -85,11 +85,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_02</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -100,19 +100,19 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_02</object-name>
 	<property>ai/models/aircraft[1]/radar/range-nm[0]</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_03</object-name>
   <condition>
@@ -122,11 +122,11 @@ sweat by maggse
 	</less-than>
   </condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_03</object-name>
    <property>ai/models/aircraft[2]/radar/bearing-deg[0]</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -137,11 +137,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_03</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -152,19 +152,19 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_03</object-name>
 	<property>ai/models/aircraft[2]/radar/range-nm[0]</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_04</object-name>
   <condition>
@@ -174,11 +174,11 @@ sweat by maggse
 	</less-than>
   </condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_04</object-name>
    <property>ai/models/aircraft[3]/radar/bearing-deg[0]</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -189,11 +189,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_04</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -204,19 +204,19 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_04</object-name>
 	<property>ai/models/aircraft[3]/radar/range-nm[0]</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_05</object-name>
   <condition>
@@ -226,11 +226,11 @@ sweat by maggse
 	</less-than>
   </condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_05</object-name>
    <property>ai/models/aircraft[4]/radar/bearing-deg[0]</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -241,11 +241,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_05</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -256,19 +256,19 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_05</object-name>
 	<property>ai/models/aircraft[4]/radar/range-nm[0]</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_06</object-name>
   <condition>
@@ -278,11 +278,11 @@ sweat by maggse
 	</less-than>
   </condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_06</object-name>
    <property>ai/models/aircraft[5]/radar/bearing-deg[0]</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -293,11 +293,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_06</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -308,19 +308,19 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_06</object-name>
 	<property>ai/models/aircraft[5]/radar/range-nm[0]</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_07</object-name>
   <condition>
@@ -330,11 +330,11 @@ sweat by maggse
 	</less-than>
   </condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_07</object-name>
    <property>ai/models/aircraft[6]/radar/bearing-deg[0]</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -345,11 +345,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_07</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -360,19 +360,19 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_07</object-name>
 	<property>ai/models/aircraft[6]/radar/range-nm[0]</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_08</object-name>
   <condition>
@@ -382,11 +382,11 @@ sweat by maggse
 	</less-than>
   </condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_08</object-name>
    <property>ai/models/aircraft[7]/radar/bearing-deg[0]</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -397,11 +397,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_08</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -412,12 +412,12 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_08</object-name>
 	<property>ai/models/aircraft[7]/radar/range-nm[0]</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
@@ -426,7 +426,7 @@ sweat by maggse
 
 <!-- target marker -->
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_mark1</object-name>
   <condition>
@@ -436,11 +436,11 @@ sweat by maggse
 	</less-than>
   </condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_mark1</object-name>
    <property>ai/guided/targetting/bomb[0]/target-bearing</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -451,11 +451,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_mark1</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -466,19 +466,19 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>target_mark1</object-name>
 	<property>ai/guided/targetting/bomb[0]/target-distance</property>
 <factor>0.0080</factor>
-<axis> 
+<axis>
 <x>0</x>
 <y>0</y>
 <z>1</z>
 </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_mark2</object-name>
   <condition>
@@ -488,11 +488,11 @@ sweat by maggse
 	</less-than>
 	</condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_mark2</object-name>
    <property>ai/guided/targetting/bomb[1]/target-bearing</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -504,11 +504,11 @@ sweat by maggse
      </center>
 </animation>
 
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_mark2</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -520,19 +520,19 @@ sweat by maggse
     </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_mark2</object-name>
 	<property>ai/guided/targetting/bomb[1]/target-distance</property>
   <factor>0.0080</factor>
-  <axis> 
+  <axis>
     <x>0</x>
     <y>0</y>
     <z>1</z>
   </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_mark3</object-name>
   <condition>
@@ -542,11 +542,11 @@ sweat by maggse
 	</less-than>
 	</condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_mark3</object-name>
    <property>ai/guided/targetting/bomb[2]/target-bearing</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -558,11 +558,11 @@ sweat by maggse
      </center>
 </animation>
 
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_mark3</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -574,19 +574,19 @@ sweat by maggse
     </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_mark3</object-name>
 	<property>ai/guided/targetting/bomb[2]/target-distance</property>
   <factor>0.0080</factor>
-  <axis> 
+  <axis>
     <x>0</x>
     <y>0</y>
     <z>1</z>
   </axis>
 </animation>
 
-<animation> 
+<animation>
   <type>select</type>
   <object-name>target_mark4</object-name>
   <condition>
@@ -596,11 +596,11 @@ sweat by maggse
 	</less-than>
 	</condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_mark4</object-name>
    <property>ai/guided/targetting/bomb[3]/target-bearing</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -612,11 +612,11 @@ sweat by maggse
      </center>
 </animation>
 
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_mark4</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -628,18 +628,18 @@ sweat by maggse
     </center>
 </animation>
 
- <animation> 
+ <animation>
 	<type>translate</type>
 	<object-name>target_mark4</object-name>
 	<property>ai/guided/targetting/bomb[3]/target-distance</property>
   <factor>0.0080</factor>
-  <axis> 
+  <axis>
     <x>0</x>
     <y>0</y>
     <z>1</z>
   </axis>
 </animation>
- 
+
 <animation>
   <type>select</type>
   <object-name>target_mark5</object-name>
@@ -650,11 +650,11 @@ sweat by maggse
 	</less-than>
 	</condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_mark5</object-name>
    <property>ai/guided/targetting/bomb[4]/target-bearing</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -665,11 +665,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_mark5</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -680,12 +680,12 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>target_mark5</object-name>
 	<property>ai/guided/targetting/bomb[4]/target-distance</property>
   <factor>0.0080</factor>
-  <axis> 
+  <axis>
     <x>0</x>
     <y>0</y>
     <z>1</z>
@@ -702,11 +702,11 @@ sweat by maggse
 	</less-than>
 	</condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_mark6</object-name>
    <property>ai/guided/targetting/bomb[5]/target-bearing</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -717,11 +717,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_mark6</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -732,12 +732,12 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>target_mark6</object-name>
 	<property>ai/guided/targetting/bomb[5]/target-distance</property>
   <factor>0.0080</factor>
-  <axis> 
+  <axis>
     <x>0</x>
     <y>0</y>
     <z>1</z>
@@ -754,11 +754,11 @@ sweat by maggse
 	</less-than>
 	</condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_mark7</object-name>
    <property>ai/guided/targetting/bomb[6]/target-bearing</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -769,11 +769,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_mark7</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -784,12 +784,12 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>target_mark7</object-name>
 	<property>ai/guided/targetting/bomb[6]/target-distance</property>
   <factor>0.0080</factor>
-  <axis> 
+  <axis>
     <x>0</x>
     <y>0</y>
     <z>1</z>
@@ -806,11 +806,11 @@ sweat by maggse
 	</less-than>
 	</condition>
 </animation>
-<animation> 
+<animation>
    <type>rotate</type>
    <object-name>target_mark8</object-name>
    <property>ai/guided/targetting/bomb[7]/target-bearing</property>
-     <axis> 
+     <axis>
        <x>-1</x>
        <y>0</y>
        <z>0</z>
@@ -821,11 +821,11 @@ sweat by maggse
        <z-m>0.0</z-m>
      </center>
 </animation>
-<animation> 
+<animation>
   <type>rotate</type>
   <object-name>target_mark8</object-name>
   <property>orientation/heading-deg[0]</property>
-    <axis> 
+    <axis>
       <x>1</x>
       <y>0</y>
       <z>0</z>
@@ -836,12 +836,12 @@ sweat by maggse
       <z-m>0.0</z-m>
     </center>
 </animation>
-<animation> 
+<animation>
 	<type>translate</type>
 	<object-name>target_mark8</object-name>
 	<property>ai/guided/targetting/bomb[7]/target-distance</property>
   <factor>0.0080</factor>
-  <axis> 
+  <axis>
     <x>0</x>
     <y>0</y>
     <z>1</z>
@@ -859,7 +859,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">literal</type>
   <text type="string">TGT1</text>
   <layout>left-to-right</layout>
@@ -877,7 +877,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">ai/guided/targetting/bomb[0]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -900,7 +900,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">literal</type>
   <text type="string">TGT2</text>
   <layout>left-to-right</layout>
@@ -918,7 +918,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">ai/guided/targetting/bomb[1]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -941,7 +941,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">literal</type>
   <text type="string">TGT3</text>
   <layout>left-to-right</layout>
@@ -959,7 +959,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">ai/guided/targetting/bomb[2]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -982,7 +982,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">literal</type>
   <text type="string">TGT4</text>
   <layout>left-to-right</layout>
@@ -1000,7 +1000,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">ai/guided/targetting/bomb[3]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -1023,7 +1023,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">literal</type>
   <text type="string">TGT5</text>
   <layout>left-to-right</layout>
@@ -1041,7 +1041,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">ai/guided/targetting/bomb[4]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -1064,7 +1064,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">literal</type>
   <text type="string">TGT6</text>
   <layout>left-to-right</layout>
@@ -1082,7 +1082,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">ai/guided/targetting/bomb[5]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -1105,7 +1105,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">literal</type>
   <text type="string">TGT7</text>
   <layout>left-to-right</layout>
@@ -1123,7 +1123,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">ai/guided/targetting/bomb[6]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -1146,7 +1146,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>left-center</alignment>
-  
+
   <type type="string">literal</type>
   <text type="string">TGT8</text>
   <layout>left-to-right</layout>
@@ -1164,7 +1164,7 @@ sweat by maggse
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
-  
+
   <type type="string">number-value</type>
   <property type="string">ai/guided/targetting/bomb[7]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
@@ -1197,9 +1197,9 @@ sweat by maggse
   <object-name>tgt8</object-name>
   <object-name>tgt8_dist</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

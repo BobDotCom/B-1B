@@ -1,5 +1,5 @@
-<?xml version="1.0"?> 
-<PropertyList> 
+<?xml version="1.0"?>
+<PropertyList>
  <path>Eng-Aux-Panel.ac</path>
 
   <animation>
@@ -17,10 +17,10 @@
     <object-name>IGN-CONT</object-name>
     <object-name>Speed-Lock-Up</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		<red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
-  </animation> 
+  </animation>
 </PropertyList>

@@ -1,105 +1,105 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 
-<PropertyList> 
- <path>CITS.ac</path> 
+<PropertyList>
+ <path>CITS.ac</path>
 
- <!--animation> 
-  <type>rotate</type> 
-  <object-name>Cylinder.020</object-name>  
-  <condition> 
+ <!--animation>
+  <type>rotate</type>
+  <object-name>Cylinder.020</object-name>
+  <condition>
    <equals>
-    <property>B-1B/fuel-tank-switch</property> 
-    <value>2</value> 
-   </equals> 
-  </condition> 
+    <property>B-1B/fuel-tank-switch</property>
+    <value>2</value>
+   </equals>
+  </condition>
   <property>consumables/fuel/total-fuel-lbs</property>
   <factor>0.0036</factor>
   <center>
-   <x-m>-0.01907</x-m> 
-   <y-m>-0.02714</y-m> 
-   <z-m>0.05934</z-m> 
-  </center> 
-  <axis> 
-   <x>0</x> 
-   <y>-1</y> 
-   <z>0</z> 
-  </axis>
- </animation> 
-
- <animation> 
-  <type>rotate</type> 
-  <object-name>Cylinder.020</object-name>  
-  <condition> 
-   <equals>
-    <property>B-1B/fuel-tank-switch</property> 
-    <value>3</value> 
-   </equals> 
-  </condition> 
-  <property>consumables/fuel/total-fuel-m3</property> 
-  <factor>0.0036</factor>
-  <center>
-   <x-m>-0.01907</x-m> 
-   <y-m>-0.02714</y-m> 
-   <z-m>0.05934</z-m> 
-  </center> 
-  <axis> 
-   <x>0</x> 
-   <y>-1</y> 
-   <z>0</z> 
+   <x-m>-0.01907</x-m>
+   <y-m>-0.02714</y-m>
+   <z-m>0.05934</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
   </axis>
  </animation>
 
- <animation> 
-  <type>rotate</type> 
-  <object-name>Cylinder.020</object-name>  
-  <condition> 
+ <animation>
+  <type>rotate</type>
+  <object-name>Cylinder.020</object-name>
+  <condition>
    <equals>
-    <property>B-1B/fuel-tank-switch</property> 
-    <value>4</value> 
-   </equals> 
-  </condition> 
-  <property>consumables/fuel/total-fuel-kg</property> 
+    <property>B-1B/fuel-tank-switch</property>
+    <value>3</value>
+   </equals>
+  </condition>
+  <property>consumables/fuel/total-fuel-m3</property>
   <factor>0.0036</factor>
   <center>
-   <x-m>-0.01907</x-m> 
-   <y-m>-0.02714</y-m> 
-   <z-m>0.05934</z-m> 
-  </center> 
-  <axis> 
-   <x>0</x> 
-   <y>-1</y> 
-   <z>0</z> 
+   <x-m>-0.01907</x-m>
+   <y-m>-0.02714</y-m>
+   <z-m>0.05934</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
   </axis>
- </animation> 
+ </animation>
 
- <animation> 
-  <type>rotate</type> 
-  <object-name>Cylinder.020</object-name>  
-  <condition> 
+ <animation>
+  <type>rotate</type>
+  <object-name>Cylinder.020</object-name>
+  <condition>
    <equals>
-    <property>B-1B/fuel-tank-switch</property> 
-    <value>5</value> 
-   </equals> 
-  </condition> 
-  <property>consumables/fuel/tank[6]/level-lbs</property> 
+    <property>B-1B/fuel-tank-switch</property>
+    <value>4</value>
+   </equals>
+  </condition>
+  <property>consumables/fuel/total-fuel-kg</property>
   <factor>0.0036</factor>
   <center>
-   <x-m>-0.01907</x-m> 
-   <y-m>-0.02714</y-m> 
-   <z-m>0.05934</z-m> 
-  </center> 
-  <axis> 
-   <x>0</x> 
-   <y>-1</y> 
-   <z>0</z> 
+   <x-m>-0.01907</x-m>
+   <y-m>-0.02714</y-m>
+   <z-m>0.05934</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
   </axis>
- </animation> 
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Cylinder.020</object-name>
+  <condition>
+   <equals>
+    <property>B-1B/fuel-tank-switch</property>
+    <value>5</value>
+   </equals>
+  </condition>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.0036</factor>
+  <center>
+   <x-m>-0.01907</x-m>
+   <y-m>-0.02714</y-m>
+   <z-m>0.05934</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
 
   <animation>
         <type>knob</type>
         <object-name>TNK-SEL</object-name>
         <property>B-1B/fuel-tank-switch</property>
-        <factor>45</factor> 
+        <factor>45</factor>
         <center>
             <x-m>-0.00149</x-m>
             <y-m>-0.03581</y-m>
@@ -109,21 +109,21 @@
             <x>-1</x>
             <y>0</y>
             <z>0</z>
-        </axis>        
+        </axis>
         <action>
             <binding>
                 <command>property-adjust</command>
-                <property>B-1B/fuel-tank-switch</property> 
+                <property>B-1B/fuel-tank-switch</property>
                 <min>0</min>
-                <max>5</max>                
+                <max>5</max>
                 <wrap>false</wrap>
            </binding>
         </action>
     </animation>
-    
+
     <animation>
         <type>rotate</type>
-        <object-name>Fuel-Dump</object-name> 
+        <object-name>Fuel-Dump</object-name>
         <property>controls/fuel/dump-valve</property>
         <factor>50</factor>
         <center>
@@ -135,7 +135,7 @@
             <x> 0</x>
             <y>-1</y>
             <z> 0</z>
-        </axis>       
+        </axis>
   </animation>
 
  <animation>
@@ -145,11 +145,11 @@
   <button>0</button>
    <binding>
     <command>property-toggle</command>
-     <property>controls/fuel/dump-valve</property>  
+     <property>controls/fuel/dump-valve</property>
    </binding>
   </action>
- </animation> 
- 
+ </animation>
+
   <animation>
  <type>pick</type>
  <object-name>Fuel-Dump</object-name>
@@ -157,16 +157,16 @@
   <button>1</button>
    <binding>
     <command>property-toggle</command>
-     <property>controls/fuel/dump-valve</property>  
+     <property>controls/fuel/dump-valve</property>
    </binding>
   </action>
- </animation> 
- 
+ </animation>
+
      <animation>
         <type>rotate</type>
-        <object-name>Fuel-Dump-Cover</object-name> 
+        <object-name>Fuel-Dump-Cover</object-name>
         <property>controls/switches/Fuel-Dump-Cover</property>
-        <factor>80</factor> 
+        <factor>80</factor>
         <center>
             <x-m>-0.01034</x-m>
             <y-m>-0.10085</y-m>
@@ -176,7 +176,7 @@
             <x>0</x>
             <y>-1</y>
             <z>0</z>
-        </axis>       
+        </axis>
   </animation>
 
  <animation>
@@ -186,11 +186,11 @@
   <button>0</button>
    <binding>
     <command>property-toggle</command>
-     <property>controls/switches/Fuel-Dump-Cover</property>  
+     <property>controls/switches/Fuel-Dump-Cover</property>
    </binding>
   </action>
- </animation--> 
-    
+ </animation-->
+
     <animation>
   <type>material</type>
   <object-name>0.1</object-name>
@@ -259,11 +259,11 @@
   <object-name>WPN.1</object-name>
   <object-name>WPN_SEVY.1</object-name>
   <object-name>EWTR.1</object-name>
-  <object-name>h/3_PWR.1</object-name>	 
+  <object-name>h/3_PWR.1</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>

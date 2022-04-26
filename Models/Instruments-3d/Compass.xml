@@ -10,9 +10,9 @@
 	<object-name>Needle</object-name>
 	<object-name>Interior</object-name>
 	<emission>
-		<red>0.7</red>
-		<green>0.2</green>
-		<blue>0.2</blue>
+		<red>0.8</red>
+		<green>0.5</green>
+		<blue>0.9</blue>
 		<factor-prop>controls/lighting/instruments-norm</factor-prop>  <!-- <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
 	</emission>
 </animation>
