@@ -858,6 +858,14 @@ B-1B set file.
     <liveries>
         <file>Aircraft/B-1B/Nasal/liveries.nas</file>
     </liveries>
+    <datalink>
+      <file>Aircraft/A-10/Nasal/datalink.nas</file>
+    </datalink>
+    <iff>
+      <file>Aircraft/A-10/Nasal/iff.nas</file>
+    </iff>
+
+
 </nasal>
 
 </PropertyList>
