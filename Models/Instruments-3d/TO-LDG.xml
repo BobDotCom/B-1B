@@ -68,7 +68,7 @@
   <animation>
    <type>rotate</type>
    <object-name>Anti-skid-switch</object-name>
-   <property>/controls/gear/antiskid</property>v
+   <property>/controls/gear/antiskid</property>
    <factor>-60</factor>
    <min>1</min>
    <max>0</max>

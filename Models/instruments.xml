@@ -207,8 +207,8 @@ more to come :-)
 	  <name>cg mac</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/mac_ind.xml</path>
 	  <offsets>
-		  <x-m>-18.212 </x-m>
-		  <y-m>-0.212</y-m>
+		  <x-m>-18.211 </x-m>
+		  <y-m>-0.213</y-m>
 		  <z-m> 1.208</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>

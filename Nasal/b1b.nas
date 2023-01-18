@@ -28,9 +28,9 @@ setprop("controls/engines/engine[0]/cutoff", 1);#start with engines off
 setprop("controls/engines/engine[1]/cutoff", 1);
 setprop("controls/engines/engine[2]/cutoff", 1);
 setprop("controls/engines/engine[3]/cutoff", 1);
-setprop("consumables/fuel/tank[3]/level-gal_us", 5000);
-setprop("consumables/fuel/tank[5]/level-gal_us", 5000);
-setprop("instrumentation/cg/cg_mac_set", 25);
+#setprop("consumables/fuel/tank[3]/level-gal_us", 5000);
+#setprop("consumables/fuel/tank[5]/level-gal_us", 5000);
+setprop("instrumentation/cg/cg_mac_set", 70);
 setprop("instrumentation/cg/cg_mac", 30);
 setprop("instrumentation/tacan/frequencies/selected-channel[12]", 2);
 settimer(flightcontrols.fuelsweep, 1);
