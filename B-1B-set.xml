@@ -570,10 +570,10 @@ B-1B set file.
 
     <switches>
       <engines>
-        <afterburner n="0">1</afterburner>
-	<afterburner n="1">1</afterburner>
-	<afterburner n="2">1</afterburner>
-	<afterburner n="3">1</afterburner>
+        <afterburner n="0">0</afterburner>
+	<afterburner n="1">0</afterburner>
+	<afterburner n="2">0</afterburner>
+	<afterburner n="3">0</afterburner>
       </engines>
     </switches>
 
