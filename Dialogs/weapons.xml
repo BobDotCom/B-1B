@@ -3,6 +3,7 @@
  <name>weapons</name>
  <modal>false</modal>
  <layout>vbox</layout>
+  <hrule/>
 
  <text>
     <label>Fuel Management</label>
@@ -41,15 +42,17 @@
   </button>
 
   </group>
+ 
   <hrule/>
 
   <text>
+  	
     <label>Weapon Management</label>
   </text>
-
+<!-- 
  <hrule/>
 
-  <!--<nasal>
+  <nasal>
     <open>
 	#nasal
     </open>
@@ -57,21 +60,22 @@
 
 
     <text>
+    <label></label>
     <label>Load Weapons</label>
    </text>
     <text>
-    <label></label>
+    
    </text>
   <group>
    <layout>vbox</layout>
 
     <text>
     <label>Load bays with 8 guidable GBU-31 2000lb bombs</label>
-    <halign>left</halign>
+    <halign>center</halign>
    </text>
 
   <button>
-	<legend>Load Guided Ordonance - FWD</legend>
+	<legend>Load Guided Ordnance - FWD</legend>
 	<default>true</default>
 	<pref-width>230</pref-width>
 	  <binding>
@@ -83,7 +87,7 @@
           </binding>
   </button>
   <button>
-	<legend>Load Guided Ordonance - INTMD</legend>
+	<legend>Load Guided Ordnance - INTMD</legend>
 	<default>true</default>
 	<pref-width>230</pref-width>
 	  <binding>
@@ -95,7 +99,7 @@
           </binding>
   </button>
   <button>
-	<legend>Load Guided Ordonance - AFT</legend>
+	<legend>Load Guided Ordnance - AFT</legend>
 	<default>true</default>
 	<pref-width>230</pref-width>
 	  <binding>
@@ -124,7 +128,6 @@
     <label>via Sniperpod: mouseclick + pressing t button (r next target))</label>
    </text>
     <text>
-    <label></label>
     </text>
 
   <hrule/>
