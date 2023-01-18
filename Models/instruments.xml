@@ -44,7 +44,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
 	  <offsets>
 		  <x-m>-18.214</x-m>
-		  <y-m> 0.663</y-m>
+		  <y-m> 0.690</y-m>
 		  <z-m> 1.110</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -66,7 +66,7 @@ more to come :-)
 	  <offsets>
 		  <x-m>-18.212</x-m>
 		  <y-m>0.435</y-m>
-		  <z-m>1.197</z-m>
+		  <z-m>1.194</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -76,7 +76,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/hud_alt.xml</path>
 	  <offsets>
 		  <x-m>-18.210</x-m>
-		  <y-m>0.828</y-m>
+		  <y-m>0.848</y-m>
 		  <z-m>1.185</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -87,7 +87,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/hud_mach.xml</path>
 	  <offsets>
 		  <x-m>-18.210</x-m>
-		  <y-m>0.853</y-m>
+		  <y-m>0.848</y-m>
 		  <z-m>1.185</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -98,8 +98,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/caution_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.217</x-m>
-		  <y-m>0.800</y-m>
-		  <z-m>1.232</z-m>
+		  <y-m>0.806</y-m>
+		  <z-m>1.238</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -129,9 +129,9 @@ more to come :-)
 	  <name>pfdb1</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb1.xml</path>
 	  <offsets>
-		  <x-m>-18.212</x-m>
+		  <x-m>-18.214</x-m>
 		  <y-m>-0.675</y-m>
-		  <z-m>1.197</z-m>
+		  <z-m>1.189</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -151,7 +151,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/hud_alt.xml</path>
 	  <offsets>
 		  <x-m>-18.210</x-m>
-		  <y-m>-0.286</y-m>
+		  <y-m>-0.282</y-m>
 		  <z-m>1.184</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -162,7 +162,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/hud_mach.xml</path>
 	  <offsets>
 		  <x-m>-18.210</x-m>
-		  <y-m>-0.255</y-m>
+		  <y-m>-0.284</y-m>
 		  <z-m>1.185</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -184,7 +184,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/mac_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.212</x-m>
-		  <y-m>-0.210</y-m>
+		  <y-m>-0.200</y-m>
 		  <z-m>1.204</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -217,7 +217,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/radar_alt.xml</path>
 	  <offsets>
 		  <x-m>-18.212</x-m>
-		  <y-m>-0.530</y-m>
+		  <y-m>-0.510</y-m>
 		  <z-m>1.314</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -249,7 +249,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
 	  <offsets>
 		  <x-m>-18.214</x-m>
-		  <y-m>-0.895</y-m>
+		  <y-m>-0.920</y-m>
 		  <z-m> 1.125</z-m>
 		  <pitch-deg>-1</pitch-deg>
 	  </offsets>
@@ -271,8 +271,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/caution_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.217</x-m>
-		  <y-m>-0.330</y-m>
-		  <z-m>1.232</z-m>
+		  <y-m>-0.307</y-m>
+		  <z-m>1.234</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
