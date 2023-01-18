@@ -19496,6 +19496,7 @@ data 8
 Cube.028
 crease 30.0
 texture "screen_trim.png"
+texrep 1 1
 numvert 250
 -0.00069 0.10933 -0.1211
 -0.00069 -0.12187 -0.1211
@@ -21169,6 +21170,7 @@ data 8
 Bolt.048
 crease 40.0
 texture "screen_trim.png"
+texrep 1 1
 numvert 1790
 0.02165 -0.11205 0.02854
 0.02246 -0.11257 0.02883
