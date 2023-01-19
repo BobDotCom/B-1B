@@ -194,7 +194,7 @@ more to come :-)
 	  <name>fcgms</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fcgms.xml</path>
 	  <offsets>
-		  <x-m>-18.214</x-m>
+		  <x-m>-18.217</x-m>
 		  <y-m>-0.265</y-m>
 		  <z-m>1.196</z-m>
 		  <pitch-deg>0</pitch-deg>
@@ -818,8 +818,8 @@ B-1BFS
 	 </condition>
 	  <offsets>
 		  <x-m>-15.793</x-m>
-		  <y-m>0.605</y-m>
-		  <z-m>1.635</z-m>
+		  <y-m>0.598</y-m>
+		  <z-m>1.630</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -865,7 +865,7 @@ B-1BFS
 	  <offsets>
 		  <x-m>-15.780</x-m>
 		  <y-m>0.278</y-m>
-		  <z-m>1.642</z-m>
+		  <z-m>1.625</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -887,7 +887,7 @@ B-1BFS
 	 </condition>
 	  <offsets>
 		  <x-m>-15.788</x-m>
-		  <y-m>0.378</y-m>
+		  <y-m>0.372</y-m>
 		  <z-m>1.637</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -957,7 +957,7 @@ B-1BFS
 	 </condition>
 	  <offsets>
 		  <x-m>-15.710</x-m>
-		  <y-m>-0.685</y-m>
+		  <y-m>-0.635</y-m>
 		  <z-m>1.380</z-m>
 		  <pitch-deg>-35</pitch-deg>
 	  </offsets>
@@ -980,7 +980,7 @@ B-1BFS
 	 </condition>
 	  <offsets>
 		  <x-m>-15.786</x-m>
-		  <y-m>-0.518</y-m>
+		  <y-m>-0.560</y-m>
 		  <z-m>1.640</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -1002,7 +1002,7 @@ B-1BFS
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.790</x-m>
+		  <x-m>-15.788</x-m>
 		  <y-m>-0.798</y-m>
 		  <z-m> 1.640</z-m>
 		  <pitch-deg>0</pitch-deg>
@@ -1025,10 +1025,11 @@ B-1BFS
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.710</x-m>
-		  <y-m>-0.815</y-m>
+		  <x-m>-15.708</x-m>
+		  <y-m>-0.800</y-m>
 		  <z-m> 1.385</z-m>
-		  <pitch-deg>-35</pitch-deg>
+		  <pitch-deg>-38</pitch-deg>
+
 	  </offsets>
   </model>
 </PropertyList>

@@ -27,7 +27,7 @@ sweat by maggse
 		</entry>
 		<entry>
 			<ind>0.75</ind>
-			<dep>-135</dep>
+			<dep>-140</dep>
 		</entry>
 		<entry>
 			<ind>1.00</ind>
@@ -68,7 +68,7 @@ sweat by maggse
 		<binding>
 			<command>property-adjust</command>
 			<property>controls/switches/fltdir</property>
-			<step>0.15</step>
+			<step>0.25</step>
 			<min>0.0</min>
 			<max>1.00</max>
 		</binding>
