@@ -13,14 +13,13 @@ sweat by maggse
 	<object-name>knob_fltdir</object-name>
 	<property>controls/switches/fltdir</property>
 	<interpolation>
-
 		<entry>
-			<ind>-0.0</ind>
-			<dep>30.0</dep>
+			<ind>0.0</ind>
+			<dep>45.0</dep>
 		</entry>
 		<entry>
 			<ind>0.25</ind>
-			<dep>-43</dep>
+			<dep>0</dep>
 		</entry>
 		<entry>
 			<ind>0.50</ind>
@@ -28,11 +27,11 @@ sweat by maggse
 		</entry>
 		<entry>
 			<ind>0.75</ind>
-			<dep>-145</dep>
+			<dep>-135</dep>
 		</entry>
 		<entry>
 			<ind>1.00</ind>
-			<dep>-190</dep>
+			<dep>-180</dep>
 		</entry>
 	</interpolation>
 	<axis>
