@@ -129,7 +129,7 @@ more to come :-)
 	  <name>pfdb1</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb1.xml</path>
 	  <offsets>
-		  <x-m>-18.214</x-m>
+		  <x-m>-18.212</x-m>
 		  <y-m>-0.675</y-m>
 		  <z-m>1.189</z-m>
 		  <pitch-deg>0</pitch-deg>
