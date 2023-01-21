@@ -5,7 +5,7 @@ sweat by maggse
 <PropertyList>
 
  <path>fuelvalves.ac</path>
- 
+
 
  <!-- fuel valves tank3-->
 
@@ -14,29 +14,29 @@ sweat by maggse
 	 <object-name>switch_1</object-name>
 	 <property>consumables/fuel/tank[2]/selected</property>
 	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
+		<entry>
+			<ind> 0.0</ind>
+			<dep>-25.0</dep>
+		</entry>
+		<entry>
+			<ind> 1.0</ind>
+			<dep> 25.0</dep>
+		</entry>
 	 </interpolation>
 	 <axis>
 		 <x>0.0</x>
-		 <y>1.0</y>
+		 <y>-1.0</y>
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.00513</x-m>
-		 <y-m>-0.01755</y-m>
-		 <z-m>-0.05224</z-m>
+		 <x-m>-18.4741</x-m>
+		 <y-m> 0.41440</y-m>
+		 <z-m> 0.06214</z-m>
    </center>
  </animation>
- 
+
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
- 
+
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_1</object-name>
@@ -60,11 +60,11 @@ sweat by maggse
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>30.0</dep>
+			<dep>25.0</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-30.0</dep>
+			<dep>-25.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -73,9 +73,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00513</x-m>
-		<y-m>-0.08209</y-m>
-		<z-m>-0.05234</z-m>
+		<x-m>-18.47585</x-m>
+		<y-m> 0.030813</y-m>
+		<z-m> 0.06214</z-m>
 	</center>
 </animation>
 
@@ -105,11 +105,11 @@ sweat by maggse
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>30.0</dep>
+			<dep>25.0</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-30.0</dep>
+			<dep>-25.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -118,9 +118,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00513</x-m>
-		<y-m>-0.06016</y-m>
-		<z-m>-0.05226</z-m>
+		<x-m>-18.47715</x-m>
+		<y-m> 0.36136</y-m>
+		<z-m> 0.06214</z-m>
 	</center>
 </animation>
 
@@ -149,11 +149,11 @@ sweat by maggse
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>30.0</dep>
+			<dep>25.0</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-30.0</dep>
+			<dep>-25.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -162,9 +162,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00513</x-m>
-		<y-m>-0.03809</y-m>
-		<z-m>-0.05239</z-m>
+		<x-m>-18.47748</x-m>
+		<y-m> 0.038812</y-m>
+		<z-m> 0.06214</z-m>
 	</center>
 </animation>
 
@@ -193,11 +193,11 @@ sweat by maggse
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>30.0</dep>
+			<dep>25.0</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-30.0</dep>
+			<dep>-25.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -206,9 +206,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00513</x-m>
-		<y-m>-0.10288</y-m>
-		<z-m>-0.05241</z-m>
+		<x-m>-18.47568</x-m>
+		<y-m> 0.33477</y-m>
+		<z-m> 0.06214</z-m>
 	</center>
 </animation>
 
@@ -237,11 +237,11 @@ sweat by maggse
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>30.0</dep>
+			<dep>25.0</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-30.0</dep>
+			<dep>-25.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -250,9 +250,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00513</x-m>
-		<y-m>-0.00486</y-m>
-		<z-m>-0.05237</z-m>
+		<x-m>-18.47729</x-m>
+		<y-m> 0.44128</y-m>
+		<z-m> 0.06214</z-m>
 	</center>
 </animation>
 
@@ -281,11 +281,11 @@ sweat by maggse
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>30.0</dep>
+			<dep>25.0</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-30.0</dep>
+			<dep>-25.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -294,9 +294,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00485</x-m>
-		<y-m>-0.02830</y-m>
-		<z-m>-0.05265</z-m>
+		<x-m>-18.46478</x-m>
+		<y-m> 0.047269</y-m>
+		<z-m> 0.06208</z-m>
 	</center>
 </animation>
 
@@ -323,11 +323,11 @@ sweat by maggse
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>30.0</dep>
+			<dep>25.0</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-30.0</dep>
+			<dep>-25.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -336,9 +336,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.00485</x-m>
-		<y-m>-0.05875</y-m>
-		<z-m>-0.05265</z-m>
+		<x-m>-18.46510</x-m>
+		<y-m> 0.50663</y-m>
+		<z-m> 0.06208</z-m>
 	</center>
 </animation>
 
@@ -370,45 +370,55 @@ sweat by maggse
 	<object-name>switch_rmain</object-name>
 	<object-name>fuel_valves</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		<red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
 
 
-<!--
+<!-- Label Text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Fuel-Valves</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.07</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.20</x-m>
+		<y-m> 0.10 </y-m>
+		<z-m> 0.20 </z-m>
+	</offsets>
+</text>
+
 <animation>
-	<type>pick</type>
-	<object-name>ALT.minus</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.1</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property>/instrumentation/altimeter/setting-inhg</property>
-			<step>-0.01</step>
-			<min>26.0</min>
-			<max>33.0</max>
-			<wrap>false</wrap>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.1</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property>/instrumentation/altimeter/setting-inhg</property>
-			<step>-0.1</step>
-			<min>26.0</min>
-			<max>33.0</max>
-			<wrap>false</wrap>
-		</binding>
-	</action>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
 </animation>
- -->
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
+</animation>
 
 </PropertyList>
