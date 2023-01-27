@@ -183,8 +183,8 @@ more to come :-)
 	  <name>cg mac</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/mac_ind.xml</path>
 	  <offsets>
-		  <x-m>-18.212</x-m>
-		  <y-m>-0.200</y-m>
+		  <x-m>-18.213</x-m>
+		  <y-m>-0.195</y-m>
 		  <z-m>1.204</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -314,9 +314,9 @@ more to come :-)
 	  <name>Pump-panel</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/Pump-Panel.xml</path>
 	  <offsets>
-		  <x-m>-18.205</x-m>
-		  <y-m>-0.035</y-m>
-		  <z-m>0.841</z-m>
+		  <x-m> 0.265</x-m>
+		  <y-m> -0.397</y-m>
+		  <z-m>1.022</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -370,7 +370,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/sweep_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.212</x-m>
-		  <y-m>-0.365</y-m>
+		  <y-m>-0.375</y-m>
 		  <z-m>1.025</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -381,8 +381,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nuc.xml</path>
 	  <offsets>
 		  <x-m>-18.218</x-m>
-		  <y-m>-0.365</y-m>
-		  <z-m>1.022</z-m>
+		  <y-m>-0.380</y-m>
+		  <z-m>1.024</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -404,7 +404,7 @@ more to come :-)
 	  <offsets>
 		  <x-m>-18.217</x-m>
 		  <y-m>0.115</y-m>
-		  <z-m>0.900</z-m>
+		  <z-m>0.870</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -424,9 +424,9 @@ more to come :-)
 	  <name>fuel valves</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuelvalves.xml</path>
 	  <offsets>
-		  <x-m>-18.210</x-m>
-		  <y-m>0.016</y-m>
-		  <z-m>1.121</z-m>
+		  <x-m> 0.262</x-m>
+		  <y-m> -0.417</y-m>
+		  <z-m> 1.022</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Black Widows</name>
+        <texture n="0" type="string">Liveries/bone-body.jpg</texture>
+        <texture n="1" type="string">Liveries/bone-body.jpg</texture>
+        <texture n="2" type="string">Liveries/bone-bogy.jpg</texture>
+        <reflect-map-enabled type="int">0</reflect-map-enabled>
+        <reflection-correction type="float">-0.1</reflection-correction>
+        <ambient-correction type="float">0.2</ambient-correction>
+      </livery>
+      <registration>
+        <red>0.05</red>
+        <green>0.05</green>
+        <blue>0.05</blue>
+      </registration>
+    </model>
+    <aircraft-operator>private</aircraft-operator>
+  </sim>
+</PropertyList>
