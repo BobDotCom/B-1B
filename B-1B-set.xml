@@ -11,6 +11,19 @@ B-1B set file.
     <sim>
         <minimum-fg-version>2017+</minimum-fg-version>
         <expected-aircraft-dir-name>B-1B</expected-aircraft-dir-name>
+        <dimensions>
+            <radius-m type="double">22.0</radius-m> <!-- Wingspan is 42 but length is 44 -->
+            <parkpos-offset-m type="double">0.0</parkpos-offset-m>
+        </dimensions>
+        <aircraft-class type="string">mil-cargo</aircraft-class>
+        <aircraft-operator/>
+        <aircraft-data>
+            <path>/sim/dimensions/radius-m</path>
+            <!-- Note that as of 2020-12, support for parkpos-offset-m has never been implemented. -->
+            <path>/sim/dimensions/parkpos-offset-m</path>
+            <path>/sim/aircraft-class</path>
+            <path>/sim/aircraft-operator</path>
+        </aircraft-data>
         <startup>
             <splash-texture>Aircraft/B-1B/bone.png</splash-texture>
         </startup>
