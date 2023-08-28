@@ -10,7 +10,7 @@ B-1B set file.
 <PropertyList>
   <sim>
   <minimum-fg-version>2017+</minimum-fg-version>
-
+  <expected-aircraft-dir-name>B-1B</expected-aircraft-dir-name>
     <startup>
       <splash-texture>Aircraft/B-1B/bone.png</splash-texture>
     </startup>
