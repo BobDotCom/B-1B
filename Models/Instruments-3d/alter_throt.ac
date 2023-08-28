@@ -11,7 +11,7 @@ name "4Screws"
 data 9
 Plane.118
 crease 40.0
-texture "Alter_Throt.png"
+texture "alter_throt.png"
 numvert 280
 0.00475 -0.05014 -0.20016
 0.00475 -0.05082 -0.19675
@@ -29989,7 +29989,7 @@ name "tto"
 data 9
 Mesh.1611
 crease 30.0
-texture "Alter_Throt.png"
+texture "alter_throt.png"
 numvert 24
 0.00725 -0.03224 -0.29799
 0.00725 -0.04266 -0.29821

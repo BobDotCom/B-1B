@@ -98870,7 +98870,7 @@ name "PANEL_ALT_THROT"
 data 9
 Plane.055
 crease 30.0
-texture "alter_throt.png"
+texture "alter_throt_l1.png"
 numvert 32
 0.0045 0.05427 -0.32541
 0.00448 0.05256 -0.31704
