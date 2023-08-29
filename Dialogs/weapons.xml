@@ -109,20 +109,7 @@
   </group>
   
   <button>
-	<legend>Enable/Disable MP-Messaging</legend>
-	<default>true</default>
-	<pref-width>230</pref-width>
-	  <binding>
-		<command>nasal</command>
-		<script>weapons.mp_messaged()</script>
-	  </binding>
-          <binding>
-            <command>dialog-apply</command>
-          </binding>
-  </button>
-  
-  <button>
-	<legend>Enable/Disable Combat Damage</legend>
+	<legend>Enable/Disable Multiplayer Damage</legend>
 	<default>true</default>
 	<pref-width>230</pref-width>
 	  <binding>

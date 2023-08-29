@@ -49,8 +49,6 @@ setprop("ai/guided/target-number", 0);
 setprop("ai/guided/id-release", 0);
 setprop("armament/sniper-pod/position-norm",0);
 setprop("armament/oso/bay-selected", 0);
-setprop("armament/mp-messaging", 0);
-setprop("armament/damage", 0);
 setprop("armament/bay0/launcher-pos", 0);
 setprop("armament/bay1/launcher-pos", 0);
 setprop("armament/bay2/launcher-pos", 0);
