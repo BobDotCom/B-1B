@@ -351,6 +351,7 @@ B-1B set file.
                     </item>
                     <item>
                         <label>Combat event log</label>
+                        <name>flightlog</name>
                         <binding>
                             <command>dialog-show</command>
                             <dialog-name>flightlog</dialog-name>
@@ -557,6 +558,35 @@ B-1B set file.
         </refuel>
     </systems>
 
+    <payload>
+        <armament>
+            <models>Aircraft/B-1B/Models/mpdamage/</models>
+            <enable-craters type="bool">true</enable-craters>
+            <MLW-bearing type="double">0</MLW-bearing>
+            <MLW-count>0</MLW-count>
+            <MLW-launcher type="string"></MLW-launcher>
+            <MAW-bearing type="double">0</MAW-bearing>
+            <MAW-active type="bool">false</MAW-active>
+            <MAW-semiactive type="bool">false</MAW-semiactive>
+            <spike type="bool">false</spike>
+            <msg type="bool">false</msg>
+        </armament>
+        <d-config>
+            <full_damage_dist_m type="double">3</full_damage_dist_m>
+            <use_hitpoints_instead_of_failure_modes_bool type="bool">false
+            </use_hitpoints_instead_of_failure_modes_bool>
+            <hp_max type="double">80</hp_max>
+            <hitable_by_air_munitions type="bool">true</hitable_by_air_munitions>
+            <hitable_by_cannon type="bool">true</hitable_by_cannon>
+            <is_fleet type="bool">false</is_fleet>
+            <rwr_to_screen type="bool">true</rwr_to_screen>
+            <rwr_audio_extended type="bool">false</rwr_audio_extended>
+            <tacview_supported type="bool">false</tacview_supported>
+            <m28_auto type="bool">false</m28_auto>
+            <mlw_max type="double">2.25</mlw_max>
+            <auto_flare_caller type="bool">false</auto_flare_caller>
+        </d-config>
+    </payload>
 
     <autopilot>
         <settings>
@@ -824,11 +854,18 @@ B-1B set file.
         <GCI>
             <file>Aircraft/B-1B/Nasal/gci-listener.nas</file>
         </GCI>
-        <emesary>
-            <file>Aircraft/B-1B/Nasal/emesary.nas</file>
-            <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>
+        <!--        <emesary>-->
+        <!--            <file>Aircraft/B-1B/Nasal/emesary.nas</file>-->
+        <!--            <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>-->
+        <!--            <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>-->
+        <!--        </emesary>-->
+        <notifications>
+            <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
             <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
-        </emesary>
+        </notifications>
+        <damage>
+            <file>Aircraft/B-1B/Nasal/damage.nas</file>
+        </damage>
         <tfs>
             <file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
         </tfs>
@@ -841,21 +878,21 @@ B-1B set file.
         <low>
             <file>Aircraft/B-1B/Nasal/low.nas</file>
         </low>
+        <vector>
+            <file>Aircraft/B-1B/Nasal/vector.nas</file>
+        </vector>
+        <rcs>
+            <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
+        </rcs>
         <radar>
             <file>Aircraft/B-1B/Nasal/radar-system.nas</file>
             <file>Aircraft/B-1B/Nasal/phd.nas</file>
             <!--file>Aircraft/B-1B/Nasal/radardist.nas</file-->
             <file>Aircraft/B-1B/Nasal/rwr.nas</file>
         </radar>
-        <rcs>
-            <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
-        </rcs>
         <enginefire>
             <file>Aircraft/B-1B/Nasal/enginefire.nas</file>
         </enginefire>
-        <vector>
-            <file>Aircraft/B-1B/Nasal/vector.nas</file>
-        </vector>
         <weapons>
             <file>Aircraft/B-1B/Nasal/oso_management.nas</file>
             <file>Aircraft/B-1B/Nasal/oso_ikb.nas</file>
@@ -863,7 +900,6 @@ B-1B set file.
             <file>Aircraft/B-1B/Nasal/wso_mfd.nas</file>
             <file>Aircraft/B-1B/Nasal/fuel_load.nas</file>
             <file>Aircraft/B-1B/Nasal/target_monitor.nas</file>
-            <file>Aircraft/B-1B/Nasal/damage.nas</file>
         </weapons>
         <fuel>
             <file>Aircraft/B-1B/Nasal/aar.nas</file>
