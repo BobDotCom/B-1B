@@ -16,12 +16,12 @@
     <label>Fuel loading only possible on the ground!</label>
    </text>
   <button>
-	<legend>Load 120000lbs fuel(60%)</legend>
+	<legend>Load 160000lbs fuel(80%)</legend>
 	<default>true</default>
 	<pref-width>180</pref-width>
 	<binding>
 		<command>nasal</command>
-		<script>weapons.fuelload(65)</script>
+		<script>weapons.fuelload(85)</script>
 	</binding>
 	<binding>
 		<command>dialog-apply</command>
