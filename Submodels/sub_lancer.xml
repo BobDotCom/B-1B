@@ -606,11 +606,11 @@
    <submodel>
 		<name>flare</name>
 		<model>Aircraft/B-1B/Models/flare.xml</model>
-		<trigger>controls/switches/flare</trigger>
+		<trigger>ai/submodels/submodel[24]/flare-release</trigger>
 		<speed>400</speed>
 		<repeat>true</repeat>
 		<delay>1.5</delay>
-		<count>-1</count>
+		<count>120</count>
 		<x-offset>-60.0</x-offset>
 		<y-offset>0.0</y-offset>
 		<z-offset>5.0</z-offset>

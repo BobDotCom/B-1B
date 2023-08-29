@@ -524,10 +524,15 @@ B-1B set file.
             <line>Good Luck!</line>
         </help>
 
-        <!--<ai>
-
-         </ai>-->
     </sim>
+
+    <ai>
+      <submodels>
+        <submodel n="24">
+          <flare-release-cmd type="bool">false</flare-release-cmd>
+        </submodel>
+      </submodels>
+    </ai>
 
     <aircraft>
         <icao>
@@ -768,12 +773,20 @@ B-1B set file.
             </key>
 
             <key n="108">
-                <name>l</name>
-                <desc>Flare out</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>controls/switches/flare</property>
-                </binding>
+				<name>l</name>
+				<desc>Trigger flare release</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/ai/submodels/submodel[24]/flare-release-cmd</property>
+					<value type="bool">true</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>/ai/submodels/submodel[24]/flare-release-cmd</property>
+						<value type="bool">false</value>
+					</binding>
+				</mod-up>
             </key>
 
             <key n="76">
