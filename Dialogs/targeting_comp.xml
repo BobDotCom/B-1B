@@ -1,526 +1,614 @@
 <PropertyList>
 
- <name>targeting_comp</name>
- <modal>false</modal>
- <layout>vbox</layout>
- <width>800</width>
- <height>345</height>
-  <group>
-   <text>
-    <label>Targeting Computer</label>
-	<x>350</x>
-	<y>315</y>
-  </text>
-  
-  <!-- ********************************* FWD BAY ************************************ -->
-  
-  <text>
-    <label>FWD Bay</label>
-	<x>95</x>
-   <y>295</y>
-  </text>
-  
-  <input>
-   <x>10</x>
-   <y>270</y>
-   <width>75</width>
-   <height>25</height>
-   <label>1 Lat</label>
-   <property>/ai/guided/bay0/bomb[0]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>130</x>
-   <y>270</y>
-   <width>75</width>
-   <height>25</height>
-   <label>1 Lon</label>
-   <property>/ai/guided/bay0/bomb[0]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>10</x>
-   <y>240</y>
-   <width>75</width>
-   <height>25</height>
-   <label>2 Lat</label>
-   <property>/ai/guided/bay0/bomb[1]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>130</x>
-   <y>240</y>
-   <width>75</width>
-   <height>25</height>
-   <label>2 Lon</label>
-   <property>/ai/guided/bay0/bomb[1]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>10</x>
-   <y>210</y>
-   <width>75</width>
-   <height>25</height>
-   <label>3 Lat</label>
-   <property>/ai/guided/bay0/bomb[2]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>130</x>
-   <y>210</y>
-   <width>75</width>
-   <height>25</height>
-   <label>3 Lon</label>
-   <property>/ai/guided/bay0/bomb[2]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>10</x>
-   <y>180</y>
-   <width>75</width>
-   <height>25</height>
-   <label>4 Lat</label>
-   <property>/ai/guided/bay0/bomb[3]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>130</x>
-   <y>180</y>
-   <width>75</width>
-   <height>25</height>
-   <label>4 Lon</label>
-   <property>/ai/guided/bay0/bomb[3]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>10</x>
-   <y>150</y>
-   <width>75</width>
-   <height>25</height>
-   <label>5 Lat</label>
-   <property>/ai/guided/bay0/bomb[4]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>130</x>
-   <y>150</y>
-   <width>75</width>
-   <height>25</height>
-   <label>5 Lon</label>
-   <property>/ai/guided/bay0/bomb[4]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>10</x>
-   <y>120</y>
-   <width>75</width>
-   <height>25</height>
-   <label>6 Lat</label>
-   <property>/ai/guided/bay0/bomb[5]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>130</x>
-   <y>120</y>
-   <width>75</width>
-   <height>25</height>
-   <label>6 Lon</label>
-   <property>/ai/guided/bay0/bomb[5]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>10</x>
-   <y>90</y>
-   <width>75</width>
-   <height>25</height>
-   <label>7 Lat</label>
-   <property>/ai/guided/bay0/bomb[6]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>130</x>
-   <y>90</y>
-   <width>75</width>
-   <height>25</height>
-   <label>7 Lon</label>
-   <property>/ai/guided/bay0/bomb[6]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>10</x>
-   <y>60</y>
-   <width>75</width>
-   <height>25</height>
-   <label>8 Lat</label>
-   <property>/ai/guided/bay0/bomb[7]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>130</x>
-   <y>60</y>
-   <width>75</width>
-   <height>25</height>
-   <label>8 Lon</label>
-   <property>/ai/guided/bay0/bomb[7]/target-longitude-deg</property>
-  </input>
-  
- <!-- ********************************* IMD BAY ************************************ -->
-  
-  <text>
-    <label>IMD Bay</label>
-	<x>370</x>
-   <y>295</y>
-  </text>
-  
-  <input>
-   <x>280</x>
-   <y>270</y>
-   <width>75</width>
-   <height>25</height>
-   <label>1 Lat</label>
-   <property>/ai/guided/bay1/bomb[0]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>400</x>
-   <y>270</y>
-   <width>75</width>
-   <height>25</height>
-   <label>1 Lon</label>
-   <property>/ai/guided/bay1/bomb[0]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>280</x>
-   <y>240</y>
-   <width>75</width>
-   <height>25</height>
-   <label>2 Lat</label>
-   <property>/ai/guided/bay1/bomb[1]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>400</x>
-   <y>240</y>
-   <width>75</width>
-   <height>25</height>
-   <label>2 Lon</label>
-   <property>/ai/guided/bay1/bomb[1]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>280</x>
-   <y>210</y>
-   <width>75</width>
-   <height>25</height>
-   <label>3 Lat</label>
-   <property>/ai/guided/bay1/bomb[2]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>400</x>
-   <y>210</y>
-   <width>75</width>
-   <height>25</height>
-   <label>3 Lon</label>
-   <property>/ai/guided/bay1/bomb[2]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>280</x>
-   <y>180</y>
-   <width>75</width>
-   <height>25</height>
-   <label>4 Lat</label>
-   <property>/ai/guided/bay1/bomb[3]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>400</x>
-   <y>180</y>
-   <width>75</width>
-   <height>25</height>
-   <label>4 Lon</label>
-   <property>/ai/guided/bay1/bomb[3]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>280</x>
-   <y>150</y>
-   <width>75</width>
-   <height>25</height>
-   <label>5 Lat</label>
-   <property>/ai/guided/bay1/bomb[4]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>400</x>
-   <y>150</y>
-   <width>75</width>
-   <height>25</height>
-   <label>5 Lon</label>
-   <property>/ai/guided/bay1/bomb[4]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>280</x>
-   <y>120</y>
-   <width>75</width>
-   <height>25</height>
-   <label>6 Lat</label>
-   <property>/ai/guided/bay1/bomb[5]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>400</x>
-   <y>120</y>
-   <width>75</width>
-   <height>25</height>
-   <label>6 Lon</label>
-   <property>/ai/guided/bay1/bomb[5]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>280</x>
-   <y>90</y>
-   <width>75</width>
-   <height>25</height>
-   <label>7 Lat</label>
-   <property>/ai/guided/bay1/bomb[6]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>400</x>
-   <y>90</y>
-   <width>75</width>
-   <height>25</height>
-   <label>7 Lon</label>
-   <property>/ai/guided/bay1/bomb[6]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>280</x>
-   <y>60</y>
-   <width>75</width>
-   <height>25</height>
-   <label>8 Lat</label>
-   <property>/ai/guided/bay1/bomb[7]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>400</x>
-   <y>60</y>
-   <width>75</width>
-   <height>25</height>
-   <label>8 Lon</label>
-   <property>/ai/guided/bay1/bomb[7]/target-longitude-deg</property>
-  </input>
-  
-  <!-- ********************************* AFT BAY ************************************ -->
-  
-  <text>
-    <label>AFT Bay</label>
-	<x>635</x>
-   <y>295</y>
-  </text>
-  
-  <input>
-   <x>550</x>
-   <y>270</y>
-   <width>75</width>
-   <height>25</height>
-   <label>1 Lat</label>
-   <property>/ai/guided/bay2/bomb[0]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>670</x>
-   <y>270</y>
-   <width>75</width>
-   <height>25</height>
-   <label>1 Lon</label>
-   <property>/ai/guided/bay2/bomb[0]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>550</x>
-   <y>240</y>
-   <width>75</width>
-   <height>25</height>
-   <label>2 Lat</label>
-   <property>/ai/guided/bay2/bomb[1]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>670</x>
-   <y>240</y>
-   <width>75</width>
-   <height>25</height>
-   <label>2 Lon</label>
-   <property>/ai/guided/bay2/bomb[1]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>550</x>
-   <y>210</y>
-   <width>75</width>
-   <height>25</height>
-   <label>3 Lat</label>
-   <property>/ai/guided/bay2/bomb[2]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>670</x>
-   <y>210</y>
-   <width>75</width>
-   <height>25</height>
-   <label>3 Lon</label>
-   <property>/ai/guided/bay2/bomb[2]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>550</x>
-   <y>180</y>
-   <width>75</width>
-   <height>25</height>
-   <label>4 Lat</label>
-   <property>/ai/guided/bay2/bomb[3]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>670</x>
-   <y>180</y>
-   <width>75</width>
-   <height>25</height>
-   <label>4 Lon</label>
-   <property>/ai/guided/bay2/bomb[3]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>550</x>
-   <y>150</y>
-   <width>75</width>
-   <height>25</height>
-   <label>5 Lat</label>
-   <property>/ai/guided/bay2/bomb[4]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>670</x>
-   <y>150</y>
-   <width>75</width>
-   <height>25</height>
-   <label>5 Lon</label>
-   <property>/ai/guided/bay2/bomb[4]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>550</x>
-   <y>120</y>
-   <width>75</width>
-   <height>25</height>
-   <label>6 Lat</label>
-   <property>/ai/guided/bay2/bomb[5]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>670</x>
-   <y>120</y>
-   <width>75</width>
-   <height>25</height>
-   <label>6 Lon</label>
-   <property>/ai/guided/bay2/bomb[5]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>550</x>
-   <y>90</y>
-   <width>75</width>
-   <height>25</height>
-   <label>7 Lat</label>
-   <property>/ai/guided/bay2/bomb[6]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>670</x>
-   <y>90</y>
-   <width>75</width>
-   <height>25</height>
-   <label>7 Lon</label>
-   <property>/ai/guided/bay2/bomb[6]/target-longitude-deg</property>
-  </input>
-  
-  <input>
-   <x>550</x>
-   <y>60</y>
-   <width>75</width>
-   <height>25</height>
-   <label>8 Lat</label>
-   <property>/ai/guided/bay2/bomb[7]/target-latitude-deg</property>
-  </input>
-  <input>
-   <x>670</x>
-   <y>60</y>
-   <width>75</width>
-   <height>25</height>
-   <label>8 Lon</label>
-   <property>/ai/guided/bay2/bomb[7]/target-longitude-deg</property>
-  </input>
-  
-  <!-- ********************************* CLOSE BUTTON ************************************* -->
-  
-  <button>
-    <legend>Close</legend>
-	<y>10</y>
-	<x>370</x>
-    <binding>
-     <command>dialog-apply</command>
-    </binding>
-	<binding>
-	 <command>nasal</command>
-	 <script>
-	    <![CDATA[
-		for ( var bay = 0; bay < 3; bay = bay + 1 ) {
-			for ( var rack = 0; rack < 8; rack = rack + 1 ) {
-				weapons.wpn_info[bay][rack].lat = getprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-latitude-deg");
-				weapons.wpn_info[bay][rack].lon = getprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-longitude-deg");
-				var talt_m = geo.elevation(weapons.wpn_info[bay][rack]["lat"], weapons.wpn_info[bay][rack]["lon"]);
-				if ((talt_m == nil) or (talt_m == "")) {
-				  weapons.wpn_info[bay][rack].talt_m = -11;
-				} else {
-					weapons.wpn_info[bay][rack].talt_m = talt_m;
-				}
-			}
-		}
+    <name>targeting_comp</name>
+    <modal>false</modal>
+    <layout>vbox</layout>
+    <width>850</width>
+    <!--    <height>450</height>-->
+    <nasal>
+        <open><![CDATA[
+        setprop("b1/preplanning-status", "");
+        var load_stpts = func(path) {
+            data.loadSTPTs(path.getValue());
+        }
+        var save_stpts = func(path) {
+            data.saveSTPTs(path.getValue());
+        }
+
+        var defaultDirInFileSelector = getprop("/sim/fg-home") ~ "/Export";
+
+        var file_selector_dtc = gui.FileSelector.new(
+            callback: load_stpts, title: "Load data", button: "Load",
+            dir: defaultDirInFileSelector, dotfiles: 1, pattern: ["*.b1dtc"]);
+        var save_selector_dtc = gui.FileSelector.new(
+            callback: save_stpts, title: "Save data", button: "Save",
+            dir: defaultDirInFileSelector, dotfiles: 1, file: "b1-dtc-data.b1dtc", pattern: ["*.b1dtc"]);
+
+    ]]></open>
+
+        <close><![CDATA[
+        file_selector_dtc.del();
+        save_selector_dtc.del();
+    ]]></close>
+    </nasal>
+    <group>
+        <layout>hbox</layout>
+        <text>
+            <halign>center</halign>
+            <label>Targeting Computer</label>
+        </text>
+    </group>
+    <hrule/>
+    <group>
+        <layout>hbox</layout>
+        <group>
+            <!-- ********************************* FWD BAY ************************************ -->
+            <layout>vbox</layout>
+
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>center</halign>
+                    <label>FWD Bay</label>
+                </text>
+            </group>
+
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>1 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay0/bomb[0]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay0/bomb[0]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>2 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay0/bomb[1]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay0/bomb[1]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>3 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay0/bomb[2]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay0/bomb[2]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>4 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay0/bomb[3]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay0/bomb[3]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>5 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay0/bomb[4]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay0/bomb[4]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>6 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay0/bomb[5]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay0/bomb[5]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>7 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay0/bomb[6]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay0/bomb[6]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>8 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay0/bomb[7]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay0/bomb[7]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+        </group>
+        <vrule/>
+        <group>
+            <layout>vbox</layout>
+            <!-- ********************************* IMD BAY ************************************ -->
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>IMD Bay</label>
+                    <halign>center</halign>
+                </text>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>1 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay1/bomb[0]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay1/bomb[0]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>2 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay1/bomb[1]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay1/bomb[1]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>3 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay1/bomb[2]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay1/bomb[2]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>4 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay1/bomb[3]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay1/bomb[3]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>5 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay1/bomb[4]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay1/bomb[4]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>6 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay1/bomb[5]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay1/bomb[5]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>7 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay1/bomb[6]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay1/bomb[6]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>8 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay1/bomb[7]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay1/bomb[7]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+        </group>
+        <vrule/>
+        <group>
+            <layout>vbox</layout>
+            <!-- ********************************* AFT BAY ************************************ -->
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>AFT Bay</label>
+                    <halign>center</halign>
+                </text>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>1 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay2/bomb[0]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay2/bomb[0]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>2 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay2/bomb[1]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay2/bomb[1]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>3 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay2/bomb[2]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay2/bomb[2]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>4 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay2/bomb[3]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay2/bomb[3]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>5 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay2/bomb[4]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay2/bomb[4]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>6 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay2/bomb[5]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay2/bomb[5]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>7 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay2/bomb[6]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay2/bomb[6]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <label>8 (Lat/Lon):</label>
+                </text>
+                <input>
+                    <property>/ai/guided/bay2/bomb[7]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <property>/ai/guided/bay2/bomb[7]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+            </group>
+        </group>
+    </group>
+    <hrule/>
+    <group>
+        <layout>hbox</layout>
+        <text>
+            <halign>left</halign>
+            <live>true</live>
+            <format>I/O Status: %s</format>
+            <property>b1/preplanning-status</property>
+        </text>
+        <button>
+            <legend>Load DTC</legend>
+            <equal>true</equal>
+            <binding>
+                <command>nasal</command>
+                <script>file_selector_dtc.open()</script>
+            </binding>
+            <binding>
+                <command>dialog-update</command>
+            </binding>
+        </button>
+        <button>
+            <legend>Save DTC</legend>
+            <equal>true</equal>
+            <enable>
+                <value>1</value>
+            </enable>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>save_selector_dtc.open();</script>
+            </binding>
+        </button>
+    </group>
+    <hrule/>
+    <!-- ********************************* CLOSE BUTTON ************************************* -->
+    <group>
+        <layout>hbox</layout>
+        <button>
+            <legend>Close</legend>
+            <halign>center</halign>
+            <binding>
+                <command>nasal</command>
+                <script>
+                    <![CDATA[
+		    data.syncData();
 	    ]]>
-	  </script>
-	</binding>
-	<binding>
-     <command>dialog-close</command>
-    </binding>
-   </button>
-  
-  </group>
+                </script>
+            </binding>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
 
 
-  <!--<text>
-    <label>Weapon Management</label>
-  </text>
-	  
-	  var tlat = getprop("ai/guided/bay"~ b ~"/bomb["~ n ~"]/target-latitude-deg");
-var tlong = getprop("ai/guided/bay"~ b ~"/bomb["~ n ~"]/target-longitude-deg");
-	  
- <hrule/>
- 
-  <nasal>
-    <open>
-	#nasal
-    </open>
-  </nasal>
+    <!--<text>
+      <label>Weapon Management</label>
+    </text>
+
+        var tlat = getprop("ai/guided/bay"~ b ~"/bomb["~ n ~"]/target-latitude-deg");
+  var tlong = getprop("ai/guided/bay"~ b ~"/bomb["~ n ~"]/target-longitude-deg");
+
+   <hrule/>
+
+    <nasal>
+      <open>
+      #nasal
+      </open>
+    </nasal>
 
 
-    <text>
-    <label>Load Weapons</label>
-   </text>
-    <text>
-    <label></label>
-   </text>
-  <group>
-   <layout>vbox</layout>
-    
-    <text>
-    <label>Load bays with 8 guidable GBU-31 2000lb bombs</label>
-    <halign>left</halign>
-   </text>
-   
-  <button>
-	<legend>Load Guided Ordonance - FWD</legend>
-	<default>true</default>
-	<pref-width>230</pref-width>
-	  <binding>
-		<command>nasal</command>
-		<script>weapons.wpn_load(0)</script>
-	  </binding>
-          <binding>
-            <command>dialog-apply</command>
-          </binding>
-  </button>-->
+      <text>
+      <label>Load Weapons</label>
+     </text>
+      <text>
+      <label></label>
+     </text>
+    <group>
+     <layout>vbox</layout>
+
+      <text>
+      <label>Load bays with 8 guidable GBU-31 2000lb bombs</label>
+      <halign>left</halign>
+     </text>
+
+    <button>
+      <legend>Load Guided Ordonance - FWD</legend>
+      <default>true</default>
+      <pref-width>230</pref-width>
+        <binding>
+          <command>nasal</command>
+          <script>weapons.wpn_load(0)</script>
+        </binding>
+            <binding>
+              <command>dialog-apply</command>
+            </binding>
+    </button>-->
 
 </PropertyList>
