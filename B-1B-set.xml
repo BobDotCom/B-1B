@@ -30,6 +30,12 @@ B-1B set file.
 
         <flight-model>yasim</flight-model>
         <status>alpha</status>
+        <rating>
+            <FDM type="int">3</FDM>
+            <systems type="int">3</systems>
+            <cockpit type="int">4</cockpit>
+            <model type="int">4</model>
+        </rating>
         <!-- Legacy authors list. Wiki says it can be kept for pre-2018.3 compatibility -->
         <author>Markus Zojer, Paul Jay Schrenker, pinto, NC-687, Zorka</author>
         <!-- Post 2018.3 authors list -->
