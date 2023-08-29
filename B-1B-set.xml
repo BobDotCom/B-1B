@@ -36,7 +36,13 @@ B-1B set file.
 
         <description>Rockwell B-1B Lancer</description>
         <long-description>
-            The Rockwell B-1 Lancer, commonly referred to as the "Bone" (derived from "B-One"), is a supersonic heavy bomber equipped with variable-sweep wings, and remains integral to the United States Air Force. Alongside the B-2 Spirit and B-52 Stratofortress, it constitutes one of three strategic bombers in the U.S. Air Force's current arsenal. Notably designed for adaptability, the B-1 excels in various roles, owing to its ability to alter its wing configuration during flight. This advanced aircraft plays a crucial role in the nation's defense strategy, offering exceptional speed, payload capacity, and versatility for a wide array of mission profiles.
+            The Rockwell B-1 Lancer, commonly referred to as the "Bone" (derived from "B-One"), is a supersonic heavy
+            bomber equipped with variable-sweep wings, and remains integral to the United States Air Force. Alongside
+            the B-2 Spirit and B-52 Stratofortress, it constitutes one of three strategic bombers in the U.S. Air
+            Force's current arsenal. Notably designed for adaptability, the B-1 excels in various roles, owing to its
+            ability to alter its wing configuration during flight. This advanced aircraft plays a crucial role in the
+            nation's defense strategy, offering exceptional speed, payload capacity, and versatility for a wide array of
+            mission profiles.
         </long-description>
 
         <urls>
@@ -486,6 +492,21 @@ B-1B set file.
 
          </ai>-->
     </sim>
+
+    <aircraft>
+        <icao>
+            <!-- L = light, M = medium, H = heavy, J = jumbo -->
+            <wake-turbulence-category>H</wake-turbulence-category>
+            <type type="string">B1</type>  <!-- eg B738, C172, BE9L -->
+            <!-- ICAO equipment string  -->
+            <!--<equipment type="string">SDFGY</equipment>-->
+            <!-- ICAO surveillance string  -->
+            <!-- <surveillance type="string">S</surveillance> mode-S transponder -->
+        </icao>
+        <!-- TODO: Performance data -->
+
+    </aircraft>
+
 
     <systems>
         <refuel>
