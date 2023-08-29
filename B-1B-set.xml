@@ -30,7 +30,36 @@ B-1B set file.
 
         <flight-model>yasim</flight-model>
         <status>alpha</status>
+        <!-- Legacy authors list. Wiki says it can be kept for pre-2018.3 compatibility -->
         <author>Markus Zojer, Paul Jay Schrenker, pinto, NC-687, Zorka</author>
+        <!-- Post 2018.3 authors list -->
+        <authors>
+            <author n="0">
+                <name>Markus Zojer</name>
+                <description>FDM/Instruments/Animations/3D modeling</description>
+            </author>
+            <author n="1">
+                <name>Paul Jay Schrenker</name>
+                <description>Main 3D model</description>
+            </author>
+            <author n="2">
+                <name>Justin Nicholson</name>
+                <nick>pinto</nick>
+            </author>
+        </authors>
+
+        <!-- Maintainers list doesn't appear to show in the launcher, maybe add maintainers to authors list? -->
+        <maintainers>
+            <maintainer n="0">
+                <name>NC-687</name>
+            </maintainer>
+            <maintainer n="1">
+                <name>Zorka</name>
+            </maintainer>
+            <maintainer n="2">
+                <name>BobDotCom</name>
+            </maintainer>
+        </maintainers>
         <aero>B-1B-yasim</aero>
         <fuel-fraction>0.65</fuel-fraction>
 
