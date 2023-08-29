@@ -335,10 +335,10 @@ B-1B set file.
                         </binding>
                     </item>
                     <item n="4">
-                        <label>Targetting Computer</label>
+                        <label>Targeting Computer</label>
                         <binding>
                             <command>nasal</command>
-                            <script>weapons.targetting_comp.open()</script>
+                            <script>weapons.targeting_comp.open()</script>
                         </binding>
                     </item>
                     <item n="10">

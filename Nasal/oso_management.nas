@@ -24,8 +24,8 @@ FailureMgr.set_failure_level(failure_mode_id, 0);
 ### weapon dialog
 var weapon_select = gui.Dialog.new("weapon_select/dialog","Aircraft/B-1B/Dialogs/weapons.xml");
 
-### targetting dialog
-var targetting_comp = gui.Dialog.new("targetting_comp/dialog","Aircraft/B-1B/Dialogs/targetting_comp.xml");
+### targeting dialog
+var targeting_comp = gui.Dialog.new("targeting_comp/dialog","Aircraft/B-1B/Dialogs/targeting_comp.xml");
 
 ###set global vars
 var wpn_info = [

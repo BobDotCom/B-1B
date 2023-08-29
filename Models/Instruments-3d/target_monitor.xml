@@ -431,7 +431,7 @@ sweat by maggse
   <object-name>target_mark1</object-name>
   <condition>
 	<less-than>
-	<property>ai/guided/targetting/bomb[0]/target-distance</property>
+	<property>ai/guided/targeting/bomb[0]/target-distance</property>
 	<value>10</value>
 	</less-than>
   </condition>
@@ -439,7 +439,7 @@ sweat by maggse
 <animation>
    <type>rotate</type>
    <object-name>target_mark1</object-name>
-   <property>ai/guided/targetting/bomb[0]/target-bearing</property>
+   <property>ai/guided/targeting/bomb[0]/target-bearing</property>
      <axis>
        <x>-1</x>
        <y>0</y>
@@ -469,7 +469,7 @@ sweat by maggse
 <animation>
 	<type>translate</type>
 	<object-name>target_mark1</object-name>
-	<property>ai/guided/targetting/bomb[0]/target-distance</property>
+	<property>ai/guided/targeting/bomb[0]/target-distance</property>
 <factor>0.0080</factor>
 <axis>
 <x>0</x>
@@ -483,7 +483,7 @@ sweat by maggse
   <object-name>target_mark2</object-name>
   <condition>
 	<less-than>
-	<property>ai/guided/targetting/bomb[1]/target-distance</property>
+	<property>ai/guided/targeting/bomb[1]/target-distance</property>
 	<value>10</value>
 	</less-than>
 	</condition>
@@ -491,7 +491,7 @@ sweat by maggse
 <animation>
    <type>rotate</type>
    <object-name>target_mark2</object-name>
-   <property>ai/guided/targetting/bomb[1]/target-bearing</property>
+   <property>ai/guided/targeting/bomb[1]/target-bearing</property>
      <axis>
        <x>-1</x>
        <y>0</y>
@@ -523,7 +523,7 @@ sweat by maggse
  <animation>
 	<type>translate</type>
 	<object-name>target_mark2</object-name>
-	<property>ai/guided/targetting/bomb[1]/target-distance</property>
+	<property>ai/guided/targeting/bomb[1]/target-distance</property>
   <factor>0.0080</factor>
   <axis>
     <x>0</x>
@@ -537,7 +537,7 @@ sweat by maggse
   <object-name>target_mark3</object-name>
   <condition>
 	<less-than>
-	<property>ai/guided/targetting/bomb[2]/target-distance</property>
+	<property>ai/guided/targeting/bomb[2]/target-distance</property>
 	<value>10</value>
 	</less-than>
 	</condition>
@@ -545,7 +545,7 @@ sweat by maggse
 <animation>
    <type>rotate</type>
    <object-name>target_mark3</object-name>
-   <property>ai/guided/targetting/bomb[2]/target-bearing</property>
+   <property>ai/guided/targeting/bomb[2]/target-bearing</property>
      <axis>
        <x>-1</x>
        <y>0</y>
@@ -577,7 +577,7 @@ sweat by maggse
  <animation>
 	<type>translate</type>
 	<object-name>target_mark3</object-name>
-	<property>ai/guided/targetting/bomb[2]/target-distance</property>
+	<property>ai/guided/targeting/bomb[2]/target-distance</property>
   <factor>0.0080</factor>
   <axis>
     <x>0</x>
@@ -591,7 +591,7 @@ sweat by maggse
   <object-name>target_mark4</object-name>
   <condition>
 	<less-than>
-	<property>ai/guided/targetting/bomb[3]/target-distance</property>
+	<property>ai/guided/targeting/bomb[3]/target-distance</property>
 	<value>10</value>
 	</less-than>
 	</condition>
@@ -599,7 +599,7 @@ sweat by maggse
 <animation>
    <type>rotate</type>
    <object-name>target_mark4</object-name>
-   <property>ai/guided/targetting/bomb[3]/target-bearing</property>
+   <property>ai/guided/targeting/bomb[3]/target-bearing</property>
      <axis>
        <x>-1</x>
        <y>0</y>
@@ -631,7 +631,7 @@ sweat by maggse
  <animation>
 	<type>translate</type>
 	<object-name>target_mark4</object-name>
-	<property>ai/guided/targetting/bomb[3]/target-distance</property>
+	<property>ai/guided/targeting/bomb[3]/target-distance</property>
   <factor>0.0080</factor>
   <axis>
     <x>0</x>
@@ -645,7 +645,7 @@ sweat by maggse
   <object-name>target_mark5</object-name>
   <condition>
 	<less-than>
-	<property>ai/guided/targetting/bomb[4]/target-distance</property>
+	<property>ai/guided/targeting/bomb[4]/target-distance</property>
 	<value>10</value>
 	</less-than>
 	</condition>
@@ -653,7 +653,7 @@ sweat by maggse
 <animation>
    <type>rotate</type>
    <object-name>target_mark5</object-name>
-   <property>ai/guided/targetting/bomb[4]/target-bearing</property>
+   <property>ai/guided/targeting/bomb[4]/target-bearing</property>
      <axis>
        <x>-1</x>
        <y>0</y>
@@ -683,7 +683,7 @@ sweat by maggse
 <animation>
 	<type>translate</type>
 	<object-name>target_mark5</object-name>
-	<property>ai/guided/targetting/bomb[4]/target-distance</property>
+	<property>ai/guided/targeting/bomb[4]/target-distance</property>
   <factor>0.0080</factor>
   <axis>
     <x>0</x>
@@ -697,7 +697,7 @@ sweat by maggse
   <object-name>target_mark6</object-name>
   <condition>
 	<less-than>
-	<property>ai/guided/targetting/bomb[5]/target-distance</property>
+	<property>ai/guided/targeting/bomb[5]/target-distance</property>
 	<value>10</value>
 	</less-than>
 	</condition>
@@ -705,7 +705,7 @@ sweat by maggse
 <animation>
    <type>rotate</type>
    <object-name>target_mark6</object-name>
-   <property>ai/guided/targetting/bomb[5]/target-bearing</property>
+   <property>ai/guided/targeting/bomb[5]/target-bearing</property>
      <axis>
        <x>-1</x>
        <y>0</y>
@@ -735,7 +735,7 @@ sweat by maggse
 <animation>
 	<type>translate</type>
 	<object-name>target_mark6</object-name>
-	<property>ai/guided/targetting/bomb[5]/target-distance</property>
+	<property>ai/guided/targeting/bomb[5]/target-distance</property>
   <factor>0.0080</factor>
   <axis>
     <x>0</x>
@@ -749,7 +749,7 @@ sweat by maggse
   <object-name>target_mark7</object-name>
   <condition>
 	<less-than>
-	<property>ai/guided/targetting/bomb[6]/target-distance</property>
+	<property>ai/guided/targeting/bomb[6]/target-distance</property>
 	<value>10</value>
 	</less-than>
 	</condition>
@@ -757,7 +757,7 @@ sweat by maggse
 <animation>
    <type>rotate</type>
    <object-name>target_mark7</object-name>
-   <property>ai/guided/targetting/bomb[6]/target-bearing</property>
+   <property>ai/guided/targeting/bomb[6]/target-bearing</property>
      <axis>
        <x>-1</x>
        <y>0</y>
@@ -787,7 +787,7 @@ sweat by maggse
 <animation>
 	<type>translate</type>
 	<object-name>target_mark7</object-name>
-	<property>ai/guided/targetting/bomb[6]/target-distance</property>
+	<property>ai/guided/targeting/bomb[6]/target-distance</property>
   <factor>0.0080</factor>
   <axis>
     <x>0</x>
@@ -801,7 +801,7 @@ sweat by maggse
   <object-name>target_mark8</object-name>
   <condition>
 	<less-than>
-	<property>ai/guided/targetting/bomb[7]/target-distance</property>
+	<property>ai/guided/targeting/bomb[7]/target-distance</property>
 	<value>10</value>
 	</less-than>
 	</condition>
@@ -809,7 +809,7 @@ sweat by maggse
 <animation>
    <type>rotate</type>
    <object-name>target_mark8</object-name>
-   <property>ai/guided/targetting/bomb[7]/target-bearing</property>
+   <property>ai/guided/targeting/bomb[7]/target-bearing</property>
      <axis>
        <x>-1</x>
        <y>0</y>
@@ -839,7 +839,7 @@ sweat by maggse
 <animation>
 	<type>translate</type>
 	<object-name>target_mark8</object-name>
-	<property>ai/guided/targetting/bomb[7]/target-distance</property>
+	<property>ai/guided/targeting/bomb[7]/target-distance</property>
   <factor>0.0080</factor>
   <axis>
     <x>0</x>
@@ -879,7 +879,7 @@ sweat by maggse
   <alignment>right-center</alignment>
 
   <type type="string">number-value</type>
-  <property type="string">ai/guided/targetting/bomb[0]/target-distance</property>
+  <property type="string">ai/guided/targeting/bomb[0]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
   <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
   <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
@@ -920,7 +920,7 @@ sweat by maggse
   <alignment>right-center</alignment>
 
   <type type="string">number-value</type>
-  <property type="string">ai/guided/targetting/bomb[1]/target-distance</property>
+  <property type="string">ai/guided/targeting/bomb[1]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
   <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
   <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
@@ -961,7 +961,7 @@ sweat by maggse
   <alignment>right-center</alignment>
 
   <type type="string">number-value</type>
-  <property type="string">ai/guided/targetting/bomb[2]/target-distance</property>
+  <property type="string">ai/guided/targeting/bomb[2]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
   <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
   <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
@@ -1002,7 +1002,7 @@ sweat by maggse
   <alignment>right-center</alignment>
 
   <type type="string">number-value</type>
-  <property type="string">ai/guided/targetting/bomb[3]/target-distance</property>
+  <property type="string">ai/guided/targeting/bomb[3]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
   <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
   <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
@@ -1043,7 +1043,7 @@ sweat by maggse
   <alignment>right-center</alignment>
 
   <type type="string">number-value</type>
-  <property type="string">ai/guided/targetting/bomb[4]/target-distance</property>
+  <property type="string">ai/guided/targeting/bomb[4]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
   <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
   <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
@@ -1084,7 +1084,7 @@ sweat by maggse
   <alignment>right-center</alignment>
 
   <type type="string">number-value</type>
-  <property type="string">ai/guided/targetting/bomb[5]/target-distance</property>
+  <property type="string">ai/guided/targeting/bomb[5]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
   <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
   <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
@@ -1125,7 +1125,7 @@ sweat by maggse
   <alignment>right-center</alignment>
 
   <type type="string">number-value</type>
-  <property type="string">ai/guided/targetting/bomb[6]/target-distance</property>
+  <property type="string">ai/guided/targeting/bomb[6]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
   <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
   <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
@@ -1166,7 +1166,7 @@ sweat by maggse
   <alignment>right-center</alignment>
 
   <type type="string">number-value</type>
-  <property type="string">ai/guided/targetting/bomb[7]/target-distance</property>
+  <property type="string">ai/guided/targeting/bomb[7]/target-distance</property>
   <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
   <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
   <format type="string">%3.1lf</format> <!-- the printf() format to display the value -->
