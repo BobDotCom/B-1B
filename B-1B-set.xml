@@ -928,9 +928,6 @@ B-1B set file.
         <data>
             <file>Aircraft/B-1B/Nasal/data.nas</file>
         </data>
-                <ai>
-          <file>Aircraft/f16/Nasal/AI_list.nas</file>
-        </ai>
     </nasal>
 
 </PropertyList>
