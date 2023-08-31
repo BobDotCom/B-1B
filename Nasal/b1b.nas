@@ -113,7 +113,7 @@ for (var bay_num = 0; bay_num < 3; bay_num = bay_num + 1) {
 		setprop("ai/guided/bay"~bay_num~"/bomb["~bomb_num~"]/target-latitude-deg",0);
 	}
 }
-weapons.wso_mfd_update(1,0);
+# weapons.wso_mfd_update(1,0); Disabled temp due to weapon system upgrade work
 
 
 

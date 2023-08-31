@@ -436,6 +436,18 @@ B-1B set file.
             <weight-lb type="float">0</weight-lb>
         </weight>
 
+        <!-- Drag not used with YASim but needed for fcs -->
+
+        <drag n="0">
+            <dragarea-sqft type="float">0</dragarea-sqft>
+        </drag>
+        <drag n="1">
+            <dragarea-sqft type="float">0</dragarea-sqft>
+        </drag>
+        <drag n="2">
+            <dragarea-sqft type="float">0</dragarea-sqft>
+        </drag>
+
         <!-- AoA Indexer target 1.0 deg -->
         <aoa-indexer>
             <too-slow-deg>2.5</too-slow-deg>  <!-- target +1.5 deg -->
@@ -563,35 +575,7 @@ B-1B set file.
         </refuel>
     </systems>
 
-    <payload>
-        <armament>
-            <models>Aircraft/B-1B/Models/mpdamage/</models>
-            <enable-craters type="bool">true</enable-craters>
-            <MLW-bearing type="double">0</MLW-bearing>
-            <MLW-count>0</MLW-count>
-            <MLW-launcher type="string"></MLW-launcher>
-            <MAW-bearing type="double">0</MAW-bearing>
-            <MAW-active type="bool">false</MAW-active>
-            <MAW-semiactive type="bool">false</MAW-semiactive>
-            <spike type="bool">false</spike>
-            <msg type="bool">false</msg>
-        </armament>
-        <d-config>
-            <full_damage_dist_m type="double">3</full_damage_dist_m>
-            <use_hitpoints_instead_of_failure_modes_bool type="bool">false
-            </use_hitpoints_instead_of_failure_modes_bool>
-            <hp_max type="double">80</hp_max>
-            <hitable_by_air_munitions type="bool">true</hitable_by_air_munitions>
-            <hitable_by_cannon type="bool">true</hitable_by_cannon>
-            <is_fleet type="bool">false</is_fleet>
-            <rwr_to_screen type="bool">true</rwr_to_screen>
-            <rwr_audio_extended type="bool">false</rwr_audio_extended>
-            <tacview_supported type="bool">false</tacview_supported>
-            <m28_auto type="bool">false</m28_auto>
-            <mlw_max type="double">2.25</mlw_max>
-            <auto_flare_caller type="bool">false</auto_flare_caller>
-        </d-config>
-    </payload>
+    <payload n="0" include= "Systems/b1-payload.xml"/>
 
     <autopilot>
         <settings>
@@ -615,6 +599,30 @@ B-1B set file.
 
     <!-- Start with the Parking Brake On -->
     <controls>
+        <armament>
+            <master-arm-switch type="int">0</master-arm-switch>
+            <trigger type="bool">false</trigger>
+            <ripple type="int">1</ripple>
+            <ripple-delay type="float">0.5</ripple-delay>
+            <dual type="int">1</dual>
+            <station n="0">
+                <release type="bool">false</release>
+                <selected type="bool">false</selected>
+            </station>
+            <station n="1">
+                <release type="bool">false</release>
+                <selected type="bool">false</selected>
+            </station>
+            <station n="2">
+                <release type="bool">false</release>
+                <selected type="bool">false</selected>
+            </station>
+            <station n="3">
+                <release type="bool">false</release>
+                <selected type="bool">false</selected>
+            </station>
+        </armament>
+
         <gear>
             <brake-parking type="double">1.0</brake-parking>
         </gear>
@@ -789,19 +797,6 @@ B-1B set file.
 				</mod-up>
             </key>
 
-            <key n="76">
-                <name>L</name>
-                <desc>automated bomb launcher</desc>
-                <binding>
-                    <command>nasal</command>
-                    <script>weapons.rot_launch_rel()</script>
-                </binding>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>armament/auto-release</property>
-                </binding>
-            </key>
-
             <key n="84">
                 <name>T</name>
                 <desc>Autotrim cancel</desc>
@@ -814,33 +809,41 @@ B-1B set file.
                     </script>
                 </binding>
             </key>
-
-            <key n="114">
-                <name>r</name>
-                <desc>Select next Ordonance</desc>
+        
+        <key n="109">
+                <name>m</name>
+                <desc>Masterarm</desc>
                 <binding>
                     <command>nasal</command>
-                    <script>weapons.target_number(1)</script>
+                    <script><![CDATA[
+                            setprop("controls/armament/master-arm",!getprop("controls/armament/master-arm"));
+                            screen.log.write("Master-arm "~(getprop("controls/armament/master-arm")==0?"OFF":"ON"), 0.5, 0.5, 1);
+                        
+                    ]]></script>
                 </binding>
             </key>
 
-            <key n="82">
-                <name>R</name>
-                <desc>Select prev Ordonance</desc>
-                <binding>
+            <key n="119">
+                <name>w</name>
+                <desc>Cycle Weapon Type</desc>
+                <binding n="2">
                     <command>nasal</command>
-                    <script>weapons.target_number(-1)</script>
+                    <condition>
+                            <and>
+                            <not-equals>
+                                <property>sim/current-view/name</property>
+                                <value>Walk View</value>
+                            </not-equals>
+                            <not-equals>
+                                <property>sim/current-view/name</property>
+                                <value>Walker Orbit View</value>
+                            </not-equals>
+                            </and>
+                     </condition>
+                    <script>pylons.fcs.cycleLoadedWeapon();</script>
                 </binding>
             </key>
-
-            <key n="116">
-                <name>t</name>
-                <desc>Target designator</desc>
-                <binding>
-                    <command>nasal</command>
-                    <script>weapons.target_des()</script>
-                </binding>
-            </key>
+            
             <key n="22">
                 <name>Ctrl-v</name>
                 <desc>Select pilot's view (view 0) or toggle between pilot's and OSO's view</desc>
@@ -894,11 +897,22 @@ B-1B set file.
         <vector>
             <file>Aircraft/B-1B/Nasal/vector.nas</file>
         </vector>
+        <armament>
+            <file>Aircraft/B-1B/Nasal/missile-code.nas</file>
+        </armament>
+        <stations>
+            <file>Aircraft/B-1B/Nasal/station-manager.nas</file>
+        </stations>
+        <fc>
+            <file>Aircraft/B-1B/Nasal/fire-control.nas</file>
+        </fc>
         <rcs>
             <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
         </rcs>
-        <radar>
+        <radar_system>
             <file>Aircraft/B-1B/Nasal/radar-system.nas</file>
+        </radar_system>
+        <radar>
             <file>Aircraft/B-1B/Nasal/phd.nas</file>
             <!--file>Aircraft/B-1B/Nasal/radardist.nas</file-->
             <file>Aircraft/B-1B/Nasal/rwr.nas</file>
@@ -906,14 +920,17 @@ B-1B set file.
         <enginefire>
             <file>Aircraft/B-1B/Nasal/enginefire.nas</file>
         </enginefire>
-        <weapons>
+        <pylons>
+            <file>Aircraft/B-1B/Nasal/pylons.nas</file>
+        </pylons>
+<!--         <weapons>
             <file>Aircraft/B-1B/Nasal/oso_management.nas</file>
             <file>Aircraft/B-1B/Nasal/oso_ikb.nas</file>
             <file>Aircraft/B-1B/Nasal/guide_to_target.nas</file>
             <file>Aircraft/B-1B/Nasal/wso_mfd.nas</file>
             <file>Aircraft/B-1B/Nasal/fuel_load.nas</file>
             <file>Aircraft/B-1B/Nasal/target_monitor.nas</file>
-        </weapons>
+        </weapons> -->
         <fuel>
             <file>Aircraft/B-1B/Nasal/aar.nas</file>
         </fuel>
