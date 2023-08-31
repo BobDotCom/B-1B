@@ -1233,9 +1233,11 @@ var FireControl = {
 	},
 };
 
-var debug = 1;
+var debug = 0;
 var printDebug = func (msg) {if (debug == 1) print(msg);};
 var printfDebug = func {if (debug == 1) call(printf,arg);};
+
+print("fire-control.nas loaded");
 
 
 
