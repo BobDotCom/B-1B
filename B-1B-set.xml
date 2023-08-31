@@ -607,15 +607,15 @@ B-1B set file.
             <dual type="int">1</dual>
             <station n="0">
                 <release type="bool">false</release>
-                <selected type="bool">false</selected>
+                <selected type="bool">true</selected>
             </station>
             <station n="1">
                 <release type="bool">false</release>
-                <selected type="bool">false</selected>
+                <selected type="bool">true</selected>
             </station>
             <station n="2">
                 <release type="bool">false</release>
-                <selected type="bool">false</selected>
+                <selected type="bool">true</selected>
             </station>
             <station n="3">
                 <release type="bool">false</release>
@@ -843,7 +843,7 @@ B-1B set file.
                     <script>pylons.fcs.cycleLoadedWeapon();</script>
                 </binding>
             </key>
-            
+
             <key n="22">
                 <name>Ctrl-v</name>
                 <desc>Select pilot's view (view 0) or toggle between pilot's and OSO's view</desc>
@@ -897,6 +897,10 @@ B-1B set file.
         <vector>
             <file>Aircraft/B-1B/Nasal/vector.nas</file>
         </vector>
+        <radar_system>
+            <file>Aircraft/B-1B/Nasal/radar/radar-system.nas</file>
+            <file>Aircraft/B-1B/Nasal/radar/rwr_new.nas</file>
+        </radar_system>
         <armament>
             <file>Aircraft/B-1B/Nasal/missile-code.nas</file>
         </armament>
@@ -909,9 +913,6 @@ B-1B set file.
         <rcs>
             <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
         </rcs>
-        <radar_system>
-            <file>Aircraft/B-1B/Nasal/radar-system.nas</file>
-        </radar_system>
         <radar>
             <file>Aircraft/B-1B/Nasal/phd.nas</file>
             <!--file>Aircraft/B-1B/Nasal/radardist.nas</file-->
