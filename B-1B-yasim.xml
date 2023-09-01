@@ -264,9 +264,9 @@
 
 
 <!-- weapons bay tanks with ~3k gal (20k lb) -->
-<tank x="-15.30" y="0.00" z="0.00" capacity="20000"/>
-<tank x="-20.00" y="0.00" z="0.00" capacity="20000"/>
-<tank x="-35.20" y="0.00" z="0.00" capacity="20000"/>
+<tank x="-15.30" y="0.00" z="0.00" capacity="0"/>
+<tank x="-20.00" y="0.00" z="0.00" capacity="0"/>
+<tank x="-35.20" y="0.00" z="0.00" capacity="0"/>
 
 <!-- ballast used to trim the aircraft -->
 <ballast x="-44.0" y="0" z="0" mass="-15000"/>
