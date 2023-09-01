@@ -18,13 +18,14 @@ var msgC = "Please land before refueling.";
 
 var pylonSets = {
     empty: {name: "Empty", content: [], fireOrder: [], launcherDragArea: 0.0, launcherMass: 0, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 1},
-    mk82: {name: "28 x MK-82", content: ["MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82"], fireOrder: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28], launcherDragArea: 0.0, launcherMass: 100, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
+    mk82: {name: "28 x MK-82", content: ["MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82"], fireOrder: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27], launcherDragArea: 0.0, launcherMass: 100, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
+    mk82air: {name: "28 x MK-82AIR", content: ["MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR"], fireOrder: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27], launcherDragArea: 0.0, launcherMass: 100, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
 };
 
 #sets
-var bayFset = [pylonSets.empty, pylonSets.mk82];
-var bayIset = [pylonSets.empty, pylonSets.mk82];
-var bayAset = [pylonSets.empty, pylonSets.mk82];
+var bayFset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air];
+var bayIset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air];
+var bayAset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air];
 
 # pylons
 # pylonS = stations.InternalStation.new("External 1", 11, [pylonSets.empty], props.globals.getNode("sim/weight[11]/weight-lb",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[3]/selected")});
@@ -38,7 +39,7 @@ var pylons = [bay_fwd,bay_intmd,bay_aft];
 
 # The order of first vector in this line is the default pylon order weapons is released in.
 # The order of second vector in this line is the order cycle key would cycle through the weapons:
-fcs = fc.FireControl.new(pylons, [0,1,2], ["MK-82"]);
+fcs = fc.FireControl.new(pylons, [0,1,2], ["MK-82", "MK-82AIR"]);
 
 print("** Pylon & fire control system started. **");
 # var getDLZ = func {
