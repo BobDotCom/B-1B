@@ -28,10 +28,9 @@ var bayAset = [pylonSets.empty, pylonSets.mk82];
 
 # pylons
 # pylonS = stations.InternalStation.new("External 1", 11, [pylonSets.empty], props.globals.getNode("sim/weight[11]/weight-lb",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[3]/selected")});
-bay_fwd = stations.Pylon.new("Fwd Bay", 0, [7.53, -5.93, -0.22], bayFset,  0, props.globals.getNode("sim/weight[4]/weight-lb",1),props.globals.getNode("sim/drag[0]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[0]/selected");});
-bay_intmd = stations.Pylon.new("Middle Bay", 1, [7.70, -4.86, -0.38], bayIset,  1, props.globals.getNode("sim/weight[5]/weight-lb",1),props.globals.getNode("sim/drag[1]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[1]/selected");});
-bay_aft = stations.Pylon.new("Aft Bay", 2, [7.65, -3.61, -0.52], bayAset,  2, props.globals.getNode("sim/weight[6]/weight-lb",1),props.globals.getNode("sim/drag[2]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[2]/selected");});
-
+bay_fwd = stations.Pylon.new("Fwd Bay", 0, [7.53, -5.93, -0.22], bayFset,  0, props.globals.getNode("sim/weight[0]/weight-lb",1),props.globals.getNode("sim/drag[0]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[0]/selected");});
+bay_intmd = stations.Pylon.new("Middle Bay", 1, [7.70, -4.86, -0.38], bayIset,  1, props.globals.getNode("sim/weight[1]/weight-lb",1),props.globals.getNode("sim/drag[1]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[1]/selected");});
+bay_aft = stations.Pylon.new("Aft Bay", 2, [7.65, -3.61, -0.52], bayAset,  2, props.globals.getNode("sim/weight[2]/weight-lb",1),props.globals.getNode("sim/drag[2]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[2]/selected");});
 
 
 var pylons = [bay_fwd,bay_intmd,bay_aft];

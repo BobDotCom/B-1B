@@ -273,23 +273,22 @@
 <!-- weight added to blend wing area/wing carry through unit -->
 <ballast x="-24.0" y="0" z="-0.5" mass="10000"/>
 
-<!-- move empty wing weight according to wingsweep -->
-<weight x="-26.60" y="0.00"   z="-0.50" size="0.0"
-	mass-prop="sim/weight[0]/weight-lb"/>
-<weight x="-31.00" y="0.00"   z="-0.50" size="0.0"
-      mass-prop="sim/weight[1]/weight-lb"/>
-<!-- adjust wing fuel according to wingsweep -->
-<weight x="-26.20" y="0.00"   z="-0.50" size="0.0"
-	mass-prop="sim/weight[2]/weight-lb"/>
-<weight x="-29.50" y="0.00"   z="-0.50" size="0.0"
-      mass-prop="sim/weight[3]/weight-lb"/>
 <!-- payload option added for bays fwd/intmd/aft -->
 <weight x="-15.30" y="0.00"   z="0.00" size="0.0"
-      mass-prop="sim/weight[4]/weight-lb"/>
+      mass-prop="sim/weight[0]/weight-lb"/>
 <weight x="-20.00" y="0.00"   z="0.00" size="0.0"
-      mass-prop="sim/weight[5]/weight-lb"/>
+      mass-prop="sim/weight[1]/weight-lb"/>
 <weight x="-35.20" y="0.00"   z="0.00" size="0.0"
-      mass-prop="sim/weight[6]/weight-lb"/>
-
+      mass-prop="sim/weight[2]/weight-lb"/>
+<!-- move empty wing weight according to wingsweep -->
+<weight x="-26.60" y="0.00"   z="-0.50" size="0.0"
+	mass-prop="sim/weight[10]/weight-lb"/>
+<weight x="-31.00" y="0.00"   z="-0.50" size="0.0"
+      mass-prop="sim/weight[11]/weight-lb"/>
+<!-- adjust wing fuel according to wingsweep -->
+<weight x="-26.20" y="0.00"   z="-0.50" size="0.0"
+	mass-prop="sim/weight[12]/weight-lb"/>
+<weight x="-29.50" y="0.00"   z="-0.50" size="0.0"
+      mass-prop="sim/weight[13]/weight-lb"/>
 
 </airplane>

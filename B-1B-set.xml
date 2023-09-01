@@ -408,31 +408,32 @@ B-1B set file.
         </spoilers>
 
         <weight n="0">
-            <name>wing pos fwd</name>
-            <weight-lb type="float">20000</weight-lb>
+            <name>Fwd Bay</name>
+            <weight-lb type="float">0</weight-lb>
         </weight>
         <weight n="1">
-            <name>wing pos aft</name>
+            <name>Middle Bay</name>
             <weight-lb type="float">0</weight-lb>
         </weight>
         <weight n="2">
+            <name>Aft Bay</name>
+            <weight-lb type="float">0</weight-lb>
+        </weight>
+
+        <weight n="10">
+            <name>wing pos fwd</name>
+            <weight-lb type="float">20000</weight-lb>
+        </weight>
+        <weight n="11">
+            <name>wing pos aft</name>
+            <weight-lb type="float">0</weight-lb>
+        </weight>
+        <weight n="12">
             <name>fuelwing fwd</name>
             <weight-lb type="float">0</weight-lb>
         </weight>
-        <weight n="3">
+        <weight n="13">
             <name>fuelwing aft</name>
-            <weight-lb type="float">0</weight-lb>
-        </weight>
-        <weight n="4">
-            <name>bay fwd</name>
-            <weight-lb type="float">0</weight-lb>
-        </weight>
-        <weight n="5">
-            <name>bay intmd</name>
-            <weight-lb type="float">0</weight-lb>
-        </weight>
-        <weight n="6">
-            <name>bay aft</name>
             <weight-lb type="float">0</weight-lb>
         </weight>
 
@@ -913,11 +914,11 @@ B-1B set file.
         <rcs>
             <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
         </rcs>
-        <radar>
+<!--         <radar>
             <file>Aircraft/B-1B/Nasal/phd.nas</file>
-            <!--file>Aircraft/B-1B/Nasal/radardist.nas</file-->
+            <<ile>Aircraft/B-1B/Nasal/radardist.nas</file>
             <file>Aircraft/B-1B/Nasal/rwr.nas</file>
-        </radar>
+        </radar> -->
         <enginefire>
             <file>Aircraft/B-1B/Nasal/enginefire.nas</file>
         </enginefire>
