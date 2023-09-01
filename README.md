@@ -1,7 +1,7 @@
-Rockwell B-1B Lancer "The Bone"
+# Rockwell B-1B Lancer "The Bone"
 
 
-XXXXXX  Version Nr: 0019 20032010 XXXXXX
+<!-- XXXXXX  Version Nr: 0019 20032010 XXXXXX -->
 
 
 
@@ -14,7 +14,7 @@ Plane starts with:
 - with 190000lb of fuel (full), some space is required to be able to trim the aircraft
 - you can immediately change fuel/weapon status in the B-1B menu, but only on the ground.
 
-XXXX INSTRUCTIONS XXXX
+## Instructions
 
 
 Get on/offboard:
@@ -102,7 +102,7 @@ Automatically engaged at full throttle, but with the switches directly behind th
 Important when using the autopilot: Switch the afterburners for eng 1 and 4 off, depending on flight also for
 eng 3 or/and eng 4. This prevents oscillations of the throttle levers.
 
-XXXX TERRAIN AVOIDANCE / FOLLOWING SYSTEMS XXXX
+## Terrain Avoidance / Following Systems 
 
 Terrain Avoidance System (TAS)
 
@@ -118,11 +118,11 @@ The native tfs and the build in flightgear tfs(MAP) use the clearance settings f
 The clearance settings start from 0ft and increase in 200ft increments up to 2000ft. A=0ft, B=200ft, C=400ft,..., F=1000ft,..., K=2000ft.
 
 
-XXXX FCGMS Center of Gravity System XXXX
+## FCGMS Center of Gravity System
 
 This system sets the Center of Gravity (CG) in % of MAC, and lets you manipulate it in a destinct range. Enable the system by switching on SET on the FCGMS panel and choose your desired CG position. The display to the right shows your current CG position. This is done by using shifting fuel between 2 tanks, so the system works only within a certain margin.
 
-XXXX CDU-900 SYSTEM XXXXX
+## CDU-900 System
 
 The CDU is an integrated flight computer currently used to visualize/manipulate NAV and COM properties.
 At the moment the topmost  left/right aerrow buttons are used to skip through the submenus, select desired value to change
@@ -130,7 +130,7 @@ with the aerrow buttons (right side aerrows) and manipulate with the num block n
 You can access the main menus by direct selection on the uppermost row of buttons.
 
 
-XXXX WEAPON SYSTEM XXXX
+## Weapon System
 
 This plane is equipped with a bomb guiding system. 
 First select weapons
@@ -174,12 +174,12 @@ The method to retrieve coordinates from the flightgear map/mp server, typing the
 Note: Always use ALT hold to maintain level flight and never use TER AVD and TER FOLLOW when releasing the bombs.
 
 
-XXXX BLAST, FLARES, STROBE, SPOT XXXX
+## Blast, Flares, Strobe, Spot
 
 Based on preexisting osg files some eyecandy for engine blast, smoke, vapour and flares was added.
 
 
-XXXX FEATURES XXXX
+## Features
 
 serial: FGFS 08107
 name: Bad To The Bone
@@ -190,7 +190,7 @@ F	sweep wing fwd
 
 
 
-XXXX PROGRESS XXXX
+## Progress
 
 
 FDM:	 	beta - in use / needs tuning		95%complete
@@ -200,7 +200,7 @@ Animations:	beta - in use / more to come		95%complete
 Autopilot:	beta - in use / needs finetuning	90%complete
 3Dcockpit:	beta - in use / needs completion	90%complete
 
-XXXX AUTHORS XXXX
+## Authors
 
 Main 3D model done by Paul Jay Schrenker.
 
@@ -215,5 +215,3 @@ Terms of usage: Released under terms of GPL v2.
 
 
 Have Fun! Good Luck!
-
-Markus Zojer,  20/03/2010
