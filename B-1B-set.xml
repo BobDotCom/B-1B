@@ -238,6 +238,9 @@ B-1B set file.
         <model>
             <path>Aircraft/B-1B/Models/B-1B.xml</path>
             <A-6E>
+                <fwdtank type="bool">false</fwdtank>
+                <intmdtank type="bool">false</intmdtank>
+                <afttank type="bool">false</afttank>
                 <controls>
                     <PHD>
                         <TCrange-switch type="int">2</TCrange-switch>
@@ -717,6 +720,24 @@ B-1B set file.
             <tank n="7">
                 <tank-num type="int">7</tank-num>
                 <kill-when-empty type="bool">false</kill-when-empty>
+            </tank>
+            <tank n="8">
+                <name>Not attached</name>
+                <selected type="bool">false</selected>
+                <capacity-gal_us type="double">0</capacity-gal_us>
+                <level-norm type="double">0</level-norm>
+            </tank>
+            <tank n="9">
+                <name>Not attached</name>
+                <selected type="bool">false</selected>
+                <capacity-gal_us type="double">0</capacity-gal_us>
+                <level-norm type="double">0</level-norm>
+            </tank>
+            <tank n="10">
+                <name>Not attached</name>
+                <selected type="bool">false</selected>
+                <capacity-gal_us type="double">0</capacity-gal_us>
+                <level-norm type="double">0</level-norm>
             </tank>
         </fuel>
     </consumables>

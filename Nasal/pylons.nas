@@ -16,16 +16,23 @@ var msgB = "Please land before changing payload.";
 var msgC = "Please land before refueling.";
 
 
+var fuelTankFwd = stations.FuelTank.new("Fwd Bay 3000 Gal Tank", "TK3000", 8, 2975, "sim/model/A-6E/fwdtank");
+var fuelTankIntmd = stations.FuelTank.new("Intmd Bay 3000 Gal Tank", "TK3000", 9, 2975, "sim/model/A-6E/intmdtank");
+var fuelTankAft = stations.FuelTank.new("Aft Bay 3000 Gal Tank", "TK3000", 10, 2975, "sim/model/A-6E/afttank");
+
 var pylonSets = {
     empty: {name: "Empty", content: [], fireOrder: [], launcherDragArea: 0.0, launcherMass: 0, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 1},
     mk82: {name: "28 x MK-82", content: ["MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82"], fireOrder: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27], launcherDragArea: 0.0, launcherMass: 100, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
     mk82air: {name: "28 x MK-82AIR", content: ["MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR"], fireOrder: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27], launcherDragArea: 0.0, launcherMass: 100, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
+    fuelfwd: {name: fuelTankFwd.type, content: [fuelTankFwd], fireOrder: [0], launcherDragArea: 0.0, launcherMass: 0, launcherJettisonable: 0, showLongTypeInsteadOfCount: 1, category: 2},
+    fuelintmd: {name: fuelTankIntmd.type, content: [fuelTankIntmd], fireOrder: [0], launcherDragArea: 0.0, launcherMass: 0, launcherJettisonable: 0, showLongTypeInsteadOfCount: 1, category: 2},
+    fuelaft: {name: fuelTankAft.type, content: [fuelTankAft], fireOrder: [0], launcherDragArea: 0.0, launcherMass: 0, launcherJettisonable: 0, showLongTypeInsteadOfCount: 1, category: 2},
 };
 
 #sets
-var bayFset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air];
-var bayIset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air];
-var bayAset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air];
+var bayFset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.fuelfwd];
+var bayIset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.fuelintmd];
+var bayAset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.fuelaft];
 
 # pylons
 # pylonS = stations.InternalStation.new("External 1", 11, [pylonSets.empty], props.globals.getNode("sim/weight[11]/weight-lb",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[3]/selected")});
