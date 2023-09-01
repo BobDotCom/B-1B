@@ -8,25 +8,25 @@ var cg_dist = func {
 var acm = 172000;
 var acp_e = -25.4;
 # weights and position (from yasim file)
-var w1m = getprop("sim/weight[10]/weigth-lb");
+var w1m = getprop("sim/weight[0]/weigth-lb");
 if (w1m == nil){w1m = 0;}
 var w1p = -26.6;
-var w2m = getprop("sim/weight[11]/weigth-lb");
+var w2m = getprop("sim/weight[1]/weigth-lb");
 if (w2m == nil){w2m = 0;}
 var w2p = -31.0;
-var w3m = getprop("sim/weight[12]/weigth-lb");
+var w3m = getprop("sim/weight[2]/weigth-lb");
 if (w3m == nil){w3m = 0;}
 var w3p = -26.2;
-var w4m = getprop("sim/weight[13]/weigth-lb");
+var w4m = getprop("sim/weight[3]/weigth-lb");
 if (w4m == nil){w4m = 0;}
 var w4p = -29.5;
-var w5m = getprop("sim/weight[1]/weigth-lb");
+var w5m = getprop("sim/weight[4]/weigth-lb");
 if (w5m == nil){w5m = 0;}
 var w5p = -15.3;
-var w6m = getprop("sim/weight[2]/weigth-lb");
+var w6m = getprop("sim/weight[5]/weigth-lb");
 if (w6m == nil){w6m = 0;}
 var w6p = -20.0;
-var w7m = getprop("sim/weight[3]/weigth-lb");
+var w7m = getprop("sim/weight[6]/weigth-lb");
 if (w7m == nil){w7m = 0;}
 var w7p = -35.2;
 #var w8m = getprop("sim/weight[7]/weigth-lb");
