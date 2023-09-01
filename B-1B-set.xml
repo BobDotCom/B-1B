@@ -65,6 +65,9 @@ B-1B set file.
             <maintainer n="2">
                 <name>BobDotCom</name>
             </maintainer>
+            <maintainer n="3">
+                <name>SammySkycrafts</name>
+            </maintainer>
         </maintainers>
         <aero>B-1B-yasim</aero>
         <fuel-fraction>0.65</fuel-fraction>
