@@ -809,7 +809,7 @@ B-1B set file.
                     </script>
                 </binding>
             </key>
-        
+
         <key n="109">
                 <name>m</name>
                 <desc>Masterarm</desc>
@@ -842,6 +842,23 @@ B-1B set file.
                      </condition>
                     <script>pylons.fcs.cycleLoadedWeapon();</script>
                 </binding>
+            </key>
+
+            <key n="101">
+                <name>e</name>
+                <desc>Trigger</desc>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/armament/trigger</property>
+                    <value>1</value>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>controls/armament/trigger</property>
+                        <value>0</value>
+                    </binding>
+                </mod-up>
             </key>
 
             <key n="22">
