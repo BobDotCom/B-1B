@@ -81,7 +81,7 @@ B-1B set file.
         </long-description>
 
         <urls>
-            <!-- <support></support> I'd like to put the discord invite here, but I can't make an invite rn  -->
+            <support>https://discord.gg/RbWACT8jUX</support>
             <wikipedia>https://en.wikipedia.org/wiki/Rockwell_B-1_Lancer</wikipedia>
             <code-repository>https://gitlab.com/NC-687/B-1B</code-repository>
         </urls>
