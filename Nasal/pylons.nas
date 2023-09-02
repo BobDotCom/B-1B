@@ -65,9 +65,9 @@ var bayAset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.c87
 
 # pylons
 # pylonS = stations.InternalStation.new("External 1", 11, [pylonSets.empty], props.globals.getNode("sim/weight[11]/weight-lb",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[3]/selected")});
-bay_fwd = stations.Pylon.new("Fwd Bay", 0, [7.53, -5.93, -0.22], bayFset,  4, props.globals.getNode("sim/weight[4]/weight-lb",1),props.globals.getNode("sim/drag[0]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[0]/selected");});
-bay_intmd = stations.Pylon.new("Middle Bay", 1, [7.70, -4.86, -0.38], bayIset,  5, props.globals.getNode("sim/weight[5]/weight-lb",1),props.globals.getNode("sim/drag[1]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[1]/selected");});
-bay_aft = stations.Pylon.new("Aft Bay", 2, [7.65, -3.61, -0.52], bayAset,  6, props.globals.getNode("sim/weight[6]/weight-lb",1),props.globals.getNode("sim/drag[2]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[2]/selected");});
+bay_fwd = stations.Pylon.new("Fwd Bay", 0, [15.261, 1, -1.25], bayFset,  4, props.globals.getNode("sim/weight[4]/weight-lb",1),props.globals.getNode("sim/drag[0]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[0]/selected");});
+bay_intmd = stations.Pylon.new("Middle Bay", 1, [20.3225, 1, -1.25], bayIset,  5, props.globals.getNode("sim/weight[5]/weight-lb",1),props.globals.getNode("sim/drag[1]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[1]/selected");});
+bay_aft = stations.Pylon.new("Aft Bay", 2, [28.0253, 1, -1.25], bayAset,  6, props.globals.getNode("sim/weight[6]/weight-lb",1),props.globals.getNode("sim/drag[2]/dragarea-sqft",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[2]/selected");});
 
 
 
@@ -75,7 +75,7 @@ var pylons = [bay_fwd,bay_intmd,bay_aft];
 
 # The order of first vector in this line is the default pylon order weapons is released in.
 # The order of second vector in this line is the order cycle key would cycle through the weapons:
-fcs = fc.FireControl.new(pylons, [0,1,2], ["20mm Cannon","LAU-68","AIM-9L","AIM-9M","AIM-9X","AIM-120","AIM-7","MK-82","MK-82AIR","MK-83","MK-84","GBU-12","GBU-24","GBU-31","GBU-54","AGM-65B","AGM-65D","AGM-84","AGM-88","AGM-119","AGM-154A","AGM-158","CBU-87","CBU-105"]);  # "B61-7", "B61-12"
+fcs = fc.FireControl.new(pylons, [0,1,2], ["MK-82","MK-82AIR","MK-84","GBU-31","AGM-154A","AGM-158","CBU-87","CBU-105"]);
 
 print("** Pylon & fire control system started. **");
 # var getDLZ = func {
