@@ -370,6 +370,26 @@ B-1B set file.
                         </binding>
                     </item>
                     <item>
+                        <label>Toggle Damage</label>
+                        <binding>
+                        <command>nasal</command>
+                        <script>
+                            <![CDATA[
+                            if (getprop("/gear/gear[0]/wow") and getprop("/velocities/groundspeed-kt") <= 1.0){
+                                setprop("/payload/armament/msg/", 1 - getprop("/payload/armament/msg/"));
+                                if (getprop("/payload/armament/msg/")) {
+                                    screen.log.write("Damage ON", 1, 0, 0);
+                                } else {
+                                    screen.log.write("Damage OFF", 1, 0, 0);
+                                }
+                            } else {
+                                screen.log.write("Can't do that while airborne or moveing", 1, 1, 1);
+                            }
+                            ]]>
+                        </script>
+                        </binding>
+                    </item>
+                    <item>
                         <label>Toggle Headshake</label>
                         <binding>
                             <command>property-toggle</command>
