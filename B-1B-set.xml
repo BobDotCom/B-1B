@@ -100,6 +100,14 @@ B-1B set file.
                 <default-field-of-view-deg>60</default-field-of-view-deg>
             </config>
         </view>
+        <view n="101">
+            <!-- also used for ejection view, if change this number, also change it in MissileView.nas -->
+            <name>Missile View</name>
+            <type>lookat</type>
+            <enabled>true</enabled>
+            <heading-offset-deg>180</heading-offset-deg>
+            <pitch-offset-deg>10</pitch-offset-deg>
+        </view>
 
         <view n="96000">
             <name>DSO/OSO centered view</name>
@@ -935,6 +943,12 @@ B-1B set file.
         <vector>
             <file>Aircraft/B-1B/Nasal/vector.nas</file>
         </vector>
+        <ai>
+          <file>Aircraft/f16/Nasal/AI_list.nas</file>
+        </ai>
+        <view>
+          <file>Aircraft/B-1B/Nasal/MissileView.nas</file>
+        </view>
         <radar_system>
             <file>Aircraft/B-1B/Nasal/radar/radar-system.nas</file>
             <file>Aircraft/B-1B/Nasal/radar/rwr_new.nas</file>
