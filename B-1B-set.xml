@@ -345,11 +345,12 @@ B-1B set file.
                             <script>weapons.repair_damage()</script>
                         </binding>
                     </item>
-                    <item n="4">
+                    <item>
                         <label>Targeting Computer</label>
+                        <name>targeting_comp</name>
                         <binding>
-                            <command>nasal</command>
-                            <script>weapons.targeting_comp.open()</script>
+                            <command>dialog-show</command>
+                            <dialog-name>targeting_comp</dialog-name>
                         </binding>
                     </item>
                     <item n="10">
@@ -772,6 +773,15 @@ B-1B set file.
             <lightning type="bool" archive="y">true</lightning>
             <display-mode archive="y">arc</display-mode>
         </wxradar>
+        <datalink>
+            <data type="int">0</data>
+            <power type="bool">false</power>
+            <channel type="int">42</channel>
+            <power_prop type="string">/instrumentation/datalink/power</power_prop>
+            <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
+            <receive_period type="double">1</receive_period>
+            <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
+        </datalink>
     </instrumentation>
 
     <input>
@@ -949,8 +959,21 @@ B-1B set file.
         <view>
           <file>Aircraft/B-1B/Nasal/MissileView.nas</file>
         </view>
+        <tgp>
+          <file>Aircraft/B-1B/Nasal/tgp.nas</file>
+        </tgp>
+        <tacview>
+            <file>Aircraft/B-1B/Nasal/tacview.nas</file>
+        </tacview>
+        <datalink>
+            <file>Aircraft/B-1B/Nasal/datalink.nas</file>
+        </datalink>
+        <steerpoints>
+            <file>Aircraft/B-1B/Nasal/steerpoints.nas</file>
+        </steerpoints>
         <radar_system>
             <file>Aircraft/B-1B/Nasal/radar/radar-system.nas</file>
+            <file>Aircraft/B-1B/Nasal/radar/apg-68.nas</file>
             <file>Aircraft/B-1B/Nasal/radar/rwr_new.nas</file>
         </radar_system>
         <armament>

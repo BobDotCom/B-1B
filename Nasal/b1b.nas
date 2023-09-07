@@ -908,3 +908,20 @@ var nuc = func {
   screen.log.write(ltext);
   }
 }
+
+var vector_aicontacts_links = [];
+var DLRecipient = emesary.Recipient.new("DLRecipient");
+var startDLListener = func {
+    DLRecipient.radar = radar_system.dlnkRadar;
+    DLRecipient.Receive = func(notification) {
+        if (notification.NotificationType == "DatalinkNotification") {
+            #printf("DL recv: %s", notification.NotificationType);
+            if (me.radar.enabled == 1) {
+                vector_aicontacts_links = notification.vector;
+            }
+            return emesary.Transmitter.ReceiptStatus_OK;
+        }
+        return emesary.Transmitter.ReceiptStatus_NotProcessed;
+    };
+    emesary.GlobalTransmitter.Register(DLRecipient);
+}

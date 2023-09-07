@@ -328,7 +328,7 @@
             <terminal-rise-time type="double">20.0</terminal-rise-time>
             <terminal-dive-time type="double">12.0</terminal-dive-time>
             <seeker-angular-speed-dps type="double">150</seeker-angular-speed-dps>
-            <ready-time type="double">300</ready-time>
+            <ready-time type="double">10</ready-time>
             <requires-power-on type="bool">true</requires-power-on>
             <power-on-battery-time type="double">2700</power-on-battery-time>
             <ejector-speed-fps type="double">5</ejector-speed-fps>
