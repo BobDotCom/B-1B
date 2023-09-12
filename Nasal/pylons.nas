@@ -26,7 +26,9 @@ var pylonSets = {
     # CBM Launcher (2,816 to 3,513 lb (1,277 to 1,593 kg) )
     mk82: {name: "28 x MK-82", content: ["MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82","MK-82"], fireOrder: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27], launcherDragArea: 0.0, launcherMass: 2816, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
     mk82air: {name: "28 x MK-82AIR", content: ["MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR","MK-82AIR"], fireOrder: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27], launcherDragArea: 0.0, launcherMass: 2816, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
-    # Unmodeled: MK-36, MK-62
+    # Unplanned:
+    # MK-36 Destructor - No need for mines in OPRF atm
+    # MK-62 Quickstrike - No need for mines in OPRF atm
 
     # SECBM Launcher (2,816 lb (1,277 kg) empty )
     c87: {name: "10 x CBU-87", content: ["CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87"], fireOrder: [0,1,2,3,4,5,6,7,8,9], launcherDragArea: 0.0, launcherMass: 2816, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
