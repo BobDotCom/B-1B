@@ -31,7 +31,14 @@ var pylonSets = {
     # SECBM Launcher (2,816 lb (1,277 kg) empty )
     c87: {name: "10 x CBU-87", content: ["CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87","CBU-87"], fireOrder: [0,1,2,3,4,5,6,7,8,9], launcherDragArea: 0.0, launcherMass: 2816, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
     c105: {name: "10 x CBU-105", content: ["CBU-105","CBU-105","CBU-105","CBU-105","CBU-105","CBU-105","CBU-105","CBU-105","CBU-105","CBU-105"], fireOrder: [0,1,2,3,4,5,6,7,8,9], launcherDragArea: 0.0, launcherMass: 2816, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
-    # Unmodeled: CBU-89, CBU-97, CBU-103, CBU-104, GBU-38
+    g38: {name: "6 x GBU-38", content: ["GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38"], fireOrder: [0,1,2,3,4,5], launcherDragArea: 0.0, launcherMass: 2816, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
+
+    # Unplanned:
+    # CBU-89 GATOR mine system - No need for anti-tank/personnel mines in OPRF atm
+    # CBU-104 GATOR mine system - Same as the CBU-89, but with the WCMD kit
+    # Unmodeled:
+    # CBU-97 Sensor Fuzed Weapon - Same as CBU-87, but has guiding bomblets. We don't have this yet.
+    # CBU-103 Combined Effects Munition - Our current CBU-105 is actually a CBU-103. It should be renamed, and CBU-105 placed on TODO list
 
     # MPRL Launcher (1,300 to 2,055 lb (590 kg))
     mk84: {name: "8 x MK-84", content: ["MK-84","MK-84","MK-84","MK-84","MK-84","MK-84","MK-84","MK-84"], fireOrder: [0,1,2,3,4,5,6,7], launcherDragArea: 0.0, launcherMass: 1300, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
@@ -41,7 +48,9 @@ var pylonSets = {
     # Unmodeled: Mk-65 naval mines, 4/6-pack GBU-39
 
     # MPRL (Mixed)
-    # Unmodeled: GBU-38/GBU-32/GBU-31, GBU-38
+    g3128: {name: "4 x GBU-31, 4 x GBU-32, 4 x GBU-38", content: ["GBU-31","GBU-31","GBU-31","GBU-31","GBU-32","GBU-32","GBU-32","GBU-32","GBU-38","GBU-38","GBU-38","GBU-38"], fireOrder: [0,1,2,3,4,5,6,7,8,9,10,11], launcherDragArea: 0.0, launcherMass: 1300, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
+    g38x16: {name: "16 x GBU-38", content: ["GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38","GBU-38"], fireOrder: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], launcherDragArea: 0.0, launcherMass: 1300, launcherJettisonable: 0, showLongTypeInsteadOfCount: 0, category: 2},
+
 
     # Fuel
     fuelfwd: {name: fuelTankFwd.type, content: [fuelTankFwd], fireOrder: [0], launcherDragArea: 0.0, launcherMass: 0, launcherJettisonable: 0, showLongTypeInsteadOfCount: 1, category: 2},
@@ -54,7 +63,6 @@ var pylonSets = {
     # Unmodeled: B28, AGM-69, B83
 
     # Mixed nuclear
-    # Note: I don't think this is possible with the current pylon system, as we'd need a mixed fuel tank + weapons on one pylon
     # Unmodeled: AGM-86B/small fuel tank
 };
 
@@ -62,6 +70,9 @@ var pylonSets = {
 var bayFset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.c87, pylonSets.c105, pylonSets.mk84, pylonSets.g31, pylonSets.a154, pylonSets.a158, pylonSets.fuelfwd]; # pylonSets.b617, pylonSets.b6112
 var bayIset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.c87, pylonSets.c105, pylonSets.mk84, pylonSets.g31, pylonSets.a154, pylonSets.a158, pylonSets.fuelintmd]; # pylonSets.b617, pylonSets.b6112
 var bayAset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.c87, pylonSets.c105, pylonSets.mk84, pylonSets.g31, pylonSets.a154, pylonSets.a158, pylonSets.fuelaft]; # pylonSets.b617, pylonSets.b6112
+#var bayFset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.c87, pylonSets.c105, pylonSets.g38, pylonSets.mk84, pylonSets.g31, pylonSets.a154, pylonSets.a158, pylonSets.g3128, pylonSets.g38x16, pylonSets.fuelfwd]; # pylonSets.b617, pylonSets.b6112
+#var bayIset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.c87, pylonSets.c105, pylonSets.g38, pylonSets.mk84, pylonSets.g31, pylonSets.a154, pylonSets.a158, pylonSets.g3128, pylonSets.g38x16, pylonSets.fuelintmd]; # pylonSets.b617, pylonSets.b6112
+#var bayAset = [pylonSets.empty, pylonSets.mk82, pylonSets.mk82air, pylonSets.c87, pylonSets.c105, pylonSets.g38, pylonSets.mk84, pylonSets.g31, pylonSets.a154, pylonSets.a158, pylonSets.g3128, pylonSets.g38x16, pylonSets.fuelaft]; # pylonSets.b617, pylonSets.b6112
 
 # pylons
 # pylonS = stations.InternalStation.new("External 1", 11, [pylonSets.empty], props.globals.getNode("sim/weight[11]/weight-lb",1),func{return getprop("payload/armament/fire-control/serviceable")},func{return getprop("controls/armament/station[3]/selected")});
@@ -75,7 +86,7 @@ var pylons = [bay_fwd,bay_intmd,bay_aft];
 
 # The order of first vector in this line is the default pylon order weapons is released in.
 # The order of second vector in this line is the order cycle key would cycle through the weapons:
-fcs = fc.FireControl.new(pylons, [0,1,2], ["MK-82","MK-82AIR","MK-84","GBU-31","AGM-154A","AGM-158","CBU-87","CBU-105"]);
+fcs = fc.FireControl.new(pylons, [0,1,2], ["MK-82","MK-82AIR","MK-84","GBU-31","GBU-32","GBU-38","AGM-154A","AGM-158","CBU-87","CBU-105"]);
 
 print("** Pylon & fire control system started. **");
 # var getDLZ = func {
