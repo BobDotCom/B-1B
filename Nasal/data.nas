@@ -4,7 +4,7 @@ var serialize = func() {
 	var ret = "";
 	var iter = 0;
 	for ( var bay = 0; bay < 3; bay = bay + 1 ) {
-        for ( var rack = 0; rack < 8; rack = rack + 1 ) {
+        for ( var rack = 0; rack < 16; rack = rack + 1 ) {
             ret = ret~sprintf("TGT,%d,%d,%s,%s,%s|", bay, rack, getprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-latitude-deg"), getprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-longitude-deg"), getprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-altitude"));
         }
     }
@@ -119,7 +119,7 @@ setprop("sim/fg-home-export", getprop("sim/fg-home")~"/Export");
 
 var status_update_func = func {
     for ( var bay = 0; bay < 3; bay = bay + 1 ) {
-        for ( var rack = 0; rack < 8; rack = rack + 1 ) {
+        for ( var rack = 0; rack < 16; rack = rack + 1 ) {
             var wpn = pylons.fcs._getSpecificWeapon(bay,rack);
             var txt = "";
             if (wpn == nil) {

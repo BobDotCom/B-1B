@@ -9,10 +9,13 @@
         <open><![CDATA[
         setprop("b1/preplanning-status", "");
         for ( var bay = 0; bay < 3; bay = bay + 1 ) {
-            for ( var rack = 0; rack < 8; rack = rack + 1 ) {
-                if (getprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-altitude") == nil
-                    or getprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-altitude") == "") {
-                    setprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-altitude", "0");
+            for ( var rack = 0; rack < 16; rack = rack + 1 ) {
+                var tgts = ["longitude-deg","latitude-deg","altitude"];
+                foreach (var tgt;tgts) {
+                    if (getprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-"~tgt) == nil
+                        or getprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-"~tgt) == "") {
+                        setprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/target-"~tgt, "0");
+                    }
                 }
             }
         }
@@ -82,13 +85,13 @@
             <group>
                 <layout>hbox</layout>
 
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>1 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay0/bomb[0]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>1 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[0]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay0/bomb[0]/target-latitude-deg</property>
@@ -121,14 +124,14 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>2 (%s):</format>
-<pref-width>80</pref-width>
-            
-            <property>/ai/guided/bay0/bomb[1]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>2 (%s):</format>
+                    <pref-width>85</pref-width>
+
+                    <property>/ai/guided/bay0/bomb[1]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay0/bomb[1]/target-latitude-deg</property>
@@ -161,13 +164,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>3 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay0/bomb[2]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>3 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[2]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay0/bomb[2]/target-latitude-deg</property>
@@ -200,13 +203,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>4 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay0/bomb[3]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>4 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[3]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay0/bomb[3]/target-latitude-deg</property>
@@ -239,13 +242,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>5 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay0/bomb[4]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>5 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[4]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay0/bomb[4]/target-latitude-deg</property>
@@ -278,13 +281,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>6 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay0/bomb[5]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>6 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[5]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay0/bomb[5]/target-latitude-deg</property>
@@ -317,13 +320,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>7 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay0/bomb[6]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>7 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[6]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay0/bomb[6]/target-latitude-deg</property>
@@ -356,13 +359,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>8 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay0/bomb[7]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>8 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[7]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay0/bomb[7]/target-latitude-deg</property>
@@ -390,6 +393,318 @@
                     <binding>
                         <command>nasal</command>
                         <script>data.select(0,7);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>9 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[8]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[8]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[8]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[8]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(0,8);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>10 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[9]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[9]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[9]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[9]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(0,9);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>11 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[10]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[10]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[10]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[10]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(0,10);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>12 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[11]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[11]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[11]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[11]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(0,11);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>13 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[12]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[12]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[12]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[12]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(0,12);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>14 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[13]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[13]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[13]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[13]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(0,13);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>15 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[14]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[14]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[14]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[14]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(0,14);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>16 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay0/bomb[15]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[15]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[15]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay0/bomb[15]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(0,15);</script>
                     </binding>
                 </button>
             </group>
@@ -422,13 +737,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>1 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay1/bomb[0]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>1 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[0]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay1/bomb[0]/target-latitude-deg</property>
@@ -461,13 +776,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>2 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay1/bomb[1]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>2 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[1]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay1/bomb[1]/target-latitude-deg</property>
@@ -500,13 +815,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>3 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay1/bomb[2]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>3 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[2]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay1/bomb[2]/target-latitude-deg</property>
@@ -539,13 +854,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>4 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay1/bomb[3]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>4 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[3]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay1/bomb[3]/target-latitude-deg</property>
@@ -578,13 +893,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>5 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay1/bomb[4]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>5 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[4]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay1/bomb[4]/target-latitude-deg</property>
@@ -617,13 +932,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>6 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay1/bomb[5]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>6 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[5]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay1/bomb[5]/target-latitude-deg</property>
@@ -656,13 +971,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>7 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay1/bomb[6]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>7 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[6]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay1/bomb[6]/target-latitude-deg</property>
@@ -695,13 +1010,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>8 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay1/bomb[7]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>8 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[7]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay1/bomb[7]/target-latitude-deg</property>
@@ -729,6 +1044,318 @@
                     <binding>
                         <command>nasal</command>
                         <script>data.select(1,7);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>9 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[8]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[8]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[8]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[8]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(1,8);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>10 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[9]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[9]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[9]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[9]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(1,9);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>11 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[10]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[10]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[10]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[10]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(1,10);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>12 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[11]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[11]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[11]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[11]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(1,11);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>13 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[12]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[12]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[12]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[12]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(1,12);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>14 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[13]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[13]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[13]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[13]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(1,13);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>15 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[14]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[14]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[14]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[14]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(1,14);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>16 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay1/bomb[15]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[15]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[15]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay1/bomb[15]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(1,15);</script>
                     </binding>
                 </button>
             </group>
@@ -761,13 +1388,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>1 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay2/bomb[0]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>1 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[0]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay2/bomb[0]/target-latitude-deg</property>
@@ -800,13 +1427,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>2 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay2/bomb[1]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>2 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[1]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay2/bomb[1]/target-latitude-deg</property>
@@ -839,13 +1466,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>3 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay2/bomb[2]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>3 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[2]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay2/bomb[2]/target-latitude-deg</property>
@@ -878,13 +1505,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>4 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay2/bomb[3]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>4 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[3]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay2/bomb[3]/target-latitude-deg</property>
@@ -917,13 +1544,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>5 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay2/bomb[4]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>5 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[4]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay2/bomb[4]/target-latitude-deg</property>
@@ -956,13 +1583,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>6 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay2/bomb[5]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>6 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[5]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay2/bomb[5]/target-latitude-deg</property>
@@ -995,13 +1622,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>7 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay2/bomb[6]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>7 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[6]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay2/bomb[6]/target-latitude-deg</property>
@@ -1034,13 +1661,13 @@
             </group>
             <group>
                 <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <live>true</live>
-            <format>8 (%s):</format>
-<pref-width>80</pref-width>
-            <property>/ai/guided/bay2/bomb[7]/status-text</property>
-        </text>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>8 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[7]/status-text</property>
+                </text>
                 <input>
                     <live>true</live>
                     <property>/ai/guided/bay2/bomb[7]/target-latitude-deg</property>
@@ -1068,6 +1695,318 @@
                     <binding>
                         <command>nasal</command>
                         <script>data.select(2,7);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>9 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[8]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[8]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[8]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[8]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(2,8);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>10 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[9]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[9]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[9]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[9]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(2,9);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>11 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[10]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[10]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[10]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[10]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(2,10);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>12 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[11]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[11]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[11]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[11]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(2,11);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>13 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[12]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[12]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[12]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[12]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(2,12);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>14 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[13]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[13]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[13]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[13]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(2,13);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>15 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[14]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[14]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[14]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[14]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(2,14);</script>
+                    </binding>
+                </button>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+                    <format>16 (%s):</format>
+                    <pref-width>85</pref-width>
+                    <property>/ai/guided/bay2/bomb[15]/status-text</property>
+                </text>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[15]/target-latitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[15]/target-longitude-deg</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <input>
+                    <live>true</live>
+                    <property>/ai/guided/bay2/bomb[15]/target-altitude</property>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </input>
+                <button>
+                    <legend>Select</legend>
+                    <halign>center</halign>
+                    <binding>
+                        <command>nasal</command>
+                        <script>data.select(2,15);</script>
                     </binding>
                 </button>
             </group>
@@ -1112,14 +2051,14 @@
     <!-- ********************************* CLOSE BUTTON ************************************* -->
     <group>
         <layout>hbox</layout>
-                        <button>
-                    <legend>Toggle Power</legend>
-                    <halign>center</halign>
-                    <binding>
-                        <command>nasal</command>
-                        <script>pylons.fcs.togglePowerOn();</script>
-                    </binding>
-                </button>
+        <button>
+            <legend>Toggle Power</legend>
+            <halign>center</halign>
+            <binding>
+                <command>nasal</command>
+                <script>pylons.fcs.togglePowerOn();</script>
+            </binding>
+        </button>
         <button>
             <legend>Close</legend>
             <halign>center</halign>
