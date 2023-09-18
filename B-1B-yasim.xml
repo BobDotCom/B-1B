@@ -296,6 +296,22 @@
       mass-prop="sim/weight[5]/weight-lb"/>
 <weight x="-35.20" y="0.00"   z="0.00" size="0.0"
       mass-prop="sim/weight[6]/weight-lb"/>
-
+<!-- Exterior pylons -->
+<weight x="-20.00" y="0.00"   z="0.00" size="0.0"
+      mass-prop="sim/weight[7]/weight-lb"/>
+<weight x="-20.00" y="0.00"   z="0.00" size="0.0"
+      mass-prop="sim/weight[8]/weight-lb"/>
+<weight x="-20.00" y="0.00"   z="0.00" size="0.0"
+      mass-prop="sim/weight[9]/weight-lb"/>
+<weight x="-20.00" y="0.00"   z="0.00" size="0.0"
+      mass-prop="sim/weight[10]/weight-lb"/>
+<weight x="-20.00" y="0.00"   z="0.00" size="0.0"
+      mass-prop="sim/weight[11]/weight-lb"/>
+<weight x="-20.00" y="0.00"   z="0.00" size="0.0"
+      mass-prop="sim/weight[12]/weight-lb"/>
+<weight x="-20.00" y="0.00"   z="0.00" size="0.0"
+      mass-prop="sim/weight[13]/weight-lb"/>
+<weight x="-20.00" y="0.00"   z="0.00" size="0.0"
+      mass-prop="sim/weight[14]/weight-lb"/>
 
 </airplane>
