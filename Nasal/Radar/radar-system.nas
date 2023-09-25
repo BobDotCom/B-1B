@@ -31,7 +31,7 @@
 # v10.0 Jan 17th 2022 - Chaff handling. Re-coded antennae movement code. Code cleanup.
 # v10.1 May 30th 2023 - Some beautifying of OmniRadar code.
 #
-#
+# 
 # Properties is only being read in the modules that represent RadarSystem.
 #
 #
@@ -111,13 +111,13 @@ var RequestFullNotification = {
 };
 
 
-#  ███    ███  ██████  ██████  ███████ ██          ██████   █████  ██████  ███████ ███████ ██████ 
-#  ████  ████ ██    ██ ██   ██ ██      ██          ██   ██ ██   ██ ██   ██ ██      ██      ██   ██ 
-#  ██ ████ ██ ██    ██ ██   ██ █████   ██          ██████  ███████ ██████  ███████ █████   ██████  
-#  ██  ██  ██ ██    ██ ██   ██ ██      ██          ██      ██   ██ ██   ██      ██ ██      ██   ██ 
-#  ██      ██  ██████  ██████  ███████ ███████     ██      ██   ██ ██   ██ ███████ ███████ ██   ██ 
-#                                                                                                  
-#
+#  ███    ███  ██████  ██████  ███████ ██          ██████   █████  ██████  ███████ ███████ ██████  
+#  ████  ████ ██    ██ ██   ██ ██      ██          ██   ██ ██   ██ ██   ██ ██      ██      ██   ██ 
+#  ██ ████ ██ ██    ██ ██   ██ █████   ██          ██████  ███████ ██████  ███████ █████   ██████  
+#  ██  ██  ██ ██    ██ ██   ██ ██      ██          ██      ██   ██ ██   ██      ██ ██      ██   ██ 
+#  ██      ██  ██████  ██████  ███████ ███████     ██      ██   ██ ██   ██ ███████ ███████ ██   ██ 
+#                                                                                                  
+#                                                                                                  
 var AIToNasal = {
 	# convert AI property tree to Nasal vector
 	# will send notification when some is updated
@@ -162,7 +162,7 @@ var AIToNasal = {
 			me.startOver = 1;
 		}
 	},
-
+	
 	readTree: func {
 		#
 		# Reset knowledge of contacts.
@@ -193,7 +193,7 @@ var AIToNasal = {
 			me.readTree();
 			return;
 		}
-
+		
 		me.prop_ai = me.vector_raw[me.vector_raw_index];
 		me.prop_valid = me.prop_ai.getNode("valid");
 		if (me.prop_valid == nil or !me.prop_valid.getValue() or me.prop_ai.getNode("impact") != nil or me.prop_ai.getName() == "ballistic" or me.prop_ai.getName() == "munition") {
@@ -241,9 +241,9 @@ var AIToNasal = {
 	    	me.nextReadTreeFrame();
 		    return;
         }
-
-
-
+	    
+	    
+        
         #append(me.vector_aicontacts_raw, me.aicontact);
         me.callsign = me.prop_ai.getNode("callsign");
         if (me.callsign == nil) {
@@ -290,19 +290,25 @@ var AIToNasal = {
         	me.sign = me.sign.getValue();
         	me.sign = me.sign == nil?"":me.sign;
         }
+
+        if (me.model != nil and me.model != "" and !getDBEntry(me.model).isDetectable) {
+        	me.nextReadTreeFrame();
+		    return;
+        }
+
         #AIcontact needs 2 calls to work. new() [cheap] and init() [expensive]. Only new is called here, updateVector will do init():
         me.aicontact = AIContact.new(me.prop_ai, me.model, me.callsign, me.pos_type, me.id, me.ainame, me.subid, me.aitype, me.sign);
 
         me.aicontact.coord = me.aircraftPos;
-
+        
         me.usign = sprintf("%s%04d",me.callsign,me.id);
         me.usignLookup = [me.aicontact];
-
+        
         me.updateVectorFrame(me.usign,me.usignLookup);
-
+        
         me.nextReadTreeFrame();
 	},
-
+	
 	nextReadTreeFrame: func {
 		#
 		# Schedule to read next contact from property tree.
@@ -317,7 +323,7 @@ var AIToNasal = {
         	me.updateVector();
         	me.scanInProgress = 0;
         }
-    },
+    },	
 
 	remove_suffix: func(s, x) {
 		#
@@ -328,7 +334,7 @@ var AIToNasal = {
 			return substr(s, 0, size(s) - me.len);
 		return s;
 	},
-
+	
 	updateVectorFrame: func (callsignKey, callsignsRaw) {
 		me.callsigns    = me.lookupCallsign[callsignKey];
 		if (me.callsigns != nil) {
@@ -354,9 +360,9 @@ var AIToNasal = {
 			me.lookupCallsignNew[callsignKey] = callsignsRaw;
 			foreach(me.newContact; callsignsRaw) {
 				append(me.vector_aicontacts, me.newContact);
-				me.newContact.init();
+				me.newContact.init();				
 			}
-		}
+		}		
 	},
 
 	updateVector: func {
@@ -407,18 +413,18 @@ var Contact = {
 };
 
 
-#   ██████  █████  ██      ██      ███████ ██  ██████  ███    ██     ██       ██████   ██████  ██   ██ ██    ██ ██████
-#  ██      ██   ██ ██      ██      ██      ██ ██       ████   ██     ██      ██    ██ ██    ██ ██  ██  ██    ██ ██   ██
-#  ██      ███████ ██      ██      ███████ ██ ██   ███ ██ ██  ██     ██      ██    ██ ██    ██ █████   ██    ██ ██████
-#  ██      ██   ██ ██      ██           ██ ██ ██    ██ ██  ██ ██     ██      ██    ██ ██    ██ ██  ██  ██    ██ ██
-#   ██████ ██   ██ ███████ ███████ ███████ ██  ██████  ██   ████     ███████  ██████   ██████  ██   ██  ██████  ██
-#
-#
+#   ██████  █████  ██      ██      ███████ ██  ██████  ███    ██     ██       ██████   ██████  ██   ██ ██    ██ ██████  
+#  ██      ██   ██ ██      ██      ██      ██ ██       ████   ██     ██      ██    ██ ██    ██ ██  ██  ██    ██ ██   ██ 
+#  ██      ███████ ██      ██      ███████ ██ ██   ███ ██ ██  ██     ██      ██    ██ ██    ██ █████   ██    ██ ██████  
+#  ██      ██   ██ ██      ██           ██ ██ ██    ██ ██  ██ ██     ██      ██    ██ ██    ██ ██  ██  ██    ██ ██      
+#   ██████ ██   ██ ███████ ███████ ███████ ██  ██████  ██   ████     ███████  ██████   ██████  ██   ██  ██████  ██      
+#                                                                                                                       
+#                                                                                                                       
 var CallsignToContact = {
-	#
+	# 
 	new: func () {
 		var ctc = {parents: [CallsignToContact, Radar]};
-
+				
 		ctc.struct_csContact = {};
 
 		ctc.CallsignToContactRecipient = emesary.Recipient.new("CallsignToContactRecipient");
@@ -453,17 +459,17 @@ var CallsignToContact = {
 };
 
 
-#   ██████  ██     ██ ███    ██ ███████ ██   ██ ██ ██████ 
-#  ██    ██ ██     ██ ████   ██ ██      ██   ██ ██ ██   ██ 
-#  ██    ██ ██  █  ██ ██ ██  ██ ███████ ███████ ██ ██████  
-#  ██    ██ ██ ███ ██ ██  ██ ██      ██ ██   ██ ██ ██     
-#   ██████   ███ ███  ██   ████ ███████ ██   ██ ██ ██ 
-#                                                     
-#
+#   ██████  ██     ██ ███    ██ ███████ ██   ██ ██ ██████  
+#  ██    ██ ██     ██ ████   ██ ██      ██   ██ ██ ██   ██ 
+#  ██    ██ ██  █  ██ ██ ██  ██ ███████ ███████ ██ ██████  
+#  ██    ██ ██ ███ ██ ██  ██ ██      ██ ██   ██ ██ ██      
+#   ██████   ███ ███  ██   ████ ███████ ██   ██ ██ ██      
+#                                                          
+#                                                          
 var SelfContact = {
 	#
 	# Ownship info
-	#
+	# 
 	new: func {
 		var c = {parents: [SelfContact, Contact]};
 
@@ -494,17 +500,17 @@ var SelfContact = {
 	getCallsign: func {
 		return me.acCallsign.getValue();
 	},
-
+	
 	getCoord: func {
 		# this is much faster than calling geo.aircraft_position().
 		me.accoord = geo.Coord.new().set_latlon(me.aclat.getValue(), me.aclon.getValue(), me.acalt.getValue()*FT2M);
 	    return me.accoord;
 	},
-
+	
 	getAttitude: func {
 		return [me.acHeading.getValue(),me.acPitch.getValue(),me.acRoll.getValue()];
 	},
-
+	
 	getSpeedVector: func {
 		me.speed_down_mps  = me.acdns.getValue()*FT2M;
         me.speed_east_mps  = me.aceas.getValue()*FT2M;
@@ -515,7 +521,7 @@ var SelfContact = {
 	getSpeedBodyVector: func {
         return [me.acus.getValue(),me.acvs.getValue(),me.acws.getValue()];
 	},
-
+	
 	getHeading: func {
 		return me.acHeading.getValue();
 	},
@@ -523,15 +529,15 @@ var SelfContact = {
 	getHeadingMag: func {
 		return me.acHeadingMag.getValue();
 	},
-
+	
 	getPitch: func {
 		return me.acPitch.getValue();
 	},
-
+	
 	getRoll: func {
 		return me.acRoll.getValue();
 	},
-
+	
 	getSpeed: func {
 		return me.acgns.getValue();
 	},
@@ -547,13 +553,13 @@ var self = SelfContact.new();
 
 
 
-#   ██████ ██   ██  █████  ███████ ███████
-#  ██      ██   ██ ██   ██ ██      ██
-#  ██      ███████ ███████ █████   █████
-#  ██      ██   ██ ██   ██ ██      ██
-#   ██████ ██   ██ ██   ██ ██      ██
-#
-#
+#   ██████ ██   ██  █████  ███████ ███████ 
+#  ██      ██   ██ ██   ██ ██      ██      
+#  ██      ███████ ███████ █████   █████   
+#  ██      ██   ██ ██   ██ ██      ██      
+#   ██████ ██   ██ ██   ██ ██      ██      
+#                                          
+#                                          
 var Chaff = {
 	seenTime: 0,
 	releaseTime: 0,
@@ -569,13 +575,13 @@ var Chaff = {
 
 
 
-#  ██████  ███████ ██    ██ ██  █████  ████████ ██  ██████  ███    ██
-#  ██   ██ ██      ██    ██ ██ ██   ██    ██    ██ ██    ██ ████   ██
-#  ██   ██ █████   ██    ██ ██ ███████    ██    ██ ██    ██ ██ ██  ██
-#  ██   ██ ██       ██  ██  ██ ██   ██    ██    ██ ██    ██ ██  ██ ██
-#  ██████  ███████   ████   ██ ██   ██    ██    ██  ██████  ██   ████
-#
-#
+#  ██████  ███████ ██    ██ ██  █████  ████████ ██  ██████  ███    ██ 
+#  ██   ██ ██      ██    ██ ██ ██   ██    ██    ██ ██    ██ ████   ██ 
+#  ██   ██ █████   ██    ██ ██ ███████    ██    ██ ██    ██ ██ ██  ██ 
+#  ██   ██ ██       ██  ██  ██ ██   ██    ██    ██ ██    ██ ██  ██ ██ 
+#  ██████  ███████   ████   ██ ██   ██    ██    ██  ██████  ██   ████ 
+#                                                                     
+#                                                                     
 var Deviation = {
 	#
 	# This is read by the main radar beam to test if it picks it up.
@@ -600,13 +606,13 @@ var Deviation = {
 
 
 
-#  ██████  ██      ███████ ██████
-#  ██   ██ ██      ██      ██   ██
-#  ██████  ██      █████   ██████
-#  ██   ██ ██      ██      ██
-#  ██████  ███████ ███████ ██
-#
-#
+#  ██████  ██      ███████ ██████  
+#  ██   ██ ██      ██      ██   ██ 
+#  ██████  ██      █████   ██████  
+#  ██   ██ ██      ██      ██      
+#  ██████  ███████ ███████ ██      
+#                                  
+#                                  
 var Blep = {
 	#
 	# Methods might return nil if the radar mode that found it does not support detection of that property.
@@ -684,7 +690,7 @@ var Blep = {
 
 	getSpeed: func {
 		return me.values[5];
-	},
+	},	
 
 	getDirection: func {
 		# Deprecated
@@ -727,13 +733,13 @@ var Blep = {
 };
 
 
-#   ██████  ██████  ███    ██ ████████  █████   ██████ ████████ 
-#  ██      ██    ██ ████   ██    ██    ██   ██ ██         ██    
-#  ██      ██    ██ ██ ██  ██    ██    ███████ ██         ██ 
-#  ██      ██    ██ ██  ██ ██    ██    ██   ██ ██         ██ 
-#   ██████  ██████  ██   ████    ██    ██   ██  ██████    ██ 
-#                                                            
-#
+#   ██████  ██████  ███    ██ ████████  █████   ██████ ████████ 
+#  ██      ██    ██ ████   ██    ██    ██   ██ ██         ██    
+#  ██      ██    ██ ██ ██  ██    ██    ███████ ██         ██    
+#  ██      ██    ██ ██  ██ ██    ██    ██   ██ ██         ██    
+#   ██████  ██████  ██   ████    ██    ██   ██  ██████    ██    
+#                                                               
+#                                                               
 var AIContact = {
 # Attributes:
 #   replaceNode() [in AI tree]
@@ -850,7 +856,7 @@ var AIContact = {
 
 	determineType: func (prop_name, ordnance, alt_ft, model, speed_kt) {
 		# determine type. Only done at init. getType() will check if AIR has landed or taken off and will change it accordingly.
-	    #
+	    # 
         if (prop_name == "carrier") {
         	return MARINE;
         } elsif (prop_name == "aircraft" or prop_name == "swift" or prop_name == "Mig-28") {
@@ -979,7 +985,7 @@ var AIContact = {
 	isCarrier: func {
 		return me.carrier;
 	},
-
+	
 	getCallsign: func {
 		return me.callsign;
 	},
@@ -1002,7 +1008,7 @@ var AIContact = {
 		me.getCoord();
 		return self.getCoord().direct_distance_to(me.coord);
 	},
-
+	
 	getRange: func {# meters
 		# This is an instant perfect result, so don't call this outside the radar system.
 		me.getCoord();
@@ -1097,7 +1103,7 @@ var AIContact = {
 	setVisible: func (vis) {
 		me.visible = vis;
 	},
-
+	
 	isInClutter: func {
 		return me.inClutter;
 	},
@@ -1105,7 +1111,7 @@ var AIContact = {
 	setInClutter: func (clut) {
 		me.inClutter = clut;
 	},
-
+	
 	isHiddenFromDoppler: func () {
 		return me.hiddenFromDoppler;
 	},
@@ -1250,7 +1256,7 @@ var AIContact = {
 		# should really be a hash instead of vector?
 		me.devStored = dev;
 	},
-
+	
 	getDeviationStored: func {
 		# get the frozen info needed for main radar
 		return me.devStored;
@@ -1261,7 +1267,7 @@ var AIContact = {
 		# should really be a hash instead of vector
 		me.threatStored = threat;
 	},
-
+	
 	getThreatStored: func {
 		# get the frozen info needed for RWR
 		return me.threatStored;
@@ -1276,14 +1282,14 @@ var AIContact = {
 			return me.bleps[size(me.bleps)-1].getHeading();
 		}
 		return nil;
-	},
+	},	
 
 	getLastSpeed: func {
 		if (size(me.bleps)) {
 			return me.bleps[size(me.bleps)-1].getSpeed();
 		}
 		return nil;
-	},
+	},	
 
 	getLastDirection: func {
 		# Deprecated
@@ -1352,7 +1358,7 @@ var AIContact = {
 
 	getClosureRate: func {
 		# This is an instant perfect result, so don't call this outside the radar system.
-		# used in RWR. TODO: rework so this doesn't have to be called.
+		# used in RWR. TODO: rework so this doesn't have to be called.		
 		me.selfCo = self.getCoord();
 		me.getCoord();
 		# Get contact velocity and direction to contact in geo centered coordinate system, so we get earth curvature factored in  (This can mean some tens of knots difference at 100+ nm, is this really needed?)
@@ -1370,13 +1376,13 @@ var AIContact = {
 	},
 
 
-#  ██     ██ ███████  █████  ██████   ██████  ███    ██     ███    ███ ███████ ████████ ██   ██  ██████  ██████  ███████ 
-#  ██     ██ ██      ██   ██ ██   ██ ██    ██ ████   ██     ████  ████ ██         ██    ██   ██ ██    ██ ██   ██ ██      
-#  ██  █  ██ █████   ███████ ██████  ██    ██ ██ ██  ██     ██ ████ ██ █████      ██    ███████ ██    ██ ██   ██ ███████ 
-#  ██ ███ ██ ██      ██   ██ ██      ██    ██ ██  ██ ██     ██  ██  ██ ██         ██    ██   ██ ██    ██ ██   ██      ██ 
-#   ███ ███  ███████ ██   ██ ██       ██████  ██   ████     ██      ██ ███████    ██    ██   ██  ██████  ██████  ███████ 
-#                                                                                                                        
-#
+#  ██     ██ ███████  █████  ██████   ██████  ███    ██     ███    ███ ███████ ████████ ██   ██  ██████  ██████  ███████ 
+#  ██     ██ ██      ██   ██ ██   ██ ██    ██ ████   ██     ████  ████ ██         ██    ██   ██ ██    ██ ██   ██ ██      
+#  ██  █  ██ █████   ███████ ██████  ██    ██ ██ ██  ██     ██ ████ ██ █████      ██    ███████ ██    ██ ██   ██ ███████ 
+#  ██ ███ ██ ██      ██   ██ ██      ██    ██ ██  ██ ██     ██  ██  ██ ██         ██    ██   ██ ██    ██ ██   ██      ██ 
+#   ███ ███  ███████ ██   ██ ██       ██████  ██   ████     ██      ██ ███████    ██    ██   ██  ██████  ██████  ███████ 
+#                                                                                                                        
+#                                                                                                                        
 
 	get_type: func {
 		me.getType();
@@ -1540,13 +1546,13 @@ var Radar = {
 };
 
 
-#  ██████   █████  ██████  ████████ ██ ████████ ██  ██████  ███    ██ 
-#  ██   ██ ██   ██ ██   ██    ██    ██    ██    ██ ██    ██ ████   ██ 
-#  ██████  ███████ ██████     ██    ██    ██    ██ ██    ██ ██ ██  ██ 
-#  ██      ██   ██ ██   ██    ██    ██    ██    ██ ██    ██ ██  ██ ██ 
-#  ██      ██   ██ ██   ██    ██    ██    ██    ██  ██████  ██   ████ 
-#                                                                     
-#
+#  ██████   █████  ██████  ████████ ██ ████████ ██  ██████  ███    ██ 
+#  ██   ██ ██   ██ ██   ██    ██    ██    ██    ██ ██    ██ ████   ██ 
+#  ██████  ███████ ██████     ██    ██    ██    ██ ██    ██ ██ ██  ██ 
+#  ██      ██   ██ ██   ██    ██    ██    ██    ██ ██    ██ ██  ██ ██ 
+#  ██      ██   ██ ██   ██    ██    ██    ██    ██  ██████  ██   ████ 
+#                                                                     
+#                                                                     
 var NoseRadar = {
 	# I partition the sky into the field of regard and preserve the contacts in that field for it to be scanned by ActiveDiscRadar or similar
 	new: func () {
@@ -1606,7 +1612,7 @@ var NoseRadar = {
 		me.unitY = vector.Math.normalize(me.tmpVec.vector);
 		me.tmpVec = vector.Math.vectorToGeoVector(me.unitZ, me.owncrd);
 		me.unitZ = vector.Math.normalize(me.tmpVec.vector);
-
+		
 		me.cc = [me.owncrd.x(),me.owncrd.y(),me.owncrd.z()];
 
 		me.vector_aicontacts_for = [];
@@ -1665,7 +1671,7 @@ var NoseRadar = {
 			};
 			contact.storeDeviation(me.contactDev);
 			append(me.vector_aicontacts_for, contact);
-		}
+		}		
 		emesary.GlobalTransmitter.NotifyAll(me.FORNotification.updateV(me.vector_aicontacts_for));
 		#print("In Field of Regard: "~size(me.vector_aicontacts_for));
 	},
@@ -1674,7 +1680,7 @@ var NoseRadar = {
 		if (!me.enabled) return;
 		if (contact == nil) {return;}
 		# called on demand
-
+		
 		if (!contact.isVisible()) {  # moved to nose radar. TODO: WHy double it in discradar? hmm, dont matter so much, its lightning fast
 			emesary.GlobalTransmitter.NotifyAll(me.FORNotification.updateV([]));
 			return;
@@ -1809,7 +1815,7 @@ var SimplerNoseRadar = {
 			};
 			contact.storeDeviation(me.contactDev);
 			append(me.vector_aicontacts_for, contact);
-		}
+		}		
 		emesary.GlobalTransmitter.NotifyAll(me.FORNotification.updateV(me.vector_aicontacts_for));
 		#print("In Field of Regard: "~size(me.vector_aicontacts_for));
 	},
@@ -1818,7 +1824,7 @@ var SimplerNoseRadar = {
 		if (!me.enabled) return;
 		if (contact == nil) {return;}
 		# called on demand
-
+		
 		if (!contact.isVisible()) {  # moved to nose radar. TODO: Why double it in discradar? hmm, dont matter so much, its lightning fast
 			emesary.GlobalTransmitter.NotifyAll(me.FORNotification.updateV([]));
 			return;
@@ -1858,13 +1864,13 @@ var SimplerNoseRadar = {
 
 
 
-#  ██████   ██████   ██████      ██████   █████  ██████   █████  ██████
-#       ██ ██       ██  ████     ██   ██ ██   ██ ██   ██ ██   ██ ██   ██
-#   █████  ███████  ██ ██ ██     ██████  ███████ ██   ██ ███████ ██████
-#       ██ ██    ██ ████  ██     ██   ██ ██   ██ ██   ██ ██   ██ ██   ██
-#  ██████   ██████   ██████      ██   ██ ██   ██ ██████  ██   ██ ██   ██
-#
-#
+#  ██████   ██████   ██████      ██████   █████  ██████   █████  ██████  
+#       ██ ██       ██  ████     ██   ██ ██   ██ ██   ██ ██   ██ ██   ██ 
+#   █████  ███████  ██ ██ ██     ██████  ███████ ██   ██ ███████ ██████  
+#       ██ ██    ██ ████  ██     ██   ██ ██   ██ ██   ██ ██   ██ ██   ██ 
+#  ██████   ██████   ██████      ██   ██ ██   ██ ██████  ██   ██ ██   ██ 
+#                                                                        
+#                                                                        
 var FullRadar = {
 	# 360 degree coverage air radar, for use by SAMs and other surface radars.
 	new: func () {
@@ -1932,7 +1938,7 @@ var FullRadar = {
 			}
 
 			me.dev = contact.getDeviation();
-
+			
 
 			me.crd = contact.getCoord();
 
@@ -1956,7 +1962,7 @@ var FullRadar = {
 			};
 			contact.storeDeviation(me.contactDev);
 			append(me.vector_aicontacts_for, contact);
-		}
+		}		
 		emesary.GlobalTransmitter.NotifyAll(me.FullNotification.updateV(me.vector_aicontacts_for));
 		#print("In Field of Regard: "~size(me.vector_aicontacts_for));
 	},
@@ -2011,21 +2017,21 @@ var FullRadar = {
 
 
 
-#   ██████  ███    ███ ███    ██ ██ 
-#  ██    ██ ████  ████ ████   ██ ██ 
-#  ██    ██ ██ ████ ██ ██ ██  ██ ██ 
-#  ██    ██ ██  ██  ██ ██  ██ ██ ██ 
-#   ██████  ██      ██ ██   ████ ██ 
-#                                   
-#
+#   ██████  ███    ███ ███    ██ ██ 
+#  ██    ██ ████  ████ ████   ██ ██ 
+#  ██    ██ ██ ████ ██ ██ ██  ██ ██ 
+#  ██    ██ ██  ██  ██ ██  ██ ██ ██ 
+#   ██████  ██      ██ ██   ████ ██ 
+#                                   
+#                                   
 var OmniRadar = {
 	# I check the sky 360 deg for anything potentially detectable by a passive radar system.
 	new: func (rate, max_dist_nm, tp_dist_nm) {
 		var omni = {parents: [OmniRadar, Radar]};
-
+		
 		omni.max_dist_nm = max_dist_nm;
 		omni.tp_dist_nm  =  tp_dist_nm;#transponder detect distance
-
+		
 		omni.vector_aicontacts = [];
 		omni.vector_aicontacts_for = [];
 		omni.timer          = maketimer(rate, omni, func omni.scan());
@@ -2080,10 +2086,10 @@ var OmniRadar = {
             		me.tp,
             		me.radar,    #  4
             		contact.getDeviationHeading(),
-            		me.rangeDirectNM,
-            		contact.getCallsign(),
-            		contact.getSpeed(),
-            		contact.getClosureRate(),
+            		me.rangeDirectNM, 
+            		contact.getCallsign(), 
+            		contact.getSpeed(), 
+            		contact.getClosureRate(), 
             		me.seeSpike  # 10
             	]);
 				append(me.vector_aicontacts_for, contact);
@@ -2107,13 +2113,13 @@ var OmniRadar = {
 
 
 
-#  ████████ ███████ ██████  ██████   █████  ██ ███    ██ 
-#     ██    ██      ██   ██ ██   ██ ██   ██ ██ ████   ██ 
-#     ██    █████   ██████  ██████  ███████ ██ ██ ██  ██ 
-#     ██    ██      ██   ██ ██   ██ ██   ██ ██ ██  ██ ██ 
-#     ██    ███████ ██   ██ ██   ██ ██   ██ ██ ██   ████ 
-#                                                        
-#
+#  ████████ ███████ ██████  ██████   █████  ██ ███    ██ 
+#     ██    ██      ██   ██ ██   ██ ██   ██ ██ ████   ██ 
+#     ██    █████   ██████  ██████  ███████ ██ ██ ██  ██ 
+#     ██    ██      ██   ██ ██   ██ ██   ██ ██ ██  ██ ██ 
+#     ██    ███████ ██   ██ ██   ██ ██   ██ ██ ██   ████ 
+#                                                        
+#                                                        
 var TerrainChecker = {
 	#
 	# Everything here is CPU expensive.
@@ -2160,10 +2166,10 @@ var TerrainChecker = {
         	me.index = 0;
         }
 	},
-
+	
 	checkClutter: func (contact) {
 		contact.setInClutter(me.inClutter);
-
+	    
 		me.dopplerCanDetect = 0;
 	    if(!me.inClutter) {
 	    	# Either no clutter behind or is not an air target so ground/sea radar needs to be able to see it.
@@ -2173,7 +2179,7 @@ var TerrainChecker = {
 	    }
 	    contact.setHiddenFromDoppler(!me.dopplerCanDetect);
 	},
-
+	
 	getTargetSpeedRelativeToClutter: func (contact) {
 		#
 		# Seen from aircraft the terrain clutter is moving with a certain velocity vector depending on aircraft position, attitude and speed.
@@ -2202,12 +2208,12 @@ var TerrainChecker = {
 		# Doppler radars only dicern velocity as in closing rate of contact compared to closing rate of terrain, so we see how much velocity contact has towards us in relation to the clutter.
 		return vector.Math.magnitudeVector(me.vectorOfTargetSpeedRelativeToClutterSeenFromRadar)*MPS2KT;
 	},
-
+	
 	fastTerrainCheck: func (contact) {
 		me.myOwnPos = self.getCoord();
 		me.targetCoord = contact.getCoord();
 	    me.maxDist = me.myOwnPos.direct_distance_to(me.targetCoord);
-
+	    
 	    #call(func {
 	    if (me.maxDist*0.001 > 3.57*(math.sqrt(math.max(0,me.myOwnPos.alt()))+math.sqrt(math.max(0,me.targetCoord.alt())))) {
 	    	# behind earth curvature
@@ -2222,7 +2228,7 @@ var TerrainChecker = {
 	},
 
 	slowTerrainCheck: func () {
-
+	    
 		me.xyz = {"x":me.myOwnPos.x(),                  "y":me.myOwnPos.y(),                 "z":me.myOwnPos.z()};
 		me.dir = {"x":me.targetCoord.x()-me.myOwnPos.x(),  "y":me.targetCoord.y()-me.myOwnPos.y(), "z":me.targetCoord.z()-me.myOwnPos.z()};
 
@@ -2234,7 +2240,7 @@ var TerrainChecker = {
 		} else {
 			me.terrain = geo.Coord.new();
 			me.terrain.set_latlon(me.v.lat, me.v.lon, me.v.elevation);
-
+			
 			me.terrainDist = me.myOwnPos.direct_distance_to(me.terrain);
 			if (me.terrainDist < me.maxDist - 1) {
 		 		#print("terrain found between the planes");
@@ -2256,13 +2262,13 @@ var TerrainChecker = {
 
 
 
-#  ███████  ██████ ███    ███
-#  ██      ██      ████  ████
-#  █████   ██      ██ ████ ██
-#  ██      ██      ██  ██  ██
-#  ███████  ██████ ██      ██
-#
-#
+#  ███████  ██████ ███    ███ 
+#  ██      ██      ████  ████ 
+#  █████   ██      ██ ████ ██ 
+#  ██      ██      ██  ██  ██ 
+#  ███████  ██████ ██      ██ 
+#                             
+#                             
 var ECMChecker = {
 	#
 	# Passive ECM only for now.
@@ -2324,7 +2330,7 @@ var ECMChecker = {
         	me.index = 0;
         }
 	},
-
+	
 	checkChaff: func (contact) {
 		me.node = contact.getChaffNode();
 		if (me.node != nil and (contact["oldChaffTime"] == nil or me.elapsed - contact.oldChaffTime > 1)) {
@@ -2341,7 +2347,7 @@ var ECMChecker = {
 		}
 		return nil;
 	},
-
+	
 	del: func {
         emesary.GlobalTransmitter.DeRegister(me.ECMCheckerRecipient);
     },
@@ -2352,34 +2358,34 @@ var ECMChecker = {
 
 
 
-#  ███████ ██ ██   ██ ███████ ██████      ██████  ███████  █████  ███    ███ 
-#  ██      ██  ██ ██  ██      ██   ██     ██   ██ ██      ██   ██ ████  ████ 
-#  █████   ██   ███   █████   ██   ██     ██████  █████   ███████ ██ ████ ██ 
-#  ██      ██  ██ ██  ██      ██   ██     ██   ██ ██      ██   ██ ██  ██  ██ 
-#  ██      ██ ██   ██ ███████ ██████      ██████  ███████ ██   ██ ██      ██ 
-#                                                                            
-#
+#  ███████ ██ ██   ██ ███████ ██████      ██████  ███████  █████  ███    ███ 
+#  ██      ██  ██ ██  ██      ██   ██     ██   ██ ██      ██   ██ ████  ████ 
+#  █████   ██   ███   █████   ██   ██     ██████  █████   ███████ ██ ████ ██ 
+#  ██      ██  ██ ██  ██      ██   ██     ██   ██ ██      ██   ██ ██  ██  ██ 
+#  ██      ██ ██   ██ ███████ ██████      ██████  ███████ ██   ██ ██      ██ 
+#                                                                            
+#                                                                            
 var FixedBeamRadar = {
 
 	new: func () {
 		var fb = {parents: [FixedBeamRadar, Radar]};
-
+		
 		fb.beam_pitch_deg = 0;
-
+		
 		return fb;
 	},
-
+	
 	setBeamPitch: func (pitch_deg) {
 		me.beam_pitch_deg = pitch_deg;
 	},
-
+	
 	computeBeamVector: func {
 		me.beamVector = [math.cos(me.beam_pitch_deg*D2R), 0, math.sin(me.beam_pitch_deg*D2R)];
 		me.beamVectorFix = vector.Math.rollPitchYawVector(self.getRoll(), self.getPitch(), -self.getHeading(), me.beamVector);
 		me.geoVector = vector.Math.vectorToGeoVector(me.beamVectorFix, self.getCoord());
 		return me.geoVector;
 	},
-
+	
 	testForDistance: func {
 		if (me.enabled) {
 			me.selfPos = self.getCoord();
@@ -2388,10 +2394,10 @@ var FixedBeamRadar = {
 	  			me.terrain = geo.Coord.new();
 				me.terrain.set_latlon(me.pick.lat, me.pick.lon, me.pick.elevation);
 				me.terrainDist_m = me.selfPos.direct_distance_to(me.terrain);
-
+				
 				# test code:
 				#geo.put_model("Aircraft/JA37/Models/Instruments/Radio/radio.ac", me.computeBeamVector()[1].lat(), me.computeBeamVector()[1].lon(),me.computeBeamVector()[1].alt());
-
+				
 				return me.terrainDist_m;
 	  		}
 	  	}
@@ -2404,13 +2410,13 @@ var FixedBeamRadar = {
 
 
 
-#   ██████  ██    ██ ███████ ██████  ██ ██████  ███████ ███████ 
-#  ██    ██ ██    ██ ██      ██   ██ ██ ██   ██ ██      ██      
-#  ██    ██ ██    ██ █████   ██████  ██ ██   ██ █████   ███████ 
-#  ██    ██  ██  ██  ██      ██   ██ ██ ██   ██ ██           ██ 
-#   ██████    ████   ███████ ██   ██ ██ ██████  ███████ ███████ 
-#                                                               
-#
+#   ██████  ██    ██ ███████ ██████  ██ ██████  ███████ ███████ 
+#  ██    ██ ██    ██ ██      ██   ██ ██ ██   ██ ██      ██      
+#  ██    ██ ██    ██ █████   ██████  ██ ██   ██ █████   ███████ 
+#  ██    ██  ██  ██  ██      ██   ██ ██ ██   ██ ██           ██ 
+#   ██████    ████   ███████ ██   ██ ██ ██████  ███████ ███████ 
+#                                                               
+#                                                               
 var flareProp = "rotors/main/blade[3]/flap-deg";
 var chaffProp = "rotors/main/blade[3]/position-deg";
 var laserOn = nil;# set this to a prop
@@ -2422,127 +2428,46 @@ var enable_tacobject = 0;
 var isOmniRadiating = func (model) {
 	# Override this method in your aircraft to do this in another way
 	# Return 1 if this contacts radar is not constricted to a cone.
-	return model == "gci" or model == "S-75" or model == "SA-6" or model == "buk-m2" or model == "MIM104D" or model == "missile_frigate" or model == "fleet" or model == "s-200" or model == "s-300" or model == "ZSU-23-4M";
+	return getDBEntry(model).radarHorzRadius == 180;
 }
 
 var getRadarFieldRadius = func (model) {
 	# Override this method in your aircraft to do this in another way
-	if (model == "A-50" or model == "EC-137R" or model == "E-3R" or model == "E-3") {
-		return 180;
+	var entry = getDBEntry(model);
+	if (entry.hasAirRadar) {
+		return entry.radarHorzRadius;
 	}
-	if (model == "S-75" or model == "s-200") {
-		return 180;
-	}
-	if (model == "SA-6" or model == "buk-m2") {
-		return 180;
-	}
-	if (model == "s-300" or model == "MIM104D") {
-		return 180;
-	}
-	if (model == "gci" or model == "ZSU-23-4M") {
-		return 180;
-	}
-	if (model == "fleet" or model == "missile-frigate") {
-		return 180;
-	}
-	if (knownSurface[model] == 0) {
-		return 0;
-	}
-	return 60;
+	return 0;
 }
 
 var getRadarRange = func (model) {
 	# Override this method in your aircraft to do this in another way
 	# Distance in nm that antiradiation weapons can home in on the the radiation.
-	return 70;
+	var entry = getDBEntry(model);
+	return entry.passiveRadarRange;
 }
 
 var isKnownShip = func (model) {
-	contains(knownShips, model);
+	return getDBEntry(model).isShip;
 }
 
 var isKnownSurface = func (model) {
-	contains(knownSurface, model);
+	return getDBEntry(model).isSurfaceAsset;
 }
 
 var isKnownAwacs = func (model) {
-	contains(knownAwacs, model);
+	return getDBEntry(model).isAwacs;
 }
 
 var isKnownHeli = func (model) {
-	contains(knownHelis, model);
+	return getDBEntry(model).isSlow;
 }
 
 var isKnownCarrier = func (model) {
-	contains(knownCarriers, model);
+	return getDBEntry(model).isCarrier;
 }
 
-var knownCarriers = {
-	"mp-clemenceau": nil,
-	"mp-eisenhower": nil,
-	"mp-nimitz": nil,
-	"mp-vinson": nil,
-};
 
-var knownAwacs = {
-	"A-50": nil,
-	"EC-137R": nil,
-	"E-3R": nil,
-	"E-3": nil,
-};
-
-var knownShips = {
-    "missile_frigate":       nil,
-    "frigate":       nil,
-    "fleet":       nil,
-    "USS-LakeChamplain":     nil,
-    "USS-NORMANDY":     nil,
-    "USS-OliverPerry":     nil,
-    "USS-SanAntonio":     nil,
-};
-
-var knownSurface = {
-	# 0 = has no radar
-    "S-75":       nil,
-    "buk-m2":       nil,
-    "SA-6":       nil,
-    "s-300":       nil,
-    "s-200":       nil,
-    "depot":       0,
-    "struct":       0,
-    "point":       0,
-    "rig":       0,
-    "gci":       nil,
-    "truck":     0,
-    "tower":     nil,
-    "MIM104D":       nil,
-    "ZSU-23-4M":       nil,
-};
-
-var knownHelis = {
-    "SH-60J":                  nil,
-    "UH-60J":                     nil,
-    "uh1":                     nil,
-    "212-TwinHuey":              nil,
-    "412-Griffin":               nil,
-    "ch53e":                     nil,
-    "Mil-Mi-8":                  nil,
-    "CH47":                     nil,
-    "mi24":                     nil,
-    "tigre":                     nil,
-    "uh60_Blackhawk":             nil,
-    "AH-1W":                       nil,
-    "WAH-64_Apache":               nil,
-    "rah-66":                      nil,
-    "Gazelle":                     nil,
-    "Westland_Gazelle":          nil,
-    "AS532-Cougar":               nil,
-    "Westland_SeaKing-HAR3":      nil,
-    "Lynx-HMA8":                  nil,
-    "Lynx_Wildcat":               nil,
-    "Merlin-HM1":             nil,
-    "OH-58D":                   nil,
-};
 
 
 # BUGS:

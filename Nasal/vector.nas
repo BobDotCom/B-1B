@@ -2,7 +2,7 @@ var Math = {
     #
     # Authors: Nikolai V. Chr, Axel Paccalin.
     #
-    # Version 2.01
+    # Version 2.02
     #
     # When doing euler coords. to cartesian: +x = forw, +y = left,  +z = up.
     # FG struct. coords:                     +x = back, +y = right, +z = up.
@@ -24,7 +24,7 @@ var Math = {
     convertAngles: func (heading,pitch,roll) {
         return [-heading, pitch, roll];
     },
-
+    
     # returns direction in geo coordinate system
     vectorToGeoVector: func (a, coord) {
         me.handp = me.cartesianToEuler(a);
@@ -42,7 +42,7 @@ var Math = {
         me.geoVeccy = me.product(me.magnitudeVector(a), me.normalize([me.tgt_coord.x()-coord.x(),me.tgt_coord.y()-coord.y(),me.tgt_coord.z()-coord.z()]));
         return {"x":me.tgt_coord.x()-coord.x(),  "y":me.tgt_coord.y()-coord.y(), "z":me.tgt_coord.z()-coord.z(), "vector": me.geoVeccy};
     },
-
+    
     # When observing another MP aircraft the groundspeed velocity info is in body frame, this method will convert it to cartesian vector.
     #
     # Warning: If you input body velocities in fps the output will be in fps also. Likewise for mps.
@@ -275,7 +275,7 @@ var Math = {
     },
 
     #pitch from coord1 to coord2 in degrees (takes curvature of earth into effect.)
-    getPitch: func (coord1, coord2) {
+    getPitch: func (coord1, coord2) {      
       if (coord1.lat() == coord2.lat() and coord1.lon() == coord2.lon()) {
         if (coord2.alt() > coord1.alt()) {
           return 90;
@@ -287,13 +287,13 @@ var Math = {
       }
       if (coord1.alt() != coord2.alt()) {
         me.d12 = coord1.direct_distance_to(coord2);
-        me.coord3 = geo.Coord.new(coord1);
-        me.coord3.set_alt(coord1.alt()-me.d12*0.5);# this will increase the area of the triangle so that rounding errors dont get in the way.
-        me.d13 = coord1.alt()-me.coord3.alt();
         if (me.d12 == 0) {
             # on top of each other, maybe rounding error..
             return 0;
         }
+        me.coord3 = geo.Coord.new(coord1);
+        me.coord3.set_alt(coord1.alt()-me.d12*5);# this will increase the area of the triangle so that rounding errors dont get in the way. Changed to 5 May 2023, which gives more presision than 0.5 when c1 and c2 are very close.
+        me.d13 = coord1.alt()-me.coord3.alt();        
         me.d32 = me.coord3.direct_distance_to(coord2);
         if (math.abs(me.d13)+me.d32 < me.d12) {
             # rounding errors somewhere..one triangle side is longer than other 2 sides combined.
@@ -345,7 +345,7 @@ var Math = {
       if (me.ontoMeMag == 0) return 0;
       return me.dotProduct(a,ontoMe)/me.ontoMeMag;
     },
-
+    
     # unary - vector
     opposite: func (v){
         # author: Paccalin
@@ -377,16 +377,16 @@ var Math = {
       me.mag = me.magnitudeVector(v);
       return [v[0]/me.mag, v[1]/me.mag, v[2]/me.mag];
     },
-
+    
     crossProduct: func (a,b) {
         return [a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0]];
     },
-
+    
     distance_from_point_to_line: func (coordP, coordL1, coordL2) {
         var P  = [coordP.x(),  coordP.y(),  coordP.z()];
         var L1 = [coordL1.x(), coordL1.y(), coordL1.z()];
         var L2 = [coordL2.x(), coordL2.y(), coordL2.z()];
-
+        
         return me.magnitudeVector(me.crossProduct(me.minus(L2,L1), me.minus(L1,P)))/me.magnitudeVector(me.minus(L2,L1));
     },
 
@@ -403,7 +403,7 @@ var Math = {
         me.fraction = along/dist;
         return me.interpolateVector(start, end, me.fraction);
     },
-
+    
     # Orthogonal projection of a vector `vec` onto another `ref` !!can throw an exception if the referential vector is null!!.
     orthogonalProjection: func(vec, ref){
       # author: Paccalin
@@ -473,7 +473,7 @@ var unitTest = {
         me.thousandVectorGeo = Math.product(100000, me.thousandVectorGeo);
         me.lookAt = geo.Coord.new().set_xyz(myCoord.x()+me.thousandVectorGeo[0], myCoord.y()+me.thousandVectorGeo[1], myCoord.z()+me.thousandVectorGeo[2]);
         printf("Looking out of aircraft window 100000m away heading 75 and 40 degs down: %.4f heading %.4f pitch %.4f meter.", myCoord.course_to(me.lookAt), Math.getPitch(myCoord, me.lookAt), myCoord.direct_distance_to(me.lookAt));
-        # 4:
+        # 4: 
         var aircraft = Math.eulerToCartesian3X(-35, 72, 21);
         var aircraft2 = Math.rollPitchYawVector(21, 72, -35, [1,0,0]);
         printf("These two should be the same %s = %s",Math.format(aircraft),Math.format(aircraft2));

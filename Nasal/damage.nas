@@ -60,6 +60,7 @@ var shells = {
     "DEFA 554":          [14,0.060], # 30x113mm Mirage, 220g
     "20mm APDS":         [15,0.030], # CIWS
     "LAU-10":            [16,0.500], # 127mm, ~4-7kg warhead
+    # Max id is 41
 };
 
 # lbs of warheads is explosive+fragmentation+fuse, so total warhead mass.
@@ -74,12 +75,12 @@ var warheads = {
     "AGM-154A":          [ 5,  493.00,1,0],
     "AGM-158":           [ 6, 1000.00,1,0],
     "ALARM":             [ 7,  450.00,1,0],
-    "AM 39 Exocet":      [ 8,  364.00,1,0],
-    "AS 37 Martel":      [ 9,  330.00,1,0],# Also : AJ 168 Martel
+    "AM 39 Exocet":      [ 8,  364.00,1,0], 
+    "AS 37 Martel":      [ 9,  330.00,1,0],# Also : AJ 168 Martel 
     "AS30L":             [10,  529.00,1,0],
-    "BL755":             [11,  100.00,1,1],# 800lb bomblet warhead. Mix of armour piecing and HE. 100 due to need to be able to kill buk-m2.
-    "CBU-87":            [12,  100.00,1,1],# bomblet warhead. Mix of armour piecing and HE. 100 due to need to be able to kill buk-m2.
-    "CBU-105":           [13,  100.00,1,1],# bomblet warhead. Mix of armour piecing and HE. 100 due to need to be able to kill buk-m2.
+    "BL755":             [11,  100.00,1,1],# 800lb bomblet warhead. Mix of armour piecing and HE. 100 due to need to be able to kill buk-m2.    
+    "CBU-87":            [12,  100.00,1,1],# bomblet warhead. Mix of armour piecing and HE. 100 due to need to be able to kill buk-m2.    
+    "CBU-105":           [13,  100.00,1,1],# bomblet warhead. Mix of armour piecing and HE. 100 due to need to be able to kill buk-m2.    
     "AS 37 Armat":       [14,  330.00,1,0],
     "FAB-100":           [15,   92.59,1,0],
     "FAB-250":           [16,  202.85,1,0],
@@ -129,7 +130,7 @@ var warheads = {
     "Apache AP":         [60,  110.23,0,1],# Real mass of bomblet. (x 10). Anti runway.
     "KN-06":             [61,  315.00,0,0],
     "9M317":             [62,  145.00,0,0],
-    "GEM":               [63,  185.00,0,0],#MIM-104D
+    "GEM":               [63,  185.00,0,0],#MIM-104D 
     "R.550 Magic":       [64,   26.45,0,0],# also called majic
     "5Ya23":             [65,  414.00,0,0],#Volga-M
     "R.550 Magic 2":     [66,   27.00,0,0],
@@ -138,8 +139,8 @@ var warheads = {
     "AIM-9M":            [69,   20.80,0,0],
     "R-73 RMD-1":        [70,   16.31,0,0],# automat Mig29/su27
     "Meteor":            [71,   55.00,0,0],
-    "MICA-EM":           [72,   30.00,0,0],
-    "MICA-IR":           [73,   30.00,0,0],
+    "MICA-EM":           [72,   30.00,0,0], 
+    "MICA-IR":           [73,   30.00,0,0], 
     "R-13M":             [74,   16.31,0,0],
     "R-27R1":            [75,   85.98,0,0],
     "R-27T1":            [76,   85.98,0,0],
@@ -165,8 +166,8 @@ var warheads = {
     "3M9":               [96,  125.00,0,0],# 3M9M3 Missile used with 2K12/SA-6
     "5V28V":             [97,  478.00,0,0],# Missile used with S-200D/SA-5
     "AIM-9X":            [98,   20.80,0,0],
-    "GBU-32":            [99,  445.00,1,0],
-    "GBU-38":            [100, 192.00,1,0],
+    "R-23R":             [99,   55.00,0,0],# mig23 fox 1
+    # Max id is 180
 };
 
 var AIR_RADAR = "air";
@@ -184,6 +185,7 @@ var radar_signatures = {
                 "m2000-5B":                 AIR_RADAR,
                 "MiG-21bis":                AIR_RADAR,
                 "MiG-21MF-75":              AIR_RADAR,
+                "Mig-23MLD":                AIR_RADAR,
                 "MiG-29":                   AIR_RADAR,
                 "SU-27":                    AIR_RADAR,
                 "EC-137R":                  AIR_RADAR,
@@ -197,7 +199,7 @@ var radar_signatures = {
                 "s-200":                    "gnd-05",
                 "ZSU-23-4M":                "gnd-23",
                 "S-75":                     "gnd-02",
-                "buk-m2":                   "gnd-11",
+                "buk-m2":                   "gnd-17",
                 "s-300":                    "gnd-20",
                 "MIM104D":                  "gnd-p2",
                 "missile_frigate":          "gnd-nk",
@@ -312,7 +314,7 @@ var DamageRecipient =
                 var radarOn = bits.test(notification.Flags, 0);
                 var thrustOn = bits.test(notification.Flags, 1);
                 var CWIOn = bits.test(notification.Flags, 2);
-                var index = notification.SecondaryKind-21;
+                var index = DamageRecipient.emesaryID2typeID(notification.SecondaryKind);
                 var typ = id2warhead[index];
 
                 if (notification.Kind == MOVE) {
@@ -440,9 +442,9 @@ var DamageRecipient =
                     #
                     if (tacview_supported and tacview.starttime and (getprop("sim/multiplay/txhost") != "mpserver.opredflag.com" or m28_auto)) {
                     var node = getCallsign(notification.RemoteCallsign);
-                      if (node != nil and notification.SecondaryKind > 20) {
+                      if (node != nil and (notification.SecondaryKind > 20 or notification.SecondaryKind < -40)) {
                         # its a warhead
-                        var wh = id2warhead[notification.SecondaryKind - 21];
+                        var wh = id2warhead[DamageRecipient.emesaryID2typeID(notification.SecondaryKind)];
                         var lbs = wh[1];
                         var hitCoord = geo.Coord.new();
                         hitCoord.set_latlon(node.getNode("position/latitude-deg").getValue(), node.getNode("position/longitude-deg").getValue(), node.getNode("position/altitude-ft").getValue()*FT2M+notification.RelativeAltitude);
@@ -462,7 +464,7 @@ var DamageRecipient =
                     var callsign = processCallsign(getprop("sim/multiplay/callsign"));
                     if (notification.RemoteCallsign == callsign and getprop("payload/armament/msg") == 1) {
                         #damage enabled and were getting hit
-
+                        
                         if (notification.SecondaryKind < 0 and hitable_by_cannon) {
                             # cannon hit
                             if (m28_auto) mig28.engagedBy(notification.Callsign, 0);
@@ -479,11 +481,11 @@ var DamageRecipient =
                                 damageLog.push(sprintf("%s hit you with %d %s.", notification.Callsign, hit_count, typ));
                                 nearby_explosion();
                             }
-                        } elsif (notification.SecondaryKind > 20) {
+                        } elsif (notification.SecondaryKind > 20 or notification.SecondaryKind < -40) {
                             # its a warhead
                             if (m28_auto) mig28.engagedBy(notification.Callsign, 1);
                             var dist     = notification.Distance;
-                            var wh = id2warhead[notification.SecondaryKind - 21];
+                            var wh = id2warhead[DamageRecipient.emesaryID2typeID(notification.SecondaryKind)];
                             var type = wh[4];#test code
                             if (wh[3] == 1) {
                                 # cluster munition
@@ -608,7 +610,29 @@ var DamageRecipient =
             return emesary.Transmitter.ReceiptStatus_NotProcessed;
         };
         return new_class;
-    }
+    },
+
+    typeID2emesaryID: func (typeID) {
+      if (typeID <= 100) {
+        return typeID + 21;
+      } elsif (typeID <= 180) {
+        return (typeID - 100) * -1 - 40;
+      } else {
+        print("Missile TypeID too large value, max is 180");
+        return 0;
+      }
+    },
+
+    emesaryID2typeID: func (emesaryID) {
+      if (emesaryID > 20) {
+        return emesaryID - 21;
+      } elsif (emesaryID < -40) {
+        return (emesaryID + 40) * -1 + 100;
+      } else {
+        print("Missile emesaryID not a warhead");
+        return 0;
+      }
+    },
 };
 
 damage_recipient = DamageRecipient.new("DamageRecipient");
@@ -1444,6 +1468,19 @@ var writeDamageLog = func {
   io.close(file);
 }
 
+var unitTest = func {
+  for (var i= 0; i<=180;i+=1) {
+    var em = DamageRecipient.typeID2emesaryID(i);
+    var b = DamageRecipient.emesaryID2typeID(em);
+    if (b != i) {
+      print("unit test failed for index "~i);
+      return;
+    }
+  }
+  print("unit test passed");
+}
+#unitTest();
+
 setlistener("sim/signals/exit", writeDamageLog, 0, 0);
 
 #screen.property_display.add("payload/armament/MAW-bearing");
@@ -1459,7 +1496,7 @@ setlistener("sim/signals/exit", writeDamageLog, 0, 0);
 #screen.property_display.add("payload/armament/spike-gnd-02");
 #screen.property_display.add("payload/armament/spike-gnd-05");
 #screen.property_display.add("payload/armament/spike-gnd-06");
-#screen.property_display.add("payload/armament/spike-gnd-11");
+#screen.property_display.add("payload/armament/spike-gnd-17");
 #screen.property_display.add("payload/armament/spike-gnd-23");
 #screen.property_display.add("payload/armament/spike-gnd-p2");
 #screen.property_display.add("payload/armament/spike-gnd-nk");
