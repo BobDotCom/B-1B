@@ -1,7 +1,51 @@
 {
+  "vector": {
+    "version": null,
+    "path": "Nasal/vector.nas"
+  },
+  "missile-code": {
+    "version": null,
+    "path": "Nasal/missile-code.nas"
+  },
+  "radar-system": {
+    "version": null,
+    "path": "Nasal/Radar/radar-system.nas"
+  },
   "radar-system-database": {
     "version": "1.0.4",
     "path": "Nasal/Radar/radar-system-database.nas"
+  },
+  "damage": {
+    "version": null,
+    "path": "Nasal/damage.nas"
+  },
+  "iff": {
+    "version": null,
+    "path": "Nasal/iff.nas"
+  },
+  "datalink": {
+    "version": null,
+    "path": "Nasal/datalink.nas"
+  },
+  "station-manager": {
+    "version": null,
+    "path": "Nasal/station-manager.nas"
+  },
+  "rcs-mand": {
+    "version": null,
+    "path": "Nasal/rcs_mand.nas"
+  },
+  "armament-notification": {
+    "version": null,
+    "path": "Nasal/ArmamentNotification.nas"
+  },
+  "geo-bridged-transmitter": {
+    "version": null,
+    "path": "Nasal/GeoBridgedTransmitter.nas"
+  },
+  "crash-and-stress": {
+    "version": null,
+    "path": "Nasal/crash-and-stress.nas"
   },
   "airbases": {
     "version": "1.0.0",
