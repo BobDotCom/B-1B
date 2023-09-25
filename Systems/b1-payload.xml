@@ -230,7 +230,7 @@
             <telemetry type="bool">true</telemetry>
         </gbu-31>
         <gbu-32>
-            <type-id type="int">99</type-id>
+            <type-id type="int">100</type-id>
             <short-name type="string">GB32</short-name>
             <long-name type="string">GBU-32 JDAM</long-name>
             <fire-msg type="string">Bombs away</fire-msg>
@@ -284,7 +284,7 @@
             <telemetry type="bool">true</telemetry>
         </gbu-32>
         <gbu-38>
-            <type-id type="int">100</type-id>
+            <type-id type="int">101</type-id>
             <short-name type="string">GB38</short-name>
             <long-name type="string">GBU-38 JDAM</long-name>
             <fire-msg type="string">Bombs away</fire-msg>
