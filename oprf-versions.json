@@ -1,1 +1,10 @@
-{}
+{
+  "radar-system-database": {
+    "version": null,
+    "path": "Nasal/Radar/radar-system-database.nas"
+  },
+  "airbases": {
+    "version": null,
+    "path": "Nasal/airbases.nas"
+  }
+}
