@@ -1,10 +1,10 @@
 {
   "radar-system-database": {
-    "version": null,
+    "version": "1.0.4",
     "path": "Nasal/Radar/radar-system-database.nas"
   },
   "airbases": {
-    "version": null,
+    "version": "1.0.0",
     "path": "Nasal/airbases.nas"
   }
 }
