@@ -994,6 +994,9 @@ B-1B set file.
         <steerpoints>
             <file>Aircraft/B-1B/Nasal/steerpoints.nas</file>
         </steerpoints>
+        <rcs>
+            <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
+        </rcs>
         <radar_system>
             <file>Aircraft/B-1B/Nasal/radar/radar-system-database.nas</file>
             <file>Aircraft/B-1B/Nasal/radar/radar-system.nas</file>
@@ -1009,9 +1012,6 @@ B-1B set file.
         <fc>
             <file>Aircraft/B-1B/Nasal/fire-control.nas</file>
         </fc>
-        <rcs>
-            <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
-        </rcs>
         <radar>
             <file>Aircraft/B-1B/Nasal/phd.nas</file>
             <!--file>Aircraft/B-1B/Nasal/radardist.nas</file-->
