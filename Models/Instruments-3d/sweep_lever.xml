@@ -18,15 +18,15 @@ sweat by maggse
 			<dep>60.0</dep>
 		</entry>
 		<entry>
-			<ind>0.23</ind>
+			<ind>0.25</ind>
 			<dep>45</dep>
 		</entry>
 		<entry>
-			<ind>0.42</ind>
+			<ind>0.50</ind>
 			<dep>30</dep>
 		</entry>
 		<entry>
-			<ind>0.80</ind>
+			<ind>0.85</ind>
 			<dep>15</dep>
 		</entry>
 		<entry>
@@ -40,9 +40,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
+		<x-m>0.008</x-m>
 		<y-m>-0.016</y-m>
-		<z-m>0.219</z-m>
+		<z-m>0.190</z-m>
 	</center>
 </animation>
 <animation>

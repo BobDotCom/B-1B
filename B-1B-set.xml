@@ -100,7 +100,7 @@ B-1B set file.
                 <y-offset-m archive="y">1.20</y-offset-m><!-- up+/down- 1.37-->
                 <z-offset-m archive="y">7.12</z-offset-m><!-- back+ 7.15-->
                 <pitch-offset-deg>-6</pitch-offset-deg>
-                <default-field-of-view-deg>60</default-field-of-view-deg>
+                <default-field-of-view-deg>70.7</default-field-of-view-deg>
             </config>
         </view>
         <view n="101">
