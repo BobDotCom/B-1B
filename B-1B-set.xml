@@ -1001,7 +1001,7 @@ B-1B set file.
             <file>Aircraft/B-1B/Nasal/radar/radar-system-database.nas</file>
             <file>Aircraft/B-1B/Nasal/radar/radar-system.nas</file>
             <file>Aircraft/B-1B/Nasal/radar/apg-68.nas</file>
-            <file>Aircraft/B-1B/Nasal/radar/rwr_new.nas</file>
+<!--            <file>Aircraft/B-1B/Nasal/radar/rwr_new.nas</file>-->
         </radar_system>
         <armament>
             <file>Aircraft/B-1B/Nasal/missile-code.nas</file>
