@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<PropertyList> 
+
+<model>
+ <name>GreenLight</name>
+ <path>Aircraft/generic/spotlight.xml</path> 
+ <property>controls/lighting/nav-lights</property>
+ <offsets>
+ <x-m>14.759</x-m>
+ <y-m>11.433</y-m>
+ <z-m>-0.969</z-m>
+ </offsets>
+ <overlay>
+  <params>
+   <name>GreenLight</name>
+   <power-source>controls/lighting/nav-lights</power-source>
+   <direction>
+    <x>0.1</x>
+    <y>-0.5</y>
+    <z>0.0</z>
+   </direction>
+    <ambient>
+    <r>0.0</r>
+    <g>1.0</g>
+    <b>0.0</b>
+   </ambient>
+   <specular>
+    <r>0.0</r>
+    <g>0.5</g>
+    <b>0.0</b>
+   </specular> 
+  </params>
+ </overlay>
+</model> 
+
+ <animation>
+  <type>scale</type>
+  <name>GreenLight</name> 
+  <x-offset>1.5</x-offset>
+  <y-offset>1.5</y-offset>
+  <z-offset>1.5</z-offset>
+  <center>
+ <x-m>14.759</x-m>
+ <y-m>11.433</y-m>
+ <z-m>-0.969</z-m>
+  </center>
+ </animation> 
+
+</PropertyList>
