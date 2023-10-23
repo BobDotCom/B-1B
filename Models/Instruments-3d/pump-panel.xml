@@ -1,0 +1,1031 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>Pump-Panel.ac</path>
+
+<!-- tank 1-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-1-10000</object-name>
+  <property>consumables/fuel/tank[2]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-1-1000</object-name>
+  <property>consumables/fuel/tank[2]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-1-100</object-name>
+  <property>consumables/fuel/tank[2]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-1-10</object-name>
+  <property>consumables/fuel/tank[2]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-1-1</object-name>
+  <property>consumables/fuel/tank[2]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-1-1</object-name>
+        <object-name>tank-1-10</object-name>
+        <object-name>tank-1-100</object-name>
+        <object-name>tank-1-1000</object-name>
+        <object-name>tank-1-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>4</value>
+            </equals>
+        </condition> 
+     </animation>
+
+<!-- Tank 2-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-2-10000</object-name>
+  <property>consumables/fuel/tank[3]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-2-1000</object-name>
+  <property>consumables/fuel/tank[3]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-2-100</object-name>
+  <property>consumables/fuel/tank[3]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-2-10</object-name>
+  <property>consumables/fuel/tank[3]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-2-1</object-name>
+  <property>consumables/fuel/tank[3]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-2-1</object-name>
+        <object-name>tank-2-10</object-name>
+        <object-name>tank-2-100</object-name>
+        <object-name>tank-2-1000</object-name>
+        <object-name>tank-2-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>2</value>
+            </equals>
+        </condition> 
+     </animation> 
+
+<!-- Tank Wing Left-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-l-10000</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-l-1000</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-l-100</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-l-10</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-l-1</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-wg-l-1</object-name>
+        <object-name>tank-wg-l-10</object-name>
+        <object-name>tank-wg-l-100</object-name>
+        <object-name>tank-wg-l-1000</object-name>
+        <object-name>tank-wg-l-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>3</value>
+            </equals>
+        </condition> 
+     </animation>
+
+<!-- Tank 3-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-3-10000</object-name>
+  <property>consumables/fuel/tank[4]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-3-1000</object-name>
+  <property>consumables/fuel/tank[4]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-3-100</object-name>
+  <property>consumables/fuel/tank[4]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-3-10</object-name>
+  <property>consumables/fuel/tank[4]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-3-1</object-name>
+  <property>consumables/fuel/tank[4]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-3-1</object-name>
+        <object-name>tank-3-10</object-name>
+        <object-name>tank-3-100</object-name>
+        <object-name>tank-3-1000</object-name>
+        <object-name>tank-3-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>2</value>
+            </equals>
+        </condition> 
+     </animation>
+
+<!-- Tank 4-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-4-10000</object-name>
+  <property>consumables/fuel/tank[5]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-4-1000</object-name>
+  <property>consumables/fuel/tank[5]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-4-100</object-name>
+  <property>consumables/fuel/tank[5]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-4-10</object-name>
+  <property>consumables/fuel/tank[5]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-4-1</object-name>
+  <property>consumables/fuel/tank[5]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-4-1</object-name>
+        <object-name>tank-4-10</object-name>
+        <object-name>tank-4-100</object-name>
+        <object-name>tank-4-1000</object-name>
+        <object-name>tank-4-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>4</value>
+            </equals>
+        </condition> 
+     </animation>
+
+<!-- Tank Wing right-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-r-10000</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-r-1000</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-r-100</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-r-10</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-wg-r-1</object-name>
+  <property>consumables/fuel/tank[1]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-wg-r-1</object-name>
+        <object-name>tank-wg-r-10</object-name>
+        <object-name>tank-wg-r-100</object-name>
+        <object-name>tank-wg-r-1000</object-name>
+        <object-name>tank-wg-r-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>3</value>
+            </equals>
+        </condition> 
+     </animation> 
+
+<!-- Tank Main Left-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-l-10000</object-name>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-l-1000</object-name>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-l-100</object-name>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-l-10</object-name>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-l-1</object-name>
+  <property>consumables/fuel/tank[6]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-main-l-1</object-name>
+        <object-name>tank-main-l-10</object-name>
+        <object-name>tank-main-l-100</object-name>
+        <object-name>tank-main-l-1000</object-name>
+        <object-name>tank-main-l-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>5</value>
+            </equals>
+        </condition> 
+     </animation> 
+
+<!-- Tank Main Right-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-r-10000</object-name>
+  <property>consumables/fuel/tank[7]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-r-1000</object-name>
+  <property>consumables/fuel/tank[7]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-r-100</object-name>
+  <property>consumables/fuel/tank[7]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-r-10</object-name>
+  <property>consumables/fuel/tank[7]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-main-r-1</object-name>
+  <property>consumables/fuel/tank[7]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-main-r-1</object-name>
+        <object-name>tank-main-r-10</object-name>
+        <object-name>tank-main-r-100</object-name>
+        <object-name>tank-main-r-1000</object-name>
+        <object-name>tank-main-r-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>5</value>
+            </equals>
+        </condition> 
+     </animation>
+
+<!-- Tank External Front-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-fwd-1</object-name>
+  <property>consumables/fuel/tank[8]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-fwd-10</object-name>
+  <property>consumables/fuel/tank[8]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-fwd-100</object-name>
+  <property>consumables/fuel/tank[8]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-fwd-1000</object-name>
+  <property>consumables/fuel/tank[8]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-fwd-10000</object-name>
+  <property>consumables/fuel/tank[8]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-fwd-1</object-name>
+        <object-name>tank-fwd-10</object-name>
+        <object-name>tank-fwd-100</object-name>
+        <object-name>tank-fwd-1000</object-name>
+        <object-name>tank-fwd-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>1</value>
+            </equals>
+        </condition> 
+     </animation> 
+
+<!-- Tank External Middle-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-intmd-1</object-name>
+  <property>consumables/fuel/tank[9]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-intmd-10</object-name>
+  <property>consumables/fuel/tank[9]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-intmd-100</object-name>
+  <property>consumables/fuel/tank[9]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-intmd-1000</object-name>
+  <property>consumables/fuel/tank[9]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-intmd-10000</object-name>
+  <property>consumables/fuel/tank[9]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-intmd-1</object-name>
+        <object-name>tank-intmd-10</object-name>
+        <object-name>tank-intmd-100</object-name>
+        <object-name>tank-intmd-1000</object-name>
+        <object-name>tank-intmd-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>1</value>
+            </equals>
+        </condition> 
+     </animation> 
+
+<!-- Tank External Aft-->
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-aft-1</object-name>
+  <property>consumables/fuel/tank[10]/level-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-aft-10</object-name>
+  <property>consumables/fuel/tank[10]/level-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-aft-100</object-name>
+  <property>consumables/fuel/tank[10]/level-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-aft-1000</object-name>
+  <property>consumables/fuel/tank[10]/level-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation> 
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>tank-aft-10000</object-name>
+  <property>consumables/fuel/tank[10]/level-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x> 0</x>
+   <y>-1</y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-aft-1</object-name>
+        <object-name>tank-aft-10</object-name>
+        <object-name>tank-aft-100</object-name>
+        <object-name>tank-aft-1000</object-name>
+        <object-name>tank-aft-10000</object-name>
+        <condition>
+            <equals>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <value>0</value>
+            </equals>
+        </condition> 
+     </animation> 
+
+<!-- Switch-->
+
+  <animation>
+        <type>knob</type>
+        <object-name>TNK-SEL</object-name>
+        <property>consumables/fuel/fuel-tank-switch</property>
+        <factor>45</factor>
+        <center>
+            <x-m>-18.47</x-m>
+            <y-m> 0.358</y-m>
+            <z-m>-0.2029</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y> 0</y>
+            <z> 0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>consumables/fuel/fuel-tank-switch</property>
+                <min>0</min>
+                <max>5</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>fuel_dump</object-name>
+        <property>controls/fuel/dump-valve</property>
+        <factor>50</factor>
+        <center>
+            <x-m>-18.47610</x-m>
+            <y-m> 0.25431</y-m>
+            <z-m>-0.15186</z-m>
+        </center>
+        <axis>
+            <x> 0</x>
+            <y>-1</y>
+            <z> 0</z>
+        </axis>
+  </animation>
+
+ <animation>
+ <type>pick</type>
+ <object-name>fuel_dump</object-name>
+ <action>
+  <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/fuel/dump-valve</property>
+   </binding>
+  </action>
+ </animation>
+
+  <animation>
+ <type>pick</type>
+ <object-name>fuel_dump</object-name>
+ <action>
+  <button>1</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/fuel/dump-valve</property>
+   </binding>
+  </action>
+ </animation>
+
+     <animation>
+        <type>rotate</type>
+        <object-name>Fuel-Dump-Cover</object-name>
+        <property>controls/switches/Fuel-Dump-Cover</property>
+        <factor>80</factor>
+        <center>
+            <x-m>-18.47673</x-m>
+            <y-m> 0.25449</y-m>
+            <z-m>-0.12981</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+  </animation>
+
+ <animation>
+ <type>pick</type>
+ <object-name>Fuel-Dump-Cover</object-name>
+ <action>
+  <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+     <property>controls/switches/Fuel-Dump-Cover</property>
+   </binding>
+  </action>
+ </animation>
+
+    <animation>
+  <type>material</type>
+  <object-name>AFT</object-name>
+  <object-name>BLST-TNK</object-name>
+  <object-name>CG-Test</object-name>
+  <object-name>CLG_SCO</object-name>
+  <object-name>FWD</object-name>
+  <object-name>fuel_dump</object-name>
+  <object-name>Grd-Cool</object-name>
+  <object-name>INTMD</object-name>
+  <object-name>Pump-1</object-name>
+  <object-name>Pump-2</object-name>
+  <object-name>Pump-3</object-name>
+  <object-name>Pump-4</object-name>
+  <object-name>Pump-5</object-name>
+  <object-name>Pump-6</object-name>
+  <object-name>SEQ-INIT</object-name>
+  <object-name>X-FEED</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+ </animation>
+</PropertyList>
