@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+   <path>102kt.ac</path>
+   <animation>
+    <type>material</type>
+       <object-name>Cube</object-name>
+	   <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	  </emission>
+    </animation> 
+
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>1000sAS</object-name> 
+   <property>velocities/airspeed-kt</property>
+   <factor>0.0001</factor> 
+   <step>1000</step> 
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis> 
+  </animation>  
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>100sAS</object-name>
+   <property>velocities/airspeed-kt</property>
+   <factor>0.001</factor> 
+   <step>100</step> 
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis> 
+  </animation>  
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>10sAS</object-name>
+   <property>velocities/airspeed-kt</property>
+   <factor>0.01</factor> 
+   <step>10</step>   
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis> 
+  </animation> 
+
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>10thsAS</object-name>
+   <property>velocities/airspeed-kt</property>
+   <factor>0.1</factor> 
+   <step>1</step> 
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis>
+  </animation> 
+
+    <animation>
+        <type>select</type>
+        <object-name>10thsAS</object-name>
+        <object-name>10sAS</object-name>
+        <object-name>100sAS</object-name>
+        <object-name>1000sAS</object-name>
+        <condition>
+            <equals>
+                <property>controls/switches/speed-indicator</property>
+                <value>0.5</value>
+            </equals>
+        </condition> 
+     </animation> 
+
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>1000sGS</object-name> 
+   <property>velocities/groundspeed-kt</property>
+   <factor>0.0001</factor> 
+   <step>1000</step> 
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis> 
+  </animation>  
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>100sGS</object-name>
+   <property>velocities/groundspeed-kt</property>
+   <factor>0.001</factor> 
+   <step>100</step> 
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis> 
+  </animation>  
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>10sGS</object-name>
+   <property>velocities/groundspeed-kt</property>
+   <factor>0.01</factor> 
+   <step>10</step>   
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis> 
+  </animation> 
+
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>10thsGS</object-name>
+   <property>velocities/groundspeed-kt</property>
+   <factor>0.1</factor> 
+   <step>1</step> 
+   <axis> 
+    <x>0</x> 
+    <y>-1</y> 
+    <z>0</z> 
+   </axis>
+  </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>10thsGS</object-name>
+        <object-name>10sGS</object-name>
+        <object-name>100sGS</object-name>
+        <object-name>1000sGS</object-name>
+        <condition>
+            <equals>
+                <property>controls/switches/speed-indicator</property>
+                <value>1.0</value>
+            </equals>
+        </condition> 
+     </animation>
+
+
+<animation>
+	<type>rotate</type>
+	<object-name>needle</object-name>
+	<property>controls/switches/speed-indicator</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>0.5</ind>
+			<dep>45</dep>
+		</entry>
+		<entry>
+			<ind>1.00</ind>
+			<dep>90</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>-1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.0065</x-m>
+            <y-m>0.0086</y-m>
+            <z-m>-0.0115</z-m>
+	</center>
+</animation> 
+
+<animation>
+	<type>pick</type>
+	<object-name>needle</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/speed-indicator</property>
+			<step>0.5</step>
+			<min>0.0</min>
+			<max>1.00</max>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/speed-indicator</property>
+			<step>-0.5</step>
+			<min>0.0</min>
+			<max>1.00</max>
+		</binding>
+	</action>
+</animation>  
+
+
+</PropertyList>
+
