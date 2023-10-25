@@ -36,6 +36,23 @@ B-1B set file.
             <cockpit type="int">4</cockpit>
             <model type="int">4</model>
         </rating>
+            <tags>
+	<tag>bomber</tag>
+	<tag>boeing</tag>
+	<tag>1980s</tag>
+	<tag>1990s</tag>
+	<tag>2000s</tag>
+    <tag>2010s</tag>
+	<tag>gulfwar1</tag>
+	<tag>gulfwar2</tag>
+	<tag>retractable-gear</tag>
+	<tag>variable-geometry</tag>
+	<tag>ifr</tag>
+	<tag>hud</tag>
+	<tag>supersonic</tag>
+	<tag>afterburner</tag>
+	<tag>jet</tag>
+    </tags>
         <!-- Legacy authors list. Wiki says it can be kept for pre-2018.3 compatibility -->
         <author>Markus Zojer, Paul Jay Schrenker, pinto, NC-687, Zorka</author>
         <!-- Post 2018.3 authors list -->
