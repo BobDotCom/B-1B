@@ -82,6 +82,10 @@ more to come :-)
       </refuel>
   </multiplay>
 
+  <model>
+    <path>Aircraft/Generic/marker.xml</path>
+  </model>
+
   <!-- cockpit instruments -->
 
   <model>

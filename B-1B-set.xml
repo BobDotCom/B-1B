@@ -571,6 +571,7 @@ B-1B set file.
             <line>Good Luck!</line>
         </help>
 
+    <checklists include="gui/checklists.xml"/>
     </sim>
 
     <ai>
