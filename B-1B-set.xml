@@ -129,7 +129,35 @@ B-1B set file.
             <pitch-offset-deg>10</pitch-offset-deg>
         </view>
 
-        <view n="96000">
+
+        <view n="96003">
+            <name>co-pilot view</name>
+            <type>lookfrom</type>
+            <internal archive="y">true</internal>
+            <config>
+                <from-model type="bool">true</from-model>
+                <from-model-idx type="int">0</from-model-idx>
+                <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+                <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+                <default-pitch-deg type="double">0</default-pitch-deg>
+                <default-heading-deg type="double">0</default-heading-deg>
+                <front-direction-deg type="double">0</front-direction-deg>
+                <front-left-direction-deg type="double">45</front-left-direction-deg>
+                <left-direction-deg type="double">90</left-direction-deg>
+                <back-left-direction-deg type="double">135</back-left-direction-deg>
+                <back-direction-deg type="double">180</back-direction-deg>
+                <back-right-direction-deg type="double">225</back-right-direction-deg>
+                <right-direction-deg type="double">270</right-direction-deg>
+                <front-right-direction-deg type="double">315</front-right-direction-deg>
+                <x-offset-m archive="y">0.5</x-offset-m>
+                <y-offset-m archive="y">1.14</y-offset-m>
+                <z-offset-m archive="y">7.12</z-offset-m>
+                <pitch-offset-deg>0</pitch-offset-deg>
+                <default-field-of-view-deg>55</default-field-of-view-deg>
+            </config>
+        </view>
+
+        <view n="96002">
             <name>DSO/OSO centered view</name>
             <type>lookfrom</type>
             <internal archive="y">true</internal>
@@ -148,7 +176,7 @@ B-1B set file.
                 <back-right-direction-deg type="double">225</back-right-direction-deg>
                 <right-direction-deg type="double">270</right-direction-deg>
                 <front-right-direction-deg type="double">315</front-right-direction-deg>
-                <x-offset-m archive="y">0.0</x-offset-m>
+                <x-offset-m archive="y">0.00</x-offset-m>
                 <y-offset-m archive="y">1.14</y-offset-m>
                 <z-offset-m archive="y">9.50</z-offset-m>
                 <pitch-offset-deg>0</pitch-offset-deg>
@@ -183,7 +211,7 @@ B-1B set file.
             </config>
         </view>
 
-        <view n="96003">
+        <view n="96000">
             <name>Sniper Pod view</name>
             <type>lookfrom</type>
             <internal archive="y">true</internal>
