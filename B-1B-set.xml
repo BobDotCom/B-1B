@@ -770,34 +770,42 @@ B-1B set file.
             <tank n="0">
                 <tank-num type="int">0</tank-num>
                 <kill-when-empty type="bool">false</kill-when-empty>
+                <name>Left Wing</name>
             </tank>
             <tank n="1">
                 <tank-num type="int">1</tank-num>
                 <kill-when-empty type="bool">false</kill-when-empty>
+                <name>Right Wing</name>
             </tank>
             <tank n="2">
                 <tank-num type="int">2</tank-num>
                 <kill-when-empty type="bool">false</kill-when-empty>
+                <name>Tank #1</name>
             </tank>
             <tank n="3">
                 <tank-num type="int">3</tank-num>
                 <kill-when-empty type="bool">false</kill-when-empty>
+                <name>Tank #3</name>
             </tank>
             <tank n="4">
                 <tank-num type="int">4</tank-num>
                 <kill-when-empty type="bool">false</kill-when-empty>
+                <name>Tank #2</name>
             </tank>
             <tank n="5">
                 <tank-num type="int">5</tank-num>
                 <kill-when-empty type="bool">false</kill-when-empty>
+                <name>Tank #4</name>
             </tank>
             <tank n="6">
                 <tank-num type="int">6</tank-num>
                 <kill-when-empty type="bool">false</kill-when-empty>
+                <name>Left Main</name>
             </tank>
             <tank n="7">
                 <tank-num type="int">7</tank-num>
                 <kill-when-empty type="bool">false</kill-when-empty>
+                <name>Right Main</name>
             </tank>
             <tank n="8">
                 <name>Not attached</name>
