@@ -2,6 +2,16 @@ _setlistener("/sim/signals/fdm-initialized", func {
 	init_b1b();
 });
 
+#Adding Engines to FailMgr to allow for them to be killed with damage.
+var e0 = compat_failure_modes.fail_engine("engine");#
+FailureMgr.add_failure_mode("engines/engine", "Engine 1", e0);#
+var e1 = compat_failure_modes.fail_engine("engine[1]");#
+FailureMgr.add_failure_mode("engines/engine[1]", "Engine 2", e1);#
+var e2 = compat_failure_modes.fail_engine("engine[2]");#
+FailureMgr.add_failure_mode("engines/engine[2]", "Engine 3", e2);#
+var e3 = compat_failure_modes.fail_engine("engine[3]");#
+FailureMgr.add_failure_mode("engines/engine[3]", "Engine 4", e3);#
+
 var init_b1b = func {
 setprop("systems/refuel/serviceable", 'false');
 setprop("instrumentation/teravd/target-vfpm-exec", 0);
@@ -39,8 +49,6 @@ setprop("ai/guided/target-number", 0);
 setprop("ai/guided/id-release", 0);
 setprop("armament/sniper-pod/position-norm",0);
 setprop("armament/oso/bay-selected", 0);
-setprop("armament/mp-messaging", 0);
-setprop("armament/damage", 0);
 setprop("armament/bay0/launcher-pos", 0);
 setprop("armament/bay1/launcher-pos", 0);
 setprop("armament/bay2/launcher-pos", 0);
@@ -843,6 +851,52 @@ var oso_view_num = view.indexof("OSO view");
     CurrentView_Num.setValue(oso_view_num);
   }
 }
+
+## FLARES
+var flareCount = -1;
+var flareStart = -1;
+
+var loop_flare = func {
+    # Flare/chaff release
+    if (getprop("ai/submodels/submodel[24]/flare-release-snd") == nil) {
+        setprop("ai/submodels/submodel[24]/flare-release-snd", 0);
+        setprop("ai/submodels/submodel[24]/flare-release-out-snd", 0);
+    }
+    var flareOn = getprop("ai/submodels/submodel[24]/flare-release-cmd");
+    if (flareOn == 1 and getprop("ai/submodels/submodel[24]/flare-release") == 0
+            and getprop("ai/submodels/submodel[24]/flare-release-out-snd") == 0
+            and getprop("ai/submodels/submodel[24]/flare-release-snd") == 0) {
+        flareCount = getprop("ai/submodels/submodel[24]/count");
+        flareStart = getprop("sim/time/elapsed-sec");
+        setprop("ai/submodels/submodel[24]/flare-release-cmd", 0);
+        if (flareCount > 0) {
+            # release a flare
+            setprop("ai/submodels/submodel[24]/flare-release-snd", 1);
+            setprop("ai/submodels/submodel[24]/flare-release", 1);
+            setprop("rotors/main/blade[3]/flap-deg", flareStart);
+            setprop("rotors/main/blade[3]/position-deg", flareStart);
+            damage.flare_released();
+        } else {
+            # play the sound for out of flares
+            setprop("ai/submodels/submodel[24]/flare-release-out-snd", 1);
+        }
+    }
+    if (getprop("ai/submodels/submodel[24]/flare-release-snd") == 1 and (flareStart + 1) < getprop("sim/time/elapsed-sec")) {
+        setprop("ai/submodels/submodel[24]/flare-release-snd", 0);
+        setprop("rotors/main/blade[3]/flap-deg", 0);
+        setprop("rotors/main/blade[3]/position-deg", 0);#MP interpolates between numbers, so nil is better than 0.
+    }
+    if (getprop("ai/submodels/submodel[24]/flare-release-out-snd") == 1 and (flareStart + 1) < getprop("sim/time/elapsed-sec")) {
+        setprop("ai/submodels/submodel[24]/flare-release-out-snd", 0);
+    }
+    if (flareCount > getprop("ai/submodels/submodel[24]/count")) {
+        # A flare was released in last loop, we stop releasing flares, so user have to press button again to release new.
+        setprop("ai/submodels/submodel[24]/flare-release", 0);
+        flareCount = -1;
+    }
+}
+var flaretimer = maketimer(0.1, loop_flare);
+flaretimer.start();
 
 
 ##

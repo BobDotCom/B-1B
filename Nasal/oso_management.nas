@@ -1,24 +1,13 @@
 ###arms delivery system
 
-### enable/disable mp messaging
-var mp_messaged = func () {
-	if ( getprop("armament/mp-messaging") == 0 ) {
-		setprop("armament/mp-messaging",1);
-		screen.log.write("MP-Messaging for weapons enabled!");
-	} else {
-		setprop("armament/mp-messaging",0);
-		screen.log.write("MP-Messaging for weapons disabled!");
-	}
-};
-
 ### enable/disable damage from missiles from the f-14/f-15/ja-37
 var mp_damage = func () {
-	if ( getprop("armament/damage") == 0 ) {
-		setprop("armament/damage",1);
-		screen.log.write("Combat damage enabled!");
+	if ( getprop("payload/armament/msg") == 0 ) {
+		setprop("payload/armament/msg",1);
+		screen.log.write("Multiplayer damage enabled!");
 	} else {
-		setprop("armament/damage",0);
-		screen.log.write("Combat damage disabled!");
+		setprop("payload/armament/msg",0);
+		screen.log.write("Multiplayer damage disabled!");
 	}
 }
 
@@ -35,8 +24,8 @@ FailureMgr.set_failure_level(failure_mode_id, 0);
 ### weapon dialog
 var weapon_select = gui.Dialog.new("weapon_select/dialog","Aircraft/B-1B/Dialogs/weapons.xml");
 
-### targetting dialog
-var targetting_comp = gui.Dialog.new("targetting_comp/dialog","Aircraft/B-1B/Dialogs/targetting_comp.xml");
+### targeting dialog
+var targeting_comp = gui.Dialog.new("targeting_comp/dialog","Aircraft/B-1B/Dialogs/targeting_comp.xml");
 
 ###set global vars
 var wpn_info = [
@@ -248,8 +237,9 @@ var rot_launch_rel = func() {
       } elsif (bay == 2) {
         b_string = "AFT Bay";
       }
-	  if ( getprop("armament/mp-messaging") == 0 ) {
+	  if ( getprop("payload/armament/msg") != 0 ) {
 		screen.log.write(b_string ~ " - Rack "~launch_pos_string~": GBU-31 released");
+		damage.damageLog.push("GBU-31 Released")
 	  } else {
 		setprop("/sim/multiplay/chat",b_string ~ " - Rack "~launch_pos_string~": GBU-31 released");
 	  }

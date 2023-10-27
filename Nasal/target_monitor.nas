@@ -22,8 +22,8 @@ var update_target_monitor = func () {
 		} else {
 			bearing = getprop("ai/guided/bay" ~ n ~ "/bomb[" ~ i ~ "]/target-bearing");
 		}
-	  setprop("ai/guided/targetting/bomb[" ~ i ~ "]/target-distance", distance);
-	  setprop("ai/guided/targetting/bomb[" ~ i ~ "]/target-bearing", bearing);
+	  setprop("ai/guided/targeting/bomb[" ~ i ~ "]/target-distance", distance);
+	  setprop("ai/guided/targeting/bomb[" ~ i ~ "]/target-bearing", bearing);
 	}
 }
 	

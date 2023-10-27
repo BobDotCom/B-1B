@@ -30,14 +30,61 @@ B-1B set file.
 
         <flight-model>yasim</flight-model>
         <status>alpha</status>
+        <rating>
+            <FDM type="int">3</FDM>
+            <systems type="int">3</systems>
+            <cockpit type="int">4</cockpit>
+            <model type="int">4</model>
+        </rating>
+        <!-- Legacy authors list. Wiki says it can be kept for pre-2018.3 compatibility -->
         <author>Markus Zojer, Paul Jay Schrenker, pinto, NC-687, Zorka</author>
+        <!-- Post 2018.3 authors list -->
+        <authors>
+            <author n="0">
+                <name>Markus Zojer</name>
+                <description>FDM/Instruments/Animations/3D modeling</description>
+            </author>
+            <author n="1">
+                <name>Paul Jay Schrenker</name>
+                <description>Main 3D model</description>
+            </author>
+            <author n="2">
+                <name>Justin Nicholson</name>
+                <nick>pinto</nick>
+            </author>
+        </authors>
+
+        <!-- Maintainers list doesn't appear to show in the launcher, maybe add maintainers to authors list? -->
+        <maintainers>
+            <maintainer n="0">
+                <name>NC-687</name>
+            </maintainer>
+            <maintainer n="1">
+                <name>Zorka</name>
+            </maintainer>
+            <maintainer n="2">
+                <name>BobDotCom</name>
+            </maintainer>
+        </maintainers>
         <aero>B-1B-yasim</aero>
         <fuel-fraction>0.00</fuel-fraction>
 
         <description>Rockwell B-1B Lancer</description>
         <long-description>
-            The Rockwell B-1 Lancer, commonly referred to as the "Bone" (derived from "B-One"), is a supersonic heavy bomber equipped with variable-sweep wings, and remains integral to the United States Air Force. Alongside the B-2 Spirit and B-52 Stratofortress, it constitutes one of three strategic bombers in the U.S. Air Force's current arsenal. Notably designed for adaptability, the B-1 excels in various roles, owing to its ability to alter its wing configuration during flight. This advanced aircraft plays a crucial role in the nation's defense strategy, offering exceptional speed, payload capacity, and versatility for a wide array of mission profiles.
+            The Rockwell B-1 Lancer, commonly referred to as the "Bone" (derived from "B-One"), is a supersonic heavy
+            bomber equipped with variable-sweep wings, and remains integral to the United States Air Force. Alongside
+            the B-2 Spirit and B-52 Stratofortress, it constitutes one of three strategic bombers in the U.S. Air
+            Force's current arsenal. Notably designed for adaptability, the B-1 excels in various roles, owing to its
+            ability to alter its wing configuration during flight. This advanced aircraft plays a crucial role in the
+            nation's defense strategy, offering exceptional speed, payload capacity, and versatility for a wide array of
+            mission profiles.
         </long-description>
+
+        <urls>
+            <!-- <support></support> I'd like to put the discord invite here, but I can't make an invite rn  -->
+            <wikipedia>https://en.wikipedia.org/wiki/Rockwell_B-1_Lancer</wikipedia>
+            <code-repository>https://gitlab.com/NC-687/B-1B</code-repository>
+        </urls>
 
         <number-views type="int" archive="y">6</number-views>
 
@@ -288,10 +335,10 @@ B-1B set file.
                         </binding>
                     </item>
                     <item n="4">
-                        <label>Targetting Computer</label>
+                        <label>Targeting Computer</label>
                         <binding>
                             <command>nasal</command>
-                            <script>weapons.targetting_comp.open()</script>
+                            <script>weapons.targeting_comp.open()</script>
                         </binding>
                     </item>
                     <item n="10">
@@ -304,6 +351,7 @@ B-1B set file.
                     </item>
                     <item>
                         <label>Combat event log</label>
+                        <name>flightlog</name>
                         <binding>
                             <command>dialog-show</command>
                             <dialog-name>flightlog</dialog-name>
@@ -476,10 +524,30 @@ B-1B set file.
             <line>Good Luck!</line>
         </help>
 
-        <!--<ai>
-
-         </ai>-->
     </sim>
+
+    <ai>
+      <submodels>
+        <submodel n="24">
+          <flare-release-cmd type="bool">false</flare-release-cmd>
+        </submodel>
+      </submodels>
+    </ai>
+
+    <aircraft>
+        <icao>
+            <!-- L = light, M = medium, H = heavy, J = jumbo -->
+            <wake-turbulence-category>H</wake-turbulence-category>
+            <type type="string">B1</type>  <!-- eg B738, C172, BE9L -->
+            <!-- ICAO equipment string  -->
+            <!--<equipment type="string">SDFGY</equipment>-->
+            <!-- ICAO surveillance string  -->
+            <!-- <surveillance type="string">S</surveillance> mode-S transponder -->
+        </icao>
+        <!-- TODO: Performance data -->
+
+    </aircraft>
+
 
     <systems>
         <refuel>
@@ -495,6 +563,35 @@ B-1B set file.
         </refuel>
     </systems>
 
+    <payload>
+        <armament>
+            <models>Aircraft/B-1B/Models/mpdamage/</models>
+            <enable-craters type="bool">true</enable-craters>
+            <MLW-bearing type="double">0</MLW-bearing>
+            <MLW-count>0</MLW-count>
+            <MLW-launcher type="string"></MLW-launcher>
+            <MAW-bearing type="double">0</MAW-bearing>
+            <MAW-active type="bool">false</MAW-active>
+            <MAW-semiactive type="bool">false</MAW-semiactive>
+            <spike type="bool">false</spike>
+            <msg type="bool">false</msg>
+        </armament>
+        <d-config>
+            <full_damage_dist_m type="double">3</full_damage_dist_m>
+            <use_hitpoints_instead_of_failure_modes_bool type="bool">false
+            </use_hitpoints_instead_of_failure_modes_bool>
+            <hp_max type="double">80</hp_max>
+            <hitable_by_air_munitions type="bool">true</hitable_by_air_munitions>
+            <hitable_by_cannon type="bool">true</hitable_by_cannon>
+            <is_fleet type="bool">false</is_fleet>
+            <rwr_to_screen type="bool">true</rwr_to_screen>
+            <rwr_audio_extended type="bool">false</rwr_audio_extended>
+            <tacview_supported type="bool">false</tacview_supported>
+            <m28_auto type="bool">false</m28_auto>
+            <mlw_max type="double">2.25</mlw_max>
+            <auto_flare_caller type="bool">false</auto_flare_caller>
+        </d-config>
+    </payload>
 
     <autopilot>
         <settings>
@@ -676,12 +773,20 @@ B-1B set file.
             </key>
 
             <key n="108">
-                <name>l</name>
-                <desc>Flare out</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>controls/switches/flare</property>
-                </binding>
+				<name>l</name>
+				<desc>Trigger flare release</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/ai/submodels/submodel[24]/flare-release-cmd</property>
+					<value type="bool">true</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>/ai/submodels/submodel[24]/flare-release-cmd</property>
+						<value type="bool">false</value>
+					</binding>
+				</mod-up>
             </key>
 
             <key n="76">
@@ -762,11 +867,18 @@ B-1B set file.
         <GCI>
             <file>Aircraft/B-1B/Nasal/gci-listener.nas</file>
         </GCI>
-        <emesary>
-            <file>Aircraft/B-1B/Nasal/emesary.nas</file>
-            <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>
+        <!--        <emesary>-->
+        <!--            <file>Aircraft/B-1B/Nasal/emesary.nas</file>-->
+        <!--            <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>-->
+        <!--            <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>-->
+        <!--        </emesary>-->
+        <notifications>
+            <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
             <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
-        </emesary>
+        </notifications>
+        <damage>
+            <file>Aircraft/B-1B/Nasal/damage.nas</file>
+        </damage>
         <tfs>
             <file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
         </tfs>
@@ -779,21 +891,21 @@ B-1B set file.
         <low>
             <file>Aircraft/B-1B/Nasal/low.nas</file>
         </low>
+        <vector>
+            <file>Aircraft/B-1B/Nasal/vector.nas</file>
+        </vector>
+        <rcs>
+            <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
+        </rcs>
         <radar>
             <file>Aircraft/B-1B/Nasal/radar-system.nas</file>
             <file>Aircraft/B-1B/Nasal/phd.nas</file>
             <!--file>Aircraft/B-1B/Nasal/radardist.nas</file-->
             <file>Aircraft/B-1B/Nasal/rwr.nas</file>
         </radar>
-        <rcs>
-            <file>Aircraft/B-1B/Nasal/rcs_mand.nas</file>
-        </rcs>
         <enginefire>
             <file>Aircraft/B-1B/Nasal/enginefire.nas</file>
         </enginefire>
-        <vector>
-            <file>Aircraft/B-1B/Nasal/vector.nas</file>
-        </vector>
         <weapons>
             <file>Aircraft/B-1B/Nasal/oso_management.nas</file>
             <file>Aircraft/B-1B/Nasal/oso_ikb.nas</file>
@@ -801,7 +913,6 @@ B-1B set file.
             <file>Aircraft/B-1B/Nasal/wso_mfd.nas</file>
             <file>Aircraft/B-1B/Nasal/fuel_load.nas</file>
             <file>Aircraft/B-1B/Nasal/target_monitor.nas</file>
-            <file>Aircraft/B-1B/Nasal/damage.nas</file>
         </weapons>
         <fuel>
             <file>Aircraft/B-1B/Nasal/aar.nas</file>
@@ -814,6 +925,9 @@ B-1B set file.
                 <file>Aircraft/B-1B/Nasal/iff.nas</file>
             </iff>
         </instrumentation>
+        <data>
+            <file>Aircraft/B-1B/Nasal/data.nas</file>
+        </data>
     </nasal>
 
 </PropertyList>
