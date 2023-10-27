@@ -120,7 +120,7 @@ maggse
 	 <object-name>F-full</object-name>
 	 <emission>
 		 <red>0.</red>
-		 <green>0.8</green>
+		 <green>0.9</green>
 		 <blue>0.0</blue>
 		 <factor-prop>sim/multiplay/generic/float[2]</factor-prop>
 	 </emission>
@@ -131,7 +131,7 @@ maggse
 	 <object-name>I-full</object-name>
 	 <emission>
 		 <red>0.0</red>
-		 <green>0.8</green>
+		 <green>0.9</green>
 		 <blue>0.0</blue>
 		 <factor-prop>sim/multiplay/generic/float[3]</factor-prop>
 	 </emission>
@@ -142,7 +142,7 @@ maggse
 	 <object-name>A-full</object-name>
 	 <emission>
 		 <red>0.0</red>
-		 <green>0.8</green>
+		 <green>0.9</green>
 		 <blue>0.0</blue>
 		 <factor-prop>sim/multiplay/generic/float[4]</factor-prop>
 	 </emission>
@@ -169,9 +169,9 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m> 0.008139</x-m>
-		 <y-m> 0.1455</y-m>
-		 <z-m>-0.04909</z-m>
+		 <x-m> 0.00615</x-m>
+		 <y-m> 0.14893</y-m>
+		 <z-m>-0.04235</z-m>
 	 </center>
  </animation>
 
@@ -204,8 +204,8 @@ maggse
 
  <animation>
 	 <type>translate</type>
-	 <object-name>doors</object-name>
-	 <property>controls/switches/doors</property>
+	 <object-name>door-close</object-name>
+	 <property>controls/switches/door-close</property>
 		<factor>0.002</factor>
 		<axis>
 			<x>-1 </x>
@@ -213,14 +213,15 @@ maggse
 			<z> 0 </z>
 		</axis>
 	 <center>
-		 <x-m> 0.0102</x-m>
-		 <y-m> 0.1454</y-m>
-		 <z-m>-0.05958</z-m>
+		 <x-m> 0.008213</x-m>
+		 <y-m> 0.14929</y-m>
+		 <z-m>-0.059323</z-m>
 	 </center>
  </animation>
+
 <animation>
 	<type>material</type>
-	<object-name>doors</object-name>
+	<object-name>door-close</object-name>
 	 <emission>
 		 <red>0.3</red>
 		 <green>0.0</green>
@@ -231,11 +232,11 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>doors</object-name>
+	<object-name>door-close</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
-		<interval-sec>0.3</interval-sec>
+		<interval-sec>0.5</interval-sec>
 		<binding>
 			<command>nasal</command>
 			<script>b1b.bay_fwd(0)</script>

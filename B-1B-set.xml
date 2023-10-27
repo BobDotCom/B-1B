@@ -32,7 +32,7 @@ B-1B set file.
         <status>alpha</status>
         <author>Markus Zojer, Paul Jay Schrenker, pinto, NC-687, Zorka</author>
         <aero>B-1B-yasim</aero>
-        <fuel-fraction>0.65</fuel-fraction>
+        <fuel-fraction>0.00</fuel-fraction>
 
         <description>Rockwell B-1B Lancer</description>
         <long-description>
@@ -247,7 +247,7 @@ B-1B set file.
                 <menu n="10">
                     <label>B-1B</label>
                     <enabled type="bool">true</enabled>
-                    <item n="0">
+                    <!--item n="0">
                         <label>Autostart</label>
                         <binding>
                             <command>property-toggle</command>
@@ -265,7 +265,7 @@ B-1B set file.
                             <command>property-toggle</command>
                             <property>controls/engines/engine[3]/cutoff</property>
                         </binding>
-                    </item>
+                    </item-->
                     <item n="1">
                         <label>Toggle Canopy Access</label>
                         <binding>
