@@ -28,7 +28,7 @@ B-1B set file.
             <splash-texture>Aircraft/B-1B/bone.png</splash-texture>
         </startup>
 
-        <flight-model>yasim</flight-model>
+        <flight-model>jsb</flight-model>
         <status>alpha</status>
         <rating>
             <FDM type="int">3</FDM>
@@ -86,7 +86,7 @@ B-1B set file.
                 <name>SammySkycrafts</name>
             </maintainer>
         </maintainers>
-        <aero>B-1B-yasim</aero>
+        <aero>B-1B</aero>
         <fuel-fraction>0.65</fuel-fraction>
 
         <description>Rockwell B-1B Lancer</description>
