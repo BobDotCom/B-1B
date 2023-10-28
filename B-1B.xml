@@ -34,14 +34,14 @@
     Wing area                          : 1946.00
     Wing aspect ratio                  : 9.60
     Wing taper ratio                   : 0.35
-    Wing root chord                    : 15.34
+    Wing root chord                    : 8.78
     Wing incidence                     : 0.00
     Wing dihedral                      : -1.94
     Wing sweep (quarter chord)         : 15.00
     Htail area                         : 509.00
-    Htail arm                          : 58.40
+    Htail arm                          : 48.08
     Vtail area                         : 247.40
-    Vtail arm                          : 58.40
+    Vtail arm                          : 48.08
     Propulsion                         : yes
     Engine name                        : F101-GE-102
     Number of engines                  : 4
@@ -77,7 +77,7 @@
     wing: 
      span:         137.00 ft
      area:         1946.00 ft2
-     mean chord:   15.34 ft
+     mean chord:   8.78 ft
      aspect ratio: 9.60:1
      taper ratio:  0.35:1
      incidence:    0.00 degrees
@@ -102,7 +102,7 @@
     CL-alpha:           5.69 per radian
     CL-0:               0.90
     CL-max:             4.49
-    CD-0:               0.02
+    CD-0:               0.01
     K:                  0.12
     Mcrit:              0.81
 
@@ -114,13 +114,13 @@
    <wingarea  unit="FT2"> 1946.00  </wingarea>
    <wingspan  unit="FT" > 137.00   </wingspan>
    <wing_incidence unit="DEG"> 0.00 </wing_incidence>
-   <chord     unit="FT" > 15.34    </chord>
+   <chord     unit="FT" > 8.78     </chord>
    <htailarea unit="FT2"> 509.00   </htailarea>
-   <htailarm  unit="FT" > 58.40    </htailarm>
+   <htailarm  unit="FT" > 48.08    </htailarm>
    <vtailarea  unit="FT2">247.40   </vtailarea>
-   <vtailarm  unit="FT" > 58.40    </vtailarm>
+   <vtailarm  unit="FT" > 48.08    </vtailarm>
    <location name="AERORP" unit="FT">
-     <x> 87.60    </x>
+     <x> 97.92    </x>
      <y> 0.00     </y>
      <z> 0.00     </z>
    </location>
@@ -142,7 +142,7 @@
    <izz unit="SLUG*FT2">  4881551.50 </izz>
    <emptywt unit="LBS" >  186807.00 </emptywt>
    <location name="CG" unit="FT">
-     <x> 83.62    </x>
+     <x> 94.37    </x>
      <y> 0.00     </y>
      <z> -3.65    </z>
    </location>
@@ -150,7 +150,7 @@
     <description> 191454.00 lbs should bring model up to entered max weight </description>
     <weight unit="LBS"> 95727.00 </weight>
     <location name="POINTMASS" unit="FT">
-     <x> 83.62    </x>
+     <x> 94.37    </x>
      <y> 0.00     </y>
      <z> -3.65    </z>
    </location>
@@ -165,7 +165,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>    83.62 </x>
+       <x>    94.37 </x>
        <y>    -5.00 </y>
        <z>    -1.00 </z>
      </location>
@@ -183,7 +183,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>    83.62 </x>
+       <x>    94.37 </x>
        <y>    -1.67 </y>
        <z>    -1.00 </z>
      </location>
@@ -201,7 +201,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>    83.62 </x>
+       <x>    94.37 </x>
        <y>     1.67 </y>
        <z>    -1.00 </z>
      </location>
@@ -219,7 +219,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>    83.62 </x>
+       <x>    94.37 </x>
        <y>     5.00 </y>
        <z>    -1.00 </z>
      </location>
@@ -233,7 +233,7 @@
 
   <tank type="FUEL" number="0">
      <location unit="FT">
-       <x>    83.62 </x>
+       <x>    94.37 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -242,7 +242,7 @@
   </tank>
   <tank type="FUEL" number="1">
      <location unit="FT">
-       <x>    83.62 </x>
+       <x>    94.37 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -251,7 +251,7 @@
   </tank>
   <tank type="FUEL" number="2">
      <location unit="FT">
-       <x>    83.62 </x>
+       <x>    94.37 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -260,7 +260,7 @@
   </tank>
   <tank type="FUEL" number="3">
      <location unit="FT">
-       <x>    83.62 </x>
+       <x>    94.37 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -269,7 +269,7 @@
   </tank>
   <tank type="FUEL" number="4">
      <location unit="FT">
-       <x>    83.62 </x>
+       <x>    94.37 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -299,7 +299,7 @@
 
   <contact type="BOGEY" name="LEFT_MAIN">
     <location unit="FT">
-      <x>    86.97 </x>
+      <x>    98.14 </x>
       <y>   -12.33 </y>
       <z>   -17.52 </z>
     </location>
@@ -315,7 +315,7 @@
 
   <contact type="BOGEY" name="RIGHT_MAIN">
     <location unit="FT">
-      <x>    86.97 </x>
+      <x>    98.14 </x>
       <y>    12.33 </y>
       <z>   -17.52 </z>
     </location>
@@ -331,7 +331,7 @@
 
   <contact type="STRUCTURE" name="LEFT_WING">
     <location unit="FT">
-     <x>    83.62 </x>
+     <x>    94.37 </x>
      <y>   -68.50 </y>
      <z>    -3.65 </z>
     </location>
@@ -343,7 +343,7 @@
 
   <contact type="STRUCTURE" name="RIGHT_WING">
     <location unit="FT">
-     <x>    83.62 </x>
+     <x>    94.37 </x>
      <y>    68.50 </y>
      <z>    -3.65 </z>
     </location>
@@ -403,7 +403,7 @@
           <property>metrics/Sw-sqft</property>
           <property>velocities/q-aero-rad_sec</property>
           <property>aero/ci2vel</property>
-          <value> 8.3207 </value>
+          <value> 11.9597 </value>
         </product>
       </function>
 
@@ -414,7 +414,7 @@
            <property>metrics/Sw-sqft</property>
            <property>aero/alphadot-rad_sec</property>
            <property>aero/ci2vel</property>
-           <value> 2.8692 </value>
+           <value> 4.1240 </value>
         </product>
       </function>
 
@@ -460,7 +460,7 @@
        <product>
           <property>aero/qbar-psf</property>
           <property>metrics/Sw-sqft</property>
-          <value> 0.0165 </value>
+          <value> 0.0111 </value>
        </product>
     </function>
 
@@ -564,7 +564,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/spoilers-pos-norm</property>
-           <value> 0.0165 </value>
+           <value> 0.0111 </value>
          </product>
     </function>
 
@@ -601,10 +601,10 @@
            <table>
              <independentVar lookup="row">aero/Re</independentVar>
              <tableData>
-                20947686      0.8503
-                23042456      0.0674
-                31421528      0.0300
-                41663516      0.0170
+                11998485      0.8503
+                13198333      0.0674
+                17997728      0.0300
+                23864164      0.0170
              </tableData>
            </table>
        </product>
@@ -617,7 +617,7 @@
            <property>metrics/Sw-sqft</property>
            <property>aero/bi2vel</property>
            <property>velocities/r-aero-rad_sec</property>
-           <value> 0.5167 </value>
+           <value> 0.4254 </value>
        </product>
     </function>
 
@@ -642,7 +642,7 @@
            <property>metrics/Sw-sqft</property>
            <property>metrics/cbarw-ft</property>
            <property>aero/alpha-rad</property>
-           <value> -1.4927 </value>
+           <value> -1.9881 </value>
        </product>
     </function>
 
@@ -656,8 +656,8 @@
           <table>
             <independentVar lookup="row">velocities/mach</independentVar>
             <tableData>
-              0.0    -2.6127
-              2.0    -0.6532
+              0.0    -3.7811
+              2.0    -0.9453
             </tableData>
           </table>
        </product>
@@ -671,7 +671,7 @@
            <property>metrics/cbarw-ft</property>
            <property>aero/ci2vel</property>
            <property>velocities/q-aero-rad_sec</property>
-           <value> -31.6857 </value>
+           <value> -65.4615 </value>
        </product>
     </function>
 
@@ -683,7 +683,7 @@
            <property>metrics/cbarw-ft</property>
            <property>aero/ci2vel</property>
            <property>aero/alphadot-rad_sec</property>
-           <value> -10.9261 </value>
+           <value> -22.5729 </value>
        </product>
     </function>
 
@@ -703,7 +703,7 @@
              <independentVar lookup="row">aero/alpha-rad</independentVar>
              <independentVar lookup="column">aero/Re</independentVar>
              <tableData>
-                            20947686    23042456    31421528    41663516
+                            11998485    13198333    17997728    23864164
                  -0.0349     -0.2505     -0.0260     -0.0211     -0.0312
                   0.3491     -3.0053     -0.2084     -0.1788     -0.2319
              </tableData>
@@ -735,9 +735,9 @@
              <independentVar lookup="row">aero/alpha-rad</independentVar>
              <independentVar lookup="column">aero/Re</independentVar>
              <tableData>
-                            20947686    23042456    31421528    41663516
-                 -0.0349      0.1715      0.1715      0.1715      0.1715
-                  0.3491     11.2185      0.8862      0.7180      0.7180
+                            11998485    13198333    17997728    23864164
+                 -0.0349      0.1722      0.1722      0.1722      0.1722
+                  0.3491     11.2192      0.8868      0.7186      0.7186
              </tableData>
            </table>
        </product>
@@ -807,7 +807,7 @@
              <independentVar lookup="row">aero/beta-rad</independentVar>
              <independentVar lookup="column">aero/Re</independentVar>
              <tableData>
-                            20947686    23042456
+                            11998485    13198333
                  -0.3491     -1.0000      0.0000
                   0.3491      1.0000      0.0000
              </tableData>
@@ -822,7 +822,7 @@
            <property>metrics/Sw-sqft</property>
            <property>metrics/bw-ft</property>
            <property>aero/beta-rad</property>
-           <value> 0.1241 </value>
+           <value> 0.1022 </value>
        </product>
     </function>
 
@@ -837,10 +837,10 @@
            <table>
              <independentVar lookup="row">aero/Re</independentVar>
              <tableData>
-                20947686     -0.3625
-                23042456     -0.0287
-                31421528     -0.0128
-                41663516     -0.0073
+                11998485     -0.2984
+                13198333     -0.0237
+                17997728     -0.0105
+                23864164     -0.0060
              </tableData>
            </table>
        </product>
@@ -854,7 +854,7 @@
            <property>metrics/bw-ft</property>
            <property>aero/bi2vel</property>
            <property>velocities/r-aero-rad_sec</property>
-           <value> -0.1779 </value>
+           <value> -0.1390 </value>
        </product>
     </function>
 
@@ -865,7 +865,7 @@
            <property>metrics/Sw-sqft</property>
            <property>metrics/bw-ft</property>
            <property>fcs/rudder-pos-rad</property>
-           <value> -0.0762 </value>
+           <value> -0.0628 </value>
        </product>
     </function>
 
