@@ -48,7 +48,7 @@
     "path": "Nasal/crash-and-stress.nas"
   },
   "airbases": {
-    "version": "1.0.26",
+    "version": "1.0.27",
     "path": "Nasal/airbases.nas"
   }
 }
