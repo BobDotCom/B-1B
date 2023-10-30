@@ -163,7 +163,7 @@
 
  <propulsion>
 
-   <engine file="B-1B_engine">
+   <engine file="F101-GE-102">
     <location unit="IN">
       <x> 1051.20 </x>
       <y> -60.00 </y>
@@ -189,7 +189,7 @@
     </thruster>
   </engine>
 
-   <engine file="B-1B_engine">
+   <engine file="F101-GE-102">
     <location unit="IN">
       <x> 1051.20 </x>
       <y> -20.00 </y>
@@ -215,7 +215,7 @@
     </thruster>
   </engine>
 
-   <engine file="B-1B_engine">
+   <engine file="F101-GE-102">
     <location unit="IN">
       <x> 1051.20 </x>
       <y>  20.00 </y>
@@ -241,7 +241,7 @@
     </thruster>
   </engine>
 
-   <engine file="B-1B_engine">
+   <engine file="F101-GE-102">
     <location unit="IN">
       <x> 1051.20 </x>
       <y>  60.00 </y>
