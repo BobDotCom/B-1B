@@ -24,7 +24,7 @@
 
 <turbine_engine name="F101-GE-102">
   <milthrust> 17390.0 </milthrust>
-  <maxthrust> 26085.0 </maxthrust>
+  <maxthrust> 30780.0 </maxthrust>
   <bypassratio>     2.000 </bypassratio>
   <tsfc>            0.669 </tsfc>
   <atsfc>           2.553 </atsfc>
@@ -34,7 +34,7 @@
   <maxn1>         100.0 </maxn1>
   <maxn2>         100.0 </maxn2>
   <augmented>         1 </augmented>
-<augmethod>         1 </augmethod>
+<augmethod>         0 </augmethod>
   <injected>          0 </injected>
 
   <function name="IdleThrust">
