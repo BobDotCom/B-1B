@@ -227,36 +227,36 @@ setlistener("controls/engines/engine[0]/throttle-lever", func(n) {
   var lever_eng0 = n.getValue();
   var enabled = getprop("controls/switches/engines/afterburner[0]");
   if ((lever_eng0 >= 0.98) and (enabled)) {
-    setprop("controls/engines/engine[0]/afterburner", 1);
+    setprop("controls/engines/engine[0]/augmentation", 1);
   } else {
-    setprop("controls/engines/engine[0]/afterburner", 0);
+    setprop("controls/engines/engine[0]/augmentation", 0);
     }
 });
 setlistener("controls/engines/engine[1]/throttle-lever", func(n) {
   var lever_eng1 = n.getValue();
   var enabled = getprop("controls/switches/engines/afterburner[1]");
   if ((lever_eng1 >= 0.98) and (enabled)) {
-    setprop("controls/engines/engine[1]/afterburner", 1);
+    setprop("controls/engines/engine[1]/augmentation", 1);
   } else {
-    setprop("controls/engines/engine[1]/afterburner", 0);
+    setprop("controls/engines/engine[1]/augmentation", 0);
     }
 });
 setlistener("controls/engines/engine[2]/throttle-lever", func(n) {
   var lever_eng2 = n.getValue();
   var enabled = getprop("controls/switches/engines/afterburner[2]");
   if ((lever_eng2 >= 0.98) and (enabled)) {
-    setprop("controls/engines/engine[2]/afterburner", 1);
+    setprop("controls/engines/engine[2]/augmentation", 1);
   } else {
-    setprop("controls/engines/engine[2]/afterburner", 0);
+    setprop("controls/engines/engine[2]/augmentation", 0);
     }
 });
 setlistener("controls/engines/engine[3]/throttle-lever", func(n) {
   var lever_eng3 = n.getValue();
   var enabled = getprop("controls/switches/engines/afterburner[3]");
   if ((lever_eng3 >= 0.98) and (enabled)) {
-    setprop("controls/engines/engine[3]/afterburner", 1);
+    setprop("controls/engines/engine[3]/augmentation", 1);
   } else {
-    setprop("controls/engines/engine[3]/afterburner", 0);
+    setprop("controls/engines/engine[3]/augmentation", 0);
     }
 });
 
