@@ -197,8 +197,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/eng_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.214</x-m>
-		  <y-m>-0.185</y-m>
-		  <z-m> 1.200</z-m>
+		  <y-m>-0.195</y-m>
+		  <z-m> 1.201</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -404,9 +404,9 @@ more to come :-)
 	  <name>bomb doors</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nuc.xml</path>
 	  <offsets>
-		  <x-m>-18.215</x-m>
-		  <y-m>-0.316</y-m>
-		  <z-m> 1.035</z-m>
+		  <x-m>-18.218</x-m>
+		  <y-m>-0.314</y-m>
+		  <z-m> 1.037</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -426,9 +426,9 @@ more to come :-)
 	  <name>display big</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/display_big.xml</path>
 	  <offsets>
-		  <x-m>-18.217</x-m>
+		  <x-m>-18.218</x-m>
 		  <y-m> 0.092</y-m>
-		  <z-m> 0.900</z-m>
+		  <z-m> 0.903</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -480,11 +480,11 @@ more to come :-)
 	  <name>sweep lever</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/sweep_lever.xml</path>
 	  <offsets>
-		  <x-m>-17.780</x-m>
-		  <y-m>-1.055</y-m>
-		  <z-m> 0.735</z-m>
-	    <pitch-deg>-8</pitch-deg>
-      <roll-deg> 2 </roll-deg>
+		  <x-m>-17.810</x-m>
+		  <y-m>-1.072</y-m>
+		  <z-m> 0.715</z-m>
+	    <pitch-deg> 0 </pitch-deg>
+      <roll-deg> 0 </roll-deg>
 	  </offsets>
   </model>
 
@@ -581,9 +581,9 @@ B-1BFS
 	  <name>eng-aux-panel</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/Eng-Aux-Pwr.xml</path>
 	  <offsets>
-		  <x-m>-18.070</x-m>
+		  <x-m>-18.075</x-m>
 		  <y-m>-0.130</y-m>
-		  <z-m>0.710</z-m>
+		  <z-m>0.715</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -592,7 +592,7 @@ B-1BFS
 	  <name>Flt Ctrl Pwr Panel</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/Flt-Ctrl-Pwr.xml</path>
 	  <offsets>
-		  <x-m>-18.071</x-m>
+		  <x-m>-18.073</x-m>
 		  <y-m> -0.120</y-m>
 		  <z-m>  0.711</z-m>
 		  <pitch-deg>0</pitch-deg>
@@ -605,7 +605,7 @@ B-1BFS
 	  <offsets>
 		  <x-m>-18.008</x-m>
 		  <y-m>-0.289</y-m>
-		  <z-m>0.710</z-m>
+		  <z-m>0.708</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>

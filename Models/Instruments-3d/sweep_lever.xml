@@ -40,9 +40,9 @@ sweat by maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m>0.005</x-m>
-		<y-m>-0.016</y-m>
-		<z-m>0.219</z-m>
+		<x-m> 0.02383 </x-m>
+		<y-m> 0.03986 </y-m>
+		<z-m> 0.1891 </z-m>
 	</center>
 </animation>
 <animation>
