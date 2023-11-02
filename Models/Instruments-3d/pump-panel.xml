@@ -1021,6 +1021,46 @@
   <object-name>Pump-6</object-name>
   <object-name>SEQ-INIT</object-name>
   <object-name>X-FEED</object-name>
+  <object-name>tank-1-10000</object-name>
+  <object-name>tank-1-1000</object-name>
+  <object-name>tank-1-100</object-name>
+  <object-name>tank-1-10</object-name>
+  <object-name>tank-1-1</object-name>
+  <object-name>tank-2-10000</object-name>
+  <object-name>tank-2-1000</object-name>
+  <object-name>tank-2-100</object-name>
+  <object-name>tank-2-10</object-name>
+  <object-name>tank-2-1</object-name>
+  <object-name>tank-3-10000</object-name>
+  <object-name>tank-3-1000</object-name>
+  <object-name>tank-3-100</object-name>
+  <object-name>tank-3-10</object-name>
+  <object-name>tank-3-1</object-name>
+  <object-name>tank-4-10000</object-name>
+  <object-name>tank-4-1000</object-name>
+  <object-name>tank-4-100</object-name>
+  <object-name>tank-4-10</object-name>
+  <object-name>tank-4-1</object-name>
+  <object-name>tank-main-l-10000</object-name>
+  <object-name>tank-main-l-1000</object-name>
+  <object-name>tank-main-l-100</object-name>
+  <object-name>tank-main-l-10</object-name>
+  <object-name>tank-main-l-1</object-name> 
+  <object-name>tank-main-r-10000</object-name>
+  <object-name>tank-main-r-1000</object-name>
+  <object-name>tank-main-r-100</object-name>
+  <object-name>tank-main-r-10</object-name>
+  <object-name>tank-main-r-1</object-name> 
+  <object-name>tank-wg-l-10000</object-name>
+  <object-name>tank-wg-l-1000</object-name>
+  <object-name>tank-wg-l-100</object-name>
+  <object-name>tank-wg-l-10</object-name>
+  <object-name>tank-wg-l-1</object-name> 
+  <object-name>tank-wg-r-10000</object-name>
+  <object-name>tank-wg-r-1000</object-name>
+  <object-name>tank-wg-r-100</object-name>
+  <object-name>tank-wg-r-10</object-name>
+  <object-name>tank-wg-r-1</object-name> 
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
