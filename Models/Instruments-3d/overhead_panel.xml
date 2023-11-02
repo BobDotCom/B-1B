@@ -132,6 +132,48 @@ maggse
 			 <property>controls/switches/refuel-slipway</property>
 		 </binding>
 	 </action>
+</animation> 
+
+	 <!-- Annunciator lighting-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>int_dim</object-name>
+	 <property>controls/switches/annunciator-lighting</property>
+	 <interpolation>
+		 <entry>
+			 <ind> 0.0</ind>
+			 <dep> -30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind> 1.0</ind>
+			 <dep> 30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x> 0.0</x>
+		 <y> 1.0</y>
+		 <z> 0.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.01237</x-m>
+		 <y-m>-0.1752</y-m>
+		 <z-m> 0.1227</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>int_dim</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/annunciator-lighting</property>
+		 </binding>
+	 </action>
 </animation>
 
  <!-- Battery-->
