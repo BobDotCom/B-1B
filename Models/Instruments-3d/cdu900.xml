@@ -581,6 +581,7 @@ sweat by maggse
 	<object-name>cdu_b.slash</object-name>
     <object-name>cdu_b.stat</object-name>
     <object-name>cdu_b.stop</object-name>
+    <object-name>cdu_b.Nav</object-name>
 	 <emission>
 		<red>0.9</red>
 		 <green>0.5</green>
