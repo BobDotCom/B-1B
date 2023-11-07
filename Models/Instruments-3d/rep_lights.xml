@@ -289,38 +289,27 @@ sweat by maggse
 	 <type>material</type>
 	 <object-name>rep_light</object-name>
 	 <object-name>rep_light.001</object-name>
-	 <object-name>rep_light_eng1</object-name>
+	 <object-name>rep_eng1</object-name>
 	 <object-name>rep_eng2</object-name>
-	 <object-name>rep_light_eng3</object-name>
-	 <object-name>rep_light_eng4</object-name>
-	 <object-name>rep_light_battl</object-name>
-	 <object-name>rep_light_apul</object-name>
-	 <object-name>rep_light_battr</object-name>
-	 <object-name>rep_light_apur</object-name>
-	 <object-name>rep_light.010</object-name>
-	 <object-name>rep_light.011</object-name>
-	 <object-name>rep_light.012</object-name>
-	 <object-name>rep_light.013</object-name>
-	 <object-name>rep_light.014</object-name>
-	 <object-name>rep_light.015</object-name>
-	 <object-name>rep_light.016</object-name>
-	 <object-name>rep_light.017</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
-
-<animation>
-	<type>material</type>
-	<object-name>report_lights</object-name>
+	 <object-name>rep_eng3</object-name>
+	 <object-name>rep_eng4</object-name>
+	 <object-name>rep_battl</object-name>
+	 <object-name>rep_apul</object-name>
+	 <object-name>rep_battr</object-name>
+	 <object-name>rep_apur</object-name>
+	 <object-name>ldg_dn</object-name>
+	 <object-name>ldg_up</object-name>
+	 <object-name>bay_op</object-name>
+	 <object-name>g-force</object-name>
+	 <object-name>htc_op</object-name>
+	 <object-name>ter-av</object-name>
+	 <object-name>ter-fl</object-name>
+	 <object-name>fcgms</object-name>
 	 <emission>
 		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <green>0.3</green>
+		 <blue>0.3</blue>
+		 <factor-prop>controls/switches/annunciator-lighting</factor-prop>
 	</emission>
 </animation>
 

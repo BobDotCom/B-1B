@@ -4,7 +4,15 @@
    <path>102kt.ac</path>
    <animation>
     <type>material</type>
-       <object-name>Cube</object-name>
+       <object-name>Cube.001</object-name>
+       <object-name>10thsGS</object-name>
+       <object-name>10sGS</object-name>
+       <object-name>100sGS</object-name>
+       <object-name>1000sGS</object-name>
+       <object-name>10thsAS</object-name>
+       <object-name>10sAS</object-name>
+       <object-name>100sAS</object-name>
+       <object-name>1000sAS</object-name>
 	   <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
