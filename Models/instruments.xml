@@ -197,8 +197,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/eng_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.214</x-m>
-		  <y-m>-0.185</y-m>
-		  <z-m> 1.200</z-m>
+		  <y-m>-0.195</y-m>
+		  <z-m> 1.201</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
