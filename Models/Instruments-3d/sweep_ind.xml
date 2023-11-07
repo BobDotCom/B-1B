@@ -321,6 +321,8 @@ maggse
 	 <object-name>spoiler_r_1.003</object-name>
 	 <object-name>stab</object-name>
 	 <object-name>glas_face.007</object-name>
+	 <object-name>spoilers</object-name>
+
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>

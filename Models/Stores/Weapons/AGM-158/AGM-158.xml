@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- this is the static non fired model on the aircraft -->
+
+	<path>AGM-158.ac</path>
+      <object-name>AGM-158</object-name>
+      <object-name>JASSM_LHWing</object-name>
+      <object-name>JASSM_RHWing</object-name>
+      <object-name>JASSM_Tail</object-name>
+      <object-name>JASSM_hooks</object-name>
+  </effect>
+	
+</PropertyList>

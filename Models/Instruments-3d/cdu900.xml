@@ -259,9 +259,9 @@ sweat by maggse
   <object-name>line4_select</object-name>
   <object-name>line6_select</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
@@ -581,6 +581,7 @@ sweat by maggse
 	<object-name>cdu_b.slash</object-name>
     <object-name>cdu_b.stat</object-name>
     <object-name>cdu_b.stop</object-name>
+    <object-name>cdu_b.Nav</object-name>
 	 <emission>
 		<red>0.9</red>
 		 <green>0.5</green>
