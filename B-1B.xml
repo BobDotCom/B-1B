@@ -361,6 +361,7 @@
  <system file="Flaps.xml"/>
  <system file="Spoilers.xml"/>
  <system file="Speedbrake.xml"/>
+    <system file="eng_ind.xml"/>
 
  <flight_control name="FCS: B-1B">
 

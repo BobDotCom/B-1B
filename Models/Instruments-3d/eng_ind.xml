@@ -670,7 +670,7 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.ind</object-name>
-        <property>engines/engine[0]/egt-degf</property>
+        <property>fdm/jsbsim/systems/eng_ind/egt-degc[0]</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -746,7 +746,7 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.ind.001</object-name>
-        <property>engines/engine[1]/egt-degf</property>
+        <property>fdm/jsbsim/systems/eng_ind/egt-degc[1]</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -822,7 +822,7 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.ind.002</object-name>
-        <property>engines/engine[2]/egt-degf</property>
+        <property>fdm/jsbsim/systems/eng_ind/egt-degc[2]</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -898,7 +898,7 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.ind.003</object-name>
-        <property>engines/engine[3]/egt-degf</property>
+        <property>fdm/jsbsim/systems/eng_ind/egt-degc[3]</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
