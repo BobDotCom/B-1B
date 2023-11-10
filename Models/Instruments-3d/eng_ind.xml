@@ -4,7 +4,7 @@ sweat by maggse
     -->
 <PropertyList>
 
- <path>eng_ind.ac</path>
+    <path>eng_ind.ac</path>
 
 
     <!-- PWR LEVEL -->
@@ -54,36 +54,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>pwr-level.ind</object-name>
-	 <property>engines/engine[0]/thrust_lb</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-			 <ind>33000.0</ind>
-             <dep>0.0875</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>pwr-level.ind</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>pwr-level.ind</object-name>
+        <property>engines/engine[0]/thrust_lb</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>33000.0</ind>
+                <dep>0.0875</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>pwr-level.ind</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -130,36 +130,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>pwr-level.ind.001</object-name>
-	 <property>engines/engine[1]/thrust_lb</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-			 <ind>33000.0</ind>
-             <dep>0.0875</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>pwr-level.ind.001</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>pwr-level.ind.001</object-name>
+        <property>engines/engine[1]/thrust_lb</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>33000.0</ind>
+                <dep>0.0875</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>pwr-level.ind.001</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -206,36 +206,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>pwr-level.ind.002</object-name>
-	 <property>engines/engine[2]/thrust_lb</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-			 <ind>33000.0</ind>
-             <dep>0.0875</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>pwr-level.ind.002</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>pwr-level.ind.002</object-name>
+        <property>engines/engine[2]/thrust_lb</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>33000.0</ind>
+                <dep>0.0875</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>pwr-level.ind.002</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -282,36 +282,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>pwr-level.ind.003</object-name>
-	 <property>engines/engine[3]/thrust_lb</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-			 <ind>33000.0</ind>
-             <dep>0.0875</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>pwr-level.ind.003</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>pwr-level.ind.003</object-name>
+        <property>engines/engine[3]/thrust_lb</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>33000.0</ind>
+                <dep>0.0875</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>pwr-level.ind.003</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <!-- FAN RPM -->
 
@@ -361,25 +361,25 @@ sweat by maggse
     </animation>
 
     <animation>
-	 <type>textranslate</type>
+        <type>textranslate</type>
         <object-name>fan-rpm.ind</object-name>
-	 <property>engines/engine[0]/n1</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0875</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
+        <property>engines/engine[0]/n1</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0875</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
     <animation>
         <type>material</type>
         <object-name>fan-rpm.ind</object-name>
@@ -389,7 +389,7 @@ sweat by maggse
             <blue>0.9</blue>
             <factor-prop>controls/lighting/instruments-norm</factor-prop>
         </emission>
-</animation>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -436,36 +436,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>fan-rpm.ind.001</object-name>
-	 <property>engines/engine[1]/n1</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0875</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>fan-rpm.ind.001</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>fan-rpm.ind.001</object-name>
+        <property>engines/engine[1]/n1</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0875</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>fan-rpm.ind.001</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -512,36 +512,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>fan-rpm.ind.002</object-name>
-	 <property>engines/engine[2]/n1</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0875</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>fan-rpm.ind.002</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>fan-rpm.ind.002</object-name>
+        <property>engines/engine[2]/n1</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0875</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>fan-rpm.ind.002</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -589,35 +589,35 @@ sweat by maggse
     </animation>
 
     <animation>
-	 <type>textranslate</type>
+        <type>textranslate</type>
         <object-name>fan-rpm.ind.003</object-name>
-	 <property>engines/engine[3]/n1</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0875</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>fan-rpm.ind.003</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+        <property>engines/engine[3]/n1</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0875</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>fan-rpm.ind.003</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <!-- ENG TEMP -->
 
@@ -668,35 +668,35 @@ sweat by maggse
 
 
     <animation>
-	 <type>textranslate</type>
+        <type>textranslate</type>
         <object-name>eng-temp.ind</object-name>
-	 <property>engines/engine[0]/egt-degf</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>1000.0</ind>
-             <dep>0.09925</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>eng-temp.ind</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+        <property>engines/engine[0]/egt-degf</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>1000.0</ind>
+                <dep>0.09925</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>eng-temp.ind</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -743,36 +743,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>eng-temp.ind.001</object-name>
-	 <property>engines/engine[1]/egt-degf</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>1000.0</ind>
-             <dep>0.09925</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>eng-temp.ind.001</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>eng-temp.ind.001</object-name>
+        <property>engines/engine[1]/egt-degf</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>1000.0</ind>
+                <dep>0.09925</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>eng-temp.ind.001</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -819,36 +819,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>eng-temp.ind.002</object-name>
-	 <property>engines/engine[2]/egt-degf</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>1000.0</ind>
-             <dep>0.09925</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>eng-temp.ind.002</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>eng-temp.ind.002</object-name>
+        <property>engines/engine[2]/egt-degf</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>1000.0</ind>
+                <dep>0.09925</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>eng-temp.ind.002</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -895,38 +895,38 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>eng-temp.ind.003</object-name>
-	 <property>engines/engine[3]/egt-degf</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>1000.0</ind>
-             <dep>0.09925</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>eng-temp.ind.003</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>eng-temp.ind.003</object-name>
+        <property>engines/engine[3]/egt-degf</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>1000.0</ind>
+                <dep>0.09925</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>eng-temp.ind.003</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
- <!-- FF -->
+    <!-- FF -->
 
     <animation>
         <type>textranslate</type>
@@ -973,40 +973,40 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>ff.ind</object-name>
-	 <property>engines/engine[0]/fuel-flow_pph</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>10000</ind>
-             <dep>0.072</dep>
-		 </entry>
-		 <entry>
-             <ind>100000.0</ind>
-             <dep>0.10075</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>ff.ind</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>ff.ind</object-name>
+        <property>engines/engine[0]/fuel-flow_pph</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>10000</ind>
+                <dep>0.072</dep>
+            </entry>
+            <entry>
+                <ind>100000.0</ind>
+                <dep>0.10075</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>ff.ind</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -1053,40 +1053,40 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>ff.ind.001</object-name>
-	 <property>engines/engine[1]/fuel-flow_pph</property>
-	 <interpolation>
-         <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>10000</ind>
-             <dep>0.072</dep>
-		 </entry>
-		 <entry>
-             <ind>100000.0</ind>
-             <dep>0.10075</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>ff.ind.001</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>ff.ind.001</object-name>
+        <property>engines/engine[1]/fuel-flow_pph</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>10000</ind>
+                <dep>0.072</dep>
+            </entry>
+            <entry>
+                <ind>100000.0</ind>
+                <dep>0.10075</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>ff.ind.001</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -1133,40 +1133,40 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>ff.ind.002</object-name>
-	 <property>engines/engine[2]/fuel-flow_pph</property>
-	 <interpolation>
-         <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>10000</ind>
-             <dep>0.072</dep>
-		 </entry>
-		 <entry>
-             <ind>100000.0</ind>
-             <dep>0.10075</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>ff.ind.002</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>ff.ind.002</object-name>
+        <property>engines/engine[2]/fuel-flow_pph</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>10000</ind>
+                <dep>0.072</dep>
+            </entry>
+            <entry>
+                <ind>100000.0</ind>
+                <dep>0.10075</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>ff.ind.002</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -1213,40 +1213,40 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>ff.ind.003</object-name>
-	 <property>engines/engine[3]/fuel-flow_pph</property>
-	 <interpolation>
-         <entry>
-			 <ind>0.0</ind>
-             <dep>0.0025</dep>
-		 </entry>
-		 <entry>
-             <ind>10000</ind>
-             <dep>0.072</dep>
-		 </entry>
-		 <entry>
-             <ind>100000.0</ind>
-             <dep>0.10075</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>ff.ind.003</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>ff.ind.003</object-name>
+        <property>engines/engine[3]/fuel-flow_pph</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0025</dep>
+            </entry>
+            <entry>
+                <ind>10000</ind>
+                <dep>0.072</dep>
+            </entry>
+            <entry>
+                <ind>100000.0</ind>
+                <dep>0.10075</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>ff.ind.003</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <!-- OIL PRESS -->
 
@@ -1295,36 +1295,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>oil-press.ind</object-name>
-	 <property>engines/engine[0]/oil-pressure-psi</property>
-	 <interpolation>
-		 <entry>
-             <ind>0</ind>
-             <dep>0.0055</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0955</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>oil-press.ind</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>oil-press.ind</object-name>
+        <property>engines/engine[0]/oil-pressure-psi</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0055</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0955</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>oil-press.ind</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -1371,36 +1371,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>oil-press.ind.001</object-name>
-	 <property>engines/engine[1]/oil-pressure-psi</property>
-	 <interpolation>
-		 <entry>
-             <ind>0</ind>
-             <dep>0.0055</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0955</dep>
-         </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>oil-press.ind.001</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>oil-press.ind.001</object-name>
+        <property>engines/engine[1]/oil-pressure-psi</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0055</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0955</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>oil-press.ind.001</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -1447,36 +1447,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>oil-press.ind.002</object-name>
-	 <property>engines/engine[2]/oil-pressure-psi</property>
-	 <interpolation>
-		 <entry>
-             <ind>0</ind>
-             <dep>0.0055</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0955</dep>
-         </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>oil-press.ind.002</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>oil-press.ind.002</object-name>
+        <property>engines/engine[2]/oil-pressure-psi</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0055</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0955</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>oil-press.ind.002</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -1523,162 +1523,162 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>oil-press.ind.003</object-name>
-	 <property>engines/engine[3]/oil-pressure-psi</property>
-	 <interpolation>
-		 <entry>
-             <ind>0</ind>
-             <dep>0.0055</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0955</dep>
-         </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>oil-press.ind.003</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>oil-press.ind.003</object-name>
+        <property>engines/engine[3]/oil-pressure-psi</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0055</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0955</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>oil-press.ind.003</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <!-- OIL QTY -->
 
- <animation>
-	 <type>textranslate</type>
-	 <object-name>ind1.031</object-name>
-	 <property>engines/engine[0]/oilt-norm</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.1</ind>
-			 <dep>0.105</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>ind1.031</object-name>
-	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>ind1.031</object-name>
+        <property>engines/engine[0]/oilt-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.1</ind>
+                <dep>0.105</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>ind1.031</object-name>
+        <emission>
+            <red>0.3</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
- <animation>
-	 <type>textranslate</type>
-	 <object-name>ind1.030</object-name>
-	 <property>engines/engine[1]/oilt-norm</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.1</ind>
-			 <dep>0.105</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>ind1.030</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>ind1.030</object-name>
+        <property>engines/engine[1]/oilt-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.1</ind>
+                <dep>0.105</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>ind1.030</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
- <animation>
-	 <type>textranslate</type>
-	 <object-name>ind1.028</object-name>
-	 <property>engines/engine[2]/oilt-norm</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.1</ind>
-			 <dep>0.105</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>ind1.028</object-name>
-	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	 </emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>ind1.028</object-name>
+        <property>engines/engine[2]/oilt-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.1</ind>
+                <dep>0.105</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>ind1.028</object-name>
+        <emission>
+            <red>0.3</red>
+            <green>0.0</green>
+            <blue>0.0</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
- <animation>
-	 <type>textranslate</type>
-	 <object-name>ind1.029</object-name>
-	 <property>engines/engine[3]/oilt-norm</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.1</ind>
-			 <dep>0.105</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>ind1.029</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>ind1.029</object-name>
+        <property>engines/engine[3]/oilt-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1.1</ind>
+                <dep>0.105</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>ind1.029</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <!-- CORE RPM -->
 
@@ -1729,35 +1729,35 @@ sweat by maggse
 
 
     <animation>
-	 <type>textranslate</type>
+        <type>textranslate</type>
         <object-name>core-rpm.ind</object-name>
-	 <property>engines/engine[0]/n2</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.005</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0815</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>core-rpm.ind</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+        <property>engines/engine[0]/n2</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.005</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0815</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>core-rpm.ind</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -1806,35 +1806,35 @@ sweat by maggse
 
 
     <animation>
-	 <type>textranslate</type>
+        <type>textranslate</type>
         <object-name>core-rpm.ind.001</object-name>
-	 <property>engines/engine[1]/n2</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.005</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0815</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>core-rpm.ind.001</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+        <property>engines/engine[1]/n2</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.005</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0815</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>core-rpm.ind.001</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -1881,36 +1881,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>core-rpm.ind.002</object-name>
-	 <property>engines/engine[2]/n2</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.005</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0815</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>core-rpm.ind.002</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>core-rpm.ind.002</object-name>
+        <property>engines/engine[2]/n2</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.005</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0815</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>core-rpm.ind.002</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -1957,36 +1957,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>core-rpm.ind.003</object-name>
-	 <property>engines/engine[3]/n2</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-             <dep>0.005</dep>
-		 </entry>
-		 <entry>
-             <ind>100</ind>
-             <dep>0.0815</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>core-rpm.ind.003</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>core-rpm.ind.003</object-name>
+        <property>engines/engine[3]/n2</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.005</dep>
+            </entry>
+            <entry>
+                <ind>100</ind>
+                <dep>0.0815</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>core-rpm.ind.003</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
 
     <!-- NOZ POS -->
@@ -2036,36 +2036,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>noz-pos.ind</object-name>
-     <property>engines/engine[0]/nozzle-pos-norm</property>
-	 <interpolation>
-		 <entry>
-             <ind>1</ind>
-             <dep>0.0055</dep>
-		 </entry>
-		 <entry>
-             <ind>0</ind>
-             <dep>0.0955</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>noz-pos.ind</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>noz-pos.ind</object-name>
+        <property>engines/engine[0]/nozzle-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>0.0055</dep>
+            </entry>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0955</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>noz-pos.ind</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -2112,36 +2112,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>noz-pos.ind.001</object-name>
-     <property>engines/engine[1]/nozzle-pos-norm</property>
-	 <interpolation>
-		 <entry>
-             <ind>1</ind>
-             <dep>0.0055</dep>
-		 </entry>
-		 <entry>
-             <ind>0</ind>
-             <dep>0.0955</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>noz-pos.ind.001</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>noz-pos.ind.001</object-name>
+        <property>engines/engine[1]/nozzle-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>0.0055</dep>
+            </entry>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0955</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>noz-pos.ind.001</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -2188,36 +2188,36 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>noz-pos.ind.002</object-name>
-     <property>engines/engine[2]/nozzle-pos-norm</property>
-	 <interpolation>
-		 <entry>
-             <ind>1</ind>
-             <dep>0.0055</dep>
-		 </entry>
-		 <entry>
-             <ind>0</ind>
-             <dep>0.0955</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>noz-pos.ind.002</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>noz-pos.ind.002</object-name>
+        <property>engines/engine[2]/nozzle-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>0.0055</dep>
+            </entry>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0955</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>noz-pos.ind.002</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
     <animation>
         <type>textranslate</type>
@@ -2264,51 +2264,51 @@ sweat by maggse
         </condition>
     </animation>
 
- <animation>
-	 <type>textranslate</type>
-     <object-name>noz-pos.ind.003</object-name>
-     <property>engines/engine[3]/nozzle-pos-norm</property>
-	 <interpolation>
-		 <entry>
-             <ind>1</ind>
-             <dep>0.0055</dep>
-		 </entry>
-		 <entry>
-             <ind>0</ind>
-             <dep>0.0955</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>material</type>
-     <object-name>noz-pos.ind.003</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>textranslate</type>
+        <object-name>noz-pos.ind.003</object-name>
+        <property>engines/engine[3]/nozzle-pos-norm</property>
+        <interpolation>
+            <entry>
+                <ind>1</ind>
+                <dep>0.0055</dep>
+            </entry>
+            <entry>
+                <ind>0</ind>
+                <dep>0.0955</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>material</type>
+        <object-name>noz-pos.ind.003</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
-<animation>
-	<type>material</type>
-	<object-name>glas_face</object-name>
-	<object-name>glas_face.001</object-name>
-	<object-name>glas_face.002</object-name>
-	<object-name>glas_face.003</object-name>
-	<object-name>glas_face.004</object-name>
-	<object-name>glas_face.005</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+    <animation>
+        <type>material</type>
+        <object-name>glas_face</object-name>
+        <object-name>glas_face.001</object-name>
+        <object-name>glas_face.002</object-name>
+        <object-name>glas_face.003</object-name>
+        <object-name>glas_face.004</object-name>
+        <object-name>glas_face.005</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.5</green>
+            <blue>0.9</blue>
+            <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        </emission>
+    </animation>
 
 </PropertyList>
