@@ -2,43 +2,44 @@
 
 <PropertyList>
 
-  <path>clock.ac</path>
+  <path>fg-clock.ac</path>    ### NOT to be used in other variants of the BONE ###
 
   <animation>
-    <object-name>AdjKnob</object-name>
+    <object-name>AdjKnob.h</object-name>
+    <object-name>AdjKnob.m</object-name>
     <object-name>fond</object-name>
-    <object-name>visses</object-name>
+    <object-name>tenths</object-name>
     <object-name>face</object-name>
-    <object-name>heures</object-name>
-    <object-name>minutes</object-name>
-    <object-name>secondes</object-name>
+    <object-name>hour</object-name>
+    <object-name>minute</object-name>
+    <object-name>second</object-name>
 
   </animation>
 
   <animation>
     <type>material</type>
-    <object-name>AdjKnob</object-name>
+    <object-name>tenths</object-name>
     <object-name>face</object-name>
-    <object-name>heures</object-name>
-    <object-name>minutes</object-name>
-    <object-name>secondes</object-name>
+    <object-name>hour</object-name>
+    <object-name>minute</object-name>
+    <object-name>second</object-name>
 	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
+		 <red>0.1</red>
+		 <green>0.9</green>
+		 <blue>0.5</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>heures</object-name>
+    <object-name>hour</object-name>
     <property>/instrumentation/clock/indicated-sec</property>
     <factor>0.00833333333333333</factor>
       <center>
-   <x-m> 0.00479</x-m>
-   <y-m>-0.00990</y-m>
-   <z-m> 0.00922</z-m>
+   <x-m> 0.005613</x-m>
+   <y-m>-0.009924</y-m>
+   <z-m> 0.010004</z-m>
   </center>
     <axis>
       <x> -1 </x>
@@ -49,13 +50,13 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>minutes</object-name>
+    <object-name>minute</object-name>
     <property>/instrumentation/clock/indicated-sec</property>
     <factor>0.1</factor>
       <center>
-   <x-m> 0.00464</x-m>
-   <y-m>-0.00990</y-m>
-   <z-m> 0.00922</z-m>
+   <x-m> 0.005713</x-m>
+   <y-m>-0.009866</y-m>
+   <z-m> 0.009876</z-m>
   </center>
     <axis>
       <x> -1 </x>
@@ -66,13 +67,30 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>secondes</object-name>
+    <object-name>second</object-name>
     <property>/instrumentation/clock/indicated-sec</property>
     <factor>6</factor>
       <center>
-   <x-m> 0.00446</x-m>
-   <y-m>-0.00990</y-m>
-   <z-m> 0.00921</z-m>
+   <x-m> 0.00569</x-m>
+   <y-m>-0.01006</y-m>
+   <z-m> 0.009957</z-m>
+  </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>tenths</object-name>
+    <property>/instrumentation/clock/indicated-sec</property>
+    <factor>1</factor>
+      <center>
+   <x-m> 0.005699</x-m>
+   <y-m>-0.010095</y-m>
+   <z-m> 0.000319</z-m>
   </center>
     <axis>
       <x> -1 </x>
