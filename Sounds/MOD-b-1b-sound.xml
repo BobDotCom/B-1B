@@ -371,9 +371,9 @@
         <max>1</max>
       </volume>
       <orientation>
-        <x> 1</x>
-        <y> 0</y>
-        <z> 0</z>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
         <inner-angle>100</inner-angle>
         <outer-angle>195</outer-angle>
         <outer-gain>0.5</outer-gain>

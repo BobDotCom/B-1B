@@ -353,7 +353,7 @@ B-1B set file.
                 <menu n="10">
                     <label>B-1B</label>
                     <enabled type="bool">true</enabled>
-                    <!--item n="0">
+                    <item n="0">
                         <label>Autostart</label>
                         <binding>
                             <command>property-toggle</command>
@@ -371,7 +371,7 @@ B-1B set file.
                             <command>property-toggle</command>
                             <property>controls/engines/engine[3]/cutoff</property>
                         </binding>
-                    </item-->
+                    </item>
                     <item n="1">
                         <label>Toggle Canopy Access</label>
                         <binding>
