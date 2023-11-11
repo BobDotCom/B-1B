@@ -18,7 +18,7 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>eng_inlet</object-name>
-	 <property>engines/engine[4 ]/n2</property>
+	 <property>engines/engine[4 ]/n1</property>
      <factor>90</factor>
 	 <interpolation>
 		 <entry>
