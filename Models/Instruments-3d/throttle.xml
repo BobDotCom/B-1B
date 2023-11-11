@@ -10,7 +10,8 @@ sweat by maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>switch_flaps.002</object-name>
+	<object-name>switch_flaps.002</object-name> 
+	<object-name>switch_flaps.003</object-name>
 	<property>controls/flight/flaps</property>
 	<interpolation>
 		<entry>
@@ -39,7 +40,9 @@ sweat by maggse
 </animation>
 <animation>
 	<type>material</type>
+	<object-name>switch_flaps.002</object-name> 
 	<object-name>switch_flaps.002</object-name>
+	<object-name>switch_flaps.003</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
@@ -52,6 +55,7 @@ sweat by maggse
 
 <animation>
 	<type>pick</type>
+	<object-name>switch_flaps.002</object-name> 
 	<object-name>switch_flaps.002</object-name>
 	<action>
 		<button>0</button>

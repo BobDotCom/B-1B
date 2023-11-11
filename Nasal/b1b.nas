@@ -2,15 +2,16 @@ _setlistener("/sim/signals/fdm-initialized", func {
 	init_b1b();
 });
 
-#Adding Engines to FailMgr to allow for them to be killed with damage.
-var e0 = compat_failure_modes.fail_engine("engine");#
-FailureMgr.add_failure_mode("engines/engine", "Engine 1", e0);#
-var e1 = compat_failure_modes.fail_engine("engine[1]");#
-FailureMgr.add_failure_mode("engines/engine[1]", "Engine 2", e1);#
-var e2 = compat_failure_modes.fail_engine("engine[2]");#
-FailureMgr.add_failure_mode("engines/engine[2]", "Engine 3", e2);#
-var e3 = compat_failure_modes.fail_engine("engine[3]");#
-FailureMgr.add_failure_mode("engines/engine[3]", "Engine 4", e3);#
+# Adding Engines to FailMgr to allow for them to be killed with damage.
+# var e0 = compat_failure_modes.fail_engine("engine");#
+# FailureMgr.add_failure_mode("engines/engine", "Engine 1", e0);#
+# var e1 = compat_failure_modes.fail_engine("engine[1]");#
+# FailureMgr.add_failure_mode("engines/engine[1]", "Engine 2", e1);#
+# var e2 = compat_failure_modes.fail_engine("engine[2]");#
+# FailureMgr.add_failure_mode("engines/engine[2]", "Engine 3", e2);#
+# var e3 = compat_failure_modes.fail_engine("engine[3]");#
+# FailureMgr.add_failure_mode("engines/engine[3]", "Engine 4", e3);#
+# Disabled 26/09/23 - Integrated into damage.nas
 
 var init_b1b = func {
 setprop("systems/refuel/serviceable", 'false');
@@ -44,64 +45,64 @@ setprop("instrumentation/cg/cg_mac_set", 70);
 setprop("instrumentation/cg/cg_mac", 30);
 setprop("instrumentation/tacan/frequencies/selected-channel[12]", 2);
 settimer(flightcontrols.fuelsweep, 1);
-setprop("ai/guided/id-number", 0);
-setprop("ai/guided/target-number", 0);
-setprop("ai/guided/id-release", 0);
-setprop("armament/sniper-pod/position-norm",0);
-setprop("armament/oso/bay-selected", 0);
-setprop("armament/bay0/launcher-pos", 0);
-setprop("armament/bay1/launcher-pos", 0);
-setprop("armament/bay2/launcher-pos", 0);
+# setprop("ai/guided/id-number", 0);
+# setprop("ai/guided/target-number", 0);
+# setprop("ai/guided/id-release", 0);
+# setprop("armament/sniper-pod/position-norm",0);
+# setprop("armament/oso/bay-selected", 0);
+# setprop("armament/bay0/launcher-pos", 0);
+# setprop("armament/bay1/launcher-pos", 0);
+# setprop("armament/bay2/launcher-pos", 0);
 
-#init the armaments
-setprop("armament/bay0/rack0",0);
-setprop("armament/bay0/rack0-armed",0);
-setprop("armament/bay0/rack1",0);
-setprop("armament/bay0/rack1-armed",0);
-setprop("armament/bay0/rack2",0);
-setprop("armament/bay0/rack2-armed",0);
-setprop("armament/bay0/rack3",0);
-setprop("armament/bay0/rack3-armed",0);
-setprop("armament/bay0/rack4",0);
-setprop("armament/bay0/rack4-armed",0);
-setprop("armament/bay0/rack5",0);
-setprop("armament/bay0/rack5-armed",0);
-setprop("armament/bay0/rack6",0);
-setprop("armament/bay0/rack6-armed",0);
-setprop("armament/bay0/rack7",0);
-setprop("armament/bay0/rack7-armed",0);
-setprop("armament/bay1/rack0",0);
-setprop("armament/bay1/rack0-armed",0);
-setprop("armament/bay1/rack1",0);
-setprop("armament/bay1/rack1-armed",0);
-setprop("armament/bay1/rack2",0);
-setprop("armament/bay1/rack2-armed",0);
-setprop("armament/bay1/rack3",0);
-setprop("armament/bay1/rack3-armed",0);
-setprop("armament/bay1/rack4",0);
-setprop("armament/bay1/rack4-armed",0);
-setprop("armament/bay1/rack5",0);
-setprop("armament/bay1/rack5-armed",0);
-setprop("armament/bay1/rack6",0);
-setprop("armament/bay1/rack6-armed",0);
-setprop("armament/bay1/rack7",0);
-setprop("armament/bay1/rack7-armed",0);
-setprop("armament/bay2/rack0",0);
-setprop("armament/bay2/rack0-armed",0);
-setprop("armament/bay2/rack1",0);
-setprop("armament/bay2/rack1-armed",0);
-setprop("armament/bay2/rack2",0);
-setprop("armament/bay2/rack2-armed",0);
-setprop("armament/bay2/rack3",0);
-setprop("armament/bay2/rack3-armed",0);
-setprop("armament/bay2/rack4",0);
-setprop("armament/bay2/rack4-armed",0);
-setprop("armament/bay2/rack5",0);
-setprop("armament/bay2/rack5-armed",0);
-setprop("armament/bay2/rack6",0);
-setprop("armament/bay2/rack6-armed",0);
-setprop("armament/bay2/rack7",0);
-setprop("armament/bay2/rack7-armed",0);
+# #init the armaments
+# setprop("armament/bay0/rack0",0);
+# setprop("armament/bay0/rack0-armed",0);
+# setprop("armament/bay0/rack1",0);
+# setprop("armament/bay0/rack1-armed",0);
+# setprop("armament/bay0/rack2",0);
+# setprop("armament/bay0/rack2-armed",0);
+# setprop("armament/bay0/rack3",0);
+# setprop("armament/bay0/rack3-armed",0);
+# setprop("armament/bay0/rack4",0);
+# setprop("armament/bay0/rack4-armed",0);
+# setprop("armament/bay0/rack5",0);
+# setprop("armament/bay0/rack5-armed",0);
+# setprop("armament/bay0/rack6",0);
+# setprop("armament/bay0/rack6-armed",0);
+# setprop("armament/bay0/rack7",0);
+# setprop("armament/bay0/rack7-armed",0);
+# setprop("armament/bay1/rack0",0);
+# setprop("armament/bay1/rack0-armed",0);
+# setprop("armament/bay1/rack1",0);
+# setprop("armament/bay1/rack1-armed",0);
+# setprop("armament/bay1/rack2",0);
+# setprop("armament/bay1/rack2-armed",0);
+# setprop("armament/bay1/rack3",0);
+# setprop("armament/bay1/rack3-armed",0);
+# setprop("armament/bay1/rack4",0);
+# setprop("armament/bay1/rack4-armed",0);
+# setprop("armament/bay1/rack5",0);
+# setprop("armament/bay1/rack5-armed",0);
+# setprop("armament/bay1/rack6",0);
+# setprop("armament/bay1/rack6-armed",0);
+# setprop("armament/bay1/rack7",0);
+# setprop("armament/bay1/rack7-armed",0);
+# setprop("armament/bay2/rack0",0);
+# setprop("armament/bay2/rack0-armed",0);
+# setprop("armament/bay2/rack1",0);
+# setprop("armament/bay2/rack1-armed",0);
+# setprop("armament/bay2/rack2",0);
+# setprop("armament/bay2/rack2-armed",0);
+# setprop("armament/bay2/rack3",0);
+# setprop("armament/bay2/rack3-armed",0);
+# setprop("armament/bay2/rack4",0);
+# setprop("armament/bay2/rack4-armed",0);
+# setprop("armament/bay2/rack5",0);
+# setprop("armament/bay2/rack5-armed",0);
+# setprop("armament/bay2/rack6",0);
+# setprop("armament/bay2/rack6-armed",0);
+# setprop("armament/bay2/rack7",0);
+# setprop("armament/bay2/rack7-armed",0);
 
 
 #init guidance info and wso panel.
@@ -113,7 +114,7 @@ for (var bay_num = 0; bay_num < 3; bay_num = bay_num + 1) {
 		setprop("ai/guided/bay"~bay_num~"/bomb["~bomb_num~"]/target-latitude-deg",0);
 	}
 }
-weapons.wso_mfd_update(1,0);
+# weapons.wso_mfd_update(1,0); Disabled temp due to weapon system upgrade work
 
 
 
@@ -907,4 +908,21 @@ var nuc = func {
     ltext = "Duke Nukem not available yet on this plane(t)!";
   screen.log.write(ltext);
   }
+}
+
+var vector_aicontacts_links = [];
+var DLRecipient = emesary.Recipient.new("DLRecipient");
+var startDLListener = func {
+    DLRecipient.radar = radar_system.dlnkRadar;
+    DLRecipient.Receive = func(notification) {
+        if (notification.NotificationType == "DatalinkNotification") {
+            #printf("DL recv: %s", notification.NotificationType);
+            if (me.radar.enabled == 1) {
+                vector_aicontacts_links = notification.vector;
+            }
+            return emesary.Transmitter.ReceiptStatus_OK;
+        }
+        return emesary.Transmitter.ReceiptStatus_NotProcessed;
+    };
+    emesary.GlobalTransmitter.Register(DLRecipient);
 }

@@ -38,7 +38,7 @@
  <animation>
    <type>translate</type>
    <object-name>Parking-brake</object-name>
-   <property>/controls/gear/brake-parking</property>v
+   <property>/controls/gear/brake-parking</property>
    <factor>-0.004</factor>
    <center>
     <x-m>-0.026</x-m>
@@ -63,7 +63,28 @@
         <repeatable>false</repeatable>
        </binding>
     </action>
-  </animation>
+  </animation> 
+
+ <animation>
+	 <type>select</type>
+	 <object-name>Parking-brake-light</object-name>
+	 <condition>
+		 <equals>
+			 <property>/controls/gear/brake-parking</property>
+			 <value>1.0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>Parking-brake-light</object-name>
+	 <emission>
+		 <red>0.8</red>
+		 <green>0.0</green>
+		 <blue>0.0</blue>
+		 <factor-prop>/controls/gear/brake-parking</factor-prop>
+	 </emission>
+</animation>
 
   <animation>
    <type>rotate</type>

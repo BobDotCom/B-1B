@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>strobe.ac</path>
+ <offsets>
+    <x-m> 0.0 </x-m>
+    <y-m> 0.0 </y-m>
+    <z-m> 0.0 </z-m>
+ </offsets>
+ 
+<animation>
+  <type>timed</type>
+  <object-name>strobe</object-name>
+  <object-name>glow</object-name>
+  <use-personality type="bool">true</use-personality>
+  <branch-duration-sec>0.1</branch-duration-sec>
+  <branch-duration-sec>0.8</branch-duration-sec>
+ </animation>
+ 
+<animation>
+	<type>billboard</type>
+	<object-name>strobe</object-name>
+	<spherical type="bool">true</spherical>
+</animation>
+
+<animation>
+	 <type>billboard</type>
+	 <object-name>glow</object-name>
+	 <spherical type="bool">true</spherical>
+</animation>
+ 
+
+ <animation>
+	 <type>alpha-test</type>
+	 <object-name>strobe</object-name>
+	 <alpha-factor>0.001</alpha-factor>
+ </animation>
+
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>strobe</object-name>
+	 <object-name>glow</object-name>
+	 <condition>
+			 <equals>
+				 <property>controls/lighting/wing-strobe</property>
+				 <value>1.0</value>
+			 </equals>
+	 </condition>
+  </animation>
+
+</PropertyList>

@@ -187,7 +187,7 @@ var contactPoint = nil;
 # isValid()       - If this target is valid
 # getElevation()  - Pitch to target from launch vehicle
 # get_bearing()   - Bearing to target from launch vehicle
-# get_Callsign()
+# get_Callsign() 
 # get_range()     - NM
 # get_Coord()
 # get_altitude()  - FT
@@ -536,7 +536,7 @@ var AIM = {
         	m.vector_thrust = 0;
         }
         if (m.flareResistance == nil or !m.gnd_launch) {
-        	m.flareResistance = 0.85;
+        	m.flareResistance = 0.80;
         }
         if (m.chaffResistance == nil or !m.gnd_launch) {
         	m.chaffResistance = 0.85;
@@ -1360,7 +1360,7 @@ var AIM = {
 		# do NOT call this after launch
 		# see also release(vect)
 		if (me.status == MISSILE_FLYING) return;
-		me.contacts = vect;
+		me.contacts = vect;		
 	},
 
 	clearTgt: func {
@@ -2226,7 +2226,7 @@ var AIM = {
 		me.deploy_prop.setDoubleValue(me.deploy);
 
 		me.thrust_lbf = me.thrust();# pounds force (lbf)
-
+		
 
 		# Jmav remove the # from the line below for cruise missile adjustment:
 		#me.printAlways("guiding=%d  time=%d:  mach=%.3f  alt=%d  %s",me.guiding, me.life_time, me.speed_m, me.alt_ft, me.observing);
@@ -2735,7 +2735,7 @@ var AIM = {
 				me.loft_alt = me.settings.altitude;
 			}
 			if (me.settings["altitude_at"] != nil) {
-				# Altitude above target
+				# Altitude above target				
 				me.settings.altitude_at+=me.Tgt.get_altitude();
 				if (me.loft_alt != me.settings.altitude_at) me.printStats("Loft altitude switched to %d", me.settings.altitude_at);
 				me.loft_alt = me.settings.altitude_at;
@@ -3205,7 +3205,7 @@ var AIM = {
 			me.blep = me.Tgt.getLastGroundTrackBlep();
 			if (me.blep == nil and me.newTargetAssigned) {
 				# TODO: Do not remember what this is for
-				me.t_coord_sampled = me.t_coord;
+				me.t_coord_sampled = me.t_coord;	
 			} elsif (me.blep == nil) {
 				me.free = 1;
 				me.guiding = 0;
@@ -3321,8 +3321,8 @@ var AIM = {
 						# target has released a new flare, lets check if it fools us
 						me.flareTime = me.life_time;
 						me.flareLast = me.flareNumber;
-						me.aspectDeg = me.aspectToExhaust(me.coord, me.Tgt) / 180;
-						me.flareLock = rand() < (1-me.flareResistance + ((1-me.flareResistance) * 0.5 * me.aspectDeg));# 50% extra chance to be fooled if front aspect
+						me.aspectDeg = me.aspectToExhaust(me.coord, me.Tgt) / 180;# 0 = viewing engine, 1 = front
+						me.flareLock = rand() < (1-me.flareResistance);
 						if (me.flareLock) {
 							# fooled by the flare
 							me.printStats(me.type~": Missile locked on flare from "~me.callsign);
@@ -3357,7 +3357,7 @@ var AIM = {
 						me.aspectDeg = me.aspectToExhaust(me.coord, me.Tgt) / 180;# 0 = viewing engine, 1 = front
 						me.redux = me.guidance == "semi-radar" or me.guidance == "command" or me.guidance == "tvm"?(me.gnd_launch?0.5:0.75):1;
 						me.chaffChance = (1-me.chaffResistance)*me.redux;
-						me.chaffLock = rand() < (me.chaffChance - (me.chaffChance * 0.5 * me.aspectDeg));# 50% less chance to be fooled if front aspect
+						me.chaffLock = rand() < (me.chaffChance - (me.chaffChance * 0.70 * me.aspectDeg));# 70% less chance to be fooled if front aspect
 
 						if (me.chaffLock) {
 							me.printStats(me.type~": Missile locked on chaff from "~me.callsign);
@@ -3514,7 +3514,7 @@ var AIM = {
 			# To make sure deviation_deg is updated in midflight function.
             me.FOV_check(me.hdg, me.pitch, me.curr_deviation_h, me.curr_deviation_e, me.max_seeker_dev, me.myMath);
         }
-		if (me.chaffLock and (me.guidance == "command" or me.guidance == "semi-radar" or me.guidance == "tvm") and (me.life_time - me.chaffLockTime) > (me.gnd_launch?4:6)) {
+		if (me.chaffLock and (me.guidance == "command" or me.guidance == "semi-radar" or me.guidance == "tvm") and (me.life_time - me.chaffLockTime) > (me.gnd_launch?4:8)) {
 			me.chaffLock = 0;
 			me.printStats(me.type~": Chaff dissipated, regained track.");
 		}
@@ -3991,11 +3991,11 @@ var AIM = {
 			me.t_go = me.myMath.dotProduct(me.R_tm,me.R_tm)/me.myMath.dotProduct(me.R_tm, me.V_tm);
 			#printf("time_to_go %.1f, closing %d",me.t_go,me.vert_closing_rate_fps);
 
-
+			
 
 			# Horizontal homing:
 			if (me.guidanceLaw == "LOS") {
-
+				
 				me.K1 =    2.5;
 				me.K2 =   10.0;
 
@@ -4343,7 +4343,7 @@ var AIM = {
 
 	notifyInFlight: func (lat,lon,alt,rdar,semiRdr,typeID,typ,unique,thrustOn,callsign, heading, pitch, speed, is_deleted=0) {
 		## thrustON cannot be named 'thrust' as FG for some reason will then think its a function (probably fixed by the way call() now is used)
-		var msg = notifications.ArmamentInFlightNotification.new("mfly", unique, is_deleted?damage.DESTROY:damage.MOVE, 21+typeID);
+		var msg = notifications.ArmamentInFlightNotification.new("mfly", unique, is_deleted?damage.DESTROY:damage.MOVE, damage.DamageRecipient.typeID2emesaryID(typeID));
         if (lat != nil) {
         	msg.Position.set_latlon(lat,lon,alt);
         } else {
@@ -4382,7 +4382,7 @@ var AIM = {
 	},
 
 	notifyHit: func (RelativeAltitude, Distance, callsign, Bearing, reason, typeID, type, self) {
-		var msg = notifications.ArmamentNotification.new("mhit", 4, 21+typeID);
+		var msg = notifications.ArmamentNotification.new("mhit", 4, damage.DamageRecipient.typeID2emesaryID(typeID));
         msg.RelativeAltitude = RelativeAltitude;
         msg.Bearing = Bearing;
         msg.Distance = Distance;

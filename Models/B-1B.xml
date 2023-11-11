@@ -82,6 +82,10 @@ more to come :-)
       </refuel>
   </multiplay>
 
+  <model>
+    <path>Aircraft/Generic/marker.xml</path>
+  </model>
+
   <!-- cockpit instruments -->
 
   <model>
@@ -345,7 +349,7 @@ more to come :-)
 	  <type>rotate</type>
 	  <object-name>wing_right</object-name>
 	  <object-name>wing_right.001</object-name>
-      <object-name>right_poslight</object-name>
+          <object-name>right_poslight</object-name>
 	  <property>rotors/main/blade[0]/position-deg</property>
 	  <interpolation>
 		  <entry>
@@ -358,7 +362,7 @@ more to come :-)
 		  </entry>
 	  </interpolation>
 	  <center>
-		  <x-m>-1.66</x-m>
+		  <x-m>-1.7</x-m>
 		  <y-m>3.99</y-m>
 		  <z-m>0.00</z-m>
 	  </center>
