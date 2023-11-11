@@ -10,9 +10,9 @@ more to come :-)
 
   <offsets>
 	  <x-m>-0.42</x-m>
-	  <y-m>0.15</y-m>
-          <z-m>-0.297</z-m>
-    <pitch-deg>0</pitch-deg>
+	  <y-m> 0.15</y-m>
+	  <z-m>-0.297</z-m>
+  <pitch-deg>0</pitch-deg>
 
   </offsets>
 
@@ -273,7 +273,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
 	  <offsets>
 		  <x-m>-18.214</x-m>
-		  <y-m>-0.910</y-m>
+		  <y-m>-0.916</y-m>
 		  <z-m> 1.075</z-m>
 		  <pitch-deg>-1</pitch-deg>
 	  </offsets>
@@ -404,9 +404,9 @@ more to come :-)
 	  <name>bomb doors</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nuc.xml</path>
 	  <offsets>
-		  <x-m>-18.215</x-m>
-		  <y-m>-0.316</y-m>
-		  <z-m> 1.035</z-m>
+		  <x-m>-18.218</x-m>
+		  <y-m>-0.314</y-m>
+		  <z-m> 1.037</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -426,9 +426,9 @@ more to come :-)
 	  <name>display big</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/display_big.xml</path>
 	  <offsets>
-		  <x-m>-18.217</x-m>
-		  <y-m> 0.090</y-m>
-		  <z-m> 0.905</z-m>
+		  <x-m>-18.218</x-m>
+		  <y-m> 0.092</y-m>
+		  <z-m> 0.903</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -581,9 +581,9 @@ B-1BFS
 	  <name>eng-aux-panel</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/Eng-Aux-Pwr.xml</path>
 	  <offsets>
-		  <x-m>-18.070</x-m>
+		  <x-m>-18.075</x-m>
 		  <y-m>-0.130</y-m>
-		  <z-m>0.710</z-m>
+		  <z-m>0.715</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -592,7 +592,7 @@ B-1BFS
 	  <name>Flt Ctrl Pwr Panel</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/Flt-Ctrl-Pwr.xml</path>
 	  <offsets>
-		  <x-m>-18.071</x-m>
+		  <x-m>-18.073</x-m>
 		  <y-m> -0.120</y-m>
 		  <z-m>  0.711</z-m>
 		  <pitch-deg>0</pitch-deg>
@@ -605,7 +605,7 @@ B-1BFS
 	  <offsets>
 		  <x-m>-18.008</x-m>
 		  <y-m>-0.289</y-m>
-		  <z-m>0.710</z-m>
+		  <z-m>0.708</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
