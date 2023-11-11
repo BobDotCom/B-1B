@@ -905,6 +905,134 @@ sweat by maggse
 	</emission>
 </animation>
 
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>ind1.024</object-name>
+	 <property>sim/model/B-1B/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>110</ind>
+			 <dep>0.105</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>ind1.024</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>ind1.025</object-name>
+	 <property>sim/model/B-1B/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>110</ind>
+			 <dep>0.105</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>ind1.025</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>ind1.027</object-name>
+	 <property>sim/model/B-1B/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>110</ind>
+			 <dep>0.105</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>ind1.027</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>ind1.026</object-name>
+	 <property>sim/model/B-1B/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>110</ind>
+			 <dep>0.105</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+ </animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>ind1.026</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+</animation>
+
 <animation>
 	<type>material</type>
 	<object-name>glas_face</object-name>
