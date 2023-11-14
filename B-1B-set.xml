@@ -450,10 +450,13 @@ B-1B set file.
 
         <systems>
             <electrical>
-                <path>Aircraft/B-1B/Systems/generic-electrical.xml</path>
+                <path></path>
             </electrical>
-            <autopilot>
+            <autopilot n="0">
                 <path>Aircraft/B-1B/Systems/b1b-autopilot.xml</path>
+            </autopilot>
+            <autopilot n="1">
+                <path>Aircraft/B-1B/Systems/engines.xml</path>
             </autopilot>
         </systems>
 
@@ -725,18 +728,32 @@ B-1B set file.
         <engines>
             <engine n="0">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
             <engine n="1">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
             <engine n="2">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
             <engine n="3">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
+
+            </engine>
+            <engine n="4">
+                <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
+
+            </engine>
+            <engine n="5">
+                <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
 

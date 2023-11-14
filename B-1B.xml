@@ -231,6 +231,42 @@
     </thruster>
   </engine>
 
+ <!-- TODO: Position the APUs correctly -->
+ <engine file="GTCP165-9A">
+    <feed> 0 </feed>
+
+    <thruster file="direct">
+     <sense> 1 </sense>
+     <location unit="FT">
+       <x>    94.37 </x>
+       <y>     0.00 </y>
+       <z>    -1.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch>     0.00 </pitch>
+        <roll>     0.00 </roll>
+         <yaw>     0.00 </yaw>
+     </orient>
+    </thruster>
+  </engine>
+     <engine file="GTCP165-9A">
+    <feed> 0 </feed>
+
+    <thruster file="direct">
+     <sense> 1 </sense>
+     <location unit="FT">
+       <x>    94.37 </x>
+       <y>     0.00 </y>
+       <z>    -1.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch>     0.00 </pitch>
+        <roll>     0.00 </roll>
+         <yaw>     0.00 </yaw>
+     </orient>
+    </thruster>
+  </engine>
+
   <tank type="FUEL" number="0">
      <location unit="FT">
        <x>    94.37 </x>
@@ -362,6 +398,9 @@
  <system file="Spoilers.xml"/>
  <system file="Speedbrake.xml"/>
     <system file="eng_ind.xml"/>
+    <system file="b1b-engines.xml"/>
+<!--    <system file="b1b-electrical.xml"/>-->
+<!--    <system file="b1b-apu.xml"/>-->
 
  <flight_control name="FCS: B-1B">
 

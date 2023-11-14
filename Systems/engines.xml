@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <!-- Because overwriting from JSBsim doesn't work -->
+	<filter>
+		<name>Engine 1 Cutoff</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[0]/cutoff</input>
+		<output>/controls/engines/engine[0]/cutoff</output>
+	</filter>
+    <filter>
+		<name>Engine 1 Starter</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[0]/starter</input>
+		<output>/controls/engines/engine[0]/starter</output>
+	</filter>
+
+	<filter>
+		<name>Engine 2 Cutoff</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[1]/cutoff</input>
+		<output>/controls/engines/engine[1]/cutoff</output>
+	</filter>
+	<filter>
+		<name>Engine 2 Starter</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[1]/starter</input>
+		<output>/controls/engines/engine[1]/starter</output>
+	</filter>
+
+	<filter>
+		<name>Engine 3 Cutoff</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[2]/cutoff</input>
+		<output>/controls/engines/engine[2]/cutoff</output>
+	</filter>
+	<filter>
+		<name>Engine 3 Starter</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[2]/starter</input>
+		<output>/controls/engines/engine[2]/starter</output>
+	</filter>
+
+	<filter>
+		<name>Engine 4 Cutoff</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[3]/cutoff</input>
+		<output>/controls/engines/engine[3]/cutoff</output>
+	</filter>
+	<filter>
+		<name>Engine 4 Starter</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[3]/starter</input>
+		<output>/controls/engines/engine[3]/starter</output>
+	</filter>
+
+	<filter>
+		<name>APU Left Cutoff</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[4]/cutoff</input>
+		<output>/controls/engines/engine[4]/cutoff</output>
+	</filter>
+	<filter>
+		<name>APU Left Starter</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[4]/starter</input>
+		<output>/controls/engines/engine[4]/starter</output>
+	</filter>
+
+	<filter>
+		<name>APU Right Cutoff</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[5]/cutoff</input>
+		<output>/controls/engines/engine[5]/cutoff</output>
+	</filter>
+	<filter>
+		<name>APU Right Starter</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/fdm/jsbsim/systems/engines/engine[5]/starter</input>
+		<output>/controls/engines/engine[5]/starter</output>
+	</filter>
+</PropertyList>

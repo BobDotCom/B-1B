@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <system name="Propulsion">
+<!--    TODO: Should APUs be added to propulsion? -->
   <property value="0">propulsion/engine[0]/thrust-coefficient</property>
   <property value="0">propulsion/engine[1]/thrust-coefficient</property>
   <property value="0">propulsion/engine[2]/thrust-coefficient</property>
