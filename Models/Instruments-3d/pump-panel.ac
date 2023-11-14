@@ -16930,7 +16930,7 @@ kids 0
 OBJECT poly
 name "guides"
 data 19
-Pump-panel.mesh.001
+pump-panel.mesh.001
 crease 35.0
 texture "silver.png"
 numvert 24

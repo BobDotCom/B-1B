@@ -334,8 +334,8 @@ more to come :-)
   </model>
 
  <model>
-	  <name>Pump-panel</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/Pump-Panel.xml</path>
+	  <name>pump-panel</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/pump-panel.xml</path>
 	  <offsets>
 		  <x-m> 0.262</x-m>
 		  <y-m>-0.345</y-m>
