@@ -2,41 +2,71 @@
 <system name="B-1B Engines">
     <property>/engines/engine[4]/running</property>
     <property>/engines/engine[5]/running</property>
-    <channel name="engines" execrate="8">
-        <switch name="systems/engines/engine[0]/can-start">
+    <channel name="adg" execrate="8">
+        <switch name="/systems/engines/adg[0]">
             <default value="0"/>
             <test logic="OR" value="1">
-                <!-- TODO: Pneumatic system -->
-                /controls/apu/apu[0]/bleed eq 1
+                /engines/engine[0]/running eq 1
             </test>
         </switch>
-        <switch name="systems/engines/engine[1]/can-start">
+        <switch name="/systems/engines/adg[1]">
             <default value="0"/>
             <test logic="OR" value="1">
                 <test logic="AND" value="1">
-                    /engines/engine[4]/running eq 1
+                    <!-- TODO: Use actuator for coupling -->
+                    /engines/engine[4]/n1 ge 95
                     /controls/apu/apu[0]/couple eq 1
                 </test>
-                /controls/apu/apu[0]/bleed eq 1
+                /engines/engine[1]/running eq 1
             </test>
         </switch>
-        <switch name="systems/engines/engine[2]/can-start">
+        <switch name="/systems/engines/adg[2]">
             <default value="0"/>
             <test logic="OR" value="1">
-                /controls/apu/apu[1]/bleed eq 1
+                /engines/engine[2]/running eq 1
             </test>
         </switch>
-        <switch name="systems/engines/engine[3]/can-start">
+        <switch name="/systems/engines/adg[3]">
             <default value="0"/>
             <test logic="OR" value="1">
                 <test logic="AND" value="1">
-                    /engines/engine[5]/running eq 1
+                    /engines/engine[5]/n1 ge 95
                     /controls/apu/apu[1]/couple eq 1
                 </test>
-                /controls/apu/apu[1]/bleed eq 1
+                /engines/engine[3]/running eq 1
             </test>
         </switch>
-        <switch name="systems/engines/engine[4]/can-start">
+    </channel>
+    <channel name="engines" execrate="8">
+        <switch name="/systems/engines/engine[0]/can-start">
+            <default value="0"/>
+            <test logic="OR" value="1">
+                /systems/engines/adg[0] eq 1
+                /systems/pneumatics/psi/engine[0]/psi ge 20
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[1]/can-start">
+            <default value="0"/>
+            <test logic="OR" value="1">
+                /systems/engines/adg[1] eq 1
+                /systems/pneumatics/psi/engine[1]/psi ge 20
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[2]/can-start">
+            <default value="0"/>
+            <test logic="OR" value="1">
+                /systems/engines/adg[2] eq 1
+                /systems/pneumatics/psi/engine[2]/psi ge 20
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[3]/can-start">
+            <default value="0"/>
+            <test logic="OR" value="1">
+                /systems/engines/adg[3] eq 1
+                /systems/pneumatics/psi/engine[3]/psi ge 20
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[4]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
                 <!-- TODO: Electrical system -->
@@ -44,14 +74,14 @@
                 /controls/electric/external-power eq 1
             </test>
         </switch>
-        <switch name="systems/engines/engine[5]/can-start">
+        <switch name="/systems/engines/engine[5]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
                 /controls/electric/battery-switch eq 1
                 /controls/electric/external-power eq 1
             </test>
         </switch>
-        <switch name="systems/engines/engine[0]/cutoff">
+        <switch name="/systems/engines/engine[0]/cutoff">
             <default value="1"/>
             <test logic="OR" value="0">
                 /controls/engines/engine[0]/cutoff-switch eq 0
@@ -61,7 +91,7 @@
                 </test>
             </test>
         </switch>
-        <switch name="systems/engines/engine[0]/starter">
+        <switch name="/systems/engines/engine[0]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
                 <test logic="OR" value="1">
@@ -69,7 +99,7 @@
                     /engines/engine[0]/n2 lt 60
                 </test>
                 /controls/engines/engine[0]/cutoff-switch eq 1
-                systems/engines/engine[0]/can-start eq 1
+                /systems/engines/engine[0]/can-start eq 1
             </test>
         </switch>
         <fcs_function name="/controls/engines/engine[0]/cutoff-switch">
@@ -81,7 +111,7 @@
                             <value>1</value>
                         </eq>
                         <eq>
-                            <property>systems/engines/engine[0]/starter</property>
+                            <property>/systems/engines/engine[0]/starter</property>
                             <value>0</value>
                         </eq>
                     </and>
@@ -90,7 +120,7 @@
                 </ifthen>
             </function>
         </fcs_function>
-        <switch name="systems/engines/engine[1]/cutoff">
+        <switch name="/systems/engines/engine[1]/cutoff">
             <default value="1"/>
             <test logic="OR" value="0">
                 /controls/engines/engine[1]/cutoff-switch eq 0
@@ -100,7 +130,7 @@
                 </test>
             </test>
         </switch>
-        <switch name="systems/engines/engine[1]/starter">
+        <switch name="/systems/engines/engine[1]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
                 <test logic="OR" value="1">
@@ -108,7 +138,7 @@
                     /engines/engine[1]/n2 lt 60
                 </test>
                 /controls/engines/engine[1]/cutoff-switch eq 1
-                systems/engines/engine[1]/can-start eq 1
+                /systems/engines/engine[1]/can-start eq 1
             </test>
         </switch>
         <fcs_function name="/controls/engines/engine[1]/cutoff-switch">
@@ -120,7 +150,7 @@
                             <value>1</value>
                         </eq>
                         <eq>
-                            <property>systems/engines/engine[1]/starter</property>
+                            <property>/systems/engines/engine[1]/starter</property>
                             <value>0</value>
                         </eq>
                     </and>
@@ -129,7 +159,7 @@
                 </ifthen>
             </function>
         </fcs_function>
-        <switch name="systems/engines/engine[2]/cutoff">
+        <switch name="/systems/engines/engine[2]/cutoff">
             <default value="1"/>
             <test logic="OR" value="0">
                 /controls/engines/engine[2]/cutoff-switch eq 0
@@ -139,7 +169,7 @@
                 </test>
             </test>
         </switch>
-        <switch name="systems/engines/engine[2]/starter">
+        <switch name="/systems/engines/engine[2]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
                 <test logic="OR" value="1">
@@ -147,7 +177,7 @@
                     /engines/engine[2]/n2 lt 60
                 </test>
                 /controls/engines/engine[2]/cutoff-switch eq 1
-                systems/engines/engine[2]/can-start eq 1
+                /systems/engines/engine[2]/can-start eq 1
             </test>
         </switch>
         <fcs_function name="/controls/engines/engine[2]/cutoff-switch">
@@ -159,7 +189,7 @@
                             <value>1</value>
                         </eq>
                         <eq>
-                            <property>systems/engines/engine[2]/starter</property>
+                            <property>/systems/engines/engine[2]/starter</property>
                             <value>0</value>
                         </eq>
                     </and>
@@ -168,7 +198,7 @@
                 </ifthen>
             </function>
         </fcs_function>
-        <switch name="systems/engines/engine[3]/cutoff">
+        <switch name="/systems/engines/engine[3]/cutoff">
             <default value="1"/>
             <test logic="OR" value="0">
                 /controls/engines/engine[3]/cutoff-switch eq 0
@@ -178,7 +208,7 @@
                 </test>
             </test>
         </switch>
-        <switch name="systems/engines/engine[3]/starter">
+        <switch name="/systems/engines/engine[3]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
                 <test logic="OR" value="1">
@@ -186,7 +216,7 @@
                     /engines/engine[3]/n2 lt 60
                 </test>
                 /controls/engines/engine[3]/cutoff-switch eq 1
-                systems/engines/engine[3]/can-start eq 1
+                /systems/engines/engine[3]/can-start eq 1
             </test>
         </switch>
         <fcs_function name="/controls/engines/engine[3]/cutoff-switch">
@@ -198,7 +228,7 @@
                             <value>1</value>
                         </eq>
                         <eq>
-                            <property>systems/engines/engine[3]/starter</property>
+                            <property>/systems/engines/engine[3]/starter</property>
                             <value>0</value>
                         </eq>
                     </and>
@@ -209,7 +239,7 @@
         </fcs_function>
 
         <!-- APU -->
-        <switch name="systems/engines/engine[4]/cutoff">
+        <switch name="/systems/engines/engine[4]/cutoff">
             <default value="1"/>
             <test logic="OR" value="0">
                 /controls/engines/engine[4]/cutoff-switch eq 0
@@ -219,7 +249,7 @@
                 </test>
             </test>
         </switch>
-        <switch name="systems/engines/engine[4]/starter">
+        <switch name="/systems/engines/engine[4]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
                 <test logic="OR" value="1">
@@ -227,7 +257,7 @@
                     /engines/engine[4]/n2 lt 99.9
                 </test>
                 /controls/engines/engine[4]/cutoff-switch eq 1
-                systems/engines/engine[4]/can-start eq 1
+                /systems/engines/engine[4]/can-start eq 1
             </test>
         </switch>
         <fcs_function name="/controls/engines/engine[4]/cutoff-switch">
@@ -239,7 +269,7 @@
                             <value>1</value>
                         </eq>
                         <eq>
-                            <property>systems/engines/engine[4]/starter</property>
+                            <property>/systems/engines/engine[4]/starter</property>
                             <value>0</value>
                         </eq>
                     </and>
@@ -249,7 +279,7 @@
             </function>
         </fcs_function>
 
-        <switch name="systems/engines/engine[5]/cutoff">
+        <switch name="/systems/engines/engine[5]/cutoff">
             <default value="1"/>
             <test logic="OR" value="0">
                 /controls/engines/engine[5]/cutoff-switch eq 0
@@ -259,7 +289,7 @@
                 </test>
             </test>
         </switch>
-        <switch name="systems/engines/engine[5]/starter">
+        <switch name="/systems/engines/engine[5]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
                 <test logic="OR" value="1">
@@ -267,7 +297,7 @@
                     /engines/engine[5]/n2 lt 99.9
                 </test>
                 /controls/engines/engine[5]/cutoff-switch eq 1
-                systems/engines/engine[5]/can-start eq 1
+                /systems/engines/engine[5]/can-start eq 1
             </test>
         </switch>
         <fcs_function name="/controls/engines/engine[5]/cutoff-switch">
@@ -279,7 +309,7 @@
                             <value>1</value>
                         </eq>
                         <eq>
-                            <property>systems/engines/engine[5]/starter</property>
+                            <property>/systems/engines/engine[5]/starter</property>
                             <value>0</value>
                         </eq>
                     </and>
