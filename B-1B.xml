@@ -399,6 +399,7 @@
  <system file="Speedbrake.xml"/>
     <system file="eng_ind.xml"/>
     <system file="b1b-engines.xml"/>
+    <system file="b1b-pneumatic.xml"/>
 <!--    <system file="b1b-electrical.xml"/>-->
 <!--    <system file="b1b-apu.xml"/>-->
 
