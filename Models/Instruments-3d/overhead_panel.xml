@@ -456,6 +456,26 @@ maggse
 		 </binding>
 	 </action>
 </animation>
+	<animation>
+		<type>select</type>
+		<object-name>APUL_run</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>engines/engine[4]/n1</property>
+				<value>95</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>APUR_run</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>engines/engine[5]/n1</property>
+				<value>95</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
 
 	<animation>
 		<type>knob</type>
@@ -774,5 +794,16 @@ maggse
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
+	<animation>
+		<type>material</type>
+		<object-name>APUL_run</object-name>
+		<object-name>APUR_run</object-name>
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+			<factor-prop>controls/switches/annunciator-lighting</factor-prop>
+		</emission>
+	</animation>
 
 </PropertyList>
