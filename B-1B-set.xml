@@ -657,6 +657,32 @@ B-1B set file.
             <offset-y-m>0</offset-y-m>
             <offset-z-m>0.7</offset-z-m>
         </refuel>
+            <electrical n="0">
+        <bus>
+            <ac-ess type="double">0</ac-ess>
+            <dc-1 type="double">0</dc-1>
+            <dc-2 type="double">0</dc-2>
+        </bus>
+        <relay>
+            <ess-tr-contactor>
+                <contact-pos type="int">0</contact-pos>
+            </ess-tr-contactor>
+        </relay>
+        <some-electric-thingie>
+            <emer-elec-config type="bool">0</emer-elec-config>
+            <emer-gen-operate type="bool">0</emer-gen-operate>
+        </some-electric-thingie>
+        <sources>
+            <bat-1>
+                <amps type="double">0</amps>
+                <percent-calc type="double">80</percent-calc>
+            </bat-1>
+            <bat-2>
+                <amps type="double">0</amps>
+                <percent-calc type="double">80</percent-calc>
+            </bat-2>
+        </sources>
+    </electrical>
     </systems>
 
     <payload n="0" include= "Systems/b1-payload.xml"/>
@@ -758,6 +784,27 @@ B-1B set file.
             </engine>
 
         </engines>
+
+        <electrical>
+            <switches n="0">
+                <!--				<apu type="bool">1</apu>-->
+                <ac-ess-feed type="bool">1</ac-ess-feed>
+                <battery type="bool">0</battery>
+                <bus-tie type="bool">1</bus-tie>
+                <emer-gen-test type="bool">0</emer-gen-test>
+                <ext-pwr type="bool">0</ext-pwr>
+                <galley type="bool">1</galley>
+                <gen-2 type="bool">1</gen-2>
+                <gen-4 type="bool">1</gen-4>
+                <gen-2-line-contactor type="bool">0</gen-2-line-contactor>
+                <ground-cart type="bool">0</ground-cart>
+                <idg-2-disc type="bool">1</idg-2-disc>
+                <idg-4-disc type="bool">1</idg-4-disc>
+                <idg-2-disc-momentary type="bool">0</idg-2-disc-momentary>
+                <idg-4-disc-momentary type="bool">0</idg-4-disc-momentary>
+                <emer-elec-man-on type="bool">0</emer-elec-man-on>
+            </switches>
+        </electrical>
 
     </controls>
 

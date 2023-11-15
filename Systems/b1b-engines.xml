@@ -2,67 +2,116 @@
 <system name="B-1B Engines">
     <property>/engines/engine[4]/running</property>
     <property>/engines/engine[5]/running</property>
+    <property value="1">/systems/apu/dc-bat-three-minutes</property>
     <channel name="adg" execrate="8">
-        <switch name="/systems/engines/adg[0]">
+        <switch name="/systems/engines/adg[0]/drive-src">
             <default value="0"/>
-            <test logic="OR" value="1">
+            <test logic="AND" value="1">
                 /engines/engine[0]/running eq 1
             </test>
         </switch>
-        <switch name="/systems/engines/adg[1]">
+        <fcs_function name="/systems/engines/adg[0]/drive-rpm">
+			<function>
+				<switch>
+                    <property>/systems/engines/adg[0]/drive-src</property>
+                    <v>0</v>
+                    <property>/engines/engine[0]/n2</property>
+                </switch>
+            </function>
+        </fcs_function>
+        <switch name="/systems/engines/adg[1]/drive-src">
             <default value="0"/>
-            <test logic="OR" value="1">
-                <test logic="AND" value="1">
-                    <!-- TODO: Use actuator for coupling -->
-                    /engines/engine[4]/n1 ge 95
-                    /controls/apu/apu[0]/couple eq 1
-                </test>
+            <test logic="AND" value="1">
                 /engines/engine[1]/running eq 1
             </test>
+            <test logic="AND" value="2">
+                <!-- TODO: Use actuator for coupling -->
+                /engines/engine[4]/n1 ge 95
+                /controls/apu/apu[0]/couple eq 1
+            </test>
         </switch>
-        <switch name="/systems/engines/adg[2]">
+        <fcs_function name="/systems/engines/adg[1]/drive-rpm">
+			<function>
+				<switch>
+                    <property>/systems/engines/adg[1]/drive-src</property>
+                    <v>0</v>
+                    <property>/engines/engine[1]/n2</property>
+                    <product>
+                        <!-- APU is equivalent to engine idle (n2 60%). 99.9*0.6 -->
+                        <property>/engines/engine[4]/n2</property>
+                        <v>0.6</v>
+                    </product>
+                </switch>
+            </function>
+        </fcs_function>
+        <switch name="/systems/engines/adg[2]/drive-src">
             <default value="0"/>
-            <test logic="OR" value="1">
+            <test logic="AND" value="1">
                 /engines/engine[2]/running eq 1
             </test>
         </switch>
-        <switch name="/systems/engines/adg[3]">
+        <fcs_function name="/systems/engines/adg[2]/drive-rpm">
+			<function>
+				<switch>
+                    <property>/systems/engines/adg[2]/drive-src</property>
+                    <v>0</v>
+                    <property>/engines/engine[2]/n2</property>
+                </switch>
+            </function>
+        </fcs_function>
+        <switch name="/systems/engines/adg[3]/drive-src">
             <default value="0"/>
-            <test logic="OR" value="1">
-                <test logic="AND" value="1">
-                    /engines/engine[5]/n1 ge 95
-                    /controls/apu/apu[1]/couple eq 1
-                </test>
+            <test logic="AND" value="1">
                 /engines/engine[3]/running eq 1
             </test>
+            <test logic="AND" value="2">
+                <!-- TODO: Use actuator for coupling -->
+                /engines/engine[5]/n1 ge 95
+                /controls/apu/apu[1]/couple eq 1
+            </test>
         </switch>
+        <fcs_function name="/systems/engines/adg[3]/drive-rpm">
+			<function>
+				<switch>
+                    <property>/systems/engines/adg[3]/drive-src</property>
+                    <v>0</v>
+                    <property>/engines/engine[3]/n2</property>
+                    <product>
+                        <!-- APU is equivalent to engine idle (n2 60%). 99.9*0.6 -->
+                        <property>/engines/engine[5]/n2</property>
+                        <v>0.6</v>
+                    </product>
+                </switch>
+            </function>
+        </fcs_function>
     </channel>
     <channel name="engines" execrate="8">
         <switch name="/systems/engines/engine[0]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                /systems/engines/adg[0] eq 1
+                <!-- TODO: Refine adg drive rpm engine start requirements -->
+                /systems/engines/adg[0]/drive-rpm ge 55
                 /systems/pneumatics/psi/engine[0]/psi ge 20
             </test>
         </switch>
         <switch name="/systems/engines/engine[1]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                /systems/engines/adg[1] eq 1
+                /systems/engines/adg[1]/drive-rpm ge 55
                 /systems/pneumatics/psi/engine[1]/psi ge 20
             </test>
         </switch>
         <switch name="/systems/engines/engine[2]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                /systems/engines/adg[2] eq 1
+                /systems/engines/adg[2]/drive-rpm ge 55
                 /systems/pneumatics/psi/engine[2]/psi ge 20
             </test>
         </switch>
         <switch name="/systems/engines/engine[3]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                /systems/engines/adg[3] eq 1
+                /systems/engines/adg[3]/drive-rpm ge 55
                 /systems/pneumatics/psi/engine[3]/psi ge 20
             </test>
         </switch>
@@ -70,14 +119,14 @@
             <default value="0"/>
             <test logic="OR" value="1">
                 <!-- TODO: Electrical system -->
-                /controls/electric/battery-switch eq 1
+                /controls/electrical/switches/battery eq 1
                 /controls/electric/external-power eq 1
             </test>
         </switch>
         <switch name="/systems/engines/engine[5]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                /controls/electric/battery-switch eq 1
+                /controls/electrical/switches/battery eq 1
                 /controls/electric/external-power eq 1
             </test>
         </switch>

@@ -181,7 +181,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>BATT</object-name>
-	 <property>controls/electric/battery-switch</property>
+	 <property>controls/electrical/switches/battery</property>
 	 <interpolation>
 		 <entry>
 			 <ind> 0.0</ind>
@@ -213,7 +213,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/electric/battery-switch</property>
+			 <property>controls/electrical/switches/battery</property>
 		 </binding>
 	 </action>
 </animation>
