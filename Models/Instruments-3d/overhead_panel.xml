@@ -285,6 +285,15 @@ maggse
 			 <max>1</max>
 		 </binding>
 	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[4]/cutoff-switch</property>
+			<step>0</step>
+			<min>-1</min>
+			<max>0</max>
+		</binding>
+	</release>
 </animation>
 
 <animation>
@@ -312,6 +321,15 @@ maggse
 			 <max>1</max>
 		 </binding>
 	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[5]/cutoff-switch</property>
+			<step>0</step>
+			<min>-1</min>
+			<max>0</max>
+		</binding>
+	</release>
 </animation>
 
 

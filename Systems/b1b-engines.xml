@@ -252,11 +252,17 @@
         <switch name="/systems/engines/engine[4]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
-                <test logic="OR" value="1">
+                <test logic="OR">
                     /engines/engine[4]/n1 lt 99.9
                     /engines/engine[4]/n2 lt 99.9
                 </test>
-                /controls/engines/engine[4]/cutoff-switch eq 1
+                <test logic="OR">
+                    <test logic="AND">
+                        /systems/engines/engine[4]/starter eq 1
+                        /controls/engines/engine[4]/cutoff-switch eq 0
+                    </test>
+                    /controls/engines/engine[4]/cutoff-switch eq 1
+                </test>
                 /systems/engines/engine[4]/can-start eq 1
             </test>
         </switch>
@@ -292,11 +298,17 @@
         <switch name="/systems/engines/engine[5]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
-                <test logic="OR" value="1">
+                <test logic="OR">
                     /engines/engine[5]/n1 lt 99.9
                     /engines/engine[5]/n2 lt 99.9
                 </test>
-                /controls/engines/engine[5]/cutoff-switch eq 1
+                <test logic="OR">
+                    <test logic="AND">
+                        /systems/engines/engine[5]/starter eq 1
+                        /controls/engines/engine[5]/cutoff-switch eq 0
+                    </test>
+                    /controls/engines/engine[5]/cutoff-switch eq 1
+                </test>
                 /systems/engines/engine[5]/can-start eq 1
             </test>
         </switch>
