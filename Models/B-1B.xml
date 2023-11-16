@@ -52,8 +52,31 @@ more to come :-)
 				props.globals.getNode(listener_prop).setValue(1);
 			}
 
+			var looping = 1;
+			var loop = func {
+				var red = getprop("rendering/scene/diffuse/red");
+
+				# non-tied property for effect:
+				setprop("rendering/scene/diffuse/red-unbound", red);
+
+				# afterburner density:
+				setprop("sim/multiplay/b1b/ab-density",  1-red*0.90);
+
+				# color of afterburner:
+				# *0.5 is to prevent it from getting too white during night
+				setprop("/sim/multiplay/b1b/ab-r",  0.75+(0.25-red*0.25)*0.5);#red
+				setprop("/sim/multiplay/b1b/ab-g",  0.25+(0.75-red*0.75)*0.5);#green
+				setprop("/sim/multiplay/b1b/ab-b",  0.2+(0.4-red*0.4)*0.5);   #blue
+
+				if (looping) settimer(loop, 0.10);
+			}
+			loop();
+
 		]]>
 	  </load>
+	  <unload><![CDATA[
+		looping = 0;
+	  ]]></unload>
 	</nasal>
 
   <offsets>

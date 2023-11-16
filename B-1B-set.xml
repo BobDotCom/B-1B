@@ -323,6 +323,10 @@ B-1B set file.
 
         <multiplay>
             <generic>
+                <bool n="0" type="bool" alias="/engines/engine[0]/augmentation"/>
+                <bool n="1" type="bool" alias="/engines/engine[1]/augmentation"/>
+                <bool n="2" type="bool" alias="/engines/engine[2]/augmentation"/>
+                <bool n="3" type="bool" alias="/engines/engine[3]/augmentation"/>
                 <!--<float n="0">0</float> free  -->
                 <!--<float n="1">0</float> free  -->
                 <float n="2">0</float><!-- fwd baydoor   -->
@@ -333,9 +337,19 @@ B-1B set file.
                 <!--<float n="7">0</float> free   -->
                 <!--<float n="8">0</float> free   -->
                 <!--<float n="9">0</float> free   -->
-                <!--<float n="10">0</float> free   -->
-                <!--<float n="11">0</float> free   -->
-                <!--<float n="12">0</float> free   -->
+                <float n="10" type="double">0</float><!-- afterburner density -->
+                <float n="11" type="double">0</float><!-- afterburner color R-->
+                <float n="12" type="double">0</float><!-- afterburner color G-->
+                <float n="13" type="double">0</float><!-- afterburner color B-->
+                <float n="14" type="double">0</float><!-- scene red inverted -->
+                <float n="16" type="double">0</float><!-- afterburner engine fire transperancy -->
+                <float n="17" type="double">0</float><!-- afterburner engine fire transperancy -->
+                <float n="18" type="double">0</float><!-- afterburner engine fire transperancy -->
+                <float n="19" type="double">0</float><!-- afterburner engine fire transparency -->
+                <float n="20" type="double">0</float><!-- turbine emission color from afterburner 1 -->
+                <float n="21" type="double">0</float><!-- turbine emission color from afterburner 2 -->
+                <float n="22" type="double">0</float><!-- turbine emission color from afterburner 3 -->
+                <float n="23" type="double">0</float><!-- turbine emission color from afterburner 4 -->
                 <int n="0" type="int">0</int><!-- anti collision lights  -->
                 <int n="1" type="int">0</int>     <!-- b-1b model nasal script loaded -->
                 <!--<int n="2" type="int">0</int>     free -->
@@ -1166,6 +1180,12 @@ B-1B set file.
         <airbases>
             <file>Aircraft/B-1B/Nasal/airbases.nas</file>
         </airbases>
+        <engines>
+            <file>Aircraft/B-1B/Nasal/engines.nas</file>
+        </engines>
+        <controls>
+            <file>Aircraft/B-1B/Nasal/controls.nas</file>
+        </controls>
     </nasal>
 
 </PropertyList>

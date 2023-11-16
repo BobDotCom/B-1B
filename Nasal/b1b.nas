@@ -926,3 +926,41 @@ var startDLListener = func {
     };
     emesary.GlobalTransmitter.Register(DLRecipient);
 }
+
+var sendABtoMP = func {
+    # Some of this is duplicated in F16.xml for effects over MP.
+
+    var red = getprop("rendering/scene/diffuse/red");
+
+    # non-tied property for effect:
+    setprop("rendering/scene/diffuse/red-unbound", red);
+
+    # afterburner density:
+    setprop("sim/multiplay/b1b/ab-density",  1-red*0.90);
+
+    # turbine emission:
+    setprop("sim/multiplay/generic/float[20]",  getprop("sim/multiplay/generic/bool[0]") ? (1.0-red)*(getprop("fdm/jsbsim/fcs/throttle-pos-norm")-1.0) : 0.0);
+    setprop("sim/multiplay/generic/float[21]",  getprop("sim/multiplay/generic/bool[1]") ? (1.0-red)*(getprop("fdm/jsbsim/fcs/throttle-pos-norm[1]")-1.0) : 0.0);
+    setprop("sim/multiplay/generic/float[22]",  getprop("sim/multiplay/generic/bool[2]") ? (1.0-red)*(getprop("fdm/jsbsim/fcs/throttle-pos-norm[2]")-1.0) : 0.0);
+    setprop("sim/multiplay/generic/float[23]",  getprop("sim/multiplay/generic/bool[3]") ? (1.0-red)*(getprop("fdm/jsbsim/fcs/throttle-pos-norm[3]")-1.0) : 0.0);
+
+    # color of afterburner:
+    # *0.5 is to prevent it from getting too white during night
+    setprop("sim/multiplay/b1b/ab-r",  0.75+(0.25-red*0.25)*0.5);#red
+    setprop("sim/multiplay/b1b/ab-g",  0.25+(0.75-red*0.75)*0.5);#green
+    setprop("sim/multiplay/b1b/ab-b",  0.2+(0.4-red*0.4)*0.5);   #blue
+
+    # scene red inverted:
+    setprop("sim/multiplay/generic/float[14]",  (1-red)*0.5);
+}
+var ab_loop = maketimer(0.5, sendABtoMP);
+ab_loop.start();
+
+var sendThrottletoMP = func {
+    setprop("sim/multiplay/generic/float[16]", getprop("controls/engines/engine[0]/throttle"));
+    setprop("sim/multiplay/generic/float[17]", getprop("controls/engines/engine[1]/throttle"));
+    setprop("sim/multiplay/generic/float[18]", getprop("controls/engines/engine[2]/throttle"));
+    setprop("sim/multiplay/generic/float[19]", getprop("controls/engines/engine[3]/throttle"));
+}
+var throttle_loop = maketimer(0.1, sendThrottletoMP);
+throttle_loop.start();
