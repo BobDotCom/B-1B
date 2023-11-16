@@ -85,54 +85,65 @@
             </function>
         </fcs_function>
     </channel>
+    <channel name="ignition" execrate="8">
+
+    </channel>
     <channel name="engines" execrate="8">
         <switch name="/systems/engines/engine[0]/can-start">
             <default value="0"/>
-            <test logic="OR" value="1">
-                <!-- TODO: Refine adg drive rpm engine start requirements -->
+            <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
 					/systems/electrical/bus/ac-ess ge 220
                     /systems/electrical/bus/ac-1 ge 220
 				</test>
-<!--                /systems/engines/adg[0]/drive-rpm ge 55-->
-                /systems/pneumatics/psi/engine[0]/psi ge 20
+                <test logic="OR">
+                    <!-- TODO: Refine adg drive rpm engine start requirements -->
+                    /systems/engines/adg[0]/drive-rpm ge 55
+                    /systems/pneumatics/psi/engine[0]/psi ge 20
+                </test>
             </test>
         </switch>
         <switch name="/systems/engines/engine[1]/can-start">
             <default value="0"/>
-            <test logic="OR" value="1">
-<!--                /systems/engines/adg[1]/drive-rpm ge 55-->
+            <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
 					/systems/electrical/bus/ac-ess ge 220
                     /systems/electrical/bus/ac-1 ge 220
 				</test>
-                /systems/pneumatics/psi/engine[1]/psi ge 20
+                <test logic="OR">
+                    /systems/engines/adg[1]/drive-rpm ge 55
+                    /systems/pneumatics/psi/engine[1]/psi ge 20
+                </test>
             </test>
         </switch>
         <switch name="/systems/engines/engine[2]/can-start">
             <default value="0"/>
-            <test logic="OR" value="1">
-<!--                /systems/engines/adg[2]/drive-rpm ge 55-->
+            <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
 					/systems/electrical/bus/ac-ess ge 220
                     /systems/electrical/bus/ac-1 ge 220
 				</test>
-                /systems/pneumatics/psi/engine[2]/psi ge 20
+                <test logic="OR">
+                    /systems/engines/adg[2]/drive-rpm ge 55
+                    /systems/pneumatics/psi/engine[2]/psi ge 20
+                </test>
             </test>
         </switch>
         <switch name="/systems/engines/engine[3]/can-start">
             <default value="0"/>
-            <test logic="OR" value="1">
-<!--                /systems/engines/adg[3]/drive-rpm ge 55-->
+            <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
 					/systems/electrical/bus/ac-ess ge 220
                     /systems/electrical/bus/ac-1 ge 220
 				</test>
-                /systems/pneumatics/psi/engine[3]/psi ge 20
+                <test logic="OR">
+                    /systems/engines/adg[3]/drive-rpm ge 55
+                    /systems/pneumatics/psi/engine[3]/psi ge 20
+                </test>
             </test>
         </switch>
         <switch name="/systems/engines/engine[4]/can-start">
