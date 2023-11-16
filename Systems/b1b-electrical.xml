@@ -30,8 +30,8 @@
 	<property value="0">/systems/failures/electrical/ac-2-bus</property>
 	<property value="0">/systems/failures/electrical/dc-bat-bus</property>
 	<property value="0">/systems/failures/electrical/dc-ess-bus</property>
-	<property value="0">/systems/failures/electrical/dc-1-bus</property>
-	<property value="0">/systems/failures/electrical/dc-2-bus</property>
+	<property value="0">/systems/failures/electrical/dc-fwd-bus</property>
+	<property value="0">/systems/failures/electrical/dc-aft-bus</property>
 
 	<property value="0">/controls/engines/engine[0]/fire-btn</property>
 	<property value="0">/controls/engines/engine[1]/fire-btn</property>
@@ -1566,7 +1566,7 @@
 
 		<switch name="/systems/electrical/relay/dc-svc-bus-contactor-bus-2/output">
 			<default value="0"/>
-			<test value="/systems/electrical/bus/dc-2">
+			<test value="/systems/electrical/bus/dc-aft">
 				/systems/electrical/relay/dc-svc-bus-contactor-bus-2/contact-pos eq 1
 			</test>
 		</switch>
@@ -1758,11 +1758,11 @@
 	<channel name="DC Tie Relays" execrate="8">
 
 		<!-- DC Bus Tie Relays -->
-		<switch name="/systems/electrical/relay/dc-bat-tie-dc-1/contact-pos"> <!-- 1PC1 -->
+		<switch name="/systems/electrical/relay/dc-bat-tie-dc-fwd/contact-pos"> <!-- 1PC1 -->
 			<default value="0"/>
 			<test logic="AND" value="1"> <!-- TR1 normal -->
 				/systems/electrical/bus/ac-1 ge 220
-				/systems/electrical/bus/dc-1 ge 25
+				/systems/electrical/bus/dc-fwd ge 25
 				/systems/electrical/relay/tr-contactor-1/fault eq 0
 			</test>
 			<test logic="AND" value="1"> <!-- TR1 or TR2 loss -->
@@ -1774,22 +1774,22 @@
 				<test logic="OR">
 					<test logic="AND">
 						/systems/electrical/relay/tr-contactor-1/fault eq 1
-						/systems/electrical/bus/dc-2 ge 25
+						/systems/electrical/bus/dc-aft ge 25
 					</test>
 					<test logic="AND">
 						/systems/electrical/relay/tr-contactor-2/fault eq 1
-						/systems/electrical/bus/dc-1 ge 25
+						/systems/electrical/bus/dc-fwd ge 25
 					</test>
 				</test>
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/relay/dc-bat-tie-dc-2/contact-pos"> <!-- 1PC2 -->
+		<switch name="/systems/electrical/relay/dc-bat-tie-dc-aft/contact-pos"> <!-- 1PC2 -->
 			<default value="0"/>
 			<test logic="AND" value="1"> <!-- TR2 normal -->
 				/systems/electrical/relay/dc-bat-tie-dc-ess/contact-pos eq 0
-				/systems/electrical/relay/dc-bat-tie-dc-1/contact-pos eq 0
-				/systems/electrical/bus/dc-2 ge 25
+				/systems/electrical/relay/dc-bat-tie-dc-fwd/contact-pos eq 0
+				/systems/electrical/bus/dc-aft ge 25
 				/systems/electrical/relay/tr-contactor-2/fault eq 0
 			</test>
 			<test logic="AND" value="1"> <!-- TR1 or TR2 loss -->
@@ -1801,11 +1801,11 @@
 				<test logic="OR">
 					<test logic="AND">
 						/systems/electrical/relay/tr-contactor-1/fault eq 1
-						/systems/electrical/bus/dc-2 ge 25
+						/systems/electrical/bus/dc-aft ge 25
 					</test>
 					<test logic="AND">
 						/systems/electrical/relay/tr-contactor-2/fault eq 1
-						/systems/electrical/bus/dc-1 ge 25
+						/systems/electrical/bus/dc-fwd ge 25
 					</test>
 				</test>
 			</test>
@@ -1814,28 +1814,28 @@
 		<switch name="/systems/electrical/relay/dc-bat-tie-dc-ess/contact-pos"> <!-- 4PC -->
 			<default value="0"/>
 			<test logic="AND" value="1">
-				/systems/electrical/relay/dc-bat-tie-dc-1/contact-pos eq 1
-				/systems/electrical/relay/dc-bat-tie-dc-2/contact-pos eq 0
+				/systems/electrical/relay/dc-bat-tie-dc-fwd/contact-pos eq 1
+				/systems/electrical/relay/dc-bat-tie-dc-aft/contact-pos eq 0
 				/systems/electrical/relay/tr-contactor-1/output ge 25
 				/systems/electrical/relay/ess-tr-contactor/output lt 25
-				/systems/electrical/bus/dc-1 ge 25
+				/systems/electrical/bus/dc-fwd ge 25
 			</test>
 		</switch>
 
 		<!-- These outputs are the return feeds for the buses from DC BAT -->
-		<switch name="/systems/electrical/relay/dc-bat-tie-dc-1/output-bat">
+		<switch name="/systems/electrical/relay/dc-bat-tie-dc-fwd/output-bat">
 			<default value="0"/>
 			<test value="/systems/electrical/bus/dc-bat">
-				/systems/electrical/relay/dc-bat-tie-dc-1/contact-pos eq 1
-                /systems/electrical/bus/dc-1-src eq 2
+				/systems/electrical/relay/dc-bat-tie-dc-fwd/contact-pos eq 1
+                /systems/electrical/bus/dc-fwd-src eq 2
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/relay/dc-bat-tie-dc-2/output-bat">
+		<switch name="/systems/electrical/relay/dc-bat-tie-dc-aft/output-bat">
 			<default value="0"/>
 			<test value="/systems/electrical/bus/dc-bat">
-				/systems/electrical/relay/dc-bat-tie-dc-2/contact-pos eq 1
-                /systems/electrical/bus/dc-2-src eq 2
+				/systems/electrical/relay/dc-bat-tie-dc-aft/contact-pos eq 1
+                /systems/electrical/bus/dc-aft-src eq 2
 			</test>
 		</switch>
 
@@ -1848,19 +1848,19 @@
 		</switch>
 
 		<!-- These outputs are the feeds for DC BAT -->
-		<switch name="/systems/electrical/relay/dc-bat-tie-dc-1/output-tie">
+		<switch name="/systems/electrical/relay/dc-bat-tie-dc-fwd/output-tie">
 			<default value="0"/>
-			<test value="/systems/electrical/bus/dc-1">
-				/systems/electrical/relay/dc-bat-tie-dc-1/contact-pos eq 1
-                /systems/electrical/bus/dc-1-src ne 2
+			<test value="/systems/electrical/bus/dc-fwd">
+				/systems/electrical/relay/dc-bat-tie-dc-fwd/contact-pos eq 1
+                /systems/electrical/bus/dc-fwd-src ne 2
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/relay/dc-bat-tie-dc-2/output-tie">
+		<switch name="/systems/electrical/relay/dc-bat-tie-dc-aft/output-tie">
 			<default value="0"/>
-			<test value="/systems/electrical/bus/dc-2">
-				/systems/electrical/relay/dc-bat-tie-dc-2/contact-pos eq 1
-                /systems/electrical/bus/dc-2-src ne 2
+			<test value="/systems/electrical/bus/dc-aft">
+				/systems/electrical/relay/dc-bat-tie-dc-aft/contact-pos eq 1
+                /systems/electrical/bus/dc-aft-src ne 2
 			</test>
 		</switch>
 
@@ -1979,20 +1979,20 @@
 		</fcs_function>
 
 		<!-- 26V AC Buses -->
-		<pure_gain name="/systems/electrical/bus/ac-1-26v"> <!-- TODO: via 5XN1 CB on 123VU, supplies ADIRS -->
-			<input>/systems/electrical/bus/ac-1</input>
-			<gain>0.2260869565</gain>
-		</pure_gain>
+<!--		<pure_gain name="/systems/electrical/bus/ac-1-26v"> &lt;!&ndash; TODO: via 5XN1 CB on 123VU, supplies ADIRS &ndash;&gt;-->
+<!--			<input>/systems/electrical/bus/ac-1</input>-->
+<!--			<gain>0.2260869565</gain>-->
+<!--		</pure_gain>-->
 
-		<pure_gain name="/systems/electrical/bus/ac-2-26v"> <!-- TODO: via 5XN2 CB on 123VU, supplies ADIRS -->
-			<input>/systems/electrical/bus/ac-2</input>
-			<gain>0.2260869565</gain>
-		</pure_gain>
+<!--		<pure_gain name="/systems/electrical/bus/ac-2-26v"> &lt;!&ndash; TODO: via 5XN2 CB on 123VU, supplies ADIRS &ndash;&gt;-->
+<!--			<input>/systems/electrical/bus/ac-2</input>-->
+<!--			<gain>0.2260869565</gain>-->
+<!--		</pure_gain>-->
 
-		<pure_gain name="/systems/electrical/bus/ac-ess-26v"> <!-- TODO: via 4XH CB on 106VU -->
-			<input>/systems/electrical/bus/ac-ess</input>
-			<gain>0.2260869565</gain>
-		</pure_gain>
+<!--		<pure_gain name="/systems/electrical/bus/ac-ess-26v"> &lt;!&ndash; TODO: via 4XH CB on 106VU &ndash;&gt;-->
+<!--			<input>/systems/electrical/bus/ac-ess</input>-->
+<!--			<gain>0.2260869565</gain>-->
+<!--		</pure_gain>-->
 
 		<!-- Static Inverter Bus -->
 		<pure_gain name="/systems/electrical/bus/ac-si-bus"> <!-- feeds landing gear indication, apu fuel pump, some annunciators, a injectors if RAT is out, only if stat inv is on -->
@@ -2013,12 +2013,12 @@
 			<description>Tell which source is being used for priority purpose</description>
 			<default value="0"/> <!-- OFF -->
 			<test value="1"> <!-- DC1 -->
-                /systems/electrical/relay/dc-bat-tie-dc-1/contact-pos eq 1
-                /systems/electrical/bus/dc-1-src ne 2
+                /systems/electrical/relay/dc-bat-tie-dc-fwd/contact-pos eq 1
+                /systems/electrical/bus/dc-fwd-src ne 2
 			</test>
 			<test value="2"> <!-- DC2 -->
-                /systems/electrical/relay/dc-bat-tie-dc-2/contact-pos eq 1
-                /systems/electrical/bus/dc-2-src ne 2
+                /systems/electrical/relay/dc-bat-tie-dc-aft/contact-pos eq 1
+                /systems/electrical/bus/dc-aft-src ne 2
 			</test>
 			<test value="3"> <!-- ESS -->
                 /systems/electrical/relay/dc-bat-tie-dc-ess/contact-pos eq 1
@@ -2035,10 +2035,10 @@
             <test logic="AND" value="0">
                 /systems/failures/electrical/dc-bat-bus eq 1
             </test>
-            <test logic="AND" value="/systems/electrical/relay/dc-bat-tie-dc-1/output-tie">
+            <test logic="AND" value="/systems/electrical/relay/dc-bat-tie-dc-fwd/output-tie">
                 /systems/electrical/bus/dc-bat-src eq 1
             </test>
-            <test logic="AND" value="/systems/electrical/relay/dc-bat-tie-dc-2/output-tie">
+            <test logic="AND" value="/systems/electrical/relay/dc-bat-tie-dc-aft/output-tie">
                 /systems/electrical/bus/dc-bat-src eq 2
             </test>
             <test logic="AND" value="/systems/electrical/relay/dc-bat-tie-dc-ess/output-tie">
@@ -2089,56 +2089,56 @@
 		</pure_gain>
 
 		<!-- DC Bus 1 -->
-		<switch name="/systems/electrical/bus/dc-1-src">
+		<switch name="/systems/electrical/bus/dc-fwd-src">
 			<description>Tell which source is being used for priority purpose</description>
 			<default value="0"/> <!-- OFF -->
 			<test value="1"> <!-- TR1 -->
 				/systems/electrical/relay/tr-contactor-1/output ge 25
 			</test>
 			<test value="2"> <!-- DC BAT -->
-				/systems/electrical/relay/dc-bat-tie-dc-1/contact-pos eq 1
+				/systems/electrical/relay/dc-bat-tie-dc-fwd/contact-pos eq 1
 			</test>
 		</switch>
 
-		<fcs_function name="/systems/electrical/bus/dc-1">
+		<fcs_function name="/systems/electrical/bus/dc-fwd">
 			<function>
 				<ifthen>
 					<eq>
-						<property>/systems/failures/electrical/dc-1-bus</property>
+						<property>/systems/failures/electrical/dc-fwd-bus</property>
 						<value>1</value>
 					</eq>
 					<value>0</value>
 					<max>
 						<property>/systems/electrical/relay/tr-contactor-1/output</property>
-						<property>/systems/electrical/relay/dc-bat-tie-dc-1/output-bat</property>
+						<property>/systems/electrical/relay/dc-bat-tie-dc-fwd/output-bat</property>
 					</max>
 				</ifthen>
 			</function>
 		</fcs_function>
 
 		<!-- DC Bus 2 -->
-		<switch name="/systems/electrical/bus/dc-2-src">
+		<switch name="/systems/electrical/bus/dc-aft-src">
 			<description>Tell which source is being used for priority purpose</description>
 			<default value="0"/> <!-- OFF -->
 			<test value="1"> <!-- TR1 -->
 				/systems/electrical/relay/tr-contactor-2/output ge 25
 			</test>
 			<test value="2"> <!-- DC BAT -->
-				/systems/electrical/relay/dc-bat-tie-dc-2/contact-pos eq 1
+				/systems/electrical/relay/dc-bat-tie-dc-aft/contact-pos eq 1
 			</test>
 		</switch>
 
-		<fcs_function name="/systems/electrical/bus/dc-2">
+		<fcs_function name="/systems/electrical/bus/dc-aft">
 			<function>
 				<ifthen>
 					<eq>
-						<property>/systems/failures/electrical/dc-2-bus</property>
+						<property>/systems/failures/electrical/dc-aft-bus</property>
 						<value>1</value>
 					</eq>
 					<value>0</value>
 					<max>
 						<property>/systems/electrical/relay/tr-contactor-2/output</property>
-						<property>/systems/electrical/relay/dc-bat-tie-dc-2/output-bat</property>
+						<property>/systems/electrical/relay/dc-bat-tie-dc-aft/output-bat</property>
 					</max>
 				</ifthen>
 			</function>
@@ -2168,30 +2168,30 @@
 
 		<!-- Mirror sub-buses (todo CB logic) -->
 
-		<pure_gain name="/systems/electrical/bus/sub-bus/dc-hot-1-703"> <!-- Sub-bus with no CB protection -->
-			<input>/systems/electrical/sources/bat-1/volt</input>
-			<gain>1.0</gain>
-		</pure_gain>
+<!--		<pure_gain name="/systems/electrical/bus/sub-bus/dc-hot-1-703"> &lt;!&ndash; Sub-bus with no CB protection &ndash;&gt;-->
+<!--			<input>/systems/electrical/sources/bat-1/volt</input>-->
+<!--			<gain>1.0</gain>-->
+<!--		</pure_gain>-->
 
-		<pure_gain name="/systems/electrical/bus/sub-bus/dc-hot-2-704"> <!-- Sub-bus with no CB protection -->
-			<input>/systems/electrical/sources/bat-2/volt</input>
-			<gain>1.0</gain>
-		</pure_gain>
+<!--		<pure_gain name="/systems/electrical/bus/sub-bus/dc-hot-2-704"> &lt;!&ndash; Sub-bus with no CB protection &ndash;&gt;-->
+<!--			<input>/systems/electrical/sources/bat-2/volt</input>-->
+<!--			<gain>1.0</gain>-->
+<!--		</pure_gain>-->
 
-		<pure_gain name="/systems/electrical/bus/sub-bus/dc-2-202">
-			<input>/systems/electrical/bus/dc-2</input> <!-- todo CB 1PN2 -->
-			<gain>1.0</gain>
-		</pure_gain>
+<!--		<pure_gain name="/systems/electrical/bus/sub-bus/dc-aft-202">-->
+<!--			<input>/systems/electrical/bus/dc-aft</input> &lt;!&ndash; todo CB 1PN2 &ndash;&gt;-->
+<!--			<gain>1.0</gain>-->
+<!--		</pure_gain>-->
 
-		<pure_gain name="/systems/electrical/bus/sub-bus/dc-2-204">
-			<input>/systems/electrical/bus/dc-2</input> <!-- todo CB 3PN2 -->
-			<gain>1.0</gain>
-		</pure_gain>
+<!--		<pure_gain name="/systems/electrical/bus/sub-bus/dc-aft-204">-->
+<!--			<input>/systems/electrical/bus/dc-aft</input> &lt;!&ndash; todo CB 3PN2 &ndash;&gt;-->
+<!--			<gain>1.0</gain>-->
+<!--		</pure_gain>-->
 
-		<pure_gain name="/systems/electrical/bus/sub-bus/dc-2-206-208">
-			<input>/systems/electrical/bus/dc-2</input> <!-- todo CB 6PN -->
-			<gain>1.0</gain>
-		</pure_gain>
+<!--		<pure_gain name="/systems/electrical/bus/sub-bus/dc-aft-206-208">-->
+<!--			<input>/systems/electrical/bus/dc-aft</input> &lt;!&ndash; todo CB 6PN &ndash;&gt;-->
+<!--			<gain>1.0</gain>-->
+<!--		</pure_gain>-->
 
 	</channel>
 
@@ -2288,11 +2288,11 @@
 		<switch name="/systems/electrical/generic-pwr">
 			<description>This makes the FG stuff work because we killed the generic electrical</description>
 			<default value="0"/>
-			<test value="/systems/electrical/bus/dc-1">
-				/systems/electrical/bus/dc-1 ge 25
+			<test value="/systems/electrical/bus/dc-fwd">
+				/systems/electrical/bus/dc-fwd ge 25
 			</test>
-			<test value="/systems/electrical/bus/dc-2">
-				/systems/electrical/bus/dc-2 ge 25
+			<test value="/systems/electrical/bus/dc-aft">
+				/systems/electrical/bus/dc-aft ge 25
 			</test>
 			<output>/systems/electrical/outputs/efis</output>
 			<output>/systems/electrical/outputs/fcp-power</output>
@@ -2326,14 +2326,14 @@
 		<switch name="/instrumentation/comm[1]/power-btn">
 			<default value="0"/>
 			<test logic="AND" value="1">
-				/systems/electrical/bus/dc-2 ge 25
+				/systems/electrical/bus/dc-aft ge 25
 			</test>
 		</switch>
 
 		<switch name="/instrumentation/comm[2]/power-btn">
 			<default value="0"/>
 			<test logic="AND" value="1">
-				/systems/electrical/bus/dc-1 ge 25
+				/systems/electrical/bus/dc-fwd ge 25
 			</test>
 		</switch>
 

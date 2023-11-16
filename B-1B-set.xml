@@ -660,8 +660,8 @@ B-1B set file.
             <electrical n="0">
         <bus>
             <ac-ess type="double">0</ac-ess>
-            <dc-1 type="double">0</dc-1>
-            <dc-2 type="double">0</dc-2>
+            <dc-fwd type="double">0</dc-fwd>
+            <dc-aft type="double">0</dc-aft>
         </bus>
         <relay>
             <ess-tr-contactor>
