@@ -995,6 +995,7 @@
 <!--				/systems/acconfig/autoconfig-running ne 1-->
 				/systems/electrical/sources/idg-2/gcu-2-voltage-trip eq 1
 				/controls/electrical/switches/gen-2 eq 1
+				/systems/engines/adg[1]/drive-src ne 0
 			</test>
 			<test logic="AND" value="1">
 				/systems/electrical/relay/gen-2-glc/contact-pos eq 1
@@ -1011,6 +1012,7 @@
 <!--				/systems/acconfig/autoconfig-running ne 1-->
 				/systems/electrical/sources/idg-2/gcu-2-frequency-trip eq 1
 				/controls/electrical/switches/gen-2 eq 1
+				/systems/engines/adg[1]/drive-src ne 0
 			</test>
 			<test logic="AND" value="1">
 				/systems/electrical/relay/gen-2-glc/contact-pos eq 1
@@ -1071,6 +1073,7 @@
 <!--				/systems/acconfig/autoconfig-running ne 1-->
 				/systems/electrical/sources/idg-4/gcu-4-voltage-trip eq 1
 				/controls/electrical/switches/gen-4 eq 1
+				/systems/engines/adg[3]/drive-src ne 0
 			</test>
 			<test logic="AND" value="1">
 				/systems/electrical/relay/gen-4-glc/contact-pos eq 1
@@ -1087,6 +1090,7 @@
 <!--				/systems/acconfig/autoconfig-running ne 1-->
 				/systems/electrical/sources/idg-4/gcu-4-frequency-trip eq 1
 				/controls/electrical/switches/gen-4 eq 1
+				/systems/engines/adg[3]/drive-src ne 0
 			</test>
 			<test logic="AND" value="1">
 				/systems/electrical/relay/gen-4-glc/contact-pos eq 1
