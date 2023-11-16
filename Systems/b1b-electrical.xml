@@ -795,11 +795,11 @@
 				/systems/electrical/sources/si-1/inverter-control/relay-7xb eq 0
 				/systems/electrical/sources/bat-1/bcl-supply eq 1
 				/systems/electrical/sources/bat-2/bcl-supply eq 1
-				/systems/electrical/bus/dc-hot-2 ge 23
+				/systems/electrical/bus/dc-hot-aft ge 23
 			</test>
 			<test logic="AND" value="1">
 				/systems/electrical/sources/si-1/inverter-control/relay-7xb eq 1
-				/systems/electrical/bus/dc-hot-2 ge 23
+				/systems/electrical/bus/dc-hot-aft ge 23
 			</test>
 		</switch>
 
@@ -884,7 +884,7 @@
 		<switch name="/systems/electrical/some-electric-thingie/rat-deploy">
 			<default value="/systems/electrical/some-electric-thingie/rat-deploy"/>
 <!--			<test logic="AND" value="1">-->
-<!--				/systems/electrical/bus/dc-hot-1 ge 25-->
+<!--				/systems/electrical/bus/dc-hot-fwd ge 25-->
 <!--				/systems/electrical/some-electric-thingie/speed-abv-100-output eq 1-->
 <!--				/controls/electrical/switches/emer-gen-test eq 0-->
 <!--				/sim/time/elapsed-sec gt 30-->
@@ -2156,24 +2156,24 @@
 		</fcs_function>
 
 		<!-- Hot Buses -->
-		<pure_gain name="/systems/electrical/bus/dc-hot-1">
+		<pure_gain name="/systems/electrical/bus/dc-hot-fwd">
 			<input>/systems/electrical/sources/bat-1/volt</input> <!-- todo CB 12PB1 / 5PB1 -->
 			<gain>1.0</gain>
 		</pure_gain>
 
-		<pure_gain name="/systems/electrical/bus/dc-hot-2">
+		<pure_gain name="/systems/electrical/bus/dc-hot-aft">
 			<input>/systems/electrical/sources/bat-2/volt</input> <!-- todo CB 12PB2 / 5PB2 -->
 			<gain>1.0</gain>
 		</pure_gain>
 
 		<!-- Mirror sub-buses (todo CB logic) -->
 
-<!--		<pure_gain name="/systems/electrical/bus/sub-bus/dc-hot-1-703"> &lt;!&ndash; Sub-bus with no CB protection &ndash;&gt;-->
+<!--		<pure_gain name="/systems/electrical/bus/sub-bus/dc-hot-fwd-703"> &lt;!&ndash; Sub-bus with no CB protection &ndash;&gt;-->
 <!--			<input>/systems/electrical/sources/bat-1/volt</input>-->
 <!--			<gain>1.0</gain>-->
 <!--		</pure_gain>-->
 
-<!--		<pure_gain name="/systems/electrical/bus/sub-bus/dc-hot-2-704"> &lt;!&ndash; Sub-bus with no CB protection &ndash;&gt;-->
+<!--		<pure_gain name="/systems/electrical/bus/sub-bus/dc-hot-aft-704"> &lt;!&ndash; Sub-bus with no CB protection &ndash;&gt;-->
 <!--			<input>/systems/electrical/sources/bat-2/volt</input>-->
 <!--			<gain>1.0</gain>-->
 <!--		</pure_gain>-->
