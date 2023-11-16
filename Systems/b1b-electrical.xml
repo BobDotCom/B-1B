@@ -981,7 +981,7 @@
 	<channel name="AC Source Relays" execrate="8">
 
 		<!-- IDG 1 -->
-		<switch name="/systems/electrical/sources/idg-2/gcu-1-powered">
+		<switch name="/systems/electrical/sources/idg-2/gcu-2-powered">
 			<default value="0"/>
 			<test logic="OR" value="1">
 				/systems/electrical/bus/dc-bat ge 25
@@ -989,11 +989,11 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/sources/idg-2/gcu-1-voltage-trip">
+		<switch name="/systems/electrical/sources/idg-2/gcu-2-voltage-trip">
 			<default value="0"/>
 			<test logic="AND" value="1">
 <!--				/systems/acconfig/autoconfig-running ne 1-->
-				/systems/electrical/sources/idg-2/gcu-1-voltage-trip eq 1
+				/systems/electrical/sources/idg-2/gcu-2-voltage-trip eq 1
 				/controls/electrical/switches/gen-2 eq 1
 			</test>
 			<test logic="AND" value="1">
@@ -1005,11 +1005,11 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/sources/idg-2/gcu-1-frequency-trip">
+		<switch name="/systems/electrical/sources/idg-2/gcu-2-frequency-trip">
 			<default value="0"/>
 			<test logic="AND" value="1">
 <!--				/systems/acconfig/autoconfig-running ne 1-->
-				/systems/electrical/sources/idg-2/gcu-1-frequency-trip eq 1
+				/systems/electrical/sources/idg-2/gcu-2-frequency-trip eq 1
 				/controls/electrical/switches/gen-2 eq 1
 			</test>
 			<test logic="AND" value="1">
@@ -1021,15 +1021,15 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/sources/idg-2/gcu-1-fault">
+		<switch name="/systems/electrical/sources/idg-2/gcu-2-fault">
 			<default value="0"/>
 			<test logic="OR" value="0">
 <!--				/systems/acconfig/autoconfig-running eq 1-->
 				/sim/time/elapsed-sec lt 10
 			</test>
 			<test logic="OR" value="1">
-				/systems/electrical/sources/idg-2/gcu-1-voltage-trip eq 1
-				/systems/electrical/sources/idg-2/gcu-1-frequency-trip eq 1
+				/systems/electrical/sources/idg-2/gcu-2-voltage-trip eq 1
+				/systems/electrical/sources/idg-2/gcu-2-frequency-trip eq 1
 				/systems/electrical/sources/idg-2/drive-rpm lt 4730
 			</test>
 		</switch>
@@ -1045,7 +1045,7 @@
 				/systems/electrical/sources/idg-2/output-hertz le 433
 				/systems/electrical/sources/idg-2/output-volt ge 220
 				/systems/electrical/sources/idg-2/output-volt le 241
-				/systems/electrical/sources/idg-2/gcu-1-fault ne 1 <!-- software trip -->
+				/systems/electrical/sources/idg-2/gcu-2-fault ne 1 <!-- software trip -->
 			</test>
 		</switch>
 
@@ -1057,7 +1057,7 @@
 		</switch>
 
 		<!-- IDG 2 -->
-		<switch name="/systems/electrical/sources/idg-4/gcu-2-powered">
+		<switch name="/systems/electrical/sources/idg-4/gcu-4-powered">
 			<default value="0"/>
 			<test logic="OR" value="1">
 				/systems/electrical/bus/dc-bat ge 25
@@ -1065,11 +1065,11 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/sources/idg-4/gcu-2-voltage-trip">
+		<switch name="/systems/electrical/sources/idg-4/gcu-4-voltage-trip">
 			<default value="0"/>
 			<test logic="AND" value="1">
 <!--				/systems/acconfig/autoconfig-running ne 1-->
-				/systems/electrical/sources/idg-4/gcu-2-voltage-trip eq 1
+				/systems/electrical/sources/idg-4/gcu-4-voltage-trip eq 1
 				/controls/electrical/switches/gen-4 eq 1
 			</test>
 			<test logic="AND" value="1">
@@ -1081,11 +1081,11 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/sources/idg-4/gcu-2-frequency-trip">
+		<switch name="/systems/electrical/sources/idg-4/gcu-4-frequency-trip">
 			<default value="0"/>
 			<test logic="AND" value="1">
 <!--				/systems/acconfig/autoconfig-running ne 1-->
-				/systems/electrical/sources/idg-4/gcu-2-frequency-trip eq 1
+				/systems/electrical/sources/idg-4/gcu-4-frequency-trip eq 1
 				/controls/electrical/switches/gen-4 eq 1
 			</test>
 			<test logic="AND" value="1">
@@ -1097,15 +1097,15 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/sources/idg-4/gcu-2-fault">
+		<switch name="/systems/electrical/sources/idg-4/gcu-4-fault">
 			<default value="0"/>
 			<test logic="OR" value="0">
 <!--				/systems/acconfig/autoconfig-running eq 1-->
 				/sim/time/elapsed-sec lt 10
 			</test>
 			<test logic="OR" value="1">
-				/systems/electrical/sources/idg-4/gcu-2-voltage-trip eq 1
-				/systems/electrical/sources/idg-4/gcu-2-frequency-trip eq 1
+				/systems/electrical/sources/idg-4/gcu-4-voltage-trip eq 1
+				/systems/electrical/sources/idg-4/gcu-4-frequency-trip eq 1
 				/systems/electrical/sources/idg-4/drive-rpm lt 4730
 			</test>
 		</switch>
@@ -1121,7 +1121,7 @@
 				/systems/electrical/sources/idg-4/output-hertz le 433
 				/systems/electrical/sources/idg-4/output-volt ge 220
 				/systems/electrical/sources/idg-4/output-volt le 241
-				/systems/electrical/sources/idg-4/gcu-2-fault ne 1 <!-- software trip -->
+				/systems/electrical/sources/idg-4/gcu-4-fault ne 1 <!-- software trip -->
 			</test>
 		</switch>
 
@@ -2406,7 +2406,7 @@
 			<test value="1">
 				/controls/electrical/switches/gen-2 eq 1
 				<test logic="OR">
-					/systems/electrical/sources/idg-2/gcu-1-fault eq 1
+					/systems/electrical/sources/idg-2/gcu-2-fault eq 1
 					/systems/electrical/relay/gen-2-glc/contact-pos eq 0
 				</test>
 			</test>
@@ -2417,7 +2417,7 @@
 			<test value="1">
 				/controls/electrical/switches/gen-4 eq 1
 				<test logic="OR">
-					/systems/electrical/sources/idg-4/gcu-2-fault eq 1
+					/systems/electrical/sources/idg-4/gcu-4-fault eq 1
 					/systems/electrical/relay/gen-4-glc/contact-pos eq 0
 				</test>
 			</test>
