@@ -3,9 +3,9 @@
 
  <path>strobe.ac</path>
  <offsets>
-    <x-m> 0.0 </x-m>
-    <y-m> 0.0 </y-m>
-    <z-m> 0.0 </z-m>
+   <x-m>-3.00</x-m>
+   <y-m>4.46</y-m>
+   <z-m>-0.80</z-m>
  </offsets>
  
 <animation>

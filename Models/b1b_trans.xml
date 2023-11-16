@@ -151,87 +151,25 @@ sweat by maggse
 	 <path>Aircraft/B-1B/Models/Lights/refuellight.xml</path>
 </model> 
 
+<model>
+	 <name>postail</name>
+	 <path>Aircraft/B-1B/Models/Lights/poswhite.xml</path>
+</model>
+
 <!--model-->
 	 <name>Landingcone</name>
 	 <path>Aircraft/B-1B/Models/Lights/landing_cone.xml</path>
 <!--/model--> 
 
-<!--Wing strobes-->
+<model>
+	 <name>strobeleft</name>
+	 <path>Aircraft/B-1B/Models/Lights/strobe-wing-left.xml</path>
+</model>
 
 <model>
-	 <name>wingstrobeL</name>
-	 <path>Aircraft/B-1B/Models/Lights/strobe-wings.xml</path>
-	 <offsets>
-                 <x-m>14.759</x-m>
-                 <y-m>-11.433</y-m>
-                 <z-m>-0.969</z-m>
-		 <pitch-deg>0</pitch-deg>
-	 </offsets>
- </model> 
-
- <animation>
-	  <type>rotate</type>
-          <object-name>wingstrobeL</object-name>
-	  <property>rotors/main/blade[0]/position-deg</property>
-	  <interpolation>
-		  <entry>
-			  <ind>0.0</ind>
-			  <dep>0.0</dep>
-		  </entry>
-		  <entry>
-			  <ind>1.0</ind>
-			  <dep>52.0</dep>
-		  </entry>
-	  </interpolation>
-	  <center>
-		  <x-m>-1.1</x-m>
-		  <y-m>-4</y-m>
-		  <z-m>0.00</z-m>
-	  </center>
-	  <axis>
-		  <x>0</x>
-		  <y>0</y>
-		  <z>-1</z>
-	  </axis>
- </animation>
-
-
-<model>
-	 <name>wingstrobeR</name>
-	 <path>Aircraft/B-1B/Models/Lights/strobe-wings.xml</path>
-	 <offsets>
-          <x-m>14.759</x-m>
-          <y-m>11.433</y-m>
-          <z-m>-0.969</z-m>
-          <pitch-deg>0</pitch-deg>
-	 </offsets>
- </model>
-
-  <animation>
-	  <type>rotate</type>
-          <object-name>wingstrobeR</object-name>
-	  <property>rotors/main/blade[0]/position-deg</property>
-	  <interpolation>
-		  <entry>
-			  <ind>0.0</ind>
-			  <dep>0.0</dep>
-		  </entry>
-		  <entry>
-			  <ind>1.0</ind>
-			  <dep>52.0</dep>
-		  </entry>
-	  </interpolation>
-	  <center>
-		  <x-m>-1.1</x-m>
-		  <y-m>4</y-m>
-		  <z-m>0.00</z-m>
-	  </center>
-	  <axis>
-		  <x>0</x>
-		  <y>0</y>
-		  <z>1</z>
-	  </axis>
- </animation>
+	 <name>stroberight</name>
+	 <path>Aircraft/B-1B/Models/Lights/strobe-wing-right.xml</path>
+</model>
 
 
   <animation>
@@ -264,28 +202,6 @@ sweat by maggse
 	 </axis>
  </animation>
 
-<!--<model>
-	 <name>strobe1</name>
-	 <path>Aircraft/B-1B/Models/Lights/strobe.xml</path>
-	 <offsets>
-		 <x-m>-3.500</x-m>
-		 <y-m>4.9</y-m>
-		 <z-m>-1.0</z-m>
-		 <pitch-deg>90</pitch-deg>
-	 </offsets>
- </model>-->
-
- <model>
-	 <name>strobe2</name>
-	 <path>Aircraft/B-1B/Models/Lights/strobe.xml</path>
-
-	 <offsets>
-		 <x-m>-2.80</x-m>
-		 <y-m>-4.46</y-m>
-		 <z-m>-0.80</z-m>
-		 <pitch-deg>0</pitch-deg>
-	 </offsets>
- </model>
  <animation>
   <type>dist-scale</type>
   <object-name>strobe2</object-name>
@@ -303,61 +219,6 @@ sweat by maggse
   </center>
 </animation>
  
- <model>
-	 <name>strobe3</name>
-	 <path>Aircraft/B-1B/Models/Lights/strobe.xml</path>
-	 
-	 <offsets>
-		 <x-m>-2.80</x-m>
-		 <y-m>4.50</y-m>
-		 <z-m>-0.80</z-m>
-		 <pitch-deg>0</pitch-deg>
-	 </offsets>
- </model>
-<animation>
-  <type>dist-scale</type>
-  <object-name>strobe3</object-name>
-  <interpolation>
-    <entry><ind>0</ind><dep>1.5</dep></entry>
-    <entry><ind>100</ind><dep>3</dep></entry>
-    <entry><ind>500</ind><dep>6</dep></entry>
-  </interpolation>
-  <min>1.0</min>
-  <max>5.0</max>
-  <center>
-    <x-m>-2.80</x-m>
-    <y-m>4.50</y-m>
-    <z-m>-0.80</z-m>
-  </center>
-</animation>
- 
- <model>
-	 <name>strobe4</name>
-	 <path>Aircraft/B-1B/Models/Lights/strobe.xml</path>
-	 
-	 <offsets>
-		 <x-m>17.91</x-m>
-		 <y-m>0.01</y-m>
-		 <z-m>5.74</z-m>
-		 <pitch-deg>0</pitch-deg>
-	 </offsets>
- </model>
- <animation>
-  <type>dist-scale</type>
-  <object-name>strobe4</object-name>
-  <interpolation>
-    <entry><ind>0</ind><dep>1.5</dep></entry>
-    <entry><ind>100</ind><dep>3</dep></entry>
-    <entry><ind>500</ind><dep>6</dep></entry>
-  </interpolation>
-  <min>1.0</min>
-  <max>5.0</max>
-  <center>
-    <x-m>17.91</x-m>
-    <y-m>0.01</y-m>
-    <z-m>5.74</z-m>
-  </center>
-</animation>
  
  <!-- engine outlets -->
  
