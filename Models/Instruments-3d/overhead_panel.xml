@@ -741,7 +741,7 @@ maggse
 
 <animation>
 	<type>knob</type>
-	<object-name>Panel_Lights</object-name>
+	<object-name>afcs_indexer</object-name>
 	<property>controls/lighting/instruments-norm</property>
 	<interpolation>
 		<entry>
@@ -759,14 +759,49 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m> 0.00772</x-m>
-		<y-m>-0.22422</y-m>
-		<z-m> 0.06658</z-m>
+		<x-m> 0.018457</x-m>
+		<y-m>-0.22232</y-m>
+		<z-m>-0.10721</z-m>
 	</center>
 	<action>
 		<binding>
 			<command>property-adjust</command>
-			<property>controls/lighting/instruments-norm</property>
+			<property>controls/lighting/AFCS_indexers</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>knob</type>
+	<object-name>afcs_indexer</object-name>
+	<property>controls/lighting/AFCS_indexers</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.018457</x-m>
+		<y-m>-0.22232</y-m>
+		<z-m>-0.10721</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/AFCS_indexers</property>
                         <min>0</min>
                         <max>1</max>
                         <factor>0.04</factor>
