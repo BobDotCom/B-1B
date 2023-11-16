@@ -90,44 +90,62 @@
             <default value="0"/>
             <test logic="OR" value="1">
                 <!-- TODO: Refine adg drive rpm engine start requirements -->
-                /systems/engines/adg[0]/drive-rpm ge 55
+                <test logic="OR">
+<!--					/systems/electrical/sources/si-1/output-volt ge 220-->
+					/systems/electrical/bus/ac-ess ge 220
+                    /systems/electrical/bus/ac-1 ge 220
+				</test>
+<!--                /systems/engines/adg[0]/drive-rpm ge 55-->
                 /systems/pneumatics/psi/engine[0]/psi ge 20
             </test>
         </switch>
         <switch name="/systems/engines/engine[1]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                /systems/engines/adg[1]/drive-rpm ge 55
+<!--                /systems/engines/adg[1]/drive-rpm ge 55-->
+                <test logic="OR">
+<!--					/systems/electrical/sources/si-1/output-volt ge 220-->
+					/systems/electrical/bus/ac-ess ge 220
+                    /systems/electrical/bus/ac-1 ge 220
+				</test>
                 /systems/pneumatics/psi/engine[1]/psi ge 20
             </test>
         </switch>
         <switch name="/systems/engines/engine[2]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                /systems/engines/adg[2]/drive-rpm ge 55
+<!--                /systems/engines/adg[2]/drive-rpm ge 55-->
+                <test logic="OR">
+<!--					/systems/electrical/sources/si-1/output-volt ge 220-->
+					/systems/electrical/bus/ac-ess ge 220
+                    /systems/electrical/bus/ac-1 ge 220
+				</test>
                 /systems/pneumatics/psi/engine[2]/psi ge 20
             </test>
         </switch>
         <switch name="/systems/engines/engine[3]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                /systems/engines/adg[3]/drive-rpm ge 55
+<!--                /systems/engines/adg[3]/drive-rpm ge 55-->
+                <test logic="OR">
+<!--					/systems/electrical/sources/si-1/output-volt ge 220-->
+					/systems/electrical/bus/ac-ess ge 220
+                    /systems/electrical/bus/ac-1 ge 220
+				</test>
                 /systems/pneumatics/psi/engine[3]/psi ge 20
             </test>
         </switch>
         <switch name="/systems/engines/engine[4]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                <!-- TODO: Electrical system -->
-                /controls/electrical/switches/battery eq 1
-                /controls/electric/external-power eq 1
+                <!-- TODO: Hydraulic APU starter -->
+                /systems/electrical/bus/dc-bat ge 25
             </test>
         </switch>
         <switch name="/systems/engines/engine[5]/can-start">
             <default value="0"/>
             <test logic="OR" value="1">
-                /controls/electrical/switches/battery eq 1
-                /controls/electric/external-power eq 1
+                /systems/electrical/bus/dc-bat ge 25
             </test>
         </switch>
         <switch name="/systems/engines/engine[0]/cutoff">
