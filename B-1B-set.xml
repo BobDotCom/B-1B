@@ -28,6 +28,7 @@ B-1B set file.
             <splash-texture>Aircraft/B-1B/bone.png</splash-texture>
         </startup>
 
+        <!-- TODO: Migrate to JSBSim -->
         <flight-model>yasim</flight-model>
         <status>alpha</status>
         <rating>
