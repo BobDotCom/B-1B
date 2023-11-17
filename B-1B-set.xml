@@ -69,21 +69,25 @@ B-1B set file.
                 <name>Justin Nicholson</name>
                 <nick>pinto</nick>
             </author>
+            <author n="3">
+                <name>NC-687</name>
+            </author>
         </authors>
 
-        <!-- Maintainers list doesn't appear to show in the launcher, maybe add maintainers to authors list? -->
+        <!-- TODO: Maintainers list doesn't appear to show in the launcher, maybe add maintainers to authors list? -->
         <maintainers>
             <maintainer n="0">
-                <name>NC-687</name>
-            </maintainer>
-            <maintainer n="1">
-                <name>Zorka</name>
-            </maintainer>
-            <maintainer n="2">
                 <name>BobDotCom</name>
             </maintainer>
-            <maintainer n="3">
+            <maintainer n="1">
+                <name>Robert Andrew</name>
+                <nick>RobAndrew96</nick>
+	    <maintainer>
+            <maintainer n="2">
                 <name>SammySkycrafts</name>
+            </maintainer>
+            <maintainer n="3">
+                <name>Zorka</name>
             </maintainer>
         </maintainers>
         <aero>B-1B-yasim</aero>
@@ -101,9 +105,9 @@ B-1B set file.
         </long-description>
 
         <urls>
-            <support>https://discord.gg/RbWACT8jUX</support>
+            <support>https://discord.gg/GnNmpdkvGa</support>
             <wikipedia>https://en.wikipedia.org/wiki/Rockwell_B-1_Lancer</wikipedia>
-            <code-repository>https://gitlab.com/NC-687/B-1B</code-repository>
+            <code-repository>https://github.com/BobDotCom/B-1B</code-repository>
         </urls>
 
         <number-views type="int" archive="y">6</number-views>
