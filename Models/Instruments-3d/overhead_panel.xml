@@ -114,9 +114,9 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m> 0.00891</x-m>
-		 <y-m> 0.03956</y-m>
-		 <z-m> 0.20617</z-m>
+		 <x-m> 0.01898</x-m>
+		 <y-m> 0.039558</y-m>
+		 <z-m> 0.21598</z-m>
    </center>
  </animation>
 
@@ -777,7 +777,7 @@ maggse
 <animation>
 	<type>knob</type>
 	<object-name>afcs_indexer</object-name>
-	<property>controls/lighting/AFCS_indexers</property>
+	<property>controls/lighting/AFCS_indexers_pilot</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -801,7 +801,42 @@ maggse
 	<action>
 		<binding>
 			<command>property-adjust</command>
-			<property>controls/lighting/AFCS_indexers</property>
+			<property>controls/lighting/AFCS_indexers_pilot</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation> 
+
+<animation>
+	<type>knob</type>
+	<object-name>co_pilot_afcs</object-name>
+	<property>controls/lighting/AFCS_indexers_co-pilot</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.018224</x-m>
+		<y-m>-0.13453</y-m>
+		<z-m>-0.10739</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/AFCS_indexers_co-pilot</property>
                         <min>0</min>
                         <max>1</max>
                         <factor>0.04</factor>
