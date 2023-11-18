@@ -9,7 +9,7 @@ B-1B set file.
 
 <PropertyList>
     <sim>
-        <variant-id>be</variant-id>
+        <variant-id>5</variant-id>
         <minimum-fg-version>2017+</minimum-fg-version>
         <expected-aircraft-dir-name>B-1B</expected-aircraft-dir-name>
         <dimensions>
