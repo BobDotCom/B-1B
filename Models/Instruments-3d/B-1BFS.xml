@@ -12,9 +12,10 @@
     <object-name>RHFS</object-name>
     <object-name>Trim</object-name>
     <object-name>Wings</object-name>
-    <object-name>screws</object-name> 
-    <object-name>Stick_leg</object-name>
+    <object-name>screws</object-name>
+    <object-name>Stick-leg</object-name>
     <object-name>Stick</object-name>
+    <object-name>Boot001</object-name>
   </animation>
 
   <animation>
@@ -38,9 +39,10 @@
     <object-name>RHFS</object-name>
     <object-name>Trim</object-name>
     <object-name>Wings</object-name>
-    <object-name>Boot001</object-name>
+    <object-name>screws</object-name>
     <object-name>Stick-leg</object-name>
     <object-name>Stick</object-name>
+    <object-name>Boot001</object-name>
   <property>controls/flight/aileron</property>         <!--property alias="/params/aileron"/-->
   <factor>-10</factor>
   <center>
@@ -61,12 +63,13 @@
     <object-name>RHFS</object-name>
     <object-name>Trim</object-name>
     <object-name>Wings</object-name>
-    <object-name>Boot001</object-name>
+    <object-name>screws</object-name>
     <object-name>Stick-leg</object-name>
     <object-name>Stick</object-name>
+    <object-name>Boot001</object-name>
   <property>controls/flight/elevator</property>          <!--property alias="/params/elevator"/-->
   <factor>-10</factor>
-  <!-- offset-deg>-10.0</offset-deg --> 
+  <!-- offset-deg>-10.0</offset-deg -->
   <center>
    <x-m>-18.47</x-m>
    <y-m>-0.5184</y-m>

@@ -114,9 +114,9 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m> 0.00891</x-m>
-		 <y-m> 0.03956</y-m>
-		 <z-m> 0.20617</z-m>
+		 <x-m> 0.01898</x-m>
+		 <y-m> 0.039558</y-m>
+		 <z-m> 0.21598</z-m>
    </center>
  </animation>
 
@@ -130,6 +130,48 @@ maggse
 		 <binding>
 			 <command>property-toggle</command>
 			 <property>controls/switches/refuel-slipway</property>
+		 </binding>
+	 </action>
+</animation> 
+
+	 <!-- Annunciator lighting-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>int_dim</object-name>
+	 <property>controls/switches/annunciator-lighting</property>
+	 <interpolation>
+		 <entry>
+			 <ind> 0.0</ind>
+			 <dep> -30.0</dep>
+		 </entry>
+		 <entry>
+			 <ind> 1.0</ind>
+			 <dep> 30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x> 0.0</x>
+		 <y> 1.0</y>
+		 <z> 0.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.01237</x-m>
+		 <y-m>-0.1752</y-m>
+		 <z-m> 0.1227</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>int_dim</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/annunciator-lighting</property>
 		 </binding>
 	 </action>
 </animation>
@@ -578,12 +620,12 @@ maggse
 	 <property>controls/lighting/nav-lights</property>
 	 <interpolation>
 		 <entry>
-			 <ind> 0.0</ind>
+			 <ind>0.0</ind>
 			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
-			 <ind> 1.0</ind>
-			 <dep> 30.0</dep>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -717,14 +759,84 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m> 0.00772</x-m>
-		<y-m>-0.22422</y-m>
-		<z-m> 0.06658</z-m>
+		<x-m> 0.019003</x-m>
+		<y-m>-0.22423</y-m>
+		<z-m>0.066586</z-m>
 	</center>
 	<action>
 		<binding>
 			<command>property-adjust</command>
 			<property>controls/lighting/instruments-norm</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>knob</type>
+	<object-name>afcs_indexer</object-name>
+	<property>controls/lighting/AFCS_indexers_pilot</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.018457</x-m>
+		<y-m>-0.22232</y-m>
+		<z-m>-0.10721</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/AFCS_indexers_pilot</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation> 
+
+<animation>
+	<type>knob</type>
+	<object-name>co_pilot_afcs</object-name>
+	<property>controls/lighting/AFCS_indexers_co-pilot</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.018224</x-m>
+		<y-m>-0.13453</y-m>
+		<z-m>-0.10739</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/AFCS_indexers_co-pilot</property>
                         <min>0</min>
                         <max>1</max>
                         <factor>0.04</factor>
