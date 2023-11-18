@@ -8,31 +8,95 @@ Syd Adams
  <path>pfdb1.ac</path>
 
 <animation>
-    <name>Alpha Sort</name>
-    <object-name>APspeed</object-name>
-    <object-name>APlnav</object-name>
-    <object-name>APvnav</object-name>
-    <object-name>VSIscale</object-name>
-    <object-name>HDGface</object-name>
-    <object-name>AI</object-name>
-    <object-name>PFDscreen</object-name>
-    <object-name>brt</object-name>
-    <object-name>cont</object-name>
-    <object-name>gizmo</object-name>
-    <object-name>fuses</object-name>
-</animation>
-
-<animation>
    <type>material</type>
-    <object-name>fuses</object-name>
-    <object-name>brt</object-name>
-    <object-name>cont</object-name>
-    <object-name>gizmo</object-name>
+    <object-name>Asitext</object-name>
+    <object-name>Asitext.001</object-name>
+    <object-name>Asitext.002</object-name>
+    <object-name>Alt10000</object-name> 
+    <object-name>Alt1000</object-name> 
+    <object-name>Alt100</object-name> 
+    <object-name>Alt10</object-name> 
+    <object-name>Alt10.001</object-name>
+    <object-name>AI</object-name>
+    <object-name>HDGface</object-name>
+    <object-name>bugtxt</object-name>
+    <object-name>bugtxt.001</object-name>
+    <object-name>bugtxt.002</object-name>
+    <object-name>mach.001</object-name>
+    <object-name>mach.002</object-name>
+    <object-name>mach.003</object-name>
+    <object-name>side_d</object-name>
+    <object-name>side_d.001</object-name>
+    <object-name>side_d.002</object-name>
+    <object-name>side_d.003</object-name>
+    <object-name>pointer</object-name>
+    <object-name>pointer.001</object-name>
+    <object-name>pointer.002</object-name>
+    <object-name>pointer.003</object-name>
+    <object-name>pointer.004</object-name>
+    <object-name>pointer.005</object-name>
+    <object-name>pointer.006</object-name>
+    <object-name>pointer.007</object-name>
+    <object-name>LOCneedle</object-name>
+    <object-name>LOCscale</object-name>
+    <object-name>GSneedle</object-name>
+    <object-name>GSscale</object-name> 
+    <object-name>s0</object-name> 
+    <object-name>s1</object-name>
+    <object-name>s2</object-name>
+    <object-name>s3</object-name>
+    <object-name>s4</object-name>
+    <object-name>s5</object-name>
+    <object-name>s6</object-name>
+    <object-name>s7</object-name>
+    <object-name>s8</object-name>
+    <object-name>s9</object-name>
+    <object-name>s10</object-name>
+    <object-name>s11</object-name>
+    <object-name>s12</object-name>
+    <object-name>s13</object-name>
+    <object-name>s14</object-name>
+    <object-name>s15</object-name>
+    <object-name>s16</object-name>
+    <object-name>s17</object-name>
+    <object-name>s18</object-name>
+    <object-name>s19</object-name>
+    <object-name>s20</object-name>
+    <object-name>s21</object-name>
+    <object-name>s22</object-name>
+    <object-name>s23</object-name>
+    <object-name>s24</object-name>
+    <object-name>s25</object-name>
+    <object-name>s26</object-name>
+    <object-name>s27</object-name>
+    <object-name>s28</object-name>
+    <object-name>s29</object-name>
+    <object-name>s30</object-name>
+    <object-name>s31</object-name>
+    <object-name>s32</object-name>
+    <object-name>s33</object-name>
+    <object-name>s34</object-name>
+    <object-name>s35</object-name>
+    <object-name>s36</object-name>
+    <object-name>s37</object-name>
+    <object-name>s38</object-name>
+    <object-name>s39</object-name>
+    <object-name>s40</object-name>
+    <object-name>s41</object-name>
+    <object-name>s42</object-name>
+    <object-name>s43</object-name>
+    <object-name>s44</object-name>
+    <object-name>s45</object-name>
+    <object-name>s46</object-name>
+    <object-name>s47</object-name>
+    <object-name>s48</object-name>
+    <object-name>s49</object-name>
+    <object-name>rollptr</object-name>
    	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <red>0</red>
+		 <green>0.3</green>
+		 <blue>0</blue>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
 </animation>
  <animation>

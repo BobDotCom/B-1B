@@ -75,7 +75,7 @@ more to come :-)
 
     <model>
 	  <name>pfdb1-copilot</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb1.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb1_right.xml</path>
 	  <offsets>
 		  <x-m>-18.212</x-m>
 		  <y-m> 0.435</y-m>
@@ -151,7 +151,7 @@ more to come :-)
 
   <model>
 	  <name>pfdb1</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb1.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb1_left.xml</path>
 	  <offsets>
 		  <x-m>-18.212</x-m>
 		  <y-m>-0.675</y-m>
