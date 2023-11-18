@@ -1,8 +1,8 @@
 AC3Db
 MATERIAL "BOOT" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.021 0.021 0.021  shi 64 trans 0.000
 MATERIAL "Buttons" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
-MATERIAL "Stick_lower" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.018 0.018 0.018  shi 115 trans 0.000
-MATERIAL "Material.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.931 0.931 0.931  shi 112 trans 0.000
+MATERIAL "Stick_lower" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.018 0.018 0.018  shi 64 trans 0.000
+MATERIAL "Material.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.931 0.931 0.931  shi 64 trans 0.000
 OBJECT world
 name "Blender_exporter_v4.1__B-1BFS.ac"
 kids 9
@@ -26586,7 +26586,7 @@ refs 61
 1279 0.418811 0.111
 kids 0
 OBJECT poly
-name "Stick _leg"
+name "Stick-leg"
 data 12
 Cylinder.001
 crease 60.3

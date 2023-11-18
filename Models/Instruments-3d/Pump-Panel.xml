@@ -135,7 +135,7 @@
         </axis>
         <action>
             <binding>
-                <command>property-adjust</command>
+                <command>property-toggle</command>
                 <property>B-1B/fuel-tank-switch</property>
                 <min>0</min>
                 <max>5</max>

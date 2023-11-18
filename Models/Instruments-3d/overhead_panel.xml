@@ -579,7 +579,7 @@ maggse
 	 <interpolation>
 		 <entry>
 			 <ind> 0.0</ind>
-			 <dep>-30.0</dep>
+			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
 			 <ind> 1.0</ind>
@@ -594,7 +594,7 @@ maggse
 	 <center>
 		 <x-m> 0.0104</x-m>
 		 <y-m>-0.1826</y-m>
-		 <z-m> 0.2017</z-m>nav
+		 <z-m> 0.2017</z-m>
    </center>
  </animation>
 
@@ -617,15 +617,15 @@ maggse
 <animation>
 	<type>rotate</type>
 	<object-name>anti_coll_lights</object-name>
-	<property>sim/multiplay/generic/int[0]</property>
+	<property>controls/lighting/strobe</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>-30.0</dep>
+			<dep>-20.0</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>30.0</dep>
+			<dep>20.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -649,48 +649,50 @@ maggse
 		<interval-sec>0.5</interval-sec>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/multiplay/generic/int[0]</property>
+			<property>controls/lighting/strobe</property>
 		</binding>
 	</action>
 </animation>
-                   <!--STROBES-->
- <animation>
-	 <type>rotate</type>
-	 <object-name>flash</object-name>
-	 <property>controls/lighting/strobe</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x> 0.0</x>
-		 <y>-1.0</y>
-		 <z> 0.0</z>
-	 </axis>
-	 <center>
-		 <x-m> 0.0103</x-m>
-		 <y-m>-0.1207</y-m>
-		 <z-m> 0.1990   </z-m>
-   </center>
- </animation>
- <animation>
-	 <type>pick</type>
-	 <object-name>flash</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/lighting/strobe</property>
-		 </binding>
-	 </action>
+                   <!--STROBES--> 
+
+<animation>
+	<type>rotate</type>
+	<object-name>flash</object-name>
+	<property>controls/lighting/wing-strobe</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>20.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-20.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.011</x-m>
+		<y-m>-0.1206</y-m>
+		<z-m> 0.199</z-m>
+	</center>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>flash</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.5</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/lighting/wing-strobe</property>
+		</binding>
+	</action>
 </animation>
 
 <!-- instrument lights-->
