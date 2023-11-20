@@ -163,6 +163,8 @@ more to come :-)
 	  </offsets>
   </model> 
 
+
+
   <model>
     <name>copilot fltdir</name>
     <path>Aircraft/B-1B/Models/Instruments-3d/fltdir.xml</path>
@@ -729,7 +731,75 @@ B-1BFS
 	  </offsets>
   </model>
 
+
+
 <!-- WSO instrumentation -->
+
+  <model>
+	  <name>chan freq mode</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/chan_freq_mode.xml</path>
+	  <offsets>
+		  <x-m>-15.789</x-m>
+		  <y-m>-0.174</y-m>
+		  <z-m>1.5869</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+ <model>
+	  <name>satcom</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/satcom.xml</path>
+	  <offsets>
+		  <x-m>-15.779</x-m>
+		  <y-m>-0.106489</y-m>
+		  <z-m>1.721</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+ <model>
+	  <name>illum</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/illum.xml</path>
+	  <offsets>
+		  <x-m>-15.789</x-m>
+		  <y-m>-0.30473</y-m>
+		  <z-m>1.7496</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+ <model>
+	  <name>CITS</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/CITS.xml</path>
+	  <offsets>
+		  <x-m>-15.789</x-m>
+		  <y-m>0.0308</y-m>
+		  <z-m>1.4851</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+ <model>
+	  <name>nav_aux</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/nav_aux.xml</path>
+	  <offsets>
+		  <x-m>-15.789</x-m>
+		  <y-m>0.056489</y-m>
+		  <z-m>1.721</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+ <model>
+	  <name>coded switch</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/coded_switch.xml</path>
+	  <offsets>
+		  <x-m>-15.789</x-m>
+		  <y-m>0.25493</y-m>
+		  <z-m>1.8348</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
 
 
   <model>
@@ -753,6 +823,17 @@ B-1BFS
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>  
+
+ <model>
+	  <name>LT</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/LT.xml</path>
+	  <offsets>
+		  <x-m>-15.789</x-m>
+		  <y-m>0.0851</y-m>
+		  <z-m>1.9138</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
 
   <model>
 	  <name>KEYBOARD2</name>
