@@ -102,7 +102,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD-gaps.ac</path>   
 	  <offsets>
 		  <x-m>-18.111</x-m>
-		  <y-m>-0.593</y-m>
+		  <y-m>-0.589</y-m>
 		  <z-m>1.16</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -113,8 +113,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD-gaps.ac</path>   
 	  <offsets>
 		  <x-m>-18.111</x-m>
-		  <y-m>0.516</y-m>
-		  <z-m>1.16</z-m>
+		  <y-m>0.518</y-m>
+		  <z-m>1.158</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model> 
@@ -124,8 +124,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.ac</path>   
 	  <offsets>
 		  <x-m>-18.112</x-m>
-		  <y-m>-0.780</y-m>
-		  <z-m>1.16</z-m>
+		  <y-m>-0.788</y-m>
+		  <z-m>1.155</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>  
@@ -135,8 +135,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.ac</path>   
 	  <offsets>
 		  <x-m>-18.112</x-m>
-		  <y-m>-0.593</y-m>
-		  <z-m>1.16</z-m>
+		  <y-m>-0.585</y-m>
+		  <z-m>1.155</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model> 
@@ -146,8 +146,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.ac</path>   
 	  <offsets>
 		  <x-m>-18.112</x-m>
-		  <y-m>0.328</y-m>
-		  <z-m>1.16</z-m>
+		  <y-m>0.321</y-m>
+		  <z-m>1.155</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>  
@@ -157,8 +157,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.ac</path>   
 	  <offsets>
 		  <x-m>-18.112</x-m>
-		  <y-m>0.516</y-m>
-		  <z-m>1.16</z-m>
+		  <y-m>0.523</y-m>
+		  <z-m>1.155</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model> 
