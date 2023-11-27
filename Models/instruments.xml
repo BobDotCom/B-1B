@@ -725,7 +725,7 @@ B-1BFS
 	 </condition>
 	  <offsets>
 		  <x-m>-15.812</x-m>
-		  <y-m>-0.620</y-m>
+		  <y-m>-0.45</y-m>
 		  <z-m>1.830</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -884,8 +884,19 @@ B-1BFS
 	  <path>Aircraft/B-1B/Models/Instruments-3d/SWITCHES+KNOBS.xml</path>
 	  <offsets>
 		  <x-m>-15.78866</x-m>
-		  <y-m>-0.00275</y-m>
-		  <z-m>1.92311</z-m>
+		  <y-m>0.05</y-m>
+		  <z-m>1.92411</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+  <model>
+	  <name>SWITCHES+KNOBS2</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/SWITCHES+KNOBS.xml</path>
+	  <offsets>
+		  <x-m>-15.78866</x-m>
+		  <y-m>-0.5</y-m>
+		  <z-m>1.92411</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -1045,8 +1056,8 @@ B-1BFS
 	  <path>Aircraft/B-1B/Models/Instruments-3d/NAVAUX.xml</path>
 	  <offsets>
 		  <x-m>-15.78810</x-m>
-		  <y-m>-0.02018</y-m>
-		  <z-m>1.77977</z-m>
+		  <y-m>-0.015</y-m>
+		  <z-m>1.778</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
