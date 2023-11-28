@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PropertyList include="b1-base.xml">
+    <sim>
+        <variant-id>4</variant-id>
+        <primary-set type="bool">true</primary-set>
+        <description>Rockwell B-1B Block D</description>
+        <long-description>
+            The Rockwell B-1 Lancer, commonly referred to as the "Bone" (derived from "B-One"), is a supersonic heavy
+            bomber equipped with variable-sweep wings, and remains integral to the United States Air Force. Alongside
+            the B-2 Spirit and B-52 Stratofortress, it constitutes one of three strategic bombers in the U.S. Air
+            Force's current arsenal. Notably designed for adaptability, the B-1 excels in various roles, owing to its
+            ability to alter its wing configuration during flight. This advanced aircraft plays a crucial role in the
+            nation's defense strategy, offering exceptional speed, payload capacity, and versatility for a wide array of
+            mission profiles.
+        </long-description>
+    </sim>
+</PropertyList>
