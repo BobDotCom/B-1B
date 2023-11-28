@@ -62,7 +62,7 @@ more to come :-)
        <pitch-deg>-2</pitch-deg>
 	  </offsets>
   </model>
-  <model>
+<!--   <model>
 	  <name>ndb1-copilot</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
 	  <offsets>
@@ -72,7 +72,7 @@ more to come :-)
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-
+ -->
 
     <model>
 	  <name>cautionind-copilot</name>
@@ -120,8 +120,8 @@ more to come :-)
   </model> 
 
  <model>
-	  <name>FRONT MFDs</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/FRONT_MFDs.ac</path>   
+	  <name>Cockpit_screens</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.xml</path>   
 	  <offsets>
 		  <x-m>-0.09</x-m>
 		  <y-m>0.011</y-m>
@@ -198,7 +198,7 @@ more to come :-)
   </model>
 
 
-  <model>
+<!--   <model>
 	  <name>ndb1</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/nd.xml</path>
 	  <offsets>
@@ -207,7 +207,7 @@ more to come :-)
 		  <z-m> 0.975</z-m>
 		  <pitch-deg>-1</pitch-deg>
 	  </offsets>
-  </model>
+  </model> -->
 
  <model>
 	  <name>clock</name>

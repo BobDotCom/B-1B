@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<propertylist> 
- <path>FRONT_MFDs.ac</path> 
-</propertylist>
+<PropertyList> 
+ 	<path>Cockpit_MFDs.ac</path>
+</PropertyList>
   
