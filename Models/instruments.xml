@@ -214,7 +214,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
 	  <offsets>
 		  <x-m>-18.214</x-m>
-		  <y-m>-0.910</y-m>
+		  <y-m>-0.916</y-m>
 		  <z-m> 1.075</z-m>
 		  <pitch-deg>-1</pitch-deg>
 	  </offsets>
@@ -286,8 +286,8 @@ more to come :-)
   </model>
 
  <model>
-	  <name>Pump-panel</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/Pump-Panel.xml</path>
+     <name>pump-panel</name>
+     <path>Aircraft/B-1B/Models/Instruments-3d/pump-panel.xml</path>
 	  <offsets>
 		  <x-m> 0.262</x-m>
 		  <y-m>-0.345</y-m>
@@ -417,15 +417,15 @@ more to come :-)
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
-  <model>
+      <model>
 	  <name>sweep lever</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/sweep_lever.xml</path>
 	  <offsets>
-		  <x-m>-17.790</x-m>
-		  <y-m>-1.065</y-m>
-		  <z-m>0.720</z-m>
-		  <pitch-deg>0</pitch-deg>
-		  <heading-deg>-5</heading-deg>
+		  <x-m>-17.810</x-m>
+		  <y-m>-1.072</y-m>
+		  <z-m> 0.715</z-m>
+	    <pitch-deg> 0 </pitch-deg>
+      <roll-deg> 0 </roll-deg>
 	  </offsets>
   </model>
 
@@ -522,9 +522,9 @@ B-1BFS
 	  <name>eng-aux-panel</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/Eng-Aux-Pwr.xml</path>
 	  <offsets>
-		  <x-m>-18.070</x-m>
+		  <x-m>-18.075</x-m>
 		  <y-m>-0.130</y-m>
-		  <z-m>0.710</z-m>
+		  <z-m>0.715</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
