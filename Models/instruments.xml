@@ -120,50 +120,15 @@ more to come :-)
   </model> 
 
  <model>
-	  <name>MFD1</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.ac</path>   
+	  <name>FRONT MFDs</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/FRONT_MFDs.ac</path>   
 	  <offsets>
-		  <x-m>-18.112</x-m>
-		  <y-m>-0.788</y-m>
-		  <z-m>1.155</z-m>
+		  <x-m>-0.09</x-m>
+		  <y-m>0.011</y-m>
+		  <z-m>-0.1</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>  
-
- <model>
-	  <name>MFD2</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.ac</path>   
-	  <offsets>
-		  <x-m>-18.112</x-m>
-		  <y-m>-0.585</y-m>
-		  <z-m>1.155</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model> 
-
- <model>
-	  <name>MFD3</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.ac</path>   
-	  <offsets>
-		  <x-m>-18.112</x-m>
-		  <y-m>0.321</y-m>
-		  <z-m>1.155</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>  
-
- <model>
-	  <name>MFD4</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.ac</path>   
-	  <offsets>
-		  <x-m>-18.112</x-m>
-		  <y-m>0.523</y-m>
-		  <z-m>1.155</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model> 
-
-
 
   <model>
     <name>copilot fltdir</name>
