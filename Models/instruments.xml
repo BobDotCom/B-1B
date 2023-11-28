@@ -10,9 +10,9 @@ more to come :-)
 
   <offsets>
 	  <x-m>-0.42</x-m>
-	  <y-m>0.15</y-m>
-          <z-m>-0.297</z-m>
-    <pitch-deg>0</pitch-deg>
+	  <y-m> 0.15</y-m>
+	  <z-m>-0.297</z-m>
+  <pitch-deg>0</pitch-deg>
 
   </offsets>
 
