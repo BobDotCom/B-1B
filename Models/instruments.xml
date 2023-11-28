@@ -417,7 +417,7 @@ more to come :-)
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
-      <model>
+  <model>
 	  <name>sweep lever</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/sweep_lever.xml</path>
 	  <offsets>
