@@ -999,7 +999,7 @@ B-1B set file.
         </cg>
 <!--         <GCI>
             <file>Aircraft/B-1B/Nasal/gci-listener.nas</file>
-        </GCI> -->s
+        </GCI> -->
         <notifications>
             <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
             <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
