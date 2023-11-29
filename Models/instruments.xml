@@ -181,6 +181,28 @@ more to come :-)
 	</model>
 
   <model>
+    <name>copilot hsi</name>
+    <path>Aircraft/B-1B/Models/Instruments-3d/A-10-HSI.xml</path>
+    <offsets>
+      <x-m>-18.210</x-m>
+      <y-m> 0.436</y-m>
+      <z-m> 0.995</z-m>
+      <pitch-deg>-1</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+	  <name>pfdb1</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/pfdb1_left.xml</path>
+	  <offsets>
+		  <x-m>-18.212</x-m>
+		  <y-m>-0.675</y-m>
+		  <z-m>1.185</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+  <model>
 	  <name>102kt</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/102kt.xml</path>
 	  <offsets>
@@ -1508,6 +1530,7 @@ B-1BFS
 		<type>select</type>
 		<object-name>ndb1-copilot</object-name>
 		<object-name>pfdb1-copilot</object-name>
+		<object-name>pfdb1</object-name>
 		<object-name>hud alt-copilot</object-name>
 		<object-name>hud mach-copilot</object-name>
 		<object-name>copilot fltdir-d</object-name>
@@ -1516,6 +1539,7 @@ B-1BFS
 		<object-name>radaralt</object-name>
 		<object-name>ndb1</object-name>
 		<object-name>pilot hsi</object-name>
+		<object-name>copilot hsi</object-name>
 		<object-name>gearind</object-name>
 		<object-name>fltdir-d</object-name>
 		<object-name>bomb doors</object-name>
