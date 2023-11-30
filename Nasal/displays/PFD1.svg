@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 262144 262144"
+   version="1.1"
+   id="svg4"
+   width="262144"
+   height="262144"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <g
+     id="a"
+     data-name="bkg">
+    <rect
+       width="512"
+       height="256"
+       style="fill:#0073ba"
+       id="rect1"
+       x="0"
+       y="0" />
+    <rect
+       y="256"
+       width="512"
+       height="256"
+       style="fill:#743116"
+       id="rect2"
+       x="0" />
+    <rect
+       y="256"
+       width="512"
+       height="0"
+       style="fill:none;stroke:#ffffff;stroke-width:2px"
+       id="rect3"
+       x="0" />
+  </g>
+  <g
+     id="b"
+     data-name="AttIndicator">
+    <path
+       id="c"
+       data-name="rect3898"
+       d="m 208.84,285.57 h 11.47 V 256 H 142 v 8.46 h 66.56 l 0.29,21.11 z"
+       style="fill:#f1f2f9" />
+    <path
+       id="d"
+       data-name="rect3898"
+       d="m 303.45,264.46 h 66.56 c 0,0 0,-8.46 0,-8.46 H 291.7 c 0,0 0,29.57 0,29.57 h 11.47 c 0,0 0.29,-21.11 0.29,-21.11 z"
+       style="fill:#f1f2f9" />
+    <rect
+       x="250.85001"
+       y="250.85001"
+       width="10.3"
+       height="10.3"
+       rx="1.33"
+       ry="1.33"
+       style="fill:#f1f2f9"
+       id="rect4" />
+  </g>
+</svg>
