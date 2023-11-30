@@ -1131,7 +1131,7 @@ var forcePages = func (v, system) {
 var main = func (module) {
 	# TEST CODE:
 	var height = 1024;#482;
-	var width  = 512;#552;
+	var width  = 768;#552;
 
 	leftPFD = DisplayDevice.new("leftPFD", [width,height], [1, 1], "MFD1_Canvas", "Front_MFD1_Canvas.png");
 	leftPFD.setColorBackground(rightPFDColorBackground);
