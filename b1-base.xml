@@ -9,7 +9,6 @@ B-1B set file.
 
 <PropertyList>
     <sim>
-        <variant-id>5</variant-id>
         <minimum-fg-version>2017+</minimum-fg-version>
         <expected-aircraft-dir-name>B-1B</expected-aircraft-dir-name>
         <dimensions>
@@ -985,6 +984,9 @@ B-1B set file.
 
 
     <nasal>
+        <hack>
+            <file>Aircraft/B-1B/Nasal/hackCanvas.nas</file>
+        </hack>
         <b1b>
             <file>Aircraft/B-1B/Nasal/b1b.nas</file>
             <file>Aircraft/B-1B/Nasal/cdu900.nas</file>
@@ -995,14 +997,11 @@ B-1B set file.
         <cg>
             <file>Aircraft/B-1B/Nasal/cg.nas</file>
         </cg>
+        <!--
         <GCI>
             <file>Aircraft/B-1B/Nasal/gci-listener.nas</file>
         </GCI>
-        <!--        <emesary>-->
-        <!--            <file>Aircraft/B-1B/Nasal/emesary.nas</file>-->
-        <!--            <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>-->
-        <!--            <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>-->
-        <!--        </emesary>-->
+        -->
         <notifications>
             <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
             <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
@@ -1013,9 +1012,11 @@ B-1B set file.
         <tfs>
             <file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
         </tfs>
+        <!--
         <ts>
             <file>Aircraft/B-1B/Nasal/tyresmoke.nas</file>
         </ts>
+        -->
         <rain>
             <file>Aircraft/B-1B/Nasal/rain.nas</file>
         </rain>
