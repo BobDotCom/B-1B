@@ -1029,9 +1029,9 @@ B-1BFS
 			</or>
 		</condition>
 		<offsets>
-			<x-m>-15.770</x-m>
+			<x-m>-15.79</x-m>
 			<y-m>0.280</y-m>
-			<z-m>1.60</z-m>
+			<z-m>1.63</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -1120,8 +1120,8 @@ B-1BFS
 	  <path>Aircraft/B-1B/Models/Instruments-3d/coded_switch.xml</path>
 	  <offsets>
 		  <x-m>-15.789</x-m>
-		  <y-m>0.25493</y-m>
-		  <z-m>1.8348</z-m>
+		  <y-m>0.21093</y-m>
+		  <z-m>1.8248</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -1211,7 +1211,7 @@ B-1BFS
 		  <x-m>-15.71449</x-m>
 		  <y-m>0.19913</y-m>
 		  <z-m>1.37257</z-m>
-		  <pitch-deg>0</pitch-deg>
+		  <pitch-deg>-2</pitch-deg>
 	  </offsets>
   </model> 
 
@@ -1429,7 +1429,7 @@ B-1BFS
 		  <x-m>-15.72563</x-m>
 		  <y-m>-0.65535</y-m>
 		  <z-m>1.39915</z-m>
-		  <pitch-deg>0</pitch-deg>
+		  <pitch-deg>-2</pitch-deg>
 	  </offsets>
   </model>
 
@@ -1483,7 +1483,7 @@ B-1BFS
 	       </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.754</x-m>
+		  <x-m>-15.784</x-m>
 		  <y-m>0.125</y-m>
 		  <z-m>1.515</z-m>
 		  <pitch-deg>0</pitch-deg>

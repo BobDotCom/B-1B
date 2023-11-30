@@ -9,6 +9,7 @@ B-1B set file.
 
 <PropertyList>
     <sim>
+        <variant-id>5</variant-id>
         <minimum-fg-version>2017+</minimum-fg-version>
         <expected-aircraft-dir-name>B-1B</expected-aircraft-dir-name>
         <dimensions>
@@ -132,7 +133,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">70.7</default-field-of-view-deg>
                 <default-pitch-deg type="double">0</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -159,7 +160,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">84.5</default-field-of-view-deg>
                 <default-pitch-deg type="double">0</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -186,8 +187,8 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
-                <default-pitch-deg type="double">0</default-pitch-deg>
+                <default-field-of-view-deg type="double">69.3</default-field-of-view-deg>
+                <default-pitch-deg type="double">-5</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
                 <front-left-direction-deg type="double">45</front-left-direction-deg>
@@ -984,9 +985,6 @@ B-1B set file.
 
 
     <nasal>
-        <hack>
-            <file>Aircraft/B-1B/Nasal/hackCanvas.nas</file>
-        </hack>
         <b1b>
             <file>Aircraft/B-1B/Nasal/b1b.nas</file>
             <file>Aircraft/B-1B/Nasal/cdu900.nas</file>
@@ -997,9 +995,14 @@ B-1B set file.
         <cg>
             <file>Aircraft/B-1B/Nasal/cg.nas</file>
         </cg>
-<!--         <GCI>
+        <GCI>
             <file>Aircraft/B-1B/Nasal/gci-listener.nas</file>
-        </GCI> -->
+        </GCI>
+        <!--        <emesary>-->
+        <!--            <file>Aircraft/B-1B/Nasal/emesary.nas</file>-->
+        <!--            <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>-->
+        <!--            <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>-->
+        <!--        </emesary>-->
         <notifications>
             <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
             <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
@@ -1010,9 +1013,9 @@ B-1B set file.
         <tfs>
             <file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
         </tfs>
-<!--         <ts>
+        <ts>
             <file>Aircraft/B-1B/Nasal/tyresmoke.nas</file>
-        </ts> -->
+        </ts>
         <rain>
             <file>Aircraft/B-1B/Nasal/rain.nas</file>
         </rain>
