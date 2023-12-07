@@ -827,8 +827,8 @@ B-1BFS
   </model>
 -->
   <model>
-	  <name>DSO alt</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/alt2-3d.xml</path>
+	  <name>DSO annunciators</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/rear_annunciators.xml</path>
 	  <condition>
 		  <or>
 		 <equals>
@@ -842,9 +842,9 @@ B-1BFS
 		  </or>
 	 </condition>
 	  <offsets>
-		  <x-m>-15.770</x-m>
-		  <y-m>-0.720</y-m>
-		  <z-m>1.830</z-m>
+		  <x-m>-15.780</x-m>
+		  <y-m>0</y-m>
+		  <z-m>1.835</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -1170,7 +1170,7 @@ B-1BFS
 		  <z-m>1.37553</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model> 
+  </model>
 
   <model>
 	  <name>RADARSCREEN-e</name>
@@ -1192,7 +1192,7 @@ B-1BFS
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
-  
+
   <model>
 	  <name>KNOBS</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/KNOBS.xml</path>
@@ -1202,7 +1202,7 @@ B-1BFS
 		  <z-m>1.80040</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model> 
+  </model>
 
   <model>
 	  <name>RADAR_CONTROLS</name>
@@ -1213,7 +1213,7 @@ B-1BFS
 		  <z-m>1.37257</z-m>
 		  <pitch-deg>-2</pitch-deg>
 	  </offsets>
-  </model> 
+  </model>
 
   <model>
 	  <name>SWITCHES+KNOBS1</name>
@@ -1240,31 +1240,8 @@ B-1BFS
 
 
   <model>
-	  <name>OSO alt</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/alt2-3d.xml</path>
-	  <condition>
-	       <or>
-		 <equals>ikb
-			 <property>sim/current-view/name</property>
-			 <value>OSO view</value>
-		 </equals>
-		 <equals>
-			 <property>sim/current-view/name</property>
-			 <value>DSO/OSO centered view</value>
-		 </equals>
-	       </or>
-	 </condition>
-	  <offsets>
-		  <x-m>-15.770</x-m>
-		  <y-m>0.450</y-m>
-		  <z-m>1.810</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-
-  <model>
 	  <name>OSO ai</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>target
+	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>
 	  <condition>
 	       <or>
 		 <equals>
@@ -1279,8 +1256,31 @@ B-1BFS
 	 </condition>
 	  <offsets>
 		  <x-m>-15.812</x-m>
-		  <y-m>0.550</y-m>
+		  <y-m>0.438</y-m>
 		  <z-m>1.810</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
+
+  <model>
+	  <name>OSO 102kt</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/rear-102kt.xml</path>
+	  <condition>
+	       <or>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
+		 </equals>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>DSO/OSO centered view</value>
+		 </equals>
+	       </or>
+	 </condition>
+	  <offsets>
+		  <x-m>-15.78</x-m>
+		  <y-m>0.35</y-m>
+		  <z-m>1.805</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -1398,7 +1398,7 @@ B-1BFS
 		  <z-m>1.63548</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model> 
+  </model>
 
   <model>
 	  <name>OSO MFD 3</name>
@@ -1409,7 +1409,7 @@ B-1BFS
 		  <z-m>1.63548</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model> 
+  </model>
 
   <model>
 	  <name>OSO MFD 4</name>
@@ -1420,7 +1420,7 @@ B-1BFS
 		  <z-m>1.54030</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model> 
+  </model>
 
   <model>
 	  <name>KEYBOARD1</name>
@@ -1444,7 +1444,7 @@ B-1BFS
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>SMALL COMPUTER</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/SMALL_COMPUTER.xml</path>
@@ -1466,7 +1466,7 @@ B-1BFS
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-  
+
   <model>
 	  <name>OSO bombnav-e</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/bombnav.xml</path>
@@ -1515,6 +1515,8 @@ B-1BFS
 		<object-name>OSO MFD 4</object-name>
 		<object-name>SMALL COMPUTER</object-name>
 		<object-name>KEYBOARD1</object-name>
+		<object-name>DSO annunciators</object-name>
+		<object-name>OSO 102kt</object-name>
 		<!--		<object-name>NAVAUX</object-name>-->
 		<object-name>OSO bombnav-e</object-name>
 		<!--		<object-name>AFS_ECU</object-name>-->
