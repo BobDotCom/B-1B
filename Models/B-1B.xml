@@ -3151,6 +3151,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>bay_intmd.001</object-name>
 	 <object-name>bay_intmd.002</object-name>
+	 <object-name>bay_intmd.006</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
 	 <property>doors/bay_fwd/position-norm</property>
 
@@ -3208,7 +3209,7 @@ more to come :-)
 
  <animation>
 	 <type>rotate</type>
-	 <object-name>bay_intmd.002</object-name>
+	 <object-name>bay_intmd.006</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
 	 <property>doors/bay_intmd/position-norm</property>
 
