@@ -373,20 +373,20 @@ B-1B set file.
                             <property>canopy/position-norm</property>
                         </binding>
                     </item>
-                    <item n="2">
+<!--                     <item n="2">
                         <label>Weapon/Fuel Management</label>
                         <binding>
                             <command>nasal</command>
                             <script>weapons.weapon_select.open()</script>
                         </binding>
-                    </item>
-                    <item n="3">
+                    </item> -->
+<!--                     <item n="3">
                         <label>Repair Damage</label>
                         <binding>
                             <command>nasal</command>
                             <script>weapons.repair_damage()</script>
                         </binding>
-                    </item>
+                    </item> -->
                     <item>
                         <label>Targeting Computer</label>
                         <name>targeting_comp</name>
