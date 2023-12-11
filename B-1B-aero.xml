@@ -129,6 +129,19 @@
    <retractable>1</retractable>
   </contact>
 
+    <contact type="STRUCTURE" name="RADOME">
+        <location unit="IN"> <!-- B-1B Fact Book -->
+            <x> 39.46 </x>
+            <y>  0.0  </y>
+            <z>  0.0  </z>
+        </location>
+        <static_friction>  1.00 </static_friction>
+        <dynamic_friction> 1.00 </dynamic_friction>
+        <spring_coeff unit="LBS/FT">      477000.00 </spring_coeff>
+        <damping_coeff unit="LBS/FT/SEC"> 477000.00 </damping_coeff>
+    </contact>
+
+
   <contact type="STRUCTURE" name="LEFT_WING">
     <location unit="IN">
      <x> 969.00 </x>
