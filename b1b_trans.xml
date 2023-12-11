@@ -1,0 +1,947 @@
+<?xml version="1.0"?>
+<!--
+sweat by maggse
+    -->
+<PropertyList>
+
+ <path>b1b_trans.ac</path>
+ 
+ 
+<!-- pilot and seat taken from the f-14b -->
+ 
+ <model>
+	 <name>captain</name>
+	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 
+	 <offsets>
+		 <x-m>-18.25</x-m>
+		 <y-m>0.55</y-m>
+		 <z-m>0.70</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>captain_seat</name>
+	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 
+	 <offsets>
+		 <x-m>-17.85</x-m>
+		 <y-m>0.55</y-m>
+		 <z-m>0.75</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>pilot</name>
+	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <condition>
+		 <not>
+		 <equals>
+			 <property>sim/current-view/view-number</property>
+			 <value>0</value>
+		 </equals>
+	         </not>
+	 </condition>
+	 <offsets>
+		 <x-m>-18.25</x-m>
+		 <y-m>-0.52</y-m>
+		 <z-m>0.70</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>pilot_seat</name>
+	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 
+	 <offsets>
+		 <x-m>-17.85</x-m>
+		 <y-m>-0.52</y-m>
+		 <z-m>0.75</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>OSO</name>
+	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <offsets>
+		 <x-m>-15.45</x-m>
+		 <y-m>-0.58</y-m>
+		 <z-m>0.85</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>OSO_seat</name>
+	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 
+	 <offsets>
+		 <x-m>-15.05</x-m>
+		 <y-m>-0.58</y-m>
+		 <z-m>0.85</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>DSO</name>
+	 <path>Aircraft/B-1B/Models/pilot_b1b.ac</path>
+	 <offsets>
+		 <x-m>-15.45</x-m>
+		 <y-m>0.63</y-m>
+		 <z-m>0.85</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>DSO_seat</name>
+	 <path>Aircraft/B-1B/Models/seat.ac</path>
+	 
+	 <offsets>
+		 <x-m>-15.05</x-m>
+		 <y-m>0.63</y-m>
+		 <z-m>0.85</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+
+ <!-- landing spots -->
+ 
+ <model>
+	 <name>landing spot</name>
+	 <path>Aircraft/B-1B/Models/landing_spot.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.00</x-m>
+		 <y-m>0</y-m>
+		 <z-m>0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>landing spot cone</name>
+	 <path>Aircraft/B-1B/Models/landing_cone.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.00</x-m>
+		 <y-m>0</y-m>
+		 <z-m>0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <!--<model>
+	 <name>landing spot rwy</name>
+	 <path>Aircraft/B-1B/Models/landing_spot_rwy.xml</path>
+	 <condition>
+		 <equals>
+			 <property>gear/gear/wow</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <offsets>
+		 <x-m>0.00</x-m>
+		 <y-m>0</y-m>
+		 <z-m>0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>-->
+ 
+ <!-- position lights -->
+<model>
+	 <name>posleft</name>
+	 <path>Aircraft/B-1B/Models/posred.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.00</x-m>
+		 <y-m>0.00</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+</model>
+<animation>
+  <type>dist-scale</type>
+  <object-name>posleft</object-name>
+  <interpolation>
+    <entry><ind>0</ind><dep>1</dep></entry>
+    <entry><ind>100</ind><dep>2</dep></entry>
+    <entry><ind>500</ind><dep>5</dep></entry>
+  </interpolation>
+  <min>1.0</min>
+  <max>5.0</max>
+  <center>
+    <x-m>2.80</x-m>
+    <y-m>-21.05</y-m>
+    <z-m>0.0</z-m>
+  </center>
+</animation>
+<model>
+	 <name>posright</name>
+	 <path>Aircraft/B-1B/Models/posgreen.xml</path>
+	 
+	 <offsets>
+		 <x-m>2.80</x-m>
+		 <y-m>21.05</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+</model>
+<animation>
+  <type>dist-scale</type>
+  <object-name>posright</object-name>
+  <interpolation>
+    <entry><ind>0</ind><dep>1</dep></entry>
+    <entry><ind>100</ind><dep>2</dep></entry>
+    <entry><ind>500</ind><dep>5</dep></entry>
+  </interpolation>
+  <min>1.0</min>
+  <max>5.0</max>
+  <center>
+    <x-m>2.80</x-m>
+    <y-m>21.05</y-m>
+    <z-m>0.0</z-m>
+  </center>
+</animation>
+ 
+ <!-- strobes -->
+ 
+ <model>
+	 <name>strobe2</name>
+	 <path>Aircraft/B-1B/Models/strobe.xml</path>
+
+	 <offsets>
+		 <x-m>-2.80</x-m>
+		 <y-m>-4.46</y-m>
+		 <z-m>-0.80</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ <animation>
+  <type>dist-scale</type>
+  <object-name>strobe2</object-name>
+  <interpolation>
+    <entry><ind>0</ind><dep>1.5</dep></entry>
+    <entry><ind>100</ind><dep>3</dep></entry>
+    <entry><ind>500</ind><dep>6</dep></entry>
+  </interpolation>
+  <min>1.0</min>
+  <max>5.0</max>
+  <center>
+    <x-m>-2.80</x-m>
+    <y-m>-4.46</y-m>
+    <z-m>-0.80</z-m>
+  </center>
+</animation>
+ 
+ <model>
+	 <name>strobe3</name>
+	 <path>Aircraft/B-1B/Models/strobe.xml</path>
+	 
+	 <offsets>
+		 <x-m>-2.80</x-m>
+		 <y-m>4.50</y-m>
+		 <z-m>-0.80</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+<animation>
+  <type>dist-scale</type>
+  <object-name>strobe3</object-name>
+  <interpolation>
+    <entry><ind>0</ind><dep>1.5</dep></entry>
+    <entry><ind>100</ind><dep>3</dep></entry>
+    <entry><ind>500</ind><dep>6</dep></entry>
+  </interpolation>
+  <min>1.0</min>
+  <max>5.0</max>
+  <center>
+    <x-m>-2.80</x-m>
+    <y-m>4.50</y-m>
+    <z-m>-0.80</z-m>
+  </center>
+</animation>
+ 
+ <model>
+	 <name>strobe4</name>
+	 <path>Aircraft/B-1B/Models/strobe.xml</path>
+	 
+	 <offsets>
+		 <x-m>17.91</x-m>
+		 <y-m>0.01</y-m>
+		 <z-m>5.74</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ <animation>
+  <type>dist-scale</type>
+  <object-name>strobe4</object-name>
+  <interpolation>
+    <entry><ind>0</ind><dep>1.5</dep></entry>
+    <entry><ind>100</ind><dep>3</dep></entry>
+    <entry><ind>500</ind><dep>6</dep></entry>
+  </interpolation>
+  <min>1.0</min>
+  <max>5.0</max>
+  <center>
+    <x-m>17.91</x-m>
+    <y-m>0.01</y-m>
+    <z-m>5.74</z-m>
+  </center>
+</animation>
+ 
+ <!-- engine outlets -->
+ 
+ <model>
+	 <name>engine_outlet_1</name>
+	 <path>Aircraft/B-1B/Models/engine_outlet_1.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.000</x-m>
+		 <y-m>0.00</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>engine_outlet_2</name>
+	 <path>Aircraft/B-1B/Models/engine_outlet_2.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.000</x-m>
+		 <y-m>1.627</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>engine_outlet_3</name>
+	 <path>Aircraft/B-1B/Models/engine_outlet_3.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.000</x-m>
+		 <y-m>6.646</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+ <model>
+	 <name>engine_outlet_4</name>
+	 <path>Aircraft/B-1B/Models/engine_outlet_4.xml</path>
+	 
+	 <offsets>
+		 <x-m>0.000</x-m>
+		 <y-m>8.273</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+ </model>
+ 
+	 
+ 
+ <!--<model>
+	 <name>strobe1</name>
+	 <path>Aircraft/B-1B/Models/blast/strobe.xml</path>
+	 <offsets>
+		 <x-m>-3.500</x-m>
+		 <y-m>4.9</y-m>
+		 <z-m>-1.0</z-m>
+		 <pitch-deg>90</pitch-deg>
+	 </offsets>
+ </model>-->
+
+  <!-- engine fire -->
+  
+  <animation>
+	  <type>noshadow</type>
+	  <object-name>eng_left_ex.002</object-name>
+	  <object-name>eng_left_ex.003</object-name>
+	  <object-name>eng_right_ex.002</object-name>
+	  <object-name>eng_right_ex.003</object-name>
+  </animation>
+  
+  <animation>
+	  <type>blend</type>
+	  <object-name>eng_left_ex.002</object-name>
+	  <property>engines/engine[0]/thrust-lbs</property>
+	  <offset>1.0</offset>
+	  <factor>-0.000033</factor>
+ </animation>
+ 
+ <animation>
+	 <type>blend</type>
+	 <object-name>eng_left_ex.003</object-name>
+	 <property>engines/engine[1]/thrust-lbs</property>
+	 <offset>1</offset>
+	 <factor>-0.000033</factor>
+ </animation>
+ 
+ <animation>
+	 <type>blend</type>
+	 <object-name>eng_right_ex.002</object-name>
+	 <property>engines/engine[2]/thrust-lbs</property>
+	 <offset>1</offset>
+	 <factor>-0.000033</factor>
+ </animation>
+
+ <animation>
+	 <type>blend</type>
+	 <object-name>eng_right_ex.003</object-name>
+	 <property>engines/engine[3]/thrust-lbs</property>
+	 <offset>1</offset>
+	 <factor>-0.000033</factor>
+ </animation>
+ 
+
+ <!-- engine turbines -->
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>turbine_1.001</object-name>
+	 <property>engines/engine[0]/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>-2.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>78.0</ind>
+			 <dep>-10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>-50.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.993</x-m>
+		 <y-m>-4.112</y-m>
+		 <z-m>-1.679</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>turbine_2.001</object-name>
+	 <property>engines/engine[1]/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>2</dep>
+		 </entry>
+		 <entry>
+			 <ind>78.0</ind>
+			 <dep>10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>50.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.993</x-m>
+		 <y-m>-2.492</y-m>
+		 <z-m>-1.687</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>turbine_3.001</object-name>
+	 <property>engines/engine[2]/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>-2</dep>
+		 </entry>
+		 <entry>
+			 <ind>78.0</ind>
+			 <dep>-10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>-50.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.993</x-m>
+		 <y-m>2.533</y-m>
+		 <z-m>-1.678</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>spin</type>
+	 <object-name>turbine_4.001</object-name>
+	 <property>engines/engine[3]/n2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>72.0</ind>
+			 <dep>2</dep>
+		 </entry>
+		 <entry>
+			 <ind>78.0</ind>
+			 <dep>10.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>100.0</ind>
+			 <dep>50.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-15.993</x-m>
+		 <y-m>4.160</y-m>
+		 <z-m>-1.680</z-m>
+	 </center>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <!-- rain -->
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>bone_rain.001</object-name>
+	 <condition>
+	   <and>
+	      <equals>
+		      <property>environment/rain/above_clouds</property>
+		      <value>0</value>
+	      </equals>
+	       <or>
+		 <greater-than>
+			 <property>environment/metar/rain-norm</property>
+			 <value>0.2</value>
+		 </greater-than>
+		 <greater-than>
+			 <property>environment/metar/snow-norm</property>
+			 <value>0.2</value>
+		 </greater-than>
+	        </or>
+	    </and>
+	 </condition>
+  </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>bone_rain.001</object-name>
+	 <property>environment/rain/rain</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ 
+<!-- xml OSG particles part starts here -->
+ 
+	 
+<!-- aircraft wash modeled in the lines below -->
+ 
+<model>
+	 <name>aircraft_wash_l</name>
+	 <path>Aircraft/B-1B/Models/Effects/aircraft_wash.xml</path>
+	 <offsets>
+		 <x-m>25.000</x-m>
+		 <y-m>4.50</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+</model>
+ 
+<model>
+	 <name>aircraft_wash_r</name>
+	 <path>Aircraft/B-1B/Models/Effects/aircraft_wash.xml</path>
+	 <offsets>
+		 <x-m>25.000</x-m>
+		 <y-m>-4.50</y-m>
+		 <z-m>0.0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+</model>
+	 
+<animation>
+	 <type>translate</type>
+	 <object-name>aircraft_wash_l</object-name>
+	 <object-name>aircraft_wash_r</object-name>
+	 <property>position/altitude-agl-ft</property>
+	 <condition>
+		 <equals>
+			 <property>controls/state/low_level</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>300.0</ind>
+			 <dep>-90</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>-1</x>
+		 <y>0</y>
+		 <z>1.0</z>
+	 </axis>
+</animation>
+		 
+	 
+<!-- gear smoke -->
+	 
+<model>
+  <name>gear_smoke_right</name>
+  <path>Aircraft/B-1B/Models/Effects/gearsmoke_right.xml</path>
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+
+<model>
+	<name>gear_smoke_left</name>
+  <path>Aircraft/B-1B/Models/Effects/gearsmoke_left.xml</path>
+	<offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+	</offsets>
+</model>
+	
+
+<!-- particle system for engine blast-->
+
+<model>
+  <name>engineblast1</name>
+  <path>Aircraft/B-1B/Models/Effects/engblast1.xml</path>
+	<condition>
+  <not>
+				<equals>
+      <property>engines/engine[4]/n1</property>
+      <value>1</value>
+				</equals>
+  </not>
+	</condition>
+	<offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>engineblast2</name>
+  <path>Aircraft/B-1B/Models/Effects/engblast2.xml</path>
+	<condition>
+  <not>
+				<equals>
+      <property>engines/engine[5]/n1</property>
+      <value>1</value>
+				</equals>
+  </not>
+		</condition>
+	<offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>engineblast3</name>
+  <path>Aircraft/B-1B/Models/Effects/engblast3.xml</path>
+	<condition>
+  <not>
+				<equals>
+      <property>engines/engine[6]/n1</property>
+      <value>1</value>
+				</equals>
+  </not>
+		</condition>
+	<offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>engineblast4</name>
+  <path>Aircraft/B-1B/Models/Effects/engblast4.xml</path>
+	<condition>
+  <not>
+				<equals>
+      <property>engines/engine[7]/n1</property>
+      <value>1</value>
+				</equals>
+  </not>
+		</condition>
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+	
+
+<!-- particle system for engine afterburner-->
+
+<model>
+  <name>afterburner1</name>
+  <path>Aircraft/B-1B/Models/Effects/afterburner1.xml</path>
+	<offsets>
+    <x-m>8.700</x-m>
+		<y-m>-4.11</y-m>
+		<z-m>-1.68</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+	</offsets>
+</model>
+	
+<model>
+  <name>afterburner2</name>
+  <path>Aircraft/B-1B/Models/Effects/afterburner2.xml</path>
+	<offsets>
+    <x-m>8.700</x-m>
+		<y-m>-2.48</y-m>
+		<z-m>-1.68</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+	</offsets>
+</model>
+	
+<model>
+  <name>afterburner3</name>
+  <path>Aircraft/B-1B/Models/Effects/afterburner3.xml</path>
+  <offsets>
+    <x-m>8.700</x-m>
+    <y-m>2.48</y-m>
+    <z-m>-1.68</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+	
+<model>
+  <name>afterburner4</name>
+  <path>Aircraft/B-1B/Models/Effects/afterburner4.xml</path>
+  <offsets>
+    <x-m>8.700</x-m>
+    <y-m>4.11</y-m>
+    <z-m>-1.68</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+	
+<!-- add wing contrails/vapour -->
+		
+<model>
+  <name>left_contrail</name>
+  <path>Aircraft/B-1B/Models/Effects/vapour_wing.xml</path>
+  <offsets>
+    <x-m>7.00</x-m>
+    <y-m>-21.50</y-m>
+    <z-m>-0.9</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>right_contrail</name>
+  <path>Aircraft/B-1B/Models/Effects/vapour_wing.xml</path>
+  <offsets>
+    <x-m>7.00</x-m>
+    <y-m>21.50</y-m>
+    <z-m>-0.9</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+	
+<model>
+  <name>vapour_body</name>
+  <path>Aircraft/B-1B/Models/Effects/vapour_body.xml</path>
+	<offsets>
+    <x-m>-4.00</x-m>
+    <y-m>0.00</y-m>
+    <z-m>-0.7</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+	</offsets>
+</model>
+	
+ <!-- contrail movement acc to wingsweep-->
+ <animation>
+	
+	 <type>translate</type>
+	 <object-name>left_contrail</object-name>
+	 <property>rotors/main/blade[0]/position-deg</property>
+	
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>14.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0</dep>
+		 </entry>
+	 </interpolation>
+		
+	 <axis>
+		 <x>1.0</x>
+		 <y>1.4</y>
+		 <z>0.0</z>
+	 </axis>
+</animation>
+
+<animation>
+         
+	 <type>translate</type>
+	 <object-name>right_contrail</object-name>
+	 <property>rotors/main/blade[0]/position-deg</property>
+
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>14.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0</dep>
+		 </entry>
+	 </interpolation>
+	 
+	 <axis>
+		 <x>1.0</x>
+		 <y>-1.4</y>
+		 <z>0.0</z>
+	 </axis>	 
+</animation>
+
+ <!-- engine contrails -->
+ 
+<model>
+  <name>contrail_eng01</name>
+  <path>Aircraft/B-1B/Models/Effects/contrail.xml</path>
+	
+	<offsets>
+    <x-m>18.00</x-m>
+    <y-m>-3.45</y-m>
+    <z-m>-1.5</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+	</offsets>
+</model>
+	
+<model>
+  <name>contrail_eng23</name>
+  <path>Aircraft/B-1B/Models/Effects/contrail.xml</path>
+	
+  <offsets>
+    <x-m>18.00</x-m>
+    <y-m>3.45</y-m>
+    <z-m>-1.5</z-m>
+    <heading-deg>0</heading-deg>
+    <roll-deg>    0 </roll-deg>
+    <pitch-deg>   0 </pitch-deg>
+  </offsets>
+</model>
+		
+<animation>
+  <type>select</type>
+  <object-name>contrail_eng01</object-name>
+  <condition>
+    <or>
+    <greater-than>
+       <property>/engines/engine[0]/n2</property>
+       <value>50</value>
+    </greater-than>
+    <greater-than>
+       <property>/engines/engine[1]/n2</property>
+       <value>50</value>
+    </greater-than>
+    </or>
+  </condition>
+</animation>
+	
+<animation>
+  <type>select</type>
+  <object-name>contrail_eng23</object-name>
+  <condition>
+    <or>
+    <greater-than>
+       <property>/engines/engine[2]/n2</property>
+       <value>50</value>
+    </greater-than>
+    <greater-than>
+       <property>/engines/engine[3]/n2</property>
+       <value>50</value>
+    </greater-than>
+    </or>
+  </condition>
+</animation>
+	
+
+</PropertyList>

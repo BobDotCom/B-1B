@@ -2,16 +2,12 @@ _setlistener("/sim/signals/fdm-initialized", func {
 	init_b1b();
 });
 
-# Adding Engines to FailMgr to allow for them to be killed with damage.
-# var e0 = compat_failure_modes.fail_engine("engine");#
-# FailureMgr.add_failure_mode("engines/engine", "Engine 1", e0);#
-# var e1 = compat_failure_modes.fail_engine("engine[1]");#
-# FailureMgr.add_failure_mode("engines/engine[1]", "Engine 2", e1);#
-# var e2 = compat_failure_modes.fail_engine("engine[2]");#
-# FailureMgr.add_failure_mode("engines/engine[2]", "Engine 3", e2);#
-# var e3 = compat_failure_modes.fail_engine("engine[3]");#
-# FailureMgr.add_failure_mode("engines/engine[3]", "Engine 4", e3);#
-# Disabled 26/09/23 - Integrated into damage.nas
+# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
+var hmd = modules.Module.new("displays");
+hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
+hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
+hmd.setMainFile("displays.nas");
+hmd.load();
 
 var init_b1b = func {
 setprop("systems/refuel/serviceable", 'false');

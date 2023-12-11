@@ -11,47 +11,6 @@ more to come :-)
 	<nasal>
 	  <load>
 		<![CDATA[
-
-			#loads the crater and smoke models over mp.
-
-			print("~~~B-1B Crater Over Multiplayer is loaded~~~");
-			print("!!!B-1B's can create craters on airports!!!!");
-			print("***Use the MP Pilot List to "ignore" trolls to prevent this from happening!***");
-
-			var listener_prop = "/sim/multiplay/b-1b/listener-set";
-			var history_prop = "/sim/multiplay/chat-history";
-
-			props.globals.initNode(listener_prop,0);
-
-			var load_bomb_exploded_models = func () {
-				var history = getprop("/sim/multiplay/chat-history");
-				var hist_vector = split("\n", history);
-				if (size(hist_vector) > 0) {
-					var last = hist_vector[size(hist_vector)-1];
-					var last_vector = split(":", last);
-					var author = last_vector[0];
-					var callsign = getprop("sim/multiplay/callsign");
-					if (size(last_vector) > 2 and author != callsign) {
-						if ( last_vector[2] == " GBU-31 positive impact" or " GBU-31 exploded") {
-							foreach(var mp; props.globals.getNode("/ai/models").getChildren("multiplayer")) {
-								if ( mp.getNode("callsign").getValue() == author and mp.getNode("sim/multiplay/generic/string[0]") != "" ) {
-									var boom_coords = split("|",mp.getNode("sim/multiplay/generic/string[0]").getValue());
-									geo.put_model("Aircraft/B-1B/Models/crater.ac",boom_coords[0], boom_coords[1]);
-									geo.put_model("Aircraft/B-1B/Models/smoke.xml",boom_coords[0], boom_coords[1]);
-								}
-							}
-						}
-					}
-				}
-
-
-			}
-
-			if ( props.globals.getNode(listener_prop).getValue() == 0 ) {
-				setlistener(history_prop, func { load_bomb_exploded_models(); } );
-				props.globals.getNode(listener_prop).setValue(1);
-			}
-
 			var looping = 1;
 			var loop = func {
 				var red = getprop("rendering/scene/diffuse/red");
@@ -3222,6 +3181,7 @@ more to come :-)
 	 <type>translate</type>
 	 <object-name>bay_intmd.001</object-name>
 	 <object-name>bay_intmd.002</object-name>
+	 <object-name>bay_intmd.006</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
 	 <property>doors/bay_fwd/position-norm</property>
 
@@ -3279,7 +3239,7 @@ more to come :-)
 
  <animation>
 	 <type>rotate</type>
-	 <object-name>bay_intmd.002</object-name>
+	 <object-name>bay_intmd.006</object-name>
 	 <property>sim/multiplay/generic/float[3]</property>
 	 <property>doors/bay_intmd/position-norm</property>
 
