@@ -83,9 +83,9 @@
 
   <contact type="BOGEY" name="NOSE">
    <location unit="IN">
-     <x> 227.76 </x>
+     <x> 360.25 </x>
      <y>   0.00 </y>
-     <z> -210.24 </z>
+     <z> -121.5 </z>
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
@@ -99,9 +99,9 @@
 
   <contact type="BOGEY" name="LEFT_MAIN">
    <location unit="IN">
-     <x> 1007.76 </x>
-     <y> -147.96 </y>
-     <z> -210.24 </z>
+     <x> 1038.0 </x>
+     <y> -87.0 </y>
+     <z> -122.45 </z>
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
@@ -115,9 +115,9 @@
 
   <contact type="BOGEY" name="RIGHT_MAIN">
    <location unit="IN">
-     <x> 1007.76 </x>
-     <y> 147.96 </y>
-     <z> -210.24 </z>
+     <x> 1038.0 </x>
+     <y> 87.0 </y>
+     <z> -122.45 </z>
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
