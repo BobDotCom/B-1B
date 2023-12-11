@@ -37,6 +37,10 @@
     K:             0.12
 
 -->
+    <system file="eng_ind.xml"/>
+    <system file="b1b-engines.xml"/>
+    <system file="b1b-pneumatic.xml"/>
+    <system file="b1b-electrical.xml"/>
 
  <metrics>
    <wingarea  unit="FT2"> 1946.00 </wingarea>
@@ -74,15 +78,6 @@
      <y>   0.00 </y>
      <z> -43.80 </z>
    </location>
-   <pointmass name="Payload">
-    <description> 191454 LBS + full (98739 LBS) fuel should bring model up to entered max weight</description>
-    <weight unit="LBS">  95727.0 </weight>
-    <location name="POINTMASS" unit="IN">
-      <x> 1140.00 </x>
-      <y>   0.00 </y>
-      <z> -43.80 </z>
-    </location>
-  </pointmass>
  </mass_balance>
 
  <ground_reactions>

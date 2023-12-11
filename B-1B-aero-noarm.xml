@@ -6,7 +6,7 @@
 
  <fileheader>
   <author> Aeromatic v 0.96 </author>
-  <filecreationdate>2023-11-18</filecreationdate>
+  <filecreationdate>2023-10-30</filecreationdate>
   <version>$Revision: 1.20 $</version>
   <description> Models a B-1B. </description>
  </fileheader>
@@ -21,7 +21,7 @@
     length:        146 ft
     wing area:     1946 sq-ft
     gear type:     tricycle
-    castering:
+    castering:     
     retractable?:  yes
     # engines:     4
     engine type:   turbine
@@ -44,11 +44,11 @@
    <wing_incidence>          2.00 </wing_incidence>
    <chord     unit="FT" >   14.20 </chord>
    <htailarea unit="FT2">  509.00 </htailarea>
-   <htailarm  unit="FT" >   65.25 </htailarm>
+   <htailarm  unit="FT" >   58.40 </htailarm>
    <vtailarea unit="FT2">  247.40 </vtailarea>
-   <vtailarm  unit="FT" >   65.25 </vtailarm>
+   <vtailarm  unit="FT" >   58.40 </vtailarm>
    <location name="AERORP" unit="IN">
-     <x> 969.00 </x>
+     <x> 1051.20 </x>
      <y>   0.00 </y>
      <z>   0.00 </z>
    </location>
@@ -70,15 +70,21 @@
    <izz unit="SLUG*FT2">   4881552 </izz>
    <emptywt unit="LBS" >    186807 </emptywt>
    <location name="CG" unit="IN">
-     <x> 969.00 </x>
+     <x> 1051.20 </x>
      <y>   0.00 </y>
      <z> -43.80 </z>
    </location>
+   <pointmass name="Payload">
+    <description> 191454 LBS + full (98739 LBS) fuel should bring model up to entered max weight</description>
+    <weight unit="LBS">  95727.0 </weight>
+    <location name="POINTMASS" unit="IN">
+      <x> 1051.20 </x>
+      <y>   0.00 </y>
+      <z> -43.80 </z>
+    </location>
+  </pointmass> 
  </mass_balance>
-    <system file="eng_ind.xml"/>
-    <system file="b1b-engines.xml"/>
-    <system file="b1b-pneumatic.xml"/>
-    <system file="b1b-electrical.xml"/>
+
  <ground_reactions>
 
   <contact type="BOGEY" name="NOSE">
@@ -99,7 +105,7 @@
 
   <contact type="BOGEY" name="LEFT_MAIN">
    <location unit="IN">
-     <x> 1007.76 </x>
+     <x> 1093.25 </x>
      <y> -147.96 </y>
      <z> -210.24 </z>
    </location>
@@ -115,7 +121,7 @@
 
   <contact type="BOGEY" name="RIGHT_MAIN">
    <location unit="IN">
-     <x> 1007.76 </x>
+     <x> 1093.25 </x>
      <y> 147.96 </y>
      <z> -210.24 </z>
    </location>
@@ -131,7 +137,7 @@
 
   <contact type="STRUCTURE" name="LEFT_WING">
     <location unit="IN">
-     <x> 969.00 </x>
+     <x> 1051.20 </x>
      <y> -68.50 </y>
      <z> -43.80 </z>
     </location>
@@ -143,7 +149,7 @@
 
   <contact type="STRUCTURE" name="RIGHT_WING">
     <location unit="IN">
-     <x> 969.00 </x>
+     <x> 1051.20 </x>
      <y>  68.50 </y>
      <z> -43.80 </z>
     </location>
@@ -157,9 +163,9 @@
 
  <propulsion>
 
-   <engine file="F101-GE-102">
+   <engine file="B-1B_engine">
     <location unit="IN">
-      <x> 969.00 </x>
+      <x> 1051.20 </x>
       <y> -60.00 </y>
       <z> -12.00 </z>
     </location>
@@ -171,7 +177,7 @@
     <feed>0</feed>
     <thruster file="direct">
      <location unit="IN">
-       <x> 969.00 </x>
+       <x> 1051.20 </x>
        <y> -60.00 </y>
        <z> -12.00 </z>
      </location>
@@ -183,9 +189,9 @@
     </thruster>
   </engine>
 
-   <engine file="F101-GE-102">
+   <engine file="B-1B_engine">
     <location unit="IN">
-      <x> 969.00 </x>
+      <x> 1051.20 </x>
       <y> -20.00 </y>
       <z> -12.00 </z>
     </location>
@@ -197,7 +203,7 @@
     <feed>1</feed>
     <thruster file="direct">
      <location unit="IN">
-       <x> 969.00 </x>
+       <x> 1051.20 </x>
        <y> -20.00 </y>
        <z> -12.00 </z>
      </location>
@@ -209,9 +215,9 @@
     </thruster>
   </engine>
 
-   <engine file="F101-GE-102">
+   <engine file="B-1B_engine">
     <location unit="IN">
-      <x> 969.00 </x>
+      <x> 1051.20 </x>
       <y>  20.00 </y>
       <z> -12.00 </z>
     </location>
@@ -223,7 +229,7 @@
     <feed>2</feed>
     <thruster file="direct">
      <location unit="IN">
-       <x> 969.00 </x>
+       <x> 1051.20 </x>
        <y>  20.00 </y>
        <z> -12.00 </z>
      </location>
@@ -235,9 +241,9 @@
     </thruster>
   </engine>
 
-   <engine file="F101-GE-102">
+   <engine file="B-1B_engine">
     <location unit="IN">
-      <x> 969.00 </x>
+      <x> 1051.20 </x>
       <y>  60.00 </y>
       <z> -12.00 </z>
     </location>
@@ -249,7 +255,7 @@
     <feed>3</feed>
     <thruster file="direct">
      <location unit="IN">
-       <x> 969.00 </x>
+       <x> 1051.20 </x>
        <y>  60.00 </y>
        <z> -12.00 </z>
      </location>
@@ -260,45 +266,10 @@
      </orient>
     </thruster>
   </engine>
-      <engine file="GTCP165-9A">
-    <feed> 0 </feed>
-
-    <thruster file="direct">
-     <sense> 1 </sense>
-    <location unit="IN">
-      <x> 969.00 </x>
-      <y>   0.00 </y>
-      <z> -43.80 </z>
-    </location>
-     <orient unit="DEG">
-       <pitch>     0.00 </pitch>
-        <roll>     0.00 </roll>
-         <yaw>     0.00 </yaw>
-     </orient>
-    </thruster>
-  </engine>
-     <engine file="GTCP165-9A">
-    <feed> 0 </feed>
-
-    <thruster file="direct">
-     <sense> 1 </sense>
-    <location unit="IN">
-      <x> 969.00 </x>
-      <y>   0.00 </y>
-      <z> -43.80 </z>
-    </location>
-     <orient unit="DEG">
-       <pitch>     0.00 </pitch>
-        <roll>     0.00 </roll>
-         <yaw>     0.00 </yaw>
-     </orient>
-    </thruster>
-  </engine>
-
 
   <tank type="FUEL" number="0">
      <location unit="IN">
-       <x> 969.00 </x>
+       <x> 1051.20 </x>
        <y>   0.00 </y>
        <z> -43.80 </z>
      </location>
@@ -308,7 +279,7 @@
 
   <tank type="FUEL" number="1">
      <location unit="IN">
-       <x> 969.00 </x>
+       <x> 1051.20 </x>
        <y>   0.00 </y>
        <z> -43.80 </z>
      </location>
@@ -318,7 +289,7 @@
 
   <tank type="FUEL" number="2">
      <location unit="IN">
-       <x> 969.00 </x>
+       <x> 1051.20 </x>
        <y>   0.00 </y>
        <z> -43.80 </z>
      </location>
@@ -328,7 +299,7 @@
 
   <tank type="FUEL" number="3">
      <location unit="IN">
-       <x> 969.00 </x>
+       <x> 1051.20 </x>
        <y>   0.00 </y>
        <z> -43.80 </z>
      </location>
@@ -338,7 +309,7 @@
 
   <tank type="FUEL" number="4">
      <location unit="IN">
-       <x> 969.00 </x>
+       <x> 1051.20 </x>
        <y>   0.00 </y>
        <z> -43.80 </z>
      </location>
