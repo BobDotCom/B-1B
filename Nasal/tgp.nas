@@ -215,7 +215,7 @@ var camera_movement_speed_lock = 75;#Higher number means slower
 var camera_movement_speed_free =  5;
 
 var list = func (node) {
-    var button = getprop("controls/MFD[2]/button-pressed");
+    var button = getprop("controls/TGP/button-pressed");
 
     if (button == 20) {#BACK
         view.setViewByIndex(0);
@@ -392,7 +392,7 @@ var list = func (node) {
         }
     }
 };
-setlistener("controls/MFD[2]/button-pressed", list);
+setlistener("controls/TGP/button-pressed", list);
 setlistener("controls/displays/cursor-click", list);
 
 

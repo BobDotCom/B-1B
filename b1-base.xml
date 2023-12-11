@@ -94,17 +94,6 @@ B-1B set file.
         <aero>B-1B-yasim</aero>
         <fuel-fraction>0.65</fuel-fraction>
 
-        <description>Rockwell B-1B Lancer</description>
-        <long-description>
-            The Rockwell B-1 Lancer, commonly referred to as the "Bone" (derived from "B-One"), is a supersonic heavy
-            bomber equipped with variable-sweep wings, and remains integral to the United States Air Force. Alongside
-            the B-2 Spirit and B-52 Stratofortress, it constitutes one of three strategic bombers in the U.S. Air
-            Force's current arsenal. Notably designed for adaptability, the B-1 excels in various roles, owing to its
-            ability to alter its wing configuration during flight. This advanced aircraft plays a crucial role in the
-            nation's defense strategy, offering exceptional speed, payload capacity, and versatility for a wide array of
-            mission profiles.
-        </long-description>
-
         <urls>
             <support>https://discord.gg/GnNmpdkvGa</support>
             <wikipedia>https://en.wikipedia.org/wiki/Rockwell_B-1_Lancer</wikipedia>
@@ -143,7 +132,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">70.7</default-field-of-view-deg>
                 <default-pitch-deg type="double">0</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -170,7 +159,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">84.5</default-field-of-view-deg>
                 <default-pitch-deg type="double">0</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -197,8 +186,8 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
-                <default-pitch-deg type="double">0</default-pitch-deg>
+                <default-field-of-view-deg type="double">69.3</default-field-of-view-deg>
+                <default-pitch-deg type="double">-5</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
                 <front-left-direction-deg type="double">45</front-left-direction-deg>
@@ -384,20 +373,20 @@ B-1B set file.
                             <property>canopy/position-norm</property>
                         </binding>
                     </item>
-                    <item n="2">
+<!--                     <item n="2">
                         <label>Weapon/Fuel Management</label>
                         <binding>
                             <command>nasal</command>
                             <script>weapons.weapon_select.open()</script>
                         </binding>
-                    </item>
-                    <item n="3">
+                    </item> -->
+<!--                     <item n="3">
                         <label>Repair Damage</label>
                         <binding>
                             <command>nasal</command>
                             <script>weapons.repair_damage()</script>
                         </binding>
-                    </item>
+                    </item> -->
                     <item>
                         <label>Targeting Computer</label>
                         <name>targeting_comp</name>
@@ -995,6 +984,9 @@ B-1B set file.
 
 
     <nasal>
+        <hack>
+            <file>Aircraft/B-1B/Nasal/hackCanvas.nas</file>
+        </hack>
         <b1b>
             <file>Aircraft/B-1B/Nasal/b1b.nas</file>
             <file>Aircraft/B-1B/Nasal/cdu900.nas</file>
@@ -1005,14 +997,11 @@ B-1B set file.
         <cg>
             <file>Aircraft/B-1B/Nasal/cg.nas</file>
         </cg>
+        <!--
         <GCI>
             <file>Aircraft/B-1B/Nasal/gci-listener.nas</file>
         </GCI>
-        <!--        <emesary>-->
-        <!--            <file>Aircraft/B-1B/Nasal/emesary.nas</file>-->
-        <!--            <file>Aircraft/B-1B/Nasal/emesary_mp_bridge.nas</file>-->
-        <!--            <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>-->
-        <!--        </emesary>-->
+        -->
         <notifications>
             <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
             <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
@@ -1023,9 +1012,11 @@ B-1B set file.
         <tfs>
             <file>Aircraft/B-1B/Nasal/terrain_follow.nas</file>
         </tfs>
+        <!--
         <ts>
             <file>Aircraft/B-1B/Nasal/tyresmoke.nas</file>
         </ts>
+        -->
         <rain>
             <file>Aircraft/B-1B/Nasal/rain.nas</file>
         </rain>

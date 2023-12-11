@@ -50,5 +50,9 @@
   "airbases": {
     "version": "1.0.28",
     "path": "Nasal/airbases.nas"
+  },
+  "hack-canvas": {
+    "version": null,
+    "path": "Nasal/hackCanvas.nas"
   }
 }
