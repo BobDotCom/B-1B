@@ -826,6 +826,7 @@ B-1BFS
 	  </offsets>
   </model>
 -->
+
   <model>
 	  <name>DSO annunciators</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/rear_annunciators.xml</path>
@@ -848,6 +849,8 @@ B-1BFS
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
+
+
 
   <model>
 	  <name>DSO ai-e</name>
@@ -1170,7 +1173,7 @@ B-1BFS
 		  <z-m>1.37553</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model>
+  </model> 
 
   <model>
 	  <name>RADARSCREEN-e</name>
@@ -1192,7 +1195,7 @@ B-1BFS
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
-
+  
   <model>
 	  <name>KNOBS</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/KNOBS.xml</path>
@@ -1202,7 +1205,7 @@ B-1BFS
 		  <z-m>1.80040</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model>
+  </model> 
 
   <model>
 	  <name>RADAR_CONTROLS</name>
@@ -1213,7 +1216,7 @@ B-1BFS
 		  <z-m>1.37257</z-m>
 		  <pitch-deg>-2</pitch-deg>
 	  </offsets>
-  </model>
+  </model> 
 
   <model>
 	  <name>SWITCHES+KNOBS1</name>
@@ -1236,8 +1239,6 @@ B-1BFS
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-
-
 
   <model>
 	  <name>OSO ai</name>
@@ -1284,7 +1285,6 @@ B-1BFS
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-
                      <!--- DSO Instruments -->
 	<model>
 		<name>DSO ikb</name>
@@ -1398,7 +1398,7 @@ B-1BFS
 		  <z-m>1.63548</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model>
+  </model> 
 
   <model>
 	  <name>OSO MFD 3</name>
@@ -1409,7 +1409,7 @@ B-1BFS
 		  <z-m>1.63548</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model>
+  </model> 
 
   <model>
 	  <name>OSO MFD 4</name>
@@ -1420,7 +1420,7 @@ B-1BFS
 		  <z-m>1.54030</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
-  </model>
+  </model> 
 
   <model>
 	  <name>KEYBOARD1</name>
@@ -1444,7 +1444,7 @@ B-1BFS
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-
+  
   <model>
 	  <name>SMALL COMPUTER</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/SMALL_COMPUTER.xml</path>
@@ -1466,7 +1466,7 @@ B-1BFS
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
-
+  
   <model>
 	  <name>OSO bombnav-e</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/bombnav.xml</path>
@@ -1562,7 +1562,7 @@ B-1BFS
 		<object-name>satcom</object-name>
 		<object-name>coded switch</object-name>
 		<object-name>RADARSCREEN</object-name>
-		<object-name>chan freq mode</object-name>
+		<object-name>chan freq mode</object-name> 
 
 		<condition>
 			<less-than-equals>
