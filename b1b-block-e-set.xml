@@ -2,7 +2,7 @@
 <PropertyList include="b1-base.xml">
     <sim>
         <variant-id>5</variant-id>
-        <variant-of>b1-block-d</variant-of>
+        <variant-of>b1b-block-d</variant-of>
         <description>Rockwell B-1B Block E</description>
         <long-description>
             The Rockwell B-1 Lancer, commonly referred to as the "Bone" (derived from "B-One"), is a supersonic heavy
