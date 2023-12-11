@@ -1,0 +1,232 @@
+<PropertyList>
+    <name>fdm_tune_roll</name>
+    <modal>false</modal>
+    <layout>vbox</layout>
+    <group>
+        <layout>hbox</layout>
+        <text>
+            <halign>center</halign>
+            <label>Tune Roll</label>
+        </text>
+    </group>
+    <hrule/>
+    <group>
+        <layout>hbox</layout>
+        <group>
+            <layout>vbox</layout>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Roll_beta</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Roll_beta</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/roll/beta</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/roll/beta</property>
+                    <live>true</live>
+                </text>
+            </group>
+                        <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Roll_damp</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Roll_damp</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/roll/damp</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/roll/damp</property>
+                    <live>true</live>
+                </text>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Roll_yaw</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Roll_yaw</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/roll/yaw</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/roll/yaw</property>
+                    <live>true</live>
+                </text>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Roll_aileron</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Roll_aileron</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/roll/aileron</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/roll/aileron</property>
+                    <live>true</live>
+                </text>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Roll_rudder</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Roll_rudder</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/roll/rudder</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/roll/rudder</property>
+                    <live>true</live>
+                </text>
+            </group>
+        </group>
+
+    </group>
+    <hrule />
+    <group>
+        <layout>hbox</layout>
+        <!-- buttons -->
+
+        <button>
+            <legend>Apply</legend>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </button>
+
+        <button>
+            <legend>Close</legend>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+</PropertyList>

@@ -1,0 +1,194 @@
+<PropertyList>
+    <name>fdm_tune_pitch</name>
+    <modal>false</modal>
+    <layout>vbox</layout>
+    <group>
+        <layout>hbox</layout>
+        <text>
+            <halign>center</halign>
+            <label>Tune Pitch</label>
+        </text>
+    </group>
+    <hrule/>
+    <group>
+        <layout>hbox</layout>
+        <group>
+            <layout>vbox</layout>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Pitch_alpha</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Pitch_alpha</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/pitch/alpha</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/pitch/alpha</property>
+                    <live>true</live>
+                </text>
+            </group>
+                       <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Pitch_elevator</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Pitch_elevator</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/pitch/elevator</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/pitch/elevator</property>
+                    <live>true</live>
+                </text>
+            </group>
+                       <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Pitch_damp</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Pitch_damp</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/pitch/damp</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/pitch/damp</property>
+                    <live>true</live>
+                </text>
+            </group>
+                       <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Pitch_alphadot</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Pitch_alphadot</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/pitch/alphadot</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/pitch/alphadot</property>
+                    <live>true</live>
+                </text>
+            </group>
+        </group>
+
+    </group>
+    <hrule />
+    <group>
+        <layout>hbox</layout>
+        <!-- buttons -->
+
+        <button>
+            <legend>Apply</legend>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </button>
+
+        <button>
+            <legend>Close</legend>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+</PropertyList>

@@ -452,6 +452,51 @@ B-1B set file.
                         </binding>
                     </item>
                 </menu>
+                <menu n="101">
+					<label>FDM Tuning</label>
+					<item>
+						<label>Tune Drag</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_drag_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Lift</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_lift_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Pitch</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_pitch_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Roll</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_roll_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Side</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_side_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Yaw</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_yaw_dialog.open()</script>
+						</binding>
+					</item>
+				</menu>
             </default>
         </menubar>
 
@@ -713,7 +758,56 @@ B-1B set file.
         </settings>
 
     </autopilot>
-
+    	<fdm>
+		<jsbsim>
+			<!-- for in-flight FDM tuning -->
+			<tune>
+                <!-- TODO: Check if more values need to be added to FDM tuner
+                         Tuner is from l0k1/AV-8B.
+                 -->
+				<lift>
+					<alpha type="double">1</alpha>
+					<flap type="double">1</flap>
+                    <speedbrake type="double">1</speedbrake>
+					<elevator type="double">1</elevator>
+<!--					<pitch_rate type="double">1</pitch_rate>-->
+<!--					<alpha_rate type="double">1</alpha_rate>-->
+				</lift>
+				<drag>
+                    <basic type="double">1</basic>
+					<induced type="double">1</induced>
+					<mach type="double">1</mach>
+					<flap type="double">1</flap>
+					<gear type="double">1</gear>
+					<speedbrake type="double">1</speedbrake>
+					<sideslip type="double">1</sideslip>
+                    <elevator type="double">1</elevator>
+				</drag>
+				<side>
+					<beta type="double">1</beta>
+				</side>
+                <roll>
+					<beta type="double">1</beta>
+					<damp type="double">1</damp>
+					<yaw type="double">1</yaw>
+					<aileron type="double">1</aileron>
+					<rudder type="double">1</rudder>
+				</roll>
+				<pitch>
+					<alpha type="double">1</alpha>
+					<elevator type="double">1</elevator>
+					<damp type="double">1</damp>
+					<alphadot type="double">1</alphadot>
+				</pitch>
+				<yaw>
+					<beta type="double">1</beta>
+					<damp type="double">1</damp>
+					<rudder type="double">1</rudder>
+					<aileron type="double">1</aileron>
+				</yaw>
+			</tune>
+		</jsbsim>
+	</fdm>
     <!-- Start with the Parking Brake On -->
     <controls>
         <armament>
@@ -1181,6 +1275,7 @@ B-1B set file.
         <controls>
             <file>Aircraft/B-1B/Nasal/controls.nas</file>
         </controls>
+        <dialog> <file>Aircraft/B-1B/Nasal/dialogs.nas</file> </dialog>
     </nasal>
 
 </PropertyList>
