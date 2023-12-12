@@ -746,7 +746,7 @@
                0.26    0.050
                1.57    1.230
             </tableData>
-          <property>tune/drag/sideslip</property>
+          <property>tune/drag/beta</property>
           </table>
        </product>
     </function>

@@ -780,7 +780,7 @@ B-1B set file.
 					<flap type="double">1</flap>
 					<gear type="double">1</gear>
 					<speedbrake type="double">1</speedbrake>
-					<sideslip type="double">1</sideslip>
+					<beta type="double">1</beta>
                     <elevator type="double">1</elevator>
 				</drag>
 				<side>

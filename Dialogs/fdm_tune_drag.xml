@@ -249,7 +249,7 @@
                     <live>true</live>
 
                     <pref-width>100</pref-width>
-                    <label>Drag_sideslip</label>
+                    <label>Drag_beta</label>
                 </text>
 
                 <text>
@@ -257,7 +257,7 @@
                     <label>-9.9999</label>
                     <pref-width>80</pref-width>
                     <format>%-0.4f</format>
-                    <property>/fdm/jsbsim/aero/force/Drag_sideslip</property>
+                    <property>/fdm/jsbsim/aero/force/Drag_beta</property>
                     <live>true</live>
                 </text>
 
@@ -265,7 +265,7 @@
                     <vertical>false</vertical>
                     <pref-width>500</pref-width>
                     <fraction>0</fraction>
-                    <property>/fdm/jsbsim/tune/drag/sideslip</property>
+                    <property>/fdm/jsbsim/tune/drag/beta</property>
                     <min>-2</min>
                     <max>2</max>
                     <binding>
@@ -276,7 +276,7 @@
                     <halign>right</halign>
                     <label>-9.9999</label>
                     <format>%-0.4f</format>
-                    <property>/fdm/jsbsim/tune/drag/sideslip</property>
+                    <property>/fdm/jsbsim/tune/drag/beta</property>
                     <live>true</live>
                 </text>
             </group>
