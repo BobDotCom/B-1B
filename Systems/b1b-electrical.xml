@@ -2306,6 +2306,8 @@
 			<output>/systems/electrical/outputs/mk-viii</output>
 			<output>/systems/electrical/outputs/tacan</output>
 			<output>/systems/electrical/outputs/turn-coordinator</output>
+			<output>/systems/electrical/outputs/nav</output> 
+			<output>/systems/electrical/outputs/adf</output>
 		</switch>
 
 		<switch name="/systems/electrical/generic-ac-pwr">
