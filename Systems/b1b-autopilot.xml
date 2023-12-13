@@ -602,7 +602,7 @@
       <value>speed-with-throttle</value>
     </enable>
     <input>
-      <prop>/autopilot/internal/lookahead-5-sec-airspeed-kt</prop>
+      <prop>/instrumentation/airspeed-indicator/indicated-speed-kt</prop>
     </input>
     <reference>
       <prop>/autopilot/settings/target-speed-kt</prop>
@@ -635,7 +635,7 @@
       <value>speed-with-pitch</value>
     </enable>
     <input>
-      <prop>/autopilot/internal/lookahead-5-sec-airspeed-kt</prop>
+      <prop>/instrumentation/airspeed-indicator/indicated-speed-kt</prop>
     </input>
     <reference>
       <prop>/autopilot/settings/target-speed-kt</prop>

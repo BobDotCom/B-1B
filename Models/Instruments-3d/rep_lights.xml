@@ -104,7 +104,7 @@ sweat by maggse
 	 <condition>
 		 <and>
 		 <equals>
-			 <property>controls/electric/battery-switch</property>
+			 <property>controls/electrical/switches/battery</property>
 			 <value>1.0</value>
 		 </equals>
 
@@ -149,7 +149,7 @@ sweat by maggse
 	 <condition>
 		 <and>
 		 <equals>
-			 <property>controls/electric/battery-switch</property>
+			 <property>controls/electrical/switches/battery</property>
 			 <value>1.0</value>
 		 </equals>
 		 <equals>
