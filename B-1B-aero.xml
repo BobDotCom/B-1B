@@ -41,8 +41,8 @@
  <metrics>
    <wingarea  unit="FT2"> 1946.00 </wingarea>
    <wingspan  unit="FT" >  137.00 </wingspan>
-   <wing_incidence>          2.00 </wing_incidence>
-   <chord     unit="FT" >   14.20 </chord>
+   <wing_incidence>          2.00 </wing_incidence> <!-- 0 -->
+   <chord     unit="FT" >   14.20 </chord> <!-- 15.33 -->
    <htailarea unit="FT2">  509.00 </htailarea>
    <htailarm  unit="FT" >   65.25 </htailarm>
    <vtailarea unit="FT2">  247.40 </vtailarea>
@@ -65,6 +65,9 @@
  </metrics>
 
  <mass_balance>
+<!--        <ixx unit="SLUG*FT2">   1859593 </ixx>-->
+<!--   <iyy unit="SLUG*FT2">   0 </iyy>-->
+<!--   <izz unit="SLUG*FT2">   10855 </izz>-->
    <ixx unit="SLUG*FT2">   2289362 </ixx>
    <iyy unit="SLUG*FT2">   3573887 </iyy>
    <izz unit="SLUG*FT2">   4881552 </izz>
@@ -483,6 +486,27 @@
  </flight_control>
 
  <aerodynamics>
+             <function name="aero/coefficients/ClSweepFactor">
+            <description>Wing sweep factor from norm of 22 (NASA-TM-D-6909)</description>
+                <table>
+                    <independentVar lookup="row">aero/alpha-deg</independentVar>
+                    <independentVar lookup="column">fcs/sweep-pos-deg</independentVar>
+                    <tableData>
+                                   0        22        50        58
+                         0  1.000000  1.000000  0.791274  0.653661
+                        10  1.000000  1.000000  0.829267  0.700928
+                        15  1.000000  1.000000  0.953910  0.860083
+                        20  1.000000  1.000000  0.960603  0.910701
+                        25  1.000000  1.000000  0.958058  0.969330
+                        30  1.000000  1.000000  1.027476  0.955345
+                        35  1.000000  1.000000  1.088021  0.994762
+                        40  1.000000  1.000000  1.083636  1.049773
+                        45  1.000000  1.000000  1.066517  1.066517
+                        50  1.000000  1.000000  0.910848  0.936149
+                        55  1.000000  1.000000  0.921275  0.914270
+                    </tableData>
+                </table>
+        </function>
 
   <axis name="LIFT">
 
@@ -500,6 +524,7 @@
                0.60  0.448
             </tableData>
           </table>
+          <property>aero/coefficients/ClSweepFactor</property>
           <property>tune/lift/alpha</property>
       </product>
     </function>
@@ -559,6 +584,7 @@
               1.57    1.500
             </tableData>
           </table>
+           <property>aero/coefficients/ClSweepFactor</property>
           <property>tune/drag/basic</property>
        </product>
     </function>
@@ -569,6 +595,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>aero/cl-squared</property>
+             <property>aero/coefficients/ClSweepFactor</property>
            <value>0.12</value>
            <property>tune/drag/induced</property>
          </product>
@@ -588,6 +615,7 @@
                 1.80      0.015
             </tableData>
           </table>
+            <property>aero/coefficients/ClSweepFactor</property>
           <property>tune/drag/mach</property>
         </product>
     </function>
