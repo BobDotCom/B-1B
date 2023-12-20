@@ -163,6 +163,9 @@ var font = {
 	cube: {
 		bit: 22,
 	},
+	sms: {
+		default: 23,
+	},
 };
 
 var zIndex = {
@@ -356,6 +359,7 @@ var DisplayDevice = {
 	},
 
 	loop: func {
+		me.update(notifications.frameNotification);
 		me.setSOI(me["aircraftSOI"] == 1);
 	},
 
@@ -729,6 +733,7 @@ var DisplaySystem = {
 
 		me.initPage("PageTMenu");
 		me.initPage("PagePFD1");
+		me.initPage("PageSMS1");
 		me.initPage("PageBlank");
 
 #		me.device.doubleTimerRunning = nil;
@@ -917,6 +922,7 @@ var DisplaySystem = {
 			}
 			me.device.resetControls();
 			me.device.controls["OSB1"].setControlText("P\nF\nD");
+			me.device.controls["OSB2"].setControlText("S\nM\nS");
 			me.device.controls["OSB28"].setControlText("BLANK")
 
 		},
@@ -931,7 +937,186 @@ var DisplaySystem = {
 		},
 		links: {
 			"OSB1":  "PagePFD1",
+			# "OSB2":  "PageSMS1",
 			"OSB28": "PageBlank",
+		},
+		layers: [],
+	},
+
+
+#  .d8888b.  888b     d888  .d8888b.        d888   
+# d88P  Y88b 8888b   d8888 d88P  Y88b      d8888   
+# Y88b.      88888b.d88888 Y88b.             888   
+#  "Y888b.   888Y88888P888  "Y888b.          888   
+#     "Y88b. 888 Y888P 888     "Y88b.        888   
+#       "888 888  Y8P  888       "888        888   
+# Y88b  d88P 888   "   888 Y88b  d88P        888   
+#  "Y8888P"  888       888  "Y8888P"       8888888
+
+
+	PageSMS1: {
+		name: "PageSMS1",
+		isNew: 1,
+		supportSOI: 0,
+		needGroup: 1,
+		new: func {
+			me.instance = {parents:[DisplaySystem.PageSMS1]};
+			me.instance.group = nil;
+			return me.instance;
+		},
+		setup: func {
+			printDebug(me.name," on ",me.device.name," is being setup");
+			data.type_update.start();
+			me.fwdGrp = me.group.createChild("group")
+				.setTranslation((displayWidthHalf/2)-90,displayHeight/7);
+			me.midGrp = me.group.createChild("group")
+				.setTranslation(displayWidthHalf+25,displayHeight/7);
+			me.aftGrp = me.group.createChild("group")
+				.setTranslation(displayWidthHalf+270,displayHeight/7);
+
+			me.fwdLabel = me.fwdGrp.createChild("text")
+				.setText("Fwd Bay")
+				.setTranslation(0,-50);
+			me.fwd1 = me.fwdGrp.createChild("text")
+				.setFontSize(font.sms.default)
+				.setText("Weapon 1: EMPTY");
+			me.fwd2 = me.fwdGrp.createChild("text")
+				.setText("Weapon 2: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,25);
+			me.fwd3 = me.fwdGrp.createChild("text")
+				.setText("Weapon 3: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,50);
+			me.fwd4 = me.fwdGrp.createChild("text")
+				.setText("Weapon 4: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,75);
+			me.fwd5 = me.fwdGrp.createChild("text")
+				.setText("Weapon 5: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,100);
+			me.fwd6 = me.fwdGrp.createChild("text")
+				.setText("Weapon 6: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,125);
+			me.fwd7 = me.fwdGrp.createChild("text")
+				.setText("Weapon 7: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,150);
+			me.fwd8 = me.fwdGrp.createChild("text")
+				.setText("Weapon 8: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,175);
+
+
+			me.midLabel = me.midGrp.createChild("text")
+				.setText("Mid Bay")
+				.setTranslation(0,-50);
+			me.mid1 = me.midGrp.createChild("text")
+				.setFontSize(font.sms.default)
+				.setText("Weapon 1: EMPTY");
+			me.mid2 = me.midGrp.createChild("text")
+				.setText("Weapon 2: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,25);
+			me.mid3 = me.midGrp.createChild("text")
+				.setText("Weapon 3: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,50);
+			me.mid4 = me.midGrp.createChild("text")
+				.setText("Weapon 4: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,75);
+			me.mid5 = me.midGrp.createChild("text")
+				.setText("Weapon 5: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,100);
+			me.mid6 = me.midGrp.createChild("text")
+				.setText("Weapon 6: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,125);
+			me.mid7 = me.midGrp.createChild("text")
+				.setText("Weapon 7: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,150);
+			me.mid8 = me.midGrp.createChild("text")
+				.setText("Weapon 8: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,175);
+
+
+			me.aftLabel = me.aftGrp.createChild("text")
+				.setText("Aft Bay")
+				.setTranslation(0,-50);
+			me.aft1 = me.aftGrp.createChild("text")
+				.setFontSize(font.sms.default)
+				.setText("Weapon 1: EMPTY");
+			me.aft2 = me.aftGrp.createChild("text")
+				.setText("Weapon 2: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,25);
+			me.aft3 = me.aftGrp.createChild("text")
+				.setText("Weapon 3: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,50);
+			me.aft4 = me.aftGrp.createChild("text")
+				.setText("Weapon 4: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,75);
+			me.aft5 = me.aftGrp.createChild("text")
+				.setText("Weapon 5: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,100);
+			me.aft6 = me.aftGrp.createChild("text")
+				.setText("Weapon 6: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,125);
+			me.aft7 = me.aftGrp.createChild("text")
+				.setText("Weapon 7: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,150);
+			me.aft8 = me.aftGrp.createChild("text")
+				.setText("Weapon 8: EMPTY")
+				.setFontSize(font.sms.default)
+				.setTranslation(0,175);
+
+
+		},
+		enter: func {
+			printDebug("Enter ",me.name~" on ",me.device.name);
+			if (me.isNew) {
+				me.setup();
+				me.isNew = 0;
+			}
+
+			me.device.resetControls();
+			me.device.controls["OSB18"].setControlText("MENU");
+
+		},
+		controlAction: func (controlName) {
+			printDebug(me.name,": ",controlName," activated on ",me.device.name);
+		},
+		update: func (noti = nil) {
+
+			print("DEBUG:UPDATE RAN");
+
+			me.fwd1.setText(sprintf("Weapon 1: %s", getprop("/ai/guided/bay0/bomb/weapon-type")));
+			me.fwd2.setText(sprintf("Weapon 2: %s", getprop("/ai/guided/bay0/bomb[1]/weapon-type")));
+			me.fwd3.setText(sprintf("Weapon 3: %s", getprop("/ai/guided/bay0/bomb[2]/weapon-type")));
+			me.fwd4.setText(sprintf("Weapon 4: %s", getprop("/ai/guided/bay0/bomb[3]/weapon-type")));
+			me.fwd5.setText(sprintf("Weapon 5: %s", getprop("/ai/guided/bay0/bomb[4]/weapon-type")));
+			me.fwd6.setText(sprintf("Weapon 6: %s", getprop("/ai/guided/bay0/bomb[5]/weapon-type")));
+			me.fwd7.setText(sprintf("Weapon 7: %s", getprop("/ai/guided/bay0/bomb[6]/weapon-type")));
+			me.fwd8.setText(sprintf("Weapon 8: %s", getprop("/ai/guided/bay0/bomb[7]/weapon-type")));
+			
+		},
+		exit: func {
+			printDebug("Exit ",me.name~" on ",me.device.name);
+			data.type_update.stop();
+		},
+		links: {
+			"OSB18":  "PageTMenu",
 		},
 		layers: [],
 	},
@@ -1117,6 +1302,38 @@ var swapAircraftSOI = func (soi) {
 	}
 }
 
+var B1MfdRecipient =
+{
+    new: func(_ident)
+    {
+        var new_class = emesary.Recipient.new(_ident~".MFD");
+
+        new_class.Receive = func(notification)
+        {
+            if (notification == nil)
+            {
+                print("bad notification nil");
+                return emesary.Transmitter.ReceiptStatus_NotProcessed;
+            }
+
+            if (notification.NotificationType == "FrameNotification")
+            {
+                leftPFD.update(notification);
+                rightMFD.update(notification);
+                rightPFD.update(notification);
+                rightMFD.update(notification);
+                return emesary.Transmitter.ReceiptStatus_OK;
+            }
+            return emesary.Transmitter.ReceiptStatus_NotProcessed;
+        };
+        new_class.del = func {
+        	emesary.GlobalTransmitter.DeRegister(me);
+        };
+        return new_class;
+    },
+};
+var B1_display = nil;
+
 var displayWidth     = 512;#552 * 0.795;
 var displayHeight    = 1024;#482 * 1;
 var displayWidthHalf = displayWidth  *  0.5;
@@ -1218,6 +1435,8 @@ var main = func (module) {
 	forcePages(0, mfdSystem3);
 	forcePages(0, mfdSystem4);
 
+	B1_display = B1MfdRecipient.new("B1-displaySystem");
+	emesary.GlobalTransmitter.Register(B1_display);
 }
 
 #var theMaster = nil;
@@ -1241,6 +1460,8 @@ var unload = func {
 	}
 	DisplayDevice = nil;
 	DisplaySystem = nil;
+
+	B1_display.del();
 }
 
 var displayDebug = 0;
