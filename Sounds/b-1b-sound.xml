@@ -112,8 +112,8 @@
 	<volume>
 		<property>/engines/engine[0]/thrust_lb</property>
 		<factor>0.000033</factor>
-		<min>0.6</min>
-		<max>1.0</max>
+		  <min>0.02</min>
+		  <max>0.4</max>
 	</volume>
 	<pitch>
 		<offset>0.8</offset>
@@ -257,8 +257,8 @@
 	  <volume>
 		  <property>/engines/engine[1]/thrust_lb</property>
 		  <factor>0.000033</factor>
-		  <min>0.6</min>
-		  <max>1.0</max>
+		  <min>0.02</min>
+		  <max>0.4</max>
 	  </volume>
 	  <pitch>
 		  <offset>0.8</offset>
@@ -402,8 +402,8 @@
 	  <volume>
 		  <property>/engines/engine[2]/thrust_lb</property>
 		  <factor>0.000033</factor>
-		  <min>0.6</min>
-		  <max>1.0</max>
+		  <min>0.02</min>
+		  <max>0.4</max>
 	  </volume>
 	  <pitch>
 		  <offset>0.8</offset>
@@ -549,8 +549,8 @@
 	  <volume>
 		  <property>/engines/engine[3]/thrust_lb</property>
 		  <factor>0.000033</factor>
-		  <min>0.6</min>
-		  <max>1.0</max>
+		  <min>0.02</min>
+		  <max>0.4</max>
 	  </volume>
 	  <pitch>
 		  <offset>0.8</offset>

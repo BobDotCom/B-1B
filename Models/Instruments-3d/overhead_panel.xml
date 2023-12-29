@@ -215,6 +215,31 @@ maggse
 			 <command>property-toggle</command>
 			 <property>controls/electric/battery-switch</property>
 		 </binding>
+		 <binding>
+			 <command>property-assign</command> 
+			    <property>systems/electrical/outputs/adf</property> 
+                            <value>99</value>
+		 </binding>
+		 <binding>
+			 <command>property-assign</command>
+			    <property>systems/electrical/outputs/hsi</property> 
+                            <value>99</value>
+		 </binding>
+		 <binding>
+			 <command>property-assign</command>
+			    <property>systems/electrical/outputs/nav</property>
+                            <value>99</value>
+		 </binding>
+		 <binding>
+			 <command>property-assign</command>
+			    <property>systems/electrical/outputs/tacan</property>
+                            <value>99</value>
+		 </binding>
+		 <binding>
+			 <command>property-assign</command>
+			    <property>systems/electrical/outputs/dme</property>
+                            <value>99</value>
+		 </binding>
 	 </action>
 </animation>
 <!--  External Power -->

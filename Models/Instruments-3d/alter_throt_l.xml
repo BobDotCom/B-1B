@@ -7,6 +7,7 @@ maggse
 <path>alter_throt_l.ac</path>
 
 <!-- afterburner switches -->
+
 <animation>
 	<type>rotate</type>
 	<object-name>alter_throt.1.L</object-name>
@@ -166,6 +167,209 @@ maggse
 		</binding>
 	</action>
 </animation>
+
+
+<!-- volume knobs --> 
+
+<!-- UHF-1 --> 
+
+<animation>
+	<type>translate</type>
+	<object-name>UHF-1</object-name>
+	<property>instrumentation/comm/serviceable</property>  
+        <factor>0.002</factor>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.01248</x-m>
+		<y-m>0.24315</y-m>
+		<z-m>-0.09723</z-m>
+	</center>
+</animation> 
+<animation>
+	<type>pick</type>
+	<object-name>UHF-1</object-name>      
+	<action>
+               <button>1</button>
+		<binding>
+			<command>property-toggle</command>
+			<property>instrumentation/comm/serviceable</property> 
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>knob</type>
+	<object-name>UHF-1</object-name>
+	<property>instrumentation/comm/volume</property> 
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>360.0</dep>
+		</entry>
+	</interpolation> 
+	<axis>
+		<x>-1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.01248</x-m>
+		<y-m>0.24315</y-m>
+		<z-m>-0.09723</z-m>
+	</center>      
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/comm/volume</property>
+                        <factor>0.1</factor>
+                        <min>0</min> 
+                        <max>1</max> 
+                        <wrap>false</wrap>
+		</binding>
+	</action>
+</animation>
+
+<!-- UHF-2 --> 
+
+<animation>
+	<type>translate</type>
+	<object-name>UHF-2</object-name>
+	<property>instrumentation/comm[1]/serviceable</property>  
+        <factor>0.002</factor>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.0095</x-m>
+		<y-m>0.2648</y-m>
+		<z-m>-0.0972</z-m>
+	</center>
+</animation> 
+<animation>
+	<type>pick</type>
+	<object-name>UHF-2</object-name>      
+	<action>
+               <button>1</button>
+		<binding>
+			<command>property-toggle</command>
+			<property>instrumentation/comm[1]/serviceable</property> 
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>knob</type>
+	<object-name>UHF-2</object-name>
+	<property>instrumentation/comm[1]/volume</property> 
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>360.0</dep>
+		</entry>
+	</interpolation> 
+	<axis>
+		<x>-1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.0095</x-m>
+		<y-m>0.2648</y-m>
+		<z-m>-0.0972</z-m>
+	</center>      
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/comm[1]/volume</property>
+                        <factor>0.1</factor>
+                        <min>0</min> 
+                        <max>1</max> 
+                        <wrap>false</wrap>
+		</binding>
+	</action>
+</animation>
+
+<!-- ILS --> 
+
+<animation>
+	<type>translate</type>
+	<object-name>ILSTT</object-name>
+	<property>instrumentation/nav/volume</property>  
+        <factor>0.002</factor>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.0095</x-m>
+		<y-m>0.2428</y-m>
+		<z-m>-0.1221</z-m>
+	</center>
+</animation> 
+<animation>
+	<type>pick</type>
+	<object-name>ILSTT</object-name>      
+	<action>
+               <button>1</button>
+		<binding>
+			<command>property-toggle</command>
+			<property>instrumentation/nav/volume</property> 
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>knob</type>
+	<object-name>ILSTT</object-name>
+	<property>instrumentation/nav/volume</property> 
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>360.0</dep>
+		</entry>
+	</interpolation> 
+	<axis>
+		<x>-1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.0095</x-m>
+		<y-m>0.2428</y-m>
+		<z-m>-0.1221</z-m>
+	</center>      
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav/volume</property>
+                        <factor>0.1</factor>
+                        <min>0</min> 
+                        <max>1</max> 
+                        <wrap>false</wrap>
+		</binding>
+	</action>
+</animation>
+
+
 
  <animation>
 	<type>material</type>
