@@ -639,7 +639,8 @@
                                0.60   0.200    0.200    0.600    0.600    0.580    0.600    0.500    0.400
                           </tableData>
                       </table>
-                              <property>tune/lift/alpha</property>
+                      <value>4</value> <!-- Values from the concorde, this is too low so multiply by 4. -->
+                      <property>tune/lift/alpha</property>
                 </product>
             </function>
             <documentation>
