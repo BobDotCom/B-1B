@@ -37,6 +37,7 @@
 	<property value="0">/controls/engines/engine[1]/fire-btn</property>
 	<property value="0">/systems/electrical/some-electric-thingie/generator-1-pb</property>
 	<property value="0">/systems/electrical/some-electric-thingie/generator-2-pb</property>
+	<property value="0">/systems/electrical/some-electric-thingie/generator-4-pb</property>
 
 <!--	<property value="1">/systems/apu/dc-bat-three-minutes</property>-->
 
@@ -2248,11 +2249,11 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/some-electric-thingie/emer-elec-config-generator-2-bustie">
+		<switch name="/systems/electrical/some-electric-thingie/emer-elec-config-generator-4-bustie">
 			<default value="0"/>
 			<test logic="AND" value="1">
 				/systems/electrical/some-electric-thingie/emer-elec-config eq 1
-				/systems/electrical/some-electric-thingie/generator-2-pb eq 1
+				/systems/electrical/some-electric-thingie/generator-4-pb eq 1
 				/controls/electrical/switches/gen-4 eq 1
 				/controls/electrical/switches/bus-tie eq 0
 			</test>
@@ -2267,11 +2268,11 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/electrical/some-electric-thingie/emer-elec-config-generator-2">
+		<switch name="/systems/electrical/some-electric-thingie/emer-elec-config-generator-4">
 			<default value="0"/>
 			<test logic="AND" value="1">
 				/systems/electrical/some-electric-thingie/emer-elec-config eq 1
-				/systems/electrical/some-electric-thingie/generator-2-pb eq 1
+				/systems/electrical/some-electric-thingie/generator-4-pb eq 1
 				/controls/electrical/switches/gen-4 eq 1
 			</test>
 		</switch>
