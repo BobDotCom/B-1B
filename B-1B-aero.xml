@@ -768,7 +768,7 @@
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>fcs/flap-cmd-norm</property>
-                    <value>0.0550</value>
+                    <value>0.0023</value>
                 </product>
             </function>
             <function name="aero/coefficient/CDgear">
