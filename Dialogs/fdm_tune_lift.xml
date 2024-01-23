@@ -59,6 +59,44 @@
                     <live>true</live>
 
                     <pref-width>100</pref-width>
+                    <label>Lift_sweep</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Lift_sweep</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/lift/sweep</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/lift/sweep</property>
+                    <live>true</live>
+                </text>
+            </group>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
                     <label>Lift_flap</label>
                 </text>
 

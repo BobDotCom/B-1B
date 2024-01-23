@@ -767,6 +767,7 @@ B-1B set file.
                  -->
 				<lift>
 					<alpha type="double">1</alpha>
+                    <sweep type="double">0</sweep>
 					<flap type="double">1</flap>
                     <speedbrake type="double">1</speedbrake>
 					<elevator type="double">1</elevator>
