@@ -142,7 +142,7 @@
    <izz unit="SLUG*FT2">  4881551.50 </izz>
    <emptywt unit="LBS" >  186807.00 </emptywt>
    <location name="CG" unit="FT">
-     <x> 94.37    </x>
+     <x> 80    </x>
      <y> 0.00     </y>
      <z> -3.65    </z>
    </location>
@@ -150,7 +150,7 @@
     <description> 191454.00 lbs should bring model up to entered max weight </description>
     <weight unit="LBS"> 95727.00 </weight>
     <location name="POINTMASS" unit="FT">
-     <x> 94.37    </x>
+     <x> 80    </x>
      <y> 0.00     </y>
      <z> -3.65    </z>
    </location>
@@ -165,7 +165,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>    94.37 </x>
+       <x>    80 </x>
        <y>    -5.00 </y>
        <z>    -1.00 </z>
      </location>
@@ -183,7 +183,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>    94.37 </x>
+       <x>    80 </x>
        <y>    -1.67 </y>
        <z>    -1.00 </z>
      </location>
@@ -201,7 +201,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>    94.37 </x>
+       <x>    80 </x>
        <y>     1.67 </y>
        <z>    -1.00 </z>
      </location>
@@ -219,7 +219,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>    94.37 </x>
+       <x>    80 </x>
        <y>     5.00 </y>
        <z>    -1.00 </z>
      </location>
@@ -269,7 +269,7 @@
 
   <tank type="FUEL" number="0">
      <location unit="FT">
-       <x>    94.37 </x>
+       <x>    80 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -278,7 +278,7 @@
   </tank>
   <tank type="FUEL" number="1">
      <location unit="FT">
-       <x>    94.37 </x>
+       <x>    80 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -287,7 +287,7 @@
   </tank>
   <tank type="FUEL" number="2">
      <location unit="FT">
-       <x>    94.37 </x>
+       <x>    80 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -296,7 +296,7 @@
   </tank>
   <tank type="FUEL" number="3">
      <location unit="FT">
-       <x>    94.37 </x>
+       <x>    80 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -305,7 +305,7 @@
   </tank>
   <tank type="FUEL" number="4">
      <location unit="FT">
-       <x>    94.37 </x>
+       <x>    80 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -319,55 +319,103 @@
 
   <contact type="BOGEY" name="NOSE">
     <location unit="FT">
-      <x>    18.98 </x>
+      <x>    29.56 </x>
       <y>     0.00 </y>
-      <z>   -17.52 </z>
+      <z>   -14.337 </z>
     </location>
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
     <rolling_friction> 0.02 </rolling_friction>
-    <spring_coeff  unit="LBS/FT">     143100.00 </spring_coeff>
-    <damping_coeff unit="LBS/FT/SEC"> 71550.00 </damping_coeff>
+    <spring_coeff  unit="LBS/FT">     150000.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 85000.00 </damping_coeff>
     <max_steer unit="DEG"> 5.00 </max_steer>
     <brake_group> NONE </brake_group>
     <retractable> 1 </retractable>
   </contact>
 
-  <contact type="BOGEY" name="LEFT_MAIN">
+  <contact type="BOGEY" name="LEFT_FRONT_MAIN">
     <location unit="FT">
-      <x>    98.14 </x>
-      <y>   -12.33 </y>
-      <z>   -17.52 </z>
+      <x>    82.513 </x>
+      <y>   -7.25 </y>
+      <z>   -14.108 </z>
     </location>
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
     <rolling_friction> 0.02 </rolling_friction>
-    <spring_coeff  unit="LBS/FT">     477000.00 </spring_coeff>
-    <damping_coeff unit="LBS/FT/SEC"> 238500.00 </damping_coeff>
+    <spring_coeff  unit="LBS/FT">     190800.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 178875.00 </damping_coeff>
     <max_steer unit="DEG">0</max_steer>
     <brake_group> LEFT </brake_group>
     <retractable> 1 </retractable>
   </contact>
 
-  <contact type="BOGEY" name="RIGHT_MAIN">
+  <contact type="BOGEY" name="LEFT_AFT_MAIN">
     <location unit="FT">
-      <x>    98.14 </x>
-      <y>    12.33 </y>
-      <z>   -17.52 </z>
+      <x>    86.45 </x>
+      <y>   -7.25 </y>
+      <z>   -14.436 </z>
     </location>
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
     <rolling_friction> 0.02 </rolling_friction>
-    <spring_coeff  unit="LBS/FT">     477000.00 </spring_coeff>
-    <damping_coeff unit="LBS/FT/SEC"> 238500.00 </damping_coeff>
+    <spring_coeff  unit="LBS/FT">     333900.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 107325.00 </damping_coeff>
     <max_steer unit="DEG">0</max_steer>
-    <brake_group> RIGHT </brake_group>
+    <brake_group> LEFT </brake_group>
     <retractable> 1 </retractable>
   </contact>
 
+<!--  <contact type="BOGEY" name="RIGHT_MAIN">-->
+<!--    <location unit="FT">-->
+<!--      <x>    82.513 </x>-->
+<!--      <y>    12.33 </y>-->
+<!--      <z>   -14.337 </z>-->
+<!--    </location>-->
+<!--    <static_friction>  0.80 </static_friction>-->
+<!--    <dynamic_friction> 0.50 </dynamic_friction>-->
+<!--    <rolling_friction> 0.02 </rolling_friction>-->
+<!--    <spring_coeff  unit="LBS/FT">     477000.00 </spring_coeff>-->
+<!--    <damping_coeff unit="LBS/FT/SEC"> 238500.00 </damping_coeff>-->
+<!--    <max_steer unit="DEG">0</max_steer>-->
+<!--    <brake_group> RIGHT </brake_group>-->
+<!--    <retractable> 1 </retractable>-->
+<!--  </contact>-->
+  <contact type="BOGEY" name="RIGHT_FRONT_MAIN">
+    <location unit="FT">
+      <x>    82.513 </x>
+      <y>   7.25 </y>
+      <z>   -14.108 </z>
+    </location>
+    <static_friction>  0.80 </static_friction>
+    <dynamic_friction> 0.50 </dynamic_friction>
+    <rolling_friction> 0.02 </rolling_friction>
+    <spring_coeff  unit="LBS/FT">     190800.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 178875.00 </damping_coeff>
+    <max_steer unit="DEG">0</max_steer>
+    <brake_group> LEFT </brake_group>
+    <retractable> 1 </retractable>
+  </contact>
+
+  <contact type="BOGEY" name="RIGHT_AFT_MAIN">
+    <location unit="FT">
+      <x>    86.45 </x>
+      <y>   7.25 </y>
+      <z>   -14.436 </z>
+    </location>
+    <static_friction>  0.80 </static_friction>
+    <dynamic_friction> 0.50 </dynamic_friction>
+    <rolling_friction> 0.02 </rolling_friction>
+    <spring_coeff  unit="LBS/FT">     333900.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 107325.00 </damping_coeff>
+    <max_steer unit="DEG">0</max_steer>
+    <brake_group> LEFT </brake_group>
+    <retractable> 1 </retractable>
+  </contact>
+
+
   <contact type="STRUCTURE" name="LEFT_WING">
     <location unit="FT">
-     <x>    94.37 </x>
+     <x>    80 </x>
      <y>   -68.50 </y>
      <z>    -3.65 </z>
     </location>
@@ -379,7 +427,7 @@
 
   <contact type="STRUCTURE" name="RIGHT_WING">
     <location unit="FT">
-     <x>    94.37 </x>
+     <x>    80 </x>
      <y>    68.50 </y>
      <z>    -3.65 </z>
     </location>

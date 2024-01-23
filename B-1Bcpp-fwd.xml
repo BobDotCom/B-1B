@@ -7,7 +7,7 @@
 
  <fileheader>
   <author> AeromatiC++ version 3.3.21 </author>
-  <filecreationdate> 18 Nov 2023 </filecreationdate>
+  <filecreationdate> 15 Dec 2023 </filecreationdate>
   <version>$Revision: 1.80 $</version>
   <description> Models a B-1B. </description>
  </fileheader>
@@ -39,7 +39,7 @@
     Wing dihedral                      : -1.94
     Wing sweep (quarter chord)         : 15.00
     Htail area                         : 509.00
-    Htail arm                          : 0.00
+    Htail arm                          : 58.40
     Vtail area                         : 247.40
     Vtail arm                          : 58.40
     Propulsion                         : yes
@@ -58,8 +58,7 @@
     Nose or tail wheel type            : 0
     Is this a taildragger?             : no
     Flaps                              : yes
-    Spoilers                           : yes
-    Is the spoiler differential?       : yes
+    Spoilers                           : no
     Speedbrake                         : yes
     Arrestor Hook                      : no
     Chute                              : no
@@ -70,11 +69,11 @@
     type:          Multi-engine Fighter Jet
     stall speed:   127.00 kt
     max weight:    477000.00 lbs
-    Fuselage: 
+    Fuselage:
      length:        146.00 ft
      diameter:      5.25 ft
      finess ratio:  27.81
-    wing: 
+    wing:
      span:         137.00 ft
      area:         1946.00 ft2
      mean chord:   0.18 ft
@@ -116,11 +115,11 @@
    <wing_incidence unit="DEG"> 0.00 </wing_incidence>
    <chord     unit="FT" > 0.18     </chord>
    <htailarea unit="FT2"> 509.00   </htailarea>
-   <htailarm  unit="FT" > 0.00     </htailarm>
+   <htailarm  unit="FT" > 58.40    </htailarm>
    <vtailarea  unit="FT2">247.40   </vtailarea>
    <vtailarm  unit="FT" > 58.40    </vtailarm>
    <location name="AERORP" unit="FT">
-     <x> 146.00   </x>
+     <x> 87.60    </x>
      <y> 0.00     </y>
      <z> 0.00     </z>
    </location>
@@ -142,7 +141,7 @@
    <izz unit="SLUG*FT2">  4881551.50 </izz>
    <emptywt unit="LBS" >  186807.00 </emptywt>
    <location name="CG" unit="FT">
-     <x> 146.01   </x>
+     <x> 82.52    </x>
      <y> 0.00     </y>
      <z> -3.65    </z>
    </location>
@@ -150,7 +149,7 @@
     <description> 191454.00 lbs should bring model up to entered max weight </description>
     <weight unit="LBS"> 95727.00 </weight>
     <location name="POINTMASS" unit="FT">
-     <x> 146.01   </x>
+     <x> 82.52    </x>
      <y> 0.00     </y>
      <z> -3.65    </z>
    </location>
@@ -165,7 +164,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>   146.01 </x>
+       <x>    82.52 </x>
        <y>    -5.00 </y>
        <z>    -1.00 </z>
      </location>
@@ -183,7 +182,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>   146.01 </x>
+       <x>    82.52 </x>
        <y>    -1.67 </y>
        <z>    -1.00 </z>
      </location>
@@ -201,7 +200,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>   146.01 </x>
+       <x>    82.52 </x>
        <y>     1.67 </y>
        <z>    -1.00 </z>
      </location>
@@ -219,7 +218,7 @@
     <thruster file="direct">
      <sense> 1 </sense>
      <location unit="FT">
-       <x>   146.01 </x>
+       <x>    82.52 </x>
        <y>     5.00 </y>
        <z>    -1.00 </z>
      </location>
@@ -233,7 +232,7 @@
 
   <tank type="FUEL" number="0">
      <location unit="FT">
-       <x>   146.01 </x>
+       <x>    82.52 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -242,7 +241,7 @@
   </tank>
   <tank type="FUEL" number="1">
      <location unit="FT">
-       <x>   146.01 </x>
+       <x>    82.52 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -251,7 +250,7 @@
   </tank>
   <tank type="FUEL" number="2">
      <location unit="FT">
-       <x>   146.01 </x>
+       <x>    82.52 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -260,7 +259,7 @@
   </tank>
   <tank type="FUEL" number="3">
      <location unit="FT">
-       <x>   146.01 </x>
+       <x>    82.52 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -269,7 +268,7 @@
   </tank>
   <tank type="FUEL" number="4">
      <location unit="FT">
-       <x>   146.01 </x>
+       <x>    82.52 </x>
        <y>     0.00 </y>
        <z>    -3.65 </z>
      </location>
@@ -299,7 +298,7 @@
 
   <contact type="BOGEY" name="LEFT_MAIN">
     <location unit="FT">
-      <x>   151.85 </x>
+      <x>    85.82 </x>
       <y>   -12.33 </y>
       <z>   -17.52 </z>
     </location>
@@ -315,7 +314,7 @@
 
   <contact type="BOGEY" name="RIGHT_MAIN">
     <location unit="FT">
-      <x>   151.85 </x>
+      <x>    85.82 </x>
       <y>    12.33 </y>
       <z>   -17.52 </z>
     </location>
@@ -331,7 +330,7 @@
 
   <contact type="STRUCTURE" name="LEFT_WING">
     <location unit="FT">
-     <x>   146.01 </x>
+     <x>    82.52 </x>
      <y>   -68.50 </y>
      <z>    -3.65 </z>
     </location>
@@ -343,7 +342,7 @@
 
   <contact type="STRUCTURE" name="RIGHT_WING">
     <location unit="FT">
-     <x>   146.01 </x>
+     <x>    82.52 </x>
      <y>    68.50 </y>
      <z>    -3.65 </z>
     </location>
@@ -407,7 +406,7 @@
           <property>metrics/Sw-sqft</property>
           <property>velocities/q-aero-rad_sec</property>
           <property>aero/ci2vel</property>
-          <value> 0.0000 </value>
+          <value> 701.9303 </value>
         </product>
       </function>
 
@@ -418,7 +417,7 @@
            <property>metrics/Sw-sqft</property>
            <property>aero/alphadot-rad_sec</property>
            <property>aero/ci2vel</property>
-           <value> 0.0000 </value>
+           <value> 242.0449 </value>
         </product>
       </function>
 
@@ -646,7 +645,7 @@
            <property>metrics/Sw-sqft</property>
            <property>metrics/cbarw-ft</property>
            <property>aero/alpha-rad</property>
-           <value> -0.5630 </value>
+           <value> -95.8318 </value>
        </product>
     </function>
 
@@ -660,8 +659,8 @@
           <table>
             <independentVar lookup="row">velocities/mach</independentVar>
             <tableData>
-              0.0    0.0587
-              2.0    0.0147
+              0.0    -225.3032
+              2.0    -56.3258
             </tableData>
           </table>
        </product>
@@ -675,7 +674,7 @@
            <property>metrics/cbarw-ft</property>
            <property>aero/ci2vel</property>
            <property>velocities/q-aero-rad_sec</property>
-           <value> -0.0000 </value>
+           <value> -225494.8125 </value>
        </product>
     </function>
 
@@ -687,7 +686,7 @@
            <property>metrics/cbarw-ft</property>
            <property>aero/ci2vel</property>
            <property>aero/alphadot-rad_sec</property>
-           <value> -0.0000 </value>
+           <value> -77756.8203 </value>
        </product>
     </function>
 
@@ -772,25 +771,6 @@
            <property>metrics/bw-ft</property>
            <property>fcs/rudder-pos-rad</property>
            <value> 0.0100 </value>
-       </product>
-    </function>
-
-    <function name="aero/moment/Roll_spoilers">
-       <description>Roll moment due to spoilers</description>
-       <product>
-          <property>aero/qbar-psf</property>
-          <property>metrics/Sw-sqft</property>
-          <property>metrics/bw-ft</property>
-          <property>fcs/spoilers-pos-norm</property>
-          <property>fcs/left-aileron-pos-rad</property>
-          <table>
-            <independentVar lookup="row">aero/alpha-rad</independentVar>
-            <tableData>
-             -0.175   0.0000
-              0.0     0.2400
-              0.175   0.0000
-            </tableData>
-          </table>
        </product>
     </function>
 
