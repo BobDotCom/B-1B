@@ -896,12 +896,15 @@ B-1B set file.
                 <emer-gen-test type="bool">0</emer-gen-test>
                 <ext-pwr type="bool">0</ext-pwr>
                 <galley type="bool">1</galley>
+                <gen-1 type="bool">1</gen-1>
                 <gen-2 type="bool">1</gen-2>
                 <gen-4 type="bool">1</gen-4>
                 <gen-2-line-contactor type="bool">0</gen-2-line-contactor>
                 <ground-cart type="bool">0</ground-cart>
+                <idg-1-disc type="bool">1</idg-1-disc>
                 <idg-2-disc type="bool">1</idg-2-disc>
                 <idg-4-disc type="bool">1</idg-4-disc>
+                <idg-1-disc-momentary type="bool">0</idg-1-disc-momentary>
                 <idg-2-disc-momentary type="bool">0</idg-2-disc-momentary>
                 <idg-4-disc-momentary type="bool">0</idg-4-disc-momentary>
                 <emer-elec-man-on type="bool">0</emer-elec-man-on>
