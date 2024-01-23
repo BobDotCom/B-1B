@@ -1515,14 +1515,14 @@
 				/controls/electrical/switches/bus-tie eq 0
 			</test>
 			<test logic="AND" value="1"> <!-- give power to other side -->
-				/systems/electrical/relay/gen-2-glc/contact-pos eq 1
-				/systems/electrical/relay/gen-4-glc/contact-pos eq 0
+				/systems/electrical/relay/gen-1-glc/contact-pos eq 1
+				/systems/electrical/relay/gen-2-glc/contact-pos eq 0
 <!--				/systems/electrical/relay/apu-glc/contact-pos eq 0-->
 				/systems/electrical/relay/ext-epc/contact-pos eq 0
 				/controls/electrical/switches/bus-tie eq 1
 			</test>
 			<test logic="AND" value="1"> <!-- fetch power from other side -->
-				/systems/electrical/relay/gen-2-glc/contact-pos eq 0
+				/systems/electrical/relay/gen-1-glc/contact-pos eq 0
 				/controls/electrical/switches/bus-tie eq 1
 			</test>
 		</switch>
@@ -1540,14 +1540,14 @@
 				/controls/electrical/switches/bus-tie eq 0
 			</test>
 			<test logic="AND" value="1">  <!-- give power to other side -->
-				/systems/electrical/relay/gen-4-glc/contact-pos eq 1
-				/systems/electrical/relay/gen-2-glc/contact-pos eq 0
+				/systems/electrical/relay/gen-2-glc/contact-pos eq 1
+				/systems/electrical/relay/gen-1-glc/contact-pos eq 0
 <!--				/systems/electrical/relay/apu-glc/contact-pos eq 0-->
 				/systems/electrical/relay/ext-epc/contact-pos eq 0
 				/controls/electrical/switches/bus-tie eq 1
 			</test>
 			<test logic="AND" value="1">  <!-- fetch power from other side -->
-				/systems/electrical/relay/gen-4-glc/contact-pos eq 0
+				/systems/electrical/relay/gen-2-glc/contact-pos eq 0
 				/controls/electrical/switches/bus-tie eq 1
 			</test>
 		</switch>
@@ -2101,7 +2101,7 @@
 			<description>Tell which source is being used for priority purpose</description>
 			<default value="0"/> <!-- OFF -->
 			<test value="1"> <!-- IDG1 -->
-				/systems/electrical/relay/gen-2-glc/contact-pos eq 1
+				/systems/electrical/relay/gen-1-glc/contact-pos eq 1
 			</test>
 			<test value="2"> <!-- Bus Tie -->
 				/systems/electrical/relay/ac-bus-ac-bus-tie-1/contact-pos eq 1
@@ -2117,7 +2117,7 @@
 					</eq>
 					<value>0</value>
 					<max>
-						<property>/systems/electrical/relay/gen-2-glc/output</property>
+						<property>/systems/electrical/relay/gen-1-glc/output</property>
 						<property>/systems/electrical/relay/ac-bus-ac-bus-tie-1/output</property>
 					</max>
 				</ifthen>
@@ -2129,7 +2129,7 @@
 			<description>Tell which source is being used for priority purpose</description>
 			<default value="0"/> <!-- OFF -->
 			<test value="1"> <!-- IDG2 -->
-				/systems/electrical/relay/gen-4-glc/contact-pos eq 1
+				/systems/electrical/relay/gen-2-glc/contact-pos eq 1
 			</test>
 			<test value="2"> <!-- Bus Tie -->
 				/systems/electrical/relay/ac-bus-ac-bus-tie-2/contact-pos eq 1
@@ -2145,7 +2145,7 @@
 					</eq>
 					<value>0</value>
 					<max>
-						<property>/systems/electrical/relay/gen-4-glc/output</property>
+						<property>/systems/electrical/relay/gen-2-glc/output</property>
 						<property>/systems/electrical/relay/ac-bus-ac-bus-tie-2/output</property>
 					</max>
 				</ifthen>
