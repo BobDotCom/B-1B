@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <system name="B-1B Control">
     <channel name="Wing Sweep">
-<!--        <fcs_function name="fcs/sweep-cmd-norm">-->
-<!--            <function>-->
-<!--                <table>-->
-<!--                    <independentVar lookup="row">/controls/flight/wing-sweep</independentVar>-->
-<!--                    <tableData>-->
-<!--                        0  15.0-->
-<!--                        1  67.5-->
-<!--                    </tableData>-->
-<!--                </table>-->
-<!--            </function>-->
-<!--        </fcs_function>-->
+        <!--        <fcs_function name="fcs/sweep-cmd-norm">-->
+        <!--            <function>-->
+        <!--                <table>-->
+        <!--                    <independentVar lookup="row">/controls/flight/wing-sweep</independentVar>-->
+        <!--                    <tableData>-->
+        <!--                        0  15.0-->
+        <!--                        1  67.5-->
+        <!--                    </tableData>-->
+        <!--                </table>-->
+        <!--            </function>-->
+        <!--        </fcs_function>-->
         <kinematic name="fcs/sweep-pos-norm">
-<!--            <input>fcs/sweep-cmd-norm</input>-->
+            <!--            <input>fcs/sweep-cmd-norm</input>-->
             <input>/controls/flight/wing-sweep</input>
             <!-- TODO: Set accurate wing sweep time -->
             <traverse>
@@ -28,18 +28,29 @@
             </traverse>
             <output>/surface-positions/wing-sweep-pos-norm</output>
         </kinematic>
+        <fcs_function name="fcs/sweep-pos-deg">
+            <function>
+                <table>
+                    <independentVar lookup="row">fcs/sweep-pos-norm</independentVar>
+                    <tableData>
+                        0  67.5
+                        1  15.0
+                    </tableData>
+                </table>
+            </function>
+        </fcs_function>
 
-        <aerosurface_scale name="fcs/sweep-pos-deg">
-            <input>fcs/sweep-pos-norm</input>
-            <domain>
-                <min>0</min>
-                <max>1</max>
-            </domain>
-            <range>
-                <min>15</min>
-                <max>67.5</max>
-            </range>
-        </aerosurface_scale>
+<!--        <aerosurface_scale name="fcs/sweep-pos-deg">-->
+<!--            <input>fcs/sweep-pos-norm</input>-->
+<!--            <domain>-->
+<!--                <min>0</min>-->
+<!--                <max>1</max>-->
+<!--            </domain>-->
+<!--            <range>-->
+<!--                <min>15</min>-->
+<!--                <max>67.5</max>-->
+<!--            </range>-->
+<!--        </aerosurface_scale>-->
 
     </channel>
 
@@ -246,6 +257,14 @@
     </channel>
 
     <channel name="Landing Gear">
+        <switch name="fcs/gear-no-wow">
+            <default value="1"/>
+            <test logic="AND" value="0">
+                gear/unit[1]/WOW eq 1
+                gear/unit[2]/WOW eq 1
+            </test>
+        </switch>
+
         <kinematic name="Gear Control">
             <input>gear/gear-cmd-norm</input>
             <traverse>
@@ -280,6 +299,21 @@
         </kinematic>
 
     </channel>
-
+    <channel name="Spoilers">
+        <kinematic name="Spoilers Control">
+            <input>fcs/spoiler-cmd-norm</input>
+            <traverse>
+                <setting>
+                    <position>0</position>
+                    <time>0</time>
+                </setting>
+                <setting>
+                    <position>1</position>
+                    <time>1</time>
+                </setting>
+            </traverse>
+            <output>fcs/spoilers-pos-norm</output>
+        </kinematic>
+    </channel>
 
 </system>
