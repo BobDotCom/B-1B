@@ -532,7 +532,7 @@
 			</function>
 		</fcs_function>
 
-		<!-- IDG 1 -->
+		<!-- IDG 2 -->
 		<pure_gain name="/systems/electrical/sources/idg-2/drive-rpm-input">
 			<input>/systems/engines/adg[1]/drive-rpm</input>
 			<gain>90.298</gain> <!-- 1% N2 RPM value * 0.604 -->
@@ -617,7 +617,7 @@
 			<gain>/systems/electrical/sources/idg-2/gcr-relay</gain>
 		</pure_gain>
 
-		<!-- IDG 2 -->
+		<!-- IDG 4 -->
 		<pure_gain name="/systems/electrical/sources/idg-4/drive-rpm-input">
 			<input>/systems/engines/adg[3]/drive-rpm</input>
 			<gain>90.298</gain> <!-- 1% N2 RPM value * 0.604 -->
@@ -980,7 +980,7 @@
 
 	<channel name="AC Source Relays" execrate="8">
 
-		<!-- IDG 1 -->
+		<!-- IDG 2 -->
 		<switch name="/systems/electrical/sources/idg-2/gcu-2-powered">
 			<default value="0"/>
 			<test logic="OR" value="1">
@@ -1058,7 +1058,7 @@
 			</test>
 		</switch>
 
-		<!-- IDG 2 -->
+		<!-- IDG 4 -->
 		<switch name="/systems/electrical/sources/idg-4/gcu-4-powered">
 			<default value="0"/>
 			<test logic="OR" value="1">
