@@ -38,6 +38,7 @@
 
 	<property value="0">/controls/engines/engine[0]/fire-btn</property>
 	<property value="0">/controls/engines/engine[1]/fire-btn</property>
+	<property value="0">/controls/engines/engine[3]/fire-btn</property>
 	<property value="0">/systems/electrical/some-electric-thingie/generator-1-pb</property>
 	<property value="0">/systems/electrical/some-electric-thingie/generator-2-pb</property>
 	<property value="0">/systems/electrical/some-electric-thingie/generator-4-pb</property>
@@ -691,7 +692,7 @@
 			<default value="0"/>
 			<test logic="AND" value="1">
 				/systems/failures/electrical/gen-2 ne 1
-				/controls/engines/engine[0]/fire-btn eq 0
+				/controls/engines/engine[1]/fire-btn eq 0
 				/systems/electrical/sources/idg-2/drive-rpm ge 4730
 			</test>
 		</switch>
@@ -776,7 +777,7 @@
 			<default value="0"/>
 			<test logic="AND" value="1">
 				/systems/failures/electrical/gen-4 ne 1
-				/controls/engines/engine[1]/fire-btn eq 0
+				/controls/engines/engine[3]/fire-btn eq 0
 				/systems/electrical/sources/idg-4/drive-rpm ge 4730
 			</test>
 		</switch>
