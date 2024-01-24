@@ -116,7 +116,7 @@ maggse
 	 <center>
 		 <x-m> 0.01898</x-m>
 		 <y-m> 0.039558</y-m>
-		 <z-m> 0.21598</z-m>
+		 <z-m> 0.21495</z-m>
    </center>
  </animation>
 
@@ -174,14 +174,399 @@ maggse
 			 <property>controls/switches/annunciator-lighting</property>
 		 </binding>
 	 </action>
+</animation> 
+
+ <!-- Generator-reset switches-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gen_reset_1</object-name>
+	 <property>/controls/electrical/switches/gen-1</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.2308</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>gen_reset_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/gen-1</property>
+		 </binding>
+	 </action>
+</animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gen_reset_2</object-name>
+	 <property>/controls/electrical/switches/gen-2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.2308</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>gen_reset_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/gen-2</property>
+		 </binding>
+	 </action>
 </animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gen_reset_3</object-name>
+	 <property>/controls/electrical/switches/gen-4</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.2308</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>gen_reset_3</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/gen-4</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <!-- CSD De-couple safetys-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>CSD_safety_1</object-name>
+	 <property>/controls/electrical/switches/csd_safety1</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.173</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>CSD_safety_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd_safety1</property>
+		 </binding>
+	 </action>
+</animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>CSD_safety_2</object-name>
+	 <property>/controls/electrical/switches/csd_safety2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.173</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>CSD_safety_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd_safety2</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>CSD_safety_3</object-name>
+	 <property>/controls/electrical/switches/csd_safety3</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.173</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>CSD_safety_3</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd_safety3</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <!-- CSD De-couple--> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>csd_1</object-name>
+	 <property>/controls/electrical/switches/idg-1</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.192</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>csd_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/idg-1</property>
+                         <condition> 
+                          <equals>
+                          <property>/controls/electrical/switches/csd_safety1</property> 
+                          <value>1</value> 
+                          </equals>
+                         </condition>
+		 </binding>
+	 </action>
+</animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>csd_2</object-name>
+	 <property>/controls/electrical/switches/idg-2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.192</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>csd_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/idg-2</property>
+                         <condition> 
+                          <equals>
+                          <property>/controls/electrical/switches/csd_safety2</property> 
+                          <value>1</value> 
+                          </equals>
+                         </condition>
+		 </binding>
+	 </action>
+</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>csd_4</object-name>
+	 <property>/controls/electrical/switches/idg-4</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.192</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>csd_4</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/idg-4</property>
+                         <condition> 
+                          <equals>
+                          <property>/controls/electrical/switches/csd_safety3</property> 
+                          <value>1</value> 
+                          </equals>
+                         </condition>
+		 </binding>
+	 </action>
+</animation>
+
 
  <!-- Battery-->
 
  <animation>
 	 <type>rotate</type>
 	 <object-name>BATT</object-name>
-	 <property>controls/electric/battery-switch</property>
+	 <property>controls/electrical/switches/battery</property>
 	 <interpolation>
 		 <entry>
 			 <ind> 0.0</ind>
@@ -213,7 +598,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/electric/battery-switch</property>
+			 <property>controls/electrical/switches/battery</property>
 		 </binding>
 		 <binding>
 			 <command>property-assign</command> 
@@ -286,121 +671,82 @@ maggse
 <!-- APU-->
 
 <animation>
-	 <type>rotate</type>
+	<type>knob</type>
 	 <object-name>APUL</object-name>
-	 <property>controls/APU/APUL_running</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-	 </interpolation>
+	<property>controls/engines/engine[4]/cutoff-switch</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.01066</x-m>
+		<y-m>0.16280</y-m>
+		<z-m>0.28120</z-m>
+	</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01066</x-m>
-		 <y-m>0.16280</y-m>
-		 <z-m>0.28120</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUL</object-name>
+
 	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUL_running</property>
-			 <condition>
-		           <or>
-		           <equals>
-			   <property>controls/electric/battery-switch</property>
-			   <value>1</value>
-		           </equals>
-		           <equals>
-			   <property>controls/APU/APUR_running</property>
-			   <value>1</value>
-		           </equals>
-		           <equals>
-			   <property>controls/APU/APUL_running</property>
-			   <value>1</value>
-		           </equals>
-	 	           </or>
-	                 </condition>
+			 <command>property-adjust</command>
+			 <property>controls/engines/engine[4]/cutoff-switch</property>
+			 <min>-1</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[4]/cutoff-switch</property>
+			<step>0</step>
+			<min>-1</min>
+			<max>0</max>
+		</binding>
+	</release>
 </animation>
 
 <animation>
-	 <type>rotate</type>
+	<type>knob</type>
 	 <object-name>APUR</object-name>
-	 <property>controls/APU/APUR_running</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-	 </interpolation>
+	<property>controls/engines/engine[5]/cutoff-switch</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.01066</x-m>
+		<y-m>0.20060</y-m>
+		<z-m>0.28120</z-m>
+	</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01066</x-m>
-		 <y-m>0.20060</y-m>
-		 <z-m>0.28120</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUR</object-name>
+
 	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUR_running</property>
-			 	 <condition>
-		                   <or>
-		                   <equals>
-			           <property>controls/electric/battery-switch</property>
-			           <value>1</value>
-		                   </equals>
-		                   <equals>
-			           <property>controls/APU/APUL_running</property>
-			           <value>1</value>
-		                   </equals>
-		                   <equals>
-			           <property>controls/APU/APUR_running</property>
-			           <value>1</value>
-		                   </equals>
-	 	                   </or>
-	                   </condition>
-		             </binding>
-	             </action>
-           </animation>
+			 <command>property-adjust</command>
+			 <property>controls/engines/engine[5]/cutoff-switch</property>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[5]/cutoff-switch</property>
+			<step>0</step>
+			<min>-1</min>
+			<max>0</max>
+		</binding>
+	</release>
+</animation>
+
 
 <animation>
-	 <type>rotate</type>
+	<type>knob</type>
 	 <object-name>APUL_couple</object-name>
-	 <property>controls/APU/APUL_couple</property>
+	<property>controls/apu/apu[0]/couple</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -411,44 +757,33 @@ maggse
 			 <dep>30.0</dep>
 		 </entry>
 	 </interpolation>
+	<center>
+		<x-m>0.0108</x-m>
+		<y-m>0.1440</y-m>
+		<z-m>0.3309</z-m>
+	</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.0108</x-m>
-		 <y-m>0.1440</y-m>
-		 <z-m>0.3309</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUL_couple</object-name>
+
 	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUL_couple</property>
-			 <condition>
-		           <or>
-		           <equals>
-			   <property>controls/APU/APUL_running</property>
-			   <value>1</value>
-		           </equals>
-	 	           </or>
-	                 </condition>
+			 <command>property-adjust</command>
+			 <property>controls/apu/apu[0]/couple</property>
+			 <min>0</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
 </animation>
 
-<animation>
-	 <type>rotate</type>
+
+	<animation>
+		<type>knob</type>
 	 <object-name>APUR_couple</object-name>
-	 <property>controls/APU/APUR_couple</property>
+		<property>controls/apu/apu[1]/couple</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -459,44 +794,31 @@ maggse
 			 <dep>30.0</dep>
 		 </entry>
 	 </interpolation>
+		<center>
+			<x-m>0.01077</x-m>
+			<y-m>0.21970</y-m>
+			<z-m>0.33090</z-m>
+		</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01077</x-m>
-		 <y-m>0.21970</y-m>
-		 <z-m>0.33090</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUR_couple</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
+		<action>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUR_couple</property>
-			 <condition>
-		           <or>
-		           <equals>
-			   <property>controls/APU/APUR_running</property>
-			   <value>1</value>
-		           </equals>
-	 	           </or>
-	                 </condition>
+			 <command>property-adjust</command>
+			 <property>controls/apu/apu[1]/couple</property>
+			 <min>0</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
 </animation>
 
-<animation>
-	 <type>rotate</type>
+	<animation>
+		<type>knob</type>
 	 <object-name>APUL_bleed</object-name>
-	 <property>controls/APU/APUL_bleed</property>
+		<property>controls/apu/apu[0]/bleed</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -507,42 +829,31 @@ maggse
 			 <dep>30.0</dep>
 		 </entry>
 	 </interpolation>
+		<center>
+			<x-m>0.01091</x-m>
+			<y-m>0.12770</y-m>
+			<z-m>0.28010</z-m>
+		</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01091</x-m>
-		 <y-m>0.12770</y-m>
-		 <z-m>0.28010</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUL_bleed</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
+		<action>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUL_bleed</property>
-			 <condition>
-		           <equals>
-			     <property>controls/APU/APUL_running</property>
-			     <value>1</value>
-		           </equals>
-	                 </condition>
+			 <command>property-adjust</command>
+			 <property>controls/apu/apu[0]/bleed</property>
+			 <min>0</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
 </animation>
 
-<animation>
-	 <type>rotate</type>
+	<animation>
+		<type>knob</type>
 	 <object-name>APUR_bleed</object-name>
-	 <property>controls/APU/APUR_bleed</property>
+		<property>controls/apu/apu[1]/bleed</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -553,42 +864,51 @@ maggse
 			 <dep>30.0</dep>
 		 </entry>
 	 </interpolation>
+		<center>
+			<x-m>0.01085</x-m>
+			<y-m>0.23420</y-m>
+			<z-m>0.28010</z-m>
+		</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01085</x-m>
-		 <y-m>0.23420</y-m>
-		 <z-m>0.28010</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUR_bleed</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
+		<action>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUR_bleed</property>
-			 <condition>
-		           <equals>
-			   <property>controls/APU/APUR_running</property>
-			   <value>1</value>
-		           </equals>
-	                 </condition>
+			 <command>property-adjust</command>
+			 <property>controls/apu/apu[1]/bleed</property>
+			 <min>0</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
 </animation>
+	<animation>
+		<type>select</type>
+		<object-name>APUL_run</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>engines/engine[4]/n1</property>
+				<value>95</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>APUR_run</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>engines/engine[5]/n1</property>
+				<value>95</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
 
-<animation>
-	 <type>rotate</type>
+	<animation>
+		<type>knob</type>
 	 <object-name>APU_X_Bleed</object-name>
-	 <property>controls/APU/APU_crossbleed</property>
+		<property>controls/apu/crossbleed</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -599,40 +919,23 @@ maggse
 			 <dep>30.0</dep>
 		 </entry>
 	 </interpolation>
+		<center>
+			<x-m>0.01077</x-m>
+			<y-m>0.18210</y-m>
+			<z-m>0.33980</z-m>
+		</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01077</x-m>
-		 <y-m>0.18210</y-m>
-		 <z-m>0.33980</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APU_X_Bleed</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
+		<action>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APU_crossbleed</property>
-			 <condition>
-		           <or>
-		             <equals>
-			       <property>controls/APU/APUL_running</property>
-			       <value>1</value>
-		             </equals>
-		             <equals>
-			       <property>controls/APU/APUR_running</property>
-			       <value>1</value>
-		             </equals>
-	 	           </or>
-	                 </condition>
+			 <command>property-adjust</command>
+			 <property>controls/apu/crossbleed</property>
+			 <min>0</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
 </animation>
@@ -989,5 +1292,16 @@ maggse
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
 </animation>
+	<animation>
+		<type>material</type>
+		<object-name>APUL_run</object-name>
+		<object-name>APUR_run</object-name>
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+			<factor-prop>controls/switches/annunciator-lighting</factor-prop>
+		</emission>
+	</animation>
 
 </PropertyList>
