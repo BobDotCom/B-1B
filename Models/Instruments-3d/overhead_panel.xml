@@ -116,7 +116,7 @@ maggse
 	 <center>
 		 <x-m> 0.01898</x-m>
 		 <y-m> 0.039558</y-m>
-		 <z-m> 0.21598</z-m>
+		 <z-m> 0.21495</z-m>
    </center>
  </animation>
 
@@ -174,7 +174,392 @@ maggse
 			 <property>controls/switches/annunciator-lighting</property>
 		 </binding>
 	 </action>
+</animation> 
+
+ <!-- Generator-reset switches-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gen_reset_1</object-name>
+	 <property>/controls/electrical/switches/gen-1</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.2308</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>gen_reset_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/gen-1</property>
+		 </binding>
+	 </action>
+</animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gen_reset_2</object-name>
+	 <property>/controls/electrical/switches/gen-2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.2308</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>gen_reset_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/gen-2</property>
+		 </binding>
+	 </action>
 </animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gen_reset_3</object-name>
+	 <property>/controls/electrical/switches/gen-4</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.2308</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>gen_reset_3</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/gen-4</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <!-- CSD De-couple safetys-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>CSD_safety_1</object-name>
+	 <property>/controls/electrical/switches/csd_safety1</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.173</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>CSD_safety_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd_safety1</property>
+		 </binding>
+	 </action>
+</animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>CSD_safety_2</object-name>
+	 <property>/controls/electrical/switches/csd_safety2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.173</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>CSD_safety_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd_safety2</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>CSD_safety_3</object-name>
+	 <property>/controls/electrical/switches/csd_safety3</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.173</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>CSD_safety_3</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd_safety3</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <!-- CSD De-couple--> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>csd_1</object-name>
+	 <property>/controls/electrical/switches/idg-1-disc</property>
+	 <interpolation>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.192</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>csd_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/idg-1-disc</property>
+                         <condition> 
+                          <equals>
+                          <property>/controls/electrical/switches/csd_safety1</property> 
+                          <value>1</value> 
+                          </equals>
+                         </condition>
+		 </binding>
+	 </action>
+</animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>csd_2</object-name>
+	 <property>/controls/electrical/switches/idg-2-disc</property>
+	 <interpolation>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.192</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>csd_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/idg-2-disc</property>
+                         <condition> 
+                          <equals>
+                          <property>/controls/electrical/switches/csd_safety2</property> 
+                          <value>1</value> 
+                          </equals>
+                         </condition>
+		 </binding>
+	 </action>
+</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>csd_4</object-name>
+	 <property>/controls/electrical/switches/idg-4-disc</property>
+	 <interpolation>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.192</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>csd_4</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/idg-4-disc</property>
+                         <condition> 
+                          <equals>
+                          <property>/controls/electrical/switches/csd_safety3</property> 
+                          <value>1</value> 
+                          </equals>
+                         </condition>
+		 </binding>
+	 </action>
+</animation>
+
 
  <!-- Battery-->
 
