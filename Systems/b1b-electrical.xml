@@ -31,6 +31,8 @@
 	<property value="0">/systems/failures/electrical/ac-ess-bus</property>
 	<property value="0">/systems/failures/electrical/ac-1-bus</property>
 	<property value="0">/systems/failures/electrical/ac-2-bus</property>
+	<property value="0">/systems/failures/electrical/ac-3-bus</property>
+	<property value="0">/systems/failures/electrical/ac-4-bus</property>
 	<property value="0">/systems/failures/electrical/dc-bat-bus</property>
 	<property value="0">/systems/failures/electrical/dc-ess-bus</property>
 	<property value="0">/systems/failures/electrical/dc-fwd-bus</property>
@@ -104,6 +106,8 @@
 				/controls/electrical/switches/battery eq 1
 				/systems/electrical/bus/ac-1 lt 220
 				/systems/electrical/bus/ac-2 lt 220
+				/systems/electrical/bus/ac-3 lt 220
+				/systems/electrical/bus/ac-4 lt 220
 				/gear/gear[1]/wow eq 1
 				/velocities/airspeed-kt lt 100
 			</test>
@@ -350,6 +354,8 @@
 				/controls/electrical/switches/battery eq 1
 				/systems/electrical/bus/ac-1 lt 220
 				/systems/electrical/bus/ac-2 lt 220
+				/systems/electrical/bus/ac-3 lt 220
+				/systems/electrical/bus/ac-4 lt 220
 				/gear/gear[1]/wow eq 1
 				/velocities/airspeed-kt lt 100
 			</test>
@@ -899,6 +905,8 @@
 				/systems/electrical/sources/si-1/inverter-control/contactor-power-flow-through-7XB eq 1
 				/systems/electrical/bus/ac-1 lt 220
 				/systems/electrical/bus/ac-2 lt 220
+				/systems/electrical/bus/ac-3 lt 220
+				/systems/electrical/bus/ac-4 lt 220
 				/systems/electrical/relay/emer-glc/output lt 220
 			</test>
 		</switch>
@@ -1497,11 +1505,77 @@
 			</test>
 		</switch>
 
+		<switch name="/systems/electrical/relay/galley-bus-3-shed-switch/contact-pos">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/controls/electrical/switches/galley eq 1
+				<test logic="OR">
+					<test logic="AND">
+						/gear/gear[1]/wow eq 0
+						/systems/electrical/some-electric-thingie/galley-shed-sum gt 1
+					</test>
+					<test logic="AND">
+						/gear/gear[1]/wow eq 1
+						<test logic="OR">
+<!--							/systems/electrical/relay/apu-glc/output ge 220-->
+							/systems/electrical/relay/ext-epc/output ge 220
+							<test logic="AND">
+								/systems/electrical/relay/gen-1-glc/output ge 220
+								/systems/electrical/relay/gen-2-glc/output ge 220
+								/systems/electrical/relay/gen-4-glc/output ge 220
+							</test>
+						</test>
+					</test>
+				</test>
+			</test>
+		</switch>
+
+		<switch name="/systems/electrical/relay/galley-bus-3-shed-switch/output">
+			<default value="0"/>
+			<test value="/systems/electrical/bus/ac-3">
+				/systems/electrical/relay/galley-bus-3-shed-switch/contact-pos eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/electrical/relay/galley-bus-4-shed-switch/contact-pos">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/controls/electrical/switches/galley eq 1
+				<test logic="OR">
+					<test logic="AND">
+						/gear/gear[1]/wow eq 0
+						/systems/electrical/some-electric-thingie/galley-shed-sum gt 1
+					</test>
+					<test logic="AND">
+						/gear/gear[1]/wow eq 1
+						<test logic="OR">
+<!--							/systems/electrical/relay/apu-glc/output ge 220-->
+							/systems/electrical/relay/ext-epc/output ge 220
+							<test logic="AND">
+								/systems/electrical/relay/gen-1-glc/output ge 220
+								/systems/electrical/relay/gen-2-glc/output ge 220
+								/systems/electrical/relay/gen-4-glc/output ge 220
+							</test>
+						</test>
+					</test>
+				</test>
+			</test>
+		</switch>
+
+		<switch name="/systems/electrical/relay/galley-bus-4-shed-switch/output">
+			<default value="0"/>
+			<test value="/systems/electrical/bus/ac-4">
+				/systems/electrical/relay/galley-bus-4-shed-switch/contact-pos eq 1
+			</test>
+		</switch>
+
 		<switch name="/systems/electrical/some-electric-thingie/galley-shed">
 			<default value="0"/>
 			<test logic="OR" value="1">
 				/systems/electrical/relay/galley-bus-1-shed-switch/contact-pos eq 0
 				/systems/electrical/relay/galley-bus-2-shed-switch/contact-pos eq 0
+				/systems/electrical/relay/galley-bus-3-shed-switch/contact-pos eq 0
+				/systems/electrical/relay/galley-bus-4-shed-switch/contact-pos eq 0
 			</test>
 		</switch>
 
@@ -1541,14 +1615,14 @@
 				/controls/electrical/switches/bus-tie eq 0
 			</test>
 			<test logic="AND" value="1">  <!-- give power to other side -->
-				/systems/electrical/relay/gen-2-glc/contact-pos eq 1
-				/systems/electrical/relay/gen-1-glc/contact-pos eq 0
+				/systems/electrical/relay/gen-4-glc/contact-pos eq 1
+				/systems/electrical/relay/gen-2-glc/contact-pos eq 0
 <!--				/systems/electrical/relay/apu-glc/contact-pos eq 0-->
 				/systems/electrical/relay/ext-epc/contact-pos eq 0
 				/controls/electrical/switches/bus-tie eq 1
 			</test>
 			<test logic="AND" value="1">  <!-- fetch power from other side -->
-				/systems/electrical/relay/gen-2-glc/contact-pos eq 0
+				/systems/electrical/relay/gen-4-glc/contact-pos eq 0
 				/controls/electrical/switches/bus-tie eq 1
 			</test>
 		</switch>
@@ -1563,14 +1637,14 @@
 		<!-- These outputs are from the AC Bus to the AC Bus Tie -->
 		<switch name="/systems/electrical/relay/ac-bus-ac-bus-tie-1/output-tie">
 			<default value="0"/>
-			<test value="/systems/electrical/bus/ac-1">
+			<test value="/systems/electrical/relay/gen-1-glc/output">
 				/systems/electrical/relay/ac-bus-ac-bus-tie-1/contact-pos eq 1
 			</test>
 		</switch>
 
 		<switch name="/systems/electrical/relay/ac-bus-ac-bus-tie-2/output-tie">
 			<default value="0"/>
-			<test value="/systems/electrical/bus/ac-2">
+			<test value="/systems/electrical/relay/gen-4-glc/output">
 				/systems/electrical/relay/ac-bus-ac-bus-tie-2/contact-pos eq 1
 			</test>
 		</switch>
@@ -2066,6 +2140,9 @@
             <test value="/systems/electrical/relay/ext-epc/output">
                /systems/electrical/relay/ext-epc/contact-pos eq 1
             </test>
+			<test value="/systems/electrical/relay/gen-2-glc/output">
+			   /systems/electrical/relay/gen-2-glc/contact-pos eq 1
+			</test>
 <!--            <test value="/systems/electrical/relay/apu-glc/output">-->
 <!--               /systems/electrical/relay/apu-glc/contact-pos eq 1-->
 <!--            </test>-->
@@ -2075,7 +2152,7 @@
             </test>
             <test logic="AND" value="/systems/electrical/relay/ac-bus-ac-bus-tie-2/output-tie">
                 /systems/electrical/relay/ac-bus-ac-bus-tie-2/contact-pos eq 1
-                /systems/electrical/bus/ac-2-src ne 2
+                /systems/electrical/bus/ac-3-src ne 2
             </test>
         </switch>
 
@@ -2125,18 +2202,6 @@
 			</function>
 		</fcs_function>
 
-		<!-- AC Bus 2 -->
-		<switch name="/systems/electrical/bus/ac-2-src">
-			<description>Tell which source is being used for priority purpose</description>
-			<default value="0"/> <!-- OFF -->
-			<test value="1"> <!-- IDG2 -->
-				/systems/electrical/relay/gen-2-glc/contact-pos eq 1
-			</test>
-			<test value="2"> <!-- Bus Tie -->
-				/systems/electrical/relay/ac-bus-ac-bus-tie-2/contact-pos eq 1
-			</test>
-		</switch>
-
 		<fcs_function name="/systems/electrical/bus/ac-2">
 			<function>
 				<ifthen>
@@ -2147,6 +2212,50 @@
 					<value>0</value>
 					<max>
 						<property>/systems/electrical/relay/gen-2-glc/output</property>
+						<property>/systems/electrical/bus/ac-bus-tie</property>
+					</max>
+				</ifthen>
+			</function>
+		</fcs_function>
+
+		<!-- AC Bus 3 -->
+		<switch name="/systems/electrical/bus/ac-3-src">
+			<description>Tell which source is being used for priority purpose</description>
+			<default value="0"/> <!-- OFF -->
+			<test value="1"> <!-- IDG4 -->
+				/systems/electrical/relay/gen-4-glc/contact-pos eq 1
+			</test>
+			<test value="2"> <!-- Bus Tie -->
+				/systems/electrical/relay/ac-bus-ac-bus-tie-2/contact-pos eq 1
+			</test>
+		</switch>
+
+		<fcs_function name="/systems/electrical/bus/ac-3">
+			<function>
+				<ifthen>
+					<eq>
+						<property>/systems/failures/electrical/ac-3-bus</property>
+						<value>1</value>
+					</eq>
+					<value>0</value>
+					<max>
+						<property>/systems/electrical/relay/gen-4-glc/output</property>
+						<property>/systems/electrical/relay/ac-bus-ac-bus-tie-2/output</property>
+					</max>
+				</ifthen>
+			</function>
+		</fcs_function>
+
+		<fcs_function name="/systems/electrical/bus/ac-4">
+			<function>
+				<ifthen>
+					<eq>
+						<property>/systems/failures/electrical/ac-4-bus</property>
+						<value>1</value>
+					</eq>
+					<value>0</value>
+					<max>
+						<property>/systems/electrical/relay/gen-4-glc/output</property>
 						<property>/systems/electrical/relay/ac-bus-ac-bus-tie-2/output</property>
 					</max>
 				</ifthen>
