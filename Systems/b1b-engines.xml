@@ -94,7 +94,6 @@
             <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
-					/systems/electrical/bus/ac-ess ge 220
                     /systems/electrical/bus/ac-1 ge 220
 				</test>
                 <test logic="OR">
@@ -109,7 +108,6 @@
             <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
-					/systems/electrical/bus/ac-ess ge 220
                     /systems/electrical/bus/ac-1 ge 220
 				</test>
                 <test logic="OR">
@@ -123,8 +121,7 @@
             <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
-					/systems/electrical/bus/ac-ess ge 220
-                    /systems/electrical/bus/ac-1 ge 220
+                    /systems/electrical/bus/ac-4 ge 220
 				</test>
                 <test logic="OR">
                     /systems/engines/adg[2]/drive-rpm ge 55
@@ -137,8 +134,7 @@
             <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
-					/systems/electrical/bus/ac-ess ge 220
-                    /systems/electrical/bus/ac-1 ge 220
+                    /systems/electrical/bus/ac-4 ge 220
 				</test>
                 <test logic="OR">
                     /systems/engines/adg[3]/drive-rpm ge 55
