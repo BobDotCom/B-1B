@@ -34,8 +34,8 @@
   <animation>
     <type>rotate</type>
     <object-name>hour</object-name>
-    <property>/instrumentation/clock/indicated-sec</property>
-    <factor>0.00833333333333333</factor>
+    <property>sim/time/real/hour</property>
+    <factor>30</factor>
       <center>
    <x-m> 0.005613</x-m>
    <y-m>-0.009924</y-m>
@@ -51,8 +51,8 @@
   <animation>
     <type>rotate</type>
     <object-name>minute</object-name>
-    <property>/instrumentation/clock/indicated-sec</property>
-    <factor>0.1</factor>
+    <property>sim/time/real/minute</property>
+    <factor>6</factor>
       <center>
    <x-m> 0.005713</x-m>
    <y-m>-0.009866</y-m>
@@ -68,7 +68,7 @@
   <animation>
     <type>rotate</type>
     <object-name>second</object-name>
-    <property>/instrumentation/clock/indicated-sec</property>
+    <property>sim/time/real/second</property>
     <factor>6</factor>
       <center>
    <x-m> 0.00569</x-m>

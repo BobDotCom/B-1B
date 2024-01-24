@@ -77,6 +77,37 @@ maggse
 
  <animation>
 	 <type>rotate</type>
+	 <object-name>stab</object-name>
+	 <property>surface-positions/elevator-pos-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>-1</ind>
+			 <dep>55</dep>
+		 </entry>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1</ind>
+			 <dep>-20</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.00165</x-m>
+		 <y-m>-0.0465</y-m>
+		 <z-m>0.03225</z-m>
+	 </center>
+
+ </animation>
+
+ <animation>
+	 <type>rotate</type>
 	 <object-name>spoilerr</object-name>
 	 <property>controls/flight/spoilers</property>
 	 <interpolation>
@@ -100,8 +131,8 @@ maggse
 	 </axis>
 	 <center>
 		 <x-m>0.001758</x-m>
-		 <y-m>0.006693</y-m>
-		 <z-m>0.02549</z-m>
+		 <y-m>0.01031</y-m>
+		 <z-m>0.03049</z-m>
 	 </center>
 
  </animation>
@@ -130,9 +161,9 @@ maggse
 		 <z>0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.00165</x-m>
-		 <y-m>0.009333</y-m>
-		 <z-m>0.02549</z-m>
+		 <x-m>0.00175</x-m>
+		 <y-m>0.009135</y-m>
+		 <z-m>0.0304</z-m>
 	 </center>
 
  </animation>
@@ -162,8 +193,8 @@ maggse
 	 </axis>
 	 <center>
 		 <x-m> 0.00165</x-m>
-		 <y-m>-0.04392</y-m>
-		 <z-m> 0.02134</z-m>
+		 <y-m>-0.0435</y-m>
+		 <z-m> 0.02296</z-m>
 	 </center>
 
  </animation>
