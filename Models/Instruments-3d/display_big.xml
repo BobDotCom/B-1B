@@ -139,7 +139,7 @@ sweat by maggse
 	 <object-name>rep_light_battl</object-name>
 	 <condition>
 		 <equals>
-			 <property>controls/electric/battery-switch</property>
+			 <property>controls/electrical/switches/battery</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
@@ -173,7 +173,7 @@ sweat by maggse
 	 <object-name>rep_light_battr</object-name>
 	 <condition>
 		 <equals>
-			 <property>controls/electric/battery-switch</property>
+			 <property>controls/electrical/switches/battery</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
