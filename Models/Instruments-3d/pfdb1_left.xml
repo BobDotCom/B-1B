@@ -424,9 +424,9 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>mach.001</object-name>
-   <property>velocities/mach</property>
-   <factor>1.0</factor>
-   <step>0.1</step>
+   <property>velocities/groundspeed-kt</property>
+   <factor>0.001</factor>
+   <step>100</step>
    <axis>
      <x>0</x>
      <y>1</y>
@@ -437,9 +437,9 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>mach.002</object-name>
-   <property>velocities/mach</property>
-   <factor>10.0</factor>
-   <step>0.01</step>
+   <property>velocities/groundspeed-kt</property>
+   <factor>0.01</factor>
+   <step>10</step>
    <axis>
      <x>0</x>
      <y>1</y>
@@ -450,9 +450,9 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>mach.003</object-name>
-   <property>velocities/mach</property>
-   <factor>100.0</factor>
-   <step>0.001</step>
+   <property>velocities/groundspeed-kt</property>
+   <factor>0.1</factor>
+   <step>1</step>
    <axis>
      <x>0</x>
      <y>1</y>

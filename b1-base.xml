@@ -1028,7 +1028,7 @@ B-1B set file.
             <file>Aircraft/B-1B/Nasal/vector.nas</file>
         </vector>
         <ai>
-          <file>Aircraft/f16/Nasal/AI_list.nas</file>
+          <file>Aircraft/B-1B/Nasal/AI_list.nas</file>
         </ai>
         <view>
           <file>Aircraft/B-1B/Nasal/MissileView.nas</file>
@@ -1063,6 +1063,9 @@ B-1B set file.
         <fc>
             <file>Aircraft/B-1B/Nasal/fire-control.nas</file>
         </fc>
+        <radardist>
+            <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+        </radardist>
         <radar>
             <file>Aircraft/B-1B/Nasal/phd.nas</file>
             <!--file>Aircraft/B-1B/Nasal/radardist.nas</file-->

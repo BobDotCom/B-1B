@@ -167,6 +167,50 @@ maggse
 	</action>
 </animation>
 
+<animation> 
+	<type>select</type>
+	<object-name>TTO_light</object-name> 
+        <condition>  
+         <equals>  
+          <property>controls/switches/TTO_button</property>
+           <value>1</value>
+         </equals>
+        </condition> 
+ </animation> 
+
+<animation> 
+ <type>translate</type> 
+  <object-name>TTO</object-name>
+  <property>controls/switches/TTO_button</property>
+    <factor>0.003</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	 <center>
+		 <x-m>0.01585</x-m>
+		 <y-m>0.2761</y-m>
+		 <z-m>-0.053</z-m>
+	 </center>   
+   </animation> 
+
+<animation>
+	<type>pick</type>
+	<object-name>TTO</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/switches/TTO_button</property> 
+			<min>0.0</min>
+			<max>1.0</max>
+		</binding>
+	</action>
+</animation>
+
  <animation>
 	<type>material</type>
 	<object-name>eng_0</object-name>
