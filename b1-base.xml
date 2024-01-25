@@ -984,10 +984,17 @@ B-1B set file.
 
 
     <nasal>
+        <notifications>
+            <!-- Before b1b -->
+            <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
+            <file>Aircraft/B-1B/Nasal/frameNotification.nas</file>
+            <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
+        </notifications>
         <hack>
             <file>Aircraft/B-1B/Nasal/hackCanvas.nas</file>
         </hack>
         <b1b>
+            <file>Aircraft/B-1B/Nasal/exec.nas</file>
             <file>Aircraft/B-1B/Nasal/b1b.nas</file>
             <file>Aircraft/B-1B/Nasal/cdu900.nas</file>
         </b1b>
@@ -1002,11 +1009,6 @@ B-1B set file.
             <file>Aircraft/B-1B/Nasal/gci-listener.nas</file>
         </GCI>
         -->
-        <notifications>
-            <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
-            <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
-            <file>Aircraft/B-1B/Nasal/frameNotification.nas</file>
-        </notifications>
         <damage>
             <file>Aircraft/B-1B/Nasal/damage.nas</file>
         </damage>
