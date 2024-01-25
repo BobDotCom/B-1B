@@ -56,7 +56,6 @@ var SubSystem_Main = {
         };
 
         foreach (var name; keys(input)) {
-        print("Registering " ~ name);
             emesary.GlobalTransmitter.NotifyAll(notifications.FrameNotificationAddProperty.new(_ident,name, input[name]));
         }
 
