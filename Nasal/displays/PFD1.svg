@@ -22,14 +22,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.4497891"
-     inkscape:cx="329.70312"
-     inkscape:cy="287.62804"
+     inkscape:cx="591.81022"
+     inkscape:cy="665.61405"
      inkscape:window-width="1440"
      inkscape:window-height="847"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg4" /><defs
+     inkscape:current-layer="g5" /><defs
      id="defs4"><filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
@@ -158,7 +158,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.4837px;font-family:'Gordon URW';-inkscape-font-specification:'Gordon URW';letter-spacing:4.11452px;display:inline;fill:none;fill-opacity:1;stroke:#d147d1;stroke-width:3.72071;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="631.84186"
        y="504.51108"
-       id="text4-7"
+       id="altimeterPressure"
        inkscape:label="altimeterPressure"
        transform="scale(0.99393758,1.0060994)"><tspan
          sodipodi:role="line"
