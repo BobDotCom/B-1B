@@ -1320,7 +1320,7 @@ var B1MfdRecipient =
             if (notification.NotificationType == "FrameNotification")
             {
                 leftPFD.update(notification);
-                rightMFD.update(notification);
+                leftMFD.update(notification);
                 rightPFD.update(notification);
                 rightMFD.update(notification);
                 return emesary.Transmitter.ReceiptStatus_OK;
