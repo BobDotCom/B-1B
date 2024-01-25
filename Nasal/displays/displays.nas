@@ -1144,7 +1144,7 @@ var DisplaySystem = {
 		setup: func {
 			printDebug(me.name," on ",me.device.name," is being setup");
 			canvas.parsesvg(me.group, "Nasal/displays/PFD1.svg");
-
+            me.altimeterPressure = me.group.getElementById("altimeterPressure");
 		},
 		enter: func {
 			printDebug("Enter ",me.name~" on ",me.device.name);
@@ -1160,6 +1160,7 @@ var DisplaySystem = {
 			printDebug(me.name,": ",controlName," activated on ",me.device.name);
 		},
 		update: func (noti = nil) {
+		    me.altimeterPressure.setText(sprintf("%.2f", noti.getproper("inhg")));
 		},
 		exit: func {
 			printDebug("Exit ",me.name~" on ",me.device.name);
