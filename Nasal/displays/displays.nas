@@ -440,7 +440,7 @@ var DisplayDevice = {
 		if (me["controlGrp"] == nil) {
 			me.controlGrp = me.canvas.createGroup()
 								.set("z-index", zIndex.device.osb)
-								.set("font","DisplayBold.ttf");
+								.set("font","GordonURW-Med.ttf");
 		}
 		me.controls.master.setControlText = func (text, positive = 1, outline = 0, rear = 0, blink = 0) {
 			# rear is adjustment of the fill in x axis
@@ -628,7 +628,7 @@ var DisplayDevice = {
 		if (page.needGroup) {
 			me.tempGrp = me.canvas.createGroup()
 							.set("z-index", zIndex.device.page)
-							.set("font","DisplayBold.ttf")
+							.set("font","GordonURW-Med.ttf")
 							.hide();
 			page.group = me.tempGrp;
 		}
@@ -639,7 +639,7 @@ var DisplayDevice = {
 		printDebug(me.name," init layer ",layer.name);
 		me.tempGrp = me.canvas.createGroup()
 						.set("z-index", zIndex.device.layer)
-						.set("font","DisplayBold.ttf")
+						.set("font","GordonURW-Med.ttf")
 						.hide();
 		layer.group = me.tempGrp;
 		layer.device = me;
@@ -1144,7 +1144,13 @@ var DisplaySystem = {
 		setup: func {
 			printDebug(me.name," on ",me.device.name," is being setup");
 			canvas.parsesvg(me.group, "Nasal/displays/PFD1.svg");
-            me.altimeterPressure = me.group.getElementById("altimeterPressure");
+            me.altimeterPressure = me.group.getElementById("altimeterPressure").set("font","GordonURW-Med.ttf");
+            me.airspeed = me.group.getElementById("airspeed").set("font","GordonURW-Med.ttf");
+            me.altitude_1k = me.group.getElementById("altitude-1k").set("font","GordonURW-Med.ttf");
+            me.altitude = me.group.getElementById("altitude").set("font","GordonURW-Med.ttf");
+            me.asi = me.group.getElementById("asi");
+            me.roll_pointer = me.group.getElementById("roll_pointer");
+            me.asi.setCenter(384, 256);
 		},
 		enter: func {
 			printDebug("Enter ",me.name~" on ",me.device.name);
@@ -1161,6 +1167,18 @@ var DisplaySystem = {
 		},
 		update: func (noti = nil) {
 		    me.altimeterPressure.setText(sprintf("%.2f", noti.getproper("inhg")));
+		    me.airspeed.setText(sprintf("%d", noti.getproper("ias")));
+		    me.altitude_1k.setText(sprintf("%d", noti.getproper("alt_ft") / 1000)); # XXxxx
+		    #me.altitude.setText(sprintf("%03d", math.fmod(noti.getproper("alt_ft"), 1000)));  # xxXXX
+		    me.altitude.setText(sprintf("%02d0", math.fmod(noti.getproper("alt_ft"), 1000) / 10));  # xxXX0
+
+            # ASI is about 116px per 10deg of pitch
+		    me.asi.setTranslation(0, noti.getproper("pitch")*11.6);
+		    #me.asi.setCenter(0, noti.getproper("pitch")*11.6);
+		    me.asi.setRotation(-noti.getproper("roll")*D2R);
+		    #me.roll_pointer.setRotation(-noti.getproper("roll")*D2R);
+		    me.roll_pointer.setRotation(-math.clamp(noti.getproper("roll"), -45, 45)*D2R);
+		    #print(me.roll_pointer.getCenter());
 		},
 		exit: func {
 			printDebug("Exit ",me.name~" on ",me.device.name);
