@@ -444,11 +444,14 @@ B-1B set file.
 
         <systems>
             <electrical>
+                <name>electrical</name>
+                <number>0</number>
                 <path>Aircraft/B-1B/Systems/generic-electrical.xml</path>
             </electrical>
             <autopilot>
                 <path>Aircraft/B-1B/Systems/b1b-autopilot.xml</path>
             </autopilot>
+            <path>Aircraft/B-1B/Systems/b1b-airdata.xml</path>
         </systems>
 
         <rendering>
