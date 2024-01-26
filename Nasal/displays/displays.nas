@@ -1343,6 +1343,8 @@ var displayHeightHalf= displayHeight  *  0.5;
 var forcePages = func (v, system) {
 	if (v == 0) {
         system.selectPage("PageBlank");
+    } elsif (v == 1) {
+        system.selectPage("PagePFD1");
     }
 }
 
@@ -1431,9 +1433,9 @@ var main = func (module) {
 	mfdSystem3.initPages();
 	mfdSystem4.initPages();
 
-	forcePages(0, mfdSystem1);
+	forcePages(1, mfdSystem1);
 	forcePages(0, mfdSystem2);
-	forcePages(0, mfdSystem3);
+	forcePages(1, mfdSystem3);
 	forcePages(0, mfdSystem4);
 
 	B1_display = B1MfdRecipient.new("B1-displaySystem");
