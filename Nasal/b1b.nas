@@ -15,9 +15,17 @@ var SubSystem_Main = {
 
         var obj = { parents: [SubSystem_Main]};
         input = {
+            # PFD
+            alt_ft:               "instrumentation/altimeter/indicated-altitude-ft",
+            roll:                 "instrumentation/attitude-indicator/indicated-roll-deg",
+            pitch:                "instrumentation/attitude-indicator/indicated-pitch-deg",
+            ias:                  "instrumentation/airspeed-indicator/indicated-speed-kt",
+            inhg:                 "instrumentation/altimeter/setting-inhg",
+            mach:                 "instrumentation/airspeed-indicator/indicated-mach",
+            Nz:                   "accelerations/pilot-gdamped",
+
             FrameRate                 : "sim/frame-rate",
             frame_rate_worst          : "sim/frame-rate-worst",
-            alt_ft:               "instrumentation/altimeter/indicated-altitude-ft",
             alt_true_ft:          "position/altitude-ft",
             heading:              "instrumentation/heading-indicator/indicated-heading-deg",
             radarStandby:         "instrumentation/radar/radar-standby",
@@ -28,8 +36,6 @@ var SubSystem_Main = {
             rmId:                 "autopilot/route-manager/wp/id",
             rmBearing:            "autopilot/route-manager/wp/true-bearing-deg",
             RMCurrWaypoint:       "autopilot/route-manager/current-wp",
-            roll:                 "instrumentation/attitude-indicator/indicated-roll-deg",
-            pitch:                "instrumentation/attitude-indicator/indicated-pitch-deg",
             headTrue:             "orientation/heading-deg",
             rollTrue:             "orientation/roll-deg",
             pitchTrue:            "orientation/pitch-deg",
@@ -40,13 +46,10 @@ var SubSystem_Main = {
             APHeadingBug:         "autopilot/settings/heading-bug-deg",
             RMActive:             "autopilot/route-manager/active",
             nav0Heading:          "instrumentation/nav[0]/heading-deg",
-            ias:                  "instrumentation/airspeed-indicator/indicated-speed-kt",
             tas:                  "instrumentation/airspeed-indicator/true-speed-kt",
             gearsPos:             "gear/gear/position-norm",
             latitude:             "position/latitude-deg",
             longitude:            "position/longitude-deg",
-            mach:                 "instrumentation/airspeed-indicator/indicated-mach",
-            inhg:                 "instrumentation/altimeter/setting-inhg",
             tacanCh:              "instrumentation/tacan/display/channel",
             ilsCh:                "instrumentation/nav[0]/frequencies/selected-mhz",
             servStatic:				 "systems/static/serviceable",

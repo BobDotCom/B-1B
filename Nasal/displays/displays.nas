@@ -1150,7 +1150,8 @@ var DisplaySystem = {
             me.altitude = me.group.getElementById("altitude").set("font","GordonURW-Med.ttf");
             me.asi = me.group.getElementById("asi");
             me.roll_pointer = me.group.getElementById("roll_pointer");
-            me.asi.setCenter(384, 256);
+            #me.asi.setCenter(384, 256);
+            me.gravity = me.group.getElementById("gravity").set("font","GordonURW-Med.ttf");
 		},
 		enter: func {
 			printDebug("Enter ",me.name~" on ",me.device.name);
@@ -1171,6 +1172,7 @@ var DisplaySystem = {
 		    me.altitude_1k.setText(sprintf("%d", noti.getproper("alt_ft") / 1000)); # XXxxx
 		    #me.altitude.setText(sprintf("%03d", math.fmod(noti.getproper("alt_ft"), 1000)));  # xxXXX
 		    me.altitude.setText(sprintf("%02d0", math.fmod(noti.getproper("alt_ft"), 1000) / 10));  # xxXX0
+            me.gravity.setText(sprintf("%.1f", noti.getproper("Nz")));
 
             # ASI is about 116px per 10deg of pitch
 		    me.asi.setTranslation(0, noti.getproper("pitch")*11.6);
