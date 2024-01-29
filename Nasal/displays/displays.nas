@@ -1158,6 +1158,7 @@ var DisplaySystem = {
             me.ladder = me.group.getElementById("ladder");
             me.ground = me.group.getElementById("ground");
             me.horizon = me.group.getElementById("horizon");
+            me.tspeed = me.group.getElementById("tspeed").set("font","GordonURW-Med.ttf");
             foreach (var child; me.group.getElementById("ladder-text").getChildren()) {
                 child.set("font","GordonURW-Med.ttf");
             }
@@ -1217,6 +1218,7 @@ var DisplaySystem = {
 		    #me.roll_pointer.setRotation(-noti.getproper("roll")*D2R);
 		    me.roll_pointer.setRotation(-math.clamp(noti.getproper("roll"), -45, 45)*D2R);
 		    #print(me.roll_pointer.getCenter());
+		    me.tspeed.setText(sprintf("%d", noti.getproper("targetSpeed")));
 
 		    # HSI
 		    me.targetHdg.setText(sprintf("%03d", noti.getproper("APHeadingBug")));

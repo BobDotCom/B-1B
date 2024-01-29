@@ -28,6 +28,7 @@ var SubSystem_Main = {
             roll:                 "orientation/roll-deg",
             targetMach:           "autopilot/settings/target-mach",
             APHeadingBug:         "autopilot/settings/heading-bug-deg",
+            targetSpeed:          "autopilot/settings/target-speed-kt",
 
             FrameRate                 : "sim/frame-rate",
             frame_rate_worst          : "sim/frame-rate-worst",
