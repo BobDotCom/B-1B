@@ -1185,6 +1185,19 @@ var DisplaySystem = {
             me.group.getElementById("hsi-crs").set("font","GordonURW-Med.ttf");
             me.targetHdg = me.group.getElementById("target-hdg").set("font","GordonURW-Med.ttf");
             me.targetCrs = me.group.getElementById("target-crs").set("font","GordonURW-Med.ttf");
+
+            # Enable text updates (updateText is more efficient than setText, but needs initialization)
+            me.altimeterPressure.enableUpdate();
+            me.airspeed.enableUpdate();
+            me.altitude_1k.enableUpdate();
+            me.altitude.enableUpdate();
+            me.gravity.enableUpdate();
+            me.hdg.enableUpdate();
+            me.mach.enableUpdate();
+            me.tmach.enableUpdate();
+            me.tspeed.enableUpdate();
+            me.targetHdg.enableUpdate();
+            me.targetCrs.enableUpdate();
 		},
 		enter: func {
 			printDebug("Enter ",me.name~" on ",me.device.name);
@@ -1200,17 +1213,17 @@ var DisplaySystem = {
 			printDebug(me.name,": ",controlName," activated on ",me.device.name);
 		},
 		update: func (noti = nil) {
-		    me.altimeterPressure.setText(sprintf("%.2f", noti.getproper("inhg")));
-		    me.airspeed.setText(sprintf("%d", noti.getproper("ias")));
-		    me.altitude_1k.setText(sprintf("%d", noti.getproper("alt_ft") / 1000)); # XXxxx
+		    me.altimeterPressure.updateText(sprintf("%.2f", noti.getproper("inhg")));
+		    me.airspeed.updateText(sprintf("%d", noti.getproper("ias")));
+		    me.altitude_1k.updateText(sprintf("%d", noti.getproper("alt_ft") / 1000)); # XXxxx
 		    #me.altitude.setText(sprintf("%03d", math.fmod(noti.getproper("alt_ft"), 1000)));  # xxXXX
-		    me.altitude.setText(sprintf("%02d0", math.fmod(noti.getproper("alt_ft"), 1000) / 10));  # xxXX0
-            me.gravity.setText(sprintf("%.1f", noti.getproper("Nz")));
-            me.hdg.setText(sprintf("%03d", noti.getproper("heading")));
+		    me.altitude.updateText(sprintf("%02d0", math.fmod(noti.getproper("alt_ft"), 1000) / 10));  # xxXX0
+            me.gravity.updateText(sprintf("%.1f", noti.getproper("Nz")));
+            me.hdg.updateText(sprintf("%03d", noti.getproper("heading")));
 
             # If <1 we want to hide the leading 0, but sprintf doesn't support that directly
-            me.mach.setText(me.machFunc(sprintf("%.2f/", noti.getproper("mach"))));
-            me.tmach.setText(me.machFunc(sprintf("%.2f", noti.getproper("targetMach"))));
+            me.mach.updateText(me.machFunc(sprintf("%.2f/", noti.getproper("mach"))));
+            me.tmach.updateText(me.machFunc(sprintf("%.2f", noti.getproper("targetMach"))));
 
             # ASI is about 116px per 10deg of pitch
 		    #me.asi.setTranslation(0, noti.getproper("pitch")*11.6);
@@ -1223,13 +1236,13 @@ var DisplaySystem = {
 		    #me.roll_pointer.setRotation(-noti.getproper("roll")*D2R);
 		    me.roll_pointer.setRotation(-math.clamp(noti.getproper("roll"), -45, 45)*D2R);
 		    #print(me.roll_pointer.getCenter());
-		    me.tspeed.setText(sprintf("%d", noti.getproper("targetSpeed")));
+		    me.tspeed.updateText(sprintf("%d", noti.getproper("targetSpeed")));
 
 
             me.fpmIndicator.setTranslation(0, -math.clamp(math.clamp(noti.getproper("vFpm"), -1000, 1000) + noti.getproper("vFpm"), -4000, 4000) / 1000 * 35);
 
 		    # HSI
-		    me.targetHdg.setText(sprintf("%03d", noti.getproper("APHeadingBug")));
+		    me.targetHdg.updateText(sprintf("%03d", noti.getproper("APHeadingBug")));
 		},
 		exit: func {
 			printDebug("Exit ",me.name~" on ",me.device.name);
