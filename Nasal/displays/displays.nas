@@ -1173,6 +1173,12 @@ var DisplaySystem = {
                 }
                 return mach;
             }
+
+            # HSI
+            me.group.getElementById("hsi-hdg").set("font","GordonURW-Med.ttf");
+            me.group.getElementById("hsi-crs").set("font","GordonURW-Med.ttf");
+            me.targetHdg = me.group.getElementById("target-hdg").set("font","GordonURW-Med.ttf");
+            me.targetCrs = me.group.getElementById("target-crs").set("font","GordonURW-Med.ttf");
 		},
 		enter: func {
 			printDebug("Enter ",me.name~" on ",me.device.name);
@@ -1211,6 +1217,9 @@ var DisplaySystem = {
 		    #me.roll_pointer.setRotation(-noti.getproper("roll")*D2R);
 		    me.roll_pointer.setRotation(-math.clamp(noti.getproper("roll"), -45, 45)*D2R);
 		    #print(me.roll_pointer.getCenter());
+
+		    # HSI
+		    me.targetHdg.setText(sprintf("%03d", noti.getproper("APHeadingBug")));
 		},
 		exit: func {
 			printDebug("Exit ",me.name~" on ",me.device.name);

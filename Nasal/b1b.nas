@@ -27,6 +27,7 @@ var SubSystem_Main = {
             pitch:                "orientation/pitch-deg",
             roll:                 "orientation/roll-deg",
             targetMach:           "autopilot/settings/target-mach",
+            APHeadingBug:         "autopilot/settings/heading-bug-deg",
 
             FrameRate                 : "sim/frame-rate",
             frame_rate_worst          : "sim/frame-rate-worst",
@@ -46,7 +47,6 @@ var SubSystem_Main = {
             APLockHeading:        "autopilot/locks/heading",
             APTrueHeadingErr:     "autopilot/internal/true-heading-error-deg",
             APnav0HeadingErr:     "autopilot/internal/nav1-heading-error-deg",
-            APHeadingBug:         "autopilot/settings/heading-bug-deg",
             RMActive:             "autopilot/route-manager/active",
             nav0Heading:          "instrumentation/nav[0]/heading-deg",
             tas:                  "instrumentation/airspeed-indicator/true-speed-kt",
