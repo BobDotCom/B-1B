@@ -1162,6 +1162,7 @@ var DisplaySystem = {
             me.horizon = me.group.getElementById("horizon");
             me.tspeed = me.group.getElementById("tspeed").set("font","GordonURW-Med.ttf");
             me.fpmIndicator = me.group.getElementById("fpm-indicator");
+            me.gforce = me.group.getElementById("gforce").set("clip", "rect(117px, 156px, 396px, 0px)");
 
             foreach (var child; me.group.getElementById("ladder-text").getChildren()) {
                 child.set("font","GordonURW-Med.ttf");
@@ -1173,6 +1174,9 @@ var DisplaySystem = {
                 child.set("font","GordonURW-Med.ttf");
             }
             foreach (var child; me.group.getElementById("vfpm-text").getChildren()) {
+                child.set("font","GordonURW-Med.ttf");
+            }
+            foreach (var child; me.group.getElementById("gforce-text").getChildren()) {
                 child.set("font","GordonURW-Med.ttf");
             }
             me.machFunc = func (mach) {
@@ -1244,8 +1248,8 @@ var DisplaySystem = {
 		    #print(me.roll_pointer.getCenter());
 		    me.tspeed.updateText(sprintf("%d", noti.getproper("targetSpeed")));
 
-
             me.fpmIndicator.setTranslation(0, -math.clamp(math.clamp(noti.getproper("vFpm"), -1000, 1000) + noti.getproper("vFpm"), -4000, 4000) / 1000 * 35);
+            me.gforce.setTranslation(0, (noti.getproper("Nz")-1)*29);
 
 		    # HSI
 		    me.targetHdg.updateText(sprintf("%03d", noti.getproper("APHeadingBug")));
