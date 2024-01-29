@@ -1148,6 +1148,8 @@ var DisplaySystem = {
             me.airspeed = me.group.getElementById("airspeed").set("font","GordonURW-Med.ttf");
             me.altitude_1k = me.group.getElementById("altitude-1k").set("font","GordonURW-Med.ttf");
             me.altitude = me.group.getElementById("altitude").set("font","GordonURW-Med.ttf");
+            me.taltitude_1k = me.group.getElementById("taltitude-1k").set("font","GordonURW-Med.ttf");
+            me.taltitude = me.group.getElementById("taltitude").set("font","GordonURW-Med.ttf");
             me.asi = me.group.getElementById("asi");
             me.roll_pointer = me.group.getElementById("roll_pointer");
             #me.asi.setCenter(384, 256);
@@ -1191,6 +1193,8 @@ var DisplaySystem = {
             me.airspeed.enableUpdate();
             me.altitude_1k.enableUpdate();
             me.altitude.enableUpdate();
+            me.taltitude_1k.enableUpdate();
+            me.taltitude.enableUpdate();
             me.gravity.enableUpdate();
             me.hdg.enableUpdate();
             me.mach.enableUpdate();
@@ -1218,6 +1222,8 @@ var DisplaySystem = {
 		    me.altitude_1k.updateText(sprintf("%d", noti.getproper("alt_ft") / 1000)); # XXxxx
 		    #me.altitude.setText(sprintf("%03d", math.fmod(noti.getproper("alt_ft"), 1000)));  # xxXXX
 		    me.altitude.updateText(sprintf("%02d0", math.fmod(noti.getproper("alt_ft"), 1000) / 10));  # xxXX0
+		    me.taltitude_1k.updateText(sprintf("%d", noti.getproper("targetAltitude") / 1000)); # XXxxx
+		    me.taltitude.updateText(sprintf("%02d0", math.fmod(noti.getproper("targetAltitude"), 1000) / 10));  # xxXX0
             me.gravity.updateText(sprintf("%.1f", noti.getproper("Nz")));
             me.hdg.updateText(sprintf("%03d", noti.getproper("heading")));
 

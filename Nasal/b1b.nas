@@ -29,6 +29,7 @@ var SubSystem_Main = {
             targetMach:           "autopilot/settings/target-mach",
             APHeadingBug:         "autopilot/settings/heading-bug-deg",
             targetSpeed:          "autopilot/settings/target-speed-kt",
+            targetAltitude:       "autopilot/settings/target-altitude-ft",
             #vSpeed:                "velocities/vertical-speed-fps",
             vFpm:                 "instrumentation/vertical-speed-indicator/indicated-speed-fpm",
 
