@@ -1158,6 +1158,15 @@ var DisplaySystem = {
             me.ladder = me.group.getElementById("ladder");
             me.ground = me.group.getElementById("ground");
             me.horizon = me.group.getElementById("horizon");
+            foreach (var child; me.group.getElementById("ladder-text").getChildren()) {
+                child.set("font","GordonURW-Med.ttf");
+            }
+            foreach (var child; me.group.getElementById("ib-ladder-text").getChildren()) {
+                child.set("font","GordonURW-Med.ttf");
+            }
+            foreach (var child; me.group.getElementById("it-ladder-text").getChildren()) {
+                child.set("font","GordonURW-Med.ttf");
+            }
             me.machFunc = func (mach) {
                 if (substr(mach, 0, 1) == "0") {
                     return substr(mach, 1);
