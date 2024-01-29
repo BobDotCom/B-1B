@@ -23,6 +23,7 @@ var SubSystem_Main = {
             inhg:                 "instrumentation/altimeter/setting-inhg",
             mach:                 "instrumentation/airspeed-indicator/indicated-mach",
             Nz:                   "accelerations/pilot-gdamped",
+            targetMach:           "autopilot/settings/target-mach",
 
             FrameRate                 : "sim/frame-rate",
             frame_rate_worst          : "sim/frame-rate-worst",

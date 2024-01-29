@@ -1153,6 +1153,14 @@ var DisplaySystem = {
             #me.asi.setCenter(384, 256);
             me.gravity = me.group.getElementById("gravity").set("font","GordonURW-Med.ttf");
             me.hdg = me.group.getElementById("hdg").set("font","GordonURW-Med.ttf");
+            me.mach = me.group.getElementById("mach").set("font","GordonURW-Med.ttf");
+            me.tmach = me.group.getElementById("tmach").set("font","GordonURW-Med.ttf");
+            me.machFunc = func (mach) {
+                if (substr(mach, 0, 1) == "0") {
+                    return substr(mach, 1);
+                }
+                return mach;
+            }
 		},
 		enter: func {
 			printDebug("Enter ",me.name~" on ",me.device.name);
@@ -1175,6 +1183,10 @@ var DisplaySystem = {
 		    me.altitude.setText(sprintf("%02d0", math.fmod(noti.getproper("alt_ft"), 1000) / 10));  # xxXX0
             me.gravity.setText(sprintf("%.1f", noti.getproper("Nz")));
             me.hdg.setText(sprintf("%03d", noti.getproper("heading")));
+
+            # If <1 we want to hide the leading 0, but sprintf doesn't support that directly
+            me.mach.setText(me.machFunc(sprintf("%.2f/", noti.getproper("mach"))));
+            me.tmach.setText(me.machFunc(sprintf("%.2f", noti.getproper("targetMach"))));
 
             # ASI is about 116px per 10deg of pitch
 		    me.asi.setTranslation(0, noti.getproper("pitch")*11.6);
