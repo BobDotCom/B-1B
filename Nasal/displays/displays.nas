@@ -1155,6 +1155,9 @@ var DisplaySystem = {
             me.hdg = me.group.getElementById("hdg").set("font","GordonURW-Med.ttf");
             me.mach = me.group.getElementById("mach").set("font","GordonURW-Med.ttf");
             me.tmach = me.group.getElementById("tmach").set("font","GordonURW-Med.ttf");
+            me.ladder = me.group.getElementById("ladder");
+            me.ground = me.group.getElementById("ground");
+            me.horizon = me.group.getElementById("horizon");
             me.machFunc = func (mach) {
                 if (substr(mach, 0, 1) == "0") {
                     return substr(mach, 1);
@@ -1189,7 +1192,11 @@ var DisplaySystem = {
             me.tmach.setText(me.machFunc(sprintf("%.2f", noti.getproper("targetMach"))));
 
             # ASI is about 116px per 10deg of pitch
-		    me.asi.setTranslation(0, noti.getproper("pitch")*11.6);
+		    #me.asi.setTranslation(0, noti.getproper("pitch")*11.6);
+		    me.ladder.setTranslation(0, noti.getproper("pitch")*11.6);
+            me.ground.setTranslation(0, noti.getproper("pitch")*11.6);
+            me.horizon.setTranslation(0, noti.getproper("pitch")*11.6);
+		    #me.asiTicks.setTranslation(0, noti.getproper("pitch")*11.6);
 		    #me.asi.setCenter(0, noti.getproper("pitch")*11.6);
 		    me.asi.setRotation(-noti.getproper("roll")*D2R);
 		    #me.roll_pointer.setRotation(-noti.getproper("roll")*D2R);
