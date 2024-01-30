@@ -21,15 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="6.8705011"
-     inkscape:cx="132.95973"
-     inkscape:cy="260.67968"
+     inkscape:zoom="1.6520017"
+     inkscape:cx="607.74756"
+     inkscape:cy="-23.002398"
      inkscape:window-width="1440"
      inkscape:window-height="847"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer6"
      showguides="true" /><defs
      id="defs4"><filter
        inkscape:collect="always"
@@ -2075,8 +2075,7 @@
              id="path58-48-2-7-04-2"
              inkscape:label="st" /></g><g
            id="speed-text"
-           inkscape:label="speed-text"
-           transform="translate(2.8312925,-0.79632568)"><text
+           inkscape:label="speed-text"><text
              xml:space="preserve"
              style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:32px;font-family:'Gordon URW';-inkscape-font-specification:'Gordon URW, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:-0.5px;text-anchor:end;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              x="141.11456"
@@ -2343,7 +2342,7 @@
            x="0"
            y="0"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:'Gordon URW';-inkscape-font-specification:'Gordon URW, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:2px;text-anchor:end;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.5;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1">.15/</tspan></text><path
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.5;stroke:#ffffff;stroke-width:3.165;stroke-linecap:square;stroke-opacity:1"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.165;stroke-linecap:square;stroke-opacity:1"
          d="M 142.38881,235.2137 H 79.932549 v 44.97997 H 142.6753 L 156,257.11461 Z"
          id="path1" /><text
          xml:space="preserve"
@@ -2357,7 +2356,7 @@
            x="0"
            y="0"
            style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:32px;font-family:'Gordon URW';-inkscape-font-specification:'Gordon URW, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:0px;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1">50</tspan></text><path
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.5;stroke:#ffffff;stroke-width:3.721;stroke-linecap:square;stroke-opacity:1"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.721;stroke-linecap:square;stroke-opacity:1"
          d="M 4.9327247,236.06611 H 67.413904 v 14.79818 L 76.309223,256 l -9.329791,5.38656 v 18.60429 H 5.1676164 Z"
          id="path2" /><text
          xml:space="preserve"
@@ -2410,7 +2409,7 @@
          height="37.985752"
          x="613.56714"
          y="46.016174" /><path
-         style="opacity:1;fill:#000000;fill-opacity:0.5;stroke:#ffffff;stroke-width:3.721;stroke-linecap:square;stroke-opacity:1"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.721;stroke-linecap:square;stroke-opacity:1"
          d="m 627.42098,235.91842 h 84.40185 v 46.09901 h -84.74081 l -9.4888,-24.43493 z"
          id="path3" /><text
          xml:space="preserve"
@@ -2776,7 +2775,7 @@
          x="223.89122"
          y="0"
          inkscape:label="hdg tape" /><path
-         style="opacity:1;fill:#000000;fill-opacity:0.5;stroke:#ffffff;stroke-width:3.721;stroke-linecap:square;stroke-opacity:1"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.721;stroke-linecap:square;stroke-opacity:1"
          d="M 356.95382,12.477805 416.46079,12.364076 416.35625,35.02782 386.94797,47.0807 356.94239,36.4454 Z"
          id="path47"
          sodipodi:nodetypes="cccccc"
