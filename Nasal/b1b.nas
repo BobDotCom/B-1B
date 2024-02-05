@@ -1,13 +1,109 @@
 _setlistener("/sim/signals/fdm-initialized", func {
-	init_b1b();
-});
-
-# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
+    rtExec_loop();
+	# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
 var hmd = modules.Module.new("displays");
 hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
 hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
 hmd.setMainFile("displays.nas");
 hmd.load();
+	init_b1b();
+});
+
+var ownship_pos = geo.Coord.new();
+var SubSystem_Main = {
+    new : func (_ident){
+
+        var obj = { parents: [SubSystem_Main]};
+        input = {
+            # PFD
+            alt_ft:               "instrumentation/altimeter/indicated-altitude-ft",
+            heading:              "instrumentation/heading-indicator/indicated-heading-deg",
+            ias:                  "instrumentation/airspeed-indicator/indicated-speed-kt",
+            inhg:                 "instrumentation/altimeter/setting-inhg",
+            mach:                 "instrumentation/airspeed-indicator/indicated-mach",
+            Nz:                   "accelerations/pilot-gdamped",
+            #pitch:                "instrumentation/attitude-indicator/indicated-pitch-deg",
+            #roll:                 "instrumentation/attitude-indicator/indicated-roll-deg",
+            pitch:                "orientation/pitch-deg",
+            roll:                 "orientation/roll-deg",
+            targetMach:           "autopilot/settings/target-mach",
+            APHeadingBug:         "autopilot/settings/heading-bug-deg",
+            targetSpeed:          "autopilot/settings/target-speed-kt",
+            targetAltitude:       "autopilot/settings/target-altitude-ft",
+            #vSpeed:                "velocities/vertical-speed-fps",
+            vFpm:                 "instrumentation/vertical-speed-indicator/indicated-speed-fpm",
+
+            FrameRate                 : "sim/frame-rate",
+            frame_rate_worst          : "sim/frame-rate-worst",
+            alt_true_ft:          "position/altitude-ft",
+            radarStandby:         "instrumentation/radar/radar-standby",
+            rad_alt:              "instrumentation/radar-altimeter/radar-altitude-ft",
+            rad_alt_ready:        "instrumentation/radar-altimeter/ready",
+            rmActive:             "autopilot/route-manager/active",
+            rmDist:               "autopilot/route-manager/wp/dist",
+            rmId:                 "autopilot/route-manager/wp/id",
+            rmBearing:            "autopilot/route-manager/wp/true-bearing-deg",
+            RMCurrWaypoint:       "autopilot/route-manager/current-wp",
+            headTrue:             "orientation/heading-deg",
+            #rollTrue:             "orientation/roll-deg",
+            #pitchTrue:            "orientation/pitch-deg",
+            nav0InRange:          "instrumentation/nav[0]/in-range",
+            APLockHeading:        "autopilot/locks/heading",
+            APTrueHeadingErr:     "autopilot/internal/true-heading-error-deg",
+            APnav0HeadingErr:     "autopilot/internal/nav1-heading-error-deg",
+            RMActive:             "autopilot/route-manager/active",
+            nav0Heading:          "instrumentation/nav[0]/heading-deg",
+            tas:                  "instrumentation/airspeed-indicator/true-speed-kt",
+            gearsPos:             "gear/gear/position-norm",
+            latitude:             "position/latitude-deg",
+            longitude:            "position/longitude-deg",
+            tacanCh:              "instrumentation/tacan/display/channel",
+            ilsCh:                "instrumentation/nav[0]/frequencies/selected-mhz",
+            servStatic:				 "systems/static/serviceable",
+            servPitot:				 "systems/pitot/serviceable",
+            servAtt                   : "instrumentation/attitude-indicator/serviceable",
+            servHead                  : "instrumentation/heading-indicator/serviceable",
+            servTurn                  : "instrumentation/turn-indicator/serviceable",
+        };
+
+        foreach (var name; keys(input)) {
+            emesary.GlobalTransmitter.NotifyAll(notifications.FrameNotificationAddProperty.new(_ident,name, input[name]));
+        }
+
+        #
+        # recipient that will be registered on the global transmitter and connect this
+        # subsystem to allow subsystem notifications to be received
+        obj.recipient = emesary.Recipient.new(_ident~".Subsystem");
+        obj.recipient.Main = obj;
+
+        obj.recipient.Receive = func(notification)
+        {
+            if (notification.NotificationType == "FrameNotification")
+            {
+                me.Main.update(notification);
+                ownship_pos.set_latlon(getprop("position/latitude-deg"), getprop("position/longitude-deg"), getprop("position/altitude-ft")*FT2M);
+                notification.ownship_pos = ownship_pos;
+                return emesary.Transmitter.ReceiptStatus_OK;
+            }
+            return emesary.Transmitter.ReceiptStatus_NotProcessed;
+        };
+        #emesary.GlobalTransmitter.Register(obj.recipient);
+
+        return obj;
+    },
+    update : func(notification) {
+    },
+};
+
+subsystem = SubSystem_Main.new("SubSystem_Main");
+
+
+# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
+#var hmd = modules.Module.new("displays");
+#hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
+#hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
+##hmd.setMainFile("displays.nas");
+#hmd.load();
 
 var init_b1b = func {
 setprop("systems/refuel/serviceable", 'false');
