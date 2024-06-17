@@ -109,14 +109,14 @@ maggse
 		 </entry>
 	 </interpolation>
 	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
+		<x>1.0</x>
+		<y>0.0</y>
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m> 0.01</x-m>
-		<y-m>-0.1729</y-m>
-		<z-m>0.12284</z-m>
+		<x-m>0.01898</x-m>
+		<y-m>0.0395</y-m>
+		<z-m>0.2158</z-m>
 	</center>
 
  </animation>
