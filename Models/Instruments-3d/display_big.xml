@@ -280,29 +280,57 @@ sweat by maggse
 
  <animation>
 	 <type>material</type>
-	 <object-name>rep_light_eng1</object-name>
-	 <object-name>rep_eng2</object-name>
-	 <object-name>rep_light_eng3</object-name>
-	 <object-name>rep_light_eng4</object-name>
-	 <object-name>rep_light_battl</object-name>
-	 <object-name>rep_light_apul</object-name>
-	 <object-name>rep_light_battr</object-name>
-	 <object-name>rep_light_apur</object-name>
-	 <object-name>rep_light_terfl</object-name>
-	 <object-name>rep_light_teravd</object-name>
-	 <object-name>rep_gforce</object-name>
-	 <object-name>rep_light_fcgms</object-name>
-	 <object-name>rep_light.014</object-name>
-	 <object-name>rep_light.015</object-name>
-	 <object-name>rep_light.016</object-name>
-	 <object-name>rep_light.017</object-name>
-	 <object-name>rep_light_brake</object-name>
-         <object-name>rep_lbutton.001</object-name>
+	 <object-name>1_ADS</object-name>
+	 <object-name>1_BLEED_AIR</object-name>
+	 <object-name>1_BUS</object-name>
+	 <object-name>1_GEN</object-name>
+	 <object-name>1_HYD</object-name>
+	 <object-name>2_ADS</object-name>
+	 <object-name>2_BLEED_AIR</object-name>
+	 <object-name>2_BUS</object-name>
+	 <object-name>2_GEN</object-name>
+	 <object-name>2_HYD</object-name>
+	 <object-name>3_ADS</object-name>
+	 <object-name>3_BLEED_AIR</object-name>
+	 <object-name>3_BUS</object-name>
+	 <object-name>3_GEN</object-name>
+	 <object-name>3_HYD</object-name>
+	 <object-name>4_ADS</object-name>
+	 <object-name>4_BLEED_AIR</object-name>
+	 <object-name>4_BUS</object-name>
+	 <object-name>4_GEN</object-name>
+	 <object-name>4_HYD</object-name>
+	 <object-name>ANTISKID</object-name>
+	 <object-name>APU_EXH_DOOR_OPEN</object-name>
+         <object-name>COMPT_RAM_SCOOP_OPEN</object-name>
+         <object-name>L_BLEED_AIR_OVERHEAT</object-name>
+         <object-name>OXY</object-name>
+         <object-name>PITCH_AUG_1</object-name>
+         <object-name>R_BLEED_AIR_OVERHEAT</object-name>
+	 <object-name>R_CTL_COMPT_HOT</object-name>
+         <object-name>ROLL_AUG_1</object-name>
+         <object-name>ROLL_AUG_LIMITING</object-name>
+         <object-name>SMCS</object-name>
+         <object-name>SPOILER_1</object-name>
+         <object-name>YAW_AUG_1</object-name>
+         <object-name>YAW_AUG_LIMITING</object-name>
+         <object-name>YAW_AUG_OFF</object-name>
+         <object-name>ELEC</object-name>
+         <object-name>FWD_COMPT_HOT</object-name>
+         <object-name>INTMD_COMPT_HOT</object-name>
+         <object-name>FUEL_CLG_SCOOP</object-name>
+         <object-name>FUEL_CLG_LOOP_RTN</object-name>
+         <object-name>FUEL_LOW</object-name>
+         <object-name>FUEL_COOLING_LOOP_CRSVR</object-name>
+         <object-name>HOT_BRAKE</object-name>
+         <object-name>CREW_COMPT_HOT</object-name>
+         <object-name>CG_LIMIT</object-name>
+         <object-name>BU_OXY</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.3</green>
-		 <blue>0.3</blue>
-		 <factor-prop>controls/switches/annunciator-lighting</factor-prop>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
 	 </emission>
 </animation>
 

@@ -12,12 +12,15 @@ sweat by maggse
 	 <object-name>switch_eng1</object-name>
 	 <object-name>switch_eng2</object-name>
 	 <object-name>switch_eng3</object-name>
+	 <object-name>fuel_cov.001</object-name>
+	 <object-name>fuel_cov.002</object-name>
 	 <object-name>fuel_cov.005</object-name>
+	 <object-name>Cube.003</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
 </animation>
 

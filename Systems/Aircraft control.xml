@@ -3,7 +3,7 @@
   <property value="1">fcs/yaw-damper-enable</property>
 
   <channel name="Pitch">
-   <summer name="Pitch Trim Sum">
+   <summer name="pitch trim sum">
       <input>fcs/elevator-cmd-norm</input>
       <input>fcs/pitch-trim-cmd-norm</input>
       <clipto>
@@ -12,8 +12,15 @@
       </clipto>
    </summer>
 
+<switch name="fcs/elevator">
+  <default value="fcs/pitch-trim-sum"/>
+  <test value="0">
+    /controls/flight/pitch-switch eq 0
+  </test>
+</switch>
+
    <aerosurface_scale name="Elevator Control">
-      <input>fcs/pitch-trim-sum</input>
+      <input>fcs/elevator</input>
       <range>
         <min> -0.35 </min>
         <max>  0.35 </max>

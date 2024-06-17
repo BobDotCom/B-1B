@@ -108,16 +108,17 @@ maggse
 			 <dep>-80.0</dep>
 		 </entry>
 	 </interpolation>
-	 <axis>
-		 <x>1.0</x>
-		 <y>0.0</y>
-		 <z>0.0</z>
-	 </axis>
-	 <center>
-		 <x-m> 0.01898</x-m>
-		 <y-m> 0.039558</y-m>
-		 <z-m> 0.21495</z-m>
-   </center>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.01</x-m>
+		<y-m>-0.1729</y-m>
+		<z-m>0.12284</z-m>
+	</center>
+
  </animation>
 
  <animation>
@@ -134,47 +135,18 @@ maggse
 	 </action>
 </animation> 
 
-	 <!-- Annunciator lighting-->
+	 <!-- OPENUNLCK light--> 
 
- <animation>
-	 <type>rotate</type>
-	 <object-name>int_dim</object-name>
-	 <property>controls/switches/annunciator-lighting</property>
-	 <interpolation>
-		 <entry>
-			 <ind> 0.0</ind>
-			 <dep> -30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind> 1.0</ind>
-			 <dep> 30.0</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x> 0.0</x>
-		 <y> 1.0</y>
-		 <z> 0.0</z>
-	 </axis>
-	 <center>
-		 <x-m> 0.01237</x-m>
-		 <y-m>-0.1752</y-m>
-		 <z-m> 0.1227</z-m>
-   </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>int_dim</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/switches/annunciator-lighting</property>
-		 </binding>
-	 </action>
-</animation> 
+<animation> 
+ <type>select</type> 
+  <object-name>OPENUNLK</object-name> 
+   <condition> 
+    <equals> 
+      <property>sim/multiplay/generic/float[5]</property> 
+      <value>1</value> 
+     </equals> 
+    </condition> 
+  </animation> 
 
  <!-- Generator-reset switches-->
 
@@ -941,7 +913,8 @@ maggse
 </animation>
 
 
-<!-- nav lights-->
+                               <!-- nav lights-->
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>nav_lights</object-name>
@@ -982,7 +955,7 @@ maggse
 	 </action>
 </animation>
 
-<!-- anti collision lights-->
+                        <!-- anti collision lights-->
 
 <animation>
 	<type>rotate</type>
@@ -1023,7 +996,7 @@ maggse
 		</binding>
 	</action>
 </animation>
-                   <!--STROBES--> 
+                             <!--STROBES--> 
 
 <animation>
 	<type>rotate</type>
@@ -1067,6 +1040,86 @@ maggse
 
 <!-- instrument lights-->
 
+	               <!-- Annunciator lighting-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>int_dim</object-name>
+	 <property>controls/switches/annunciators-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind> 0.0</ind>
+			 <dep> 0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind> 1.0</ind>
+			 <dep> 30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x> 0.0</x>
+		 <y> 1.0</y>
+		 <z> 0.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.01237</x-m>
+		 <y-m>-0.1752</y-m>
+		 <z-m> 0.1227</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>int_dim</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/annunciators-norm</property>
+		 </binding>
+	 </action>
+</animation>
+
+
+	                  <!--Side Panel lighting-->
+
+<animation>
+	<type>knob</type>
+	<object-name>l_csl</object-name>
+	<property>controls/lighting/side_panel-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.016137</x-m>
+		<y-m>-0.22666</y-m>
+		<z-m>-0.20731</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/side_panel-norm</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation>
+
 <animation>
 	<type>knob</type>
 	<object-name>Panel_Lights</object-name>
@@ -1101,6 +1154,9 @@ maggse
 		</binding>
 	</action>
 </animation>
+
+
+	                  <!-- screen lighting-->
 
 <animation>
 	<type>knob</type>
@@ -1165,6 +1221,43 @@ maggse
 		<binding>
 			<command>property-adjust</command>
 			<property>controls/lighting/AFCS_indexers_co-pilot</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation>
+
+                      <!-- centre console lighting-->
+
+<animation>
+	<type>knob</type>
+	<object-name>centre_csl</object-name>
+	<property>controls/lighting/centre_console</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.019462</x-m>
+		<y-m>-0.17861</y-m>
+		<z-m>-0.20792</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/centre_console</property>
                         <min>0</min>
                         <max>1</max>
                         <factor>0.04</factor>
@@ -1300,7 +1393,7 @@ maggse
 			<red>0.3</red>
 			<green>0.3</green>
 			<blue>0.3</blue>
-			<factor-prop>controls/switches/annunciator-lighting</factor-prop>
+			<factor-prop>controls/switches/annunciators-norm</factor-prop>
 		</emission>
 	</animation>
 

@@ -197,16 +197,20 @@ maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>TTO</object-name>
+	<object-name>TTO</object-name> 
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
 		<interval-sec>0.3</interval-sec>
 		<binding>
-			<command>property-toggle</command>
+			<command>property-adjust</command>
 			<property>controls/switches/TTO_button</property> 
-			<min>0.0</min>
-			<max>1.0</max>
+			<value>1</value>			
+		</binding>
+		<binding>
+	        <command>property-assign</command>
+		<property>controls/flight/elevator</property> 
+                <value>-0.7</value>
 		</binding>
 	</action>
 </animation>
@@ -223,11 +227,13 @@ maggse
 	<object-name>stby_ptch</object-name>
     <object-name>trim</object-name>
 	<object-name>TTO</object-name>
+	 <object-name>4Screws</object-name>
+	 <object-name>tto</object-name>
 	<emission>
 		<red>0.9</red>
 		<green>0.5</green>
 		<blue>0.9</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		<factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
 </animation>
 

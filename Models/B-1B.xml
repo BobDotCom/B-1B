@@ -81,7 +81,54 @@ more to come :-)
 			  <pitch-deg>0</pitch-deg>
 		  </offsets>
 	  </offsets>
-  </model>
+  </model> 
+
+<animation> 
+ <type>select</type> 
+  <object-name>READYNWS</object-name> 
+   <condition>
+    <or> 
+    <equals> 
+      <property>sim/multiplay/generic/float[5]</property> 
+      <value>1</value> 
+     </equals> 
+    <equals> 
+      <property>controls/gear/nose-wheel-steering</property> 
+      <value>1</value> 
+     </equals>
+     </or>      
+    </condition> 
+  </animation>
+
+<animation> 
+ <type>select</type> 
+  <object-name>LATCHED</object-name> 
+   <condition> 
+    <equals> 
+     <property>/systems/refuel/contact</property> 
+      <value>1</value> 
+     </equals> 
+    </condition> 
+  </animation>
+
+<animation> 
+ <type>select</type> 
+  <object-name>DISC</object-name> 
+   <condition> 
+    <and>
+    <equals> 
+     <property>/systems/refuel/contact</property> 
+      <value>0</value> 
+     </equals>
+    </and> 
+    <and>
+    <equals> 
+      <property>sim/multiplay/generic/float[5]</property>  
+      <value>1</value> 
+     </equals>
+    </and>
+    </condition> 
+  </animation>
 
   <!-- trans parts -->
   <model>
@@ -1275,6 +1322,12 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>rudder2</object-name>
 	 <object-name>rudder3</object-name>
+         <condition> 
+          <equals>
+           <property>controls/flight/yaw-switch</property>
+           <value>0</value> 
+          </equals> 
+         </condition>
 	 <property>controls/flight/rudder</property>
 	 <interpolation>
 		 <entry>
@@ -2817,6 +2870,12 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>elevator_left</object-name>
+         <condition>
+          <equals> 
+           <property>controls/flight/Roll-switch</property> 
+           <value>0</value> 
+          </equals>
+         </condition>
 	 <property>surface-positions/left-elevator-pos-norm</property>
 	 <factor>20</factor>
 	 <center>
@@ -2834,7 +2893,37 @@ more to come :-)
   <animation>
 	 <type>rotate</type>
 	 <object-name>elevator_right</object-name>
+         <condition>
+           <equals> 
+            <property>controls/flight/Roll-switch</property> 
+            <value>0</value> 
+           </equals>
+         </condition>
 	 <property>surface-positions/right-elevator-pos-norm</property>
+	 <factor>20</factor>
+	 <center>
+		 <x-m>15.70</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>2.70</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+  <animation>
+	 <type>rotate</type>
+	 <object-name>elevator_left</object-name>
+	 <object-name>elevator_right</object-name>
+         <condition> 
+           <equals> 
+            <property>controls/flight/Roll-switch</property> 
+            <value>1</value> 
+           </equals> 
+         </condition>
+	 <property>surface-positions/elevator-pos-norm</property>
 	 <factor>20</factor>
 	 <center>
 		 <x-m>15.70</x-m>

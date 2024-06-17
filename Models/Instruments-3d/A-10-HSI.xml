@@ -14,9 +14,10 @@
 	<value>24</value>
       </greater-than>
     </condition>
-    <property>orientation/heading-magnetic-deg</property>
-    <axis><x>1</x></axis>
-  </animation>
+   <property>orientation/heading-deg</property>
+   <axis><x>1</x></axis>  
+   </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>cdi</object-name>
@@ -26,9 +27,10 @@
 	<value>24</value>
       </greater-than>
     </condition>
-    <property>orientation/heading-magnetic-deg</property>
+    <property>systems/computers/PFDB1-heading</property>
     <axis><x>1</x></axis>
   </animation>
+
 
   <!-- If tacan selected and in range, the needle points to the beacon -->
   <animation>
@@ -302,6 +304,19 @@
     <axis><x>-1</x></axis>
   </animation>
 
+  <animation>
+    <type>rotate</type>
+    <object-name>HSI-course-card</object-name>
+    <condition>
+      <equals>
+	<property>controls/switches/HDG-select-switch</property>
+	<value>1</value>
+      </equals>
+    </condition>
+    <property>systems/refuel/contact-radius</property>
+   <axis><x>1</x></axis>  
+   </animation>
+
   <!--bearing-validity-flag-->
   <animation>
     <type>select</type>
@@ -451,6 +466,17 @@
 
   <animation>
     <object-name>panel</object-name>
+    <object-name>hsi</object-name>
+    <object-name>HSI-compass-card</object-name>
+    <object-name>bearing-needle-1</object-name>
+    <object-name>cdi</object-name>
+    <object-name>bearing-validity-flag</object-name>
+    <object-name>course-deviation-indicator-off</object-name>
+    <object-name>course-deviation-indicator-on</object-name>
+    <object-name>tcn-course-deviation-indicator-on</object-name>
+    <object-name>tcn-to-from-to</object-name>
+    <object-name>tcn-to-from-from</object-name>
+    <object-name>to-from-to</object-name>
     <object-name>course-knob</object-name>
     <object-name>heading-set-knob</object-name>
     <type>material</type>
@@ -459,19 +485,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-  </animation>
-
-  <animation>
-    <object-name>instrument</object-name>
-    <type>material</type>
-    <condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
-	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
   </animation>
 
@@ -510,9 +524,9 @@
 	<type>material</type>
 		<object-name>LabelText</object-name>
 	<emission>
-		<red>1.0</red>
-		<green>0.8</green>
-		<blue>0.0</blue>
+		<red>0.5</red>
+		<green>0.9</green>
+		<blue>0.5</blue>
 	</emission>
 </animation>
 

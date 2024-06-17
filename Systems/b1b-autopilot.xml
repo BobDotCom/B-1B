@@ -192,7 +192,7 @@
       <value>nav1-hold</value>
     </enable>
     <input>
-      <prop>/autopilot/internal/nav1-track-error-deg</prop>
+      <prop>/instrumentation/nav/heading-needle-deflection</prop>
     </input>
     <reference>
       <value>0.0</value>
@@ -208,8 +208,8 @@
                            <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>        <!-- integrator time -->
       <Td>0.00001</Td>
-      <u_min>-30.0</u_min> <!-- minimum output clamp -->
-      <u_max>30.0</u_max>  <!-- maximum output clamp -->
+      <u_min>-10.0</u_min> <!-- minimum output clamp -->
+      <u_max>10.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
 
@@ -268,7 +268,7 @@
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.000000001</Td>    <!-- derivator time -->
+      <Td>0.0000000001</Td>    <!-- derivator time -->
       <u_min>-0.25</u_min> <!-- minimum output clamp -->
       <u_max>0.25</u_max>  <!-- maximum output clamp -->
     </config>
@@ -528,7 +528,7 @@
 
   <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
   <pid-controller>
-    <name>Glideslop Hold</name>
+    <name>Glideslope Hold</name>
     <debug>false</debug>
     <enable>
       <prop>/autopilot/locks/altitude</prop>
