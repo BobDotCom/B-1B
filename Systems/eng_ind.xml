@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<system name="Engine Indicators">
+    <channel name="end_ind">
+        <!-- ENG TEMP -->
+        <!-- Convert the engine temp from Fahrenheit to Celsius. C = (F - 32) * 5/9 -->
+        <fcs_function name="systems/eng_ind/egt-degc[0]">
+            <function>
+                <product>
+                    <difference>
+                        <property>/engines/engine[0]/egt-degf</property>
+                        <value>32</value>
+                    </difference>
+                    <quotient>
+                        <value>5</value>
+                        <value>9</value>
+                    </quotient>
+                </product>
+            </function>
+        </fcs_function>
+        <fcs_function name="systems/eng_ind/egt-degc[1]">
+            <function>
+                <product>
+                    <difference>
+                        <property>/engines/engine[1]/egt-degf</property>
+                        <value>32</value>
+                    </difference>
+                    <quotient>
+                        <value>5</value>
+                        <value>9</value>
+                    </quotient>
+                </product>
+            </function>
+        </fcs_function>
+        <fcs_function name="systems/eng_ind/egt-degc[2]">
+            <function>
+                <product>
+                    <difference>
+                        <property>/engines/engine[2]/egt-degf</property>
+                        <value>32</value>
+                    </difference>
+                    <quotient>
+                        <value>5</value>
+                        <value>9</value>
+                    </quotient>
+                </product>
+            </function>
+        </fcs_function>
+        <fcs_function name="systems/eng_ind/egt-degc[3]">
+            <function>
+                <product>
+                    <difference>
+                        <property>/engines/engine[3]/egt-degf</property>
+                        <value>32</value>
+                    </difference>
+                    <quotient>
+                        <value>5</value>
+                        <value>9</value>
+                    </quotient>
+                </product>
+            </function>
+        </fcs_function>
+    </channel>
+
+</system>

@@ -28,8 +28,7 @@ B-1B set file.
             <splash-texture>Aircraft/B-1B/bone.png</splash-texture>
         </startup>
 
-        <!-- TODO: Migrate to JSBSim -->
-        <flight-model>yasim</flight-model>
+        <flight-model>jsb</flight-model>
         <status>alpha</status>
         <rating>
             <FDM type="int">3</FDM>
@@ -91,7 +90,7 @@ B-1B set file.
                 <name>Zorka</name>
             </maintainer>
         </maintainers>
-        <aero>B-1B-yasim</aero>
+        <aero>B-1B-aero</aero>
         <fuel-fraction>0.65</fuel-fraction>
 
         <urls>
@@ -317,6 +316,10 @@ B-1B set file.
 
         <multiplay>
             <generic>
+                <bool n="0" type="bool" alias="/engines/engine[0]/augmentation"/>
+                <bool n="1" type="bool" alias="/engines/engine[1]/augmentation"/>
+                <bool n="2" type="bool" alias="/engines/engine[2]/augmentation"/>
+                <bool n="3" type="bool" alias="/engines/engine[3]/augmentation"/>
                 <!--<float n="0">0</float> free  -->
                 <!--<float n="1">0</float> free  -->
                 <float n="2">0</float><!-- fwd baydoor   -->
@@ -327,9 +330,19 @@ B-1B set file.
                 <!--<float n="7">0</float> free   -->
                 <!--<float n="8">0</float> free   -->
                 <!--<float n="9">0</float> free   -->
-                <!--<float n="10">0</float> free   -->
-                <!--<float n="11">0</float> free   -->
-                <!--<float n="12">0</float> free   -->
+                <float n="10" type="double">0</float><!-- afterburner density -->
+                <float n="11" type="double">0</float><!-- afterburner color R-->
+                <float n="12" type="double">0</float><!-- afterburner color G-->
+                <float n="13" type="double">0</float><!-- afterburner color B-->
+                <float n="14" type="double">0</float><!-- scene red inverted -->
+                <float n="16" type="double">0</float><!-- afterburner engine fire transperancy -->
+                <float n="17" type="double">0</float><!-- afterburner engine fire transperancy -->
+                <float n="18" type="double">0</float><!-- afterburner engine fire transperancy -->
+                <float n="19" type="double">0</float><!-- afterburner engine fire transparency -->
+                <float n="20" type="double">0</float><!-- turbine emission color from afterburner 1 -->
+                <float n="21" type="double">0</float><!-- turbine emission color from afterburner 2 -->
+                <float n="22" type="double">0</float><!-- turbine emission color from afterburner 3 -->
+                <float n="23" type="double">0</float><!-- turbine emission color from afterburner 4 -->
                 <int n="0" type="int">0</int><!-- anti collision lights  -->
                 <int n="1" type="int">0</int>     <!-- b-1b model nasal script loaded -->
                 <!--<int n="2" type="int">0</int>     free -->
@@ -439,15 +452,63 @@ B-1B set file.
                         </binding>
                     </item>
                 </menu>
+                <menu n="101">
+					<label>FDM Tuning</label>
+					<item>
+						<label>Tune Drag</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_drag_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Lift</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_lift_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Pitch</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_pitch_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Roll</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_roll_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Side</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_side_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Yaw</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_yaw_dialog.open()</script>
+						</binding>
+					</item>
+				</menu>
             </default>
         </menubar>
 
         <systems>
             <electrical>
-                <path>Aircraft/B-1B/Systems/generic-electrical.xml</path>
+                <path></path>
             </electrical>
-            <autopilot>
+            <autopilot n="0">
                 <path>Aircraft/B-1B/Systems/b1b-autopilot.xml</path>
+            </autopilot>
+            <autopilot n="1">
+                <path>Aircraft/B-1B/Systems/engines.xml</path>
             </autopilot>
         </systems>
 
@@ -648,6 +709,32 @@ B-1B set file.
             <offset-y-m>0</offset-y-m>
             <offset-z-m>0.7</offset-z-m>
         </refuel>
+            <electrical n="0">
+        <bus>
+            <ac-ess type="double">0</ac-ess>
+            <dc-fwd type="double">0</dc-fwd>
+            <dc-aft type="double">0</dc-aft>
+        </bus>
+        <relay>
+            <ess-tr-contactor>
+                <contact-pos type="int">0</contact-pos>
+            </ess-tr-contactor>
+        </relay>
+        <some-electric-thingie>
+            <emer-elec-config type="bool">0</emer-elec-config>
+            <emer-gen-operate type="bool">0</emer-gen-operate>
+        </some-electric-thingie>
+        <sources>
+            <bat-1>
+                <amps type="double">0</amps>
+                <percent-calc type="double">80</percent-calc>
+            </bat-1>
+            <bat-2>
+                <amps type="double">0</amps>
+                <percent-calc type="double">80</percent-calc>
+            </bat-2>
+        </sources>
+    </electrical>
     </systems>
 
     <payload n="0" include= "Systems/b1-payload.xml"/>
@@ -671,7 +758,57 @@ B-1B set file.
         </settings>
 
     </autopilot>
-
+    	<fdm>
+		<jsbsim>
+			<!-- for in-flight FDM tuning -->
+			<tune>
+                <!-- TODO: Check if more values need to be added to FDM tuner
+                         Tuner is from l0k1/AV-8B.
+                 -->
+				<lift>
+					<alpha type="double">1</alpha>
+                    <sweep type="double">0</sweep>
+					<flap type="double">1</flap>
+                    <speedbrake type="double">1</speedbrake>
+					<elevator type="double">1</elevator>
+<!--					<pitch_rate type="double">1</pitch_rate>-->
+<!--					<alpha_rate type="double">1</alpha_rate>-->
+				</lift>
+				<drag>
+                    <basic type="double">1</basic>
+					<induced type="double">1</induced>
+					<mach type="double">1</mach>
+					<flap type="double">1</flap>
+					<gear type="double">1</gear>
+					<speedbrake type="double">1</speedbrake>
+					<beta type="double">1</beta>
+                    <elevator type="double">1</elevator>
+				</drag>
+				<side>
+					<beta type="double">1</beta>
+				</side>
+                <roll>
+					<beta type="double">1</beta>
+					<damp type="double">1</damp>
+					<yaw type="double">1</yaw>
+					<aileron type="double">1</aileron>
+					<rudder type="double">1</rudder>
+				</roll>
+				<pitch>
+					<alpha type="double">1</alpha>
+					<elevator type="double">1</elevator>
+					<damp type="double">1</damp>
+					<alphadot type="double">1</alphadot>
+				</pitch>
+				<yaw>
+					<beta type="double">1</beta>
+					<damp type="double">1</damp>
+					<rudder type="double">1</rudder>
+					<aileron type="double">1</aileron>
+				</yaw>
+			</tune>
+		</jsbsim>
+	</fdm>
     <!-- Start with the Parking Brake On -->
     <controls>
         <armament>
@@ -719,22 +856,60 @@ B-1B set file.
         <engines>
             <engine n="0">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
             <engine n="1">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
             <engine n="2">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
             <engine n="3">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
+
+            </engine>
+            <engine n="4">
+                <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
+
+            </engine>
+            <engine n="5">
+                <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
 
         </engines>
+
+        <electrical>
+            <switches n="0">
+                <!--				<apu type="bool">1</apu>-->
+                <ac-ess-feed type="bool">1</ac-ess-feed>
+                <battery type="bool">0</battery>
+                <bus-tie type="bool">1</bus-tie>
+                <emer-gen-test type="bool">0</emer-gen-test>
+                <ext-pwr type="bool">0</ext-pwr>
+                <galley type="bool">1</galley>
+                <gen-1 type="int">1</gen-1>
+                <gen-2 type="int">1</gen-2>
+                <gen-4 type="int">1</gen-4>
+                <gen-2-line-contactor type="bool">0</gen-2-line-contactor>
+                <ground-cart type="bool">0</ground-cart>
+                <idg-1-disc type="bool">1</idg-1-disc>
+                <idg-2-disc type="bool">1</idg-2-disc>
+                <idg-4-disc type="bool">1</idg-4-disc>
+                <idg-1-disc-momentary type="bool">0</idg-1-disc-momentary>
+                <idg-2-disc-momentary type="bool">0</idg-2-disc-momentary>
+                <idg-4-disc-momentary type="bool">0</idg-4-disc-momentary>
+                <emer-elec-man-on type="bool">0</emer-elec-man-on>
+            </switches>
+        </electrical>
 
     </controls>
 
@@ -1101,6 +1276,13 @@ B-1B set file.
         <airbases>
             <file>Aircraft/B-1B/Nasal/airbases.nas</file>
         </airbases>
+        <engines>
+            <file>Aircraft/B-1B/Nasal/engines.nas</file>
+        </engines>
+        <controls>
+            <file>Aircraft/B-1B/Nasal/controls.nas</file>
+        </controls>
+        <dialog> <file>Aircraft/B-1B/Nasal/dialogs.nas</file> </dialog>
     </nasal>
 
 </PropertyList>
