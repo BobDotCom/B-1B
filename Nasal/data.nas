@@ -117,11 +117,12 @@ var select = func (bay, rack) {
 setprop("sim/fg-home-export", getprop("sim/fg-home")~"/Export");
 
 
-var status_update_func = func {
+var status_update_func = func { # currently used for SMS
     for ( var bay = 0; bay < 3; bay = bay + 1 ) {
         for ( var rack = 0; rack < 16; rack = rack + 1 ) {
             var wpn = pylons.fcs._getSpecificWeapon(bay,rack);
             var txt = "";
+            var wpnType = "";
             if (wpn == nil) {
                 txt = "Not loaded";
             } else if (!wpn.isPowerOn()) {
@@ -143,4 +144,21 @@ var status_update_func = func {
         }
     }
 }
+
+var type_update_func = func {
+    for ( var bay = 0; bay < 3; bay = bay + 1 ) {
+        for ( var rack = 0; rack < 8; rack = rack + 1 ) {
+            var wpn = pylons.fcs._getSpecificWeapon(bay,rack);
+            var wpnType = "";
+            if (wpn == nil) {
+                wpnType = "EMPTY";
+            } else {
+                wpnType = wpn.type;
+            }
+            setprop("/ai/guided/bay"~bay~"/bomb["~rack~"]/weapon-type", wpnType);
+
+        }
+    }
+}
 var status_update = maketimer(0.25, status_update_func);
+var type_update = maketimer(0.25, type_update_func);
