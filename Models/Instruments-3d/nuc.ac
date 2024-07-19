@@ -8,7 +8,7 @@ MATERIAL "starter.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 
 MATERIAL "DefaultWhite.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
 OBJECT world
 name "Blender_exporter_v4.1__nuc.ac"
-kids 32
+kids 33
 OBJECT poly
 name "A-full"
 data 9
@@ -5114,6 +5114,26 @@ refs 4
 14 0.133035 0.916115
 kids 0
 OBJECT poly
+name "hr"
+data 8
+Mesh.011
+crease 30.0
+texture "digits.png"
+numvert 4
+0.00702 0.01288 -0.07977
+0.00702 -0.00342 -0.07978
+0.00702 -0.00342 -0.08798
+0.00702 0.01288 -0.08798
+numsurf 1
+SURF 0X10
+mat 4
+refs 4
+3 0.430625 0.097084
+0 0.381322 0.097057
+1 0.381375 0.009353
+2 0.430678 0.00938
+kids 0
+OBJECT poly
 name "I-full"
 data 9
 Mesh.1358
@@ -5884,6 +5904,46 @@ Material_Preview_Mesh
 crease 40.0
 kids 0
 OBJECT poly
+name "min"
+data 8
+Mesh.001
+crease 30.0
+texture "digits.png"
+numvert 4
+0.00702 0.01288 -0.09756
+0.00702 -0.00342 -0.09757
+0.00702 -0.00342 -0.10577
+0.00702 0.01288 -0.10577
+numsurf 1
+SURF 0X10
+mat 4
+refs 4
+3 0.430625 0.097084
+0 0.381322 0.097057
+1 0.381375 0.009353
+2 0.430678 0.00938
+kids 0
+OBJECT poly
+name "min.2"
+data 8
+Mesh.002
+crease 30.0
+texture "digits.png"
+numvert 4
+0.00702 0.01288 -0.08874
+0.00702 -0.00342 -0.08875
+0.00702 -0.00342 -0.09695
+0.00702 0.01288 -0.09695
+numsurf 1
+SURF 0X10
+mat 4
+refs 4
+3 0.430625 0.097084
+0 0.381322 0.097057
+1 0.381375 0.009353
+2 0.430678 0.00938
+kids 0
+OBJECT poly
 name "nuc_close.009"
 data 8
 Mesh.005
@@ -6138,75 +6198,15 @@ refs 4
 kids 0
 OBJECT poly
 name "nuc_pt.002"
-data 9
-Mesh.1371
+data 8
+Mesh.012
 crease 30.0
 texture "digits.png"
 numvert 4
-0.00702 0.01288 -0.09145
-0.00702 -0.00342 -0.09145
-0.00702 -0.00342 -0.10253
-0.00702 0.01288 -0.10253
-numsurf 1
-SURF 0X10
-mat 4
-refs 4
-3 0.430625 0.097084
-0 0.381322 0.097057
-1 0.381375 0.009353
-2 0.430678 0.00938
-kids 0
-OBJECT poly
-name "nuc_pt.003"
-data 9
-Mesh.1372
-crease 30.0
-texture "digits.png"
-numvert 4
-0.00702 0.01288 -0.07886
-0.00702 -0.00342 -0.07886
-0.00702 -0.00342 -0.08895
-0.00702 0.01288 -0.08895
-numsurf 1
-SURF 0X10
-mat 4
-refs 4
-3 0.430625 0.097084
-0 0.381322 0.097057
-1 0.381375 0.009353
-2 0.430678 0.00938
-kids 0
-OBJECT poly
-name "nuc_pt.004"
-data 9
-Mesh.1375
-crease 30.0
-texture "digits.png"
-numvert 4
-0.00702 0.01288 -0.10652
-0.00702 -0.00342 -0.10653
-0.00702 -0.00342 -0.11473
-0.00702 0.01288 -0.11473
-numsurf 1
-SURF 0X10
-mat 4
-refs 4
-3 0.430625 0.097084
-0 0.381322 0.097057
-1 0.381375 0.009353
-2 0.430678 0.00938
-kids 0
-OBJECT poly
-name "nuc_pt.005"
-data 9
-Mesh.1376
-crease 30.0
-texture "digits.png"
-numvert 4
-0.00702 0.01288 -0.11548
-0.00702 -0.00342 -0.11548
-0.00702 -0.00342 -0.1237
-0.00702 0.01288 -0.1237
+0.00702 0.05795 -0.13186
+0.00702 0.03937 -0.13186
+0.00702 0.03937 -0.14047
+0.00702 0.05795 -0.14047
 numsurf 1
 SURF 0X10
 mat 4
@@ -6247,26 +6247,6 @@ numvert 4
 0.00702 0.03937 -0.11944
 0.00702 0.03937 -0.12805
 0.00702 0.05795 -0.12805
-numsurf 1
-SURF 0X10
-mat 4
-refs 4
-3 0.430625 0.097084
-0 0.381322 0.097057
-1 0.381375 0.009353
-2 0.430678 0.00938
-kids 0
-OBJECT poly
-name "nuc_pt.008"
-data 9
-Mesh.1380
-crease 30.0
-texture "digits.png"
-numvert 4
-0.00702 0.05742 -0.13028
-0.00702 0.03942 -0.13028
-0.00702 0.03942 -0.14041
-0.00702 0.05742 -0.14041
 numsurf 1
 SURF 0X10
 mat 4
@@ -17729,6 +17709,46 @@ refs 24
 613 0.886245 0.065355
 603 0.88305 0.061085
 609 0.881089 0.056149
+kids 0
+OBJECT poly
+name "sec"
+data 9
+Mesh.1376
+crease 30.0
+texture "digits.png"
+numvert 4
+0.00702 0.01288 -0.11548
+0.00702 -0.00342 -0.11548
+0.00702 -0.00342 -0.1237
+0.00702 0.01288 -0.1237
+numsurf 1
+SURF 0X10
+mat 4
+refs 4
+3 0.430625 0.097084
+0 0.381322 0.097057
+1 0.381375 0.009353
+2 0.430678 0.00938
+kids 0
+OBJECT poly
+name "sec.2"
+data 9
+Mesh.1375
+crease 30.0
+texture "digits.png"
+numvert 4
+0.00702 0.01288 -0.10652
+0.00702 -0.00342 -0.10653
+0.00702 -0.00342 -0.11473
+0.00702 0.01288 -0.11473
+numsurf 1
+SURF 0X10
+mat 4
+refs 4
+3 0.430625 0.097084
+0 0.381322 0.097057
+1 0.381375 0.009353
+2 0.430678 0.00938
 kids 0
 OBJECT poly
 name "SwitchNut"

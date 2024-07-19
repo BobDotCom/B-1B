@@ -160,20 +160,7 @@
      </condition> 
   </animation>
 
-  <!-- NO distance digital display -->
 
-  <animation>
-    <type>select</type>
-     <object-name>NO-miles-drum-1</object-name>
-     <object-name>NO-miles-drum-2</object-name>
-     <object-name>NO-miles-drum-3</object-name>
-     <condition> 
-      <equals>
-       <property>controls/switches/fltdir</property> 
-       <value>0.0</value>  
-      </equals>
-     </condition> 
-  </animation>
 
   <!-- tacan distance digital display -->
   <animation>
@@ -465,7 +452,6 @@
   <!-- lighting -->
 
   <animation>
-    <object-name>panel</object-name>
     <object-name>hsi</object-name>
     <object-name>HSI-compass-card</object-name>
     <object-name>bearing-needle-1</object-name>
@@ -479,6 +465,15 @@
     <object-name>to-from-to</object-name>
     <object-name>course-knob</object-name>
     <object-name>heading-set-knob</object-name>
+    <object-name>course-drum-1</object-name>
+    <object-name>course-drum-2</object-name>
+    <object-name>course-drum-3</object-name>
+    <object-name>miles-drum-1</object-name>
+    <object-name>miles-drum-2</object-name>
+    <object-name>miles-drum-3</object-name>
+    <object-name>NO-miles-drum-1</object-name>
+    <object-name>NO-miles-drum-2</object-name>
+    <object-name>NO-miles-drum-3</object-name>
     <type>material</type>
     <condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 	 <emission>
