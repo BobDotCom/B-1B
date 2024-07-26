@@ -121,34 +121,7 @@
 	</pitch>
 </engine>
 
-<engine>
-	<name>internal whine0</name>
-	<path>Aircraft/B-1B/Sounds/engine-lowfreq.wav</path>
-	<mode>looped</mode>
-	<condition>
-		<and>
-		<property>/sim/current-view/internal</property>
-		<equals>
-			<property>/controls/engines/engine[0]/cutoff</property>
-			<value>0</value>
-		</equals>
-	        </and>
-	</condition>
-	<position>
-		<x>32.0</x>
-		<y>4.5</y>
-		<z>-2.0</z>
-	</position>
 
-	<pitch>
-		<property>/engines/engine[0]/n1</property>
-		<offset>0.5</offset>
-		<factor>.00025</factor>
-	</pitch>
-	<volume>
-		<max>0.2</max>
-	</volume>
-  </engine>
 
   <!-- engine1 -->
 
@@ -266,35 +239,6 @@
 	  </pitch>
 </engine>
 
-  <engine>
-	  <name>internal whine1</name>
-	  <path>Aircraft/B-1B/Sounds/engine-lowfreq.wav</path>
-	  <mode>looped</mode>
-	  <condition>
-		  <and>
-		  <property>/sim/current-view/internal</property>
-		  <equals>
-			  <property>/controls/engines/engine[1]/cutoff</property>
-			  <value>0</value>
-			  </equals>
-	          </and>
-	  </condition>
-	  <position>
-		  <x>32.0</x>
-		  <y>4.0</y>
-		  <z>-2.0</z>
-	  </position>
-
-	  <pitch>
-		  <property>/engines/engine[1]/n1</property>
-		  <offset>0.5</offset>
-		  <factor>.00025</factor>
-	  </pitch>
-	  <volume>
-		  <max>0.2</max>
-	  </volume>
-  </engine>
-
   <!-- engine2 -->
 
   <engine>
@@ -409,36 +353,6 @@
 		  <offset>0.8</offset>
 		  <factor>.05</factor>
 	  </pitch>
-  </engine>
-
-
-  <engine>
-	  <name>internal whine2</name>
-	  <path>Aircraft/B-1B/Sounds/engine-lowfreq.wav</path>
-	  <mode>looped</mode>
-	  <condition>
-		  <and>
-		  <property>/sim/current-view/internal</property>
-		  <equals>
-			  <property>/controls/engines/engine[2]/cutoff</property>
-			  <value>0</value>
-			  </equals>
-	          </and>
-	  </condition>
-	  <position>
-		  <x>25.5</x>
-		  <y>-4.0</y>
-		  <z>-2.0</z>
-	  </position>
-
-	  <pitch>
-		  <property>/engines/engine[2]/n1</property>
-		  <offset>0.5</offset>
-		  <factor>.00025</factor>
-	  </pitch>
-	  <volume>
-		  <max>0.2</max>
-	  </volume>
   </engine>
 
   <!-- engine3 -->
@@ -557,37 +471,6 @@
 		  <factor>.05</factor>
 	  </pitch>
   </engine>
-
-  <engine>
-	  <name>internal whine3</name>
-	  <path>Aircraft/B-1B/Sounds/engine-lowfreq.wav</path>
-	  <mode>looped</mode>
-	  <condition>
-		  <and>
-		  <property>/sim/current-view/internal</property>
-		  <equals>
-			  <property>/controls/engines/engine[3]/cutoff</property>
-			  <value>0</value>
-			  </equals>
-	          </and>
-	  </condition>
-	  <position>
-		  <x>32.0</x>
-		  <y>-4.5</y>
-		  <z>-2.0</z>
-	  </position>
-
-	  <pitch>
-		  <property>/engines/engine[3]/n1</property>
-		  <ofset>0.7</ofset>
-		  <factor>.00025</factor>
-	  </pitch>
-	  <volume>
-		  <max>0.2</max>
-	  </volume>
-  </engine>
-
-
 
 <!-- Rumble -->
     <!-- rumble>
@@ -865,13 +748,33 @@
 
     <stall>
       <name>stall</name>
+      <mode>looped</mode>
       <path>Sounds/stall.wav</path>
-      <property>/sim/alarms/stall-warning</property>
-      <volume>
-        <property>/velocities/airspeed-kt</property>
-        <min>90.0</min>
-      </volume>
+      <property>/instrumentation/annunciators/stall</property>
+ 	    <volume>
+		    <factor>0.5</factor>
+	    </volume>
     </stall>
+
+    <flapwing>
+      <name>flapwing</name>
+      <mode>looped</mode>
+      <path>Sounds/stall.wav</path>
+      <property>/instrumentation/annunciators/flapwing</property>
+ 	    <volume>
+		    <factor>0.5</factor>
+	    </volume>
+    </flapwing>
+
+    <overspeed>
+      <name>overspeed</name>
+      <mode>looped</mode>
+      <path>Sounds/overspeed.wav</path>
+      <property>/instrumentation/annunciators/reducespeed</property>
+	    <volume>
+		    <factor>0.5</factor>
+	    </volume>
+    </overspeed>
 
     <rain>
 	    <name>rain</name>

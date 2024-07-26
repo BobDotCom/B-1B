@@ -2042,11 +2042,11 @@ sweat by maggse
         <property>engines/engine[0]/nozzle-pos-norm</property>
         <interpolation>
             <entry>
-                <ind>1</ind>
+                <ind>0</ind>
                 <dep>0.0055</dep>
             </entry>
             <entry>
-                <ind>0</ind>
+                <ind>1</ind>
                 <dep>0.0955</dep>
             </entry>
         </interpolation>
@@ -2118,11 +2118,11 @@ sweat by maggse
         <property>engines/engine[1]/nozzle-pos-norm</property>
         <interpolation>
             <entry>
-                <ind>1</ind>
+                <ind>0</ind>
                 <dep>0.0055</dep>
             </entry>
             <entry>
-                <ind>0</ind>
+                <ind>1</ind>
                 <dep>0.0955</dep>
             </entry>
         </interpolation>
@@ -2194,11 +2194,11 @@ sweat by maggse
         <property>engines/engine[2]/nozzle-pos-norm</property>
         <interpolation>
             <entry>
-                <ind>1</ind>
+                <ind>0</ind>
                 <dep>0.0055</dep>
             </entry>
             <entry>
-                <ind>0</ind>
+                <ind>1</ind>
                 <dep>0.0955</dep>
             </entry>
         </interpolation>
@@ -2270,11 +2270,11 @@ sweat by maggse
         <property>engines/engine[3]/nozzle-pos-norm</property>
         <interpolation>
             <entry>
-                <ind>1</ind>
+                <ind>0</ind>
                 <dep>0.0055</dep>
             </entry>
             <entry>
-                <ind>0</ind>
+                <ind>1</ind>
                 <dep>0.0955</dep>
             </entry>
         </interpolation>

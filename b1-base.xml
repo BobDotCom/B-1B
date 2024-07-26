@@ -1020,6 +1020,10 @@ B-1B set file.
                 <none type="int">0</none>
             </expr>
         </cdu900>
+        <heading-indicator> 
+            <bearing-needle type="int">0</bearing-needle>
+            <miles-drums type="int">0</miles-drums>
+        </heading-indicator>
         <wxradar>
             <serviceable>true</serviceable>
             <range type="int" archive="y">20</range>
