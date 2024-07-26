@@ -31,53 +31,19 @@
     <axis><x>1</x></axis>
   </animation>
 
-
-  <!-- If tacan selected and in range, the needle points to the beacon -->
-  <animation>
+  <!-- Bearing needle -->
+   <animation>
     <type>rotate</type>
     <object-name>bearing-needle-1</object-name>
-    <condition>
+    <condition> 
       <greater-than>
-	<property>systems/electrical/outputs/hsi</property>
-	<value>24</value>
-      </greater-than>
-      <or>
-        <and>
-          <property>instrumentation/tacan/serviceable</property>
-          <property>instrumentation/tacan/in-range</property>
-        </and> 
-         <and> 
-          <property>controls/switches/fltdir</property>
-          <value>1</value>
-         </and>
-      </or>
+       <property>systems/electrical/outputs/hsi</property>
+       <value>24</value>
+      </greater-than> 
     </condition>
-    <property>instrumentation/tacan/indicated-bearing-true-deg</property>
+    <property>instrumentation/heading-indicator/bearing-needle</property>
     <axis><x>-1</x></axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>bearing-needle-1</object-name>
-    <condition>
-      <greater-than>
-	<property>systems/electrical/outputs/hsi</property>
-	<value>24</value>
-      </greater-than>
-      <or>
-        <and>
-          <property>instrumentation/adf/serviceable</property>
-          <property>instrumentation/adf/in-range</property>
-        </and> 
-         <and> 
-          <property>controls/switches/fltdir</property>
-          <value>0.75</value>
-         </and>
-      </or>
-    </condition>
-    <property>instrumentation/adf/indicated-bearing-deg</property>
-    <axis><x>-1</x></axis>
-  </animation>
+   </animation>
 
   <!-- hide the distance indicator if neither tacan nor DME is serviceable or in range -->
   <animation>
@@ -119,8 +85,8 @@
   <!-- ILS distance digital display -->
   <animation>
     <type>textranslate</type>
-    <object-name>ILS-miles-drum-1</object-name>
-    <property>instrumentation/nav/nav-distance</property>
+    <object-name>miles-drum-1</object-name>
+    <property>instrumentation/heading-indicator/miles-drums</property>
     <factor>0.0001</factor>
     <offset>-1000</offset>
     <step>1000</step>
@@ -128,8 +94,8 @@
   </animation>
   <animation>
     <type>textranslate</type>
-    <object-name>ILS-miles-drum-2</object-name>
-    <property>instrumentation/nav/nav-distance</property>
+    <object-name>miles-drum-2</object-name>
+    <property>instrumentation/heading-indicator/miles-drums</property>
     <factor>0.00001</factor>
     <offset>-10000</offset>
     <step>10000</step>
@@ -138,75 +104,14 @@
   </animation>
   <animation>
     <type>textranslate</type>
-    <object-name>ILS-miles-drum-3</object-name>
-    <property>instrumentation/nav/nav-distance</property>
+    <object-name>miles-drum-3</object-name>
+    <property>instrumentation/heading-indicator/miles-drums</property>
     <factor>0.000001</factor>
     <offset>-100000</offset>
     <step>100000</step>
     <scroll>0.9</scroll>
     <axis><y>-1</y></axis>
-  </animation>
-
-  <animation>
-    <type>select</type>
-     <object-name>ILS-miles-drum-1</object-name>
-     <object-name>ILS-miles-drum-2</object-name>
-     <object-name>ILS-miles-drum-3</object-name>
-     <condition> 
-      <equals>
-       <property>controls/switches/fltdir</property> 
-       <value>0.5</value>  
-      </equals>
-     </condition> 
-  </animation>
-
-
-
-  <!-- tacan distance digital display -->
-  <animation>
-    <type>textranslate</type>
-    <object-name>miles-drum-1</object-name>
-    <property>instrumentation/tacan/indicated-distance-nm</property>
-    <factor>0.1</factor>
-    <offset>-1</offset>
-    <axis><y>-1</y></axis>
-  </animation>
-  <animation>
-    <type>textranslate</type>
-    <object-name>miles-drum-2</object-name>
-    <property>instrumentation/tacan/indicated-distance-nm</property>
-    <factor>0.01</factor>
-    <offset>-10</offset>
-    <step>10</step>
-    <scroll>0.5</scroll>
-    <axis><y>-1</y></axis>
-  </animation>
-  <animation>
-    <type>textranslate</type>
-    <object-name>miles-drum-3</object-name>
-    <property>instrumentation/tacan/indicated-distance-nm</property>
-    <factor>0.001</factor>
-    <offset>-100</offset>
-    <step>100</step>
-    <scroll>0.5</scroll>
-    <axis><y>-1</y></axis>
   </animation> 
-
-  <animation>
-    <type>select</type>
-     <object-name>miles-drum-1</object-name>
-     <object-name>miles-drum-2</object-name>
-     <object-name>miles-drum-3</object-name>
-     <condition> 
-      <equals>
-       <property>controls/switches/fltdir</property> 
-       <value>1.0</value>  
-      </equals>
-     </condition> 
-  </animation>
-
-
-
 
   <!-- course digital display -->
   <animation>
@@ -361,17 +266,6 @@
     <object-name>course-deviation-indicator-off</object-name>
     <property>instrumentation/nav[0]/radials/selected-deg</property>
     <axis><x>-1</x></axis>
-  </animation>
-
-  <!--  ILS on CDI  -->
-  <!-- ils course-deviation-indicator on-->
-  <animation>
-    <type>select</type>
-    <object-name>course-deviation-indicator-on</object-name>
-    <condition>
-      <property>instrumentation/nav/in-range</property>
-      <property>instrumentation/nav/serviceable</property>
-    </condition>
   </animation>
   <animation>
     <type>rotate</type>

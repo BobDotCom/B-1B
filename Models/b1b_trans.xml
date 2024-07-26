@@ -136,15 +136,15 @@ sweat by maggse
 	 <path>Aircraft/B-1B/Models/Lights/posgreen.xml</path>
 </model>
 
-<!--model-->
+<model>
 	 <name>Whitelightleft</name>
 	 <path>Aircraft/B-1B/Models/Lights/Whitelightleft.xml</path>
-<!--/model-->
+</model>
 
-<!--model-->
+<model>
 	 <name>Whitelightright</name>
 	 <path>Aircraft/B-1B/Models/Lights/Whitelightright.xml</path>
-<!--/model-->
+</model>
  
 <model>
 	 <name>refuellight</name>
@@ -904,6 +904,32 @@ sweat by maggse
 
   <animation>
 	  <type>rotate</type>
+          <object-name>Whitelightright</object-name>
+	  <property>rotors/main/blade[0]/position-deg</property>
+	  <interpolation>
+		  <entry>
+			  <ind>0.0</ind>
+			  <dep>0.0</dep>
+		  </entry>
+		  <entry>
+			  <ind>1.0</ind>
+			  <dep>21.7</dep>
+		  </entry>
+	  </interpolation>
+	  <center>
+		  <x-m>0.1</x-m>
+		  <y-m>3.99</y-m>
+		  <z-m>0.00</z-m>
+	  </center>
+	  <axis>
+		  <x>0</x>
+		  <y>0</y>
+		  <z>1</z>
+	  </axis>
+ </animation>
+
+  <animation>
+	  <type>rotate</type>
           <object-name>posleft</object-name>
 	  <property>rotors/main/blade[0]/position-deg</property>
 	  <interpolation>
@@ -927,5 +953,33 @@ sweat by maggse
 		  <z>-1</z>
 	  </axis>
  </animation>
+
+  <animation>
+	  <type>rotate</type>
+          <object-name>Whitelightleft</object-name>
+	  <property>rotors/main/blade[0]/position-deg</property>
+	  <interpolation>
+		  <entry>
+			  <ind>0.0</ind>
+			  <dep>0.0</dep>
+		  </entry>
+		  <entry>
+			  <ind>1.0</ind>
+			  <dep>21.5</dep>
+		  </entry>
+	  </interpolation>
+	  <center>
+		  <x-m>0.1</x-m>
+		  <y-m>-3.99</y-m>
+		  <z-m>0.00</z-m>
+	  </center>
+	  <axis>
+		  <x>0</x>
+		  <y>0</y>
+		  <z>-1</z>
+	  </axis>
+ </animation>
+
+
 
 </PropertyList>

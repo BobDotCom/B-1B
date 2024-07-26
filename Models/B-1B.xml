@@ -144,6 +144,13 @@ more to come :-)
 	  </offsets>
   </model>
 
+  <effect>
+    <inherits-from>Aircraft/B-1B/Models/Effects/Refuelling-lights</inherits-from>
+    <object-name>bone_4.002</object-name> 
+   </effect>
+
+
+
 <!-- pushback -->
 
 <model>

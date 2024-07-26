@@ -438,7 +438,7 @@ B-1B set file.
                                     screen.log.write("Damage OFF", 1, 0, 0);
                                 }
                             } else {
-                                screen.log.write("Can't do that while airborne or moveing", 1, 1, 1);
+                                screen.log.write("Can't do that while airborne or moving", 1, 1, 1);
                             }
                             ]]>
                         </script>

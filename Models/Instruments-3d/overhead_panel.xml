@@ -44,26 +44,16 @@ maggse
 		 <binding>
 			 <command>property-toggle</command>
 			 <property>controls/switches/refuel-lid</property>
-			 <condition>
-				 <property>controls/switches/refuel-slipway</property>
-				 <value>1</value>
-			 </condition>
+	                 <value>1</value>
 		 </binding>
 		 <binding>
 			 <command>nasal</command>
 			 <script>b1b.refuel_door()</script>
-			 <condition>
-				 <property>controls/switches/refuel-slipway</property>
-				 <value>1</value>
-			 </condition>
 		 </binding>
 		 <binding>
 			 <command>property-toggle</command>
 			 <property>systems/refuel/serviceable</property>
-			 <condition>
-				 <property>controls/switches/refuel-slipway</property>
-				 <value>1</value>
-			 </condition>
+			 <value>1</value>
 		 </binding>
 	 </action>
 </animation>
@@ -96,8 +86,8 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>refuel-slipway</object-name>
-	 <property>controls/switches/refuel-slipway</property>
+	 <object-name>slipway-lighting</object-name>
+	 <property>controls/switches/slipway-lighting</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -123,14 +113,16 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>refuel-slipway</object-name>
+	 <object-name>slipway-lighting</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/switches/refuel-slipway</property>
+			 <property>controls/switches/slipway-lighting</property>
+                         <value>0</value> 
+                         <value>1</value>
 		 </binding>
 	 </action>
 </animation> 
@@ -1268,7 +1260,16 @@ maggse
  <animation>
 	<type>material</type>
     <object-name>Panel_Lights</object-name>
-	<object-name>oh_panel</object-name>
+	<object-name>AERIAL_REFUEL</object-name>
+	<object-name>ELEC</object-name>
+	<object-name>LT_1</object-name>
+	<object-name>LT_2</object-name>
+	<object-name>CSD</object-name>
+	<object-name>APU</object-name>
+	<object-name>ENVIR_2</object-name>
+	<object-name>ENVIR_1</object-name>
+	<object-name>EXT_FUEL_JETT</object-name>
+	<object-name>JETT</object-name>
     <object-name>oh_panel_left</object-name>
 	<object-name>APU_X_Bleed</object-name>
     <object-name>APU_couple</object-name>
@@ -1287,12 +1288,11 @@ maggse
 	<object-name>Clkheures</object-name>
 	<object-name>Clkminutes</object-name>
 	<object-name>Clksecondes</object-name>
-    <object-name>refuel-slipway</object-name>
+    <object-name>slipway-lighting</object-name>
     <object-name>refuel-lid</object-name>
-	<object-name>1CSD</object-name>
-	<object-name>2CSD</object-name>
-	<object-name>2CSD.002</object-name>
-	<object-name>4CSD</object-name>
+	<object-name>CSD_safety_1</object-name>
+	<object-name>CSD_safety_2</object-name>
+	<object-name>CSD_safety_3</object-name>
 	<object-name>AdjKnob</object-name>
 	<object-name>AmpRim</object-name>
 	<object-name>ESS.BUSS</object-name>
@@ -1301,7 +1301,6 @@ maggse
 	<object-name>Fuel-Gauge</object-name>
 	<object-name>Fuel-PSI</object-name>
 	<object-name>Fuel-Press</object-name>
-	<object-name>Grey</object-name>
 	<object-name>Needles</object-name>
 	<object-name>OH lock</object-name>
 	<object-name>OvHdHyd</object-name>

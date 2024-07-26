@@ -2,6 +2,7 @@
 
 <PropertyList> 
 
+<!-- INS computer -->
 
   <filter>
         <type>gain</type>
@@ -54,6 +55,8 @@
      <output>systems/computers/INS/roll</output>
   </filter>
 
+<!-- GSS computer -->
+
   <filter>
         <type>gain</type>
         <gain>1.0</gain>
@@ -105,6 +108,7 @@
      <output>systems/computers/GSS/roll</output>
   </filter>
 
+<!-- ADC computers -->
 
   <filter>
         <type>gain</type>
@@ -310,6 +314,8 @@
         <output>systems/computers/ADC2/Glideslope-lateral-deflection</output>
   </filter>
 
+<!-- Fuel-flow-gauge -->
+
   <filter>
      <type>gain</type>
      <gain>1.0</gain> 
@@ -325,5 +331,134 @@
        </input>
        <output>engines/full_fuel_flow</output>
     </filter>
+
+	<filter> <!-- Heading error computer -->
+		<name>Heading/Nav Error Deg</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>autopilot/route-manager/active</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<property>autopilot/settings/true-heading-deg</property>
+			<offset>
+				<property>/orientation/heading-magnetic-deg</property>
+				<scale>-1.0</scale>
+			</offset>
+		</input>
+		<output>autopilot/settings/offset-heading</output>
+		<period>
+			<min>-180</min>
+			<max>180</max>
+		</period>
+	</filter>
+
+<!-- Heading Indicator -->
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>1</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/tacan/indicated-distance-nm</property> 
+        </input>
+        <output>instrumentation/heading-indicator/miles-drums</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>0.001</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0.5</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/nav/nav-distance</property> 
+        </input>
+        <output>instrumentation/heading-indicator/miles-drums</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1000.0</gain>
+         <enable>
+          <condition>
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0</value>
+           </equals> 
+           <equals>
+            <property>autopilot/route-manager/active</property>
+            <value>1</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>autopilot/route-manager/wp/dist</property> 
+        </input>
+        <output>instrumentation/heading-indicator/miles-drums</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>1</value>
+           </equals> 
+           <equals>
+            <property>instrumentation/tacan/serviceable</property>
+            <value>1</value>
+           </equals>
+           <equals>
+            <property>instrumentation/tacan/in-range</property> 
+            <value>1</value>
+           </equals> 
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/tacan/indicated-bearing-true-deg</property> 
+        </input>
+        <output>instrumentation/heading-indicator/bearing-needle</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition>
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0</value>
+           </equals> 
+           <equals>
+            <property>autopilot/route-manager/active</property>
+            <value>1</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>autopilot/settings/offset-heading</property> 
+        </input>
+        <output>instrumentation/heading-indicator/bearing-needle</output>
+  </filter>
+
+
 
 </PropertyList>
