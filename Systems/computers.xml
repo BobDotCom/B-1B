@@ -356,33 +356,62 @@
 		</period>
 	</filter>
 
+	<filter>
+		<name>Tacan Error Deg</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>instrumentation/tacan/serviceable</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<property>instrumentation/tacan/indicated-bearing-true-deg</property>
+			<offset>
+				<property>/orientation/heading-magnetic-deg</property>
+				<scale>-1.0</scale>
+			</offset>
+		</input>
+		<output>instrumentation/tacan/indicated-bearing-offset-deg</output>
+		<period>
+			<min>-180</min>
+			<max>180</max>
+		</period>
+	</filter>
+
 <!-- Heading Indicator -->
+<!-- Miles drums -->
 
   <filter>
         <type>gain</type>
-        <gain>1.0</gain>
+        <gain>1.0</gain> 
          <enable>
-          <condition> 
+          <condition>
            <equals>
             <property>controls/switches/fltdir</property>
+            <value>0.2</value>
+           </equals> 
+           <equals>
+            <property>autopilot/route-manager/active</property>
             <value>1</value>
            </equals>  
           </condition>
          </enable>
         <input>
-         <property>instrumentation/tacan/indicated-distance-nm</property> 
-        </input>
+         <property>autopilot/route-manager/wp/dist</property> 
+        </input> 
         <output>instrumentation/heading-indicator/miles-drums</output>
   </filter>
 
   <filter>
         <type>gain</type>
-        <gain>0.001</gain>
+        <gain>10.0</gain>
          <enable>
           <condition> 
            <equals>
             <property>controls/switches/fltdir</property>
-            <value>0.5</value>
+            <value>0.3</value>
            </equals>  
           </condition>
          </enable>
@@ -394,24 +423,31 @@
 
   <filter>
         <type>gain</type>
-        <gain>1000.0</gain>
+        <gain>1.0</gain>
          <enable>
           <condition>
            <equals>
             <property>controls/switches/fltdir</property>
-            <value>0</value>
+            <value>0.5</value>
            </equals> 
            <equals>
-            <property>autopilot/route-manager/active</property>
+            <property>instrumentation/tacan/serviceable</property>
+            <value>1</value>
+           </equals>
+           <equals>
+            <property>instrumentation/tacan/in-range</property> 
             <value>1</value>
            </equals>  
           </condition>
          </enable>
         <input>
-         <property>autopilot/route-manager/wp/dist</property> 
+         <property>instrumentation/tacan/indicated-distance-nm</property> 
         </input>
         <output>instrumentation/heading-indicator/miles-drums</output>
   </filter>
+
+<!-- Heading Indicator -->
+<!-- bearing needle -->
 
   <filter>
         <type>gain</type>
@@ -420,7 +456,7 @@
           <condition> 
            <equals>
             <property>controls/switches/fltdir</property>
-            <value>1</value>
+            <value>0.5</value>
            </equals> 
            <equals>
             <property>instrumentation/tacan/serviceable</property>
@@ -433,7 +469,7 @@
           </condition>
          </enable>
         <input>
-         <property>instrumentation/tacan/indicated-bearing-true-deg</property> 
+         <property>instrumentation/tacan/indicated-bearing-offset-deg</property> 
         </input>
         <output>instrumentation/heading-indicator/bearing-needle</output>
   </filter>
@@ -445,7 +481,7 @@
           <condition>
            <equals>
             <property>controls/switches/fltdir</property>
-            <value>0</value>
+            <value>0.2</value>
            </equals> 
            <equals>
             <property>autopilot/route-manager/active</property>
@@ -459,6 +495,56 @@
         <output>instrumentation/heading-indicator/bearing-needle</output>
   </filter>
 
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition>
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0.4</value>
+           </equals> 
+           <equals>
+            <property>instrumentation/adf/in-range</property>
+            <value>1</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/adf/indicated-bearing-deg</property> 
+        </input>
+        <output>instrumentation/heading-indicator/bearing-needle</output>
+  </filter>
+
+<!-- IFF panel -->
+
+    <logic>
+     <input> 
+      <equals>          
+       <property>instrumentation/iff/master-switch</property>
+       <value>3</value> 
+      </equals>               
+      <greater-than>      
+       <property>instrumentation/iff/M.1_switch</property>
+       <value>-1</value> 
+      </greater-than> 
+     </input>
+     <output>instrumentation/iff/power</output>
+    </logic>
+
+    <logic>
+     <input> 
+      <equals>          
+       <property>instrumentation/iff/master-switch</property>
+       <value>3</value> 
+      </equals>               
+      <greater-than>      
+       <property>instrumentation/iff/M.3A_switch</property>
+       <value>-1</value> 
+      </greater-than> 
+     </input>
+     <output>instrumentation/transponder/serviceable</output>
+    </logic>
 
 
 </PropertyList>

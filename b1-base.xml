@@ -1041,7 +1041,13 @@ B-1B set file.
             <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
             <receive_period type="double">1</receive_period>
             <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
-        </datalink>
+        </datalink> 
+        <iff> 
+         <power_prop type="string">/instrumentation/iff/power</power_prop>
+         <channel_prop type="string">/instrumentation/iff/channel-selection</channel_prop>
+         <M.1_switch type="int">-1</M.1_switch>
+         <M.3A_switch type="int">-1</M.3A_switch>
+        </iff>
     </instrumentation>
 
     <input>

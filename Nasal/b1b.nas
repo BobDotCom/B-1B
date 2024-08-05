@@ -20,7 +20,6 @@ setprop("instrumentation/teravd/ridge-clear", 0);
 setprop("autopilot/settings/target-pitch-deg", 2);
 setprop("controls/electrical/switches/battery", 0);
 setprop("controls/switches/terra-report", 0);
-setprop("controls/switches/fltdir", 0.25);
 setprop("controls/switches/radar-range", 0.25);
 setprop("controls/switches/terrain-avoid-clrpln", 0);
 setprop("controls/switches/terrain-avoid-rng", 0);
