@@ -698,9 +698,9 @@ B-1BFS
 	  <name>ILS panel</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/ILS-Panel.xml</path>
 	  <offsets>
-		  <x-m>-17.9283</x-m>
+		  <x-m>-17.985</x-m>
 		  <y-m>-0.289</y-m>
-		  <z-m>0.709</z-m>
+		  <z-m>0.712</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
