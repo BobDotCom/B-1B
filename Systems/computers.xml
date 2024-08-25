@@ -406,12 +406,16 @@
 
   <filter>
         <type>gain</type>
-        <gain>10.0</gain>
+        <gain>0.001</gain>
          <enable>
           <condition> 
            <equals>
             <property>controls/switches/fltdir</property>
-            <value>0.3</value>
+            <value>0.4</value>
+           </equals>
+           <equals>
+            <property>instrumentation/nav/in-range</property>
+            <value>1</value>
            </equals>  
           </condition>
          </enable>
@@ -444,6 +448,15 @@
          <property>instrumentation/tacan/indicated-distance-nm</property> 
         </input>
         <output>instrumentation/heading-indicator/miles-drums</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>0.000621</gain>
+        <input>
+         <property>instrumentation/nav/nav-distance</property> 
+        </input>
+        <output>instrumentation/heading-indicator/miles-drums-miles-conversion</output>
   </filter>
 
 <!-- Heading Indicator -->
@@ -514,7 +527,17 @@
          <property>instrumentation/adf/indicated-bearing-deg</property> 
         </input>
         <output>instrumentation/heading-indicator/bearing-needle</output>
-  </filter>
+  </filter> 
+
+    <logic>
+     <input> 
+      <equals>          
+       <property>controls/switches/fltdir</property>
+       <value>0.6</value> 
+      </equals>               
+     </input>
+     <output>instrumentation/nav/back-course-btn</output>
+    </logic>
 
 <!-- IFF panel -->
 

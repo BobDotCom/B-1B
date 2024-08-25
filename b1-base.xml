@@ -106,9 +106,9 @@ B-1B set file.
         <view n="0">
             <internal archive="y">true</internal>
             <config>
-                <x-offset-m archive="y">-0.5</x-offset-m><!-- left-/right+ -0.67-->
-                <y-offset-m archive="y">1.15</y-offset-m><!-- up+/down- 1.37-->
-                <z-offset-m archive="y">7.15</z-offset-m><!-- back+ 7.15-->
+                <x-offset-m archive="y">-0.54</x-offset-m><!-- left-/right+ -0.67-->
+                <y-offset-m archive="y">2.15</y-offset-m><!-- up+/down- 1.15-->
+                <z-offset-m archive="y">7.05</z-offset-m><!-- back+ 7.15-->
                 <pitch-offset-deg>-6</pitch-offset-deg>
                 <default-field-of-view-deg>92.1</default-field-of-view-deg>
             </config>
@@ -131,7 +131,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">75.7</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">92.1</default-field-of-view-deg>
                 <default-pitch-deg type="double">0</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -142,10 +142,10 @@ B-1B set file.
                 <back-right-direction-deg type="double">225</back-right-direction-deg>
                 <right-direction-deg type="double">270</right-direction-deg>
                 <front-right-direction-deg type="double">315</front-right-direction-deg>
-                <x-offset-m archive="y">0.5</x-offset-m>
-                <y-offset-m archive="y">1.14</y-offset-m>
-                <z-offset-m archive="y">7.12</z-offset-m>
-                <pitch-offset-deg>0</pitch-offset-deg>
+                <x-offset-m archive="y">0.56</x-offset-m>
+                <y-offset-m archive="y">2.15</y-offset-m>
+                <z-offset-m archive="y">7.05</z-offset-m>
+                <pitch-offset-deg>-6</pitch-offset-deg>
                 <default-field-of-view-deg>55</default-field-of-view-deg>
             </config>
         </view>
@@ -158,7 +158,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">84.5</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">92.1</default-field-of-view-deg>
                 <default-pitch-deg type="double">0</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -170,8 +170,8 @@ B-1B set file.
                 <right-direction-deg type="double">270</right-direction-deg>
                 <front-right-direction-deg type="double">315</front-right-direction-deg>
                 <x-offset-m archive="y">0.00</x-offset-m>
-                <y-offset-m archive="y">1.14</y-offset-m>
-                <z-offset-m archive="y">9.50</z-offset-m>
+                <y-offset-m archive="y">2.35</y-offset-m>
+                <z-offset-m archive="y">9.45</z-offset-m>
                 <pitch-offset-deg>0</pitch-offset-deg>
                 <default-field-of-view-deg>55</default-field-of-view-deg>
             </config>
@@ -185,7 +185,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">69.3</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">92.1</default-field-of-view-deg>
                 <default-pitch-deg type="double">-5</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -196,9 +196,9 @@ B-1B set file.
                 <back-right-direction-deg type="double">225</back-right-direction-deg>
                 <right-direction-deg type="double">270</right-direction-deg>
                 <front-right-direction-deg type="double">315</front-right-direction-deg>
-                <x-offset-m archive="y">0.65</x-offset-m>
-                <y-offset-m archive="y">1.28</y-offset-m>
-                <z-offset-m archive="y">9.60</z-offset-m>
+                <x-offset-m archive="y">0.6</x-offset-m>
+                <y-offset-m archive="y">2.38</y-offset-m>
+                <z-offset-m archive="y">9.53</z-offset-m>
                 <pitch-offset-deg>0</pitch-offset-deg>
                 <default-field-of-view-deg>55</default-field-of-view-deg>
             </config>

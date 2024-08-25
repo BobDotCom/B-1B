@@ -4,43 +4,99 @@
 
 <fx>
 
-<!-- engine0 -->
+                                                                             <!-- External noise -->
 
-<engine>
-	<name>engine0</name>
-	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
-	<mode>looped</mode>
-	<condition>
-		<equals>
-			<property>/controls/engines/engine[0]/cutoff</property>
-			<value>0</value>
-		</equals>
-	</condition>
-	<value>0</value>
-	<position>
-		<x>32.0</x><!-- + = aft -->
-		<y>4.5</y><!-- + = left -->
-		<z>-2.0</z><!-- + = up -->
-	</position>
-	<orientation>
-		<x>-1.0</x>
-		<y>0.0</y>
-		<z>0.0</z>
-		<inner-angle>90.0</inner-angle>
-		<outer-angle>180.0</outer-angle>
-		<outer-gain>0.2</outer-gain>
-	</orientation>
-	<volume>
-		<property>/engines/engine[0]/thrust_lb</property>
-		<factor>0.000066</factor>
-	</volume>
-</engine>
-
-
+<!-- APU-1 -->
 
 <engine>
 	<name>external whine0</name>
 	<path>Aircraft/B-1B/Sounds/whine.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+		<equals>
+			<property>/controls/engines/engine[4]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
+	</condition>
+	<position>
+		<x>32.0</x>
+		<y>4.5</y>
+		<z>-1.0</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>0.5</outer-gain>
+	</orientation>
+	<pitch>
+		<property>/engines/engine[4]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
+	</pitch>
+	<volume>
+		<property>/engines/engine[4]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.001</factor>
+		<max>0.5</max>
+	</volume>
+</engine>
+
+<!-- APU-2 -->
+
+<engine>
+	<name>external whine0</name>
+	<path>Aircraft/B-1B/Sounds/whine.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+		<equals>
+			<property>/controls/engines/engine[5]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
+	</condition>
+	<position>
+		<x>32.0</x>
+		<y>-4.5</y>
+		<z>-1.0</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>0.5</outer-gain>
+	</orientation>
+	<pitch>
+		<property>/engines/engine[5]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
+	</pitch>
+	<volume>
+		<property>/engines/engine[5]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.001</factor>
+		<max>0.5</max>
+	</volume>
+</engine>
+
+<!-- engine0 -->
+
+<engine>
+	<name>engine01</name>
+	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path> 
 	<mode>looped</mode>
 	<condition>
 		<and>
@@ -54,28 +110,60 @@
 	        </and>
 	</condition>
 	<position>
-		<x>32.0</x>
-		<y>4.5</y>
-		<z>-2.0</z>
+		<x>8.0</x>
+		<y>4.1</y>
+		<z>-1.6</z>
 	</position>
 	<orientation>
-		<x>-1.0</x>
+		<x>1.0</x>
 		<y>0.0</y>
 		<z>0.0</z>
 		<inner-angle>90.0</inner-angle>
 		<outer-angle>180.0</outer-angle>
-		<outer-gain>0.5</outer-gain>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<volume>
+		<property>/engines/engine[0]/n1</property> 
+		<factor>0.009</factor>
+	</volume>
+</engine>
+
+<engine>
+	<name>engine02</name>
+	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>4.1</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
 	</orientation>
 	<pitch>
-		<property>/sim/model/B-1B/n1[0]</property>
-		<offset>0.3</offset>
-		<factor>.003</factor>
+		<property>/engines/engine[0]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
 	</pitch>
 	<volume>
-		<property>/sim/model/B-1B/n1[0]</property>
-		<offset>0.0</offset>
-		<factor>0.008</factor>
-		<max>0.6</max>
+		<property>/engines/engine[0]/n1</property>
+		<factor>0.1</factor>
 	</volume>
 </engine>
 
@@ -86,18 +174,21 @@
 	<condition>
 		<and>
 		<equals>
-		<property>/controls/engines/engine[0]/afterburner</property>
+		<property>/controls/engines/engine[0]/augmentation</property>
 		<value>1</value>
 		</equals>
 		<equals>
 			<property>/controls/engines/engine[0]/cutoff</property>
 			<value>0</value>
 		</equals>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
 	        </and>
 	</condition>
 
 	<position>
-		<x>32.0</x>
+		<x>8.0</x>
 		<y>4.5</y>
 		<z>-2.0</z>
 	</position>
@@ -113,7 +204,7 @@
 		<property>/engines/engine[0]/thrust_lb</property>
 		<factor>0.000033</factor>
 		  <min>0.02</min>
-		  <max>0.4</max>
+		  <max>0.35</max>
 	</volume>
 	<pitch>
 		<offset>0.8</offset>
@@ -125,77 +216,78 @@
 
   <!-- engine1 -->
 
-  <engine>
-	  <name>engine1</name>
-	  <path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
-	  <mode>looped</mode>
-	  <condition>
-			  <equals>
-				  <property>/controls/engines/engine[1]/cutoff</property>
-				  <value>0</value>
-			  </equals>
+<engine>
+	<name>engine11</name>
+	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+		<equals>
+			<property>/controls/engines/engine[1]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
 	</condition>
-	  <position>
-		  <x>32.0</x><!-- + = aft -->
-		  <y>4.0</y><!-- + = left -->
-		  <z>-2.0</z><!-- + = up -->
-	  </position>
-	  <orientation>
-		  <x>-1.0</x>
-		  <y>0.0</y>
-		  <z>0.0</z>
-		  <inner-angle>90.0</inner-angle>
-		  <outer-angle>180.0</outer-angle>
-		  <outer-gain>0.2</outer-gain>
-	  </orientation>
-	  <volume>
-		  <property>/engines/engine[1]/thrust_lb</property>
-		  <factor>0.000066</factor>
-	  </volume>
-  </engine>
+	<position>
+		<x>8.0</x>
+		<y>2.5</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<volume>
+		<property>/engines/engine[1]/n1</property> 
+		<factor>0.009</factor>
+	</volume>
+</engine>
 
-
-
-  <engine>
-	  <name>external whine1</name>
-	  <path>Aircraft/B-1B/Sounds/whine.wav</path>
-	  <mode>looped</mode>
-	  <condition>
-		  <and>
-		  <not>
-			  <property>/sim/current-view/internal</property>
-		  </not>
-		  <equals>
-			  <property>/controls/engines/engine[1]/cutoff</property>
-			  <value>0</value>
-			  </equals>
-	          </and>
-	  </condition>
-	  <position>
-		  <x>32.0</x>
-		  <y>4.0</y>
-		  <z>-2.0</z>
-	  </position>
-	  <orientation>
-		  <x>-1.0</x>
-		  <y>0.0</y>
-		  <z>0.0</z>
-		  <inner-angle>90.0</inner-angle>
-		  <outer-angle>180.0</outer-angle>
-		  <outer-gain>0.5</outer-gain>
-	  </orientation>
-	  <pitch>
-		  <property>/sim/model/B-1B/n1[1]</property>
-		  <offset>0.3</offset>
-		  <factor>.003</factor>
-	  </pitch>
-	  <volume>
-		  <property>/sim/model/B-1B/n1[1]</property>
-		  <offset>0.0</offset>
-		  <factor>0.008</factor>
-		  <max>0.6</max>
-	  </volume>
-  </engine>
+<engine>
+	<name>engine12</name>
+	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>2.5</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<pitch>
+		<property>/engines/engine[1]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
+	</pitch>
+	<volume>
+		<property>/engines/engine[1]/n1</property>
+		<factor>0.1</factor>
+	</volume>
+</engine>
 
   <engine>
 	  <name>engine_burn1</name>
@@ -204,19 +296,22 @@
 	  <condition>
 		  <and>
 		  <equals>
-			  <property>/controls/engines/engine[1]/afterburner</property>
+			  <property>/controls/engines/engine[1]/augmentation</property>
 			  <value>1</value>
 		  </equals>
 		  <equals>
 			  <property>/controls/engines/engine[1]/cutoff</property>
 			  <value>0</value>
-			  </equals>
+		  </equals>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
 	          </and>
 	  </condition>
 
 	  <position>
-		  <x>25</x>
-		  <y>4.0</y>
+		  <x>8</x>
+		  <y>2.5</y>
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
@@ -231,87 +326,88 @@
 		  <property>/engines/engine[1]/thrust_lb</property>
 		  <factor>0.000033</factor>
 		  <min>0.02</min>
-		  <max>0.4</max>
+		  <max>0.35</max>
 	  </volume>
 	  <pitch>
 		  <offset>0.8</offset>
-		  <factor>.05</factor>
+		  <factor>0.05</factor>
 	  </pitch>
 </engine>
 
   <!-- engine2 -->
 
-  <engine>
-	  <name>engine2</name>
-	  <path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
-	  <mode>looped</mode>
-	  <condition>
-			  <equals>
-				  <property>/controls/engines/engine[2]/cutoff</property>
-				  <value>0</value>
-			  </equals>
-	  </condition>
-	  <position>
-		  <x>32.0</x>
-		  <y>-4.0</y>
-		  <z>-2.0</z>
-	  </position>
-	  <orientation>
-		  <x>-1.0</x>
-		  <y>0.0</y>
-		  <z>0.0</z>
-		  <inner-angle>90.0</inner-angle>
-		  <outer-angle>180.0</outer-angle>
-		  <outer-gain>0.2</outer-gain>
-	  </orientation>
-	  <volume>
-		  <property>/engines/engine[2]/thrust_lb</property>
-		  <factor>0.000066</factor>
-	  </volume>
-  </engine>
+<engine>
+	<name>engine21</name>
+	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+		<equals>
+			<property>/controls/engines/engine[2]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>-2.5</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<volume>
+		<property>/engines/engine[2]/n1</property> 
+		<factor>0.009</factor>
+	</volume>
+</engine>
 
-
-
-  <engine>
-	  <name>external whine2</name>
-	  <path>Aircraft/B-1B/Sounds/whine.wav</path>
-	  <mode>looped</mode>
-	  <condition>
-		  <and>
-		  <not>
-			  <property>/sim/current-view/internal</property>
-		  </not>
-		  <equals>
-			  <property>/controls/engines/engine[2]/cutoff</property>
-			  <value>0</value>
-			  </equals>
-	          </and>
-	  </condition>
-	  <position>
-		  <x>32.0</x>
-		  <y>-4.0</y>
-		  <z>-2.0</z>
-	  </position>
-	  <orientation>
-		  <x>-1.0</x>
-		  <y>0.0</y>
-		  <z>0.0</z>
-		  <inner-angle>90.0</inner-angle>
-		  <outer-angle>180.0</outer-angle>
-		  <outer-gain>0.5</outer-gain>
-	  </orientation>
-	  <pitch>
-		  <property>/sim/model/B-1B/n1[2]</property>
-		  <offset>0.3</offset>
-		  <factor>.003</factor>
-	  </pitch>
-	  <volume>
-		  <property>/sim/model/B-1B/n1[2]</property>
-		  <offset>0.0</offset>
-		  <factor>0.008</factor>
-		  <max>0.6</max>
-	  </volume>
-  </engine>
+<engine>
+	<name>engine22</name>
+	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>-2.5</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<pitch>
+		<property>/engines/engine[2]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
+	</pitch>
+	<volume>
+		<property>/engines/engine[2]/n1</property>
+		<factor>0.1</factor>
+	</volume>
+</engine>
 
   <engine>
 	  <name>engine_burn2</name>
@@ -320,19 +416,22 @@
 	  <condition>
 		  <and>
 		  <equals>
-			  <property>/controls/engines/engine[2]/afterburner</property>
+			  <property>/controls/engines/engine[2]/augmentation</property>
 			  <value>1</value>
 		  </equals>
 		  <equals>
 			  <property>/controls/engines/engine[2]/cutoff</property>
 			  <value>0</value>
-			  </equals>
+		  </equals>
+		  <not>
+			<property>/sim/current-view/internal</property>
+		  </not>
 	          </and>
 	  </condition>
 
 	  <position>
-		  <x>32.0</x>
-		  <y>-4.0</y>
+		  <x>8.0</x>
+		  <y>-2.5</y>
 		  <z>-2.0</z>
 	  </position>
 	  <orientation>
@@ -347,88 +446,88 @@
 		  <property>/engines/engine[2]/thrust_lb</property>
 		  <factor>0.000033</factor>
 		  <min>0.02</min>
-		  <max>0.4</max>
+		  <max>0.35</max>
 	  </volume>
 	  <pitch>
 		  <offset>0.8</offset>
-		  <factor>.05</factor>
+		  <factor>0.05</factor>
 	  </pitch>
   </engine>
 
   <!-- engine3 -->
 
-  <engine>
-	  <name>engine3</name>
-	  <path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
-	  <mode>looped</mode>
-	  <condition>
-			  <equals>
-				  <property>/controls/engines/engine[3]/cutoff</property>
-				  <value>0</value>
-			  </equals>
-	  </condition>
+<engine>
+	<name>engine31</name>
+	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+		<equals>
+			<property>/controls/engines/engine[3]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>-4.1</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<volume>
+		<property>/engines/engine[3]/n1</property> 
+		<factor>0.009</factor>
+	</volume>
+</engine>
 
-	  <position>
-		  <x>32.0</x>
-		  <y>-4.5</y>
-		  <z>-2.0</z>
-	  </position>
-	  <orientation>
-		  <x>-1.0</x>
-		  <y>0.0</y>
-		  <z>0.0</z>
-		  <inner-angle>90.0</inner-angle>
-		  <outer-angle>180.0</outer-angle>
-		  <outer-gain>0.2</outer-gain>
-	  </orientation>
-	  <volume>
-		  <property>/engines/engine[3]/thrust_lb</property>
-		  <factor>0.000066</factor>
-	  </volume>
-  </engine>
-
-
-
-  <engine>
-	  <name>external whine3</name>
-	  <path>Aircraft/B-1B/Sounds/whine.wav</path>
-	  <mode>looped</mode>
-	  <condition>
-		  <and>
-		  <not>
-			  <property>/sim/current-view/internal</property>
-		  </not>
-		  <equals>
-			  <property>/controls/engines/engine[3]/cutoff</property>
-			  <value>0</value>
-			  </equals>
-	          </and>
-	  </condition>
-	  <position>
-		  <x>32.0</x>
-		  <y>-4.5</y>
-		  <z>-2.0</z>
-	  </position>
-	  <orientation>
-		  <x>-1.0</x>
-		  <y>0.0</y>
-		  <z>0.0</z>
-		  <inner-angle>90.0</inner-angle>
-		  <outer-angle>180.0</outer-angle>
-		  <outer-gain>0.5</outer-gain>
-	  </orientation>
-	  <pitch>
-		  <property>/sim/model/B-1B/n1[3]</property>
-		  <offset>0.3</offset>
-		  <factor>.003</factor>
-	  </pitch>
-	  <volume>
-		  <property>/sim/model/B-1B/n1[3]</property>
-		  <offset>0.0</offset>
-		  <factor>0.008</factor>
-		  <max>0.6</max>
-	  </volume>
-  </engine>
+<engine>
+	<name>engine32</name>
+	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>-4.1</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<pitch>
+		<property>/engines/engine[3]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
+	</pitch>
+	<volume>
+		<property>/engines/engine[3]/n1</property>
+		<factor>0.1</factor>
+	</volume>
+</engine>
 
   <engine>
 	  <name>engine_burn3</name>
@@ -437,18 +536,21 @@
 	  <condition>
 		  <and>
 		  <equals>
-			  <property>/controls/engines/engine[3]/afterburner</property>
+			  <property>/controls/engines/engine[3]/augmentation</property>
 			  <value>1</value>
 		  </equals>
 		  <equals>
 			  <property>/controls/engines/engine[3]/cutoff</property>
 			  <value>0</value>
-			  </equals>
+		  </equals>
+		  <not>
+			<property>/sim/current-view/internal</property>
+		  </not>
 	          </and>
 	  </condition>
 
 	  <position>
-		  <x>32.0</x>
+		  <x>8.0</x>
 		  <y>-4.5</y>
 		  <z>-2.0</z>
 	  </position>
@@ -464,11 +566,440 @@
 		  <property>/engines/engine[3]/thrust_lb</property>
 		  <factor>0.000033</factor>
 		  <min>0.02</min>
-		  <max>0.4</max>
+		  <max>0.35</max>
 	  </volume>
 	  <pitch>
 		  <offset>0.8</offset>
-		  <factor>.05</factor>
+		  <factor>0.05</factor>
+	  </pitch>
+  </engine>
+
+                                                                           <!-- Internal noise -->
+
+<!-- engine0 -->
+
+<engine>
+	<name>engine01_internal</name>
+	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path> 
+	<mode>looped</mode>
+	<position>
+		<x>8.0</x>
+		<y>4.1</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<volume>
+		<property>/engines/engine[0]/n1</property> 
+		<factor>0.0009</factor>
+	</volume>
+</engine>
+
+<engine>
+	<name>engine02_internal</name>
+	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
+	<mode>looped</mode>
+	<position>
+		<x>8.0</x>
+		<y>4.1</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<pitch>
+		<property>/engines/engine[0]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
+	</pitch>
+	<volume>
+		<property>/engines/engine[0]/n1</property>
+		<factor>0.003</factor>
+	</volume>
+</engine>
+
+<engine>
+	<name>engine_burn0_internal</name>
+	<path>Aircraft/B-1B/Sounds/reheat.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<and>
+		<equals>
+		<property>/controls/engines/engine[0]/augmentation</property>
+		<value>1</value>
+		</equals>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	        </and>
+	</condition>
+
+	<position>
+		<x>8.0</x>
+		<y>4.5</y>
+		<z>-2.0</z>
+	</position>
+	<orientation>
+		<x>-1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>0.5</outer-gain>
+	</orientation>
+	<volume>
+		<property>/engines/engine[0]/thrust_lb</property>
+		<factor>0.000033</factor>
+		  <min>0.02</min>
+		  <max>0.03</max>
+	</volume>
+	<pitch>
+		<offset>0.8</offset>
+		<factor>.05</factor>
+	</pitch>
+</engine>
+
+
+
+  <!-- engine1 -->
+
+<engine>
+	<name>engine11_internal</name>
+	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine[1]/cutoff</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>2.5</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<volume>
+		<property>/engines/engine[1]/n1</property> 
+		<factor>0.0009</factor>
+	</volume>
+</engine>
+
+<engine>
+	<name>engine12_internal</name>
+	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>2.5</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<pitch>
+		<property>/engines/engine[1]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
+	</pitch>
+	<volume>
+		<property>/engines/engine[1]/n1</property>
+		<factor>0.003</factor>
+	</volume>
+</engine>
+
+  <engine>
+	  <name>engine_burn1_internal</name>
+	  <path>Aircraft/B-1B/Sounds/reheat.wav</path>
+	  <mode>looped</mode>
+	  <condition>
+		  <and>
+		  <equals>
+			  <property>/controls/engines/engine[1]/augmentation</property>
+			  <value>1</value>
+		  </equals>
+		  <equals>
+			  <property>/controls/engines/engine[1]/cutoff</property>
+			  <value>0</value>
+		  </equals>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+	          </and>
+	  </condition>
+
+	  <position>
+		  <x>8</x>
+		  <y>2.5</y>
+		  <z>-2.0</z>
+	  </position>
+	  <orientation>
+		  <x>-1.0</x>
+		  <y>0.0</y>
+		  <z>0.0</z>
+		  <inner-angle>240.0</inner-angle>
+		  <outer-angle>180.0</outer-angle>
+		  <outer-gain>0.5</outer-gain>
+	  </orientation>
+	  <volume>
+		  <property>/engines/engine[1]/thrust_lb</property>
+		  <factor>0.000033</factor>
+		  <min>0.02</min>
+		  <max>0.03</max>
+	  </volume>
+	  <pitch>
+		  <offset>0.8</offset>
+		  <factor>0.05</factor>
+	  </pitch>
+</engine>
+
+  <!-- engine2 -->
+
+<engine>
+	<name>engine21_internal</name>
+	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine[2]/cutoff</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>-2.5</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<volume>
+		<property>/engines/engine[2]/n1</property> 
+		<factor>0.0009</factor>
+	</volume>
+</engine>
+
+<engine>
+	<name>engine22_internal</name>
+	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>-2.5</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<pitch>
+		<property>/engines/engine[2]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
+	</pitch>
+	<volume>
+		<property>/engines/engine[2]/n1</property>
+		<factor>0.003</factor>
+	</volume>
+</engine>
+
+  <engine>
+	  <name>engine_burn2_internal</name>
+	  <path>Aircraft/B-1B/Sounds/reheat.wav</path>
+	  <mode>looped</mode>
+	  <condition>
+		  <and>
+		  <equals>
+			  <property>/controls/engines/engine[2]/augmentation</property>
+			  <value>1</value>
+		  </equals>
+		  <equals>
+			  <property>/controls/engines/engine[2]/cutoff</property>
+			  <value>0</value>
+		  </equals>
+		  <not>
+			<property>/sim/current-view/internal</property>
+		  </not>
+	          </and>
+	  </condition>
+
+	  <position>
+		  <x>8.0</x>
+		  <y>-2.5</y>
+		  <z>-2.0</z>
+	  </position>
+	  <orientation>
+		  <x>-1.0</x>
+		  <y>0.0</y>
+		  <z>0.0</z>
+		  <inner-angle>240.0</inner-angle>
+		  <outer-angle>180.0</outer-angle>
+		  <outer-gain>0.5</outer-gain>
+	  </orientation>
+	  <volume>
+		  <property>/engines/engine[2]/thrust_lb</property>
+		  <factor>0.000033</factor>
+		  <min>0.02</min>
+		  <max>0.03</max>
+	  </volume>
+	  <pitch>
+		  <offset>0.8</offset>
+		  <factor>0.05</factor>
+	  </pitch>
+  </engine>
+
+  <!-- engine3 -->
+
+<engine>
+	<name>engine31_internal</name>
+	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine[3]/cutoff</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>-4.1</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<volume>
+		<property>/engines/engine[3]/n1</property> 
+		<factor>0.0009</factor>
+	</volume>
+</engine>
+
+<engine>
+	<name>engine32_internal</name>
+	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
+	<mode>looped</mode>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	</condition>
+	<position>
+		<x>8.0</x>
+		<y>-4.1</y>
+		<z>-1.6</z>
+	</position>
+	<orientation>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+		<inner-angle>90.0</inner-angle>
+		<outer-angle>180.0</outer-angle>
+		<outer-gain>1</outer-gain>
+	</orientation>
+	<pitch>
+		<property>/engines/engine[3]/n1</property>
+		<offset>0.0</offset>
+		<factor>0.003</factor>
+	</pitch>
+	<volume>
+		<property>/engines/engine[3]/n1</property>
+		<factor>0.003</factor>
+	</volume>
+</engine>
+
+  <engine>
+	  <name>engine_burn3_internal</name>
+	  <path>Aircraft/B-1B/Sounds/reheat.wav</path>
+	  <mode>looped</mode>
+	  <condition>
+		  <and>
+		  <equals>
+			  <property>/controls/engines/engine[3]/augmentation</property>
+			  <value>1</value>
+		  </equals>
+		  <equals>
+			  <property>/controls/engines/engine[3]/cutoff</property>
+			  <value>0</value>
+		  </equals>
+		  <not>
+			<property>/sim/current-view/internal</property>
+		  </not>
+	          </and>
+	  </condition>
+
+	  <position>
+		  <x>8.0</x>
+		  <y>-4.5</y>
+		  <z>-2.0</z>
+	  </position>
+	  <orientation>
+		  <x>-1.0</x>
+		  <y>0.0</y>
+		  <z>0.0</z>
+		  <inner-angle>240.0</inner-angle>
+		  <outer-angle>180.0</outer-angle>
+		  <outer-gain>0.5</outer-gain>
+	  </orientation>
+	  <volume>
+		  <property>/engines/engine[3]/thrust_lb</property>
+		  <factor>0.000033</factor>
+		  <min>0.02</min>
+		  <max>0.03</max>
+	  </volume>
+	  <pitch>
+		  <offset>0.8</offset>
+		  <factor>0.05</factor>
 	  </pitch>
   </engine>
 
@@ -732,6 +1263,11 @@
       <name>wind</name>
       <mode>looped</mode>
       <path>Sounds/wind.wav</path>
+	<condition>
+		<not>
+			<property>/sim/current-view/internal</property>
+		</not>
+	</condition>
       <property>/velocities/airspeed-kt</property>
       <volume>
         <property>/velocities/airspeed-kt</property>
@@ -752,7 +1288,7 @@
       <path>Sounds/stall.wav</path>
       <property>/instrumentation/annunciators/stall</property>
  	    <volume>
-		    <factor>0.5</factor>
+		    <max>0.5</max>
 	    </volume>
     </stall>
 
@@ -762,7 +1298,7 @@
       <path>Sounds/stall.wav</path>
       <property>/instrumentation/annunciators/flapwing</property>
  	    <volume>
-		    <factor>0.5</factor>
+		    <max>0.5</max>
 	    </volume>
     </flapwing>
 
@@ -772,7 +1308,7 @@
       <path>Sounds/overspeed.wav</path>
       <property>/instrumentation/annunciators/reducespeed</property>
 	    <volume>
-		    <factor>0.5</factor>
+		    <max>0.5</max>
 	    </volume>
     </overspeed>
 

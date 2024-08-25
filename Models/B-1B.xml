@@ -41,7 +41,7 @@ more to come :-)
   <offsets>
 	  <x-m>25.0</x-m><!-- was 25 -->
 	  <y-m>0.0</y-m>
-          <z-m>0.0</z-m><!-- was 0.24 -->
+          <z-m>1.0</z-m><!-- was 0.24 -->
     <pitch-deg>0</pitch-deg>
   </offsets>
 
@@ -92,10 +92,16 @@ more to come :-)
       <property>sim/multiplay/generic/float[5]</property> 
       <value>1</value> 
      </equals> 
+     <and>
     <equals> 
       <property>controls/gear/nose-wheel-steering</property> 
       <value>1</value> 
      </equals>
+    <equals> 
+      <property>controls/gear/gear-down</property>
+      <value>1</value> 
+     </equals> 
+     </and>
      </or>      
     </condition> 
   </animation>
@@ -1647,7 +1653,7 @@ more to come :-)
 	      <axis>
 		      <x>0</x>
 		      <y>0</y>
-		      <z>1</z>
+		      <z>-1</z>
 	      </axis>
  </animation>
 
