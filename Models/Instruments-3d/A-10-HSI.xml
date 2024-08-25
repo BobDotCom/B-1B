@@ -276,6 +276,18 @@
   <animation>
     <type>translate</type>
     <object-name>course-deviation-indicator-on</object-name>
+     <condition>
+      <or> 
+      <equals> 
+       <property>controls/switches/fltdir</property> 
+       <value>0.4</value>
+      </equals>
+      <equals> 
+       <property>controls/switches/fltdir</property> 
+       <value>0.6</value>
+      </equals>
+     </or>
+     </condition> 
     <property>instrumentation/nav[0]/heading-needle-deflection</property>
     <interpolation>
       <entry><ind>-10</ind><dep>-0.024</dep></entry>
