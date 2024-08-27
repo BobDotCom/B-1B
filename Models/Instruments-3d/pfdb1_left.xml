@@ -107,6 +107,12 @@ Syd Adams
      <and>
          <property>instrumentation/nav/has-gs</property>
          <property>instrumentation/nav/in-range</property>
+     </and> 
+     <and> 
+      <equals>
+       <property>controls/switches/fltdir</property> 
+       <value>0.4</value> 
+      </equals> 
      </and>
    </condition>
  </animation>
@@ -156,6 +162,12 @@ Syd Adams
      <and>
          <property>instrumentation/nav/nav-loc</property>
          <property>instrumentation/nav/in-range</property>
+     </and>
+     <and> 
+      <equals>
+       <property>controls/switches/fltdir</property> 
+       <value>0.4</value> 
+      </equals> 
      </and>
    </condition>
  </animation>
