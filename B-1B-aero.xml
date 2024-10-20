@@ -88,6 +88,7 @@
     <system file="b1b-engines.xml"/>
     <system file="b1b-pneumatic.xml"/>
     <system file="b1b-electrical.xml"/>
+    <system file="b1b-hydraulics.xml"/>
     <system file="b1b-control.xml"/>
  <ground_reactions>
 
@@ -417,7 +418,7 @@
         <z>-19.69</z>
     </location>
     <capacity unit="LBS">30000</capacity>
-    <contents unit="LBS">30000</contents>
+    <contents unit="LBS">15000</contents>
   </tank>
     <tank type="FUEL">
     <location unit="IN">
@@ -426,7 +427,7 @@
         <z>-19.69</z>
     </location>
     <capacity unit="LBS">30000</capacity>
-    <contents unit="LBS">30000</contents>
+    <contents unit="LBS">15000</contents>
   </tank>
 
     <!-- tanks 1/2/3/4 -->
@@ -437,7 +438,7 @@
             <z>0</z>
         </location>
         <capacity unit="LBS">30000</capacity>
-        <contents unit="LBS">30000</contents>
+        <contents unit="LBS">15000</contents>
     </tank>
      <tank type="FUEL">
         <location unit="IN">
@@ -446,7 +447,7 @@
             <z>0</z>
         </location>
         <capacity unit="LBS">40000</capacity>
-        <contents unit="LBS">40000</contents>
+        <contents unit="LBS">20000</contents>
     </tank>
      <tank type="FUEL">
         <location unit="IN">
@@ -455,7 +456,7 @@
             <z>27.56</z>
         </location>
         <capacity unit="LBS">20000</capacity>
-        <contents unit="LBS">20000</contents>
+        <contents unit="LBS">10000</contents>
     </tank>
      <tank type="FUEL">
         <location unit="IN">
@@ -464,7 +465,7 @@
             <z>0</z>
         </location>
         <capacity unit="LBS">50000</capacity>
-        <contents unit="LBS">50000</contents>
+        <contents unit="LBS">25000</contents>
     </tank>
      <!-- 2 collector fuel tanks with total 10000 lb each -->
      <tank type="FUEL">
@@ -474,7 +475,7 @@
             <z>-19.69</z>
         </location>
         <capacity unit="LBS">10000</capacity>
-        <contents unit="LBS">10000</contents>
+        <contents unit="LBS">5000</contents>
     </tank>
      <tank type="FUEL">
         <location unit="IN">
@@ -483,7 +484,7 @@
             <z>-19.69</z>
         </location>
         <capacity unit="LBS">10000</capacity>
-        <contents unit="LBS">10000</contents>
+        <contents unit="LBS">5000</contents>
     </tank>
 
      <!-- weapons bay tanks with ~3k gal (20k lb) -->

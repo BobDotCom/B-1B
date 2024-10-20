@@ -449,6 +449,7 @@
     <system file="b1b-engines.xml"/>
     <system file="b1b-pneumatic.xml"/>
     <system file="b1b-electrical.xml"/>
+    <system file="b1b-hydraulics.xml"/>
 <!--    <system file="b1b-apu.xml"/>-->
 
  <flight_control name="FCS: B-1B">

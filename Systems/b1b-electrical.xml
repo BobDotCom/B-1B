@@ -1125,7 +1125,7 @@
 			<default value="0"/>
 			<test logic="OR" value="0">
 <!--				/systems/acconfig/autoconfig-running eq 1-->
-				/sim/time/elapsed-sec lt 10
+<!--     			/sim/time/elapsed-sec lt 10-->
 			</test>
 			<test logic="OR" value="1">
 				/systems/electrical/sources/idg-1/gcu-1-voltage-trip eq 1
