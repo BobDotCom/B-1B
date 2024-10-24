@@ -108,7 +108,7 @@ var select = func (bay, rack) {
             }
             wp.setContacts([spot]);
             # Temporarily
-            # TODO: Figure out why this is needed
+            # .start() is called so that in .standby, .startup() is called and can call search() to lock onto armament.contactPoint
             wp.start();
         }
     }
