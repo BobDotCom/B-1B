@@ -386,6 +386,26 @@ refs 4
 2 0.128237 0.542808
 kids 0
 OBJECT poly
+name "AIR_HOT"
+data 8
+Mesh.070
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.01144 -0.09086 0.14693
+0.01145 -0.09992 0.14693
+0.01145 -0.09992 0.11425
+0.01144 -0.09086 0.11426
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.280301 0.677215
+0 0.157883 0.676494
+1 0.158112 0.638683
+2 0.280528 0.639404
+kids 0
+OBJECT poly
 name "ANTISKID"
 data 8
 Mesh.045
@@ -524,6 +544,26 @@ refs 4
 0 0.147842 0.074647
 1 0.148026 0.043892
 2 0.2476 0.044477
+kids 0
+OBJECT poly
+name "FIRE_DETR"
+data 8
+Mesh.060
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.0116 -0.07938 0.29237
+0.0116 -0.08843 0.29235
+0.0116 -0.08843 0.25967
+0.0116 -0.07938 0.25968
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.29054 0.148643
+0 0.151092 0.147819
+1 0.151352 0.10475
+2 0.290798 0.105569
 kids 0
 OBJECT poly
 name "FUEL_CLG_LOOP_RTN"
@@ -706,6 +746,46 @@ refs 4
 2 0.75269 0.515699
 kids 0
 OBJECT poly
+name "L_FUEL_BOOST"
+data 8
+Mesh.082
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.01145 -0.14876 0.2563
+0.01145 -0.15781 0.2563
+0.01145 -0.15781 0.22361
+0.01145 -0.14876 0.22362
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.781583 0.389693
+0 0.660604 0.38898
+1 0.66083 0.351613
+2 0.781806 0.352326
+kids 0
+OBJECT poly
+name "L_WSHLD_HOT"
+data 8
+Mesh.069
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.01166 -0.09086 0.10967
+0.01167 -0.0999 0.10967
+0.01167 -0.0999 0.077
+0.01166 -0.09086 0.077
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.787646 0.222566
+0 0.671297 0.221881
+1 0.671512 0.185944
+2 0.787859 0.186628
+kids 0
+OBJECT poly
 name "OXY"
 data 8
 Mesh.039
@@ -746,6 +826,26 @@ refs 4
 2 0.888248 0.57464
 kids 0
 OBJECT poly
+name "PITCH_AUG_OFF"
+data 8
+Mesh.041
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.01166 -0.137 0.10967
+0.01167 -0.14605 0.10967
+0.01167 -0.14605 0.077
+0.01166 -0.137 0.077
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.946261 0.447108
+0 0.815607 0.446337
+1 0.815847 0.40598
+2 0.946501 0.406751
+kids 0
+OBJECT poly
 name "R_BLEED_AIR_OVERHEAT"
 data 8
 Mesh.051
@@ -784,6 +884,46 @@ refs 4
 0 0.614185 0.505305
 1 0.614464 0.458583
 2 0.76573 0.459472
+kids 0
+OBJECT poly
+name "R_FUEL_BOOST"
+data 8
+Mesh.083
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.01167 -0.14876 0.21905
+0.01167 -0.15781 0.21905
+0.01167 -0.15781 0.18636
+0.01167 -0.14876 0.18636
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.780829 0.334144
+0 0.658729 0.333425
+1 0.658954 0.295712
+2 0.781052 0.29643
+kids 0
+OBJECT poly
+name "R_WSHLD_HOT"
+data 8
+Mesh.068
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.01159 -0.09086 0.07362
+0.0116 -0.0999 0.07362
+0.0116 -0.0999 0.04094
+0.01159 -0.09086 0.04094
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.78722 0.167614
+0 0.667755 0.166908
+1 0.667978 0.130011
+2 0.78744 0.130712
 kids 0
 OBJECT poly
 name "rep_gforce.001"
@@ -904,66 +1044,6 @@ refs 4
 0 0.410705 0.467253
 1 0.410705 0.442299
 2 0.4893 0.44228
-kids 0
-OBJECT poly
-name "rep_gforce.028"
-data 8
-Mesh.041
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01166 -0.137 0.10967
-0.01167 -0.14605 0.10967
-0.01167 -0.14605 0.077
-0.01166 -0.137 0.077
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.946261 0.447108
-0 0.815607 0.446337
-1 0.815847 0.40598
-2 0.946501 0.406751
-kids 0
-OBJECT poly
-name "rep_gforce.029"
-data 8
-Mesh.042
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01159 -0.137 0.07362
-0.0116 -0.14605 0.07362
-0.0116 -0.14605 0.04094
-0.01159 -0.137 0.04094
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.989171 0.557276
-0 0.867034 0.556554
-1 0.867261 0.518829
-2 0.989397 0.519548
-kids 0
-OBJECT poly
-name "rep_gforce.033"
-data 8
-Mesh.046
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01159 -0.11379 0.07362
-0.0116 -0.12284 0.07362
-0.0116 -0.12284 0.04094
-0.01159 -0.11379 0.04094
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.953712 0.667863
-0 0.836067 0.667168
-1 0.836283 0.630831
-2 0.953927 0.631524
 kids 0
 OBJECT poly
 name "rep_gforce.035"
@@ -1306,106 +1386,6 @@ refs 4
 2 0.820193 0.451233
 kids 0
 OBJECT poly
-name "rep_gforce.059"
-data 8
-Mesh.060
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.0116 -0.07938 0.29237
-0.0116 -0.08843 0.29235
-0.0116 -0.08843 0.25967
-0.0116 -0.07938 0.25968
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.29054 0.148643
-0 0.151092 0.147819
-1 0.151352 0.10475
-2 0.290798 0.105569
-kids 0
-OBJECT poly
-name "rep_gforce.066"
-data 8
-Mesh.067
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01144 -0.09086 0.03757
-0.01145 -0.0999 0.03757
-0.01145 -0.0999 0.00488
-0.01144 -0.09086 0.00488
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.785762 0.27937
-0 0.661418 0.278637
-1 0.661649 0.24023
-2 0.785992 0.240963
-kids 0
-OBJECT poly
-name "rep_gforce.067"
-data 8
-Mesh.068
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01159 -0.09086 0.07362
-0.0116 -0.0999 0.07362
-0.0116 -0.0999 0.04094
-0.01159 -0.09086 0.04094
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.78722 0.167614
-0 0.667755 0.166908
-1 0.667978 0.130011
-2 0.78744 0.130712
-kids 0
-OBJECT poly
-name "rep_gforce.068"
-data 8
-Mesh.069
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01166 -0.09086 0.10967
-0.01167 -0.0999 0.10967
-0.01167 -0.0999 0.077
-0.01166 -0.09086 0.077
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.787646 0.222566
-0 0.671297 0.221881
-1 0.671512 0.185944
-2 0.787859 0.186628
-kids 0
-OBJECT poly
-name "rep_gforce.069"
-data 8
-Mesh.070
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01144 -0.09086 0.14693
-0.01145 -0.09992 0.14693
-0.01145 -0.09992 0.11425
-0.01144 -0.09086 0.11426
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.280301 0.677215
-0 0.157883 0.676494
-1 0.158112 0.638683
-2 0.280528 0.639404
-kids 0
-OBJECT poly
 name "rep_gforce.070"
 data 8
 Mesh.071
@@ -1544,46 +1524,6 @@ refs 4
 0 0.383686 0.47676
 1 0.383874 0.445341
 2 0.485599 0.445939
-kids 0
-OBJECT poly
-name "rep_gforce.081"
-data 8
-Mesh.082
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01145 -0.14876 0.2563
-0.01145 -0.15781 0.2563
-0.01145 -0.15781 0.22361
-0.01145 -0.14876 0.22362
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.781583 0.389693
-0 0.660604 0.38898
-1 0.66083 0.351613
-2 0.781806 0.352326
-kids 0
-OBJECT poly
-name "rep_gforce.082"
-data 8
-Mesh.083
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01167 -0.14876 0.21905
-0.01167 -0.15781 0.21905
-0.01167 -0.15781 0.18636
-0.01167 -0.14876 0.18636
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.780829 0.334144
-0 0.658729 0.333425
-1 0.658954 0.295712
-2 0.781052 0.29643
 kids 0
 OBJECT poly
 name "rep_gforce.086"
@@ -7594,6 +7534,26 @@ refs 4
 2 0.920924 0.184761
 kids 0
 OBJECT poly
+name "ROLL_AUG_OFF"
+data 8
+Mesh.042
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.01159 -0.137 0.07362
+0.0116 -0.14605 0.07362
+0.0116 -0.14605 0.04094
+0.01159 -0.137 0.04094
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.989171 0.557276
+0 0.867034 0.556554
+1 0.867261 0.518829
+2 0.989397 0.519548
+kids 0
+OBJECT poly
 name "SMCS"
 data 8
 Mesh.027
@@ -7632,6 +7592,46 @@ refs 4
 0 0.148459 0.645849
 1 0.148725 0.601846
 2 0.291194 0.602683
+kids 0
+OBJECT poly
+name "SPOILER_OFF"
+data 8
+Mesh.046
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.01159 -0.11379 0.07362
+0.0116 -0.12284 0.07362
+0.0116 -0.12284 0.04094
+0.01159 -0.11379 0.04094
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.953712 0.667863
+0 0.836067 0.667168
+1 0.836283 0.630831
+2 0.953927 0.631524
+kids 0
+OBJECT poly
+name "ST_AIR_HOT"
+data 8
+Mesh.067
+crease 30.0
+texture "annunciators.png"
+numvert 4
+0.01144 -0.09086 0.03757
+0.01145 -0.0999 0.03757
+0.01145 -0.0999 0.00488
+0.01144 -0.09086 0.00488
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.785762 0.27937
+0 0.661418 0.278637
+1 0.661649 0.24023
+2 0.785992 0.240963
 kids 0
 OBJECT poly
 name "YAW_AUG_1"
