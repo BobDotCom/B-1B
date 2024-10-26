@@ -506,7 +506,7 @@ B-1B set file.
             </autopilot>
             <autopilot n="1">
                 <path>Aircraft/B-1B/Systems/engines.xml</path>
-            </autopilot> 
+            </autopilot>
             <property-rule n="110">
                 <path>Aircraft/B-1B/Systems/filters.xml</path>
             </property-rule>
@@ -516,6 +516,7 @@ B-1B set file.
             <property-rule n="200">
                 <path>Systems/computers.xml</path>
             </property-rule>
+            <path>Aircraft/B-1B/Systems/b1b-airdata.xml</path>
         </systems>
 
         <rendering>
@@ -677,7 +678,7 @@ B-1B set file.
             <line>Good Luck!</line>
         </help>
 
-    <checklists include="gui/checklists.xml"/> 
+    <checklists include="gui/checklists.xml"/>
     </sim>
 
     <ai>
@@ -744,7 +745,7 @@ B-1B set file.
     </systems>
 
     <payload n="0" include= "Systems/b1-payload.xml"/>
-    
+
 
     <autopilot>
         <settings>
@@ -1020,7 +1021,7 @@ B-1B set file.
                 <none type="int">0</none>
             </expr>
         </cdu900>
-        <heading-indicator> 
+        <heading-indicator>
             <bearing-needle type="int">0</bearing-needle>
             <miles-drums type="int">0</miles-drums>
         </heading-indicator>
@@ -1041,8 +1042,8 @@ B-1B set file.
             <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
             <receive_period type="double">1</receive_period>
             <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
-        </datalink> 
-        <iff> 
+        </datalink>
+        <iff>
          <power_prop type="string">/instrumentation/iff/power</power_prop>
          <channel_prop type="string">/instrumentation/iff/channel-selection</channel_prop>
          <M.1_switch type="int">-1</M.1_switch>
@@ -1179,10 +1180,17 @@ B-1B set file.
 
 
     <nasal>
+        <notifications>
+            <!-- Before b1b -->
+            <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
+            <file>Aircraft/B-1B/Nasal/frameNotification.nas</file>
+            <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
+        </notifications>
         <hack>
             <file>Aircraft/B-1B/Nasal/hackCanvas.nas</file>
         </hack>
         <b1b>
+            <file>Aircraft/B-1B/Nasal/exec.nas</file>
             <file>Aircraft/B-1B/Nasal/b1b.nas</file>
             <file>Aircraft/B-1B/Nasal/cdu900.nas</file>
         </b1b>
@@ -1197,10 +1205,6 @@ B-1B set file.
             <file>Aircraft/B-1B/Nasal/gci-listener.nas</file>
         </GCI>
         -->
-        <notifications>
-            <file>Aircraft/B-1B/Nasal/ArmamentNotification.nas</file>
-            <file>Aircraft/B-1B/Nasal/GeoBridgedTransmitter.nas</file>
-        </notifications>
         <damage>
             <file>Aircraft/B-1B/Nasal/damage.nas</file>
         </damage>

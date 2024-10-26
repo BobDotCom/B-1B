@@ -107,12 +107,12 @@ Syd Adams
      <and>
          <property>instrumentation/nav/has-gs</property>
          <property>instrumentation/nav/in-range</property>
-     </and> 
-     <and> 
+     </and>
+     <and>
       <equals>
-       <property>controls/switches/fltdir</property> 
-       <value>0.4</value> 
-      </equals> 
+       <property>controls/switches/fltdir</property>
+       <value>0.4</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -163,11 +163,11 @@ Syd Adams
          <property>instrumentation/nav/nav-loc</property>
          <property>instrumentation/nav/in-range</property>
      </and>
-     <and> 
+     <and>
       <equals>
-       <property>controls/switches/fltdir</property> 
-       <value>0.4</value> 
-      </equals> 
+       <property>controls/switches/fltdir</property>
+       <value>0.4</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -528,7 +528,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s0</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -544,7 +544,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s1</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -560,7 +560,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s2</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -576,7 +576,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s3</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -592,7 +592,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s4</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -608,7 +608,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s5</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -624,7 +624,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s6</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -640,7 +640,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s7</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -656,7 +656,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s8</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -672,7 +672,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s9</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -689,7 +689,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s10</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -705,7 +705,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s11</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -721,7 +721,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s12</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -737,7 +737,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s13</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -753,7 +753,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s14</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -769,7 +769,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s15</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -785,7 +785,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s16</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -801,7 +801,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s17</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -817,7 +817,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s18</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -833,7 +833,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s19</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -850,7 +850,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s20</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -866,7 +866,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s21</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -882,7 +882,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s22</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -898,7 +898,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s23</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -914,7 +914,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s24</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -930,7 +930,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s25</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -946,7 +946,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s26</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -962,7 +962,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s27</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -978,7 +978,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s28</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -994,7 +994,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s29</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1011,7 +1011,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s30</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1027,7 +1027,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s31</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1050,7 +1050,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s32</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1066,7 +1066,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s33</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1082,7 +1082,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s34</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1098,7 +1098,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s35</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1114,7 +1114,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s36</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1130,7 +1130,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s37</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1146,7 +1146,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s38</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1162,7 +1162,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s39</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1179,7 +1179,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s40</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1195,7 +1195,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s41</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1211,7 +1211,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s42</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1227,7 +1227,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s43</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1243,7 +1243,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s44</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1259,7 +1259,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s45</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1275,7 +1275,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s46</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1291,7 +1291,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s47</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1307,7 +1307,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s48</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>
@@ -1323,7 +1323,7 @@ Syd Adams
 	<animation>
 		<type>select</type>
 		<object-name>s49</object-name>
-		<condition> 
+		<condition>
                   <and>
                     <equals>
 			<property>controls/switches/terrain-avoid</property>

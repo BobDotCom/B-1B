@@ -1,126 +1,126 @@
-<!--<?xml version="1.0"?>-->
-<!--<PropertyList include="b1-base.xml">-->
-<!--    <sim>-->
-<!--        <variant-id>5</variant-id>-->
-<!--        <variant-of>b1b-block-d</variant-of>-->
-<!--        <description>Rockwell B-1B Block E</description>-->
-<!--        <long-description>-->
-<!--            The Rockwell B-1 Lancer, commonly referred to as the "Bone" (derived from "B-One"), is a supersonic heavy-->
-<!--            bomber equipped with variable-sweep wings, and remains integral to the United States Air Force. Alongside-->
-<!--            the B-2 Spirit and B-52 Stratofortress, it constitutes one of three strategic bombers in the U.S. Air-->
-<!--            Force's current arsenal. Notably designed for adaptability, the B-1 excels in various roles, owing to its-->
-<!--            ability to alter its wing configuration during flight. This advanced aircraft plays a crucial role in the-->
-<!--            nation's defense strategy, offering exceptional speed, payload capacity, and versatility for a wide array of-->
-<!--            mission profiles.-->
-<!--        </long-description>-->
-<!--        <model>-->
-<!--            <MFD-color> &lt;!&ndash;Right now this is just using F-16 colours. We will want to change these at some point&ndash;&gt;-->
-<!--                <text1>&lt;!&ndash;Main text color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </text1>-->
-<!--                <text2>&lt;!&ndash;BIT/SILENT color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </text2>-->
-<!--                <line1>&lt;!&ndash;CRM scan lines + lat range + HSD acft, rdr scope color &ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </line1>-->
-<!--                <line2>&lt;!&ndash;CRM horizon color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </line2>-->
-<!--                <line3>&lt;!&ndash;CRM DLZ path + cursor + wpt + lock info + data&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </line3>-->
-<!--                <line4>&lt;!&ndash;CRM EXP color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </line4>-->
-<!--                <line5>&lt;!&ndash;HSD radius color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </line5>-->
-<!--                <bullseye>&lt;!&ndash;Bullseye color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </bullseye>-->
-<!--                <betxt>&lt;!&ndash;Bullseye cursor color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </betxt>-->
-<!--                <lines>&lt;!&ndash;HSD lines color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </lines>-->
-<!--                <lines2>&lt;!&ndash;Pull Up cue color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </lines2>-->
-<!--                <circle1>&lt;!&ndash;HSD red circles + GM Pic color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </circle1>-->
-<!--                <circle2>&lt;!&ndash;HSD yellow circles + Lock 2 color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </circle2>-->
-<!--                <circle3>&lt;!&ndash;HSD green circles + CRM IFF + WPN RDY color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </circle3>-->
-<!--                <dot1>&lt;!&ndash;Lock 1 + cntct blep color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </dot1>-->
-<!--                <dot2>&lt;!&ndash; Radar search targets &ndash;&gt;-->
-<!--                  <red type="double">0.50</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.50</blue>-->
-<!--                </dot2>-->
-<!--                <dot3>&lt;!&ndash;Lock 2 color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </dot3>-->
-<!--                <dot4>&lt;!&ndash;HSD DL cntct color&ndash;&gt;-->
-<!--                  <red type="double">0.01</red>-->
-<!--                  <green type="double">1.00</green>-->
-<!--                  <blue type="double">0.07</blue>-->
-<!--                </dot4>-->
-<!--            </MFD-color>-->
-<!--        </model>-->
-<!--    </sim>-->
+disabled<?xml version="1.0"?>
+<PropertyList include="b1-base.xml">
+    <sim>
+        <variant-id>5</variant-id>
+        <variant-of>b1b-block-d</variant-of>
+        <description>Rockwell B-1B Block E</description>
+        <long-description>
+            The Rockwell B-1 Lancer, commonly referred to as the "Bone" (derived from "B-One"), is a supersonic heavy
+            bomber equipped with variable-sweep wings, and remains integral to the United States Air Force. Alongside
+            the B-2 Spirit and B-52 Stratofortress, it constitutes one of three strategic bombers in the U.S. Air
+            Force's current arsenal. Notably designed for adaptability, the B-1 excels in various roles, owing to its
+            ability to alter its wing configuration during flight. This advanced aircraft plays a crucial role in the
+            nation's defense strategy, offering exceptional speed, payload capacity, and versatility for a wide array of
+            mission profiles.
+        </long-description>
+        <model>
+            <MFD-color> <!--Right now this is just using F-16 colours. We will want to change these at some point-->
+                <text1><!--Main text color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </text1>
+                <text2><!--BIT/SILENT color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </text2>
+                <line1><!--CRM scan lines + lat range + HSD acft, rdr scope color -->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </line1>
+                <line2><!--CRM horizon color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </line2>
+                <line3><!--CRM DLZ path + cursor + wpt + lock info + data-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </line3>
+                <line4><!--CRM EXP color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </line4>
+                <line5><!--HSD radius color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </line5>
+                <bullseye><!--Bullseye color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </bullseye>
+                <betxt><!--Bullseye cursor color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </betxt>
+                <lines><!--HSD lines color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </lines>
+                <lines2><!--Pull Up cue color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </lines2>
+                <circle1><!--HSD red circles + GM Pic color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </circle1>
+                <circle2><!--HSD yellow circles + Lock 2 color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </circle2>
+                <circle3><!--HSD green circles + CRM IFF + WPN RDY color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </circle3>
+                <dot1><!--Lock 1 + cntct blep color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </dot1>
+                <dot2><!-- Radar search targets -->
+                  <red type="double">0.50</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.50</blue>
+                </dot2>
+                <dot3><!--Lock 2 color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </dot3>
+                <dot4><!--HSD DL cntct color-->
+                  <red type="double">0.01</red>
+                  <green type="double">1.00</green>
+                  <blue type="double">0.07</blue>
+                </dot4>
+            </MFD-color>
+        </model>
+    </sim>
 
-<!--    <input>-->
-<!--        <keyboard> -->
-<!--            <key n="53">-->
-<!--                <name>CTRL-5</name>-->
-<!--                <mod-ctrl>-->
-<!--                    <desc>Reload MFD display system</desc>-->
-<!--                    <binding>-->
-<!--                        <command>nasal-module-reload</command>-->
-<!--                        <module>displays</module>-->
-<!--                    </binding>-->
-<!--                </mod-ctrl>-->
-<!--            </key>-->
-<!--        </keyboard>-->
-<!--    </input> -->
-<!--</PropertyList>-->
+    <input>
+        <keyboard> 
+            <key n="53">
+                <name>CTRL-5</name>
+                <mod-ctrl>
+                    <desc>Reload MFD display system</desc>
+                    <binding>
+                        <command>nasal-module-reload</command>
+                        <module>displays</module>
+                    </binding>
+                </mod-ctrl>
+            </key>
+        </keyboard>
+    </input> 
+</PropertyList>
