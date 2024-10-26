@@ -1,16 +1,16 @@
 #
-# License: GPL 2.0, Copyright: Laminar research
+# License: GPL 2.0 or later, Copyright: Laminar research
 #
 # Requirements used for making list:
 #  Must have ICAO. Must have either a MIL sign, parking spots for fighters or runways used for military.
 # List was auto-generated from APT 1100 file. Heliports are auto commented.
 #
 var db = {
-	DNGO: "",                                             # Gombe
-	HESG: "",                                             # Sohag Intl
-	UAOL: "",                                             # Krayniy
-	VEAB: "",                                             # Allahabad
-	VERP: "",                                             # Raipur
+	DNGO: "NGA Nigeria",                                  # Gombe
+	HESG: "EGY Egypt",                                    # Sohag Intl
+	UAOL: "KAZ Kazakhstan",                               # Krayniy
+	VEAB: "IND India",                                    # Allahabad
+	VERP: "IND India",                                    # Raipur
 	OAHR: "AFG Afghanistan",                              # Khwaja Abdullah Ansari Intl
 	OAIX: "AFG Afghanistan",                              # Bagram
 	OAJL: "AFG Afghanistan",                              # Jalalabad
