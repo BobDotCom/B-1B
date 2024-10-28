@@ -1432,7 +1432,7 @@ var B1MfdRecipient =
 };
 var B1_display = nil;
 
-var displayWidth     = 512;#552 * 0.795;
+var displayWidth     = 768;#552 * 0.795;
 var displayHeight    = 1024;#482 * 1;
 var displayWidthHalf = displayWidth  *  0.5;
 var displayHeightHalf= displayHeight  *  0.5;
@@ -1570,4 +1570,4 @@ var printfDebug = func {if (displayDebug) {var str = call(sprintf,arg,nil,nil,va
 # Note calling printf directly with call() will sometimes crash the sim, so we call sprintf instead.
 
 
-# main(nil);# disable this line if running as module
+main(nil);# disable this line if running as module

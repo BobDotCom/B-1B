@@ -1,11 +1,11 @@
 _setlistener("/sim/signals/fdm-initialized", func {
     rtExec_loop();
 	# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
-var hmd = modules.Module.new("displays");
-hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
-hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
-hmd.setMainFile("displays.nas");
-hmd.load();
+# var hmd = modules.Module.new("displays");
+# hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
+# hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
+# hmd.setMainFile("displays.nas");
+# hmd.load();
 	init_b1b();
 });
 
