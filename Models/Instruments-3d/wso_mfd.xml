@@ -6,6 +6,13 @@ sweat by maggse
 
 <path>wso_mfd.ac</path>
 
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>30</max-m>
+  </animation>
+
+
 <text>
   <name>position</name>
   <offsets>
