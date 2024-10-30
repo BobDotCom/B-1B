@@ -6,6 +6,12 @@ more to come :-)
 
 <PropertyList>
 
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>30</max-m>
+	</animation>
+
 	<path>Instruments-3d/sweep_scale.ac</path>
 
   <offsets>

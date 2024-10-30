@@ -1,4 +1,12 @@
 <?xml version="1.0"?> 
-<propertylist> 
+<PropertyList> 
+
  <path>weapons—release-panel.ac</path> 
-</propertylist>
+
+ 	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>30</max-m>
+	</animation>
+
+</PropertyList>

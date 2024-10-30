@@ -6,6 +6,13 @@ maggse
 
  <path>overhead_panel.ac</path>
 
+ 	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>30</max-m>
+	</animation>
+
+
  <!-- Refuel-->
 
  <animation>
