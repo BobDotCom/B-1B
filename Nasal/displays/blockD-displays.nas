@@ -1011,7 +1011,7 @@ var DisplaySystem = {
 
 			var clippedSVGKeys = ["pitch_ladder", "ils_group", "gs_group", "hdg_scale"];;
 			foreach(var key; clippedSVGKeys) {
-				print(key);
+				# print(key);
 				me[key] = me.group.getElementById(key);
 			
 				var clip_el = me.group.getElementById(key ~ "_clip");
@@ -1025,7 +1025,7 @@ var DisplaySystem = {
 						tranRect[3], # 2 ye
 						tranRect[0] # 3 xs
 					);
-					print(clip_rect);				
+					# print(clip_rect);				
 				# Coordinates are top, right, bottom, left (ys, xe, ye, xs) ref: l621 of simgear/canvas/CanvasElement.cxx
 				me[key].set("clip", clip_rect);
 				me[key].set("clip-frame", canvas.Element.GLOBAL);
