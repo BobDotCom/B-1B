@@ -6,6 +6,13 @@ sweat by maggse
 
 <path>sms_monitor.ac</path>
 
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>30</max-m>
+  </animation>
+
+
 <!-- top menu -->
 
 <text>
