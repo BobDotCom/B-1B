@@ -185,7 +185,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">92.1</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">68.4</default-field-of-view-deg>
                 <default-pitch-deg type="double">-5</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -196,9 +196,9 @@ B-1B set file.
                 <back-right-direction-deg type="double">225</back-right-direction-deg>
                 <right-direction-deg type="double">270</right-direction-deg>
                 <front-right-direction-deg type="double">315</front-right-direction-deg>
-                <x-offset-m archive="y">0.6</x-offset-m>
-                <y-offset-m archive="y">2.38</y-offset-m>
-                <z-offset-m archive="y">9.53</z-offset-m>
+                <x-offset-m archive="y">0.65</x-offset-m>
+                <y-offset-m archive="y">2.28</y-offset-m>
+                <z-offset-m archive="y">9.8</z-offset-m>
                 <pitch-offset-deg>0</pitch-offset-deg>
                 <default-field-of-view-deg>55</default-field-of-view-deg>
             </config>
