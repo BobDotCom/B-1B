@@ -1,20 +1,25 @@
 <?xml version="1.0"?>
 <system name="B-1B Control">
+
+    <property value="0">/controls/switches/failures/wing-sweep_lever</property>
+
     <channel name="Wing Sweep">
-        <!--        <fcs_function name="fcs/sweep-cmd-norm">-->
-        <!--            <function>-->
-        <!--                <table>-->
-        <!--                    <independentVar lookup="row">/controls/flight/wing-sweep</independentVar>-->
-        <!--                    <tableData>-->
-        <!--                        0  15.0-->
-        <!--                        1  67.5-->
-        <!--                    </tableData>-->
-        <!--                </table>-->
-        <!--            </function>-->
-        <!--        </fcs_function>-->
+
+	<switch name="fcs/sweep-cmd-norm">
+		<test value="fcs/sweep-cmd-norm-stuck">
+		   /controls/switches/failures/wing-sweep_lever eq 1
+		</test>
+		<default value="/controls/flight/wing-sweep"/>
+        </switch>
+
+	<pure_gain name="fcs/sweep-cmd-norm-stuck">
+		<input>fcs/sweep-cmd-norm</input>
+		<gain>1</gain>
+	</pure_gain> 
+
         <kinematic name="fcs/sweep-pos-norm">
-            <!--            <input>fcs/sweep-cmd-norm</input>-->
-            <input>/controls/flight/wing-sweep</input>
+  <!--      <input>/controls/flight/wing-sweep</input>-->
+            <input>fcs/sweep-cmd-norm</input>
             <!-- TODO: Set accurate wing sweep time -->
             <traverse>
                 <setting>
@@ -279,6 +284,22 @@
             </traverse>
             <output>gear/gear-pos-norm</output>
         </kinematic>
+
+	<switch name="fcs/steer-pos-deg">
+		<test value="fcs/steer-pos-alter">
+		   /controls/switches/nose-wheel-steering-switch eq 0
+		</test>
+		<default value="fcs/steer-pos-deg"/>
+        </switch>
+
+		<fcs_function name="fcs/steer-pos-alter">
+			<function>
+				<product>
+					<value>30</value>
+					<property>fcs/steer-cmd-norm</property>
+				</product>
+			</function>
+		</fcs_function> 
 
     </channel>
 
