@@ -26,7 +26,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
 
   </animation>

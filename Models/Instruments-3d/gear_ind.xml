@@ -84,7 +84,7 @@ sweat by maggse
 	 <object-name>gearind_fr</object-name>
 	 <emission>
 		 <red>0.0</red>
-		 <green>0.8</green>
+		 <green>1.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>gear/gear[0]/position-norm</factor-prop>
 	 </emission>
@@ -105,7 +105,7 @@ sweat by maggse
 	 <object-name>gearind_bl</object-name>
 	 <emission>
 		 <red>0.0</red>
-		 <green>0.8</green>
+		 <green>1.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>gear/gear[1]/position-norm</factor-prop>
 	 </emission>
@@ -126,7 +126,7 @@ sweat by maggse
 	 <object-name>gearind_br</object-name>
 	 <emission>
 		 <red>0.0</red>
-		 <green>0.8</green>
+		 <green>1.0</green>
 		 <blue>0.0</blue>
 		 <factor-prop>gear/gear[3]/position-norm</factor-prop>
 	 </emission>
@@ -162,9 +162,9 @@ sweat by maggse
 	<type>material</type>
 		<object-name>LabelText</object-name>
 	<emission>
-		<red>1.0</red>
-		<green>0.8</green>
-		<blue>0.0</blue>
+		<red>0.9</red>
+		<green>0.5</green>
+		<blue>0.9</blue>
 	</emission>
 </animation>
 

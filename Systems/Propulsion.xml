@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<system name="Propulsion">
+<!--    TODO: Should APUs be added to propulsion? -->
+  <property value="0">propulsion/engine[0]/thrust-coefficient</property>
+  <property value="0">propulsion/engine[1]/thrust-coefficient</property>
+  <property value="0">propulsion/engine[2]/thrust-coefficient</property>
+  <property value="0">propulsion/engine[3]/thrust-coefficient</property>
+  <channel name="Thruster">
+   <summer name="Thrust Coefficient Left">
+    <input>propulsion/engine[0]/thrust-coefficient</input>
+    <input>propulsion/engine[1]/thrust-coefficient</input>
+    <output>systems/propulsion/thrust-coefficient-left</output>
+   </summer>
+   <summer name="Thrust Coefficient Right">
+    <input>propulsion/engine[2]/thrust-coefficient</input>
+    <input>propulsion/engine[3]/thrust-coefficient</input>
+    <output>systems/propulsion/thrust-coefficient-right</output>
+   </summer>
+   <summer name="Thrust Coefficient Left-Right">
+    <input>systems/propulsion/thrust-coefficient-left</input>
+    <input>-systems/propulsion/thrust-coefficient-right</input>
+    <output>systems/propulsion/thrust-coefficient-left-right</output>
+   </summer>
+   <summer name="Thrust Coefficient">
+    <input>systems/propulsion/thrust-coefficient-left</input>
+    <input>systems/propulsion/thrust-coefficient-right</input>
+    <output>systems/propulsion/thrust-coefficient</output>
+   </summer>
+  </channel>
+
+</system>

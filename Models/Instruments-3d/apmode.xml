@@ -6,27 +6,6 @@ sweat by maggse
 
  <path>apmode.ac</path>
 
- <!-- apmode button animations
-
-<animation>
-	 <type>material</type>
-	 <object-name>apmode_alt</object-name>
-	 <condition>
-	   <equals>
-             <property>/controls/lighting/instruments-norm</property>
-             <value type="bool">true</value>
-           </equals>
-
-         </condition>
-
-	 <emission>
-		 <red>0.1</red>
-		 <green>0.3</green>
-		 <blue>0.1</blue>
-
-	 </emission>
-</animation>-->
-
 <!-- osg text animation-->
 
 <!-- text>
@@ -327,49 +306,46 @@ sweat by maggse
 
 <animation>
 	 <type>material</type>
-	 <object-name>alt_txt</object-name>
-	 <object-name>alt_hold_txt</object-name>
-	 <object-name>vfpm_txt</object-name>
-	 <object-name>vfpm_hold_txt</object-name>
-	 <object-name>ptch_txt</object-name>
-	 <object-name>ptch_hold_txt</object-name>
-	 <object-name>terr_txt</object-name>
-	 <object-name>flw_hold_txt</object-name>
-	 <object-name>bhdg_txt</object-name>
-	 <object-name>bhdg_hold_txt</object-name>
-	 <object-name>thdg_txt</object-name>
-	 <object-name>thdg_hold_txt</object-name>
-	 <object-name>spd_txt</object-name>
-	 <object-name>spd_hold_txt</object-name>
-	 <object-name>spd_ptch_txt</object-name>
-	 <object-name>spd_ptch_hold_txt</object-name>
+	 <object-name>apmode_btn_alt</object-name>
+	 <object-name>apmode_btn_vfpm</object-name>
+	 <object-name>apmode_btn_ptch</object-name>
+	 <object-name>apmode_btn_bhdg</object-name>
+	 <object-name>apmode_btn_spd</object-name>
+	 <object-name>apmode_btn_spd_ptch</object-name>
+	 <object-name>apmode_btn_terr_flw</object-name>
+	 <object-name>apmode_btn_alt</object-name>
+	 <object-name>apmode_btn_thdg</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+        <factor-prop>controls/switches/annunciators-norm</factor-prop>
 	</emission>
 </animation>
 
 <animation>
 	 <type>material</type>
 	 <object-name>apmode_alt</object-name>
-	 <object-name>apmode_button</object-name>
-
+	 <object-name>apmode_vfpm</object-name>
+	 <object-name>apmode_ptch</object-name>
+	 <object-name>apmode_bhdg</object-name>
+	 <object-name>apmode_spd</object-name>
+	 <object-name>apmode_spdptch</object-name>
+	 <object-name>apmode_terr_flw</object-name>
+	 <object-name>apmode_alt</object-name>
+	 <object-name>apmode_thdg</object-name>
 	 <emission>
-		 <red>0.8</red>
-		 <green>1.0</green>
-		 <blue>0.7</blue>
-		 <!--<factor-prop>controls/lighting/instruments-norm</factor-prop>-->
-		 <factor-prop>controls/switches/apmode/alt-hold</factor-prop>
-	 </emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+	</emission>
 </animation>
 
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
       <animation>
 	      <type>pick</type>
-	      <object-name>apmode_alt</object-name>
+	      <object-name>apmode_btn_alt</object-name>
 	      <action>
 		      <button>0</button>
 		      <repeatable>true</repeatable>
@@ -386,22 +362,21 @@ sweat by maggse
       </animation>
 
       <animation>
-	      <type>material</type>
-	      <object-name>apmode_vfpm</object-name>
-	      <object-name>apmode_button.001</object-name>
-	      <emission>
-		      <red>0.8</red>
-		      <green>1.0</green>
-		      <blue>0.7</blue>
-		      <factor-prop>controls/switches/apmode/vfpm-hold</factor-prop>
-	      </emission>
-</animation>
+	      <type>select</type>
+	      <object-name>apmode_alt</object-name>
+              <condition>
+               <equals> 
+                <property>controls/switches/apmode/alt-hold</property>
+                <value>1</value>
+               </equals>
+              </condition> 
+      </animation>
 
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
       <animation>
 	      <type>pick</type>
-	      <object-name>apmode_vfpm</object-name>
+	      <object-name>apmode_btn_vfpm</object-name>
 	      <action>
 		      <button>0</button>
 		      <repeatable>true</repeatable>
@@ -418,22 +393,21 @@ sweat by maggse
       </animation>
 
       <animation>
-	      <type>material</type>
-	      <object-name>apmode_ptch</object-name>
-	      <object-name>apmode_button.002</object-name>
-	      <emission>
-		      <red>0.8</red>
-		      <green>1.0</green>
-		      <blue>0.7</blue>
-		      <factor-prop>controls/switches/apmode/ptch-hold</factor-prop>
-	      </emission>
-</animation>
+	      <type>select</type>
+	      <object-name>apmode_vfpm</object-name>
+              <condition>
+               <equals> 
+                <property>controls/switches/apmode/vfpm-hold</property>
+                <value>1</value>
+               </equals>
+              </condition> 
+      </animation>
 
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
       <animation>
 	      <type>pick</type>
-	      <object-name>apmode_ptch</object-name>
+	      <object-name>apmode_btn_ptch</object-name>
 	      <action>
 		      <button>0</button>
 		      <repeatable>true</repeatable>
@@ -450,22 +424,21 @@ sweat by maggse
       </animation>
 
       <animation>
-	      <type>material</type>
-	      <object-name>apmode_bhdg</object-name>
-	      <object-name>apmode_button.004</object-name>
-	      <emission>
-		      <red>0.8</red>
-		      <green>1.0</green>
-		      <blue>0.7</blue>
-		      <factor-prop>controls/switches/apmode/bhdg-hold</factor-prop>
-	      </emission>
-</animation>
+	      <type>select</type>
+	      <object-name>apmode_ptch</object-name>
+              <condition>
+               <equals> 
+                <property>controls/switches/apmode/ptch-hold</property>
+                <value>1</value>
+               </equals>
+              </condition> 
+      </animation>
 
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
       <animation>
 	      <type>pick</type>
-	      <object-name>apmode_bhdg</object-name>
+	      <object-name>apmode_btn_bhdg</object-name>
 	      <action>
 		      <button>0</button>
 		      <repeatable>true</repeatable>
@@ -482,22 +455,21 @@ sweat by maggse
       </animation>
 
       <animation>
-	      <type>material</type>
-	      <object-name>apmode_thdg</object-name>
-	      <object-name>apmode_button.005</object-name>
-	      <emission>
-		      <red>0.8</red>
-		      <green>1.0</green>
-		      <blue>0.7</blue>
-		      <factor-prop>controls/switches/apmode/thdg-hold</factor-prop>
-	      </emission>
-</animation>
+	      <type>select</type>
+	      <object-name>apmode_bhdg</object-name>
+              <condition>
+               <equals> 
+                <property>controls/switches/apmode/bhdg-hold</property>
+                <value>1</value>
+               </equals>
+              </condition> 
+      </animation>
 
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
       <animation>
 	      <type>pick</type>
-	      <object-name>apmode_thdg</object-name>
+	      <object-name>apmode_btn_thdg</object-name>
 	      <action>
 		      <button>0</button>
 		      <repeatable>true</repeatable>
@@ -514,22 +486,21 @@ sweat by maggse
       </animation>
 
       <animation>
-	      <type>material</type>
-	      <object-name>apmode_spd</object-name>
-	      <object-name>apmode_button.007</object-name>
-	      <emission>
-		      <red>0.8</red>
-		      <green>1.0</green>
-		      <blue>0.7</blue>
-		      <factor-prop>controls/switches/apmode/spd-hold</factor-prop>
-	      </emission>
-</animation>
+	      <type>select</type>
+	      <object-name>apmode_thdg</object-name>
+              <condition>
+               <equals> 
+                <property>controls/switches/apmode/thdg-hold</property>
+                <value>1</value>
+               </equals>
+              </condition> 
+      </animation>
 
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
       <animation>
 	      <type>pick</type>
-	      <object-name>apmode_spd</object-name>
+	      <object-name>apmode_btn_spd</object-name>
 	      <action>
 		      <button>0</button>
 		      <repeatable>true</repeatable>
@@ -546,22 +517,21 @@ sweat by maggse
       </animation>
 
       <animation>
-	      <type>material</type>
-	      <object-name>apmode_spdptch</object-name>
-	      <object-name>apmode_button.008</object-name>
-	      <emission>
-		      <red>0.8</red>
-		      <green>1.0</green>
-		      <blue>0.7</blue>
-		      <factor-prop>controls/switches/apmode/spdptch-hold</factor-prop>
-	      </emission>
-</animation>
+	      <type>select</type>
+	      <object-name>apmode_spd</object-name>
+              <condition>
+               <equals> 
+                <property>controls/switches/apmode/spd-hold</property>
+                <value>1</value>
+               </equals>
+              </condition> 
+      </animation>
 
       <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
       <animation>
 	      <type>pick</type>
-	      <object-name>apmode_spdptch</object-name>
+	      <object-name>apmode_btn_spd_ptch</object-name>
 	      <action>
 		      <button>0</button>
 		      <repeatable>true</repeatable>
@@ -578,18 +548,19 @@ sweat by maggse
       </animation>
 
       <animation>
-	      <type>material</type>
-	      <object-name>apmode_terrflw</object-name>
-	      <emission>
-		      <red>0.8</red>
-		      <green>1.0</green>
-		      <blue>0.7</blue>
-		      <factor-prop>controls/switches/terrain-follow</factor-prop>
-	      </emission>
-</animation>
+	      <type>select</type>
+	      <object-name>apmode_spdptch</object-name>
+              <condition>
+               <equals> 
+                <property>controls/switches/apmode/spdptch-hold</property>
+                <value>1</value>
+               </equals>
+              </condition> 
+      </animation>
+
       <animation>
 	      <type>pick</type>
-	      <object-name>apmode_terrflw</object-name>
+	      <object-name>apmode_btn_terrflw</object-name>
 	      <action>
 		      <button>0</button>
 		      <repeatable>true</repeatable>
@@ -603,6 +574,17 @@ sweat by maggse
 			      <script>b1b.checkapmode()</script>
 		 </binding>
 	      </action>
+      </animation>
+
+      <animation>
+	      <type>select</type>
+	      <object-name>apmode_terrflw</object-name>
+              <condition>
+               <equals> 
+                <property>controls/switches/terrain-follow</property>
+                <value>1</value>
+               </equals>
+              </condition> 
       </animation>
 
 <!-- Label Text -->

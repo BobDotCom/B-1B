@@ -27,7 +27,7 @@
 		 <red>0.1</red>
 		 <green>0.9</green>
 		 <blue>0.5</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
   </animation>
 

@@ -108,6 +108,12 @@ Syd Adams
          <property>instrumentation/nav/has-gs</property>
          <property>instrumentation/nav/in-range</property>
      </and>
+     <and>
+      <equals>
+       <property>controls/switches/fltdir</property>
+       <value>0.4</value>
+      </equals>
+     </and>
    </condition>
  </animation>
 
@@ -156,6 +162,12 @@ Syd Adams
      <and>
          <property>instrumentation/nav/nav-loc</property>
          <property>instrumentation/nav/in-range</property>
+     </and>
+     <and>
+      <equals>
+       <property>controls/switches/fltdir</property>
+       <value>0.4</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -222,7 +234,7 @@ Syd Adams
    <type>texmultiple</type>
    <object-name>AI</object-name>
    <transform>
-     <property>orientation/pitch-deg</property>
+     <property>systems/computers/PFDB1-pitch</property>
      <subtype>textranslate</subtype>
      <factor>0.00314</factor>
      <axis>
@@ -232,7 +244,7 @@ Syd Adams
      </axis>
    </transform>
    <transform>
-     <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+     <property>systems/computers/PFDB1-roll</property>
      <subtype>texrotate</subtype>
      <center>
        <x>0.25</x>
@@ -249,7 +261,7 @@ Syd Adams
  <animation>
    <type>rotate</type>
    <object-name>rollptr</object-name>
-   <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+   <property>systems/computers/PFDB1-roll</property>
    <axis>
      <x>1.0</x>
      <y>0.0</y>
@@ -267,7 +279,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>HDGface</object-name>
-   <property>orientation/heading-magnetic-deg</property>
+   <property>systems/computers/PFDB1-heading</property>
    <interpolation>
 	   <entry>
 		   <ind>0</ind>
@@ -293,7 +305,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Asitext</object-name>
-   <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <property>systems/computers/PFDB1-airspeed-kts</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -306,7 +318,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Asitext.001</object-name>
-   <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <property>systems/computers/PFDB1-airspeed-kts</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -319,7 +331,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Asitext.002</object-name>
-   <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <property>systems/computers/PFDB1-airspeed-kts</property>
    <factor>0.1</factor>
    <axis>
      <x>0</x>
@@ -331,7 +343,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>Alt10</object-name>
-   <property>instrumentation/altimeter/indicated-altitude-ft</property>
+   <property>systems/computers/PFDB1-baro-altitude</property>
    <factor>0.01</factor>
    <axis>
      <x>0</x>
@@ -343,7 +355,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Alt100</object-name>
-   <property>instrumentation/altimeter/indicated-altitude-ft</property>
+   <property>systems/computers/PFDB1-baro-altitude</property>
    <factor>0.001</factor>
    <step>100</step>
    <scroll>20</scroll>
@@ -357,7 +369,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Alt1000</object-name>
-   <property>instrumentation/altimeter/indicated-altitude-ft</property>
+   <property>systems/computers/PFDB1-baro-altitude</property>
    <factor>0.0001</factor>
    <step>1000</step>
    <scroll>20</scroll>
@@ -371,7 +383,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Alt10000</object-name>
-   <property>instrumentation/altimeter/indicated-altitude-ft</property>
+   <property>systems/computers/PFDB1-baro-altitude</property>
    <factor>0.00001</factor>
    <step>10000</step>
    <scroll>20</scroll>
@@ -424,7 +436,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>mach.001</object-name>
-   <property>velocities/groundspeed-kt</property>
+   <property>systems/computers/PFDB1-groundspeed-kts</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -437,7 +449,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>mach.002</object-name>
-   <property>velocities/groundspeed-kt</property>
+   <property>systems/computers/PFDB1-groundspeed-kts</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -450,7 +462,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>mach.003</object-name>
-   <property>velocities/groundspeed-kt</property>
+   <property>systems/computers/PFDB1-groundspeed-kts</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>
@@ -517,70 +529,160 @@ Syd Adams
 		<type>select</type>
 		<object-name>s0</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[0]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s1</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[1]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s2</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[2]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s3</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[3]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s4</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[4]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s5</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[5]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s6</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[6]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s7</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[7]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s8</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[8]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s9</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[9]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 
@@ -588,70 +690,160 @@ Syd Adams
 		<type>select</type>
 		<object-name>s10</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[10]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s11</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[11]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s12</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[12]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s13</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[13]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s14</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[14]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s15</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[15]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s16</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[16]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s17</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[17]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s18</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[18]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s19</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[19]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 
@@ -659,70 +851,160 @@ Syd Adams
 		<type>select</type>
 		<object-name>s20</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[20]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s21</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[21]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s22</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[22]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s23</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[23]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s24</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[24]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s25</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[25]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s26</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[26]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s27</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[27]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s28</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[28]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s29</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[29]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 
@@ -730,14 +1012,32 @@ Syd Adams
 		<type>select</type>
 		<object-name>s30</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[30]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s31</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[31]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
@@ -751,56 +1051,128 @@ Syd Adams
 		<type>select</type>
 		<object-name>s32</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[32]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s33</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[33]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s34</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[34]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s35</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[35]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s36</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[36]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s37</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[37]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s38</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[38]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s39</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[39]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 
@@ -808,70 +1180,160 @@ Syd Adams
 		<type>select</type>
 		<object-name>s40</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[40]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s41</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[41]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s42</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[42]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s43</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[43]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s44</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[44]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s45</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[45]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s46</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[46]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s47</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[47]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s48</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[48]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>s49</object-name>
 		<condition>
+                  <and>
+                    <equals>
+			<property>controls/switches/terrain-avoid</property>
+                        <value>1</value>
+                   </equals>
+                    <equals>
 			<property>sim/model/A-6E/instrumentation/PHD/s[49]/visible</property>
+                        <value>1</value>
+                   </equals>
+                  </and>
 		</condition>
 	</animation>
 

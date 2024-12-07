@@ -6,12 +6,15 @@ sweat by maggse
 
  <path>caution_ind.ac</path>
 
+
+
+
  <!-- eject switch -->
 
  <animation>
 	 <type>rotate</type>
 	 <object-name>switch_eject</object-name>
-	 <property>controls/eject</property>
+	 <property>controls/switches/eject</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -45,13 +48,75 @@ sweat by maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/eject</property>
+			 <property>controls/switches/eject</property>
 		 </binding>
 	 </action>
 </animation>
 
 
 <!-- caution ind -->
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>rep_mstrcaution</object-name>
+	 <object-name>rep_eng1.001</object-name>
+         <property>controls/switches/master_caution</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-0.00001</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01097</x-m>
+		 <y-m>-0.28408</y-m>
+		 <z-m>0.10661</z-m>
+	 </center>
+
+</animation>
+ <animation>
+	 <type>pick</type>
+	 <object-name>rep_mstrcaution</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/master_caution</property>
+		 </binding>
+	 </action>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>rep_mstrcaution</object-name> 
+        <condition>  
+        <or>
+         <equals> 
+          <property>controls/switches/master_caution</property>
+          <value>1</value>
+         </equals>
+         <equals>
+          <property>instrumentation/annunciators/preptoeject</property>
+          <value>1</value> 
+         </equals>
+         <equals>
+          <property>instrumentation/annunciators/flapwing</property>
+          <value>1</value> 
+         </equals>
+        </or>
+        </condition>
+</animation>
 
 <animation>
 	<type>material</type>
@@ -60,363 +125,171 @@ sweat by maggse
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
 	</emission>
 </animation>
 
 
- <animation>
-	 <type>select</type>
-	 <object-name>rep_mstrcaution</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/switches/prep-eject</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_eject</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/switches/prep-eject</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>rep_eject</object-name>
+<animation>
+	<type>select</type>
+	<object-name>GLIDESLOPE</object-name> 
+        <condition> 
+         <or> 
+         <equals> 
+          <property>instrumentation/nav/gs-in-range</property>
+          <value>1</value> 
+         </equals>
+         <equals> 
+          <property>instrumentation/nav[1]/gs-in-range</property>
+          <value>1</value> 
+         </equals>
+         </or>
+        </condition>
+</animation>
+<animation>
+	<type>material</type>
+	<object-name>GLIDESLOPE</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/switches/prep-eject</factor-prop>
-	 </emission>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
+	</emission>
 </animation>
 
- <animation>
-	 <type>select</type>
-	 <object-name>rep_terraviod</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/switches/terra-report</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>rep_terraviod</object-name>
+<animation>
+	<type>select</type>
+	<object-name>REDUCESPEED</object-name> 
+        <condition> 
+         <equals>
+          <property>instrumentation/annunciators/reducespeed</property>
+          <value>1</value>
+         </equals>
+        </condition>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>REDUCESPEED</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.1</green>
-		 <blue>0.1</blue>
-		 <factor-prop>controls/switches/terra-report</factor-prop>
-	 </emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>STALL</object-name> 
+        <condition> 
+         <equals>
+          <property>instrumentation/annunciators/stall</property>
+          <value>1</value>
+         </equals>
+        </condition>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>STALL</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>MINDECNHGT</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
+	</emission>
 </animation>
 
  <animation>
 	 <type>select</type>
-	 <object-name>rep_refuel</object-name>
+	 <object-name>PREPTOEJECT</object-name>
 	 <condition>
 		 <equals>
-			 <property>systems/refuel/contact</property>
+			 <property>instrumentation/annunciators/preptoeject</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
  </animation>
  <animation>
 	 <type>material</type>
-	 <object-name>rep_refuel</object-name>
+	 <object-name>PREPTOEJECT</object-name>
 	 <emission>
 		 <red>0.5</red>
 		 <green>0.9</green>
 		 <blue>0.5</blue>
-		 <factor-prop>systems/refuel/contact</factor-prop>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
 	 </emission>
 </animation>
 
  <animation>
-	 <type>select</type>
-	 <object-name>rep_aftburner</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/engines/engine[0]/afterburner</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
+     <type>select</type>
+      <object-name>flapwing</object-name> 
+        <condition>   
+         <equals>
+          <property>instrumentation/annunciators/flapwing</property> 
+          <value>1</value>
+         </equals>
+        </condition> 
+</animation>
  <animation>
 	 <type>material</type>
-	 <object-name>rep_aftburner</object-name>
+	 <object-name>flapwing</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.1</green>
-		 <blue>0.1</blue>
-		 <factor-prop>controls/engines/engine[0]/afterburner</factor-prop>
+		 <red>0.5</red>
+		 <green>0.9</green>
+		 <blue>0.5</blue>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
+	 </emission>
+</animation>
+
+
+<animation>
+	<type>select</type>
+	<object-name>LOC</object-name> 
+        <condition>  
+         <equals> 
+          <property>instrumentation/nav/nav-loc</property>
+          <value>1</value> 
+         </equals>  
+         <equals> 
+          <property>instrumentation/nav[1]/nav-loc</property>
+          <value>1</value> 
+         </equals>
+        </condition>
+</animation>
+ <animation>
+	 <type>material</type>
+	 <object-name>LOC</object-name>
+	 <emission>
+		 <red>0.5</red>
+		 <green>0.9</green>
+		 <blue>0.5</blue>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
 	 </emission>
 </animation>
 
  <animation>
-	 <type>select</type>
-	 <object-name>rep_brake</object-name>
-	 <condition>
-	    <and>
-		 <equals>
-			 <property>gear/gear[0]/wow</property>
-			 <value>1.0</value>
-		 </equals>
-		 <or>
-			 <equals>
-				 <property>controls/gear[0]/brake-left</property>
-				 <value>1.0</value>
-		 	</equals>
-			<equals>
-				<property>controls/gear[0]/brake-right</property>
-				<value>1.0</value>
-		 	</equals>
-			<equals>
-				<property>controls/gear[0]/brake-parking</property>
-				<value>1.0</value>
-		 	</equals>
-		</or>
-	    </and>
-	 </condition>
- </animation>
- <animation>
 	 <type>material</type>
-	 <object-name>rep_brake</object-name>
+	 <object-name>rga</object-name>
 	 <emission>
-		 <red>0.9</red>
-		 <green>0.1</green>
-		 <blue>0.1</blue>
-		 <factor-prop>gear/gear[0]/wow</factor-prop>
+		 <red>0.5</red>
+		 <green>0.9</green>
+		 <blue>0.5</blue>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
 	 </emission>
 </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_gforce</object-name>
-	 <condition>
-		 <greater-than>
-			 <property>accelerations/pilot-g</property>
-			 <value>4.0</value>
-		 </greater-than>
-	 </condition>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>rep_gforce</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>accelerations/pilot-g</factor-prop>
-	 </emission>
-</animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_eng1</object-name>
-	 <condition>
-	      <or>
-		 <equals>
-			 <property>engines/engine[0]/out-of-fuel</property>
-			 <value>1.0</value>
-		 </equals>
-		 <and>
-		 <equals>
-			 <property>controls/engines/engine[0]/cutoff</property>
-			 <value>1.0</value>
-		 </equals>
-		 <equals>
-			 <property>gear/gear[0]/wow</property>
-			 <value>0.0</value>
-		 </equals>
-	        </and>
-	      </or>
-	 </condition>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>rep_eng1</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <condition>
-			 <or>
-				 <equals>
-					 <property>engines/engine[0]/out-of-fuel</property>
-					 <value>1.0</value>
-				 </equals>
-				 <and>
-					 <equals>
-						 <property>controls/engines/engine[0]/cutoff</property>
-						 <value>1.0</value>
-					 </equals>
-					 <equals>
-						 <property>gear/gear[0]/wow</property>
-						 <value>0.0</value>
-					 </equals>
-				 </and>
-			 </or>
-	 </condition>
-	 </emission>
-</animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_eng2.001</object-name>
-	 <condition>
-		 <or>
-			 <equals>
-				 <property>engines/engine[1]/out-of-fuel</property>
-				 <value>1.0</value>
-			 </equals>
-			 <and>
-				 <equals>
-					 <property>controls/engines/engine[1]/cutoff</property>
-					 <value>1.0</value>
-				 </equals>
-				 <equals>
-					 <property>gear/gear[1]/wow</property>
-					 <value>0.0</value>
-				 </equals>
-			 </and>
-		 </or>
-	 </condition>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>rep_eng2.001</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <condition>
-			 <or>
-				 <equals>
-					 <property>engines/engine[0]/out-of-fuel</property>
-					 <value>1.0</value>
-				 </equals>
-				 <and>
-					 <equals>
-						 <property>controls/engines/engine[0]/cutoff</property>
-						 <value>1.0</value>
-					 </equals>
-					 <equals>
-						 <property>gear/gear[0]/wow</property>
-						 <value>0.0</value>
-					 </equals>
-				 </and>
-			 </or>
-		 </condition>
-	 </emission>
-</animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_eng3</object-name>
-	 <condition>
-		 <or>
-			 <equals>
-				 <property>engines/engine[2]/out-of-fuel</property>
-				 <value>1.0</value>
-			 </equals>
-			 <and>
-				 <equals>
-					 <property>controls/engines/engine[2]/cutoff</property>
-					 <value>1.0</value>
-				 </equals>
-				 <equals>
-					 <property>gear/gear[2]/wow</property>
-					 <value>0.0</value>
-				 </equals>
-			 </and>
-		 </or>
-	 </condition>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>rep_eng3</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <condition>
-			 <or>
-				 <equals>
-					 <property>engines/engine[0]/out-of-fuel</property>
-					 <value>1.0</value>
-				 </equals>
-				 <and>
-					 <equals>
-						 <property>controls/engines/engine[0]/cutoff</property>
-						 <value>1.0</value>
-					 </equals>
-					 <equals>
-						 <property>gear/gear[0]/wow</property>
-						 <value>0.0</value>
-					 </equals>
-				 </and>
-			 </or>
-		 </condition>
-	 </emission>
-</animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_eng4</object-name>
-	 <condition>
-		 <or>
-			 <equals>
-				 <property>engines/engine[3]/out-of-fuel</property>
-				 <value>1.0</value>
-			 </equals>
-			 <and>
-				 <equals>
-					 <property>controls/engines/engine[3]/cutoff</property>
-					 <value>1.0</value>
-				 </equals>
-				 <equals>
-					 <property>gear/gear[3]/wow</property>
-					 <value>0.0</value>
-				 </equals>
-			 </and>
-		 </or>
-	 </condition>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>rep_eng4</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <condition>
-			 <or>
-				 <equals>
-					 <property>engines/engine[0]/out-of-fuel</property>
-					 <value>1.0</value>
-				 </equals>
-				 <and>
-					 <equals>
-						 <property>controls/engines/engine[0]/cutoff</property>
-						 <value>1.0</value>
-					 </equals>
-					 <equals>
-						 <property>gear/gear[0]/wow</property>
-						 <value>0.0</value>
-					 </equals>
-				 </and>
-			 </or>
-		 </condition>
-	 </emission>
- </animation>
 
 
  <animation>
@@ -430,16 +303,7 @@ sweat by maggse
 	</emission>
 </animation>
 
-<animation>
-	<type>material</type>
-	<object-name>fuel_cov.003</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+
 
 <!-- Label Text -->
 

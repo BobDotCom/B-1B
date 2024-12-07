@@ -10,306 +10,121 @@ sweat by maggse
 
  <animation>
 	 <type>select</type>
-	 <object-name>g-force</object-name>
+	 <object-name>1_GSS</object-name>
 	 <condition>
+              <or>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>sim/failure-manager/systems/computers/INS/heading/failure-level</property>
 			 <value>1.0</value>
 		 </equals>
+		 <equals>
+			 <property>sim/failure-manager/systems/computers/INS/pitch/failure-level</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>sim/failure-manager/systems/computers/INS/roll/failure-level</property>
+			 <value>1.0</value>
+		 </equals>
+              </or>
 	 </condition>
  </animation>
 
  <animation>
 	 <type>select</type>
-	 <object-name>g-force.2</object-name>
+	 <object-name>2_GSS</object-name>
 	 <condition>
+              <or>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>sim/failure-manager/systems/computers/GSS/heading/failure-level</property>
 			 <value>1.0</value>
 		 </equals>
+		 <equals>
+			 <property>sim/failure-manager/systems/computers/GSS/pitch/failure-level</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>sim/failure-manager/systems/computers/GSS/roll/failure-level</property>
+			 <value>1.0</value>
+		 </equals>
+              </or>
 	 </condition>
  </animation>
 
  <animation>
 	 <type>select</type>
-	 <object-name>rep_eng1</object-name>
+	 <object-name>ADC_1</object-name>
 	 <condition>
-		 <and>
+              <or>
 		 <equals>
-			 <property>controls/engines/engine[0]/cutoff</property>
-			 <value>0.0</value>
+			 <property>sim/failure-manager/systems/computers/ADC1/airspeed/failure-level</property>
+			 <value>1.0</value>
 		 </equals>
-		 <less-than>
-			 <property>sim/model/B-1B/n1[0]</property>
-			 <value>55.0</value>
-		 </less-than>
-	         </and>
+		 <equals>
+			 <property>sim/failure-manager/systems/computers/ADC1/groundspeed/failure-level</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>sim/failure-manager/systems/computers/ADC1/mach/failure-level</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>sim/failure-manager/systems/computers/ADC1/verticalspeed/failure-level</property>
+			 <value>1.0</value>
+		 </equals>
+		 <equals>
+			 <property>sim/failure-manager/systems/computers/ADC1/baro_altitude/failure-level</property>
+			 <value>1.0</value>
+		 </equals>
+              </or>
 	 </condition>
  </animation>
 
  <animation>
 	 <type>select</type>
-	 <object-name>rep_eng2</object-name>
+	 <object-name>ADC_2</object-name>
 	 <condition>
-		 <and>
+              <or>
 		 <equals>
-			 <property>controls/engines/engine[1]/cutoff</property>
-			 <value>0.0</value>
-		 </equals>
-		 <less-than>
-			 <property>sim/model/B-1B/n1[1]</property>
-			 <value>55.0</value>
-		 </less-than>
-	         </and>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_eng3</object-name>
-	 	 <condition>
-		 <and>
-		 <equals>
-			 <property>controls/engines/engine[2]/cutoff</property>
-			 <value>0.0</value>
-		 </equals>
-		 <less-than>
-			 <property>sim/model/B-1B/n1[2]</property>
-			 <value>55.0</value>
-		 </less-than>
-	         </and>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_eng4</object-name>
-	 	 	 <condition>
-		 <and>
-		 <equals>
-			 <property>controls/engines/engine[3]/cutoff</property>
-			 <value>0.0</value>
-		 </equals>
-		 <less-than>
-			 <property>sim/model/B-1B/n1[3]</property>
-			 <value>55.0</value>
-		 </less-than>
-	         </and>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_battl</object-name>
-	 <condition>
-		 <and>
-		 <equals>
-			 <property>controls/electric/battery-switch</property>
-			 <value>1.0</value>
-		 </equals>
-
-		 <equals>
-			 <property>controls/APU/APUL_running</property>
-			 <value>0.0</value>
-		 </equals>
-		 <equals>
-			 <property>controls/APU/APUR_running</property>
-			 <value>0.0</value>
-		 </equals>
-		 <equals>
-			 <property>controls/engines/engine[0]/cutoff</property>
+			 <property>sim/failure-manager/systems/computers/ADC2/airspeed/failure-level</property>
 			 <value>1.0</value>
 		 </equals>
 		 <equals>
-			 <property>controls/engines/engine[1]/cutoff</property>
+			 <property>sim/failure-manager/systems/computers/ADC2/groundspeed/failure-level</property>
 			 <value>1.0</value>
 		 </equals>
 		 <equals>
-			 <property>controls/engines/engine[3]/cutoff</property>
-			 <value>1.0</value>
-		 </equals>
-	         </and>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_apul</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/APU/APUL_running</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_battr</object-name>
-	 <condition>
-		 <and>
-		 <equals>
-			 <property>controls/electric/battery-switch</property>
+			 <property>sim/failure-manager/systems/computers/ADC2/mach/failure-level</property>
 			 <value>1.0</value>
 		 </equals>
 		 <equals>
-			 <property>controls/APU/APUL_running</property>
-			 <value>0.0</value>
-		 </equals>
-		 <equals>
-			 <property>controls/APU/APUR_running</property>
-			 <value>0.0</value>
-		 </equals>
-		 <equals>
-			 <property>controls/engines/engine[0]/cutoff</property>
+			 <property>sim/failure-manager/systems/computers/ADC2/verticalspeed/failure-level</property>
 			 <value>1.0</value>
 		 </equals>
 		 <equals>
-			 <property>controls/engines/engine[1]/cutoff</property>
+			 <property>sim/failure-manager/systems/computers/ADC2/baro_altitude/failure-level</property>
 			 <value>1.0</value>
 		 </equals>
-		 <equals>
-			 <property>controls/engines/engine[3]/cutoff</property>
-			 <value>1.0</value>
-		 </equals>
-	         </and>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_apur</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/APU/APUR_running</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_light.010</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/switches/fire</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>ter-fl</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/switches/terrain-follow</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>ter-av</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/switches/terrain-avoid</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>fcgms</object-name>
-	 <condition>
-		 <equals>
-			 <property>controls/switches/cg-adjust</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>bay_op</object-name>
-	 <condition>
-		 <equals>
-			 <property>canopy/position-norm</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>htc_op</object-name>
-	 <condition>
-		 <equals>
-			 <property>doors/bay_fwd/position-norm</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>ldg_dn</object-name>
-	 <condition>
-		 <equals>
-			 <property>gear/gear[0]/position-norm</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>ldg_up</object-name>
-	 <condition>
-		 <and>
-		 <equals>
-			 <property>gear/gear[0]/position-norm</property>
-			 <value>0.0</value>
-		 </equals>
-		 <less-than>
-			 <property>position/altitude-agl-ft</property>
-			 <value>1000.0</value>
-		 </less-than>
-		 <less-than>
-			 <property>velocities/airspeed-kt</property>
-			 <value>250.0</value>
-		 </less-than>
-	         </and>
+              </or>
 	 </condition>
  </animation>
 
  <animation>
 	 <type>material</type>
-	 <object-name>rep_light</object-name>
-	 <object-name>rep_light.001</object-name>
-	 <object-name>rep_eng1</object-name>
-	 <object-name>rep_eng2</object-name>
-	 <object-name>rep_eng3</object-name>
-	 <object-name>rep_eng4</object-name>
-	 <object-name>rep_battl</object-name>
-	 <object-name>rep_apul</object-name>
-	 <object-name>rep_battr</object-name>
-	 <object-name>rep_apur</object-name>
-	 <object-name>ldg_dn</object-name>
-	 <object-name>ldg_up</object-name>
-	 <object-name>bay_op</object-name>
-	 <object-name>g-force</object-name>
-	 <object-name>htc_op</object-name>
-	 <object-name>ter-av</object-name>
-	 <object-name>ter-fl</object-name>
-	 <object-name>fcgms</object-name>
+	 <object-name>1_GSS</object-name>
+	 <object-name>2_GSS</object-name>
+	 <object-name>ADC_1</object-name>
+	 <object-name>ADC_2</object-name>
+	 <object-name>AFCS_APRCH_PITCH</object-name>
+	 <object-name>AFCS_APRCH_ROLL</object-name>
+	 <object-name>AUTO_THROT</object-name>
+	 <object-name>RGA_1</object-name>
+	 <object-name>RGA_2</object-name>
+	 <object-name>RGA_SYS</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.3</green>
-		 <blue>0.3</blue>
-		 <factor-prop>controls/switches/annunciator-lighting</factor-prop>
+		 <red>0.5</red>
+		 <green>0.9</green>
+		 <blue>0.5</blue>
+		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
 	</emission>
 </animation>
 

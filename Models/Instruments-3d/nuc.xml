@@ -252,132 +252,17 @@ maggse
 	</action>
 </animation>
 
-<!-- time to waypoint -->
-<animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.001</object-name>
-	 <property>autopilot/route-manager/route/num</property>
-	 <factor>0.1</factor>
-	 <step>1</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.003</object-name>
-	 <property>autopilot/route-manager/wp/eta_h</property>
-	 <factor>0.01</factor>
-	 <step>10</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.002</object-name>
-	 <property>autopilot/route-manager/wp/eta_h</property>
-	 <factor>0.1</factor>
-	 <step>1</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.004</object-name>
-	 <property>autopilot/route-manager/wp/eta_m</property>
-	 <factor>0.01</factor>
-	 <step>10</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.005</object-name>
-	 <property>autopilot/route-manager/wp/eta_m</property>
-	 <factor>0.1</factor>
-	 <step>1</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- <!-- distance to wp -->
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt</object-name>
-	 <property>autopilot/route-manager/wp/dist</property>
-	 <factor>0.0001</factor>
-	 <step>1000</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.006</object-name>
-	 <property>autopilot/route-manager/wp/dist</property>
-	 <factor>0.001</factor>
-	 <step>100</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.007</object-name>
-	 <property>autopilot/route-manager/wp/dist</property>
-	 <factor>0.01</factor>
-	 <step>10</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.008</object-name>
-	 <property>autopilot/route-manager/wp/dist</property>
-	 <factor>0.1</factor>
-	 <step>1</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
  <animation>
 	<type>material</type>
-	<object-name>nuc_pt</object-name>
-	<object-name>nuc_pt.001</object-name>
-	<object-name>nuc_pt.002</object-name>
-	<object-name>nuc_pt.003</object-name>
-	<object-name>nuc_pt.004</object-name>
-	<object-name>nuc_pt.005</object-name>
-	<object-name>nuc_pt.006</object-name>
-	<object-name>nuc_pt.007</object-name>
-	<object-name>nuc_pt.008</object-name>
+	<object-name>SEQ_1</object-name>
+	<object-name>SEQ_10</object-name>
+	<object-name>SEQ_100</object-name>
+	<object-name>SEQ_1000</object-name>
+	<object-name>sec</object-name>
+	<object-name>sec.2</object-name>
+	<object-name>min</object-name>
+	<object-name>min.2</object-name>
+	<object-name>hr</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>

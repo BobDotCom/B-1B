@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+
+<!-- Copyright (c) 2024 Rob Andrew (RobAndrew[G-RAND]) -->
+
+
+
+<system name="Hydraulics">
+
+    <property value="0">/systems/failures/hydraulic/system[1]/fluid-leak-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[1]/pump_1_failure-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[1]/pump_2_failure-trigger</property>
+
+	<channel name="Hydraulic pumps" execrate="8">
+
+<!-- System 1 --> 
+
+<!-- Pump 1 --> 
+  
+<!-- Pressure --> 
+
+		<fcs_function name="/systems/hydraulic/system[1]/pumps/pump[1]/pressure_from_APU">
+			<function>
+				<product>
+					<value>27</value>
+					<property>/systems/engines/adg[0]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[1]/pumps/pump[1]/IDG_pressure_command">
+			<default value="/systems/hydraulic/system[1]/pumps/pump[1]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+				/systems/engines/adg[0]/drive-rpm gt 70
+			</test>
+			<test logic="OR" value="0">
+				/systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 1
+				/systems/failures/hydraulic/system[1]/pump_1_failure-trigger eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure">
+            <input>/systems/hydraulic/system[1]/pumps/pump[1]/IDG_pressure_command</input>
+            <rate_limit sense="decr">/systems/failures/hydraulic/system[1]/fluid-leak-pressure-ammount</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator> 
+
+<!-- Pump 2 -->
+
+<!-- Pressure -->
+
+		<fcs_function name="/systems/hydraulic/system[1]/pumps/pump[2]/pressure_from_APU">
+			<function>
+				<product>
+					<value>27</value>
+					<property>/systems/engines/adg[1]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[1]/pumps/pump[2]/IDG_pressure_command">
+			<default value="/systems/hydraulic/system[1]/pumps/pump[2]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+				/systems/engines/adg[1]/drive-rpm gt 70
+			</test>
+			<test logic="OR" value="0">
+				/systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 1
+				/systems/failures/hydraulic/system[1]/pump_2_failure-trigger eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[1]/pumps/pump[2]/final_pressure">
+            <input>/systems/hydraulic/system[1]/pumps/pump[2]/IDG_pressure_command</input>
+            <rate_limit sense="decr">/systems/failures/hydraulic/system[1]/fluid-leak-pressure-ammount</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator> 
+
+<!-- SYSTEM 2 --> 
+
+<!-- Pump 1 --> 
+  
+<!-- Pressure -->  
+
+<!-- Pump 2 -->
+
+<!-- Pressure -->
+
+<!-- SYSTEM 3 --> 
+
+<!-- Pump 1 --> 
+  
+<!-- Pressure -->  
+
+<!-- Pump 2 -->
+
+<!-- Pressure -->
+
+<!-- SYSTEM 4 --> 
+
+<!-- Pump 1 --> 
+  
+<!-- Pressure --> 
+
+<!-- Pump 2 -->
+
+<!-- Pressure -->
+
+</channel> 
+
+
+	<channel name="Failures" execrate="8">
+
+<!--System 1 -->
+
+		<switch name="/systems/failures/hydraulic/system[1]/fluid-leak-pressure-ammount">
+			<default value="0"/>
+			<test logic="AND" value="/systems/failures/hydraulic/system[1]/leakage_pressure_loss_rate">
+				/systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 1
+			</test>
+			<test logic="OR" value="/systems/failures/hydraulic/system[1]/pump_failure_pressure_loss_rate">
+				/systems/failures/hydraulic/system[1]/pump_1_failure-trigger eq 1
+				/systems/failures/hydraulic/system[1]/pump_2_failure-trigger eq 1
+			</test>
+		</switch>
+
+		<fcs_function name="/systems/failures/hydraulic/system[1]/pump_failure_pressure_loss_rate">
+			<function>
+				<quotient>
+					<property>/systems/failures/hydraulic/system[1]/fluid-leak-pressure-max</property>
+					<value>2</value>
+				</quotient>
+			</function>
+		</fcs_function>
+
+		<fcs_function name="/systems/failures/hydraulic/system[1]/leakage_pressure_loss_rate">
+			<function>
+				<quotient>
+					<property>/systems/failures/hydraulic/system[1]/fluid-leak-pressure-max</property>
+					<value>36</value>
+				</quotient>
+			</function>
+		</fcs_function>
+
+		<actuator name="/systems/failures/hydraulic/system[1]/fluid-leak-pressure-max">
+            <input>/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure</input>
+            <rate_limit sense="decr">0</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure</rate_limit> 
+        </actuator>
+
+
+		<actuator name="/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal">
+            <input>/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-cmd</input>
+            <rate_limit sense="decr">0.25</rate_limit> 
+            <rate_limit sense="incr">0</rate_limit> 
+        </actuator>
+
+<!--System 2 -->
+
+  </channel> 
+
+	<channel name="Temperature" execrate="8">
+
+<!-- System 1 -->
+
+		<actuator name="/systems/hydraulic/system[1]/system_temperature-F-output">
+            <input>/systems/hydraulic/system[1]/system_temperature-F_max</input>
+            <rate_limit sense="decr">0.5</rate_limit> 
+            <rate_limit sense="incr">1</rate_limit> 
+        </actuator>
+		<switch name="/systems/hydraulic/system[1]/system_temperature-F_max">
+			<default value="/environment/temperature-degf"/>
+                                       "/systems/hydraulic/system[1]/system_temperature-F-output">
+			<test logic="OR" value="350">
+				/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure gt 50
+				/systems/hydraulic/system[1]/pumps/pump[2]/final_pressure gt 50
+			</test>
+		</switch>
+
+<!--System 2 -->
+
+	</channel>
+
+	<channel name="Accumulators" execrate="8">
+
+<!-- APU_1 starter accumulator -->
+
+		<switch name="/systems/hydraulic/accumulator[0]/pressure-psi">
+			<default value="4000"/>
+			<test logic="AND" value="4000">
+				/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure gt 1
+			</test>
+			<test logic="AND" value="0">
+				/engines/engine[4]/starter eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/accumulator[0]/pressure-psi-output">
+            <input>/systems/hydraulic/accumulator[0]/pressure-psi</input>
+            <rate_limit sense="decr">200</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure</rate_limit> 
+        </actuator>
+
+	</channel>
+
+	<channel name="Reservoirs" execrate="8">
+
+<!-- System 1-->
+
+		<switch name="/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-cmd">
+			<default value="9"/>
+			<test logic="AND" value="0">
+				/systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 1
+			</test>
+		</switch>
+
+<!--System 2 -->
+
+	</channel>
+
+</system>
