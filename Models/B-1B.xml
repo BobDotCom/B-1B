@@ -8,10 +8,40 @@ more to come :-)
 
   <path>b1b.ac</path>
 
+	<nasal>
+	  <load>
+		<![CDATA[
+			var looping = 1;
+			var loop = func {
+				var red = getprop("rendering/scene/diffuse/red");
+
+				# non-tied property for effect:
+				setprop("rendering/scene/diffuse/red-unbound", red);
+
+				# afterburner density:
+				setprop("sim/multiplay/b1b/ab-density",  1-red*0.90);
+
+				# color of afterburner:
+				# *0.5 is to prevent it from getting too white during night
+				setprop("/sim/multiplay/b1b/ab-r",  0.75+(0.25-red*0.25)*0.5);#red
+				setprop("/sim/multiplay/b1b/ab-g",  0.25+(0.75-red*0.75)*0.5);#green
+				setprop("/sim/multiplay/b1b/ab-b",  0.2+(0.4-red*0.4)*0.5);   #blue
+
+				if (looping) settimer(loop, 0.10);
+			}
+			loop();
+
+		]]>
+	  </load>
+	  <unload><![CDATA[
+		looping = 0;
+	  ]]></unload>
+	</nasal>
+
   <offsets>
 	  <x-m>25.0</x-m><!-- was 25 -->
 	  <y-m>0.0</y-m>
-          <z-m>0.0</z-m><!-- was 0.24 -->
+          <z-m>1.0</z-m><!-- was 0.24 -->
     <pitch-deg>0</pitch-deg>
   </offsets>
 
@@ -51,7 +81,60 @@ more to come :-)
 			  <pitch-deg>0</pitch-deg>
 		  </offsets>
 	  </offsets>
-  </model>
+  </model> 
+
+<animation> 
+ <type>select</type> 
+  <object-name>READYNWS</object-name> 
+   <condition>
+    <or> 
+    <equals> 
+      <property>sim/multiplay/generic/float[5]</property> 
+      <value>1</value> 
+     </equals> 
+     <and>
+    <equals> 
+      <property>controls/gear/nose-wheel-steering</property> 
+      <value>1</value> 
+     </equals>
+    <equals> 
+      <property>controls/gear/gear-down</property>
+      <value>1</value> 
+     </equals> 
+     </and>
+     </or>      
+    </condition> 
+  </animation>
+
+<animation> 
+ <type>select</type> 
+  <object-name>LATCHED</object-name> 
+   <condition> 
+    <equals> 
+     <property>/systems/refuel/contact</property> 
+      <value>1</value> 
+     </equals> 
+    </condition> 
+  </animation>
+
+<animation> 
+ <type>select</type> 
+  <object-name>DISC</object-name> 
+   <condition> 
+    <and>
+    <equals> 
+     <property>/systems/refuel/contact</property> 
+      <value>0</value> 
+     </equals>
+    </and> 
+    <and>
+    <equals> 
+      <property>sim/multiplay/generic/float[5]</property>  
+      <value>1</value> 
+     </equals>
+    </and>
+    </condition> 
+  </animation>
 
   <!-- trans parts -->
   <model>
@@ -66,6 +149,13 @@ more to come :-)
                   </offsets>
 	  </offsets>
   </model>
+
+  <effect>
+    <inherits-from>Aircraft/B-1B/Models/Effects/Refuelling-lights</inherits-from>
+    <object-name>bone_4.002</object-name> 
+   </effect>
+
+
 
 <!-- pushback -->
 
@@ -1245,6 +1335,12 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>rudder2</object-name>
 	 <object-name>rudder3</object-name>
+         <condition> 
+          <equals>
+           <property>controls/flight/yaw-switch</property>
+           <value>0</value> 
+          </equals> 
+         </condition>
 	 <property>controls/flight/rudder</property>
 	 <interpolation>
 		 <entry>
@@ -1557,7 +1653,7 @@ more to come :-)
 	      <axis>
 		      <x>0</x>
 		      <y>0</y>
-		      <z>1</z>
+		      <z>-1</z>
 	      </axis>
  </animation>
 
@@ -2787,6 +2883,12 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>elevator_left</object-name>
+         <condition>
+          <equals> 
+           <property>controls/flight/Roll-switch</property> 
+           <value>0</value> 
+          </equals>
+         </condition>
 	 <property>surface-positions/left-elevator-pos-norm</property>
 	 <factor>20</factor>
 	 <center>
@@ -2804,7 +2906,37 @@ more to come :-)
   <animation>
 	 <type>rotate</type>
 	 <object-name>elevator_right</object-name>
+         <condition>
+           <equals> 
+            <property>controls/flight/Roll-switch</property> 
+            <value>0</value> 
+           </equals>
+         </condition>
 	 <property>surface-positions/right-elevator-pos-norm</property>
+	 <factor>20</factor>
+	 <center>
+		 <x-m>15.70</x-m>
+		 <y-m>0.0</y-m>
+		 <z-m>2.70</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+  <animation>
+	 <type>rotate</type>
+	 <object-name>elevator_left</object-name>
+	 <object-name>elevator_right</object-name>
+         <condition> 
+           <equals> 
+            <property>controls/flight/Roll-switch</property> 
+            <value>1</value> 
+           </equals> 
+         </condition>
+	 <property>surface-positions/elevator-pos-norm</property>
 	 <factor>20</factor>
 	 <center>
 		 <x-m>15.70</x-m>
@@ -3357,354 +3489,35 @@ more to come :-)
  <!-- weapon system animation XXXXXX -->
 
  <animation>
-	 <type>rotate</type>
-	 <object-name>rot_launcher</object-name>
-	 <object-name>gbu-31</object-name>
-	 <object-name>gbu-31.001</object-name>
-	 <object-name>gbu-31.002</object-name>
-	 <object-name>gbu-31.003</object-name>
-	 <object-name>gbu-31.004</object-name>
-	 <object-name>gbu-31.005</object-name>
-	 <object-name>gbu-31.006</object-name>
-	 <object-name>gbu-31.007</object-name>
-	 <property>armament/bay0/launcher-pos-anim</property>
-
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>8.0</ind>
-			 <dep>360.0</dep>
-		 </entry>
-	 </interpolation>
-	 <center>
-		 <x-m>-15.20</x-m>
-		 <y-m>0.019</y-m>
-		 <z-m>-0.218</z-m>
-	 </center>
-	 <axis>
-		 <x>1</x>
-		 <y>0</y>
-		 <z>0</z>
-	 </axis>
-
- </animation>
-
- <animation>
 	 <type>select</type>
-	 <object-name>gbu-31</object-name>
+	 <object-name>Rotary_launcher</object-name>
 	 <condition>
-		 <equals>
-			 <property>armament/bay0/rack0</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.001</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay0/rack1</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.002</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay0/rack2</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.003</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay0/rack3</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.004</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay0/rack4</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.005</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay0/rack5</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.006</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay0/rack6</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.007</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay0/rack7</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
-
-
- <animation>
-	 <type>rotate</type>
-	 <object-name>rot_launcher.001</object-name>
-	 <object-name>gbu-31.015</object-name>
-	 <object-name>gbu-31.014</object-name>
-	 <object-name>gbu-31.013</object-name>
-	 <object-name>gbu-31.012</object-name>
-	 <object-name>gbu-31.011</object-name>
-	 <object-name>gbu-31.010</object-name>
-	 <object-name>gbu-31.009</object-name>
-	 <object-name>gbu-31.008</object-name>
-	 <property>armament/bay1/launcher-pos-anim</property>
-
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>8.0</ind>
-			 <dep>360.0</dep>
-		 </entry>
-	 </interpolation>
-	 <center>
-		 <x-m>-15.20</x-m>
-		 <y-m>0.019</y-m>
-		 <z-m>-0.218</z-m>
-	 </center>
-	 <axis>
-		 <x>1</x>
-		 <y>0</y>
-		 <z>0</z>
-	 </axis>
-
- </animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.015</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay1/rack0</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.014</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay1/rack1</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.013</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay1/rack2</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.012</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay1/rack3</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.011</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay1/rack4</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.010</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay1/rack5</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.009</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay1/rack6</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.008</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay1/rack7</property>
-			 <value>1.0</value>
-		 </equals>
+		 <greater-than>
+			 <property>sim/multiplay/generic/float[2]</property>
+			 <value>0.0</value>
+		 </greater-than>
 	 </condition>
  </animation>
 
  <animation>
-	 <type>rotate</type>
-	 <object-name>rot_launcher.002</object-name>
-	 <object-name>gbu-31.016</object-name>
-	 <object-name>gbu-31.017</object-name>
-	 <object-name>gbu-31.018</object-name>
-	 <object-name>gbu-31.019</object-name>
-	 <object-name>gbu-31.020</object-name>
-	 <object-name>gbu-31.021</object-name>
-	 <object-name>gbu-31.022</object-name>
-	 <object-name>gbu-31.023</object-name>
-	 <property>armament/bay2/launcher-pos-anim</property>
-
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>8.0</ind>
-			 <dep>360.0</dep>
-		 </entry>
-	 </interpolation>
-	 <center>
-		 <x-m>-15.20</x-m>
-		 <y-m>0.019</y-m>
-		 <z-m>-0.218</z-m>
-	 </center>
-	 <axis>
-		 <x>1</x>
-		 <y>0</y>
-		 <z>0</z>
-	 </axis>
-
+	 <type>select</type>
+	 <object-name>Rotary_launcher.001</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>sim/multiplay/generic/float[3]</property>
+			 <value>0.0</value>
+		 </greater-than>
+	 </condition>
  </animation>
 
  <animation>
 	 <type>select</type>
-	 <object-name>gbu-31.016</object-name>
+	 <object-name>Rotary_launcher.002</object-name>
 	 <condition>
-		 <equals>
-			 <property>armament/bay2/rack0</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.017</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay2/rack1</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.018</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay2/rack2</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.019</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay2/rack3</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.020</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay2/rack4</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.021</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay2/rack5</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.022</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay2/rack6</property>
-			 <value>1.0</value>
-		 </equals>
-	 </condition>
- </animation>
- <animation>
-	 <type>select</type>
-	 <object-name>gbu-31.023</object-name>
-	 <condition>
-		 <equals>
-			 <property>armament/bay2/rack7</property>
-			 <value>1.0</value>
-		 </equals>
+		 <greater-than>
+			 <property>sim/multiplay/generic/float[4]</property>
+			 <value>0.0</value>
+		 </greater-than>
 	 </condition>
  </animation>
 

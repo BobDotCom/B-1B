@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList> 
+
+<!-- INS computer -->
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+         <condition> 
+          <equals>
+          <property>sim/failure-manager/systems/computers/INS/heading/failure-level</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       </enable>
+       <input>
+       <property>orientation/heading-deg</property> 
+      </input>
+     <output>systems/computers/INS/heading</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+         <condition> 
+          <equals>
+          <property>sim/failure-manager/systems/computers/INS/pitch/failure-level</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       </enable>
+       <input>
+       <property>orientation/pitch-deg</property> 
+      </input>
+     <output>systems/computers/INS/pitch</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+         <condition> 
+          <equals>
+          <property>sim/failure-manager/systems/computers/INS/roll/failure-level</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       </enable>
+       <input>
+       <property>orientation/roll-deg</property> 
+      </input>
+     <output>systems/computers/INS/roll</output>
+  </filter>
+
+<!-- GSS computer -->
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+         <condition> 
+          <equals>
+          <property>sim/failure-manager/systems/computers/GSS/heading/failure-level</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       </enable>
+       <input>
+       <property>orientation/heading-deg</property> 
+      </input>
+     <output>systems/computers/GSS/heading</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+         <condition> 
+          <equals>
+          <property>sim/failure-manager/systems/computers/GSS/pitch/failure-level</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       </enable>
+       <input>
+       <property>orientation/pitch-deg</property> 
+      </input>
+     <output>systems/computers/GSS/pitch</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+         <condition> 
+          <equals>
+          <property>sim/failure-manager/systems/computers/GSS/roll/failure-level</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       </enable>
+       <input>
+       <property>orientation/roll-deg</property> 
+      </input>
+     <output>systems/computers/GSS/roll</output>
+  </filter>
+
+<!-- ADC computers -->
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC1/airspeed/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>velocities/airspeed-kt</property> 
+        </input>
+        <output>systems/computers/ADC1/airspeed</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC1/groundspeed/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>velocities/groundspeed-kt</property> 
+        </input>
+        <output>systems/computers/ADC1/groundspeed</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC1/mach/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>velocities/mach</property> 
+        </input>
+        <output>systems/computers/ADC1/mach</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC1/verticalspeed/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>velocities/vertical-speed</property> 
+        </input>
+        <output>systems/computers/ADC1/verticalspeed</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC1/baro_altitude/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/altimeter/indicated-altitude-ft</property> 
+        </input>
+        <output>systems/computers/ADC1/baro_altitude</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC1/Glideslope-lateral-deflection/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/nav[0]/gs-needle-deflection</property> 
+        </input>
+        <output>systems/computers/ADC1/Glideslope-lateral-deflection</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC2/airspeed/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>velocities/airspeed-kt</property> 
+        </input>
+        <output>systems/computers/ADC2/airspeed</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC2/groundspeed/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>velocities/groundspeed-kt</property> 
+        </input>
+        <output>systems/computers/ADC2/groundspeed</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC2/mach/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>velocities/mach</property> 
+        </input>
+        <output>systems/computers/ADC2/mach</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC2/verticalspeed/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>velocities/vertical-speed</property> 
+        </input>
+        <output>systems/computers/ADC2/verticalspeed</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC2/baro_altitude/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/altimeter/indicated-altitude-ft</property> 
+        </input>
+        <output>systems/computers/ADC2/baro_altitude</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>sim/failure-manager/systems/computers/ADC2/Glideslope-lateral-deflection/failure-level</property>
+            <value>0</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/nav[0]/gs-needle-deflection</property> 
+        </input>
+        <output>systems/computers/ADC2/Glideslope-lateral-deflection</output>
+  </filter>
+
+<!-- Fuel-flow-gauge -->
+
+  <filter>
+     <type>gain</type>
+     <gain>1.0</gain> 
+      <input>
+       <expression>  
+        <sum> 
+         <property>engines/engine[0]/fuel-flow_pph</property>
+         <property>engines/engine[1]/fuel-flow_pph</property>
+         <property>engines/engine[2]/fuel-flow_pph</property>
+         <property>engines/engine[3]/fuel-flow_pph</property>
+        </sum>
+       </expression> 
+       </input>
+       <output>engines/full_fuel_flow</output>
+    </filter>
+
+	<filter> <!-- Heading error computer -->
+		<name>Heading/Nav Error Deg</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>autopilot/route-manager/active</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<property>autopilot/settings/true-heading-deg</property>
+			<offset>
+				<property>/orientation/heading-magnetic-deg</property>
+				<scale>-1.0</scale>
+			</offset>
+		</input>
+		<output>autopilot/settings/offset-heading</output>
+		<period>
+			<min>-180</min>
+			<max>180</max>
+		</period>
+	</filter>
+
+	<filter>
+		<name>Tacan Error Deg</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>instrumentation/tacan/serviceable</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<property>instrumentation/tacan/indicated-bearing-true-deg</property>
+			<offset>
+				<property>/orientation/heading-magnetic-deg</property>
+				<scale>-1.0</scale>
+			</offset>
+		</input>
+		<output>instrumentation/tacan/indicated-bearing-offset-deg</output>
+		<period>
+			<min>-180</min>
+			<max>180</max>
+		</period>
+	</filter>
+
+<!-- Heading Indicator -->
+<!-- Miles drums -->
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain> 
+         <enable>
+          <condition>
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0.2</value>
+           </equals> 
+           <equals>
+            <property>autopilot/route-manager/active</property>
+            <value>1</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>autopilot/route-manager/wp/dist</property> 
+        </input> 
+        <output>instrumentation/heading-indicator/miles-drums</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>0.001</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0.4</value>
+           </equals>
+           <equals>
+            <property>instrumentation/nav/in-range</property>
+            <value>1</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/nav/nav-distance</property> 
+        </input>
+        <output>instrumentation/heading-indicator/miles-drums</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition>
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0.5</value>
+           </equals> 
+           <equals>
+            <property>instrumentation/tacan/serviceable</property>
+            <value>1</value>
+           </equals>
+           <equals>
+            <property>instrumentation/tacan/in-range</property> 
+            <value>1</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/tacan/indicated-distance-nm</property> 
+        </input>
+        <output>instrumentation/heading-indicator/miles-drums</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>0.000621</gain>
+        <input>
+         <property>instrumentation/nav/nav-distance</property> 
+        </input>
+        <output>instrumentation/heading-indicator/miles-drums-miles-conversion</output>
+  </filter>
+
+<!-- Heading Indicator -->
+<!-- bearing needle -->
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition> 
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0.5</value>
+           </equals> 
+           <equals>
+            <property>instrumentation/tacan/serviceable</property>
+            <value>1</value>
+           </equals>
+           <equals>
+            <property>instrumentation/tacan/in-range</property> 
+            <value>1</value>
+           </equals> 
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/tacan/indicated-bearing-offset-deg</property> 
+        </input>
+        <output>instrumentation/heading-indicator/bearing-needle</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition>
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0.2</value>
+           </equals> 
+           <equals>
+            <property>autopilot/route-manager/active</property>
+            <value>1</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>autopilot/settings/offset-heading</property> 
+        </input>
+        <output>instrumentation/heading-indicator/bearing-needle</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <enable>
+          <condition>
+           <equals>
+            <property>controls/switches/fltdir</property>
+            <value>0.4</value>
+           </equals> 
+           <equals>
+            <property>instrumentation/adf/in-range</property>
+            <value>1</value>
+           </equals>  
+          </condition>
+         </enable>
+        <input>
+         <property>instrumentation/adf/indicated-bearing-deg</property> 
+        </input>
+        <output>instrumentation/heading-indicator/bearing-needle</output>
+  </filter> 
+
+    <logic>
+     <input> 
+      <equals>          
+       <property>controls/switches/fltdir</property>
+       <value>0.6</value> 
+      </equals>               
+     </input>
+     <output>instrumentation/nav/back-course-btn</output>
+    </logic>
+
+<!-- IFF panel -->
+
+    <logic>
+     <input> 
+      <equals>          
+       <property>instrumentation/iff/master-switch</property>
+       <value>3</value> 
+      </equals>               
+      <greater-than>      
+       <property>instrumentation/iff/M.1_switch</property>
+       <value>-1</value> 
+      </greater-than> 
+     </input>
+     <output>instrumentation/iff/power</output>
+    </logic>
+
+    <logic>
+     <input> 
+      <equals>          
+       <property>instrumentation/iff/master-switch</property>
+       <value>3</value> 
+      </equals>               
+      <greater-than>      
+       <property>instrumentation/iff/M.3A_switch</property>
+       <value>-1</value> 
+      </greater-than> 
+     </input>
+     <output>instrumentation/transponder/serviceable</output>
+    </logic>
+
+
+</PropertyList>

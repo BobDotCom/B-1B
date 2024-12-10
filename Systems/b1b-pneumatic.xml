@@ -1,0 +1,362 @@
+<?xml version="1.0"?>
+<!-- Heavily inspired by legoboyvdlp/A320-family-->
+<system name="B-1B Pneumatic">
+	<channel name="Startup" execrate="8">
+
+		<switch name="/systems/startup-power-valves">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/sim/time/elapsed-sec lt 10
+			</test>
+		</switch>
+
+	</channel>
+    <channel name="valves" execrate="8">
+		<!-- APU -->
+		<switch name="/systems/pneumatics/valves/apu[0]/bleed-valve-cmd">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/engines/engine[4]/n1 ge 95
+				/controls/apu/apu[0]/bleed eq 1
+			</test>
+		</switch>
+		<switch name="/systems/pneumatics/valves/apu[1]/bleed-valve-cmd">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/engines/engine[5]/n1 ge 95
+				/controls/apu/apu[1]/bleed eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/pneumatics/valves/apu[0]/bleed-valve-power">
+			<default value="1"/>
+			<test logic="AND" value="1">
+				/systems/startup-power-valves eq 1
+			</test>
+			<test logic="AND" value="1">
+				<!-- TODO: Electrical -->
+			</test>
+		</switch>
+		<switch name="/systems/pneumatics/valves/apu[1]/bleed-valve-power">
+			<default value="1"/>
+			<test logic="AND" value="1">
+				/systems/startup-power-valves eq 1
+			</test>
+			<test logic="AND" value="1">
+				<!-- TODO: Electrical -->
+			</test>
+		</switch>
+
+		<actuator name="/systems/pneumatics/valves/apu[0]/bleed-valve">
+			<input>/systems/pneumatics/valves/apu[0]/bleed-valve-cmd</input>
+			<rate_limit>/systems/pneumatics/valves/apu[0]/bleed-valve-power</rate_limit>
+		</actuator>
+		<actuator name="/systems/pneumatics/valves/apu[1]/bleed-valve">
+			<input>/systems/pneumatics/valves/apu[1]/bleed-valve-cmd</input>
+			<rate_limit>/systems/pneumatics/valves/apu[1]/bleed-valve-power</rate_limit>
+		</actuator>
+
+		<!-- Crossbleed -->
+		<switch name="/systems/pneumatics/valves/apu-crossbleed-valve-cmd">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/controls/apu/crossbleed eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/pneumatics/valves/apu-crossbleed-valve-power">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/systems/startup-power-valves eq 1
+			</test>
+			<test logic="AND" value="0.2">
+				<!-- TODO: Electrical -->
+			</test>
+		</switch>
+
+		<actuator name="/systems/pneumatics/valves/apu-crossbleed-valve">
+			<input>/systems/pneumatics/valves/apu-crossbleed-valve-cmd</input>
+			<rate_limit>/systems/pneumatics/valves/apu-crossbleed-valve-power</rate_limit>
+		</actuator>
+    </channel>
+	<channel name="Source PSI" execrate="8">
+
+        <fcs_function name="/systems/pneumatics/source/apu[0]/psi">
+            <function>
+				<ifthen>
+					<gt>
+						<property>/position/altitude-ft</property>
+						<value>20000</value>
+					</gt>
+					<value>0</value>
+					<ifthen>
+						<gt>
+							<property>/engines/engine[4]/n1</property>
+							<value>92</value>
+						</gt>
+						<difference>
+							<interpolate1d>
+								<property>/position/altitude-ft</property>
+								<value>0</value>
+								<table>
+									<independentVar lookup="row">/engines/engine[4]/n1</independentVar>
+									<independentVar lookup="column">/systems/pneumatics/valves/apu[0]/bleed-valve</independentVar>
+									<tableData>
+											  0    1
+										92    0    0
+										95   16.7  2.7
+										100  58.7  50.7
+									</tableData>
+								</table>
+								<value>10000</value>
+								<table>
+									<independentVar lookup="row">/engines/engine[4]/n1</independentVar>
+									<independentVar lookup="column">/systems/pneumatics/valves/apu[0]/bleed-valve</independentVar>
+									<tableData>
+											  0    1
+										92    0    0
+										95    6.7  0.1
+										100  48.7  40.7
+									</tableData>
+								</table>
+								<value>15000</value>
+								<table>
+									<independentVar lookup="row">/engines/engine[4]/n1</independentVar>
+									<independentVar lookup="column">/systems/pneumatics/valves/apu[0]/bleed-valve</independentVar>
+									<tableData>
+											  0    1
+										92    0    0
+										95    2.7  0
+										100  37.7  32.7
+									</tableData>
+								</table>
+							</interpolate1d>
+							<quotient>
+								<property>/systems/static[0]/pressure-inhg</property>
+								<value>2.036</value>
+							</quotient>
+						</difference>
+						<value>0</value>
+					</ifthen>
+				</ifthen>
+            </function>
+			<clipto>
+				<min>0</min>
+				<max>99999999</max>
+			</clipto>
+        </fcs_function>
+		<fcs_function name="/systems/pneumatics/source/apu[1]/psi">
+            <function>
+				<ifthen>
+					<gt>
+						<property>/position/altitude-ft</property>
+						<value>20000</value>
+					</gt>
+					<value>0</value>
+					<ifthen>
+						<gt>
+							<property>/engines/engine[5]/n1</property>
+							<value>92</value>
+						</gt>
+						<difference>
+							<interpolate1d>
+								<property>/position/altitude-ft</property>
+								<value>0</value>
+								<table>
+									<independentVar lookup="row">/engines/engine[5]/n1</independentVar>
+									<independentVar lookup="column">/systems/pneumatics/valves/apu[1]/bleed-valve</independentVar>
+									<tableData>
+											  0    1
+										92    0    0
+										95   16.7  2.7
+										100  58.7  50.7
+									</tableData>
+								</table>
+								<value>10000</value>
+								<table>
+									<independentVar lookup="row">/engines/engine[5]/n1</independentVar>
+									<independentVar lookup="column">/systems/pneumatics/valves/apu[1]/bleed-valve</independentVar>
+									<tableData>
+											  0    1
+										92    0    0
+										95    6.7  0.1
+										100  48.7  40.7
+									</tableData>
+								</table>
+								<value>15000</value>
+								<table>
+									<independentVar lookup="row">/engines/engine[5]/n1</independentVar>
+									<independentVar lookup="column">/systems/pneumatics/valves/apu[1]/bleed-valve</independentVar>
+									<tableData>
+											  0    1
+										92    0    0
+										95    2.7  0
+										100  37.7  32.7
+									</tableData>
+								</table>
+							</interpolate1d>
+							<quotient>
+								<property>/systems/static[0]/pressure-inhg</property>
+								<value>2.036</value>
+							</quotient>
+						</difference>
+						<value>0</value>
+					</ifthen>
+				</ifthen>
+            </function>
+			<clipto>
+				<min>0</min>
+				<max>99999999</max>
+			</clipto>
+        </fcs_function>
+		<switch name="/systems/pneumatics/psi/engine[0]/src">
+			<default value="/systems/pneumatics/psi/engine[0]/src"/>
+			<test logic="AND" value="1"> <!-- Left APU -->
+				/systems/pneumatics/source/apu[0]/psi ne 0
+				/systems/pneumatics/valves/apu[0]/bleed-valve ge 0.5
+			</test>
+			<test logic="AND" value="2"> <!-- Right APU -->
+				/systems/pneumatics/source/apu[1]/psi ne 0
+				/systems/pneumatics/valves/apu[1]/bleed-valve ge 0.5
+				/systems/pneumatics/valves/apu-crossbleed-valve ne 0
+			</test>
+			<test logic="AND" value="0"> <!-- manually cancel -->
+				/systems/pneumatics/source/apu[0]/psi ne 0
+				/systems/pneumatics/valves/apu[0]/bleed-valve eq 0
+			</test>
+			<test logic="AND" value="0"> <!-- manually cancel -->
+				/systems/pneumatics/source/apu[1]/psi ne 0
+				/systems/pneumatics/valves/apu-crossbleed-valve eq 0
+			</test>
+		</switch>
+		<switch name="/systems/pneumatics/psi/engine[1]/src">
+			<default value="/systems/pneumatics/psi/engine[1]/src"/>
+			<test logic="AND" value="1"> <!-- Left APU -->
+				/systems/pneumatics/source/apu[0]/psi ne 0
+				/systems/pneumatics/valves/apu[0]/bleed-valve ge 0.5
+			</test>
+			<test logic="AND" value="2"> <!-- Right APU -->
+				/systems/pneumatics/source/apu[1]/psi ne 0
+				/systems/pneumatics/valves/apu[1]/bleed-valve ge 0.5
+				/systems/pneumatics/valves/apu-crossbleed-valve ne 0
+			</test>
+			<test logic="AND" value="0"> <!-- manually cancel -->
+				/systems/pneumatics/source/apu[0]/psi ne 0
+				/systems/pneumatics/valves/apu[0]/bleed-valve eq 0
+			</test>
+			<test logic="AND" value="0"> <!-- manually cancel -->
+				/systems/pneumatics/source/apu[1]/psi ne 0
+				/systems/pneumatics/valves/apu-crossbleed-valve eq 0
+			</test>
+		</switch>
+		<switch name="/systems/pneumatics/psi/engine[2]/src">
+			<default value="/systems/pneumatics/psi/engine[2]/src"/>
+			<test logic="AND" value="1"> <!-- Right APU -->
+				/systems/pneumatics/source/apu[1]/psi ne 0
+				/systems/pneumatics/valves/apu[1]/bleed-valve ge 0.5
+			</test>
+			<test logic="AND" value="2"> <!-- Left APU -->
+				/systems/pneumatics/source/apu[0]/psi ne 0
+				/systems/pneumatics/valves/apu[0]/bleed-valve ge 0.5
+				/systems/pneumatics/valves/apu-crossbleed-valve ne 0
+			</test>
+			<test logic="AND" value="0"> <!-- manually cancel -->
+				/systems/pneumatics/source/apu[1]/psi ne 0
+				/systems/pneumatics/valves/apu[1]/bleed-valve eq 0
+			</test>
+			<test logic="AND" value="0"> <!-- manually cancel -->
+				/systems/pneumatics/source/apu[0]/psi ne 0
+				/systems/pneumatics/valves/apu-crossbleed-valve eq 0
+			</test>
+		</switch>
+		<switch name="/systems/pneumatics/psi/engine[3]/src">
+			<default value="/systems/pneumatics/psi/engine[3]/src"/>
+			<test logic="AND" value="1"> <!-- Right APU -->
+				/systems/pneumatics/source/apu[1]/psi ne 0
+				/systems/pneumatics/valves/apu[1]/bleed-valve ge 0.5
+			</test>
+			<test logic="AND" value="2"> <!-- Left APU -->
+				/systems/pneumatics/source/apu[0]/psi ne 0
+				/systems/pneumatics/valves/apu[0]/bleed-valve ge 0.5
+				/systems/pneumatics/valves/apu-crossbleed-valve ne 0
+			</test>
+			<test logic="AND" value="0"> <!-- manually cancel -->
+				/systems/pneumatics/source/apu[1]/psi ne 0
+				/systems/pneumatics/valves/apu[1]/bleed-valve eq 0
+			</test>
+			<test logic="AND" value="0"> <!-- manually cancel -->
+				/systems/pneumatics/source/apu[0]/psi ne 0
+				/systems/pneumatics/valves/apu-crossbleed-valve eq 0
+			</test>
+		</switch>
+		<fcs_function name="/systems/pneumatics/psi/engine[0]/psi">
+			<function>
+				<switch>
+					<p>/systems/pneumatics/psi/engine[0]/src</p>
+					<v>0</v>
+					<product>
+						<property>/systems/pneumatics/valves/apu[0]/bleed-valve</property>
+						<property>/systems/pneumatics/source/apu[0]/psi</property>
+					</product>
+					<product>
+						<property>/systems/pneumatics/valves/apu[1]/bleed-valve</property>
+						<property>/systems/pneumatics/source/apu[1]/psi</property>
+						<property>/systems/pneumatics/valves/apu-crossbleed-valve</property>
+					</product>
+				</switch>
+			</function>
+		</fcs_function>
+		<fcs_function name="/systems/pneumatics/psi/engine[1]/psi">
+			<function>
+				<switch>
+					<p>/systems/pneumatics/psi/engine[1]/src</p>
+					<v>0</v>
+					<product>
+						<property>/systems/pneumatics/valves/apu[0]/bleed-valve</property>
+						<property>/systems/pneumatics/source/apu[0]/psi</property>
+					</product>
+					<product>
+						<property>/systems/pneumatics/valves/apu[1]/bleed-valve</property>
+						<property>/systems/pneumatics/source/apu[1]/psi</property>
+						<property>/systems/pneumatics/valves/apu-crossbleed-valve</property>
+					</product>
+				</switch>
+			</function>
+		</fcs_function>
+		<fcs_function name="/systems/pneumatics/psi/engine[2]/psi">
+			<function>
+				<switch>
+					<p>/systems/pneumatics/psi/engine[2]/src</p>
+					<v>0</v>
+					<product>
+						<property>/systems/pneumatics/valves/apu[1]/bleed-valve</property>
+						<property>/systems/pneumatics/source/apu[1]/psi</property>
+					</product>
+					<product>
+						<property>/systems/pneumatics/valves/apu[0]/bleed-valve</property>
+						<property>/systems/pneumatics/source/apu[0]/psi</property>
+						<property>/systems/pneumatics/valves/apu-crossbleed-valve</property>
+					</product>
+				</switch>
+			</function>
+		</fcs_function>
+		<fcs_function name="/systems/pneumatics/psi/engine[3]/psi">
+			<function>
+				<switch>
+					<p>/systems/pneumatics/psi/engine[3]/src</p>
+					<v>0</v>
+					<product>
+						<property>/systems/pneumatics/valves/apu[1]/bleed-valve</property>
+						<property>/systems/pneumatics/source/apu[1]/psi</property>
+					</product>
+					<product>
+						<property>/systems/pneumatics/valves/apu[0]/bleed-valve</property>
+						<property>/systems/pneumatics/source/apu[0]/psi</property>
+						<property>/systems/pneumatics/valves/apu-crossbleed-valve</property>
+					</product>
+				</switch>
+			</function>
+		</fcs_function>
+
+	</channel>
+</system>

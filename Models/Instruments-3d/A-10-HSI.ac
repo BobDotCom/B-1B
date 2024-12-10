@@ -5,7 +5,7 @@ MATERIAL "ac3dmat1.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000
 MATERIAL "ac3dmat1.003" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.000
 OBJECT world
 name "Blender_exporter_v4.1__A-10-HSI.ac"
-kids 1
+kids 2
 OBJECT group
 name "A-10-HSI"
 kids 2
@@ -365,40 +365,7 @@ refs 3
 kids 0
 OBJECT group
 name "hsi"
-kids 2
-OBJECT poly
-name "bearing-needle-1"
-data 21
-bearing-needle-1.mesh
-crease 45.0
-texture "A-10-HSI-mount.png"
-numvert 9
--0.00182 0.04502 -0.00143
--0.00182 0.03989 -0.00154
--0.00182 0.03977 0.00173
--0.00182 0.0449 0.00183
--0.00182 0.04746 0.0002
--0.00182 -0.04025 -0.00154
--0.00182 -0.04025 0.00163
--0.00182 -0.04674 0.00163
--0.00182 -0.04674 -0.00154
-numsurf 2
-SURF 0X10
-mat 0
-refs 5
-4 0.541991 0.142584
-3 0.525193 0.116872
-2 0.526243 0.065448
-1 0.559839 0.066616
-0 0.558789 0.118041
-SURF 0X10
-mat 0
-refs 4
-5 0.559879 0.069489
-6 0.526112 0.069489
-7 0.526112 0.00114
-8 0.559879 0.00114
-kids 0
+kids 1
 OBJECT poly
 name "HSI-compass-card"
 data 21
@@ -579,7 +546,7 @@ refs 3
 kids 0
 OBJECT group
 name "static"
-kids 14
+kids 11
 OBJECT poly
 name "course-drum-1"
 data 18
@@ -639,66 +606,6 @@ refs 4
 3 0.800372 0.719127
 2 0.800372 0.999281
 0 0.260014 0.999281
-kids 0
-OBJECT poly
-name "ILS-miles-drum-1"
-data 21
-miles-drum-1.mesh.001
-crease 45.0
-texture "numbers.png"
-numvert 4
--0.00234 0.02521 0.0449
--0.00241 0.04162 0.0449
--0.00234 0.02521 0.04946
--0.00241 0.04162 0.04946
-numsurf 1
-SURF 0X10
-mat 2
-refs 4
-2 0.260014 0.719127
-0 0.800372 0.719127
-1 0.800372 0.999281
-3 0.260014 0.999281
-kids 0
-OBJECT poly
-name "ILS-miles-drum-2"
-data 21
-miles-drum-2.mesh.001
-crease 45.0
-texture "numbers.png"
-numvert 4
--0.00241 0.04162 0.05438
--0.00234 0.02521 0.05438
--0.00241 0.04162 0.0497
--0.00234 0.02521 0.0497
-numsurf 1
-SURF 0X10
-mat 2
-refs 4
-1 0.260014 0.719127
-3 0.800372 0.719127
-2 0.800372 0.999281
-0 0.260014 0.999281
-kids 0
-OBJECT poly
-name "ILS-miles-drum-3"
-data 21
-miles-drum-3.mesh.001
-crease 45.0
-texture "numbers.png"
-numvert 4
--0.00234 0.02521 0.05461
--0.00241 0.04162 0.05462
--0.00234 0.02521 0.05921
--0.00241 0.04162 0.05921
-numsurf 1
-SURF 0X10
-mat 2
-refs 4
-2 0.260014 0.719127
-0 0.800372 0.719127
-1 0.800372 0.999281
-3 0.260014 0.999281
 kids 0
 OBJECT poly
 name "lubber-line"
@@ -2537,4 +2444,37 @@ refs 4
 93 0.975138 0.442831
 4 1 0.18753
 6 1 0.974705
+kids 0
+OBJECT poly
+name "bearing-needle-1"
+data 21
+bearing-needle-1.mesh
+crease 45.0
+texture "A-10-HSI-mount.png"
+numvert 9
+-0.00182 0.04502 -0.00143
+-0.00182 0.03989 -0.00154
+-0.00182 0.03977 0.00173
+-0.00182 0.0449 0.00183
+-0.00182 0.04746 0.0002
+-0.00182 -0.04025 -0.00154
+-0.00182 -0.04025 0.00163
+-0.00182 -0.04674 0.00163
+-0.00182 -0.04674 -0.00154
+numsurf 2
+SURF 0X10
+mat 0
+refs 5
+4 0.541991 0.142584
+3 0.525193 0.116872
+2 0.526243 0.065448
+1 0.559839 0.066616
+0 0.558789 0.118041
+SURF 0X10
+mat 0
+refs 4
+5 0.559879 0.069489
+6 0.526112 0.069489
+7 0.526112 0.00114
+8 0.559879 0.00114
 kids 0

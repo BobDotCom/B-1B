@@ -194,68 +194,112 @@ maggse
  </animation>
 
  <animation>
-	<type>knob</type>
-	<object-name>VFP_set</object-name>
-	<property>autopilot/settings/vertical-speed-fpm</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>-250.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>-1.0</x>
-		<y> 0.0</y>
-		<z> 0.0</z>
-	</axis>
-	<center>
-		<x-m> 0.00747</x-m>
-		<y-m>-0.2589</y-m>
-		<z-m>-0.08963</z-m>
-	</center>
-	<action>
-		<binding>
-			<command>property-adjust</command>
-			<property>autopilot/settings/vertical-speed-fpm</property>
-                        <min>-10000</min>
-                        <max> 10000</max>
-                       <factor>250</factor>
-		</binding>
-	</action>
+	 <type>textranslate</type>
+	 <object-name>Baro_pressure10</object-name>
+	 <property>instrumentation/altimeter/setting-inhg</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>Baro_pressure01</object-name>
+	 <property>instrumentation/altimeter/setting-inhg</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>Baro_pressure0.1</object-name>
+	 <property>instrumentation/altimeter/setting-inhg</property>
+	 <factor>1.0</factor>
+	 <step>0.1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>Baro_pressure0.01</object-name>
+	 <property>instrumentation/altimeter/setting-inhg</property>
+	 <factor>10.0</factor>
+	 <step>0.01</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
 </animation>
 
-  <animation>
-	 <type>knob</type>
-	 <object-name>VFP_set</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>autopilot/settings/vertical-speed-fpm</property>
-			 <step>100</step>
-			 <min>-10000</min>
-			 <max>10000</max>
-		 </binding>
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>autopilot/settings/vertical-speed-fpm</property>
-			 <step>-100</step>
-			 <min>-10000</min>
-			 <max> 10000</max>
-		 </binding>
-	 </action>
- </animation>
+
+
+<animation>
+	<type>rotate</type>
+	<object-name>VFP_set</object-name>
+	 <interpolation>
+		 <entry>
+			 <ind> 21.0</ind>
+			 <dep> 0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind> 36.0</ind>
+			 <dep> 360.0</dep>
+		 </entry>
+	 </interpolation>
+        <center>
+         <x>0.0055</x> 
+         <y>-0.2618</y> 
+         <z>-0.08966</z>
+        </center>
+        <axis>
+	 <x>1</x>
+	 <y>0</y>
+         <z>0</z>
+	</axis>
+</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>VFP_set</object-name>
+		  <action>
+		    <button>4</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>instrumentation/altimeter/setting-inhg</property>
+		      <step>0.01</step>
+		      <min>21</min>
+		      <max>36</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+		  <action>
+		    <button>3</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>instrumentation/altimeter/setting-inhg</property>
+		      <step>-0.01</step>
+		      <min>21</min>
+		      <max>36</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+	</animation>
 
  <animation>
 	 <type>material</type>

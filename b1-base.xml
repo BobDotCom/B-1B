@@ -24,12 +24,18 @@ B-1B set file.
             <path>/sim/aircraft-class</path>
             <path>/sim/aircraft-operator</path>
         </aircraft-data>
+		<previews>
+		    <preview>
+			<type>panel</type>
+			<splash type="bool">true</splash>
+			<path>bone.png</path>
+		    </preview>
+		</previews>
         <startup>
             <splash-texture>Aircraft/B-1B/bone.png</splash-texture>
         </startup>
 
-        <!-- TODO: Migrate to JSBSim -->
-        <flight-model>yasim</flight-model>
+        <flight-model>jsb</flight-model>
         <status>alpha</status>
         <rating>
             <FDM type="int">3</FDM>
@@ -91,7 +97,7 @@ B-1B set file.
                 <name>Zorka</name>
             </maintainer>
         </maintainers>
-        <aero>B-1B-yasim</aero>
+        <aero>B-1B-aero</aero>
         <fuel-fraction>0.65</fuel-fraction>
 
         <urls>
@@ -107,11 +113,11 @@ B-1B set file.
         <view n="0">
             <internal archive="y">true</internal>
             <config>
-                <x-offset-m archive="y">-0.53</x-offset-m><!-- left-/right+ -0.67-->
-                <y-offset-m archive="y">1.20</y-offset-m><!-- up+/down- 1.37-->
-                <z-offset-m archive="y">7.12</z-offset-m><!-- back+ 7.15-->
+                <x-offset-m archive="y">-0.54</x-offset-m><!-- left-/right+ -0.67-->
+                <y-offset-m archive="y">2.15</y-offset-m><!-- up+/down- 1.15-->
+                <z-offset-m archive="y">7.05</z-offset-m><!-- back+ 7.15-->
                 <pitch-offset-deg>-6</pitch-offset-deg>
-                <default-field-of-view-deg>70.7</default-field-of-view-deg>
+                <default-field-of-view-deg>92.1</default-field-of-view-deg>
             </config>
         </view>
         <view n="101">
@@ -132,7 +138,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">70.7</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">92.1</default-field-of-view-deg>
                 <default-pitch-deg type="double">0</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -143,10 +149,10 @@ B-1B set file.
                 <back-right-direction-deg type="double">225</back-right-direction-deg>
                 <right-direction-deg type="double">270</right-direction-deg>
                 <front-right-direction-deg type="double">315</front-right-direction-deg>
-                <x-offset-m archive="y">0.5</x-offset-m>
-                <y-offset-m archive="y">1.14</y-offset-m>
-                <z-offset-m archive="y">7.12</z-offset-m>
-                <pitch-offset-deg>0</pitch-offset-deg>
+                <x-offset-m archive="y">0.56</x-offset-m>
+                <y-offset-m archive="y">2.15</y-offset-m>
+                <z-offset-m archive="y">7.05</z-offset-m>
+                <pitch-offset-deg>-6</pitch-offset-deg>
                 <default-field-of-view-deg>55</default-field-of-view-deg>
             </config>
         </view>
@@ -159,7 +165,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">84.5</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">92.1</default-field-of-view-deg>
                 <default-pitch-deg type="double">0</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -171,8 +177,8 @@ B-1B set file.
                 <right-direction-deg type="double">270</right-direction-deg>
                 <front-right-direction-deg type="double">315</front-right-direction-deg>
                 <x-offset-m archive="y">0.00</x-offset-m>
-                <y-offset-m archive="y">1.14</y-offset-m>
-                <z-offset-m archive="y">9.50</z-offset-m>
+                <y-offset-m archive="y">2.35</y-offset-m>
+                <z-offset-m archive="y">9.45</z-offset-m>
                 <pitch-offset-deg>0</pitch-offset-deg>
                 <default-field-of-view-deg>55</default-field-of-view-deg>
             </config>
@@ -186,7 +192,7 @@ B-1B set file.
                 <from-model type="bool">true</from-model>
                 <from-model-idx type="int">0</from-model-idx>
                 <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
-                <default-field-of-view-deg type="double">69.3</default-field-of-view-deg>
+                <default-field-of-view-deg type="double">68.4</default-field-of-view-deg>
                 <default-pitch-deg type="double">-5</default-pitch-deg>
                 <default-heading-deg type="double">0</default-heading-deg>
                 <front-direction-deg type="double">0</front-direction-deg>
@@ -198,8 +204,8 @@ B-1B set file.
                 <right-direction-deg type="double">270</right-direction-deg>
                 <front-right-direction-deg type="double">315</front-right-direction-deg>
                 <x-offset-m archive="y">0.65</x-offset-m>
-                <y-offset-m archive="y">1.28</y-offset-m>
-                <z-offset-m archive="y">9.60</z-offset-m>
+                <y-offset-m archive="y">2.28</y-offset-m>
+                <z-offset-m archive="y">9.8</z-offset-m>
                 <pitch-offset-deg>0</pitch-offset-deg>
                 <default-field-of-view-deg>55</default-field-of-view-deg>
             </config>
@@ -317,6 +323,10 @@ B-1B set file.
 
         <multiplay>
             <generic>
+                <bool n="0" type="bool" alias="/engines/engine[0]/augmentation"/>
+                <bool n="1" type="bool" alias="/engines/engine[1]/augmentation"/>
+                <bool n="2" type="bool" alias="/engines/engine[2]/augmentation"/>
+                <bool n="3" type="bool" alias="/engines/engine[3]/augmentation"/>
                 <!--<float n="0">0</float> free  -->
                 <!--<float n="1">0</float> free  -->
                 <float n="2">0</float><!-- fwd baydoor   -->
@@ -327,9 +337,19 @@ B-1B set file.
                 <!--<float n="7">0</float> free   -->
                 <!--<float n="8">0</float> free   -->
                 <!--<float n="9">0</float> free   -->
-                <!--<float n="10">0</float> free   -->
-                <!--<float n="11">0</float> free   -->
-                <!--<float n="12">0</float> free   -->
+                <float n="10" type="double">0</float><!-- afterburner density -->
+                <float n="11" type="double">0</float><!-- afterburner color R-->
+                <float n="12" type="double">0</float><!-- afterburner color G-->
+                <float n="13" type="double">0</float><!-- afterburner color B-->
+                <float n="14" type="double">0</float><!-- scene red inverted -->
+                <float n="16" type="double">0</float><!-- afterburner engine fire transperancy -->
+                <float n="17" type="double">0</float><!-- afterburner engine fire transperancy -->
+                <float n="18" type="double">0</float><!-- afterburner engine fire transperancy -->
+                <float n="19" type="double">0</float><!-- afterburner engine fire transparency -->
+                <float n="20" type="double">0</float><!-- turbine emission color from afterburner 1 -->
+                <float n="21" type="double">0</float><!-- turbine emission color from afterburner 2 -->
+                <float n="22" type="double">0</float><!-- turbine emission color from afterburner 3 -->
+                <float n="23" type="double">0</float><!-- turbine emission color from afterburner 4 -->
                 <int n="0" type="int">0</int><!-- anti collision lights  -->
                 <int n="1" type="int">0</int>     <!-- b-1b model nasal script loaded -->
                 <!--<int n="2" type="int">0</int>     free -->
@@ -425,7 +445,7 @@ B-1B set file.
                                     screen.log.write("Damage OFF", 1, 0, 0);
                                 }
                             } else {
-                                screen.log.write("Can't do that while airborne or moveing", 1, 1, 1);
+                                screen.log.write("Can't do that while airborne or moving", 1, 1, 1);
                             }
                             ]]>
                         </script>
@@ -439,18 +459,70 @@ B-1B set file.
                         </binding>
                     </item>
                 </menu>
+                <menu n="101">
+					<label>FDM Tuning</label>
+					<item>
+						<label>Tune Drag</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_drag_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Lift</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_lift_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Pitch</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_pitch_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Roll</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_roll_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Side</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_side_dialog.open()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Tune Yaw</label>
+						<binding>
+							<command>nasal</command>
+							<script>dialog.tuner_yaw_dialog.open()</script>
+						</binding>
+					</item>
+				</menu>
             </default>
         </menubar>
 
         <systems>
-            <electrical>
-                <name>electrical</name>
-                <number>0</number>
-                <path>Aircraft/B-1B/Systems/generic-electrical.xml</path>
-            </electrical>
-            <autopilot>
+            <autopilot n="0">
                 <path>Aircraft/B-1B/Systems/b1b-autopilot.xml</path>
             </autopilot>
+            <autopilot n="1">
+                <path>Aircraft/B-1B/Systems/engines.xml</path>
+            </autopilot>
+            <property-rule n="110">
+                <path>Aircraft/B-1B/Systems/filters.xml</path>
+            </property-rule>
+            <property-rule n="200">
+                <path>Systems/annunciators.xml</path>
+            </property-rule>
+            <property-rule n="200">
+                <path>Systems/computers.xml</path>
+            </property-rule>
             <path>Aircraft/B-1B/Systems/b1b-airdata.xml</path>
         </systems>
 
@@ -651,9 +723,36 @@ B-1B set file.
             <offset-y-m>0</offset-y-m>
             <offset-z-m>0.7</offset-z-m>
         </refuel>
+            <electrical n="0">
+        <bus>
+            <ac-ess type="double">0</ac-ess>
+            <dc-fwd type="double">0</dc-fwd>
+            <dc-aft type="double">0</dc-aft>
+        </bus>
+        <relay>
+            <ess-tr-contactor>
+                <contact-pos type="int">0</contact-pos>
+            </ess-tr-contactor>
+        </relay>
+        <some-electric-thingie>
+            <emer-elec-config type="bool">0</emer-elec-config>
+            <emer-gen-operate type="bool">0</emer-gen-operate>
+        </some-electric-thingie>
+        <sources>
+            <bat-1>
+                <amps type="double">0</amps>
+                <percent-calc type="double">80</percent-calc>
+            </bat-1>
+            <bat-2>
+                <amps type="double">0</amps>
+                <percent-calc type="double">80</percent-calc>
+            </bat-2>
+        </sources>
+    </electrical>
     </systems>
 
     <payload n="0" include= "Systems/b1-payload.xml"/>
+
 
     <autopilot>
         <settings>
@@ -674,7 +773,57 @@ B-1B set file.
         </settings>
 
     </autopilot>
-
+    	<fdm>
+		<jsbsim>
+			<!-- for in-flight FDM tuning -->
+			<tune>
+                <!-- TODO: Check if more values need to be added to FDM tuner
+                         Tuner is from l0k1/AV-8B.
+                 -->
+				<lift>
+					<alpha type="double">1</alpha>
+                    <sweep type="double">0</sweep>
+					<flap type="double">1</flap>
+                    <speedbrake type="double">1</speedbrake>
+					<elevator type="double">1</elevator>
+<!--					<pitch_rate type="double">1</pitch_rate>-->
+<!--					<alpha_rate type="double">1</alpha_rate>-->
+				</lift>
+				<drag>
+                    <basic type="double">1</basic>
+					<induced type="double">1</induced>
+					<mach type="double">1</mach>
+					<flap type="double">1</flap>
+					<gear type="double">1</gear>
+					<speedbrake type="double">1</speedbrake>
+					<beta type="double">1</beta>
+                    <elevator type="double">1</elevator>
+				</drag>
+				<side>
+					<beta type="double">1</beta>
+				</side>
+                <roll>
+					<beta type="double">1</beta>
+					<damp type="double">1</damp>
+					<yaw type="double">1</yaw>
+					<aileron type="double">1</aileron>
+					<rudder type="double">1</rudder>
+				</roll>
+				<pitch>
+					<alpha type="double">1</alpha>
+					<elevator type="double">1</elevator>
+					<damp type="double">1</damp>
+					<alphadot type="double">1</alphadot>
+				</pitch>
+				<yaw>
+					<beta type="double">1</beta>
+					<damp type="double">1</damp>
+					<rudder type="double">1</rudder>
+					<aileron type="double">1</aileron>
+				</yaw>
+			</tune>
+		</jsbsim>
+	</fdm>
     <!-- Start with the Parking Brake On -->
     <controls>
         <armament>
@@ -708,9 +857,12 @@ B-1B set file.
             <wing-sweep type="double">-1.0</wing-sweep>
             <flaps type="double">0.0</flaps>
             <elevator-incidence-deg type="double">-1.0</elevator-incidence-deg>
+            <pitch-switch type="int">0</pitch-switch>
         </flight>
 
         <switches>
+            <HDG-select-switch type="int">0</HDG-select-switch>
+            <ADC-select-switch type="int">0</ADC-select-switch>
             <engines>
                 <afterburner n="0">0</afterburner>
                 <afterburner n="1">0</afterburner>
@@ -722,22 +874,60 @@ B-1B set file.
         <engines>
             <engine n="0">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
             <engine n="1">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
             <engine n="2">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
             <engine n="3">
                 <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
+
+            </engine>
+            <engine n="4">
+                <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
+
+            </engine>
+            <engine n="5">
+                <cutoff type="double">0</cutoff>
+                <cutoff-switch type="double">-1</cutoff-switch>
 
             </engine>
 
         </engines>
+
+        <electrical>
+            <switches n="0">
+                <!--				<apu type="bool">1</apu>-->
+                <ac-ess-feed type="bool">1</ac-ess-feed>
+                <battery type="bool">0</battery>
+                <bus-tie type="bool">1</bus-tie>
+                <emer-gen-test type="bool">0</emer-gen-test>
+                <ext-pwr type="bool">0</ext-pwr>
+                <galley type="bool">1</galley>
+                <gen-1 type="int">1</gen-1>
+                <gen-2 type="int">1</gen-2>
+                <gen-4 type="int">1</gen-4>
+                <gen-2-line-contactor type="bool">0</gen-2-line-contactor>
+                <ground-cart type="bool">0</ground-cart>
+                <idg-1-disc type="bool">1</idg-1-disc>
+                <idg-2-disc type="bool">1</idg-2-disc>
+                <idg-4-disc type="bool">1</idg-4-disc>
+                <idg-1-disc-momentary type="bool">0</idg-1-disc-momentary>
+                <idg-2-disc-momentary type="bool">0</idg-2-disc-momentary>
+                <idg-4-disc-momentary type="bool">0</idg-4-disc-momentary>
+                <emer-elec-man-on type="bool">0</emer-elec-man-on>
+            </switches>
+        </electrical>
 
     </controls>
 
@@ -838,6 +1028,10 @@ B-1B set file.
                 <none type="int">0</none>
             </expr>
         </cdu900>
+        <heading-indicator>
+            <bearing-needle type="int">0</bearing-needle>
+            <miles-drums type="int">0</miles-drums>
+        </heading-indicator>
         <wxradar>
             <serviceable>true</serviceable>
             <range type="int" archive="y">20</range>
@@ -856,6 +1050,12 @@ B-1B set file.
             <receive_period type="double">1</receive_period>
             <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
         </datalink>
+        <iff>
+         <power_prop type="string">/instrumentation/iff/power</power_prop>
+         <channel_prop type="string">/instrumentation/iff/channel-selection</channel_prop>
+         <M.1_switch type="int">-1</M.1_switch>
+         <M.3A_switch type="int">-1</M.3A_switch>
+        </iff>
     </instrumentation>
 
     <input>
@@ -1107,6 +1307,16 @@ B-1B set file.
         <airbases>
             <file>Aircraft/B-1B/Nasal/airbases.nas</file>
         </airbases>
+        <engines>
+            <file>Aircraft/B-1B/Nasal/engines.nas</file>
+        </engines>
+        <controls>
+            <file>Aircraft/B-1B/Nasal/controls.nas</file>
+        </controls>
+        <failures>
+            <file>Aircraft/B-1B/Nasal/B-1B-failures.nas</file>
+	</failures>
+        <dialog> <file>Aircraft/B-1B/Nasal/dialogs.nas</file> </dialog>
     </nasal>
 
 </PropertyList>

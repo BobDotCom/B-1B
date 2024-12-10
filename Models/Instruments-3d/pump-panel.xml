@@ -1010,17 +1010,8 @@
   <object-name>CG-Test</object-name>
   <object-name>CLG_SCO</object-name>
   <object-name>FWD</object-name>
-  <object-name>fuel_dump</object-name>
   <object-name>Grd-Cool</object-name>
   <object-name>INTMD</object-name>
-  <object-name>Pump-1</object-name>
-  <object-name>Pump-2</object-name>
-  <object-name>Pump-3</object-name>
-  <object-name>Pump-4</object-name>
-  <object-name>Pump-5</object-name>
-  <object-name>Pump-6</object-name>
-  <object-name>SEQ-INIT</object-name>
-  <object-name>X-FEED</object-name>
   <object-name>tank-1-10000</object-name>
   <object-name>tank-1-1000</object-name>
   <object-name>tank-1-100</object-name>

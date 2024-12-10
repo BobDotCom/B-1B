@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<system name="B-1B Engines">
+    <property>/engines/engine[4]/running</property>
+    <property>/engines/engine[5]/running</property>
+    <property value="1">/systems/apu/dc-bat-three-minutes</property>
+
+    <channel name="adg" execrate="8">
+
+                <!-- ADG-1 -->
+
+        <switch name="/systems/engines/adg[0]/drive-src">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /engines/engine[0]/running eq 1
+            </test>
+            <test logic="AND" value="2">
+                <!-- TODO: Use actuator for coupling EDIT: DONE. -->
+                /engines/engine[4]/n2 ge 97
+                /controls/apu/apu[0]/couple_switch eq 1
+           </test>
+        </switch>
+
+        <switch name="/controls/apu/apu[0]/couple_switch">
+            <default value="/controls/apu/apu[0]/couple_switch"/>
+            <test logic="OR" value="0">
+                /engines/engine[4]/n2 lt 99
+                /systems/engines/adg[0]/drive-rpm ge 60
+            </test>
+            <output>/controls/apu/apu[0]/couple_switch</output>
+        </switch>
+
+        <switch name="/systems/engines/adg[0]/drive-rpm">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[0]/APU-ADG-connect">
+                /systems/engines/adg[0]/drive-src ne 1
+            </test>
+            <test logic="AND" value="/engines/engine[0]/n2">
+                /systems/engines/adg[0]/drive-src eq 1
+            </test>
+        </switch>
+
+        <switch name="/systems/engines/adg[0]/APU-ADG-connect-command">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[0]/APU-rpm-percentage">
+                /systems/engines/adg[0]/drive-src eq 2
+            </test>
+        </switch>
+
+		<actuator name="/systems/engines/adg[0]/APU-ADG-connect">
+            <input>/systems/engines/adg[0]/APU-ADG-connect-command</input>
+            <rate_limit sense="decr">10</rate_limit>
+            <rate_limit sense="incr">15</rate_limit> 
+        </actuator>
+
+	<pure_gain name="/systems/engines/adg[0]/APU-rpm-percentage">
+		<input>/engines/engine[4]/n2</input>
+		<gain>0.6</gain>
+	</pure_gain>
+
+        <switch name="/systems/engines/adg[0]/fault">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /systems/engines/adg[0]/drive-src eq 0
+            </test>
+        </switch>
+
+                <!-- ADG-2 -->
+
+        <switch name="/systems/engines/adg[1]/drive-src">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /engines/engine[1]/running eq 1
+            </test>
+            <test logic="AND" value="2">
+                <!-- TODO: Use actuator for coupling EDIT: DONE. -->
+                /engines/engine[4]/n2 ge 97
+                /controls/apu/apu[0]/couple_switch eq 1
+           </test>
+        </switch>
+
+        <switch name="/controls/apu/apu[0]/couple_switch">
+            <default value="/controls/apu/apu[0]/couple_switch"/>
+            <test logic="OR" value="0">
+                /engines/engine[4]/n2 lt 99
+                /systems/engines/adg[1]/drive-rpm ge 60
+            </test>
+            <output>/controls/apu/apu[0]/couple_switch</output>
+        </switch>
+
+        <switch name="/systems/engines/adg[1]/drive-rpm">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[1]/APU-ADG-connect">
+                /systems/engines/adg[1]/drive-src ne 1
+            </test>
+            <test logic="AND" value="/engines/engine[1]/n2">
+                /systems/engines/adg[1]/drive-src eq 1
+            </test>
+        </switch>
+
+        <switch name="/systems/engines/adg[1]/APU-ADG-connect-command">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[1]/APU-rpm-percentage">
+                /systems/engines/adg[1]/drive-src eq 2
+            </test>
+        </switch>
+
+		<actuator name="/systems/engines/adg[1]/APU-ADG-connect">
+            <input>/systems/engines/adg[1]/APU-ADG-connect-command</input>
+            <rate_limit sense="decr">10</rate_limit>
+            <rate_limit sense="incr">15</rate_limit> 
+        </actuator>
+
+	<pure_gain name="/systems/engines/adg[1]/APU-rpm-percentage">
+		<input>/engines/engine[4]/n2</input>
+		<gain>0.6</gain>
+	</pure_gain>
+
+        <switch name="/systems/engines/adg[1]/fault">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /systems/engines/adg[1]/drive-src eq 0
+            </test>
+        </switch>
+
+
+                <!-- ADG-3 -->
+
+        <switch name="/systems/engines/adg[2]/drive-src">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /engines/engine[2]/running eq 1
+            </test>
+            <test logic="AND" value="2">
+                <!-- TODO: Use actuator for coupling EDIT: DONE. -->
+                /engines/engine[5]/n2 ge 97
+                /controls/apu/apu[1]/couple_switch eq 1
+           </test>
+        </switch>
+
+        <switch name="/controls/apu/apu[1]/couple_switch">
+            <default value="/controls/apu/apu[1]/couple_switch"/>
+            <test logic="OR" value="0">
+                /engines/engine[5]/n2 lt 99
+                /systems/engines/adg[2]/drive-rpm ge 60
+            </test>
+            <output>/controls/apu/apu[1]/couple_switch</output>
+        </switch>
+
+        <switch name="/systems/engines/adg[2]/drive-rpm">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[2]/APU-ADG-connect">
+                /systems/engines/adg[2]/drive-src ne 1
+            </test>
+            <test logic="AND" value="/engines/engine[1]/n2">
+                /systems/engines/adg[2]/drive-src eq 1
+            </test>
+        </switch>
+
+        <switch name="/systems/engines/adg[2]/APU-ADG-connect-command">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[2]/APU-rpm-percentage">
+                /systems/engines/adg[2]/drive-src eq 2
+            </test>
+        </switch>
+
+		<actuator name="/systems/engines/adg[2]/APU-ADG-connect">
+            <input>/systems/engines/adg[2]/APU-ADG-connect-command</input>
+            <rate_limit sense="decr">10</rate_limit>
+            <rate_limit sense="incr">15</rate_limit> 
+        </actuator>
+
+	<pure_gain name="/systems/engines/adg[2]/APU-rpm-percentage">
+		<input>/engines/engine[5]/n2</input>
+		<gain>0.6</gain>
+	</pure_gain>
+
+        <switch name="/systems/engines/adg[2]/fault">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /systems/engines/adg[2]/drive-src eq 0
+            </test>
+        </switch>
+
+                <!-- ADG-4 -->
+
+        <switch name="/systems/engines/adg[3]/drive-src">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /engines/engine[3]/running eq 1
+            </test>
+            <test logic="AND" value="2">
+                <!-- TODO: Use actuator for coupling EDIT: DONE. -->
+                /engines/engine[5]/n2 ge 97
+                /controls/apu/apu[1]/couple_switch eq 1
+           </test>
+        </switch>
+
+        <switch name="/controls/apu/apu[1]/couple_switch">
+            <default value="/controls/apu/apu[1]/couple_switch"/>
+            <test logic="OR" value="0">
+                /engines/engine[5]/n2 lt 99
+                /systems/engines/adg[3]/drive-rpm ge 60
+            </test>
+            <output>/controls/apu/apu[1]/couple_switch</output>
+        </switch>
+
+        <switch name="/systems/engines/adg[3]/drive-rpm">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[3]/APU-ADG-connect">
+                /systems/engines/adg[3]/drive-src ne 1
+            </test>
+            <test logic="AND" value="/engines/engine[1]/n2">
+                /systems/engines/adg[3]/drive-src eq 1
+            </test>
+        </switch>
+
+        <switch name="/systems/engines/adg[3]/APU-ADG-connect-command">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[3]/APU-rpm-percentage">
+                /systems/engines/adg[3]/drive-src eq 2
+            </test>
+        </switch>
+
+		<actuator name="/systems/engines/adg[3]/APU-ADG-connect">
+            <input>/systems/engines/adg[3]/APU-ADG-connect-command</input>
+            <rate_limit sense="decr">10</rate_limit>
+            <rate_limit sense="incr">15</rate_limit> 
+        </actuator>
+
+	<pure_gain name="/systems/engines/adg[3]/APU-rpm-percentage">
+		<input>/engines/engine[5]/n2</input>
+		<gain>0.6</gain>
+	</pure_gain>
+
+        <switch name="/systems/engines/adg[3]/fault">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                /systems/engines/adg[3]/drive-src eq 0
+            </test>
+        </switch>
+
+    </channel>
+
+    <channel name="engines" execrate="8">
+        <switch name="/systems/engines/engine[0]/can-start">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR">
+<!--					/systems/electrical/sources/si-1/output-volt ge 220-->
+                    /systems/electrical/bus/ac-1 ge 220
+				</test>
+                <test logic="OR">
+                    <!-- TODO: Refine adg drive rpm engine start requirements -->
+                    /systems/engines/adg[0]/drive-rpm ge 55
+                    /systems/pneumatics/psi/engine[0]/psi ge 20
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[1]/can-start">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR">
+<!--					/systems/electrical/sources/si-1/output-volt ge 220-->
+                    /systems/electrical/bus/ac-1 ge 220
+				</test>
+                <test logic="OR">
+                    /systems/engines/adg[1]/drive-rpm ge 55
+                    /systems/pneumatics/psi/engine[1]/psi ge 20
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[2]/can-start">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR">
+<!--					/systems/electrical/sources/si-1/output-volt ge 220-->
+                    /systems/electrical/bus/ac-4 ge 220
+				</test>
+                <test logic="OR">
+                    /systems/engines/adg[2]/drive-rpm ge 55
+                    /systems/pneumatics/psi/engine[2]/psi ge 20
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[3]/can-start">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR">
+<!--					/systems/electrical/sources/si-1/output-volt ge 220-->
+                    /systems/electrical/bus/ac-4 ge 220
+				</test>
+                <test logic="OR">
+                    /systems/engines/adg[3]/drive-rpm ge 55
+                    /systems/pneumatics/psi/engine[3]/psi ge 20
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[4]/can-start">
+            <default value="0"/>
+            <test logic="OR" value="1">
+                <!-- TODO: Hydraulic APU starter -->
+                /systems/electrical/bus/dc-bat ge 25
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[5]/can-start">
+            <default value="0"/>
+            <test logic="OR" value="1">
+                /systems/electrical/bus/dc-bat ge 25
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[0]/cutoff">
+            <default value="1"/>
+            <test logic="OR" value="0">
+                /controls/engines/engine[0]/cutoff-switch eq 0
+                <test logic="AND" value="0">
+                    /engines/engine[0]/n1 gt 5.2
+                    /controls/engines/engine[0]/cutoff-switch eq 1
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[0]/starter">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR" value="1">
+                    /engines/engine[0]/n1 lt 30
+                    /engines/engine[0]/n2 lt 60
+                </test>
+                /controls/engines/engine[0]/cutoff-switch eq 1
+                /systems/engines/engine[0]/can-start eq 1
+            </test>
+        </switch>
+        <fcs_function name="/controls/engines/engine[0]/cutoff-switch">
+            <function>
+                <ifthen>
+                    <and>
+                        <eq>
+                            <property>/controls/engines/engine[0]/cutoff-switch</property>
+                            <value>1</value>
+                        </eq>
+                        <eq>
+                            <property>/systems/engines/engine[0]/starter</property>
+                            <value>0</value>
+                        </eq>
+                    </and>
+                    <value>0</value>
+                    <property>/controls/engines/engine[0]/cutoff-switch</property>
+                </ifthen>
+            </function>
+        </fcs_function>
+        <switch name="/systems/engines/engine[1]/cutoff">
+            <default value="1"/>
+            <test logic="OR" value="0">
+                /controls/engines/engine[1]/cutoff-switch eq 0
+                <test logic="AND" value="0">
+                    /engines/engine[1]/n1 gt 5.2
+                    /controls/engines/engine[1]/cutoff-switch eq 1
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[1]/starter">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR" value="1">
+                    /engines/engine[1]/n1 lt 30
+                    /engines/engine[1]/n2 lt 60
+                </test>
+                /controls/engines/engine[1]/cutoff-switch eq 1
+                /systems/engines/engine[1]/can-start eq 1
+            </test>
+        </switch>
+        <fcs_function name="/controls/engines/engine[1]/cutoff-switch">
+            <function>
+                <ifthen>
+                    <and>
+                        <eq>
+                            <property>/controls/engines/engine[1]/cutoff-switch</property>
+                            <value>1</value>
+                        </eq>
+                        <eq>
+                            <property>/systems/engines/engine[1]/starter</property>
+                            <value>0</value>
+                        </eq>
+                    </and>
+                    <value>0</value>
+                    <property>/controls/engines/engine[1]/cutoff-switch</property>
+                </ifthen>
+            </function>
+        </fcs_function>
+        <switch name="/systems/engines/engine[2]/cutoff">
+            <default value="1"/>
+            <test logic="OR" value="0">
+                /controls/engines/engine[2]/cutoff-switch eq 0
+                <test logic="AND" value="0">
+                    /engines/engine[2]/n1 gt 5.2
+                    /controls/engines/engine[2]/cutoff-switch eq 1
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[2]/starter">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR" value="1">
+                    /engines/engine[2]/n1 lt 30
+                    /engines/engine[2]/n2 lt 60
+                </test>
+                /controls/engines/engine[2]/cutoff-switch eq 1
+                /systems/engines/engine[2]/can-start eq 1
+            </test>
+        </switch>
+        <fcs_function name="/controls/engines/engine[2]/cutoff-switch">
+            <function>
+                <ifthen>
+                    <and>
+                        <eq>
+                            <property>/controls/engines/engine[2]/cutoff-switch</property>
+                            <value>1</value>
+                        </eq>
+                        <eq>
+                            <property>/systems/engines/engine[2]/starter</property>
+                            <value>0</value>
+                        </eq>
+                    </and>
+                    <value>0</value>
+                    <property>/controls/engines/engine[2]/cutoff-switch</property>
+                </ifthen>
+            </function>
+        </fcs_function>
+        <switch name="/systems/engines/engine[3]/cutoff">
+            <default value="1"/>
+            <test logic="OR" value="0">
+                /controls/engines/engine[3]/cutoff-switch eq 0
+                <test logic="AND" value="0">
+                    /engines/engine[3]/n1 gt 5.2
+                    /controls/engines/engine[3]/cutoff-switch eq 1
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[3]/starter">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR" value="1">
+                    /engines/engine[3]/n1 lt 30
+                    /engines/engine[3]/n2 lt 60
+                </test>
+                /controls/engines/engine[3]/cutoff-switch eq 1
+                /systems/engines/engine[3]/can-start eq 1
+            </test>
+        </switch>
+        <fcs_function name="/controls/engines/engine[3]/cutoff-switch">
+            <function>
+                <ifthen>
+                    <and>
+                        <eq>
+                            <property>/controls/engines/engine[3]/cutoff-switch</property>
+                            <value>1</value>
+                        </eq>
+                        <eq>
+                            <property>/systems/engines/engine[3]/starter</property>
+                            <value>0</value>
+                        </eq>
+                    </and>
+                    <value>0</value>
+                    <property>/controls/engines/engine[3]/cutoff-switch</property>
+                </ifthen>
+            </function>
+        </fcs_function>
+
+        <!-- APU -->
+        <switch name="/systems/engines/engine[4]/cutoff">
+            <default value="1"/>
+            <test logic="OR" value="0">
+                /controls/engines/engine[4]/cutoff-switch eq 0
+                <test logic="AND" value="0">
+                    /engines/engine[4]/n1 ge 5
+                    /controls/engines/engine[4]/cutoff-switch eq 1
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[4]/starter">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR">
+                    /engines/engine[4]/n1 lt 99.9
+                    /engines/engine[4]/n2 lt 99.9
+                </test>
+                <test logic="OR">
+                    <test logic="AND">
+                        /systems/engines/engine[4]/starter eq 1
+                        /controls/engines/engine[4]/cutoff-switch eq 0
+                    </test>
+                    /controls/engines/engine[4]/cutoff-switch eq 1
+                </test>
+                /systems/engines/engine[4]/can-start eq 1
+            </test>
+        </switch>
+        <fcs_function name="/controls/engines/engine[4]/cutoff-switch">
+            <function>
+                <ifthen>
+                    <and>
+                        <eq>
+                            <property>/controls/engines/engine[4]/cutoff-switch</property>
+                            <value>1</value>
+                        </eq>
+                        <eq>
+                            <property>/systems/engines/engine[4]/starter</property>
+                            <value>0</value>
+                        </eq>
+                    </and>
+                    <value>0</value>
+                    <property>/controls/engines/engine[4]/cutoff-switch</property>
+                </ifthen>
+            </function>
+        </fcs_function>
+
+        <switch name="/systems/engines/engine[5]/cutoff">
+            <default value="1"/>
+            <test logic="OR" value="0">
+                /controls/engines/engine[5]/cutoff-switch eq 0
+                <test logic="AND" value="0">
+                    /engines/engine[5]/n1 ge 5
+                    /controls/engines/engine[5]/cutoff-switch eq 1
+                </test>
+            </test>
+        </switch>
+        <switch name="/systems/engines/engine[5]/starter">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                <test logic="OR">
+                    /engines/engine[5]/n1 lt 99.9
+                    /engines/engine[5]/n2 lt 99.9
+                </test>
+                <test logic="OR">
+                    <test logic="AND">
+                        /systems/engines/engine[5]/starter eq 1
+                        /controls/engines/engine[5]/cutoff-switch eq 0
+                    </test>
+                    /controls/engines/engine[5]/cutoff-switch eq 1
+                </test>
+                /systems/engines/engine[5]/can-start eq 1
+            </test>
+        </switch>
+        <fcs_function name="/controls/engines/engine[5]/cutoff-switch">
+            <function>
+                <ifthen>
+                    <and>
+                        <eq>
+                            <property>/controls/engines/engine[5]/cutoff-switch</property>
+                            <value>1</value>
+                        </eq>
+                        <eq>
+                            <property>/systems/engines/engine[5]/starter</property>
+                            <value>0</value>
+                        </eq>
+                    </and>
+                    <value>0</value>
+                    <property>/controls/engines/engine[5]/cutoff-switch</property>
+                </ifthen>
+            </function>
+        </fcs_function>
+    </channel>
+</system>

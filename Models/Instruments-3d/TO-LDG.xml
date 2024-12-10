@@ -31,7 +31,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
 
@@ -170,10 +170,10 @@
   <animation>
    <type>rotate</type>
    <object-name>TO-LD-Switch</object-name>
-   <property>controls/gear/nose-wheel-steering</property>
+   <property>controls/switches/nose-wheel-steering-switch</property>
    <factor>60</factor>
-   <min>0</min>
-   <max>1</max>
+   <min>1</min>
+   <max>0</max>
    <center>
     <x-m>0.04824</x-m>
     <y-m>0.000125</y-m>
@@ -186,19 +186,20 @@
    </axis>
   </animation>
 
-  <animation>
+ <animation>
    <type>pick</type>
    <object-name>TO-LD-Switch</object-name>
    <action>
     <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
       <binding>
         <command>property-toggle</command>
-        <property>controls/gear/nose-wheel-steering</property>
-        <factor>30</factor>
-        <min>0</min>
-        <max>1</max>
+        <property>controls/switches/nose-wheel-steering-switch</property>
       </binding>
    </action>
  </animation>
+
+
 
 </PropertyList>

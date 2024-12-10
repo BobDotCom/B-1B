@@ -259,7 +259,7 @@
                 <value>ON</value>
                 <condition>
                     <equals>
-                        <property>controls/electric/battery-switch</property>
+                        <property>controls/electrical/switches/battery</property>
                         <value>1</value>
                     </equals>
                 </condition>
@@ -271,18 +271,30 @@
                 </marker>
                 <binding>
                     <command>property-assign</command>
-                    <property>controls/electric/battery-switch</property>
+                    <property>controls/electrical/switches/battery</property>
                     <value>1</value>
                 </binding>
             </item>
             <item>
                 <name>APU MODE L</name>
-                <value>ON/START</value>
+                <value>START, then ON</value>
                 <condition>
-                    <equals>
-                        <property>controls/APU/APUL_running</property>
-                        <value>1</value>
-                    </equals>
+                    <and>
+                        <equals>
+                            <property>controls/engines/engine[4]/cutoff-switch</property>
+                            <value>0</value>
+                        </equals>
+                        <or>
+                            <equals>
+                                <property>systems/engines/engine[4]/starter</property>
+                                <value>1</value>
+                            </equals>
+                            <greater-than-equals>
+                                <property>engines/engine[4]/n1</property>
+                                <value>95</value>
+                            </greater-than-equals>
+                        </or>
+                    </and>
                 </condition>
                 <marker>
                     <x-m>-17.8644</x-m>
@@ -292,18 +304,35 @@
                 </marker>
                 <binding>
                     <command>property-assign</command>
-                    <property>controls/APU/APUL_running</property>
+                    <property>controls/engines/engine[4]/cutoff-switch</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>systems/engines/engine[4]/starter</property>
                     <value>1</value>
                 </binding>
             </item>
             <item>
                 <name>APU MODE R</name>
-                <value>ON/START</value>
+                <value>START, then ON</value>
                 <condition>
-                    <equals>
-                        <property>controls/APU/APUR_running</property>
-                        <value>1</value>
-                    </equals>
+                    <and>
+                        <equals>
+                            <property>controls/engines/engine[5]/cutoff-switch</property>
+                            <value>0</value>
+                        </equals>
+                        <or>
+                            <equals>
+                                <property>systems/engines/engine[5]/starter</property>
+                                <value>1</value>
+                            </equals>
+                            <greater-than-equals>
+                                <property>engines/engine[5]/n1</property>
+                                <value>95</value>
+                            </greater-than-equals>
+                        </or>
+                    </and>
                 </condition>
                 <marker>
                     <x-m>-17.8644</x-m>
@@ -313,7 +342,12 @@
                 </marker>
                 <binding>
                     <command>property-assign</command>
-                    <property>controls/APU/APUR_running</property>
+                    <property>controls/engines/engine[5]/cutoff-switch</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>systems/engines/engine[5]/starter</property>
                     <value>1</value>
                 </binding>
             </item>
@@ -322,7 +356,7 @@
                 <value>2 ADS COUPLE</value>
                 <condition>
                     <equals>
-                        <property>controls/APU/APUL_couple</property>
+                        <property>controls/apu/apu[0]/couple</property>
                         <value>1</value>
                     </equals>
                 </condition>
@@ -334,7 +368,7 @@
                 </marker>
                 <binding>
                     <command>property-assign</command>
-                    <property>controls/APU/APUL_couple</property>
+                    <property>controls/apu/apu[0]/couple</property>
                     <value>1</value>
                 </binding>
             </item>
@@ -343,7 +377,7 @@
                 <value>4 ADS COUPLE</value>
                 <condition>
                     <equals>
-                        <property>controls/APU/APUR_couple</property>
+                        <property>controls/apu/apu[1]/couple</property>
                         <value>1</value>
                     </equals>
                 </condition>
@@ -355,9 +389,41 @@
                 </marker>
                 <binding>
                     <command>property-assign</command>
-                    <property>controls/APU/APUR_couple</property>
+                    <property>controls/apu/apu[1]/couple</property>
                     <value>1</value>
                 </binding>
+            </item>
+            <item>
+                <name>Wait for left APU indicator</name>
+                <value>L RUN</value>
+                <condition>
+                    <greater-than-equals>
+                        <property>engines/engine[4]/n1</property>
+                        <value>95</value>
+                    </greater-than-equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+            </item>
+            <item>
+                <name>Wait for right APU indicator</name>
+                <value>R RUN</value>
+                <condition>
+                    <greater-than-equals>
+                        <property>engines/engine[5]/n1</property>
+                        <value>95</value>
+                    </greater-than-equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
             </item>
             <!--
             <item>
@@ -709,49 +775,12 @@
         <checklist>
             <title>Starting engine</title>
             <item>
-                <name>ENG 1 Cutoff</name>
-                <value>READY</value>
-                <condition>
-                    <equals>
-                        <property>controls/engines/engine[0]/cutoff</property>
-                        <value>0</value>
-                    </equals>
-                </condition>
-                <marker>
-                    <x-m>-18.1743</x-m>
-                    <y-m>-0.0281</y-m>
-                    <z-m>0.4199</z-m>
-                    <scale>2.5</scale>
-                </marker>
-                <binding>
-                    <command>property-assign</command>
-                    <property>controls/engines/engine[0]/cutoff</property>
-                    <value>0</value>
-                </binding>
-            </item>
-            <item>
-                <name>Wait for RPM</name>
-                <value>N1 55%</value>
-                <condition>
-                    <greater-than-equals>
-                        <property>sim/model/B-1B/n1[0]</property>
-                        <value>55</value>
-                    </greater-than-equals>
-                </condition>
-                <marker>
-                    <x-m>-18.6313</x-m>
-                    <y-m>-0.0306</y-m>
-                    <z-m>0.9001</z-m>
-                    <scale>5.0</scale>
-                </marker>
-            </item>
-            <item>
                 <name>ENG 2 Cutoff</name>
-                <value>READY</value>
+                <value>START</value>
                 <condition>
                     <equals>
-                        <property>controls/engines/engine[1]/cutoff</property>
-                        <value>0</value>
+                        <property>controls/engines/engine[1]/cutoff-switch</property>
+                        <value>1</value>
                     </equals>
                 </condition>
                 <marker>
@@ -762,17 +791,38 @@
                 </marker>
                 <binding>
                     <command>property-assign</command>
-                    <property>controls/engines/engine[1]/cutoff</property>
-                    <value>0</value>
+                    <property>controls/engines/engine[1]/cutoff-switch</property>
+                    <value>1</value>
                 </binding>
             </item>
             <item>
-                <name>Wait for RPM</name>
-                <value>N1 55%</value>
+                <name>ENG 4 Cutoff</name>
+                <value>START</value>
+                <condition>
+                    <equals>
+                        <property>controls/engines/engine[3]/cutoff-switch</property>
+                        <value>1</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-18.1743</x-m>
+                    <y-m>-0.0281</y-m>
+                    <z-m>0.4199</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[3]/cutoff-switch</property>
+                    <value>1</value>
+                </binding>
+            </item>
+            <item>
+                <name>Wait for engine 2 RPM</name>
+                <value>N1 30%</value>
                 <condition>
                     <greater-than-equals>
-                        <property>sim/model/B-1B/n1[1]</property>
-                        <value>55</value>
+                        <property>engines/engine[1]/n1</property>
+                        <value>30</value>
                     </greater-than-equals>
                 </condition>
                 <marker>
@@ -783,12 +833,102 @@
                 </marker>
             </item>
             <item>
-                <name>ENG 3 Cutoff</name>
-                <value>READY</value>
+                <name>Wait for engine 4 RPM</name>
+                <value>N1 30%</value>
+                <condition>
+                    <greater-than-equals>
+                        <property>engines/engine[3]/n1</property>
+                        <value>30</value>
+                    </greater-than-equals>
+                </condition>
+                <marker>
+                    <x-m>-18.6313</x-m>
+                    <y-m>0.0012</y-m>
+                    <z-m>0.9001</z-m>
+                    <scale>5.0</scale>
+                </marker>
+            </item>
+            <item>
+                <name>Verify ENG 2 Cutoff</name>
+                <value>RUN</value>
                 <condition>
                     <equals>
-                        <property>controls/engines/engine[2]/cutoff</property>
+                        <property>controls/engines/engine[1]/cutoff-switch</property>
                         <value>0</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-18.1743</x-m>
+                    <y-m>-0.0281</y-m>
+                    <z-m>0.4199</z-m>
+                    <scale>2.5</scale>
+                </marker>
+            </item>
+            <item>
+                <name>Verify ENG 4 Cutoff</name>
+                <value>RUN</value>
+                <condition>
+                    <equals>
+                        <property>controls/engines/engine[3]/cutoff-switch</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-18.1743</x-m>
+                    <y-m>-0.0281</y-m>
+                    <z-m>0.4199</z-m>
+                    <scale>2.5</scale>
+                </marker>
+            </item>
+            <item>
+                <name>APU L BLEED AIR</name>
+                <value>ON</value>
+                <condition>
+                    <equals>
+                        <property>controls/apu/apu[0]/bleed</property>
+                        <value>1</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/apu/apu[0]/bleed</property>
+                    <value>1</value>
+                </binding>
+            </item>
+            <item>
+                <name>APU R BLEED AIR</name>
+                <value>ON</value>
+                <condition>
+                    <equals>
+                        <property>controls/apu/apu[1]/bleed</property>
+                        <value>1</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/apu/apu[1]/bleed</property>
+                    <value>1</value>
+                </binding>
+            </item>
+            <item>
+                <name>ENG 1 Cutoff</name>
+                <value>START</value>
+                <condition>
+                    <equals>
+                        <property>controls/engines/engine[0]/cutoff-switch</property>
+                        <value>1</value>
                     </equals>
                 </condition>
                 <marker>
@@ -799,17 +939,54 @@
                 </marker>
                 <binding>
                     <command>property-assign</command>
-                    <property>controls/engines/engine[2]/cutoff</property>
-                    <value>0</value>
+                    <property>controls/engines/engine[0]/cutoff-switch</property>
+                    <value>1</value>
                 </binding>
             </item>
             <item>
-                <name>Wait for RPM</name>
-                <value>N1 55%</value>
+                <name>ENG 3 Cutoff</name>
+                <value>START</value>
+                <condition>
+                    <equals>
+                        <property>controls/engines/engine[2]/cutoff-switch</property>
+                        <value>1</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-18.1743</x-m>
+                    <y-m>-0.0281</y-m>
+                    <z-m>0.4199</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[2]/cutoff-switch</property>
+                    <value>1</value>
+                </binding>
+            </item>
+            <item>
+                <name>Wait for engine 1 RPM</name>
+                <value>N1 30%</value>
                 <condition>
                     <greater-than-equals>
-                        <property>sim/model/B-1B/n1[2]</property>
-                        <value>55</value>
+                        <property>engines/engine[0]/n1</property>
+                        <value>30</value>
+                    </greater-than-equals>
+                </condition>
+                <marker>
+                    <x-m>-18.6313</x-m>
+                    <y-m>-0.0306</y-m>
+                    <z-m>0.9001</z-m>
+                    <scale>5.0</scale>
+                </marker>
+            </item>
+            <item>
+                <name>Wait for engine 3 RPM</name>
+                <value>N1 30%</value>
+                <condition>
+                    <greater-than-equals>
+                        <property>engines/engine[2]/n1</property>
+                        <value>30</value>
                     </greater-than-equals>
                 </condition>
                 <marker>
@@ -820,11 +997,11 @@
                 </marker>
             </item>
             <item>
-                <name>ENG 4 Cutoff</name>
-                <value>READY</value>
+                <name>Verify ENG 1 Cutoff</name>
+                <value>RUN</value>
                 <condition>
                     <equals>
-                        <property>controls/engines/engine[3]/cutoff</property>
+                        <property>controls/engines/engine[0]/cutoff-switch</property>
                         <value>0</value>
                     </equals>
                 </condition>
@@ -834,26 +1011,21 @@
                     <z-m>0.4199</z-m>
                     <scale>2.5</scale>
                 </marker>
-                <binding>
-                    <command>property-assign</command>
-                    <property>controls/engines/engine[3]/cutoff</property>
-                    <value>0</value>
-                </binding>
             </item>
             <item>
-                <name>Wait for RPM</name>
-                <value>N1 55%</value>
+                <name>Verify ENG 3 Cutoff</name>
+                <value>RUN</value>
                 <condition>
-                    <greater-than-equals>
-                        <property>sim/model/B-1B/n1[3]</property>
-                        <value>55</value>
-                    </greater-than-equals>
+                    <equals>
+                        <property>controls/engines/engine[2]/cutoff-switch</property>
+                        <value>0</value>
+                    </equals>
                 </condition>
                 <marker>
-                    <x-m>-18.6313</x-m>
-                    <y-m>0.0012</y-m>
-                    <z-m>0.9001</z-m>
-                    <scale>5.0</scale>
+                    <x-m>-18.1743</x-m>
+                    <y-m>-0.0281</y-m>
+                    <z-m>0.4199</z-m>
+                    <scale>2.5</scale>
                 </marker>
             </item>
             <!--
@@ -1142,9 +1314,173 @@
             </item>
 -->
         </checklist>
-<!--
+
         <checklist>
             <title>After engine start</title>
+            <item>
+                <name>APU L BLEED AIR</name>
+                <value>OFF</value>
+                <condition>
+                    <equals>
+                        <property>controls/apu/apu[0]/bleed</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/apu/apu[0]/bleed</property>
+                    <value>0</value>
+                </binding>
+            </item>
+            <item>
+                <name>APU R BLEED AIR</name>
+                <value>OFF</value>
+                <condition>
+                    <equals>
+                        <property>controls/apu/apu[1]/bleed</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/apu/apu[1]/bleed</property>
+                    <value>0</value>
+                </binding>
+            </item>
+            <item>
+                <name>APU L DRIVE</name>
+                <value>DECOUPLE</value>
+                <condition>
+                    <equals>
+                        <property>controls/apu/apu[0]/couple</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.1686</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/apu/apu[0]/couple</property>
+                    <value>0</value>
+                </binding>
+            </item>
+            <item>
+                <name>APU R DRIVE</name>
+                <value>DECOUPLE</value>
+                <condition>
+                    <equals>
+                        <property>controls/apu/apu[1]/couple</property>
+                        <value>0</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/apu/apu[1]/couple</property>
+                    <value>0</value>
+                </binding>
+            </item>
+            <item>
+                <name>APU MODE L</name>
+                <value>OFF</value>
+                <condition>
+                   <equals>
+                            <property>controls/engines/engine[4]/cutoff-switch</property>
+                            <value>-1</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8644</x-m>
+                    <y-m>0.1868</y-m>
+                    <z-m>1.5562</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[4]/cutoff-switch</property>
+                    <value>-1</value>
+                </binding>
+            </item>
+            <item>
+                <name>APU MODE R</name>
+                <value>OFF</value>
+                <condition>
+                    <equals>
+                            <property>controls/engines/engine[5]/cutoff-switch</property>
+                            <value>-1</value>
+                        </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8644</x-m>
+                    <y-m>0.2248</y-m>
+                    <z-m>1.5562</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine[5]/cutoff-switch</property>
+                    <value>-1</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>systems/engines/engine[5]/starter</property>
+                    <value>1</value>
+                </binding>
+            </item>
+            <item>
+                <name>Verify left APU indicator</name>
+                <value>Extinguished</value>
+                <condition>
+                    <less-than>
+                        <property>engines/engine[4]/n1</property>
+                        <value>95</value>
+                    </less-than>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+            </item>
+            <item>
+                <name>Verify right APU indicator</name>
+                <value>Extinguished</value>
+                <condition>
+                    <less-than>
+                        <property>engines/engine[5]/n1</property>
+                        <value>95</value>
+                    </less-than>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+            </item>
+            <!--
             <item>
                 <name>MAL and IND LTS</name>
                 <value>ON</value>
@@ -1618,10 +1954,10 @@
                     <property>instrumentation/comm[1]/volume</property>
                     <value>1</value>
                 </binding>
-            </item>
+            </item>-->
         </checklist>
 
-
+<!--
         <checklist>
             <title>Before taxi</title>
             <item>

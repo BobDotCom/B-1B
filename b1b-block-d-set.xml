@@ -13,5 +13,10 @@
             nation's defense strategy, offering exceptional speed, payload capacity, and versatility for a wide array of
             mission profiles.
         </long-description>
+        <systems> 
+            <property-rule n="111">
+                <path>Aircraft/B-1B/Systems/annunciators.xml</path>
+            </property-rule> 
+        </systems>
     </sim>
 </PropertyList>

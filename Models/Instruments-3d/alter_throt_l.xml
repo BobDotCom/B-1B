@@ -369,10 +369,168 @@ maggse
 	</action>
 </animation>
 
+<animation>
+	<type>rotate</type>
+	<object-name>ADC-SEL</object-name>
+	<property>controls/switches/ADC-select-switch</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-45</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.00628</x-m>
+            <y-m>0.28938</y-m>
+            <z-m>-0.04366</z-m>
+	</center>
+</animation> 
 
+<animation>
+	<type>pick</type>
+	<object-name>ADC-SEL</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/switches/ADC-select-switch</property>
+			<step>1.0</step>
+			<min>0.0</min>
+			<max>1.00</max>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>HDG</object-name>
+	<property>controls/switches/HDG-select-switch</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-45</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.013063</x-m>
+            <y-m>0.2333</y-m>
+            <z-m>-0.044903</z-m>
+	</center>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>HDG</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/switches/HDG-select-switch</property>
+			<step>1.0</step>
+			<min>0.0</min>
+			<max>1.00</max>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>ADC</object-name>
+	<property>controls/switches/ADC-test-switch</property>
+	<interpolation>
+		<entry>
+			<ind>-1.0</ind>
+			<dep>-45</dep>
+		</entry>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>45</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.004</x-m>
+            <y-m>0.3066</y-m>
+            <z-m>0.0098</z-m>
+	</center>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>ADC</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/ADC-test-switch</property>
+			<step>1.0</step>
+			<min>-1.0</min>
+			<max>1.00</max>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.3</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/ADC-test-switch</property>
+			<step>-1.0</step>
+			<min>-1.0</min>
+			<max>1.00</max>
+		</binding>
+	</action>
+</animation>
 
  <animation>
 	<type>material</type>
+	<object-name>PANEL_FLT8TRIM</object-name>
+	<object-name>PANEL_ALT_THROT</object-name>
+	<object-name>PANEL_Flt_Inst_Test</object-name>
+	<object-name>PANEL_ICS</object-name>
+	<object-name>FDC</object-name>
+	<object-name>VSI</object-name>
+	<object-name>UHF-1</object-name>
+	<object-name>UHF-2</object-name>
+	<object-name>ILSTT</object-name>
+	<object-name>KNOB1</object-name>
+	<object-name>KNOB2</object-name>
+	<object-name>TFRTKR</object-name>
+	<object-name>TEST_SW</object-name>
+	<object-name>HOT_MIC</object-name>
+	<object-name>mstr_vol</object-name>
 	<object-name>alter_throt.1.L</object-name>
 	<object-name>alter_throt.2.L</object-name>
     <object-name>alter_throt.3.L</object-name>
@@ -405,7 +563,7 @@ maggse
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/side_panel-norm</factor-prop>
 	</emission>
 </animation>
 

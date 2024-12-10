@@ -13,11 +13,12 @@
        <object-name>10sAS</object-name>
        <object-name>100sAS</object-name>
        <object-name>1000sAS</object-name>
+       <object-name>needle</object-name>
 	   <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	  </emission>
     </animation> 
 
@@ -89,6 +90,16 @@
         </condition> 
      </animation> 
 
+    <animation>
+        <type>select</type>
+        <object-name>OFF</object-name>
+        <condition>
+            <less-than>
+                <property>controls/switches/speed-indicator</property>
+                <value>0.5</value>
+            </less-than>
+        </condition> 
+     </animation>
 
   <animation>
    <type>textranslate</type>

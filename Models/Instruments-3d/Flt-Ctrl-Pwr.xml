@@ -37,9 +37,129 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
+
+   <animation>
+	 <type>rotate</type>
+	 <object-name>ROLL-AUG</object-name>
+	 <property>controls/flight/Roll-switch</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>-0.0356</x-m>
+		 <y-m>-0.0338</y-m>
+		 <z-m>0.0015/</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>ROLL-AUG</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/flight/Roll-switch</property>
+		 </binding>
+	 </action>
+</animation>
+
+   <animation>
+	 <type>rotate</type>
+	 <object-name>YAW-AUG</object-name>
+	 <property>controls/flight/yaw-switch</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>-0.0356</x-m>
+		 <y-m>-0.0007</y-m>
+		 <z-m>0.0007/</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>YAW-AUG</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/flight/yaw-switch</property>
+		 </binding>
+	 </action>
+</animation>
+
+   <animation>
+	 <type>rotate</type>
+	 <object-name>PTCH-AUG</object-name>
+	 <property>controls/flight/pitch-switch</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>-0.0354</x-m>
+		 <y-m>-0.064</y-m>
+		 <z-m>0.000/</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>PTCH-AUG</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.1</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/flight/pitch-switch</property>
+		 </binding>
+	 </action>
+</animation>
 
    <animation>
 	 <type>rotate</type>

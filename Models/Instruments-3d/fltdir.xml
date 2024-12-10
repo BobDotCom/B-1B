@@ -15,23 +15,31 @@ sweat by maggse
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
-			<dep>45.0</dep>
+			<dep>0.0</dep>
 		</entry>
 		<entry>
-			<ind>0.25</ind>
-			<dep>0</dep>
+			<ind>0.1</ind>
+			<dep>-45</dep>
 		</entry>
 		<entry>
-			<ind>0.50</ind>
+			<ind>0.2</ind>
 			<dep>-90</dep>
 		</entry>
 		<entry>
-			<ind>0.75</ind>
+			<ind>0.3</ind>
 			<dep>-135</dep>
 		</entry>
 		<entry>
-			<ind>1.00</ind>
-			<dep>-180</dep>
+			<ind>0.4</ind>
+			<dep>-190</dep>
+		</entry>
+		<entry>
+			<ind>0.5</ind>
+			<dep>-225</dep>
+		</entry>
+		<entry>
+			<ind>0.6</ind>
+			<dep>-280</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -68,13 +76,9 @@ sweat by maggse
 		<binding>
 			<command>property-adjust</command>
 			<property>controls/switches/fltdir</property>
-			<step>0.25</step>
+			<step>0.1</step>
 			<min>0.0</min>
-			<max>1.00</max>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>b1b.fltdir()</script>
+			<max>0.6</max>
 		</binding>
 	</action>
 	<action>
@@ -84,13 +88,9 @@ sweat by maggse
 		<binding>
 			<command>property-adjust</command>
 			<property>controls/switches/fltdir</property>
-			<step>-0.25</step>
+			<step>-0.1</step>
 			<min>0.0</min>
-			<max>1.00</max>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>b1b.fltdir()</script>
+			<max>0.6</max>
 		</binding>
 	</action>
 </animation>
