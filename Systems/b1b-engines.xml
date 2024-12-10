@@ -14,32 +14,48 @@
                 /engines/engine[0]/running eq 1
             </test>
             <test logic="AND" value="2">
-                <!-- TODO: Use actuator for coupling -->
-                /engines/engine[4]/n2 ge 95
-                /controls/apu/apu[0]/couple eq 1
-            </test>
+                <!-- TODO: Use actuator for coupling EDIT: DONE. -->
+                /engines/engine[4]/n2 ge 97
+                /controls/apu/apu[0]/couple_switch eq 1
+           </test>
         </switch>
 
-	<pure_gain name="/systems/engines/adg[0]/drive-rpm-percentage-APU">
-		<input>/engines/engine[4]/n2</input>
-		<gain>0.6</gain>
-	</pure_gain>
+        <switch name="/controls/apu/apu[0]/couple_switch">
+            <default value="/controls/apu/apu[0]/couple_switch"/>
+            <test logic="OR" value="0">
+                /engines/engine[4]/n2 lt 99
+                /systems/engines/adg[0]/drive-rpm ge 60
+            </test>
+            <output>/controls/apu/apu[0]/couple_switch</output>
+        </switch>
 
-        <switch name="/systems/engines/adg[0]/drive-rpm-command">
+        <switch name="/systems/engines/adg[0]/drive-rpm">
             <default value="0"/>
-            <test logic="AND" value="/systems/engines/adg[0]/drive-rpm-percentage-APU">
-                /systems/engines/adg[0]/drive-src eq 2
-                /systems/hydraulic/accumulator[0]/pressure-psi eq 4000
+            <test logic="AND" value="/systems/engines/adg[0]/APU-ADG-connect">
+                /systems/engines/adg[0]/drive-src ne 1
             </test>
             <test logic="AND" value="/engines/engine[0]/n2">
                 /systems/engines/adg[0]/drive-src eq 1
             </test>
         </switch>
-		<actuator name="/systems/engines/adg[0]/drive-rpm">
-            <input>/systems/engines/adg[0]/drive-rpm-command</input>
-            <rate_limit sense="decr">15.0</rate_limit> 
-            <rate_limit sense="incr">15.0</rate_limit> 
+
+        <switch name="/systems/engines/adg[0]/APU-ADG-connect-command">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[0]/APU-rpm-percentage">
+                /systems/engines/adg[0]/drive-src eq 2
+            </test>
+        </switch>
+
+		<actuator name="/systems/engines/adg[0]/APU-ADG-connect">
+            <input>/systems/engines/adg[0]/APU-ADG-connect-command</input>
+            <rate_limit sense="decr">10</rate_limit>
+            <rate_limit sense="incr">15</rate_limit> 
         </actuator>
+
+	<pure_gain name="/systems/engines/adg[0]/APU-rpm-percentage">
+		<input>/engines/engine[4]/n2</input>
+		<gain>0.6</gain>
+	</pure_gain>
 
         <switch name="/systems/engines/adg[0]/fault">
             <default value="0"/>
@@ -56,31 +72,48 @@
                 /engines/engine[1]/running eq 1
             </test>
             <test logic="AND" value="2">
-                <!-- TODO: Use actuator for coupling -->
-                /engines/engine[4]/n1 ge 95
-                /controls/apu/apu[0]/couple eq 1
-            </test>
+                <!-- TODO: Use actuator for coupling EDIT: DONE. -->
+                /engines/engine[4]/n2 ge 97
+                /controls/apu/apu[0]/couple_switch eq 1
+           </test>
         </switch>
 
-	<pure_gain name="/systems/engines/adg[1]/drive-rpm-percentage-APU">
-		<input>/engines/engine[4]/n2</input>
-		<gain>0.6</gain>
-	</pure_gain>
+        <switch name="/controls/apu/apu[0]/couple_switch">
+            <default value="/controls/apu/apu[0]/couple_switch"/>
+            <test logic="OR" value="0">
+                /engines/engine[4]/n2 lt 99
+                /systems/engines/adg[1]/drive-rpm ge 60
+            </test>
+            <output>/controls/apu/apu[0]/couple_switch</output>
+        </switch>
 
-        <switch name="/systems/engines/adg[1]/drive-rpm-command">
+        <switch name="/systems/engines/adg[1]/drive-rpm">
             <default value="0"/>
-            <test logic="AND" value="/systems/engines/adg[1]/drive-rpm-percentage-APU">
-                /systems/engines/adg[1]/drive-src eq 2
+            <test logic="AND" value="/systems/engines/adg[1]/APU-ADG-connect">
+                /systems/engines/adg[1]/drive-src ne 1
             </test>
             <test logic="AND" value="/engines/engine[1]/n2">
                 /systems/engines/adg[1]/drive-src eq 1
             </test>
         </switch>
-		<actuator name="/systems/engines/adg[1]/drive-rpm">
-            <input>/systems/engines/adg[1]/drive-rpm-command</input>
-            <rate_limit sense="decr">15</rate_limit> 
+
+        <switch name="/systems/engines/adg[1]/APU-ADG-connect-command">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[1]/APU-rpm-percentage">
+                /systems/engines/adg[1]/drive-src eq 2
+            </test>
+        </switch>
+
+		<actuator name="/systems/engines/adg[1]/APU-ADG-connect">
+            <input>/systems/engines/adg[1]/APU-ADG-connect-command</input>
+            <rate_limit sense="decr">10</rate_limit>
             <rate_limit sense="incr">15</rate_limit> 
         </actuator>
+
+	<pure_gain name="/systems/engines/adg[1]/APU-rpm-percentage">
+		<input>/engines/engine[4]/n2</input>
+		<gain>0.6</gain>
+	</pure_gain>
 
         <switch name="/systems/engines/adg[1]/fault">
             <default value="0"/>
@@ -98,31 +131,48 @@
                 /engines/engine[2]/running eq 1
             </test>
             <test logic="AND" value="2">
-                <!-- TODO: Use actuator for coupling -->
-                /engines/engine[5]/n1 ge 95
-                /controls/apu/apu[1]/couple eq 1
-            </test>
+                <!-- TODO: Use actuator for coupling EDIT: DONE. -->
+                /engines/engine[5]/n2 ge 97
+                /controls/apu/apu[1]/couple_switch eq 1
+           </test>
         </switch>
 
-	<pure_gain name="/systems/engines/adg[2]/drive-rpm-percentage-APU">
-		<input>/engines/engine[5]/n2</input>
-		<gain>0.6</gain>
-	</pure_gain>
-
-        <switch name="/systems/engines/adg[2]/drive-rpm-command">
-            <default value="0"/>
-            <test logic="AND" value="/systems/engines/adg[2]/drive-rpm-percentage-APU">
-                /systems/engines/adg[2]/drive-src eq 2
+        <switch name="/controls/apu/apu[1]/couple_switch">
+            <default value="/controls/apu/apu[1]/couple_switch"/>
+            <test logic="OR" value="0">
+                /engines/engine[5]/n2 lt 99
+                /systems/engines/adg[2]/drive-rpm ge 60
             </test>
-            <test logic="AND" value="/engines/engine[2]/n2">
+            <output>/controls/apu/apu[1]/couple_switch</output>
+        </switch>
+
+        <switch name="/systems/engines/adg[2]/drive-rpm">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[2]/APU-ADG-connect">
+                /systems/engines/adg[2]/drive-src ne 1
+            </test>
+            <test logic="AND" value="/engines/engine[1]/n2">
                 /systems/engines/adg[2]/drive-src eq 1
             </test>
         </switch>
-		<actuator name="/systems/engines/adg[2]/drive-rpm">
-            <input>/systems/engines/adg[2]/drive-rpm-command</input>
-            <rate_limit sense="decr">15</rate_limit> 
+
+        <switch name="/systems/engines/adg[2]/APU-ADG-connect-command">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[2]/APU-rpm-percentage">
+                /systems/engines/adg[2]/drive-src eq 2
+            </test>
+        </switch>
+
+		<actuator name="/systems/engines/adg[2]/APU-ADG-connect">
+            <input>/systems/engines/adg[2]/APU-ADG-connect-command</input>
+            <rate_limit sense="decr">10</rate_limit>
             <rate_limit sense="incr">15</rate_limit> 
         </actuator>
+
+	<pure_gain name="/systems/engines/adg[2]/APU-rpm-percentage">
+		<input>/engines/engine[5]/n2</input>
+		<gain>0.6</gain>
+	</pure_gain>
 
         <switch name="/systems/engines/adg[2]/fault">
             <default value="0"/>
@@ -139,31 +189,48 @@
                 /engines/engine[3]/running eq 1
             </test>
             <test logic="AND" value="2">
-                <!-- TODO: Use actuator for coupling -->
-                /engines/engine[5]/n1 ge 95
-                /controls/apu/apu[1]/couple eq 1
-            </test>
+                <!-- TODO: Use actuator for coupling EDIT: DONE. -->
+                /engines/engine[5]/n2 ge 97
+                /controls/apu/apu[1]/couple_switch eq 1
+           </test>
         </switch>
 
-	<pure_gain name="/systems/engines/adg[3]/drive-rpm-percentage-APU">
-		<input>/engines/engine[5]/n2</input>
-		<gain>0.6</gain>
-	</pure_gain>
-
-        <switch name="/systems/engines/adg[3]/drive-rpm-command">
-            <default value="0"/>
-            <test logic="AND" value="/systems/engines/adg[3]/drive-rpm-percentage-APU">
-                /systems/engines/adg[3]/drive-src eq 2
+        <switch name="/controls/apu/apu[1]/couple_switch">
+            <default value="/controls/apu/apu[1]/couple_switch"/>
+            <test logic="OR" value="0">
+                /engines/engine[5]/n2 lt 99
+                /systems/engines/adg[3]/drive-rpm ge 60
             </test>
-            <test logic="AND" value="/engines/engine[3]/n2">
+            <output>/controls/apu/apu[1]/couple_switch</output>
+        </switch>
+
+        <switch name="/systems/engines/adg[3]/drive-rpm">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[3]/APU-ADG-connect">
+                /systems/engines/adg[3]/drive-src ne 1
+            </test>
+            <test logic="AND" value="/engines/engine[1]/n2">
                 /systems/engines/adg[3]/drive-src eq 1
             </test>
         </switch>
-		<actuator name="/systems/engines/adg[3]/drive-rpm">
-            <input>/systems/engines/adg[3]/drive-rpm-command</input>
-            <rate_limit sense="decr">15</rate_limit> 
+
+        <switch name="/systems/engines/adg[3]/APU-ADG-connect-command">
+            <default value="0"/>
+            <test logic="AND" value="/systems/engines/adg[3]/APU-rpm-percentage">
+                /systems/engines/adg[3]/drive-src eq 2
+            </test>
+        </switch>
+
+		<actuator name="/systems/engines/adg[3]/APU-ADG-connect">
+            <input>/systems/engines/adg[3]/APU-ADG-connect-command</input>
+            <rate_limit sense="decr">10</rate_limit>
             <rate_limit sense="incr">15</rate_limit> 
         </actuator>
+
+	<pure_gain name="/systems/engines/adg[3]/APU-rpm-percentage">
+		<input>/engines/engine[5]/n2</input>
+		<gain>0.6</gain>
+	</pure_gain>
 
         <switch name="/systems/engines/adg[3]/fault">
             <default value="0"/>

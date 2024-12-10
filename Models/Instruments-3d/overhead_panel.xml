@@ -717,19 +717,10 @@ maggse
 <animation>
 	<type>knob</type>
 	 <object-name>APUL_couple</object-name>
-	<property>controls/apu/apu[0]/couple</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
+	<property>controls/apu/apu[0]/couple_switch</property>
+        <factor>60</factor>
 	<center>
-		<x-m>0.0108</x-m>
+		<x-m>0.011</x-m>
 		<y-m>0.1440</y-m>
 		<z-m>0.3309</z-m>
 	</center>
@@ -742,8 +733,8 @@ maggse
 
 	 <action>
 		 <binding>
-			 <command>property-adjust</command>
-			 <property>controls/apu/apu[0]/couple</property>
+			 <command>property-toggle</command>
+	                 <property>controls/apu/apu[0]/couple_switch</property>
 			 <min>0</min>
 			 <max>1</max>
 		 </binding>
@@ -754,39 +745,32 @@ maggse
 	<animation>
 		<type>knob</type>
 	 <object-name>APUR_couple</object-name>
-		<property>controls/apu/apu[1]/couple</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
-		<center>
-			<x-m>0.01077</x-m>
-			<y-m>0.21970</y-m>
-			<z-m>0.33090</z-m>
-		</center>
+	<property>controls/apu/apu[1]/couple_switch</property>
+        <factor>60</factor>
+	<center>
+		<x-m>0.011</x-m>
+		<y-m>0.1440</y-m>
+		<z-m>0.3309</z-m>
+	</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
 
-		<action>
+
+	 <action>
 		 <binding>
-			 <command>property-adjust</command>
-			 <property>controls/apu/apu[1]/couple</property>
+			 <command>property-toggle</command>
+	                 <property>controls/apu/apu[1]/couple_switch</property>
 			 <min>0</min>
 			 <max>1</max>
 		 </binding>
 	 </action>
+
 </animation>
 
-	<animation>
+        <animation>
 		<type>knob</type>
 	 <object-name>APUL_bleed</object-name>
 		<property>controls/apu/apu[0]/bleed</property>
