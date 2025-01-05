@@ -647,9 +647,7 @@ B-1B set file.
             <line>Startup procedure:</line>
             <line>1. Switch on Battery switch (overhead/middle)</line>
             <line>2. Start APU left and/or right (overhead/right):switch APU MODE L/R to on/start</line>
-            <line>   NOTE: use 3a or 3b!</line>
-            <line>3a.Couple left and right drive by switching L/R DRIVE to 2/4 ADS COUPLE</line>
-            <line>3b.Switch on L/R BLEED AIR</line>
+            <line>3.Couple left and right drive by switching L/R DRIVE to 2/4 ADS COUPLE</line>
             <line>   If only 1 APU active, switch to CRSVR AIR to start engines in other nacelle</line>
             <line>4. Switch on Engines (middle console/back)</line>
             <line>   NOTE: APU left powers engines 1,2 APU right -->3,4</line>

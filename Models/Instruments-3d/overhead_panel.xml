@@ -770,75 +770,6 @@ maggse
 
 </animation>
 
-        <animation>
-		<type>knob</type>
-	 <object-name>APUL_bleed</object-name>
-		<property>controls/apu/apu[0]/bleed</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
-		<center>
-			<x-m>0.01091</x-m>
-			<y-m>0.12770</y-m>
-			<z-m>0.28010</z-m>
-		</center>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
-
-		<action>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>controls/apu/apu[0]/bleed</property>
-			 <min>0</min>
-			 <max>1</max>
-		 </binding>
-	 </action>
-</animation>
-
-	<animation>
-		<type>knob</type>
-	 <object-name>APUR_bleed</object-name>
-		<property>controls/apu/apu[1]/bleed</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
-		<center>
-			<x-m>0.01085</x-m>
-			<y-m>0.23420</y-m>
-			<z-m>0.28010</z-m>
-		</center>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
-
-		<action>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>controls/apu/apu[1]/bleed</property>
-			 <min>0</min>
-			 <max>1</max>
-		 </binding>
-	 </action>
-</animation>
 	<animation>
 		<type>select</type>
 		<object-name>APUL_run</object-name>
@@ -894,6 +825,149 @@ maggse
 		 </binding>
 	 </action>
 </animation>
+
+                               <!-- hydraulic gauges-->
+
+<!-- pressure-->
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_1_pressure</object-name>
+  <property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+  <factor>0.065</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0086</x-m>
+	<y-m>-0.0455</y-m>
+	<z-m>0.386</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_2_pressure</object-name>
+  <property>/systems/hydraulic/system[2]/pipeline/pipeline_pressure</property>
+  <factor>0.065</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0086</x-m>
+	<y-m>-0.0164</y-m>
+	<z-m>0.386</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_3_pressure</object-name>
+  <property>/systems/hydraulic/system[3]/pipeline/pipeline_pressure</property>
+  <factor>0.065</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0086</x-m>
+	<y-m>0.0166</y-m>
+	<z-m>0.386</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_4_pressure</object-name>
+  <property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
+  <factor>0.065</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0086</x-m>
+	<y-m>0.046</y-m>
+	<z-m>0.386</z-m>
+	</center>
+ </animation>
+
+<!-- ammount-->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_1_ammount</object-name>
+  <property>/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-movement</property>
+  <factor>26</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0095</x-m>
+	<y-m>-0.045</y-m>
+	<z-m>0.413</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_2_ammount</object-name>
+  <property>/systems/hydraulic/system[2]/Reservoir_fluid_ammount-gal-movement</property>
+  <factor>15</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0095</x-m>
+	<y-m>-0.016</y-m>
+	<z-m>0.413</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_3_ammount</object-name>
+  <property>/systems/hydraulic/system[3]/Reservoir_fluid_ammount-gal-movement</property>
+  <factor>15</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0095</x-m>
+	<y-m>0.0166</y-m>
+	<z-m>0.413</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_4_ammount</object-name>
+  <property>/systems/hydraulic/system[4]/Reservoir_fluid_ammount-gal-movement</property>
+  <factor>26</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0095</x-m>
+	<y-m>0.0459</y-m>
+	<z-m>0.413</z-m>
+	</center>
+ </animation>
 
 
                                <!-- nav lights-->

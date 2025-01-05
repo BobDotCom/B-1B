@@ -7,6 +7,78 @@
   <filter>
         <type>gain</type>
         <gain>1.0</gain>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/HDG-select-switch</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/GSS/heading</property>
+      </input>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/HDG-select-switch</property>
+          <value>1</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/INS/heading</property>
+      </input> 
+     <output>systems/computers/PFDB1-heading</output>
+  </filter> 
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/HDG-select-switch</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/GSS/pitch</property>
+      </input>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/HDG-select-switch</property>
+          <value>1</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/INS/pitch</property>
+      </input> 
+     <output>systems/computers/PFDB1-pitch</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/HDG-select-switch</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/GSS/roll</property>
+      </input>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/HDG-select-switch</property>
+          <value>1</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/INS/roll</property>
+      </input> 
+     <output>systems/computers/PFDB1-roll</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
          <enable>
          <condition> 
           <equals>
@@ -109,6 +181,126 @@
   </filter>
 
 <!-- ADC computers -->
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC1/airspeed</property>
+      </input>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>1</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC2/airspeed</property>
+      </input> 
+     <output>systems/computers/PFDB1-airspeed-kts</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC1/groundspeed</property>
+      </input>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>1</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC2/groundspeed</property>
+      </input> 
+     <output>systems/computers/PFDB1-groundspeed-kts</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC1/mach</property>
+      </input>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>1</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC2/mach</property>
+      </input> 
+     <output>systems/computers/PFDB1-mach</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC1/baro_altitude</property>
+      </input>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>1</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC2/baro_altitude</property>
+      </input> 
+     <output>systems/computers/PFDB1-baro-altitude</output>
+  </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1.0</gain>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>0</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC1/verticalspeed</property>
+      </input>
+         <input>
+         <condition> 
+          <equals>
+          <property>controls/switches/ADC-select-switch</property>
+          <value>1</value>
+         </equals>  
+        </condition>
+       <property>systems/computers/ADC2/verticalspeed</property>
+      </input> 
+     <output>systems/computers/PFDB1-vertical-speed</output>
+  </filter>
 
   <filter>
         <type>gain</type>
@@ -569,5 +761,36 @@
      <output>instrumentation/transponder/serviceable</output>
     </logic>
 
+  <filter>
+        <type>gain</type>
+        <gain>100</gain>
+        <input>
+         <property>instrumentation/transponder/inputs/mode_3A_hundred-and-thousand</property> 
+        </input>
+        <output>instrumentation/transponder/inputs/mode_3A_hundred-and-thousand-four-figure</output>
+  </filter>
+
+  <filter>
+     <type>gain</type>
+     <gain>1.0</gain> 
+      <input>
+       <expression>  
+        <sum> 
+         <property>instrumentation/transponder/inputs/mode_3A_hundred-and-thousand-four-figure</property>
+         <property>instrumentation/transponder/inputs/mode_3A_digits_and_tens</property>
+        </sum>
+       </expression> 
+       </input>
+       <output>instrumentation/transponder/id-code</output>
+    </filter>
+
+  <filter>
+        <type>gain</type>
+        <gain>1</gain>
+        <input>
+        <property>controls/gear/emerg_switch</property>           
+        </input>
+        <output>instrumentation/transponder/transmitted-id</output>
+  </filter>
 
 </PropertyList>

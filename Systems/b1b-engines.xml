@@ -10,8 +10,8 @@
 
         <switch name="/systems/engines/adg[0]/drive-src">
             <default value="0"/>
-            <test logic="AND" value="1">
-                /engines/engine[0]/running eq 1
+            <test logic="AND" value="1">	
+                    /engines/engine[0]/running eq 1
             </test>
             <test logic="AND" value="2">
                 <!-- TODO: Use actuator for coupling EDIT: DONE. -->
@@ -24,7 +24,10 @@
             <default value="/controls/apu/apu[0]/couple_switch"/>
             <test logic="OR" value="0">
                 /engines/engine[4]/n2 lt 99
+              <test logic="AND">
                 /systems/engines/adg[0]/drive-rpm ge 60
+                /systems/engines/adg[1]/drive-rpm ge 60
+              </test>
             </test>
             <output>/controls/apu/apu[0]/couple_switch</output>
         </switch>
@@ -40,7 +43,7 @@
         </switch>
 
         <switch name="/systems/engines/adg[0]/APU-ADG-connect-command">
-            <default value="0"/>
+            <default value="/engines/engine[0]/n2"/>
             <test logic="AND" value="/systems/engines/adg[0]/APU-rpm-percentage">
                 /systems/engines/adg[0]/drive-src eq 2
             </test>
@@ -78,15 +81,6 @@
            </test>
         </switch>
 
-        <switch name="/controls/apu/apu[0]/couple_switch">
-            <default value="/controls/apu/apu[0]/couple_switch"/>
-            <test logic="OR" value="0">
-                /engines/engine[4]/n2 lt 99
-                /systems/engines/adg[1]/drive-rpm ge 60
-            </test>
-            <output>/controls/apu/apu[0]/couple_switch</output>
-        </switch>
-
         <switch name="/systems/engines/adg[1]/drive-rpm">
             <default value="0"/>
             <test logic="AND" value="/systems/engines/adg[1]/APU-ADG-connect">
@@ -98,7 +92,7 @@
         </switch>
 
         <switch name="/systems/engines/adg[1]/APU-ADG-connect-command">
-            <default value="0"/>
+            <default value="/engines/engine[1]/n2"/>
             <test logic="AND" value="/systems/engines/adg[1]/APU-rpm-percentage">
                 /systems/engines/adg[1]/drive-src eq 2
             </test>
@@ -141,7 +135,10 @@
             <default value="/controls/apu/apu[1]/couple_switch"/>
             <test logic="OR" value="0">
                 /engines/engine[5]/n2 lt 99
+              <test logic="AND">
                 /systems/engines/adg[2]/drive-rpm ge 60
+                /systems/engines/adg[3]/drive-rpm ge 60
+             </test>
             </test>
             <output>/controls/apu/apu[1]/couple_switch</output>
         </switch>
@@ -151,13 +148,13 @@
             <test logic="AND" value="/systems/engines/adg[2]/APU-ADG-connect">
                 /systems/engines/adg[2]/drive-src ne 1
             </test>
-            <test logic="AND" value="/engines/engine[1]/n2">
+            <test logic="AND" value="/engines/engine[2]/n2">
                 /systems/engines/adg[2]/drive-src eq 1
             </test>
         </switch>
 
         <switch name="/systems/engines/adg[2]/APU-ADG-connect-command">
-            <default value="0"/>
+            <default value="/engines/engine[2]/n2"/>
             <test logic="AND" value="/systems/engines/adg[2]/APU-rpm-percentage">
                 /systems/engines/adg[2]/drive-src eq 2
             </test>
@@ -195,27 +192,18 @@
            </test>
         </switch>
 
-        <switch name="/controls/apu/apu[1]/couple_switch">
-            <default value="/controls/apu/apu[1]/couple_switch"/>
-            <test logic="OR" value="0">
-                /engines/engine[5]/n2 lt 99
-                /systems/engines/adg[3]/drive-rpm ge 60
-            </test>
-            <output>/controls/apu/apu[1]/couple_switch</output>
-        </switch>
-
         <switch name="/systems/engines/adg[3]/drive-rpm">
             <default value="0"/>
             <test logic="AND" value="/systems/engines/adg[3]/APU-ADG-connect">
                 /systems/engines/adg[3]/drive-src ne 1
             </test>
-            <test logic="AND" value="/engines/engine[1]/n2">
+            <test logic="AND" value="/engines/engine[3]/n2">
                 /systems/engines/adg[3]/drive-src eq 1
             </test>
         </switch>
 
         <switch name="/systems/engines/adg[3]/APU-ADG-connect-command">
-            <default value="0"/>
+            <default value="/engines/engine[3]/n2"/>
             <test logic="AND" value="/systems/engines/adg[3]/APU-rpm-percentage">
                 /systems/engines/adg[3]/drive-src eq 2
             </test>
@@ -297,8 +285,8 @@
         </switch>
         <switch name="/systems/engines/engine[4]/can-start">
             <default value="0"/>
-            <test logic="OR" value="1">
-                <!-- TODO: Hydraulic APU starter -->
+            <test logic="AND" value="1">
+                <!-- TODO: Hydraulic APU starter. EDIT: DONE -->
                 /systems/electrical/bus/dc-bat ge 25
             </test>
         </switch>
@@ -486,7 +474,7 @@
                 <test logic="OR">
                     <test logic="AND">
                         /systems/engines/engine[4]/starter eq 1
-                        /controls/engines/engine[4]/cutoff-switch eq 0
+                        /controls/engines/engine[4]/cutoff-switch eq 0                       
                     </test>
                     /controls/engines/engine[4]/cutoff-switch eq 1
                 </test>

@@ -9,6 +9,15 @@
     <property value="0">/systems/failures/hydraulic/system[1]/fluid-leak-trigger</property>
     <property value="0">/systems/failures/hydraulic/system[1]/pump_1_failure-trigger</property>
     <property value="0">/systems/failures/hydraulic/system[1]/pump_2_failure-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[2]/fluid-leak-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[2]/pump_1_failure-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[2]/pump_2_failure-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[3]/fluid-leak-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[3]/pump_1_failure-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[3]/pump_2_failure-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[4]/fluid-leak-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[4]/pump_1_failure-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[4]/pump_2_failure-trigger</property>
 
 	<channel name="Hydraulic pumps" execrate="8">
 
@@ -16,7 +25,7 @@
 
 <!-- Pump 1 --> 
   
-<!-- Pressure --> 
+<!-- Pressure increase rate--> 
 
 		<fcs_function name="/systems/hydraulic/system[1]/pumps/pump[1]/pressure_from_APU">
 			<function>
@@ -31,26 +40,52 @@
 			</clipto>
 		</fcs_function>
 
-		<switch name="/systems/hydraulic/system[1]/pumps/pump[1]/IDG_pressure_command">
-			<default value="/systems/hydraulic/system[1]/pumps/pump[1]/pressure_from_APU"/>
-			<test logic="AND" value="4000">
-				/systems/engines/adg[0]/drive-rpm gt 70
+		<fcs_function name="/systems/hydraulic/system[1]/pumps/pump[1]/deceleration_rate">
+			<function>
+				<product>
+					<value>25</value>
+					<property>/systems/engines/adg[0]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>1.1</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[1]/engine_pressure">
+                                /engines/engine[0]/n2 ge 0.1
 			</test>
-			<test logic="OR" value="0">
-				/systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 1
-				/systems/failures/hydraulic/system[1]/pump_1_failure-trigger eq 1
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[1]/pressure_from_APU">
+                                /systems/engines/adg[0]/drive-rpm ge 1
 			</test>
 		</switch>
 
-		<actuator name="/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure">
-            <input>/systems/hydraulic/system[1]/pumps/pump[1]/IDG_pressure_command</input>
-            <rate_limit sense="decr">/systems/failures/hydraulic/system[1]/fluid-leak-pressure-ammount</rate_limit> 
+		<switch name="/systems/hydraulic/system[1]/pumps/pump[1]/engine_pressure">
+			<default value="/systems/hydraulic/system[1]/pumps/pump[1]/pressure_from_APU"/>
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[1]/engine_pressure_input_rate">
+                                /engines/engine[0]/n2 ge 0.1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[1]/pumps/pump[1]/engine_pressure_input">
+			<default value="/systems/hydraulic/system[1]/pumps/pump[1]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+                                /engines/engine[0]/running eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[1]/pumps/pump[1]/engine_pressure_input_rate">
+            <input>/systems/hydraulic/system[1]/pumps/pump[1]/engine_pressure_input</input>
+            <rate_limit sense="decr">/systems/hydraulic/system[1]/pumps/pump[1]/deceleration_rate</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
-        </actuator> 
+        </actuator>
 
 <!-- Pump 2 -->
 
-<!-- Pressure -->
+<!-- Pressure increase rate--> 
 
 		<fcs_function name="/systems/hydraulic/system[1]/pumps/pump[2]/pressure_from_APU">
 			<function>
@@ -65,32 +100,368 @@
 			</clipto>
 		</fcs_function>
 
-		<switch name="/systems/hydraulic/system[1]/pumps/pump[2]/IDG_pressure_command">
-			<default value="/systems/hydraulic/system[1]/pumps/pump[2]/pressure_from_APU"/>
-			<test logic="AND" value="4000">
-				/systems/engines/adg[1]/drive-rpm gt 70
+		<fcs_function name="/systems/hydraulic/system[1]/pumps/pump[2]/deceleration_rate">
+			<function>
+				<product>
+					<value>25</value>
+					<property>/systems/engines/adg[1]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>1.1</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[1]/pumps/pump[2]/final_pressure">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure">
+                                /engines/engine[1]/n2 ge 0.1
 			</test>
-			<test logic="OR" value="0">
-				/systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 1
-				/systems/failures/hydraulic/system[1]/pump_2_failure-trigger eq 1
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[2]/pressure_from_APU">
+                                /systems/engines/adg[1]/drive-rpm ge 1
 			</test>
 		</switch>
 
-		<actuator name="/systems/hydraulic/system[1]/pumps/pump[2]/final_pressure">
-            <input>/systems/hydraulic/system[1]/pumps/pump[2]/IDG_pressure_command</input>
-            <rate_limit sense="decr">/systems/failures/hydraulic/system[1]/fluid-leak-pressure-ammount</rate_limit> 
+		<switch name="/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure">
+			<default value="/systems/hydraulic/system[1]/pumps/pump[2]/pressure_from_APU"/>
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure_input_rate">
+                                /engines/engine[1]/n2 ge 0.1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure_input">
+			<default value="/systems/hydraulic/system[1]/pumps/pump[2]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+                                /engines/engine[1]/running eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure_input_rate">
+            <input>/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure_input</input>
+            <rate_limit sense="decr">/systems/hydraulic/system[1]/pumps/pump[2]/deceleration_rate</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
-        </actuator> 
+        </actuator>
+
+<!-- Pipeline -->
+
+		<fcs_function name="/systems/hydraulic/system[1]/pipeline/pipeline_pressure">
+			<function>
+					<max>
+						<property>/systems/hydraulic/system[1]/pipeline/pump[1]/feed</property>
+						<property>/systems/hydraulic/system[1]/pipeline/pump[2]/feed</property>
+					</max>
+			</function>
+		</fcs_function>
+
+<!-- Pump 1 input -->
+
+		<actuator name="/systems/hydraulic/system[1]/pipeline/pump[1]/feed">
+            <input>/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure</input>
+            <rate_limit sense="decr">200</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[1]/pipeline/pump[1]/pressure_increase_rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/hydraulic/system[1]/pipeline/pump[1]/pressure_increase_rate">
+			<default value="0"/>
+			<test logic="OR" value="/systems/hydraulic/system[1]/pipeline/pump[1]/APU_induced_increase_rate">
+                                /systems/hydraulic/system[1]/pumps/pump[1]/final_pressure lt 1601
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[1]/pipeline/pump[1]/engine_induced_increase_rate">
+                                /systems/hydraulic/system[1]/pumps/pump[1]/final_pressure gt 1600
+			</test>
+		</switch>
+
+		<fcs_function name="/systems/hydraulic/system[1]/pipeline/pump[1]/APU_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.25</value>
+					<property>/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[1]/pipeline/pump[1]/engine_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.1</value>
+					<property>/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>4000</max>
+			</clipto>
+		</fcs_function>
+
+<!-- Pump 2 input -->
+
+		<actuator name="/systems/hydraulic/system[1]/pipeline/pump[2]/feed">
+            <input>/systems/hydraulic/system[1]/pumps/pump[2]/final_pressure</input>
+            <rate_limit sense="decr">200</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[1]/pipeline/pump[2]/pressure_increase_rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/hydraulic/system[1]/pipeline/pump[2]/pressure_increase_rate">
+			<default value="0"/>
+			<test logic="OR" value="/systems/hydraulic/system[1]/pipeline/pump[2]/APU_induced_increase_rate">
+                                /systems/hydraulic/system[1]/pumps/pump[2]/final_pressure lt 1601
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[1]/pipeline/pump[2]/engine_induced_increase_rate">
+                                /systems/hydraulic/system[1]/pumps/pump[2]/final_pressure gt 1600
+			</test>
+		</switch>
+
+		<fcs_function name="/systems/hydraulic/system[1]/pipeline/pump[2]/APU_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.25</value>
+					<property>/systems/hydraulic/system[1]/pumps/pump[2]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[1]/pipeline/pump[2]/engine_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.1</value>
+					<property>/systems/hydraulic/system[1]/pumps/pump[2]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>4000</max>
+			</clipto>
+		</fcs_function>
 
 <!-- SYSTEM 2 --> 
 
 <!-- Pump 1 --> 
   
-<!-- Pressure -->  
+<!-- Pressure increase rate--> 
+
+		<fcs_function name="/systems/hydraulic/system[2]/pumps/pump[1]/pressure_from_APU">
+			<function>
+				<product>
+					<value>27</value>
+					<property>/systems/engines/adg[0]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[2]/pumps/pump[1]/deceleration_rate">
+			<function>
+				<product>
+					<value>25</value>
+					<property>/systems/engines/adg[0]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>1.1</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[2]/pumps/pump[1]/final_pressure">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[1]/engine_pressure">
+                                /engines/engine[0]/n2 ge 0.1
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[1]/pressure_from_APU">
+                                /systems/engines/adg[0]/drive-rpm ge 1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[2]/pumps/pump[1]/engine_pressure">
+			<default value="/systems/hydraulic/system[2]/pumps/pump[1]/pressure_from_APU"/>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[1]/engine_pressure_input_rate">
+                                /engines/engine[0]/n2 ge 0.1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[2]/pumps/pump[1]/engine_pressure_input">
+			<default value="/systems/hydraulic/system[2]/pumps/pump[1]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+                                /engines/engine[0]/running eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[2]/pumps/pump[1]/engine_pressure_input_rate">
+            <input>/systems/hydraulic/system[2]/pumps/pump[1]/engine_pressure_input</input>
+            <rate_limit sense="decr">/systems/hydraulic/system[2]/pumps/pump[1]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
 
 <!-- Pump 2 -->
 
-<!-- Pressure -->
+<!-- Pressure increase rate--> 
+
+		<fcs_function name="/systems/hydraulic/system[2]/pumps/pump[2]/pressure_from_APU">
+			<function>
+				<product>
+					<value>27</value>
+					<property>/systems/engines/adg[1]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[2]/pumps/pump[2]/deceleration_rate">
+			<function>
+				<product>
+					<value>25</value>
+					<property>/systems/engines/adg[1]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>1.1</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[2]/pumps/pump[2]/final_pressure">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure">
+                                /engines/engine[1]/n2 ge 0.1
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[2]/pressure_from_APU">
+                                /systems/engines/adg[1]/drive-rpm ge 1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure">
+			<default value="/systems/hydraulic/system[2]/pumps/pump[2]/pressure_from_APU"/>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure_input_rate">
+                                /engines/engine[1]/n2 ge 0.1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure_input">
+			<default value="/systems/hydraulic/system[2]/pumps/pump[2]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+                                /engines/engine[1]/running eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure_input_rate">
+            <input>/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure_input</input>
+            <rate_limit sense="decr">/systems/hydraulic/system[2]/pumps/pump[2]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+<!-- Pipeline -->
+
+		<fcs_function name="/systems/hydraulic/system[2]/pipeline/pipeline_pressure">
+			<function>
+					<max>
+						<property>/systems/hydraulic/system[2]/pipeline/pump[1]/feed</property>
+						<property>/systems/hydraulic/system[2]/pipeline/pump[2]/feed</property>
+					</max>
+			</function>
+		</fcs_function>
+
+<!-- Pump 1 input -->
+
+		<actuator name="/systems/hydraulic/system[2]/pipeline/pump[1]/feed">
+            <input>/systems/hydraulic/system[2]/pumps/pump[1]/final_pressure</input>
+            <rate_limit sense="decr">200</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[2]/pipeline/pump[1]/pressure_increase_rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/hydraulic/system[2]/pipeline/pump[1]/pressure_increase_rate">
+			<default value="0"/>
+			<test logic="OR" value="/systems/hydraulic/system[2]/pipeline/pump[1]/APU_induced_increase_rate">
+                                /systems/hydraulic/system[2]/pumps/pump[1]/final_pressure lt 1601
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[2]/pipeline/pump[1]/engine_induced_increase_rate">
+                                /systems/hydraulic/system[2]/pumps/pump[1]/final_pressure gt 1600
+			</test>
+		</switch>
+
+		<fcs_function name="/systems/hydraulic/system[2]/pipeline/pump[1]/APU_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.25</value>
+					<property>/systems/hydraulic/system[2]/pumps/pump[1]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[2]/pipeline/pump[1]/engine_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.1</value>
+					<property>/systems/hydraulic/system[2]/pumps/pump[1]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>4000</max>
+			</clipto>
+		</fcs_function>
+
+<!-- Pump 2 input -->
+
+		<actuator name="/systems/hydraulic/system[2]/pipeline/pump[2]/feed">
+            <input>/systems/hydraulic/system[2]/pumps/pump[2]/final_pressure</input>
+            <rate_limit sense="decr">200</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[2]/pipeline/pump[2]/pressure_increase_rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/hydraulic/system[2]/pipeline/pump[2]/pressure_increase_rate">
+			<default value="0"/>
+			<test logic="OR" value="/systems/hydraulic/system[2]/pipeline/pump[2]/APU_induced_increase_rate">
+                                /systems/hydraulic/system[2]/pumps/pump[2]/final_pressure lt 1601
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[2]/pipeline/pump[2]/engine_induced_increase_rate">
+                                /systems/hydraulic/system[2]/pumps/pump[2]/final_pressure gt 1600
+			</test>
+		</switch>
+
+		<fcs_function name="/systems/hydraulic/system[2]/pipeline/pump[2]/APU_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.25</value>
+					<property>/systems/hydraulic/system[2]/pumps/pump[2]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[2]/pipeline/pump[2]/engine_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.1</value>
+					<property>/systems/hydraulic/system[2]/pumps/pump[2]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>4000</max>
+			</clipto>
+		</fcs_function>
 
 <!-- SYSTEM 3 --> 
 
@@ -98,9 +469,220 @@
   
 <!-- Pressure -->  
 
+		<fcs_function name="/systems/hydraulic/system[3]/pumps/pump[1]/pressure_from_APU">
+			<function>
+				<product>
+					<value>27</value>
+					<property>/systems/engines/adg[2]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[3]/pumps/pump[1]/deceleration_rate">
+			<function>
+				<product>
+					<value>25</value>
+					<property>/systems/engines/adg[2]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>1.1</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[3]/pumps/pump[1]/final_pressure">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure">
+                                /engines/engine[2]/n2 ge 0.1
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[1]/pressure_from_APU">
+                                /systems/engines/adg[2]/drive-rpm ge 1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure">
+			<default value="/systems/hydraulic/system[3]/pumps/pump[1]/pressure_from_APU"/>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure_input_rate">
+                                /engines/engine[2]/n2 ge 0.1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure_input">
+			<default value="/systems/hydraulic/system[3]/pumps/pump[1]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+                                /engines/engine[2]/running eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure_input_rate">
+            <input>/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure_input</input>
+            <rate_limit sense="decr">/systems/hydraulic/system[3]/pumps/pump[1]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
 <!-- Pump 2 -->
 
-<!-- Pressure -->
+<!-- Pressure increase rate--> 
+
+		<fcs_function name="/systems/hydraulic/system[3]/pumps/pump[2]/pressure_from_APU">
+			<function>
+				<product>
+					<value>27</value>
+					<property>/systems/engines/adg[3]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[3]/pumps/pump[2]/deceleration_rate">
+			<function>
+				<product>
+					<value>25</value>
+					<property>/systems/engines/adg[3]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>1.1</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[3]/pumps/pump[2]/final_pressure">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure">
+                                /engines/engine[3]/n2 ge 0.1
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[2]/pressure_from_APU">
+                                /systems/engines/adg[3]/drive-rpm ge 1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure">
+			<default value="/systems/hydraulic/system[3]/pumps/pump[2]/pressure_from_APU"/>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure_input_rate">
+                                /engines/engine[3]/n2 ge 0.1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure_input">
+			<default value="/systems/hydraulic/system[3]/pumps/pump[2]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+                                /engines/engine[3]/running eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure_input_rate">
+            <input>/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure_input</input>
+            <rate_limit sense="decr">/systems/hydraulic/system[3]/pumps/pump[2]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+<!-- Pipeline -->
+
+		<fcs_function name="/systems/hydraulic/system[3]/pipeline/pipeline_pressure">
+			<function>
+					<max>
+						<property>/systems/hydraulic/system[3]/pipeline/pump[1]/feed</property>
+						<property>/systems/hydraulic/system[3]/pipeline/pump[2]/feed</property>
+					</max>
+			</function>
+		</fcs_function>
+
+<!-- Pump 1 input -->
+
+		<actuator name="/systems/hydraulic/system[3]/pipeline/pump[1]/feed">
+            <input>/systems/hydraulic/system[3]/pumps/pump[1]/final_pressure</input>
+            <rate_limit sense="decr">200</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[3]/pipeline/pump[1]/pressure_increase_rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/hydraulic/system[3]/pipeline/pump[1]/pressure_increase_rate">
+			<default value="0"/>
+			<test logic="OR" value="/systems/hydraulic/system[3]/pipeline/pump[1]/APU_induced_increase_rate">
+                                /systems/hydraulic/system[3]/pumps/pump[1]/final_pressure lt 1601
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[3]/pipeline/pump[1]/engine_induced_increase_rate">
+                                /systems/hydraulic/system[3]/pumps/pump[1]/final_pressure gt 1600
+			</test>
+		</switch>
+
+		<fcs_function name="/systems/hydraulic/system[3]/pipeline/pump[1]/APU_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.25</value>
+					<property>/systems/hydraulic/system[3]/pumps/pump[1]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[3]/pipeline/pump[1]/engine_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.1</value>
+					<property>/systems/hydraulic/system[3]/pumps/pump[1]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>4000</max>
+			</clipto>
+		</fcs_function>
+
+<!-- Pump 2 input -->
+
+		<actuator name="/systems/hydraulic/system[3]/pipeline/pump[2]/feed">
+            <input>/systems/hydraulic/system[3]/pumps/pump[2]/final_pressure</input>
+            <rate_limit sense="decr">200</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[3]/pipeline/pump[2]/pressure_increase_rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/hydraulic/system[3]/pipeline/pump[2]/pressure_increase_rate">
+			<default value="0"/>
+			<test logic="OR" value="/systems/hydraulic/system[3]/pipeline/pump[2]/APU_induced_increase_rate">
+                                /systems/hydraulic/system[3]/pumps/pump[2]/final_pressure lt 1601
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[3]/pipeline/pump[2]/engine_induced_increase_rate">
+                                /systems/hydraulic/system[3]/pumps/pump[2]/final_pressure gt 1600
+			</test>
+		</switch>
+
+		<fcs_function name="/systems/hydraulic/system[3]/pipeline/pump[2]/APU_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.25</value>
+					<property>/systems/hydraulic/system[3]/pumps/pump[2]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[3]/pipeline/pump[2]/engine_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.1</value>
+					<property>/systems/hydraulic/system[3]/pumps/pump[2]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>4000</max>
+			</clipto>
+		</fcs_function>
 
 <!-- SYSTEM 4 --> 
 
@@ -108,62 +690,222 @@
   
 <!-- Pressure --> 
 
-<!-- Pump 2 -->
+		<fcs_function name="/systems/hydraulic/system[4]/pumps/pump[1]/pressure_from_APU">
+			<function>
+				<product>
+					<value>27</value>
+					<property>/systems/engines/adg[2]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
 
-<!-- Pressure -->
+		<fcs_function name="/systems/hydraulic/system[4]/pumps/pump[1]/deceleration_rate">
+			<function>
+				<product>
+					<value>25</value>
+					<property>/systems/engines/adg[2]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>1.1</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
 
-</channel> 
-
-
-	<channel name="Failures" execrate="8">
-
-<!--System 1 -->
-
-		<switch name="/systems/failures/hydraulic/system[1]/fluid-leak-pressure-ammount">
+		<switch name="/systems/hydraulic/system[4]/pumps/pump[1]/final_pressure">
 			<default value="0"/>
-			<test logic="AND" value="/systems/failures/hydraulic/system[1]/leakage_pressure_loss_rate">
-				/systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 1
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure">
+                                /engines/engine[2]/n2 ge 0.1
 			</test>
-			<test logic="OR" value="/systems/failures/hydraulic/system[1]/pump_failure_pressure_loss_rate">
-				/systems/failures/hydraulic/system[1]/pump_1_failure-trigger eq 1
-				/systems/failures/hydraulic/system[1]/pump_2_failure-trigger eq 1
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[1]/pressure_from_APU">
+                                /systems/engines/adg[2]/drive-rpm ge 1
 			</test>
 		</switch>
 
-		<fcs_function name="/systems/failures/hydraulic/system[1]/pump_failure_pressure_loss_rate">
+		<switch name="/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure">
+			<default value="/systems/hydraulic/system[4]/pumps/pump[1]/pressure_from_APU"/>
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure_input_rate">
+                                /engines/engine[2]/n2 ge 0.1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure_input">
+			<default value="/systems/hydraulic/system[4]/pumps/pump[1]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+                                /engines/engine[2]/running eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure_input_rate">
+            <input>/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure_input</input>
+            <rate_limit sense="decr">/systems/hydraulic/system[4]/pumps/pump[1]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+<!-- Pump 2 -->
+
+<!-- Pressure increase rate--> 
+
+		<fcs_function name="/systems/hydraulic/system[4]/pumps/pump[2]/pressure_from_APU">
 			<function>
-				<quotient>
-					<property>/systems/failures/hydraulic/system[1]/fluid-leak-pressure-max</property>
-					<value>2</value>
-				</quotient>
+				<product>
+					<value>27</value>
+					<property>/systems/engines/adg[3]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<fcs_function name="/systems/hydraulic/system[4]/pumps/pump[2]/deceleration_rate">
+			<function>
+				<product>
+					<value>25</value>
+					<property>/systems/engines/adg[3]/drive-rpm</property>
+				</product>
+			</function>
+			<clipto>
+				<min>1.1</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[4]/pumps/pump[2]/final_pressure">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure">
+                                /engines/engine[3]/n2 ge 0.1
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[2]/pressure_from_APU">
+                                /systems/engines/adg[3]/drive-rpm ge 1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure">
+			<default value="/systems/hydraulic/system[4]/pumps/pump[2]/pressure_from_APU"/>
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure_input_rate">
+                                /engines/engine[3]/n2 ge 0.1
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure_input">
+			<default value="/systems/hydraulic/system[4]/pumps/pump[2]/pressure_from_APU"/>
+			<test logic="AND" value="4000">
+                                /engines/engine[3]/running eq 1
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure_input_rate">
+            <input>/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure_input</input>
+            <rate_limit sense="decr">/systems/hydraulic/system[4]/pumps/pump[2]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+<!-- Pipeline -->
+
+		<fcs_function name="/systems/hydraulic/system[4]/pipeline/pipeline_pressure">
+			<function>
+					<max>
+						<property>/systems/hydraulic/system[4]/pipeline/pump[1]/feed</property>
+						<property>/systems/hydraulic/system[4]/pipeline/pump[2]/feed</property>
+					</max>
 			</function>
 		</fcs_function>
 
-		<fcs_function name="/systems/failures/hydraulic/system[1]/leakage_pressure_loss_rate">
+<!-- Pump 1 input -->
+
+		<actuator name="/systems/hydraulic/system[4]/pipeline/pump[1]/feed">
+            <input>/systems/hydraulic/system[4]/pumps/pump[1]/final_pressure</input>
+            <rate_limit sense="decr">200</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[4]/pipeline/pump[1]/pressure_increase_rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/hydraulic/system[4]/pipeline/pump[1]/pressure_increase_rate">
+			<default value="0"/>
+			<test logic="OR" value="/systems/hydraulic/system[4]/pipeline/pump[1]/APU_induced_increase_rate">
+                                /systems/hydraulic/system[4]/pumps/pump[1]/final_pressure lt 1601
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[4]/pipeline/pump[1]/engine_induced_increase_rate">
+                                /systems/hydraulic/system[4]/pumps/pump[1]/final_pressure gt 1600
+			</test>
+		</switch>
+
+		<fcs_function name="/systems/hydraulic/system[4]/pipeline/pump[1]/APU_induced_increase_rate">
 			<function>
-				<quotient>
-					<property>/systems/failures/hydraulic/system[1]/fluid-leak-pressure-max</property>
-					<value>36</value>
-				</quotient>
+				<product>
+					<value>0.25</value>
+					<property>/systems/hydraulic/system[4]/pumps/pump[1]/final_pressure</property>
+				</product>
 			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
 		</fcs_function>
 
-		<actuator name="/systems/failures/hydraulic/system[1]/fluid-leak-pressure-max">
-            <input>/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure</input>
-            <rate_limit sense="decr">0</rate_limit> 
-            <rate_limit sense="incr">/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure</rate_limit> 
+		<fcs_function name="/systems/hydraulic/system[4]/pipeline/pump[1]/engine_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.1</value>
+					<property>/systems/hydraulic/system[4]/pumps/pump[1]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>4000</max>
+			</clipto>
+		</fcs_function>
+
+<!-- Pump 2 input -->
+
+		<actuator name="/systems/hydraulic/system[4]/pipeline/pump[2]/feed">
+            <input>/systems/hydraulic/system[4]/pumps/pump[2]/final_pressure</input>
+            <rate_limit sense="decr">200</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[4]/pipeline/pump[2]/pressure_increase_rate</rate_limit> 
         </actuator>
 
+		<switch name="/systems/hydraulic/system[4]/pipeline/pump[2]/pressure_increase_rate">
+			<default value="0"/>
+			<test logic="OR" value="/systems/hydraulic/system[4]/pipeline/pump[2]/APU_induced_increase_rate">
+                                /systems/hydraulic/system[4]/pumps/pump[2]/final_pressure lt 1601
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[4]/pipeline/pump[2]/engine_induced_increase_rate">
+                                /systems/hydraulic/system[4]/pumps/pump[2]/final_pressure gt 1600
+			</test>
+		</switch>
 
-		<actuator name="/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal">
-            <input>/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-cmd</input>
-            <rate_limit sense="decr">0.25</rate_limit> 
-            <rate_limit sense="incr">0</rate_limit> 
-        </actuator>
+		<fcs_function name="/systems/hydraulic/system[4]/pipeline/pump[2]/APU_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.25</value>
+					<property>/systems/hydraulic/system[4]/pumps/pump[2]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1600</max>
+			</clipto>
+		</fcs_function>
 
-<!--System 2 -->
+		<fcs_function name="/systems/hydraulic/system[4]/pipeline/pump[2]/engine_induced_increase_rate">
+			<function>
+				<product>
+					<value>0.1</value>
+					<property>/systems/hydraulic/system[4]/pumps/pump[2]/final_pressure</property>
+				</product>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>4000</max>
+			</clipto>
+		</fcs_function>
 
-  </channel> 
+</channel> 
 
 	<channel name="Temperature" execrate="8">
 
@@ -179,11 +921,56 @@
                                        "/systems/hydraulic/system[1]/system_temperature-F-output">
 			<test logic="OR" value="350">
 				/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure gt 50
-				/systems/hydraulic/system[1]/pumps/pump[2]/final_pressure gt 50
 			</test>
 		</switch>
 
 <!--System 2 -->
+
+		<actuator name="/systems/hydraulic/system[2]/system_temperature-F-output">
+            <input>/systems/hydraulic/system[2]/system_temperature-F_max</input>
+            <rate_limit sense="decr">0.5</rate_limit> 
+            <rate_limit sense="incr">1</rate_limit> 
+        </actuator>
+		<switch name="/systems/hydraulic/system[2]/system_temperature-F_max">
+			<default value="/environment/temperature-degf"/>
+                                       "/systems/hydraulic/system[2]/system_temperature-F-output">
+			<test logic="OR" value="350">
+				/systems/hydraulic/system[2]/pumps/pump[1]/final_pressure gt 50
+				/systems/hydraulic/system[2]/pumps/pump[2]/final_pressure gt 50
+			</test>
+		</switch>
+
+<!-- System 3 -->
+
+		<actuator name="/systems/hydraulic/system[3]/system_temperature-F-output">
+            <input>/systems/hydraulic/system[3]/system_temperature-F_max</input>
+            <rate_limit sense="decr">0.5</rate_limit> 
+            <rate_limit sense="incr">1</rate_limit> 
+        </actuator>
+		<switch name="/systems/hydraulic/system[3]/system_temperature-F_max">
+			<default value="/environment/temperature-degf"/>
+                                       "/systems/hydraulic/system[3]/system_temperature-F-output">
+			<test logic="OR" value="350">
+				/systems/hydraulic/system[3]/pumps/pump[1]/final_pressure gt 50
+				/systems/hydraulic/system[3]/pumps/pump[2]/final_pressure gt 50
+			</test>
+		</switch>
+
+<!--System 4 -->
+
+		<actuator name="/systems/hydraulic/system[4]/system_temperature-F-output">
+            <input>/systems/hydraulic/system[4]/system_temperature-F_max</input>
+            <rate_limit sense="decr">0.5</rate_limit> 
+            <rate_limit sense="incr">1</rate_limit> 
+        </actuator>
+		<switch name="/systems/hydraulic/system[4]/system_temperature-F_max">
+			<default value="/environment/temperature-degf"/>
+                                       "/systems/hydraulic/system[4]/system_temperature-F-output">
+			<test logic="OR" value="350">
+				/systems/hydraulic/system[4]/pumps/pump[1]/final_pressure gt 50
+				/systems/hydraulic/system[4]/pumps/pump[2]/final_pressure gt 50
+			</test>
+		</switch>
 
 	</channel>
 
@@ -191,20 +978,21 @@
 
 <!-- APU_1 starter accumulator -->
 
-		<switch name="/systems/hydraulic/accumulator[0]/pressure-psi">
+		<switch name="/systems/hydraulic/accumulator[0]/pressure-psi-command">
 			<default value="4000"/>
-			<test logic="AND" value="4000">
-				/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure gt 1
-			</test>
 			<test logic="AND" value="0">
 				/engines/engine[4]/starter eq 1
 			</test>
+			<test logic="AND" value="1600">
+                               /systems/hydraulic/system[1]/pipeline/pipeline_pressure lt 1601
+                               /engines/engine[4]/n2 ge 97 
+			</test>
 		</switch>
 
-		<actuator name="/systems/hydraulic/accumulator[0]/pressure-psi-output">
-            <input>/systems/hydraulic/accumulator[0]/pressure-psi</input>
+		<actuator name="/systems/hydraulic/accumulator[0]/pressure-psi">
+            <input>/systems/hydraulic/accumulator[0]/pressure-psi-command</input>
             <rate_limit sense="decr">200</rate_limit> 
-            <rate_limit sense="incr">/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/system[1]/pipeline/pipeline_pressure</rate_limit> 
         </actuator>
 
 	</channel>
@@ -214,14 +1002,104 @@
 <!-- System 1-->
 
 		<switch name="/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-cmd">
-			<default value="9"/>
-			<test logic="AND" value="0">
-				/systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 1
+			<default value="0"/>
+			<test logic="AND" value="9">
+				/systems/electrical/bus/ac-1 gt 220
 			</test>
 		</switch>
 
+		<actuator name="/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-movement">
+            <input>/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-cmd</input>
+            <rate_limit sense="decr">3</rate_limit> 
+            <rate_limit sense="incr">3</rate_limit> 
+        </actuator>
+
 <!--System 2 -->
 
-	</channel>
+		<switch name="/systems/hydraulic/system[2]/Reservoir_fluid_ammount-gal-cmd">
+			<default value="0"/>
+			<test logic="AND" value="15">
+				/systems/electrical/bus/ac-2 gt 220
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[2]/Reservoir_fluid_ammount-gal-movement">
+            <input>/systems/hydraulic/system[2]/Reservoir_fluid_ammount-gal-cmd</input>
+            <rate_limit sense="decr">5</rate_limit> 
+            <rate_limit sense="incr">5</rate_limit> 
+        </actuator>
+
+<!--System 3 -->
+
+		<switch name="/systems/hydraulic/system[3]/Reservoir_fluid_ammount-gal-cmd">
+			<default value="0"/>
+			<test logic="AND" value="15">
+				/systems/electrical/bus/ac-3 gt 220
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[3]/Reservoir_fluid_ammount-gal-movement">
+            <input>/systems/hydraulic/system[3]/Reservoir_fluid_ammount-gal-cmd</input>
+            <rate_limit sense="decr">5</rate_limit> 
+            <rate_limit sense="incr">5</rate_limit> 
+        </actuator>
+
+
+
+<!--System 4 -->
+
+		<switch name="/systems/hydraulic/system[4]/Reservoir_fluid_ammount-gal-cmd">
+			<default value="0"/>
+			<test logic="AND" value="9">
+				/systems/electrical/bus/ac-4 gt 220
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[4]/Reservoir_fluid_ammount-gal-movement">
+            <input>/systems/hydraulic/system[4]/Reservoir_fluid_ammount-gal-cmd</input>
+            <rate_limit sense="decr">3</rate_limit> 
+            <rate_limit sense="incr">3</rate_limit> 
+        </actuator>
+
+	</channel> 
+
+  <channel name="Gear-in-transit"> 
+  
+  		<switch name="/gear/gear[0]/in-transit">
+			<default value="1"/>
+			   <test logic="OR" value="0">
+				/gear/gear[0]/position-norm eq 0
+				/gear/gear[0]/position-norm eq 1
+			</test>
+		</switch>
+
+  		<switch name="/gear/gear[1]/in-transit">
+			<default value="1"/>
+			   <test logic="OR" value="0">
+				/gear/gear[1]/position-norm eq 0
+				/gear/gear[1]/position-norm eq 1
+			</test>
+		</switch>
+
+  		<switch name="/gear/gear[2]/in-transit">
+			<default value="1"/>
+			   <test logic="OR" value="0">
+				/gear/gear[2]/position-norm eq 0
+				/gear/gear[2]/position-norm eq 1
+			</test>
+		</switch>
+
+  		<switch name="/controls/switches/gear-locked">
+			<default value="0"/>
+			   <test logic="OR" value="1">
+				/gear/gear[0]/in-transit eq 0
+				/gear/gear[1]/in-transit eq 0 
+                                /gear/gear[2]/in-transit eq 0
+			</test>
+		</switch>      
+
+  </channel>
 
 </system>
+
+

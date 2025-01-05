@@ -352,48 +352,6 @@
                 </binding>
             </item>
             <item>
-                <name>APU L DRIVE</name>
-                <value>2 ADS COUPLE</value>
-                <condition>
-                    <equals>
-                        <property>controls/apu/apu[0]/couple</property>
-                        <value>1</value>
-                    </equals>
-                </condition>
-                <marker>
-                    <x-m>-17.8148</x-m>
-                    <y-m>0.1686</y-m>
-                    <z-m>1.5645</z-m>
-                    <scale>2.5</scale>
-                </marker>
-                <binding>
-                    <command>property-assign</command>
-                    <property>controls/apu/apu[0]/couple</property>
-                    <value>1</value>
-                </binding>
-            </item>
-            <item>
-                <name>APU R DRIVE</name>
-                <value>4 ADS COUPLE</value>
-                <condition>
-                    <equals>
-                        <property>controls/apu/apu[1]/couple</property>
-                        <value>1</value>
-                    </equals>
-                </condition>
-                <marker>
-                    <x-m>-17.8148</x-m>
-                    <y-m>0.2438</y-m>
-                    <z-m>1.5645</z-m>
-                    <scale>2.5</scale>
-                </marker>
-                <binding>
-                    <command>property-assign</command>
-                    <property>controls/apu/apu[1]/couple</property>
-                    <value>1</value>
-                </binding>
-            </item>
-            <item>
                 <name>Wait for left APU indicator</name>
                 <value>L RUN</value>
                 <condition>
@@ -424,6 +382,48 @@
                     <z-m>1.5645</z-m>
                     <scale>2.5</scale>
                 </marker>
+            </item>
+            <item>
+                <name>APU L DRIVE</name>
+                <value>2 ADS COUPLE</value>
+                <condition>
+                    <equals>
+                        <property>controls/apu/apu[0]/couple_switch</property>
+                        <value>1</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.1686</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/apu/apu[0]/couple_switch</property>
+                    <value>1</value>
+                </binding>
+            </item>
+            <item>
+                <name>APU R DRIVE</name>
+                <value>4 ADS COUPLE</value>
+                <condition>
+                    <equals>
+                        <property>controls/apu/apu[1]/couple_switch</property>
+                        <value>1</value>
+                    </equals>
+                </condition>
+                <marker>
+                    <x-m>-17.8148</x-m>
+                    <y-m>0.2438</y-m>
+                    <z-m>1.5645</z-m>
+                    <scale>2.5</scale>
+                </marker>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/apu/apu[1]/couple_switch</property>
+                    <value>1</value>
+                </binding>
             </item>
             <!--
             <item>
@@ -881,48 +881,6 @@
                 </marker>
             </item>
             <item>
-                <name>APU L BLEED AIR</name>
-                <value>ON</value>
-                <condition>
-                    <equals>
-                        <property>controls/apu/apu[0]/bleed</property>
-                        <value>1</value>
-                    </equals>
-                </condition>
-                <marker>
-                    <x-m>-17.8148</x-m>
-                    <y-m>0.2438</y-m>
-                    <z-m>1.5645</z-m>
-                    <scale>2.5</scale>
-                </marker>
-                <binding>
-                    <command>property-assign</command>
-                    <property>controls/apu/apu[0]/bleed</property>
-                    <value>1</value>
-                </binding>
-            </item>
-            <item>
-                <name>APU R BLEED AIR</name>
-                <value>ON</value>
-                <condition>
-                    <equals>
-                        <property>controls/apu/apu[1]/bleed</property>
-                        <value>1</value>
-                    </equals>
-                </condition>
-                <marker>
-                    <x-m>-17.8148</x-m>
-                    <y-m>0.2438</y-m>
-                    <z-m>1.5645</z-m>
-                    <scale>2.5</scale>
-                </marker>
-                <binding>
-                    <command>property-assign</command>
-                    <property>controls/apu/apu[1]/bleed</property>
-                    <value>1</value>
-                </binding>
-            </item>
-            <item>
                 <name>ENG 1 Cutoff</name>
                 <value>START</value>
                 <condition>
@@ -1317,48 +1275,6 @@
 
         <checklist>
             <title>After engine start</title>
-            <item>
-                <name>APU L BLEED AIR</name>
-                <value>OFF</value>
-                <condition>
-                    <equals>
-                        <property>controls/apu/apu[0]/bleed</property>
-                        <value>0</value>
-                    </equals>
-                </condition>
-                <marker>
-                    <x-m>-17.8148</x-m>
-                    <y-m>0.2438</y-m>
-                    <z-m>1.5645</z-m>
-                    <scale>2.5</scale>
-                </marker>
-                <binding>
-                    <command>property-assign</command>
-                    <property>controls/apu/apu[0]/bleed</property>
-                    <value>0</value>
-                </binding>
-            </item>
-            <item>
-                <name>APU R BLEED AIR</name>
-                <value>OFF</value>
-                <condition>
-                    <equals>
-                        <property>controls/apu/apu[1]/bleed</property>
-                        <value>0</value>
-                    </equals>
-                </condition>
-                <marker>
-                    <x-m>-17.8148</x-m>
-                    <y-m>0.2438</y-m>
-                    <z-m>1.5645</z-m>
-                    <scale>2.5</scale>
-                </marker>
-                <binding>
-                    <command>property-assign</command>
-                    <property>controls/apu/apu[1]/bleed</property>
-                    <value>0</value>
-                </binding>
-            </item>
             <item>
                 <name>APU L DRIVE</name>
                 <value>DECOUPLE</value>

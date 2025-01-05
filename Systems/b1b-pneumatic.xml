@@ -17,14 +17,12 @@
 			<default value="0"/>
 			<test logic="AND" value="1">
 				/engines/engine[4]/n1 ge 95
-				/controls/apu/apu[0]/bleed eq 1
 			</test>
 		</switch>
 		<switch name="/systems/pneumatics/valves/apu[1]/bleed-valve-cmd">
 			<default value="0"/>
 			<test logic="AND" value="1">
 				/engines/engine[5]/n1 ge 95
-				/controls/apu/apu[1]/bleed eq 1
 			</test>
 		</switch>
 

@@ -39,6 +39,49 @@ sweat by maggse
 
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
+<animation> 
+ <type>slider</type> 
+  <object-name>master_audio_cutout</object-name>
+  <property>controls/switches/audio_cutout</property>
+    <factor>0.004</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/audio_cutout</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/audio_cutout</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
+
+</animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch_eject</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/switches/eject</property>
+		 </binding>
+	 </action>
+</animation>
+
  <animation>
 	 <type>pick</type>
 	 <object-name>switch_eject</object-name>
@@ -94,6 +137,7 @@ sweat by maggse
 			 <command>property-toggle</command>
 			 <property>controls/switches/master_caution</property>
 		 </binding>
+
 	 </action>
 </animation>
 
@@ -101,20 +145,10 @@ sweat by maggse
 	<type>select</type>
 	<object-name>rep_mstrcaution</object-name> 
         <condition>  
-        <or>
          <equals> 
           <property>controls/switches/master_caution</property>
           <value>1</value>
          </equals>
-         <equals>
-          <property>instrumentation/annunciators/preptoeject</property>
-          <value>1</value> 
-         </equals>
-         <equals>
-          <property>instrumentation/annunciators/flapwing</property>
-          <value>1</value> 
-         </equals>
-        </or>
         </condition>
 </animation>
 
@@ -217,7 +251,7 @@ sweat by maggse
 	 <object-name>PREPTOEJECT</object-name>
 	 <condition>
 		 <equals>
-			 <property>instrumentation/annunciators/preptoeject</property>
+			 <property>controls/switches/eject</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
