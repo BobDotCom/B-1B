@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+
+<!-- 
+                               FAILURES TO TAKE NOTE OF 
+
+INS-heading, pitch, roll
+GSS-heading, pitch, roll
+ADC1-airspeed, groundspeed, mach, baro-altitude, glideslope lateral
+ADC2-airspeed, groundspeed, mach, baro-altitude, glideslope lateral
+HYDRO PUMPS 
+HYDRO LINES
+HYDRO GAUGES
+ENGINE FIRES 
+APU FIRES
+FIRE DETECTION LOOPS
+GEAR POSITION
+ELECTRIC LINES
+ANNUNCIATORS 
+FLIGHT-SURFACES
+RADIOS
+NAVS
+
+     var failure_root = "/sim/failure-manager";
+
+-->
+
+

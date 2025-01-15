@@ -624,18 +624,22 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.off</object-name>
-        <property>engines/engine[0]/n1</property>
+        <property>/systems/engines/engine[0]/current_temperature_degC</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
                 <dep>0</dep>
             </entry>
             <entry>
-                <ind>5</ind>
-                <dep>0.14</dep>
+                <ind>50</ind>
+                <dep>0.0</dep>
             </entry>
             <entry>
-                <ind>100</ind>
+                <ind>200</ind>
+                <dep>0.10</dep>
+            </entry>
+            <entry>
+                <ind>300</ind>
                 <dep>0.14</dep>
             </entry>
         </interpolation>
@@ -660,8 +664,8 @@ sweat by maggse
         <object-name>eng-temp.off</object-name>
         <condition>
             <less-than-equals>
-                <property>engines/engine[0]/n1</property>
-                <value>5</value>
+                <property>/systems/engines/engine[0]/current_temperature_degC</property>
+                <value>300</value>
             </less-than-equals>
         </condition>
     </animation>
@@ -670,7 +674,7 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.ind</object-name>
-        <property>fdm/jsbsim/systems/eng_ind/egt-degc[0]</property>
+        <property>/systems/engines/engine[0]/current_temperature_degC</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -701,18 +705,22 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.off.001</object-name>
-        <property>engines/engine[1]/n1</property>
+        <property>/systems/engines/engine[1]/current_temperature_degC</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
                 <dep>0</dep>
             </entry>
             <entry>
-                <ind>5</ind>
-                <dep>0.14</dep>
+                <ind>50</ind>
+                <dep>0.0</dep>
             </entry>
             <entry>
-                <ind>100</ind>
+                <ind>200</ind>
+                <dep>0.10</dep>
+            </entry>
+            <entry>
+                <ind>300</ind>
                 <dep>0.14</dep>
             </entry>
         </interpolation>
@@ -737,8 +745,8 @@ sweat by maggse
         <object-name>eng-temp.off.001</object-name>
         <condition>
             <less-than-equals>
-                <property>engines/engine[1]/n1</property>
-                <value>5</value>
+                <property>/systems/engines/engine[1]/current_temperature_degC</property>
+                <value>300</value>
             </less-than-equals>
         </condition>
     </animation>
@@ -746,7 +754,7 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.ind.001</object-name>
-        <property>fdm/jsbsim/systems/eng_ind/egt-degc[1]</property>
+        <property>/systems/engines/engine[1]/current_temperature_degC</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -777,18 +785,22 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.off.002</object-name>
-        <property>engines/engine[2]/n1</property>
+        <property>/systems/engines/engine[2]/current_temperature_degC</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
                 <dep>0</dep>
             </entry>
             <entry>
-                <ind>5</ind>
-                <dep>0.14</dep>
+                <ind>50</ind>
+                <dep>0.0</dep>
             </entry>
             <entry>
-                <ind>100</ind>
+                <ind>200</ind>
+                <dep>0.10</dep>
+            </entry>
+            <entry>
+                <ind>300</ind>
                 <dep>0.14</dep>
             </entry>
         </interpolation>
@@ -813,8 +825,8 @@ sweat by maggse
         <object-name>eng-temp.off.002</object-name>
         <condition>
             <less-than-equals>
-                <property>engines/engine[2]/n1</property>
-                <value>5</value>
+                <property>/systems/engines/engine[2]/current_temperature_degC</property>
+                <value>300</value>
             </less-than-equals>
         </condition>
     </animation>
@@ -822,7 +834,7 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.ind.002</object-name>
-        <property>fdm/jsbsim/systems/eng_ind/egt-degc[2]</property>
+        <property>/systems/engines/engine[2]/current_temperature_degC</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>
@@ -853,18 +865,22 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.off.003</object-name>
-        <property>engines/engine[3]/n1</property>
+        <property>/systems/engines/engine[3]/current_temperature_degC</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
                 <dep>0</dep>
             </entry>
             <entry>
-                <ind>5</ind>
-                <dep>0.14</dep>
+                <ind>50</ind>
+                <dep>0.0</dep>
             </entry>
             <entry>
-                <ind>100</ind>
+                <ind>200</ind>
+                <dep>0.10</dep>
+            </entry>
+            <entry>
+                <ind>300</ind>
                 <dep>0.14</dep>
             </entry>
         </interpolation>
@@ -889,8 +905,8 @@ sweat by maggse
         <object-name>eng-temp.off.003</object-name>
         <condition>
             <less-than-equals>
-                <property>engines/engine[3]/n1</property>
-                <value>5</value>
+                <property>/systems/engines/engine[3]/current_temperature_degC</property>
+                <value>300</value>
             </less-than-equals>
         </condition>
     </animation>
@@ -898,7 +914,7 @@ sweat by maggse
     <animation>
         <type>textranslate</type>
         <object-name>eng-temp.ind.003</object-name>
-        <property>fdm/jsbsim/systems/eng_ind/egt-degc[3]</property>
+        <property>/systems/engines/engine[3]/current_temperature_degC</property>
         <interpolation>
             <entry>
                 <ind>0.0</ind>

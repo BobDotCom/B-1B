@@ -1,9 +1,15 @@
 <?xml version="1.0"?>
 <system name="Engine Indicators">
+
+    <property value="0">/systems/failures/engines/engine[0]/fire</property>
+    <property value="0">/systems/failures/engines/engine[1]/fire</property>
+    <property value="0">/systems/failures/engines/engine[2]/fire</property>
+    <property value="0">/systems/failures/engines/engine[3]/fire</property>
+
     <channel name="end_ind">
         <!-- ENG TEMP -->
         <!-- Convert the engine temp from Fahrenheit to Celsius. C = (F - 32) * 5/9 -->
-        <fcs_function name="systems/eng_ind/egt-degc[0]">
+        <fcs_function name="/systems/engines/engine[0]/degF-degC">
             <function>
                 <product>
                     <difference>
@@ -17,7 +23,7 @@
                 </product>
             </function>
         </fcs_function>
-        <fcs_function name="systems/eng_ind/egt-degc[1]">
+        <fcs_function name="/systems/engines/engine[1]/degF-degC">
             <function>
                 <product>
                     <difference>
@@ -31,7 +37,7 @@
                 </product>
             </function>
         </fcs_function>
-        <fcs_function name="systems/eng_ind/egt-degc[2]">
+        <fcs_function name="/systems/engines/engine[2]/degF-degC">
             <function>
                 <product>
                     <difference>
@@ -45,7 +51,7 @@
                 </product>
             </function>
         </fcs_function>
-        <fcs_function name="systems/eng_ind/egt-degc[3]">
+        <fcs_function name="/systems/engines/engine[3]/degF-degC">
             <function>
                 <product>
                     <difference>
@@ -59,6 +65,154 @@
                 </product>
             </function>
         </fcs_function>
+    </channel>
+
+    <channel name="eng_fires">
+
+	<switch name="/systems/engines/engine[0]/current_temperature_degC-cmd">
+		<default value="1000"/>
+		<test logic="AND" value="/systems/engines/engine[0]/degF-degC">
+                       /systems/failures/engines/engine[0]/fire eq 0
+		</test>
+	</switch>
+
+	<actuator name="/systems/engines/engine[0]/current_temperature_degC">
+            <input>/systems/engines/engine[0]/current_temperature_degC-cmd</input>
+            <rate_limit sense="decr">60</rate_limit> 
+            <rate_limit sense="incr">60</rate_limit> 
+            <clipto> 
+             <min>/systems/engines/engine[0]/degF-degC</min>
+             <max>1000</max>
+            </clipto>
+        </actuator>
+
+	<switch name="/systems/engines/engine[1]/current_temperature_degC-cmd">
+		<default value="1000"/>
+		<test logic="AND" value="/systems/engines/engine[1]/degF-degC">
+                       /systems/failures/engines/engine[1]/fire eq 0
+		</test>
+	</switch>
+
+	<actuator name="/systems/engines/engine[1]/current_temperature_degC">
+            <input>/systems/engines/engine[1]/current_temperature_degC-cmd</input>
+            <rate_limit sense="decr">60</rate_limit> 
+            <rate_limit sense="incr">60</rate_limit> 
+            <clipto> 
+             <min>/systems/engines/engine[1]/degF-degC</min>
+             <max>1000</max>
+            </clipto>
+        </actuator>
+
+	<switch name="/systems/engines/engine[2]/current_temperature_degC-cmd">
+		<default value="1000"/>
+		<test logic="AND" value="/systems/engines/engine[2]/degF-degC">
+                       /systems/failures/engines/engine[2]/fire eq 0
+		</test>
+	</switch>
+
+	<actuator name="/systems/engines/engine[2]/current_temperature_degC">
+            <input>/systems/engines/engine[2]/current_temperature_degC-cmd</input>
+            <rate_limit sense="decr">60</rate_limit> 
+            <rate_limit sense="incr">60</rate_limit> 
+            <clipto> 
+             <min>/systems/engines/engine[2]/degF-degC</min>
+             <max>1000</max>
+            </clipto>
+        </actuator>
+
+	<switch name="/systems/engines/engine[3]/current_temperature_degC-cmd">
+		<default value="1000"/>
+		<test logic="AND" value="/systems/engines/engine[3]/degF-degC">
+                       /systems/failures/engines/engine[3]/fire eq 0
+		</test>
+	</switch>
+
+	<actuator name="/systems/engines/engine[3]/current_temperature_degC">
+            <input>/systems/engines/engine[3]/current_temperature_degC-cmd</input>
+            <rate_limit sense="decr">60</rate_limit> 
+            <rate_limit sense="incr">60</rate_limit> 
+            <clipto> 
+             <min>/systems/engines/engine[3]/degF-degC</min>
+             <max>1000</max>
+            </clipto>
+        </actuator>
+
+    </channel>
+
+    <channel name="eng_extinguishers">
+
+<!-- LEFT -->
+
+		<switch name="/systems/extinguishers/left/main_amount-percentage-cmd">
+			<default value="100"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/l_agent_switch gt 0
+			  <test logic="OR">
+                                /controls/switches/engine_1_fire-bottle-discharge gt 0
+                                /controls/switches/engine_2_fire-bottle-discharge gt 0
+			 </test>
+			</test>
+		</switch>
+
+	<actuator name="/systems/extinguishers/left/main_amount-percentage">
+            <input>/systems/extinguishers/left/main_amount-percentage-cmd</input>
+            <rate_limit sense="decr">20</rate_limit> 
+            <rate_limit sense="incr">0</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/extinguishers/left/reserve_amount-percentage-cmd">
+			<default value="100"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/l_agent_switch eq -1
+			  <test logic="OR">
+                                /controls/switches/engine_1_fire-bottle-discharge gt 0
+                                /controls/switches/engine_2_fire-bottle-discharge gt 0
+			 </test>
+			</test>
+		</switch>
+
+	<actuator name="/systems/extinguishers/left/reserve_amount-percentage">
+            <input>/systems/extinguishers/left/reserve_amount-percentage-cmd</input>
+            <rate_limit sense="decr">20</rate_limit> 
+            <rate_limit sense="incr">0</rate_limit> 
+        </actuator>
+
+<!-- RIGHT -->
+
+		<switch name="/systems/extinguishers/right/main_amount-percentage-cmd">
+			<default value="100"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/r_agent_switch gt 0
+			  <test logic="OR">
+                                /controls/switches/engine_3_fire-bottle-discharge gt 0
+                                /controls/switches/engine_4_fire-bottle-discharge gt 0
+			 </test>
+			</test>
+		</switch>
+
+	<actuator name="/systems/extinguishers/right/main_amount-percentage">
+            <input>/systems/extinguishers/right/main_amount-percentage-cmd</input>
+            <rate_limit sense="decr">20</rate_limit> 
+            <rate_limit sense="incr">0</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/extinguishers/right/reserve_amount-percentage-cmd">
+			<default value="100"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/r_agent_switch eq -1
+			  <test logic="OR">
+                                /controls/switches/engine_3_fire-bottle-discharge gt 0
+                                /controls/switches/engine_4_fire-bottle-discharge gt 0
+			 </test>
+			</test>
+		</switch>
+
+	<actuator name="/systems/extinguishers/right/reserve_amount-percentage">
+            <input>/systems/extinguishers/right/reserve_amount-percentage-cmd</input>
+            <rate_limit sense="decr">20</rate_limit> 
+            <rate_limit sense="incr">0</rate_limit> 
+        </actuator>
+
     </channel>
 
 </system>

@@ -6,7 +6,7 @@ sweat by maggse
 
  <path>fire_ind.ac</path>
 
- <!-- fire test switch -->
+ 			   <!-- fire test switch -->
 
  <animation>
 	 <type>translate</type>
@@ -56,7 +56,46 @@ sweat by maggse
 </animation>
 
 
-<!-- fire ind -->
+				<!-- fire ind -->
+
+<!-- ENG_1 -->
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>ENG_1</object-name>
+	 <property>controls/switches/engine_1_fire-bottle-discharge</property>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0301</x-m>
+		 <y-m>-0.3807</y-m>
+		 <z-m> 0.077</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>ENG_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-assign</command>
+			 <property>controls/switches/engine_1_fire-bottle-discharge</property>
+                         <value>1</value>
+		 </binding>
+		 <binding>
+			 <command>property-assign</command>
+			 <property>controls/engines/engine[0]/cutoff</property>
+                         <value>1</value>
+		 </binding>
+	 </action>
+</animation>
 
  <animation>
 	 <type>select</type>
@@ -67,13 +106,31 @@ sweat by maggse
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
-		 <equals>
-			 <property>controls/engines/engine[0]/on-fire</property>
-			 <value type="double">1.0</value>
-		 </equals>
+		 <greater-than>
+			 <property>/systems/engines/engine[0]/current_temperature_degC</property>
+			 <value>790</value>
+		 </greater-than>
 	         </or>
 	 </condition>
  </animation>
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>rep_fire1</object-name>
+	 <property>controls/switches/engine_1_fire-bottle-discharge</property>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0289</x-m>
+		 <y-m>-0.379</y-m>
+		 <z-m> 0.076</z-m>
+	 </center>
+ </animation>
+
  <animation>
 	 <type>pick</type>
 	 <object-name>rep_fire1</object-name>
@@ -81,14 +138,6 @@ sweat by maggse
 		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/engines/engine[0]/fire-switch</property>
-		 </binding>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/engines/engine[0]/fire-bottle-discharge</property>
-		 </binding>
 	 </action>
 </animation>
 
@@ -97,10 +146,49 @@ sweat by maggse
 	 <object-name>rep_fire1</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/engines/engine[0]/on-fire</factor-prop>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/brightness_switch</factor-prop>
 	 </emission>
+</animation>
+
+<!-- ENG_2 -->
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>ENG_2</object-name>
+	 <property>controls/switches/engine_2_fire-bottle-discharge</property>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0301</x-m>
+		 <y-m>-0.325</y-m>
+		 <z-m> 0.076</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>ENG_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-assign</command>
+			 <property>controls/switches/engine_2_fire-bottle-discharge</property>
+                         <value>1</value>
+		 </binding>
+		 <binding>
+			 <command>property-assign</command>
+			 <property>controls/engines/engine[1]/cutoff</property>
+                         <value>1</value>
+		 </binding>
+	 </action>
 </animation>
 
  <animation>
@@ -112,12 +200,29 @@ sweat by maggse
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
-		 <equals>
-			 <property>controls/engines/engine[1]/on-fire</property>
-			 <value type="double">1.0</value>
-		 </equals>
+		 <greater-than>
+			 <property>/systems/engines/engine[1]/current_temperature_degC</property>
+			 <value>790</value>
+		 </greater-than>
 	         </or>
 	 </condition>
+ </animation>
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>rep_fire2</object-name>
+	 <property>controls/switches/engine_2_fire-bottle-discharge</property>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0284</x-m>
+		 <y-m>-0.325</y-m>
+		 <z-m> 0.076</z-m>
+	 </center>
  </animation>
 
  <animation>
@@ -127,14 +232,6 @@ sweat by maggse
 		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/engines/engine[1]/fire-switch</property>
-		 </binding>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/engines/engine[1]/fire-bottle-discharge</property>
-		 </binding>
 	 </action>
 </animation>
 
@@ -143,10 +240,49 @@ sweat by maggse
 	 <object-name>rep_fire2</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/engines/engine[1]/on-fire</factor-prop>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/brightness_switch</factor-prop>
 	 </emission>
+</animation>
+
+<!-- ENG_3 -->
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>ENG_3</object-name>
+	 <property>controls/switches/engine_3_fire-bottle-discharge</property>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0301</x-m>
+		 <y-m>-0.2468</y-m>
+		 <z-m> 0.076</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>ENG_3</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-assign</command>
+			 <property>controls/switches/engine_3_fire-bottle-discharge</property>
+                         <value>1</value>
+		 </binding>
+		 <binding>
+			 <command>property-assign</command>
+			 <property>controls/engines/engine[2]/cutoff</property>
+                         <value>1</value>
+		 </binding>
+	 </action>
 </animation>
 
  <animation>
@@ -158,12 +294,29 @@ sweat by maggse
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
-		 <equals>
-			 <property>controls/engines/engine[2]/on-fire</property>
-			 <value type="double">1.0</value>
-		 </equals>
+		 <greater-than>
+			 <property>/systems/engines/engine[2]/current_temperature_degC</property>
+			 <value>790</value>
+		 </greater-than>
 	         </or>
 	 </condition>
+ </animation>
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>rep_fire3</object-name>
+	 <property>controls/switches/engine_3_fire-bottle-discharge</property>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0286</x-m>
+		 <y-m>-0.246</y-m>
+		 <z-m> 0.076</z-m>
+	 </center>
  </animation>
 
  <animation>
@@ -173,14 +326,6 @@ sweat by maggse
 		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/engines/engine[2]/fire-switch</property>
-		 </binding>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/engines/engine[2]/fire-bottle-discharge</property>
-		 </binding>
 	 </action>
 </animation>
 
@@ -189,10 +334,49 @@ sweat by maggse
 	 <object-name>rep_fire3</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/engines/engine[2]/on-fire</factor-prop>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/brightness_switch</factor-prop>
 	 </emission>
+</animation>
+
+<!-- ENG_4 -->
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>ENG_4</object-name>
+	 <property>controls/switches/engine_4_fire-bottle-discharge</property>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0289</x-m>
+		 <y-m>-0.1992</y-m>
+		 <z-m> 0.076</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>ENG_4</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-assign</command>
+			 <property>controls/switches/engine_4_fire-bottle-discharge</property>
+                         <value>1</value>
+		 </binding>
+		 <binding>
+			 <command>property-assign</command>
+			 <property>controls/engines/engine[3]/cutoff</property>
+                         <value>1</value>
+		 </binding>
+	 </action>
 </animation>
 
  <animation>
@@ -204,12 +388,29 @@ sweat by maggse
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
-		 <equals>
-			 <property>controls/engines/engine[3]/on-fire</property>
-			 <value type="double">1.0</value>
-		 </equals>
+		 <greater-than>
+			 <property>/systems/engines/engine[3]/current_temperature_degC</property>
+			 <value>790</value>
+		 </greater-than>
 	         </or>
 	 </condition>
+ </animation>
+
+ <animation>
+	 <type>translate</type>
+	 <object-name>rep_fire4</object-name>
+	 <property>controls/switches/engine_4_fire-bottle-discharge</property>
+		<factor>0.002</factor>
+		<axis>
+			<x>-1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0289</x-m>
+		 <y-m>-0.379</y-m>
+		 <z-m> 0.076</z-m>
+	 </center>
  </animation>
 
  <animation>
@@ -219,14 +420,6 @@ sweat by maggse
 		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/engines/engine[3]/fire-switch</property>
-		 </binding>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/engines/engine[3]/fire-bottle-discharge</property>
-		 </binding>
 	 </action>
 </animation>
 
@@ -235,9 +428,9 @@ sweat by maggse
 	 <object-name>rep_fire4</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/engines/engine[3]/on-fire</factor-prop>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
@@ -256,9 +449,9 @@ sweat by maggse
 	 <object-name>rep_fire5</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/switches/fire</factor-prop>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
@@ -278,9 +471,9 @@ sweat by maggse
 	 <object-name>rep_fire6</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/switches/fire</factor-prop>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
@@ -308,14 +501,6 @@ sweat by maggse
 		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUL-fire-switch</property>
-		 </binding>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUL-fire-bottle-discharge</property>
-		 </binding>
 	 </action>
 </animation>
 
@@ -324,9 +509,9 @@ sweat by maggse
 	 <object-name>rep_firelapu</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/APU/APUL-fire</factor-prop>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
@@ -357,10 +542,6 @@ sweat by maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/APU/APUR-fire-switch</property>
-		 </binding>
-		 <binding>
-			 <command>property-toggle</command>
 			 <property>controls/APU/APUR-fire-bottle-discharge</property>
 		 </binding>
 	 </action>
@@ -371,12 +552,96 @@ sweat by maggse
 	 <object-name>rep_firerapu</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/APU/APUR-fire</factor-prop>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/switches/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
+            		 <!-- Discharge switches -->
+
+<!-- Left -->
+
+	<animation>
+		<type>knob</type>
+	 <object-name>switch_lagent</object-name>
+	<property>controls/switches/l_agent_switch</property>
+        <factor>-30</factor>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0280</x-m>
+		 <y-m>-0.431</y-m>
+		 <z-m> 0.077</z-m>
+	 </center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/l_agent_switch</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+<!-- Right -->
+
+	<animation>
+		<type>knob</type>
+	 <object-name>switch_ragent</object-name>
+	<property>controls/switches/r_agent_switch</property>
+        <factor>-30</factor>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.0280</x-m>
+		 <y-m>-0.431</y-m>
+		 <z-m> 0.077</z-m>
+	 </center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/r_agent_switch</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+<!-- Brightness -->
+
+	<animation>
+		<type>knob</type>
+	 <object-name>switch_ANN</object-name>
+	<property>controls/switches/brightness_switch</property>
+        <factor>30</factor>
+		<axis>
+			<x> 0 </x>
+			<y>-1 </y>
+			<z> 0 </z>
+		</axis>
+	 <center>
+		 <x-m>-0.03</x-m>
+		 <y-m>-0.285</y-m>
+		 <z-m> 0.0952</z-m>
+	 </center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/brightness_switch</property>
+			 <min>0.3</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
 
 <!-- Label Text -->
 
