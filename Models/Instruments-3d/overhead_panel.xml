@@ -969,7 +969,501 @@ maggse
 	</center>
  </animation>
 
+<animation> 
+ <type>slider</type> 
+  <object-name>hyd_test</object-name>
+  <property>controls/switches/hyd_amount_gauge_test</property>
+    <factor>0.004</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/hyd_amount_gauge_test</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/hyd_amount_gauge_test</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
 
+</animation>
+
+
+
+                               <!-- Fire loops -->
+
+<!-- Annunciators -->
+
+<animation> 
+ <type>slider</type> 
+  <object-name>fire_detr_test</object-name>
+  <property>controls/switches/fire_loop_test</property>
+    <factor>0.004</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/fire_loop_test</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/fire_loop_test</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
+
+</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>1-LOOP-A</object-name>
+		<condition>
+                    <or>
+			 <equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			 </equals>
+			 <equals>
+				<property>systems/failures/extinguishers/engine[0]/loop-a</property>
+				<value>1</value>
+			 </equals>
+                        </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>1-LOOP-B</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[0]/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>2-LOOP-A</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[1]/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>2-LOOP-B</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[1]/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>3-LOOP-A</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[2]/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>3-LOOP-B</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[2]/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>4-LOOP-A</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[3]/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>4-LOOP-B</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[3]/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>L-APU-LOOP-A</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/apu_l/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>L-APU-LOOP-B</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/apu_l/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>R-APU-LOOP-A</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/apu_r/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>R-APU-LOOP-B</object-name>
+		<condition>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/apu_r/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>L-OWF-LOOP-A</object-name>
+		<condition>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>L-OWF-LOOP-B</object-name>
+		<condition>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>R-OWF-LOOP-A</object-name>
+		<condition>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>R-OWF-LOOP-B</object-name>
+		<condition>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>1-LOOP-A</object-name>
+		<object-name>1-LOOP-B</object-name>
+		<object-name>2-LOOP-A</object-name>
+		<object-name>2-LOOP-B</object-name>
+		<object-name>3-LOOP-A</object-name>
+		<object-name>3-LOOP-B</object-name>
+		<object-name>4-LOOP-A</object-name>
+		<object-name>4-LOOP-B</object-name>
+		<object-name>L-APU-LOOP-A</object-name>
+		<object-name>L-APU-LOOP-B</object-name>
+		<object-name>R-APU-LOOP-A</object-name>
+		<object-name>R-APU-LOOP-B</object-name>
+		<object-name>L-OWF-LOOP-A</object-name>
+		<object-name>L-OWF-LOOP-B</object-name>
+		<object-name>R-OWF-LOOP-A</object-name>
+		<object-name>R-OWF-LOOP-B</object-name>
+		<emission>
+			<red>0.9</red>
+			<green>0.5</green>
+			<blue>0.9</blue>
+			<factor-prop>controls/switches/annunciators-norm</factor-prop>
+		</emission>
+	</animation>
+
+<!-- switches -->
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_l_apu</object-name>
+	<property>controls/switches/fire_l_apu</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.215</y-m>
+            <z-m>0.461</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_l_apu</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_r_apu</object-name>
+	<property>controls/switches/fire_r_apu</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.215</y-m>
+            <z-m>0.461</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_r_apu</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_engine_1</object-name>
+	<property>controls/switches/fire_engine_1</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.194</y-m>
+            <z-m>0.391</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_engine_1</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_engine_2</object-name>
+	<property>controls/switches/fire_engine_2</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.194</y-m>
+            <z-m>0.391</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_engine_2</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_engine_3</object-name>
+	<property>controls/switches/fire_engine_3</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.194</y-m>
+            <z-m>0.391</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_engine_3</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_engine_4</object-name>
+	<property>controls/switches/fire_engine_4</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.194</y-m>
+            <z-m>0.391</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_engine_4</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
                                <!-- nav lights-->
 
  <animation>
@@ -1099,44 +1593,29 @@ maggse
 
 	               <!-- Annunciator lighting-->
 
- <animation>
-	 <type>rotate</type>
-	 <object-name>int_dim</object-name>
-	 <property>controls/switches/annunciators-norm</property>
-	 <interpolation>
-		 <entry>
-			 <ind> 0.0</ind>
-			 <dep> 0.0</dep>
-		 </entry>
-		 <entry>
-			 <ind> 1.0</ind>
-			 <dep> 30.0</dep>
-		 </entry>
-	 </interpolation>
+<animation>
+	<type>knob</type>
+	<object-name>int_dim</object-name>
+	<property>controls/switches/annunciators-norm</property>
+	<factor>60</factor>
 	 <axis>
 		 <x> 0.0</x>
 		 <y> 1.0</y>
 		 <z> 0.0</z>
 	 </axis>
 	 <center>
-		 <x-m> 0.01237</x-m>
-		 <y-m>-0.1752</y-m>
-		 <z-m> 0.1227</z-m>
+		 <x-m> 0.01</x-m>
+		 <y-m>-0.174</y-m>
+		 <z-m> 0.1222</z-m>
    </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>int_dim</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/switches/annunciators-norm</property>
-		 </binding>
-	 </action>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/annunciators-norm</property>
+                        <min>0.3</min>
+                        <max>1</max>
+		</binding>
+	</action>
 </animation>
 
 
@@ -1448,15 +1927,15 @@ maggse
 		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
-</animation>
+       </animation>
 	<animation>
 		<type>material</type>
 		<object-name>APUL_run</object-name>
 		<object-name>APUR_run</object-name>
 		<emission>
-			<red>0.3</red>
-			<green>0.3</green>
-			<blue>0.3</blue>
+			<red>0.9</red>
+			<green>0.5</green>
+			<blue>0.9</blue>
 			<factor-prop>controls/switches/annunciators-norm</factor-prop>
 		</emission>
 	</animation>

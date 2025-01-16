@@ -106,10 +106,10 @@ sweat by maggse
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
-		 <greater-than>
-			 <property>/systems/engines/engine[0]/current_temperature_degC</property>
-			 <value>790</value>
-		 </greater-than>
+		 <equals>
+			 <property>/systems/extinguishers/engine[0]/light</property>
+			 <value>1</value>
+		 </equals>
 	         </or>
 	 </condition>
  </animation>
@@ -200,10 +200,10 @@ sweat by maggse
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
-		 <greater-than>
-			 <property>/systems/engines/engine[1]/current_temperature_degC</property>
-			 <value>790</value>
-		 </greater-than>
+		 <equals>
+			 <property>/systems/extinguishers/engine[1]/light</property>
+			 <value>1</value>
+		 </equals>
 	         </or>
 	 </condition>
  </animation>
@@ -294,10 +294,10 @@ sweat by maggse
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
-		 <greater-than>
-			 <property>/systems/engines/engine[2]/current_temperature_degC</property>
-			 <value>790</value>
-		 </greater-than>
+		 <equals>
+			 <property>/systems/extinguishers/engine[2]/light</property>
+			 <value>1</value>
+		 </equals>
 	         </or>
 	 </condition>
  </animation>
@@ -388,10 +388,10 @@ sweat by maggse
 			 <property>controls/switches/fire</property>
 			 <value>1.0</value>
 		 </equals>
-		 <greater-than>
-			 <property>/systems/engines/engine[3]/current_temperature_degC</property>
-			 <value>790</value>
-		 </greater-than>
+		 <equals>
+			 <property>/systems/extinguishers/engine[3]/light</property>
+			 <value>1</value>
+		 </equals>
 	         </or>
 	 </condition>
  </animation>

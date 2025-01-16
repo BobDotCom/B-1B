@@ -90,6 +90,8 @@
     <system file="b1b-electrical.xml"/>
     <system file="b1b-hydraulics.xml"/>
     <system file="b1b-control.xml"/>
+    <system file="b1b-failures.xml"/>
+    <system file="b1b-extinguishing.xml"/>
  <ground_reactions>
 
   <contact type="BOGEY" name="NOSE">

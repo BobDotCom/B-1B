@@ -85,6 +85,22 @@
 	 <value>1</value> 
         </equals>
         <equals>       
+	 <property>/systems/extinguishers/engine[0]/light</property>
+	 <value>1</value> 
+        </equals>
+        <equals>       
+	 <property>/systems/extinguishers/engine[1]/light</property>
+	 <value>1</value> 
+        </equals>
+        <equals>       
+	 <property>/systems/extinguishers/engine[2]/light</property>
+	 <value>1</value> 
+        </equals>
+        <equals>       
+	 <property>/systems/extinguishers/engine[3]/light</property>
+	 <value>1</value> 
+        </equals>
+        <equals>       
          <property>instrumentation/annunciators/stall</property>
 	 <value>1</value> 
         </equals>
@@ -121,4 +137,5 @@
      <output>sound/eject</output>
     </logic>
     
+
 </PropertyList> 
