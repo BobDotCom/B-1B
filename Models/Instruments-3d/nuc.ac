@@ -7,13 +7,13 @@ MATERIAL "instr-lights.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0
 MATERIAL "starter.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.000
 MATERIAL "DefaultWhite.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
 OBJECT world
-name "Blender_exporter_v4.1__nuc.ac"
+name "Blender_exporter_v6.1__nuc.ac"
 kids 33
 OBJECT poly
 name "A-full"
 data 9
 Mesh.1359
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 28
 0.00752 -0.05445 -0.10297
@@ -182,7 +182,7 @@ OBJECT poly
 name "A-part"
 data 9
 Mesh.1360
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 28
 0.00752 -0.05436 -0.11843
@@ -351,7 +351,7 @@ OBJECT poly
 name "aft"
 data 8
 Mesh.006
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00832 -0.01108 -0.14286
@@ -564,7 +564,7 @@ OBJECT poly
 name "away"
 data 8
 Mesh.008
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00832 -0.02406 -0.10006
@@ -777,7 +777,7 @@ OBJECT poly
 name "bay"
 data 8
 Mesh.004
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00832 0.00907 -0.1528
@@ -990,7 +990,7 @@ OBJECT poly
 name "BRT"
 data 9
 Plane.005
-crease 30.0
+crease 40.0
 texture "overhead.png"
 numvert 396
 0.00585 -0.04579 -0.18151
@@ -3574,7 +3574,7 @@ OBJECT poly
 name "close_cover"
 data 9
 Plane.001
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 40
 0.00615 -0.04235 -0.13496
@@ -3858,7 +3858,7 @@ OBJECT poly
 name "door-close"
 data 13
 SwitchNut.002
-crease 30.0
+crease 40.0
 texture "switch.png"
 numvert 128
 0.00821 -0.0582 -0.15108
@@ -4478,7 +4478,7 @@ OBJECT poly
 name "F-full"
 data 9
 Mesh.1357
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00752 -0.04059 -0.10297
@@ -4691,7 +4691,7 @@ OBJECT poly
 name "F-part"
 data 9
 Mesh.1362
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00752 -0.04051 -0.11863
@@ -4904,7 +4904,7 @@ OBJECT poly
 name "fwd"
 data 8
 Mesh.003
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00755 0.00941 -0.13966
@@ -5117,7 +5117,7 @@ OBJECT poly
 name "hr"
 data 8
 Mesh.011
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.01288 -0.07977
@@ -5137,7 +5137,7 @@ OBJECT poly
 name "I-full"
 data 9
 Mesh.1358
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 28
 0.00752 -0.04755 -0.10297
@@ -5306,7 +5306,7 @@ OBJECT poly
 name "I-part"
 data 9
 Mesh.1361
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 28
 0.00752 -0.04747 -0.11842
@@ -5475,7 +5475,7 @@ OBJECT poly
 name "IN RNG"
 data 8
 Mesh.009
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00832 -0.02396 -0.12073
@@ -5688,7 +5688,7 @@ OBJECT poly
 name "intmd"
 data 8
 Mesh.007
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00832 -0.00421 -0.14477
@@ -5907,7 +5907,7 @@ OBJECT poly
 name "min"
 data 8
 Mesh.001
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.01288 -0.09756
@@ -5927,7 +5927,7 @@ OBJECT poly
 name "min.2"
 data 8
 Mesh.002
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.01288 -0.08874
@@ -5947,7 +5947,7 @@ OBJECT poly
 name "nuc_close.009"
 data 8
 Mesh.005
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00832 0.00249 -0.14302
@@ -6160,7 +6160,7 @@ OBJECT poly
 name "nuc_pt.001"
 data 9
 Mesh.1370
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.05791 -0.07997
@@ -6171,16 +6171,16 @@ numsurf 1
 SURF 0X10
 mat 4
 refs 4
-3 0.430625 0.097084
-0 0.381322 0.097057
-1 0.381375 0.009353
-2 0.430678 0.00938
+3 0.367877 0.007179
+0 0.443872 0.007179
+1 0.443872 0.097582
+2 0.367877 0.097582
 kids 0
 OBJECT poly
 name "NUC_SW"
 data 10
 Switch.014
-crease 30.0
+crease 40.0
 texture "switch.png"
 numvert 634
 0.00553 0.04328 -0.17395
@@ -11079,7 +11079,7 @@ OBJECT poly
 name "nuc_sw_cover"
 data 9
 cover.004
-crease 80.0
+crease 40.0
 texture "cp.png"
 numvert 205
 0.02684 0.01996 -0.18028
@@ -12294,7 +12294,7 @@ OBJECT poly
 name "PANEL_ICS"
 data 9
 Plane.057
-crease 30.0
+crease 40.0
 texture "ST_NUC.png"
 numvert 198
 0.0015 0.08435 -0.08152
@@ -13608,7 +13608,7 @@ OBJECT poly
 name "safe"
 data 8
 Mesh.010
-crease 30.0
+crease 40.0
 texture "cp.png"
 numvert 36
 0.00832 -0.0167 -0.12068
@@ -13821,7 +13821,7 @@ OBJECT poly
 name "screws"
 data 9
 Plane.002
-crease 30.0
+crease 40.0
 texture "ST_NUC.png"
 numvert 624
 0.008 -0.07381 -0.19181
@@ -17634,7 +17634,7 @@ OBJECT poly
 name "sec"
 data 9
 Mesh.1376
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.01288 -0.11548
@@ -17654,7 +17654,7 @@ OBJECT poly
 name "sec.2"
 data 9
 Mesh.1375
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.01288 -0.10652
@@ -17674,7 +17674,7 @@ OBJECT poly
 name "SEQ_1"
 data 8
 Mesh.012
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.05795 -0.13186
@@ -17694,7 +17694,7 @@ OBJECT poly
 name "SEQ_10"
 data 9
 Mesh.1379
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.05795 -0.11944
@@ -17714,7 +17714,7 @@ OBJECT poly
 name "SEQ_100"
 data 9
 Mesh.1378
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.05795 -0.10999
@@ -17734,7 +17734,7 @@ OBJECT poly
 name "SEQ_1000"
 data 9
 Mesh.1377
-crease 30.0
+crease 40.0
 texture "digits.png"
 numvert 4
 0.00702 0.05795 -0.10056
@@ -17754,7 +17754,7 @@ OBJECT poly
 name "SwitchNut"
 data 13
 SwitchNut.001
-crease 30.0
+crease 40.0
 texture "switch.png"
 numvert 320
 0.00689 -0.05752 -0.1521

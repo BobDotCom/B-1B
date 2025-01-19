@@ -134,6 +134,41 @@ maggse
 	 </action>
 </animation> 
 
+<animation>
+	<type>knob</type>
+	<object-name>air_refuel_annun</object-name>
+	<property>controls/lighting/refuel-annunciator</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.019</x-m>
+		<y-m>-0.007</y-m>
+		<z-m>0.216</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/refuel-annunciator</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation>
+
 	 <!-- OPENUNLCK light--> 
 
 <animation> 
@@ -145,7 +180,65 @@ maggse
       <value>1</value> 
      </equals> 
     </condition> 
-  </animation> 
+  </animation>
+
+ <!-- Electric current selector-->
+ 
+  <animation>
+        <type>knob</type>
+        <object-name>voltage_select</object-name>
+        <property>controls/switches/voltage-select-switch</property>
+        <factor>33</factor>
+        <center>
+            <x-m>0.0185</x-m>
+            <y-m>0.027625</y-m>
+            <z-m>-0.0707</z-m>
+        </center>
+        <axis>
+            <x> -1</x>
+            <y> 0</y>
+            <z> 0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/switches/voltage-select-switch</property>
+                <min>0</min>
+                <max>11</max>
+                <wrap>true</wrap>
+           </binding>
+        </action>
+    </animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>Needle_1</object-name>
+	 <property>instrumentation/voltage-indicators/voltage-needle</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>200.0</ind>
+			 <dep>5.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>260.0</ind>
+			 <dep>180.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>-1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.030</y-m>
+		 <z-m>-0.054</z-m>
+   </center>
+ </animation>
 
  <!-- Generator-reset switches-->
 
@@ -1921,6 +2014,8 @@ maggse
     <object-name>hyd_test_2</object-name>
     <object-name>gen_reset_1</object-name>
     <object-name>gen_reset_2</object-name>
+    <object-name>Needle_1</object-name>
+    <object-name>Needle_2</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>

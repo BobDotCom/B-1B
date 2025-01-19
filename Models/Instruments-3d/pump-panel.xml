@@ -3,6 +3,28 @@
 <PropertyList>
  <path>pump-panel.ac</path>
 
+<!-- tank 0-->
+
+    <animation>
+        <type>select</type>
+        <object-name>tank-0-1</object-name>
+        <object-name>tank-0-10</object-name>
+        <object-name>tank-0-100</object-name>
+        <object-name>tank-0-1000</object-name>
+        <object-name>tank-0-10000</object-name>
+        <object-name>tank-00-1</object-name>
+        <object-name>tank-00-10</object-name>
+        <object-name>tank-00-100</object-name>
+        <object-name>tank-00-1000</object-name>
+        <object-name>tank-00-10000</object-name>
+        <condition>
+            <equals>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>0</value>
+            </equals>
+        </condition>
+     </animation>
+
 <!-- tank 1-->
 
  <animation>
@@ -82,6 +104,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>4</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -164,6 +190,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>2</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -246,6 +276,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>3</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -328,6 +362,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>2</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -410,6 +448,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>4</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -492,6 +534,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>3</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -574,6 +620,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>5</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -656,6 +706,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>5</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -738,6 +792,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>1</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -820,6 +878,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>1</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
@@ -902,6 +964,10 @@
                 <property>consumables/fuel/fuel-tank-switch</property>
                 <value>0</value>
             </equals>
+            <greater-than>
+                <property>systems/electrical/bus/ac-ess</property>
+                <value>220</value>
+            </greater-than>
         </condition>
      </animation>
 
