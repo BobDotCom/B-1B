@@ -18,10 +18,11 @@
     <property value="0">/systems/failures/hydraulic/system[4]/fluid-leak-trigger</property>
     <property value="0">/systems/failures/hydraulic/system[4]/pump_1_failure-trigger</property>
     <property value="0">/systems/failures/hydraulic/system[4]/pump_2_failure-trigger</property>
+    <property value="0">/systems/failures/hydraulic/system[4]/test</property>
 
 	<channel name="Hydraulic pumps" execrate="8">
 
-<!-- System 1 --> 
+<!-- System 1 -->
 
 <!-- Pump 1 --> 
   
@@ -57,9 +58,14 @@
 			<default value="0"/>
 			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[1]/engine_pressure">
                                 /engines/engine[0]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[1]/pump_1_failure-trigger eq 0
 			</test>
 			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[1]/pressure_from_APU">
                                 /systems/engines/adg[0]/drive-rpm ge 1
+                                /systems/failures/hydraulic/system[1]/pump_1_failure-trigger eq 0
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[1]/failure_pressure">
+                                /systems/failures/hydraulic/system[1]/pump_1_failure-trigger eq 1
 			</test>
 		</switch>
 
@@ -67,6 +73,7 @@
 			<default value="/systems/hydraulic/system[1]/pumps/pump[1]/pressure_from_APU"/>
 			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[1]/engine_pressure_input_rate">
                                 /engines/engine[0]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[1]/pump_1_failure-trigger eq 0
 			</test>
 		</switch>
 
@@ -82,6 +89,19 @@
             <rate_limit sense="decr">/systems/hydraulic/system[1]/pumps/pump[1]/deceleration_rate</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
         </actuator>
+
+		<switch name="/systems/failures/hydraulic/system[1]/pump_1_failure_switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[1]/final_pressure">
+                                /systems/failures/hydraulic/system[1]/pump_1_failure-trigger eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[1]/pumps/pump[1]/failure_pressure">
+            <input>/systems/failures/hydraulic/system[1]/pump_1_failure_switch</input>
+            <rate_limit sense="decr">100</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator> 
 
 <!-- Pump 2 -->
 
@@ -117,9 +137,14 @@
 			<default value="0"/>
 			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure">
                                 /engines/engine[1]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[1]/pump_2_failure-trigger eq 0
 			</test>
 			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[2]/pressure_from_APU">
                                 /systems/engines/adg[1]/drive-rpm ge 1
+                                /systems/failures/hydraulic/system[1]/pump_2_failure-trigger eq 0
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[2]/failure_pressure">
+                                /systems/failures/hydraulic/system[1]/pump_2_failure-trigger eq 1
 			</test>
 		</switch>
 
@@ -127,6 +152,7 @@
 			<default value="/systems/hydraulic/system[1]/pumps/pump[2]/pressure_from_APU"/>
 			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure_input_rate">
                                 /engines/engine[1]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[1]/pump_2_failure-trigger eq 0
 			</test>
 		</switch>
 
@@ -140,6 +166,19 @@
 		<actuator name="/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure_input_rate">
             <input>/systems/hydraulic/system[1]/pumps/pump[2]/engine_pressure_input</input>
             <rate_limit sense="decr">/systems/hydraulic/system[1]/pumps/pump[2]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/failures/hydraulic/system[1]/pump_2_failure_switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[1]/pumps/pump[2]/final_pressure">
+                                /systems/failures/hydraulic/system[1]/pump_2_failure-trigger eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[1]/pumps/pump[2]/failure_pressure">
+            <input>/systems/failures/hydraulic/system[1]/pump_2_failure_switch</input>
+            <rate_limit sense="decr">100</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
         </actuator>
 
@@ -278,9 +317,14 @@
 			<default value="0"/>
 			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[1]/engine_pressure">
                                 /engines/engine[0]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[2]/pump_1_failure-trigger eq 0
 			</test>
 			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[1]/pressure_from_APU">
                                 /systems/engines/adg[0]/drive-rpm ge 1
+                                /systems/failures/hydraulic/system[2]/pump_1_failure-trigger eq 0
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[1]/failure_pressure">
+                                /systems/failures/hydraulic/system[2]/pump_1_failure-trigger eq 1
 			</test>
 		</switch>
 
@@ -288,6 +332,7 @@
 			<default value="/systems/hydraulic/system[2]/pumps/pump[1]/pressure_from_APU"/>
 			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[1]/engine_pressure_input_rate">
                                 /engines/engine[0]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[2]/pump_1_failure-trigger eq 0
 			</test>
 		</switch>
 
@@ -303,6 +348,19 @@
             <rate_limit sense="decr">/systems/hydraulic/system[2]/pumps/pump[1]/deceleration_rate</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
         </actuator>
+
+		<switch name="/systems/failures/hydraulic/system[2]/pump_1_failure_switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[1]/final_pressure">
+                                /systems/failures/hydraulic/system[2]/pump_1_failure-trigger eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[2]/pumps/pump[1]/failure_pressure">
+            <input>/systems/failures/hydraulic/system[2]/pump_1_failure_switch</input>
+            <rate_limit sense="decr">100</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator> 
 
 <!-- Pump 2 -->
 
@@ -338,9 +396,14 @@
 			<default value="0"/>
 			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure">
                                 /engines/engine[1]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[2]/pump_2_failure-trigger eq 0
 			</test>
 			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[2]/pressure_from_APU">
                                 /systems/engines/adg[1]/drive-rpm ge 1
+                                /systems/failures/hydraulic/system[2]/pump_2_failure-trigger eq 0
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[2]/failure_pressure">
+                                /systems/failures/hydraulic/system[2]/pump_2_failure-trigger eq 1
 			</test>
 		</switch>
 
@@ -348,6 +411,7 @@
 			<default value="/systems/hydraulic/system[2]/pumps/pump[2]/pressure_from_APU"/>
 			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure_input_rate">
                                 /engines/engine[1]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[2]/pump_2_failure-trigger eq 0
 			</test>
 		</switch>
 
@@ -361,6 +425,19 @@
 		<actuator name="/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure_input_rate">
             <input>/systems/hydraulic/system[2]/pumps/pump[2]/engine_pressure_input</input>
             <rate_limit sense="decr">/systems/hydraulic/system[2]/pumps/pump[2]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/failures/hydraulic/system[2]/pump_2_failure_switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pumps/pump[2]/final_pressure">
+                                /systems/failures/hydraulic/system[2]/pump_2_failure-trigger eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[2]/pumps/pump[2]/failure_pressure">
+            <input>/systems/failures/hydraulic/system[2]/pump_2_failure_switch</input>
+            <rate_limit sense="decr">100</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
         </actuator>
 
@@ -499,9 +576,14 @@
 			<default value="0"/>
 			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure">
                                 /engines/engine[2]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[3]/pump_1_failure-trigger eq 0
 			</test>
 			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[1]/pressure_from_APU">
                                 /systems/engines/adg[2]/drive-rpm ge 1
+                                /systems/failures/hydraulic/system[3]/pump_1_failure-trigger eq 0
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[1]/failure_pressure">
+                                /systems/failures/hydraulic/system[3]/pump_1_failure-trigger eq 1
 			</test>
 		</switch>
 
@@ -509,6 +591,7 @@
 			<default value="/systems/hydraulic/system[3]/pumps/pump[1]/pressure_from_APU"/>
 			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure_input_rate">
                                 /engines/engine[2]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[3]/pump_1_failure-trigger eq 0
 			</test>
 		</switch>
 
@@ -522,6 +605,19 @@
 		<actuator name="/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure_input_rate">
             <input>/systems/hydraulic/system[3]/pumps/pump[1]/engine_pressure_input</input>
             <rate_limit sense="decr">/systems/hydraulic/system[3]/pumps/pump[1]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/failures/hydraulic/system[3]/pump_1_failure_switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[1]/final_pressure">
+                                /systems/failures/hydraulic/system[3]/pump_1_failure-trigger eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[3]/pumps/pump[1]/failure_pressure">
+            <input>/systems/failures/hydraulic/system[3]/pump_1_failure_switch</input>
+            <rate_limit sense="decr">100</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
         </actuator>
 
@@ -559,9 +655,14 @@
 			<default value="0"/>
 			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure">
                                 /engines/engine[3]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[3]/pump_2_failure-trigger eq 0
 			</test>
 			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[2]/pressure_from_APU">
                                 /systems/engines/adg[3]/drive-rpm ge 1
+                                /systems/failures/hydraulic/system[3]/pump_2_failure-trigger eq 0
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[2]/failure_pressure">
+                                /systems/failures/hydraulic/system[3]/pump_2_failure-trigger eq 1
 			</test>
 		</switch>
 
@@ -569,6 +670,7 @@
 			<default value="/systems/hydraulic/system[3]/pumps/pump[2]/pressure_from_APU"/>
 			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure_input_rate">
                                 /engines/engine[3]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[3]/pump_2_failure-trigger eq 0
 			</test>
 		</switch>
 
@@ -582,6 +684,19 @@
 		<actuator name="/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure_input_rate">
             <input>/systems/hydraulic/system[3]/pumps/pump[2]/engine_pressure_input</input>
             <rate_limit sense="decr">/systems/hydraulic/system[3]/pumps/pump[2]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/failures/hydraulic/system[3]/pump_2_failure_switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pumps/pump[2]/final_pressure">
+                                /systems/failures/hydraulic/system[3]/pump_2_failure-trigger eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[3]/pumps/pump[2]/failure_pressure">
+            <input>/systems/failures/hydraulic/system[3]/pump_2_failure_switch</input>
+            <rate_limit sense="decr">100</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
         </actuator>
 
@@ -720,9 +835,14 @@
 			<default value="0"/>
 			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure">
                                 /engines/engine[2]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[4]/pump_1_failure-trigger eq 0
 			</test>
 			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[1]/pressure_from_APU">
                                 /systems/engines/adg[2]/drive-rpm ge 1
+                                /systems/failures/hydraulic/system[4]/pump_1_failure-trigger eq 0
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[1]/failure_pressure">
+                                /systems/failures/hydraulic/system[4]/pump_1_failure-trigger eq 1
 			</test>
 		</switch>
 
@@ -730,6 +850,7 @@
 			<default value="/systems/hydraulic/system[4]/pumps/pump[1]/pressure_from_APU"/>
 			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure_input_rate">
                                 /engines/engine[2]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[3]/pump_1_failure-trigger eq 0
 			</test>
 		</switch>
 
@@ -743,6 +864,19 @@
 		<actuator name="/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure_input_rate">
             <input>/systems/hydraulic/system[4]/pumps/pump[1]/engine_pressure_input</input>
             <rate_limit sense="decr">/systems/hydraulic/system[4]/pumps/pump[1]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/failures/hydraulic/system[4]/pump_1_failure_switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[1]/final_pressure">
+                                /systems/failures/hydraulic/system[4]/pump_1_failure-trigger eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[4]/pumps/pump[1]/failure_pressure">
+            <input>/systems/failures/hydraulic/system[4]/pump_1_failure_switch</input>
+            <rate_limit sense="decr">100</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
         </actuator>
 
@@ -780,9 +914,14 @@
 			<default value="0"/>
 			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure">
                                 /engines/engine[3]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[4]/pump_2_failure-trigger eq 0
 			</test>
 			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[2]/pressure_from_APU">
                                 /systems/engines/adg[3]/drive-rpm ge 1
+                                /systems/failures/hydraulic/system[4]/pump_2_failure-trigger eq 0
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[2]/failure_pressure">
+                                /systems/failures/hydraulic/system[4]/pump_2_failure-trigger eq 1
 			</test>
 		</switch>
 
@@ -790,6 +929,7 @@
 			<default value="/systems/hydraulic/system[4]/pumps/pump[2]/pressure_from_APU"/>
 			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure_input_rate">
                                 /engines/engine[3]/n2 ge 0.1
+                                /systems/failures/hydraulic/system[4]/pump_2_failure-trigger eq 0
 			</test>
 		</switch>
 
@@ -803,6 +943,19 @@
 		<actuator name="/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure_input_rate">
             <input>/systems/hydraulic/system[4]/pumps/pump[2]/engine_pressure_input</input>
             <rate_limit sense="decr">/systems/hydraulic/system[4]/pumps/pump[2]/deceleration_rate</rate_limit> 
+            <rate_limit sense="incr">600</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/failures/hydraulic/system[4]/pump_2_failure_switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[4]/pumps/pump[2]/final_pressure">
+                                /systems/failures/hydraulic/system[4]/pump_2_failure-trigger eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/system[4]/pumps/pump[2]/failure_pressure">
+            <input>/systems/failures/hydraulic/system[4]/pump_2_failure_switch</input>
+            <rate_limit sense="decr">100</rate_limit> 
             <rate_limit sense="incr">600</rate_limit> 
         </actuator>
 
@@ -1005,14 +1158,23 @@
 			<default value="0"/>
 			<test logic="AND" value="9">
 				/systems/electrical/bus/ac-1 gt 220
+				/controls/switches/hyd_amount_gauge_test eq 0
+                                /systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 0
 			</test>
 		</switch>
 
 		<actuator name="/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-movement">
             <input>/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-cmd</input>
-            <rate_limit sense="decr">3</rate_limit> 
-            <rate_limit sense="incr">3</rate_limit> 
+            <rate_limit sense="decr">/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-movement-switch</rate_limit> 
+            <rate_limit sense="incr">7</rate_limit> 
         </actuator>
+
+		<switch name="/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-movement-switch">
+			<default value="7"/>
+			<test logic="AND" value="0.3">
+				/systems/failures/hydraulic/system[1]/fluid-leak-trigger eq 1
+			</test>
+		</switch>
 
 <!--System 2 -->
 
@@ -1020,14 +1182,23 @@
 			<default value="0"/>
 			<test logic="AND" value="15">
 				/systems/electrical/bus/ac-2 gt 220
+				/controls/switches/hyd_amount_gauge_test eq 0
+                                /systems/failures/hydraulic/system[2]/fluid-leak-trigger eq 0
 			</test>
 		</switch>
 
 		<actuator name="/systems/hydraulic/system[2]/Reservoir_fluid_ammount-gal-movement">
             <input>/systems/hydraulic/system[2]/Reservoir_fluid_ammount-gal-cmd</input>
-            <rate_limit sense="decr">5</rate_limit> 
-            <rate_limit sense="incr">5</rate_limit> 
+            <rate_limit sense="decr">/systems/hydraulic/system[2]/Reservoir_fluid_ammount-gal-movement-switch</rate_limit> 
+            <rate_limit sense="incr">7</rate_limit> 
         </actuator>
+
+		<switch name="/systems/hydraulic/system[2]/Reservoir_fluid_ammount-gal-movement-switch">
+			<default value="7"/>
+			<test logic="AND" value="0.3">
+				/systems/failures/hydraulic/system[2]/fluid-leak-trigger eq 1
+			</test>
+		</switch>
 
 <!--System 3 -->
 
@@ -1035,14 +1206,23 @@
 			<default value="0"/>
 			<test logic="AND" value="15">
 				/systems/electrical/bus/ac-3 gt 220
+				/controls/switches/hyd_amount_gauge_test eq 0
+                                /systems/failures/hydraulic/system[3]/fluid-leak-trigger eq 0
 			</test>
 		</switch>
 
 		<actuator name="/systems/hydraulic/system[3]/Reservoir_fluid_ammount-gal-movement">
             <input>/systems/hydraulic/system[3]/Reservoir_fluid_ammount-gal-cmd</input>
-            <rate_limit sense="decr">5</rate_limit> 
-            <rate_limit sense="incr">5</rate_limit> 
+            <rate_limit sense="decr">/systems/hydraulic/system[3]/Reservoir_fluid_ammount-gal-movement-switch</rate_limit> 
+            <rate_limit sense="incr">7</rate_limit> 
         </actuator>
+
+		<switch name="/systems/hydraulic/system[3]/Reservoir_fluid_ammount-gal-movement-switch">
+			<default value="7"/>
+			<test logic="AND" value="0.3">
+				/systems/failures/hydraulic/system[3]/fluid-leak-trigger eq 1
+			</test>
+		</switch>
 
 
 
@@ -1052,14 +1232,23 @@
 			<default value="0"/>
 			<test logic="AND" value="9">
 				/systems/electrical/bus/ac-4 gt 220
+				/controls/switches/hyd_amount_gauge_test eq 0
+                                /systems/failures/hydraulic/system[4]/fluid-leak-trigger eq 0
 			</test>
 		</switch>
 
 		<actuator name="/systems/hydraulic/system[4]/Reservoir_fluid_ammount-gal-movement">
             <input>/systems/hydraulic/system[4]/Reservoir_fluid_ammount-gal-cmd</input>
-            <rate_limit sense="decr">3</rate_limit> 
-            <rate_limit sense="incr">3</rate_limit> 
+            <rate_limit sense="decr">/systems/hydraulic/system[4]/Reservoir_fluid_ammount-gal-movement-switch</rate_limit> 
+            <rate_limit sense="incr">7</rate_limit> 
         </actuator>
+
+		<switch name="/systems/hydraulic/system[4]/Reservoir_fluid_ammount-gal-movement-switch">
+			<default value="7"/>
+			<test logic="AND" value="0.3">
+				/systems/failures/hydraulic/system[4]/fluid-leak-trigger eq 1
+			</test>
+		</switch>
 
 	</channel> 
 
@@ -1090,8 +1279,8 @@
 		</switch>
 
   		<switch name="/controls/switches/gear-locked">
-			<default value="0"/>
-			   <test logic="OR" value="1">
+			<default value="1"/>
+			   <test logic="OR" value="0">
 				/gear/gear[0]/in-transit eq 0
 				/gear/gear[1]/in-transit eq 0 
                                 /gear/gear[2]/in-transit eq 0
