@@ -10,7 +10,8 @@ sweat by maggse
 
  <animation>
 	 <type>rotate</type>
-	 <object-name>switch_gear</object-name>
+	 <object-name>switch_gear.001</object-name>
+	 <object-name>switch_gear.002</object-name>
 	 <property>controls/gear/gear-down</property>
 	 <interpolation>
 		 <entry>
@@ -49,7 +50,7 @@ sweat by maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_gear</object-name>
+	 <object-name>switch_gear.002</object-name>
 	 <condition>
 		 <less-than>
 			 <property>gear/gear/wow</property>
@@ -67,16 +68,102 @@ sweat by maggse
 	 </action>
 </animation>
 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>cover</object-name>
+	 <property>controls/gear/emerg_switch_cover</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.0074</x-m>
+		 <y-m>-0.0515</y-m>
+		 <z-m>0.0868</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>cover</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/gear/emerg_switch_cover</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>Switch</object-name>
+	 <property>controls/gear/emerg_switch</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>45.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.0059</x-m>
+		 <y-m>-0.0550</y-m>
+		 <z-m>0.1036</z-m>
+	 </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>Switch</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.3</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/gear/emerg_switch</property>
+		 </binding>
+	 </action>
+</animation>
+
 <!-- gear ind -->
 
  <animation>
 	 <type>select</type>
 	 <object-name>gearind_fr</object-name>
 	 <condition>
+             <and>
 		 <equals>
 			 <property>gear/gear[0]/position-norm</property>
 			 <value>1.0</value>
 		 </equals>
+		 <greater-than>
+                         <property>systems/electrical/bus/ac-ess</property>
+			 <value>220</value>
+		 </greater-than>
+             </and>
 	 </condition>
  </animation>
  <animation>
@@ -94,10 +181,22 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>gearind_bl</object-name>
 	 <condition>
+          <and>
+            <or>
+		 <greater-than>
+                         <property>systems/electrical/bus/ac-1</property>
+			 <value>220</value>
+		 </greater-than>
+		 <greater-than>
+                         <property>systems/electrical/bus/ac-ess</property>
+			 <value>220</value>
+		 </greater-than>
+            </or>
 		 <equals>
 			 <property>gear/gear[1]/position-norm</property>
 			 <value>1.0</value>
 		 </equals>
+            </and>
 	 </condition>
  </animation>
  <animation>
@@ -115,10 +214,22 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>gearind_br</object-name>
 	 <condition>
+          <and>
+            <or>
+		 <greater-than>
+                         <property>systems/electrical/bus/ac-3</property>
+			 <value>220</value>
+		 </greater-than>
+		 <greater-than>
+                         <property>systems/electrical/bus/ac-ess</property>
+			 <value>220</value>
+		 </greater-than>
+            </or>
 		 <equals>
 			 <property>gear/gear[3]/position-norm</property>
 			 <value>1.0</value>
 		 </equals>
+            </and>
 	 </condition>
  </animation>
  <animation>
@@ -132,6 +243,10 @@ sweat by maggse
 	 </emission>
 </animation>
 
+  <effect>
+    <inherits-from>Aircraft/B-1B/Models/Effects/Gear-transition-light</inherits-from>
+    <object-name>switch_gear.002</object-name>
+   </effect>
 
 <!-- Label Text -->
 

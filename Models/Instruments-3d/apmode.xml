@@ -362,6 +362,18 @@ sweat by maggse
       </animation>
 
       <animation>
+	      <type>textranslate</type>
+	      <object-name>apmode_btn_alt</object-name>
+              <property>systems/electrical/bus/ac-3</property>
+              <factor>0.0005</factor>
+              <axis>
+              <x> 1</x>
+              <y> 0</y>
+              <z> 0</z>
+              </axis>
+      </animation>
+
+      <animation>
 	      <type>select</type>
 	      <object-name>apmode_alt</object-name>
               <condition>
@@ -390,6 +402,18 @@ sweat by maggse
 			      <script>b1b.checkapmode()</script>
 		 </binding>
 	      </action>
+      </animation>
+
+      <animation>
+	      <type>textranslate</type>
+	      <object-name>apmode_btn_vfpm</object-name>
+              <property>systems/electrical/bus/ac-3</property>
+              <factor>0.0005</factor>
+              <axis>
+              <x> 1</x>
+              <y> 0</y>
+              <z> 0</z>
+              </axis>
       </animation>
 
       <animation>
@@ -424,6 +448,18 @@ sweat by maggse
       </animation>
 
       <animation>
+	      <type>textranslate</type>
+	      <object-name>apmode_btn_ptch</object-name>
+              <property>systems/electrical/bus/ac-3</property>
+              <factor>0.0007</factor>
+              <axis>
+              <x> 1</x>
+              <y> 0</y>
+              <z> 0</z>
+              </axis>
+      </animation>
+
+      <animation>
 	      <type>select</type>
 	      <object-name>apmode_ptch</object-name>
               <condition>
@@ -452,6 +488,18 @@ sweat by maggse
 			      <script>b1b.checkapmode()</script>
 		 </binding>
 	      </action>
+      </animation>
+
+      <animation>
+	      <type>textranslate</type>
+	      <object-name>apmode_btn_bhdg</object-name>
+              <property>systems/electrical/bus/ac-3</property>
+              <factor>0.001</factor>
+              <axis>
+              <x> 1</x>
+              <y> 0</y>
+              <z> 0</z>
+              </axis>
       </animation>
 
       <animation>
@@ -486,6 +534,18 @@ sweat by maggse
       </animation>
 
       <animation>
+	      <type>textranslate</type>
+	      <object-name>apmode_btn_thdg</object-name>
+              <property>systems/electrical/bus/ac-3</property>
+              <factor>0.001</factor>
+              <axis>
+              <x> 1</x>
+              <y> 0</y>
+              <z> 0</z>
+              </axis>
+      </animation>
+
+      <animation>
 	      <type>select</type>
 	      <object-name>apmode_thdg</object-name>
               <condition>
@@ -514,6 +574,18 @@ sweat by maggse
 			      <script>b1b.checkapmode()</script>
 		 </binding>
 	      </action>
+      </animation>
+
+      <animation>
+	      <type>textranslate</type>
+	      <object-name>apmode_btn_spd</object-name>
+              <property>systems/electrical/bus/ac-3</property>
+              <factor>0.0014</factor>
+              <axis>
+              <x> 1</x>
+              <y> 0</y>
+              <z> 0</z>
+              </axis>
       </animation>
 
       <animation>
@@ -548,6 +620,18 @@ sweat by maggse
       </animation>
 
       <animation>
+	      <type>textranslate</type>
+	      <object-name>apmode_btn_spd_ptch</object-name>
+              <property>systems/electrical/bus/ac-3</property>
+              <factor>0.0014</factor>
+              <axis>
+              <x> 1</x>
+              <y> 0</y>
+              <z> 0</z>
+              </axis>
+      </animation>
+
+      <animation>
 	      <type>select</type>
 	      <object-name>apmode_spdptch</object-name>
               <condition>
@@ -560,7 +644,7 @@ sweat by maggse
 
       <animation>
 	      <type>pick</type>
-	      <object-name>apmode_btn_terrflw</object-name>
+	      <object-name>apmode_btn_terr_flw</object-name>
 	      <action>
 		      <button>0</button>
 		      <repeatable>true</repeatable>
@@ -574,6 +658,18 @@ sweat by maggse
 			      <script>b1b.checkapmode()</script>
 		 </binding>
 	      </action>
+      </animation>
+
+      <animation>
+	      <type>textranslate</type>
+	      <object-name>apmode_btn_terr_flw</object-name>
+              <property>systems/electrical/bus/ac-3</property>
+              <factor>0.0007</factor>
+              <axis>
+              <x> 1</x>
+              <y> 0</y>
+              <z> 0</z>
+              </axis>
       </animation>
 
       <animation>
