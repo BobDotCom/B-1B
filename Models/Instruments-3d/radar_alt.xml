@@ -43,12 +43,13 @@ maggse
   <animation>
     <type>rotate</type>
     <object-name>bug</object-name>
-    <property>sim/model/jrb-usn/radar-altitude-decision-height</property>
+    <property>instrumentation/radar-altimeter/target</property>
     <interpolation>
-      <entry><ind>    0 </ind><dep>   0 </dep></entry>
-      <entry><ind>  200 </ind><dep> 212 </dep></entry>
-      <entry><ind> 1000 </ind><dep> 272 </dep></entry>
-      <entry><ind> 5000 </ind><dep> 320 </dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>10</ind><dep>-73</dep></entry>
+      <entry><ind>20</ind><dep>-145</dep></entry>
+      <entry><ind>30</ind><dep>-218</dep></entry>
+      <entry><ind>40</ind><dep>-290</dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
@@ -56,6 +57,34 @@ maggse
       <z>  0 </z>
     </axis>
   </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>AGL_set</object-name>
+        <property>instrumentation/radar-altimeter/target</property>
+        <factor>10</factor>
+        <center>
+            <x-m>0.009203</x-m>
+            <y-m>-0.031464</y-m>
+            <z-m>-0.031657</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/radar-altimeter/target</property>
+                <min>0</min>
+                <max>40</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+
  <animation>
 	 <type>material</type>
 	 <object-name>needle</object-name>

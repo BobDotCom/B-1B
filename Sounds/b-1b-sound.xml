@@ -1321,7 +1321,7 @@
       <condition> 
        <equals> 
         <property>controls/switches/gear-locked</property>
-        <value>0</value>
+        <value>1</value>
        </equals> 
       </condition>
       <volume>

@@ -100,7 +100,11 @@ more to come :-)
     <equals> 
       <property>controls/gear/gear-down</property>
       <value>1</value> 
-     </equals> 
+     </equals>
+    <greater-than> 
+     <property>systems/electrical/bus/ac-3</property> 
+      <value>220</value> 
+     </greater-than> 
      </and>
      </or>      
     </condition> 
@@ -110,10 +114,16 @@ more to come :-)
  <type>select</type> 
   <object-name>LATCHED</object-name> 
    <condition> 
+    <and>
     <equals> 
      <property>/systems/refuel/contact</property> 
       <value>1</value> 
      </equals> 
+    <greater-than> 
+     <property>systems/electrical/bus/ac-3</property> 
+      <value>220</value> 
+     </greater-than> 
+     </and>
     </condition> 
   </animation>
 
@@ -126,15 +136,30 @@ more to come :-)
      <property>/systems/refuel/contact</property> 
       <value>0</value> 
      </equals>
-    </and> 
-    <and>
     <equals> 
       <property>sim/multiplay/generic/float[5]</property>  
       <value>1</value> 
      </equals>
+    <greater-than> 
+     <property>systems/electrical/bus/ac-3</property> 
+      <value>220</value> 
+     </greater-than>
     </and>
     </condition> 
   </animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>READYNWS</object-name>
+  		<object-name>LATCHED</object-name> 
+  		<object-name>DISC</object-name>
+		<emission>
+			<red>0.9</red>
+			<green>0.5</green>
+			<blue>0.9</blue>
+			<factor-prop>controls/lighting/refuel-annunciator</factor-prop>
+		</emission>
+	</animation>
 
   <!-- trans parts -->
   <model>
@@ -1335,17 +1360,11 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>rudder2</object-name>
 	 <object-name>rudder3</object-name>
-         <condition> 
-          <equals>
-           <property>controls/flight/yaw-switch</property>
-           <value>0</value> 
-          </equals> 
-         </condition>
-	 <property>controls/flight/rudder</property>
+	 <property>fdm/jsbsim/fcs/rudder-pos-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>-1.0</ind>
-			 <dep>-30.0</dep>
+			 <dep>30.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>0.0</ind>
@@ -1353,7 +1372,7 @@ more to come :-)
 		 </entry>
 		 <entry>
 			 <ind>1.0</ind>
-			 <dep>30.0</dep>
+			 <dep>-30.0</dep>
 		 </entry>
 	 </interpolation>
 	 <center>
@@ -2883,12 +2902,6 @@ more to come :-)
  <animation>
 	 <type>rotate</type>
 	 <object-name>elevator_left</object-name>
-         <condition>
-          <equals> 
-           <property>controls/flight/Roll-switch</property> 
-           <value>0</value> 
-          </equals>
-         </condition>
 	 <property>surface-positions/left-elevator-pos-norm</property>
 	 <factor>20</factor>
 	 <center>
@@ -2906,12 +2919,6 @@ more to come :-)
   <animation>
 	 <type>rotate</type>
 	 <object-name>elevator_right</object-name>
-         <condition>
-           <equals> 
-            <property>controls/flight/Roll-switch</property> 
-            <value>0</value> 
-           </equals>
-         </condition>
 	 <property>surface-positions/right-elevator-pos-norm</property>
 	 <factor>20</factor>
 	 <center>
@@ -2930,12 +2937,6 @@ more to come :-)
 	 <type>rotate</type>
 	 <object-name>elevator_left</object-name>
 	 <object-name>elevator_right</object-name>
-         <condition> 
-           <equals> 
-            <property>controls/flight/Roll-switch</property> 
-            <value>1</value> 
-           </equals> 
-         </condition>
 	 <property>surface-positions/elevator-pos-norm</property>
 	 <factor>20</factor>
 	 <center>

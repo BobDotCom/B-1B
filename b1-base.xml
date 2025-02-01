@@ -520,8 +520,11 @@ B-1B set file.
             <property-rule n="200">
                 <path>Systems/annunciators.xml</path>
             </property-rule>
-            <property-rule n="200">
+            <property-rule n="201">
                 <path>Systems/computers.xml</path>
+            </property-rule>
+            <property-rule n="202">
+                <path>Systems/b1b-failures.xml</path>
             </property-rule>
             <path>Aircraft/B-1B/Systems/b1b-airdata.xml</path>
         </systems>
@@ -859,6 +862,7 @@ B-1B set file.
         </flight>
 
         <switches>
+            <annunciators-norm type="double">1</annunciators-norm>
             <HDG-select-switch type="int">0</HDG-select-switch>
             <ADC-select-switch type="int">0</ADC-select-switch>
             <engines>
