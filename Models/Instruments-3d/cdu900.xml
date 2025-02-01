@@ -266,6 +266,26 @@ sweat by maggse
 	</emission>
 </animation>
 
+<animation>
+  <type>select</type>
+  <object-name>line0</object-name>
+  <object-name>line1</object-name>
+  <object-name>line2</object-name>
+  <object-name>line3</object-name>
+  <object-name>line4</object-name>
+  <object-name>line5</object-name>
+  <object-name>line6</object-name>
+  <object-name>line2_select</object-name>
+  <object-name>line4_select</object-name>
+  <object-name>line6_select</object-name>
+	 <condition>
+           <greater-than> 
+             <property>systems/electrical/bus/ac-3</property>
+             <value>220</value>
+           </greater-than> 
+	 </condition>
+</animation>
+
 <!-- menu buttons -->
 
 <animation>
