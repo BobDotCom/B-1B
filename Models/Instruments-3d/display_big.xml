@@ -9,63 +9,26 @@ sweat by maggse
  <!--lights ind on off status -->
 
  <animation>
+	 <object-name>1_HYD</object-name>
 	 <object-name>1_ADS</object-name>
-	 <object-name>1_BLEED_AIR</object-name>
 	 <object-name>1_BUS</object-name>
 	 <object-name>1_GEN</object-name>
-	 <object-name>1_HYD</object-name>
+	 <object-name>2_HYD</object-name>
 	 <object-name>2_ADS</object-name>
-	 <object-name>2_BLEED_AIR</object-name>
 	 <object-name>2_BUS</object-name>
 	 <object-name>2_GEN</object-name>
-	 <object-name>2_HYD</object-name>
+	 <object-name>3_HYD</object-name>
 	 <object-name>3_ADS</object-name>
-	 <object-name>3_BLEED_AIR</object-name>
 	 <object-name>3_BUS</object-name>
 	 <object-name>3_GEN</object-name>
-	 <object-name>3_HYD</object-name>
+	 <object-name>4_HYD</object-name>
 	 <object-name>4_ADS</object-name>
-	 <object-name>4_BLEED_AIR</object-name>
 	 <object-name>4_BUS</object-name>
 	 <object-name>4_GEN</object-name>
-	 <object-name>4_HYD</object-name>
-	 <object-name>ANTISKID</object-name>
-	 <object-name>APU_EXH_DOOR_OPEN</object-name>
-         <object-name>COMPT_RAM_SCOOP_OPEN</object-name>
-         <object-name>L_BLEED_AIR_OVERHEAT</object-name>
-         <object-name>OXY</object-name>
-         <object-name>PITCH_AUG_1</object-name>
-         <object-name>R_BLEED_AIR_OVERHEAT</object-name>
-	 <object-name>R_CTL_COMPT_HOT</object-name>
-         <object-name>ROLL_AUG_1</object-name>
-         <object-name>ROLL_AUG_LIMITING</object-name>
-         <object-name>SMCS</object-name>
-         <object-name>SPOILER_1</object-name>
-         <object-name>YAW_AUG_1</object-name>
-         <object-name>YAW_AUG_LIMITING</object-name>
-         <object-name>YAW_AUG_OFF</object-name>
          <object-name>ELEC</object-name>
-         <object-name>FWD_COMPT_HOT</object-name>
-         <object-name>INTMD_CMPT_HOT</object-name>
-         <object-name>FUEL_CLG_SCOOP</object-name>
-         <object-name>FUEL_CLG_LOOP_RTN</object-name>
          <object-name>FUEL_LOW</object-name>
-         <object-name>FUEL_COOLING_LOOP_CRSVR</object-name>
-         <object-name>HOT_BRAKE</object-name>
-         <object-name>CREW_COMPT_HOT</object-name>
-         <object-name>CG_LIMIT</object-name>
-         <object-name>BU_OXY</object-name>
          <object-name>FIRE_DETR</object-name>
-         <object-name>L_FUEL_BOOST</object-name>
-         <object-name>R_FUEL_BOOST</object-name>
-         <object-name>AIR_HOT</object-name>
-         <object-name>L_CTL_COMPT_HOT</object-name>
-         <object-name>ST_AIR_HOT</object-name>
-         <object-name>PITCH_AUG_OFF</object-name>
-         <object-name>ROLL_AUG_OFF</object-name>
-         <object-name>SPOILER_OFF</object-name>
-         <object-name>L_WSHLD_HOT</object-name>
-         <object-name>R_WSHLD_HOT</object-name>
+	 <object-name>APU_EXH_DOOR_OPEN</object-name>
 	 <type>material</type>
 	 <emission>
 		 <red>0.9</red>
@@ -83,23 +46,33 @@ sweat by maggse
 
 </animation>
 
- <animation>
-	 <object-name>1_HYD</object-name>
-	 <object-name>2_ADS</object-name>
+<animation>
+         <object-name>CREW_COMPT_HOT</object-name>
+         <object-name>ST_AIR_HOT</object-name>
+         <object-name>YAW_AUG_1</object-name>
+         <object-name>YAW_AUG_LIMITING</object-name>
+         <object-name>YAW_AUG_OFF</object-name>
+	 <object-name>1_BLEED_AIR</object-name>
 	 <object-name>2_BLEED_AIR</object-name>
-	 <object-name>2_BUS</object-name>
-	 <object-name>2_GEN</object-name>
-	 <object-name>2_HYD</object-name>
-	 <object-name>3_ADS</object-name>
 	 <object-name>3_BLEED_AIR</object-name>
-	 <object-name>3_BUS</object-name>
-	 <object-name>3_GEN</object-name>
-	 <object-name>3_HYD</object-name>
-	 <object-name>4_ADS</object-name>
 	 <object-name>4_BLEED_AIR</object-name>
-	 <object-name>4_BUS</object-name>
-	 <object-name>4_GEN</object-name>
-	 <object-name>4_HYD</object-name>
+         <object-name>L_FUEL_BOOST</object-name>
+         <object-name>R_FUEL_BOOST</object-name>
+         <object-name>AIR_HOT</object-name>
+         <object-name>L_CTL_COMPT_HOT</object-name>
+         <object-name>PITCH_AUG_OFF</object-name>
+         <object-name>ROLL_AUG_OFF</object-name>
+         <object-name>SPOILER_OFF</object-name>
+         <object-name>L_WSHLD_HOT</object-name>
+         <object-name>R_WSHLD_HOT</object-name>
+         <object-name>FUEL_COOLING_LOOP_CRSVR</object-name>
+         <object-name>HOT_BRAKE</object-name>
+         <object-name>CG_LIMIT</object-name>
+         <object-name>BU_OXY</object-name>
+         <object-name>FWD_COMPT_HOT</object-name>
+         <object-name>INTMD_CMPT_HOT</object-name>
+         <object-name>FUEL_CLG_SCOOP</object-name>
+         <object-name>FUEL_CLG_LOOP_RTN</object-name>
 	 <object-name>ANTISKID</object-name>
          <object-name>COMPT_RAM_SCOOP_OPEN</object-name>
          <object-name>L_BLEED_AIR_OVERHEAT</object-name>
@@ -111,72 +84,443 @@ sweat by maggse
          <object-name>ROLL_AUG_LIMITING</object-name>
          <object-name>SMCS</object-name>
          <object-name>SPOILER_1</object-name>
-         <object-name>ELEC</object-name>
-         <object-name>FWD_COMPT_HOT</object-name>
-         <object-name>INTMD_CMPT_HOT</object-name>
-         <object-name>FUEL_CLG_SCOOP</object-name>
-         <object-name>FUEL_CLG_LOOP_RTN</object-name>
-         <object-name>FUEL_LOW</object-name>
-         <object-name>FUEL_COOLING_LOOP_CRSVR</object-name>
-         <object-name>HOT_BRAKE</object-name>
-         <object-name>CG_LIMIT</object-name>
-         <object-name>BU_OXY</object-name>
-         <object-name>FIRE_DETR</object-name>
-         <object-name>L_FUEL_BOOST</object-name>
-         <object-name>R_FUEL_BOOST</object-name>
-         <object-name>AIR_HOT</object-name>
-         <object-name>L_CTL_COMPT_HOT</object-name>
-         <object-name>PITCH_AUG_OFF</object-name>
-         <object-name>ROLL_AUG_OFF</object-name>
-         <object-name>SPOILER_OFF</object-name>
-         <object-name>L_WSHLD_HOT</object-name>
-         <object-name>R_WSHLD_HOT</object-name>
+	 <object-name>4_BLEED_AIR</object-name>
+	 <object-name>3_BLEED_AIR</object-name>
+	 <object-name>2_BLEED_AIR</object-name>
 	 <type>select</type>
           <condition>
-           <or>
-         		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
-          		 <value>220</value>
-         		</greater-than>
-         		<greater-than> 
-          		 <property>systems/electrical/bus/ac-ess</property>
-          		 <value>220</value>
-         		</greater-than>
-           </or>
+         		<equals> 
+          		 <property>systems/electrical/outputs/efis</property>
+          		 <value>1</value>
+         		</equals>
           </condition>
 
 </animation>
 
  <animation>
-	 <object-name>1_ADS</object-name>
-	 <object-name>1_BLEED_AIR</object-name>
-	 <object-name>1_BUS</object-name>
-	 <object-name>1_GEN</object-name>
+         <object-name>FIRE_DETR</object-name>
+	 <type>select</type>
+          <condition>
+             <and>
+         	<greater-than> 
+          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <value>220</value>
+         	</greater-than>
+             <or>
+         	<equals> 
+          		 <property>/systems/extinguishers/engine[0]/light</property>
+          		 <value>1</value>
+         	</equals>
+         	<equals> 
+          		 <property>/systems/extinguishers/engine[1]/light</property>
+          		 <value>1</value>
+         	</equals>
+         	<equals> 
+          		 <property>/systems/extinguishers/engine[2]/light</property>
+          		 <value>1</value>
+         	</equals>
+         	<equals> 
+          		 <property>/systems/extinguishers/engine[3]/light</property>
+          		 <value>1</value>
+         	</equals>
+             </or>
+            </and>
+          </condition>
+
+</animation>
+
+ <animation>
+         <object-name>FUEL_LOW</object-name>
+	 <type>select</type>
+          <condition>
+             <and>
+         	<greater-than> 
+          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <value>220</value>
+         	</greater-than>
+             <or>
+         	<less-than> 
+          		 <property>consumables/fuel/tank[6]/level-lbs</property>
+          		 <value>1000</value>
+         	</less-than>
+         	<less-than> 
+          		 <property>consumables/fuel/tank[7]/level-lbs</property>
+          		 <value>1000</value>
+         	</less-than>
+             </or>
+            </and>
+          </condition>
+</animation>
+
+ <animation>
+ 	 <object-name>1_GEN</object-name>
+	 <type>select</type>
+          <condition>
+             <and>
+         	<greater-than> 
+          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <value>220</value>
+         	</greater-than>
+         	<less-than>
+          		 <property>systems/electrical/relay/gen-1-glc/output</property>
+          		 <value>220</value>
+         	</less-than>
+            </and>
+          </condition>
+</animation>
+
+ <animation>
+ 	 <object-name>2_GEN</object-name>
+	 <type>select</type>
+          <condition>
+             <and>
+         	<less-than>
+          		 <property>systems/electrical/relay/gen-2-glc/output</property>
+          		 <value>220</value>
+         	</less-than>
+                <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+           </or>
+          </and>
+          </condition>
+</animation>
+
+ <animation>
+ 	 <object-name>3_GEN</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>systems/electrical/relay/gen-4-glc/output</property>
+            <value>220</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+
+ <animation>
+	 <object-name>1_HYD</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+            <value>2150</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+ <animation>
+	 <object-name>2_HYD</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>/systems/hydraulic/system[2]/pipeline/pipeline_pressure</property>
+            <value>2150</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+ <animation>
+	 <object-name>3_HYD</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>/systems/hydraulic/system[3]/pipeline/pipeline_pressure</property>
+            <value>2150</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+ <animation>
+	 <object-name>4_HYD</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
+            <value>2150</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+
+ <animation>
+ 	 <object-name>1_BUS</object-name>
+	 <type>select</type>
+          <condition>
+             <and>
+         	<greater-than> 
+          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <value>220</value>
+         	</greater-than>
+         	<less-than>
+          		 <property>systems/electrical/bus/ac-1</property>
+          		 <value>220</value>
+         	</less-than>
+            </and>
+          </condition>
+</animation>
+
+ <animation>
+	 <object-name>2_BUS</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>systems/electrical/bus/ac-2</property>
+            <value>220</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+
+ <animation>
+	 <object-name>3_BUS</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>systems/electrical/bus/ac-3</property>
+            <value>220</value>
+           </less-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+           </and>
+          </condition>
+</animation>
+
+ <animation>
+	 <object-name>4_BUS</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>systems/electrical/bus/ac-4</property>
+            <value>220</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+
+ <animation>
+ 	 <object-name>1_ADS</object-name>
+	 <type>select</type>
+          <condition>
+             <and>
+         	<greater-than> 
+          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <value>220</value>
+         	</greater-than>
+         	<less-than>
+          		 <property>systems/engines/adg[0]/drive-rpm</property>
+          		 <value>10</value>
+         	</less-than>
+            </and>
+          </condition>
+</animation>
+
+ <animation>
+	 <object-name>2_ADS</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>systems/engines/adg[1]/drive-rpm</property>
+            <value>10</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+
+ <animation>
+	 <object-name>3_ADS</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>systems/engines/adg[2]/drive-rpm</property>
+            <value>10</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+
+ <animation>
+	 <object-name>4_ADS</object-name>
+	 <type>select</type>
+          <condition>
+           <and>
+           <less-than>
+            <property>systems/engines/adg[3]/drive-rpm</property>
+            <value>10</value>
+           </less-than>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
+          </condition>
+</animation>
+
+ <animation>
+	 <object-name>ELEC</object-name>
+	 <type>select</type>
+          <condition>
+            <or>
+           <equals>
+            <property>systems/failures/electrical/ac-1-bus</property>
+            <value>1</value>
+           </equals>
+           <equals>
+            <property>systems/failures/electrical/ac-2-bus</property>
+            <value>1</value>
+           </equals>
+           <equals>
+            <property>systems/failures/electrical/ac-3-bus</property>
+            <value>1</value>
+           </equals>
+           <equals>
+            <property>systems/failures/electrical/ac-4-bus</property>
+            <value>1</value>
+           </equals>
+           <equals>
+            <property>systems/failures/electrical/ac-ess-bus</property>
+            <value>1</value>
+           </equals>
+          </or>
+          </condition>
+</animation>
+
+ <animation>
 	 <object-name>APU_EXH_DOOR_OPEN</object-name>
 	 <type>select</type>
           <condition>
-         		<greater-than> 
-          		 <property>systems/electrical/bus/ac-ess</property>
-          		 <value>220</value>
-         		</greater-than>
+           <and>
+           <equals>
+            <property>systems/apu/apu-exhaust-door-failure</property>
+            <value>1</value>
+           </equals>
+           <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+            </or>
+           </and>
           </condition>
-
 </animation>
 
- <animation>
-         <object-name>CREW_COMPT_HOT</object-name>
-         <object-name>ST_AIR_HOT</object-name>
-         <object-name>YAW_AUG_1</object-name>
-         <object-name>YAW_AUG_LIMITING</object-name>
-         <object-name>YAW_AUG_OFF</object-name>
-	 <type>select</type>
-          <condition>
-         		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
-          		 <value>220</value>
-         		</greater-than>
-          </condition>
-
-</animation>
 
 </PropertyList>

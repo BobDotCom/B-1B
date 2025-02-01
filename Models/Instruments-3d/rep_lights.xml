@@ -114,18 +114,29 @@ sweat by maggse
 	 <object-name>2_GSS</object-name>
 	 <object-name>ADC_1</object-name>
 	 <object-name>ADC_2</object-name>
-	 <object-name>AFCS_APRCH_PITCH</object-name>
-	 <object-name>AFCS_APRCH_ROLL</object-name>
-	 <object-name>AUTO_THROT</object-name>
-	 <object-name>RGA_1</object-name>
-	 <object-name>RGA_2</object-name>
-	 <object-name>RGA_SYS</object-name>
 	 <emission>
 		 <red>0.5</red>
 		 <green>0.9</green>
 		 <blue>0.5</blue>
 		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
 	</emission>
+</animation>
+
+<animation>
+	 <object-name>AFCS_APRCH_PITCH</object-name>
+	 <object-name>AFCS_APRCH_ROLL</object-name>
+	 <object-name>AUTO_THROT</object-name>
+	 <object-name>RGA_1</object-name>
+	 <object-name>RGA_2</object-name>
+	 <object-name>RGA_SYS</object-name>
+	 <type>select</type>
+          <condition>
+         		<equals> 
+          		 <property>systems/electrical/outputs/efis</property>
+          		 <value>1</value>
+         		</equals>
+          </condition>
+
 </animation>
 
 

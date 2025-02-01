@@ -60,6 +60,16 @@
  </logic> 
 
     <logic>
+     <input>
+      <less-than>           
+	  <property>systems/computers/PFDB1-baro-altitude</property>
+	  <property>controls/switches/terrain-avoid-clr1000</property>
+      </less-than>              
+      </input>
+      <output>instrumentation/annunciators/mindechgt</output>
+ </logic> 
+
+    <logic>
      <input> 
       <and>    
          <greater-than>       

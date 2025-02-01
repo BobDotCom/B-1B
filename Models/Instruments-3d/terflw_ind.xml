@@ -202,8 +202,8 @@ sweat by maggse
 
 <!-- terrain avoidance clr pln setting -->
 
-<animation>
-	<type>rotate</type>
+	<animation>
+		<type>knob</type>
 	<object-name>knob_clrpln</object-name>
 	<property>controls/switches/terrain-avoid-clrpln</property>
 	<interpolation>
@@ -212,20 +212,44 @@ sweat by maggse
 			<dep>0.0</dep>
 		</entry>
 		<entry>
-			<ind>0.25</ind>
-			<dep>-55</dep>
+			<ind>0.1</ind>
+			<dep>-25</dep>
+		</entry>
+		<entry>
+			<ind>0.2</ind>
+			<dep>-60</dep>
+		</entry>
+		<entry>
+			<ind>0.3</ind>
+			<dep>-100</dep>
+		</entry>
+		<entry>
+			<ind>0.4</ind>
+			<dep>-125</dep>
 		</entry>
 		<entry>
 			<ind>0.5</ind>
-			<dep>-115</dep>
+			<dep>-160</dep>
 		</entry>
 		<entry>
-			<ind>0.75</ind>
-			<dep>-165</dep>
+			<ind>0.6</ind>
+			<dep>-190</dep>
+		</entry>
+		<entry>
+			<ind>0.7</ind>
+			<dep>-230</dep>
+		</entry>
+		<entry>
+			<ind>0.8</ind>
+			<dep>-270.0</dep>
+		</entry>
+		<entry>
+			<ind>0.9</ind>
+			<dep>-295</dep>
 		</entry>
 		<entry>
 			<ind>1.0</ind>
-			<dep>-310.0</dep>
+			<dep>-315.0</dep>
 		</entry>
 	</interpolation>
 	<axis>
@@ -238,45 +262,20 @@ sweat by maggse
 		<y-m> 0.1629</y-m>
 		<z-m>-0.1642</z-m>
 	</center>
-</animation>
 
-<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-<animation>
-	<type>pick</type>
-	<object-name>knob_clrpln</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.2</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property>controls/switches/terrain-avoid-clrpln</property>
-			<step>0.25</step>
-			<min>0.0</min>
-			<max>1.0</max>
-		</binding>
+		<action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/terrain-avoid-clrpln</property>
+                         <factor>0.1</factor>
+			 <min>0</min>
+			 <max>1</max>
+		 </binding>
 		<binding>
 			<command>nasal</command>
 			<script>b1b.radar_clrpln()</script>
 		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.2</interval-sec>
-		<binding>
-			<command>property-adjust</command>
-			<property>controls/switches/terrain-avoid-clrpln</property>
-			<step>-0.25</step>
-			<min>0.0</min>
-			<max>1.0</max>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>b1b.radar_clrpln()</script>
-		</binding>
-	</action>
+	 </action>
 </animation>
 
 <!-- terrain follow set clr setting -->

@@ -236,6 +236,33 @@ sweat by maggse
 </animation>
 
 <animation>
+	<type>select</type>
+	<object-name>MINDECNHGT</object-name> 
+        <condition> 
+         <and>
+         <equals>
+          <property>instrumentation/annunciators/mindechgt</property>
+          <value>1</value>
+         </equals>
+         <equals>
+          <property>controls/switches/terrain-avoid</property>
+          <value>1</value>
+         </equals>
+                <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+           </or>
+        </and>
+        </condition>
+</animation>
+
+<animation>
 	<type>material</type>
 	<object-name>MINDECNHGT</object-name>
 	 <emission>

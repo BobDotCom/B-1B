@@ -280,7 +280,24 @@ maggse
 			 <property>/controls/electrical/switches/gen-1</property>
 		 </binding>
 	 </action>
-</animation> 
+</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>1_GEN</object-name>
+		<condition>
+                    <and>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ac-3</property>
+				<value>220</value>
+			</greater-than-equals>
+			<equals>
+				<property>systems/electrical/light/gen-1-fault</property>
+				<value>1</value>
+			</equals>
+                    </and>
+		</condition>
+	</animation> 
 
  <animation>
 	 <type>rotate</type>
@@ -322,6 +339,23 @@ maggse
 	 </action>
 </animation>
 
+	<animation>
+		<type>select</type>
+		<object-name>2_GEN</object-name>
+		<condition>
+                    <and>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ac-3</property>
+				<value>220</value>
+			</greater-than-equals>
+			<equals>
+				<property>systems/electrical/light/gen-2-fault</property>
+				<value>1</value>
+			</equals>
+                    </and>
+		</condition>
+	</animation>
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>gen_reset_3</object-name>
@@ -361,6 +395,23 @@ maggse
 		 </binding>
 	 </action>
 </animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>3_GEN</object-name>
+		<condition>
+                    <and>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ac-3</property>
+				<value>220</value>
+			</greater-than-equals>
+			<equals>
+				<property>systems/electrical/light/gen-4-fault</property>
+				<value>1</value>
+			</equals>
+                    </and>
+		</condition>
+	</animation>
 
  <!-- CSD De-couple safetys-->
 
@@ -1130,6 +1181,11 @@ maggse
 		<type>select</type>
 		<object-name>1-LOOP-A</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                     <or>
 			 <equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1140,6 +1196,7 @@ maggse
 				<value>1</value>
 			 </equals>
                         </or>
+                  </and>
 		</condition>
 	</animation>
 
@@ -1147,6 +1204,11 @@ maggse
 		<type>select</type>
 		<object-name>1-LOOP-B</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1157,6 +1219,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1164,6 +1227,11 @@ maggse
 		<type>select</type>
 		<object-name>2-LOOP-A</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1174,6 +1242,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1181,6 +1250,11 @@ maggse
 		<type>select</type>
 		<object-name>2-LOOP-B</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1191,6 +1265,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1198,6 +1273,11 @@ maggse
 		<type>select</type>
 		<object-name>3-LOOP-A</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1208,6 +1288,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1215,6 +1296,11 @@ maggse
 		<type>select</type>
 		<object-name>3-LOOP-B</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1225,6 +1311,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1232,6 +1319,11 @@ maggse
 		<type>select</type>
 		<object-name>4-LOOP-A</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1242,6 +1334,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1249,6 +1342,11 @@ maggse
 		<type>select</type>
 		<object-name>4-LOOP-B</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1259,6 +1357,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1266,6 +1365,11 @@ maggse
 		<type>select</type>
 		<object-name>L-APU-LOOP-A</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1276,6 +1380,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1283,6 +1388,11 @@ maggse
 		<type>select</type>
 		<object-name>L-APU-LOOP-B</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1293,6 +1403,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1300,6 +1411,11 @@ maggse
 		<type>select</type>
 		<object-name>R-APU-LOOP-A</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1310,6 +1426,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1317,6 +1434,11 @@ maggse
 		<type>select</type>
 		<object-name>R-APU-LOOP-B</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
                   <or>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
@@ -1327,6 +1449,7 @@ maggse
 				<value>1</value>
 			</equals>
                   </or>
+                 </and>
 		</condition>
 	</animation>
 
@@ -1334,10 +1457,16 @@ maggse
 		<type>select</type>
 		<object-name>L-OWF-LOOP-A</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
 				<value>1</value>
 			</equals>
+                   </and>
 		</condition>
 	</animation>
 
@@ -1345,10 +1474,16 @@ maggse
 		<type>select</type>
 		<object-name>L-OWF-LOOP-B</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
 				<value>1</value>
 			</equals>
+                  </and>
 		</condition>
 	</animation>
 
@@ -1356,10 +1491,16 @@ maggse
 		<type>select</type>
 		<object-name>R-OWF-LOOP-A</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
 				<value>1</value>
 			</equals>
+                  </and>
 		</condition>
 	</animation>
 
@@ -1367,10 +1508,16 @@ maggse
 		<type>select</type>
 		<object-name>R-OWF-LOOP-B</object-name>
 		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
 			<equals>
 				<property>controls/switches/fire_loop_test</property>
 				<value>1</value>
 			</equals>
+                  </and>
 		</condition>
 	</animation>
 

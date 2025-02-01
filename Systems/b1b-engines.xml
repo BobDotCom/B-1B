@@ -3,6 +3,7 @@
     <property>/engines/engine[4]/running</property>
     <property>/engines/engine[5]/running</property>
     <property value="1">/systems/apu/dc-bat-three-minutes</property>
+    <property value="0">/systems/apu/apu-exhaust-door-failure</property>
 
     <channel name="adg" execrate="8">
 

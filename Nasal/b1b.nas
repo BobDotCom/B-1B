@@ -454,14 +454,32 @@ var rcs = getprop("controls/switches/terrain-avoid-clrpln");
 if(rcs == 0) {
 setprop("controls/switches/terrain-avoid-clr1000", 0);
 }
-if(rcs == 0.25) {
+if(rcs == 0.1) {
 setprop("controls/switches/terrain-avoid-clr1000", 100);
 }
-if(rcs == 0.5) {
+if(rcs == 0.2) {
+setprop("controls/switches/terrain-avoid-clr1000", 200);
+}
+if(rcs == 0.3) {
+setprop("controls/switches/terrain-avoid-clr1000", 250);
+}
+if(rcs == 0.4) {
 setprop("controls/switches/terrain-avoid-clr1000", 300);
 }
-if(rcs == 0.75) {
+if(rcs == 0.5) {
+setprop("controls/switches/terrain-avoid-clr1000", 400);
+}
+if(rcs == 0.6) {
 setprop("controls/switches/terrain-avoid-clr1000", 500);
+}
+if(rcs == 0.7) {
+setprop("controls/switches/terrain-avoid-clr1000", 600);
+}
+if(rcs == 0.8) {
+setprop("controls/switches/terrain-avoid-clr1000", 700);
+}
+if(rcs == 0.9) {
+setprop("controls/switches/terrain-avoid-clr1000", 800);
 }
 if(rcs == 1.0) {
 setprop("controls/switches/terrain-avoid-clr1000", 1000);
