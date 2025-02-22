@@ -25,27 +25,9 @@ maggse
 			      <command>nasal</command>
 			      <script>b1b.bay_fwd(1)</script>
 		 </binding>
-	 <emission>
-		 <red>0.0</red>
-		 <green>0.9</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-
 	 </action>
 </animation>
- <animation>
-	 <type>textranslate</type>
-	 <object-name>sms_button.024</object-name>
-	 <property>sim/multiplay/generic/float[2]</property>
-	 <factor>0.038</factor>
-         <step>1</step>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
+ 
 <animation>
 	 <type>pick</type>
 	 <object-name>sms_button.021</object-name>
@@ -76,18 +58,6 @@ maggse
 	 </action>
 </animation>
 <animation>
-	 <type>textranslate</type>
-	 <object-name>sms_button.025</object-name>
-	 <property>sim/multiplay/generic/float[3]</property>
-	 <factor>0.038</factor>
-         <step>1</step>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
-<animation>
 	 <type>pick</type>
 	 <object-name>sms_button.022</object-name>
 	 <action>
@@ -116,18 +86,6 @@ maggse
 
 	 </action>
 </animation>
-<animation>
-	 <type>textranslate</type>
-	 <object-name>sms_button.026</object-name>
-	 <property>sim/multiplay/generic/float[4]</property>
-	 <factor>0.038</factor>
-         <step>1</step>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
- </animation>
 <animation>
 	 <type>pick</type>
 	 <object-name>sms_button.023</object-name>
@@ -456,6 +414,9 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	</animation>
+
+<!-- Emergency Jettison -->
+
   <animation>
    <type>rotate</type>
    <object-name>safety.006</object-name>
@@ -515,6 +476,12 @@ maggse
    <action>
     <button>0</button>
       <binding>
+       <condition>
+        <equals> 
+        <property>controls/switches/safety.006</property>
+        <value>1</value>
+        </equals> 
+       </condition>
         <command>property-toggle</command>
         <property>armament/oso/auto-release</property>
         <factor>0</factor>
@@ -524,52 +491,296 @@ maggse
    </action>
  </animation>
 
+<!-- Conv arm switch -->
+
+  <animation>
+   <type>rotate</type>
+   <object-name>safety.005</object-name>
+   <property>controls/switches/safety.005</property>
+   <factor>45</factor>
+   <min>0</min>
+   <max>1</max>
+   <center>
+    <x-m> 0.00692</x-m>
+    <y-m> 0.10151</y-m>
+    <z-m> 0.014788</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>safety.005</object-name>
+   <action>
+    <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/safety.005</property>
+        <factor>45</factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+   </action>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>conv_arm</object-name>
+   <property>armament/oso/conv_arm</property>
+   <factor>45</factor>
+   <min>0</min>
+   <max>1</max>
+   <center>
+    <x-m> 0.005095</x-m>
+    <y-m> 0.09685</y-m>
+    <z-m>-0.007248</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>conv_arm</object-name>
+   <action>
+    <button>0</button>
+      <binding>
+       <condition>
+        <equals> 
+        <property>controls/switches/safety.005</property>
+        <value>1</value>
+        </equals> 
+       </condition>
+        <command>property-toggle</command>
+        <property>armament/oso/conv_arm</property>
+        <factor>0</factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+   </action>
+ </animation>
+
+<!-- Nuc unlock switch -->
+
+  <animation>
+   <type>rotate</type>
+   <object-name>safety.004</object-name>
+   <property>controls/switches/safety.004</property>
+   <factor>45</factor>
+   <min>0</min>
+   <max>1</max>
+   <center>
+    <x-m> 0.006886</x-m>
+    <y-m> 0.08846</y-m>
+    <z-m> 0.069265</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>safety.004</object-name>
+   <action>
+    <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/safety.004</property>
+        <factor>45</factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+   </action>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>nuc_arm</object-name>
+   <property>armament/oso/nuc_arm</property>
+   <factor>45</factor>
+   <min>0</min>
+   <max>1</max>
+   <center>
+    <x-m> 0.0055</x-m>
+    <y-m> 0.09582</y-m>
+    <z-m> 0.0475</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>nuc_arm</object-name>
+   <action>
+    <button>0</button>
+      <binding>
+       <condition>
+        <equals> 
+        <property>controls/switches/safety.004</property>
+        <value>1</value>
+        </equals> 
+       </condition>
+        <command>property-toggle</command>
+        <property>armament/oso/nuc_arm</property>
+        <factor>0</factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+   </action>
+ </animation>
+
+<!-- Prearm switch -->
+
+  <animation>
+   <type>rotate</type>
+   <object-name>safety.000</object-name>
+   <property>controls/switches/safety.000</property>
+   <factor>45</factor>
+   <min>0</min>
+   <max>1</max>
+   <center>
+    <x-m> 0.006867</x-m>
+    <y-m> 0.11449</y-m>
+    <z-m> 0.069825</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>safety.000</object-name>
+   <action>
+    <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/safety.000</property>
+        <factor>45</factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+   </action>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>nuc_prearm</object-name>
+   <property>armament/oso/nuc_prearm</property>
+   <factor>45</factor>
+   <min>0</min>
+   <max>1</max>
+   <center>
+    <x-m> 0.006</x-m>
+    <y-m> 0.1219</y-m>
+    <z-m> 0.04701</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <object-name>nuc_prearm</object-name>
+   <action>
+    <button>0</button>
+      <binding>
+       <condition>
+        <equals> 
+        <property>controls/switches/safety.000</property>
+        <value>1</value>
+        </equals> 
+       </condition>
+        <command>property-toggle</command>
+        <property>armament/oso/nuc_prearm</property>
+        <factor>0</factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+   </action>
+ </animation>
+
+
+
 <animation>
 	<type>material</type>
-  <object-name>sms_button</object-name>
-  <object-name>sms_button.001</object-name>
-  <object-name>sms_button.002</object-name>
-  <object-name>sms_button.003</object-name>
-  <object-name>sms_button.004</object-name>
-  <object-name>sms_button.005</object-name>
-  <object-name>sms_button.006</object-name>
-  <object-name>sms_button.007</object-name>
-  <object-name>sms_button.008</object-name>
-  <object-name>sms_button.009</object-name>
-  <object-name>sms_button.010</object-name>
-  <object-name>sms_button.011</object-name>
-  <object-name>sms_button.012</object-name>
-  <object-name>sms_button.013</object-name>
-  <object-name>sms_button.014</object-name>
-  <object-name>sms_button.015</object-name>
-  <object-name>sms_button.016</object-name>
-  <object-name>sms_button.017</object-name>
-  <object-name>sms_button.018</object-name>
-  <object-name>sms_button.019</object-name>
-  <object-name>sms_button.020</object-name>
   <object-name>sms_button.021</object-name>
-  <object-name>sms_button.022</object-name>
-  <object-name>sms_button.023</object-name>
-  <object-name>sms_button.024</object-name>
-  <object-name>sms_button.025</object-name>
-  <object-name>sms_button.026</object-name>
 	 <emission>
 		 <red>0.9</red>
-		 <green>0.0</green>
-		 <blue>0.3</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>armament/bay0/closed</factor-prop>
+	</emission>
+</animation>
+<animation>
+	<type>material</type>
+  <object-name>sms_button.022</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>armament/bay1/closed</factor-prop>
+	</emission>
+</animation>
+<animation>
+	<type>material</type>
+  <object-name>sms_button.023</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>armament/bay2/closed</factor-prop>
 	</emission>
 </animation>
 
-<!--animation>
+<animation>
 	<type>material</type>
-  <object-name>sms</object-name>
+  <object-name>sms_button.024</object-name>
 	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>armament/bay0/open</factor-prop>
 	</emission>
-</animation-->
+</animation>
+<animation>
+	<type>material</type>
+  <object-name>sms_button.025</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>armament/bay1/open</factor-prop>
+	</emission>
+</animation>
+<animation>
+	<type>material</type>
+  <object-name>sms_button.026</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>armament/bay2/open</factor-prop>
+	</emission>
+</animation>
 
 </PropertyList>

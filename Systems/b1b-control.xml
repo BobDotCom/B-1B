@@ -2,6 +2,8 @@
 <system name="B-1B Control">
 
     <property value="0">/controls/switches/failures/wing-sweep_lever</property>
+    <property value="1">/controls/gear/gear-down</property>
+    <property value="1">/gear/serviceable</property>
 
     <channel name="Wing Sweep">
 
@@ -72,7 +74,7 @@
 
         <pure_gain name="fcs/elevon-gain">
             <input>fcs/roll-trim-sum</input>
-            <gain>0.3</gain>
+            <gain>1</gain>
         </pure_gain>
 
         <summer name="fcs/left-elevon-sum">
@@ -104,8 +106,65 @@
             <output>fcs/left-elevator-pos-rad</output>
         </aerosurface_scale>
 
-        <aerosurface_scale name="fcs/left-elevator-pos-norm">
+		<actuator name="fcs/left-elevator-pos-mech">
             <input>fcs/left-elevator-pos-rad</input>
+            <rate_limit sense="decr">0.1</rate_limit> 
+            <rate_limit sense="incr">0.1</rate_limit> 
+        </actuator>
+
+		<switch name="fcs/left-elevator-pos-input">
+			<default value="fcs/left-elevator-pos-mech"/>
+			<test logic="AND" value="fcs/left-elevator-pos-hyd">
+                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure gt 100
+			</test>
+		</switch>
+
+		<actuator name="fcs/left-elevator-pos-hyd">
+            <input>fcs/left-elevator-pos-rad</input>
+            <rate_limit sense="decr">fcs/left-elevator-pos-hyd-rate</rate_limit> 
+            <rate_limit sense="incr">fcs/left-elevator-pos-hyd-rate</rate_limit> 
+        </actuator>
+
+		<fcs_function name="fcs/left-elevator-pos-hyd-rate-low">
+			<function>
+                          <sum>
+                            <value>0.3</value>
+				<quotient>
+					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+					<value>8000</value>
+				</quotient>
+                            </sum>
+			</function>
+		</fcs_function>
+
+		<fcs_function name="fcs/left-elevator-pos-hyd-rate-high">
+			<function>
+				<quotient>
+					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+					<value>3000</value>
+				</quotient>
+			</function>
+                        <clipto> 
+                 	 <max>1.0</max> 
+                 	 <min>0.0</min> 
+                	</clipto>
+		</fcs_function>
+
+		<fcs_function name="fcs/left-elevator-pos-hyd-rate">
+			<function>
+                            <ifthen>
+                             <lt>
+                              <property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+                              <value>1601</value>
+                             </lt>
+                		<property>fcs/left-elevator-pos-hyd-rate-low</property>
+                		<property>fcs/left-elevator-pos-hyd-rate-high</property>
+                            </ifthen>                                   
+			</function>
+		</fcs_function>
+
+        <aerosurface_scale name="fcs/left-elevator-pos-norm">
+            <input>fcs/left-elevator-pos-input</input>
             <domain>
                 <min>-0.35</min>
                 <max>0.35</max>
@@ -116,6 +175,7 @@
             </range>
             <output>/surface-positions/left-elevator-pos-norm</output>
         </aerosurface_scale>
+
         <aerosurface_scale name="Right Elevator Control">
             <input>fcs/right-elevon-sum</input>
             <range>
@@ -125,8 +185,64 @@
             <output>fcs/right-elevator-pos-rad</output>
         </aerosurface_scale>
 
-        <aerosurface_scale name="fcs/right-elevator-pos-norm">
+		<actuator name="fcs/right-elevator-pos-mech">
             <input>fcs/right-elevator-pos-rad</input>
+            <rate_limit sense="decr">0.1</rate_limit> 
+            <rate_limit sense="incr">0.1</rate_limit> 
+        </actuator>
+
+		<switch name="fcs/right-elevator-pos-input">
+			<default value="fcs/right-elevator-pos-mech"/>
+			<test logic="AND" value="fcs/right-elevator-pos-hyd">
+                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure gt 100
+			</test>
+		</switch>
+
+		<actuator name="fcs/right-elevator-pos-hyd">
+            <input>fcs/right-elevator-pos-rad</input>
+            <rate_limit sense="decr">fcs/right-elevator-pos-hyd-rate</rate_limit> 
+            <rate_limit sense="incr">fcs/right-elevator-pos-hyd-rate</rate_limit> 
+        </actuator>
+
+		<fcs_function name="fcs/right-elevator-pos-hyd-rate-low">
+			<function>
+                          <sum>
+                            <value>0.3</value>
+				<quotient>
+					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+					<value>8000</value>
+				</quotient>
+                            </sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="fcs/right-elevator-pos-hyd-rate-high">
+			<function>
+				<quotient>
+					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+					<value>3000</value>
+				</quotient>
+			</function>
+                        <clipto> 
+                 	 <max>1.0</max> 
+                 	 <min>0.0</min> 
+                	</clipto>
+		</fcs_function>
+
+		<fcs_function name="fcs/right-elevator-pos-hyd-rate">
+			<function>
+                            <ifthen>
+                             <lt>
+                              <property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+                              <value>1601</value>
+                             </lt>
+                		<property>fcs/right-elevator-pos-hyd-rate-low</property>
+                		<property>fcs/right-elevator-pos-hyd-rate-high</property>
+                            </ifthen>                                   
+			</function>
+		</fcs_function>
+
+        <aerosurface_scale name="fcs/right-elevator-pos-norm">
+            <input>fcs/right-elevator-pos-input</input>
             <domain>
                 <min>-0.35</min>
                 <max>0.35</max>
@@ -211,8 +327,64 @@
             <output>fcs/rudder-pos-rad</output>
         </aerosurface_scale>
 
-        <aerosurface_scale name="rudder normalization">
+		<actuator name="fcs/rudder-pos-mech">
             <input>fcs/rudder-pos-rad</input>
+            <rate_limit sense="decr">0.3</rate_limit> 
+            <rate_limit sense="incr">0.3</rate_limit> 
+        </actuator>
+
+		<switch name="fcs/rudder-pos-input">
+			<default value="fcs/rudder-pos-mech"/>
+			<test logic="AND" value="fcs/rudder-pos-hyd">
+                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure gt 100
+			</test>
+		</switch>
+
+		<actuator name="fcs/rudder-pos-hyd">
+            <input>fcs/rudder-pos-rad</input>
+            <rate_limit sense="decr">fcs/rudder-pos-hyd-rate</rate_limit> 
+            <rate_limit sense="incr">fcs/rudder-pos-hyd-rate</rate_limit> 
+        </actuator>
+
+		<fcs_function name="fcs/rudder-pos-hyd-rate-low">
+			<function>
+                          <sum>
+                            <value>0.3</value>
+				<quotient>
+					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+					<value>8000</value>
+				</quotient>
+                            </sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="fcs/rudder-pos-hyd-rate-high">
+			<function>
+				<quotient>
+					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+					<value>3000</value>
+				</quotient>
+			</function>
+                        <clipto> 
+                 	 <max>1.0</max> 
+                 	 <min>0.0</min> 
+                	</clipto>
+		</fcs_function>
+
+		<fcs_function name="fcs/rudder-pos-hyd-rate">
+			<function>
+                            <ifthen>
+                             <lt>
+                              <property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+                              <value>1601</value>
+                             </lt>
+                		<property>fcs/rudder-pos-hyd-rate-low</property>
+                		<property>fcs/rudder-pos-hyd-rate-high</property>
+                            </ifthen>                                   
+			</function>
+		</fcs_function>
+
+        <aerosurface_scale name="rudder normalization">
+            <input>fcs/rudder-pos-input</input>
             <domain>
                 <min>-0.35</min>
                 <max>0.35</max>
@@ -223,6 +395,8 @@
             </range>
             <output>fcs/rudder-pos-norm</output>
         </aerosurface_scale>
+
+
 
     </channel>
 
@@ -337,4 +511,133 @@
         </kinematic>
     </channel>
 
+    <channel name="bay doors">
+
+<!-- Bay 1 -->
+
+	<fcs_function name="/armament/bay0/door_movement">
+		<function>
+                      <product>
+			<property>/sim/multiplay/generic/float[2]</property>
+			<value>1</value>
+			</product>
+		</function>
+	</fcs_function> 
+
+	<fcs_function name="/armament/bay0/door_movement_rate">
+		<function>
+                      <quotient>
+                        <max>
+			<property>/systems/hydraulic/system[2]/pipeline/pipeline_pressure</property>
+			<property>/systems/hydraulic/system[3]/pipeline/pipeline_pressure</property>
+                        </max>                       
+			<value>12000</value>
+		      </quotient>
+		</function>
+	</fcs_function>  
+
+		<actuator name="/armament/bay0/door_movement_input">
+            <input>/armament/bay0/door_movement</input>
+            <rate_limit sense="decr">/armament/bay0/door_movement_rate</rate_limit> 
+            <rate_limit sense="incr">/armament/bay0/door_movement_rate</rate_limit> 
+        </actuator> 
+
+	<switch name="/armament/bay0/open">
+		<test value="1">
+		   /armament/bay0/door_movement_input eq 1
+		</test>
+		<default value="0"/>
+        </switch>
+	<switch name="/armament/bay0/closed">
+		<test value="1">
+		   /armament/bay0/door_movement_input eq 0
+		</test>
+		<default value="0"/>
+        </switch>
+
+<!-- Bay 2 --> 
+
+	<fcs_function name="/armament/bay1/door_movement">
+		<function>
+                      <product>
+			<property>/sim/multiplay/generic/float[3]</property>
+			<value>1</value>
+			</product>
+		</function>
+	</fcs_function> 
+
+	<fcs_function name="/armament/bay1/door_movement_rate">
+		<function>
+                      <quotient>
+                        <max>
+			<property>/systems/hydraulic/system[2]/pipeline/pipeline_pressure</property>
+			<property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
+                        </max>                       
+			<value>12000</value>
+		      </quotient>
+		</function>
+	</fcs_function>  
+
+		<actuator name="/armament/bay1/door_movement_input">
+            <input>/armament/bay1/door_movement</input>
+            <rate_limit sense="decr">/armament/bay1/door_movement_rate</rate_limit> 
+            <rate_limit sense="incr">/armament/bay1/door_movement_rate</rate_limit> 
+        </actuator> 
+
+	<switch name="/armament/bay1/open">
+		<test value="1">
+		   /armament/bay1/door_movement_input eq 1
+		</test>
+		<default value="0"/>
+        </switch>
+	<switch name="/armament/bay1/closed">
+		<test value="1">
+		   /armament/bay1/door_movement_input eq 0
+		</test>
+		<default value="0"/>
+        </switch>
+
+<!-- Bay 3 -->
+
+	<fcs_function name="/armament/bay2/door_movement">
+		<function>
+                      <product>
+			<property>/sim/multiplay/generic/float[4]</property>
+			<value>1</value>
+			</product>
+		</function>
+	</fcs_function> 
+
+	<fcs_function name="/armament/bay2/door_movement_rate">
+		<function>
+                      <quotient>
+                        <max>
+			<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+			<property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
+                        </max>                       
+			<value>12000</value>
+		      </quotient>
+		</function>
+	</fcs_function>  
+
+		<actuator name="/armament/bay2/door_movement_input">
+            <input>/armament/bay2/door_movement</input>
+            <rate_limit sense="decr">/armament/bay2/door_movement_rate</rate_limit> 
+            <rate_limit sense="incr">/armament/bay2/door_movement_rate</rate_limit> 
+        </actuator> 
+
+	<switch name="/armament/bay2/open">
+		<test value="1">
+		   /armament/bay2/door_movement_input eq 1
+		</test>
+		<default value="0"/>
+        </switch>
+	<switch name="/armament/bay2/closed">
+		<test value="1">
+		   /armament/bay2/door_movement_input eq 0
+		</test>
+		<default value="0"/>
+        </switch>
+
+    </channel>
 </system>
