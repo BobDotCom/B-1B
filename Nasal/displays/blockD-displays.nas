@@ -1120,12 +1120,12 @@ var DisplaySystem = {
 				values.hdg.middleText = 0;
 			}
 
-			values.hdg.l1 = values.hdg.middleText == 0 ? 35 : values.hdg.middleText - 1;
-			values.hdg.r1 = values.hdg.middleText == 0 ? 35 : values.hdg.middleText + 1;
-			values.hdg.l2 = values.hdg.l1 == 0 ? 35 : values.hdg.l1 - 1;
-			values.hdg.r2 = values.hdg.r1 == 0 ? 35 : values.hdg.r1 + 1;
-			values.hdg.l3 = values.hdg.l2 == 0 ? 35 : values.hdg.l2 - 1;
-			values.hdg.r3 = values.hdg.r2 == 0 ? 35 : values.hdg.r2 + 1;
+            values.hdg.l1 = values.hdg.middleText == 0 ? 35 : values.hdg.middleText - 1;
+            values.hdg.r1 = values.hdg.middleText == 35 ? 0 : values.hdg.middleText + 1;
+            values.hdg.l2 = values.hdg.l1 == 0 ? 35 : values.hdg.l1 - 1;
+            values.hdg.r2 = values.hdg.r1 == 35 ? 0 : values.hdg.r1 + 1;
+            values.hdg.l3 = values.hdg.l2 == 0 ? 35 : values.hdg.l2 - 1;
+            values.hdg.r3 = values.hdg.r2 == 35 ? 0 : values.hdg.r2 + 1;
 			# L3 + R3 are outside the clip ares intentionally
 			# This is so there is a smooth transition for heading numbers "appearing"
 
