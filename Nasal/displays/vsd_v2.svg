@@ -14,6 +14,7 @@
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -25,9 +26,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="2"
-     inkscape:cx="446.5"
-     inkscape:cy="220"
+     inkscape:zoom="1"
+     inkscape:cx="397"
+     inkscape:cy="278"
      inkscape:window-width="2560"
      inkscape:window-height="1387"
      inkscape:window-x="0"
@@ -344,9 +345,9 @@
        inkscape:label="vsd mode"><tspan
          x="135.76367"
          y="436.1986"
-         id="tspan8"><tspan
+         id="tspan2"><tspan
            style="font-family:DULarge;-inkscape-font-specification:DULarge"
-           id="tspan7">MODE</tspan></tspan></text>
+           id="tspan1">MODE</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.9995579,0,0,0.9960085,177.7215,75.946603)"
@@ -355,9 +356,9 @@
        inkscape:label="vsd ident"><tspan
          x="135.76367"
          y="436.1986"
-         id="tspan10"><tspan
+         id="tspan7"><tspan
            style="font-family:DULarge;-inkscape-font-specification:DULarge"
-           id="tspan9">IDENT</tspan></tspan></text>
+           id="tspan6">IDENT</tspan></tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.9995579,0,0,0.9960085,177.61798,103.61096)"
@@ -366,9 +367,9 @@
        inkscape:label="vsd dist"><tspan
          x="135.76367"
          y="436.1986"
-         id="tspan12"><tspan
+         id="tspan9"><tspan
            style="font-family:DULarge;-inkscape-font-specification:DULarge"
-           id="tspan11">DIST</tspan></tspan></text>
+           id="tspan8">DIST</tspan></tspan></text>
   </g>
   <g
      id="roll_arrow"
@@ -611,7 +612,9 @@
   <g
      id="layer2"
      transform="matrix(3.7811995,0,0,2.4783557,-3.1482018e-6,215.35594)"
-     inkscape:label="bank scale">
+     inkscape:label="bank scale"
+     inkscape:transform-center-x="-0.25000001"
+     inkscape:transform-center-y="242.25001">
     <path
        style="display:inline;fill:#1a1a1a;fill-opacity:0.427948;stroke:#6cee34;stroke-width:0.926042;stroke-dasharray:none;stroke-opacity:1"
        d="m 136.19138,111.18584 v 6.07782"
@@ -706,4 +709,79 @@
        id="gs_diamond"
        style="fill:none;fill-opacity:1;stroke:#6cef34;stroke-width:5.52694;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
+  <g
+     id="g12"
+     transform="matrix(3.7811995,0,0,2.4783557,-3.1482018e-6,215.35594)"
+     inkscape:label="bank scale"
+     inkscape:transform-center-x="-0.25000001"
+     inkscape:transform-center-y="242.25001">
+    <path
+       style="display:inline;fill:#1a1a1a;fill-opacity:0.427948;stroke:#6cee34;stroke-width:0.926042;stroke-dasharray:none;stroke-opacity:1"
+       d="m 136.19138,111.18584 v 6.07782"
+       id="path12" />
+  </g>
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g12"
+     inkscape:transform-center-x="41.82007"
+     inkscape:transform-center-y="238.6131"
+     id="use12"
+     transform="rotate(10,514.71677,256.1955)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g12"
+     inkscape:transform-center-x="-42.312474"
+     inkscape:transform-center-y="238.52628"
+     id="use13"
+     transform="rotate(-10,514.71677,256.1955)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g12"
+     inkscape:transform-center-x="-83.089304"
+     inkscape:transform-center-y="227.55504"
+     id="use14"
+     transform="rotate(-20,514.71677,256.1955)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g12"
+     inkscape:transform-center-x="82.619459"
+     inkscape:transform-center-y="227.72605"
+     id="use15"
+     transform="rotate(20,514.71677,256.1955)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g12"
+     inkscape:transform-center-x="120.9085"
+     inkscape:transform-center-y="209.91967"
+     id="use16"
+     transform="rotate(30,514.71677,256.1955)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g12"
+     inkscape:transform-center-x="-121.34151"
+     inkscape:transform-center-y="209.66966"
+     id="use17"
+     transform="rotate(-30,514.71677,256.1955)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g12"
+     inkscape:transform-center-x="-171.4734"
+     inkscape:transform-center-y="171.11985"
+     id="use18"
+     transform="rotate(-45,514.71677,256.1955)" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#g12"
+     inkscape:transform-center-x="171.11985"
+     inkscape:transform-center-y="171.47341"
+     id="use19"
+     transform="rotate(45,514.71677,256.1955)" />
 </svg>
