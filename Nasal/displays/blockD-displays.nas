@@ -71,6 +71,16 @@ var values = {
 			indicatedHdg: 0,
 		},
 	},
+	nav: {
+		gsInRange: 0,
+		inRange: 0,
+		gsNeedleDeflectionNorm: 0,
+		hasGs: 0,
+		headingNeedleDeflectionNorm: 0,
+		navLoc: 0,
+		selectedMhz: 0,
+	},
+	
 };
 
 var margin = {
@@ -1142,10 +1152,46 @@ var DisplaySystem = {
 			me.hdgT5.setText(hdgText(values.hdg.r1));
 			me.hdgT6.setText(hdgText(values.hdg.r2));
 			me.hdgT7.setText(hdgText(values.hdg.r3));
+			#ILS (Also from MD-11)
 
-
-
-
+			values.nav.headingNeedleDeflectionNorm = noti.getproper("nav0HdgDeflectionN");
+			values.nav.navLoc = noti.getproper("nav0HasLoc");
+			values.nav.selectedMhz = noti.getproper("nav0Freq");
+			values.nav.signalQuality = noti.getproper("nav0SignalQuality");
+			values.nav.inRange = noti.getproper("nav0InRange");			
+			if (values.nav.selectedMhz != 0) {
+				if (values.nav.navLoc and values.nav.signalQuality >= 0.99) {
+					me.ilsDiamond.setTranslation(values.nav.headingNeedleDeflectionNorm * 134, 0);
+					me.ilsDiamond.show();
+				} else {
+					me.ilsDiamond.hide();
+				}
+				if (values.nav.inRange) {
+					me.ilsGroup.setVisible(1);
+				} else {me.ilsGroup.setVisible(0);}
+			} else {
+				me.ilsDiamond.hide();
+			}
+			
+			
+			# ILS G/S
+			values.nav.gsNeedleDeflectionNorm = noti.getproper("gs0NeedleDeflectN");
+			values.nav.gsInRange = noti.getproper("nav0GSInRange");
+			values.nav.hasGs = noti.getproper("nav0HasGS");		
+			if (values.nav.selectedMhz != 0) {
+				if (values.nav.gsInRange and values.nav.hasGs and values.nav.signalQuality >= 0.99) {
+					me.gsDiamond.setTranslation(0, values.nav.gsNeedleDeflectionNorm * -106.4);
+					me.gsDiamond.show();
+				} else {
+					me.gsDiamond.hide();
+				}
+				if (values.nav.gsInRange) {
+					me.gsGroup.setVisible(1);
+				} else {me.gsGroup.setVisible(0);}
+				# me.gsGroup.setVisible(1);
+			} else {
+				me.gsDiamond.hide();
+			}
 		},
 		exit: func {
 			printDebug("Exit ",me.name~" on ",me.device.name);
