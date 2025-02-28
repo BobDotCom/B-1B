@@ -343,18 +343,6 @@ sweat by maggse
 
  <animation>
 	 <type>material</type>
-	 <object-name>rga</object-name>
-	 <emission>
-		 <red>0.5</red>
-		 <green>0.9</green>
-		 <blue>0.5</blue>
-		 <factor-prop>controls/switches/annunciators-norm</factor-prop>
-	 </emission>
-</animation>
-
-
- <animation>
-	 <type>material</type>
 	 <object-name>switch_eject</object-name>
 	 <emission>
 		<red>0.9</red>

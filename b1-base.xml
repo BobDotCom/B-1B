@@ -514,18 +514,15 @@ B-1B set file.
             <autopilot n="1">
                 <path>Aircraft/B-1B/Systems/engines.xml</path>
             </autopilot>
-            <property-rule n="110">
-                <path>Aircraft/B-1B/Systems/filters.xml</path>
-            </property-rule>
             <property-rule n="200">
                 <path>Systems/annunciators.xml</path>
             </property-rule>
             <property-rule n="201">
                 <path>Systems/computers.xml</path>
             </property-rule>
-            <property-rule n="202">
+<!--             <property-rule n="202">
                 <path>Systems/b1b-failures.xml</path>
-            </property-rule>
+            </property-rule> -->
             <path>Aircraft/B-1B/Systems/b1b-airdata.xml</path>
         </systems>
 
@@ -1284,14 +1281,6 @@ B-1B set file.
         <pylons>
             <file>Aircraft/B-1B/Nasal/pylons.nas</file>
         </pylons>
-<!--         <weapons>
-            <file>Aircraft/B-1B/Nasal/oso_management.nas</file>
-            <file>Aircraft/B-1B/Nasal/oso_ikb.nas</file>
-            <file>Aircraft/B-1B/Nasal/guide_to_target.nas</file>
-            <file>Aircraft/B-1B/Nasal/wso_mfd.nas</file>
-            <file>Aircraft/B-1B/Nasal/fuel_load.nas</file>
-            <file>Aircraft/B-1B/Nasal/target_monitor.nas</file>
-        </weapons> -->
         <fuel>
             <file>Aircraft/B-1B/Nasal/aar.nas</file>
         </fuel>
@@ -1309,12 +1298,6 @@ B-1B set file.
         <airbases>
             <file>Aircraft/B-1B/Nasal/airbases.nas</file>
         </airbases>
-        <engines>
-            <file>Aircraft/B-1B/Nasal/engines.nas</file>
-        </engines>
-        <controls>
-            <file>Aircraft/B-1B/Nasal/controls.nas</file>
-        </controls>
         <failures>
             <file>Aircraft/B-1B/Nasal/B-1B-failures.nas</file>
 	</failures>
