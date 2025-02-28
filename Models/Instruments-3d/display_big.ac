@@ -1,15 +1,15 @@
 AC3Db
-MATERIAL "instr-lights.011" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.002 0.002 0.002  spec 0.000 0.000 0.000  shi 64 trans 0.150
+MATERIAL "instr-lights.011" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
 MATERIAL "gloss.008" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.504 0.504 0.504  shi 64 trans 0.000
 MATERIAL "gloss.009" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.504 0.504 0.504  shi 64 trans 0.000
 OBJECT world
-name "Blender_exporter_v4.1__display_big.ac"
+name "Blender_exporter_v6.1__display_big.ac"
 kids 110
 OBJECT poly
 name "1_ADS"
 data 8
 Mesh.016
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.1026 0.43772
@@ -29,7 +29,7 @@ OBJECT poly
 name "1_BLEED_AIR"
 data 8
 Mesh.035
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.1253 0.43778
@@ -49,7 +49,7 @@ OBJECT poly
 name "1_BUS"
 data 8
 Mesh.014
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.07939 0.43772
@@ -69,7 +69,7 @@ OBJECT poly
 name "1_GEN"
 data 8
 Mesh.017
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.11381 0.43772
@@ -89,7 +89,7 @@ OBJECT poly
 name "1_HYD"
 data 8
 Mesh.029
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.09086 0.29237
@@ -109,7 +109,7 @@ OBJECT poly
 name "2_ADS"
 data 8
 Mesh.020
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.1026 0.40166
@@ -129,7 +129,7 @@ OBJECT poly
 name "2_BLEED_AIR"
 data 8
 Mesh.036
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.1253 0.40172
@@ -149,7 +149,7 @@ OBJECT poly
 name "2_BUS"
 data 8
 Mesh.018
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.07939 0.40166
@@ -169,7 +169,7 @@ OBJECT poly
 name "2_GEN"
 data 8
 Mesh.021
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.11381 0.40166
@@ -189,7 +189,7 @@ OBJECT poly
 name "2_HYD"
 data 8
 Mesh.028
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.09086 0.2563
@@ -209,7 +209,7 @@ OBJECT poly
 name "3_ADS"
 data 8
 Mesh.032
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.1026 0.36568
@@ -229,7 +229,7 @@ OBJECT poly
 name "3_BLEED_AIR"
 data 8
 Mesh.037
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.1253 0.36568
@@ -249,7 +249,7 @@ OBJECT poly
 name "3_BUS"
 data 8
 Mesh.058
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.07939 0.36568
@@ -269,7 +269,7 @@ OBJECT poly
 name "3_GEN"
 data 8
 Mesh.001
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.11381 0.36568
@@ -289,7 +289,7 @@ OBJECT poly
 name "3_HYD"
 data 8
 Mesh.031
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.09086 0.21905
@@ -309,7 +309,7 @@ OBJECT poly
 name "4_ADS"
 data 8
 Mesh.033
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.1026 0.32841
@@ -329,7 +329,7 @@ OBJECT poly
 name "4_BLEED_AIR"
 data 8
 Mesh.038
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.1253 0.32841
@@ -349,7 +349,7 @@ OBJECT poly
 name "4_BUS"
 data 8
 Mesh.059
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.07939 0.32841
@@ -369,7 +369,7 @@ OBJECT poly
 name "4_HYD"
 data 8
 Mesh.034
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.09086 0.18298
@@ -389,7 +389,7 @@ OBJECT poly
 name "AIR_HOT"
 data 8
 Mesh.070
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.09086 0.14693
@@ -409,7 +409,7 @@ OBJECT poly
 name "ANTISKID"
 data 8
 Mesh.045
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.14876 0.14693
@@ -429,7 +429,7 @@ OBJECT poly
 name "APU_EXH_DOOR_OPEN"
 data 8
 Mesh.025
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.14867 0.43772
@@ -449,7 +449,7 @@ OBJECT poly
 name "BU_OXY"
 data 8
 Mesh.040
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.12529 0.14693
@@ -469,7 +469,7 @@ OBJECT poly
 name "CG_LIMIT"
 data 8
 Mesh.094
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.16024 0.29237
@@ -489,7 +489,7 @@ OBJECT poly
 name "COMPT_RAM_SCOOP_OPEN"
 data 8
 Mesh.026
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.14867 0.40166
@@ -509,7 +509,7 @@ OBJECT poly
 name "CREW_COMPT_HOT"
 data 8
 Mesh.066
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.07937 0.03757
@@ -529,7 +529,7 @@ OBJECT poly
 name "ELEC"
 data 8
 Mesh.061
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.07938 0.21905
@@ -549,7 +549,7 @@ OBJECT poly
 name "FIRE_DETR"
 data 8
 Mesh.060
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.07938 0.29237
@@ -566,10 +566,50 @@ refs 4
 2 0.290798 0.105569
 kids 0
 OBJECT poly
+name "FLAP_1"
+data 8
+Mesh.073
+crease 40.0
+texture "annunciators.png"
+numvert 4
+0.01166 -0.10258 0.10967
+0.01167 -0.11162 0.10967
+0.01167 -0.11162 0.077
+0.01166 -0.10258 0.077
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.274286 0.178971
+0 0.15163 0.17825
+1 0.151854 0.140364
+2 0.274511 0.141085
+kids 0
+OBJECT poly
+name "FLAP_OFF"
+data 8
+Mesh.007
+crease 40.0
+texture "annunciators.png"
+numvert 4
+0.01166 -0.11379 0.10967
+0.01167 -0.12284 0.10967
+0.01167 -0.12284 0.077
+0.01166 -0.11379 0.077
+numsurf 1
+SURF 0X10
+mat 0
+refs 4
+3 0.281501 0.213698
+0 0.144232 0.212889
+1 0.144485 0.170491
+2 0.281753 0.171297
+kids 0
+OBJECT poly
 name "FUEL_CLG_LOOP_RTN"
 data 8
 Mesh.080
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.14877 0.32841
@@ -589,7 +629,7 @@ OBJECT poly
 name "FUEL_CLG_SCOOP"
 data 8
 Mesh.079
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.14877 0.36568
@@ -609,7 +649,7 @@ OBJECT poly
 name "FUEL_COOLING_LOOP_CRSVR"
 data 8
 Mesh.084
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.14876 0.18298
@@ -629,7 +669,7 @@ OBJECT poly
 name "FUEL_LOW"
 data 8
 Mesh.081
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.14876 0.29237
@@ -649,7 +689,7 @@ OBJECT poly
 name "FWD_COMPT_HOT"
 data 8
 Mesh.062
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.07938 0.18298
@@ -669,7 +709,7 @@ OBJECT poly
 name "HOT_BRAKE"
 data 8
 Mesh.085
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01166 -0.14875 0.10967
@@ -689,7 +729,7 @@ OBJECT poly
 name "INTMD_CMPT_HOT"
 data 8
 Mesh.065
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01159 -0.07937 0.07362
@@ -709,7 +749,7 @@ OBJECT poly
 name "L_BLEED_AIR_OVERHEAT"
 data 8
 Mesh.053
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.12529 0.29237
@@ -729,7 +769,7 @@ OBJECT poly
 name "L_CTL_COMPT_HOT"
 data 8
 Mesh.063
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.07938 0.14693
@@ -749,7 +789,7 @@ OBJECT poly
 name "L_FUEL_BOOST"
 data 8
 Mesh.082
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.14876 0.2563
@@ -769,7 +809,7 @@ OBJECT poly
 name "L_WSHLD_HOT"
 data 8
 Mesh.069
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01166 -0.09086 0.10967
@@ -789,7 +829,7 @@ OBJECT poly
 name "OXY"
 data 8
 Mesh.039
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.1138 0.14693
@@ -809,7 +849,7 @@ OBJECT poly
 name "PITCH_AUG_1"
 data 8
 Mesh.011
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01166 -0.12528 0.10967
@@ -829,7 +869,7 @@ OBJECT poly
 name "PITCH_AUG_OFF"
 data 8
 Mesh.041
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01166 -0.137 0.10967
@@ -849,7 +889,7 @@ OBJECT poly
 name "R_BLEED_AIR_OVERHEAT"
 data 8
 Mesh.051
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.12529 0.2563
@@ -869,7 +909,7 @@ OBJECT poly
 name "R_CTL_COMPT_HOT"
 data 8
 Mesh.064
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01166 -0.07937 0.10967
@@ -889,7 +929,7 @@ OBJECT poly
 name "R_FUEL_BOOST"
 data 8
 Mesh.083
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.14876 0.21905
@@ -909,7 +949,7 @@ OBJECT poly
 name "R_WSHLD_HOT"
 data 8
 Mesh.068
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01159 -0.09086 0.07362
@@ -929,7 +969,7 @@ OBJECT poly
 name "rep_gforce.001"
 data 8
 Mesh.010
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.13702 0.43778
@@ -949,7 +989,7 @@ OBJECT poly
 name "rep_gforce.002"
 data 8
 Mesh.013
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.09088 0.36568
@@ -969,7 +1009,7 @@ OBJECT poly
 name "rep_gforce.004"
 data 8
 Mesh.015
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.09088 0.43772
@@ -989,7 +1029,7 @@ OBJECT poly
 name "rep_gforce.008"
 data 8
 Mesh.019
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.09088 0.40166
@@ -1009,7 +1049,7 @@ OBJECT poly
 name "rep_gforce.011"
 data 8
 Mesh.024
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.17196 0.03757
@@ -1029,7 +1069,7 @@ OBJECT poly
 name "rep_gforce.017"
 data 8
 Mesh.030
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.09088 0.32841
@@ -1049,7 +1089,7 @@ OBJECT poly
 name "rep_gforce.035"
 data 8
 Mesh.002
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.11381 0.32841
@@ -1069,7 +1109,7 @@ OBJECT poly
 name "rep_gforce.036"
 data 8
 Mesh.003
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.1138 0.29237
@@ -1089,7 +1129,7 @@ OBJECT poly
 name "rep_gforce.037"
 data 8
 Mesh.004
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.1138 0.2563
@@ -1109,7 +1149,7 @@ OBJECT poly
 name "rep_gforce.038"
 data 8
 Mesh.005
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.1138 0.21905
@@ -1129,7 +1169,7 @@ OBJECT poly
 name "rep_gforce.039"
 data 8
 Mesh.006
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.1138 0.18298
@@ -1146,30 +1186,10 @@ refs 4
 2 0.820193 0.451233
 kids 0
 OBJECT poly
-name "rep_gforce.040"
-data 8
-Mesh.007
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01166 -0.11379 0.10967
-0.01167 -0.12284 0.10967
-0.01167 -0.12284 0.077
-0.01166 -0.11379 0.077
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.489056 0.389492
-0 0.428975 0.389138
-1 0.429086 0.370581
-2 0.489166 0.370934
-kids 0
-OBJECT poly
 name "rep_gforce.041"
 data 8
 Mesh.009
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.11379 0.03757
@@ -1189,7 +1209,7 @@ OBJECT poly
 name "rep_gforce.045"
 data 8
 Mesh.023
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.13701 0.14693
@@ -1209,7 +1229,7 @@ OBJECT poly
 name "rep_gforce.046"
 data 8
 Mesh.047
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.13701 0.18298
@@ -1229,7 +1249,7 @@ OBJECT poly
 name "rep_gforce.047"
 data 8
 Mesh.048
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.12529 0.18298
@@ -1249,7 +1269,7 @@ OBJECT poly
 name "rep_gforce.048"
 data 8
 Mesh.049
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.12529 0.21905
@@ -1269,7 +1289,7 @@ OBJECT poly
 name "rep_gforce.049"
 data 8
 Mesh.050
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.13701 0.21905
@@ -1289,7 +1309,7 @@ OBJECT poly
 name "rep_gforce.051"
 data 8
 Mesh.052
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.13701 0.2563
@@ -1309,7 +1329,7 @@ OBJECT poly
 name "rep_gforce.053"
 data 8
 Mesh.054
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.13701 0.29237
@@ -1329,7 +1349,7 @@ OBJECT poly
 name "rep_gforce.054"
 data 8
 Mesh.055
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.13702 0.32841
@@ -1349,7 +1369,7 @@ OBJECT poly
 name "rep_gforce.055"
 data 8
 Mesh.056
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.13702 0.36568
@@ -1369,7 +1389,7 @@ OBJECT poly
 name "rep_gforce.056"
 data 8
 Mesh.057
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.13702 0.40172
@@ -1389,7 +1409,7 @@ OBJECT poly
 name "rep_gforce.070"
 data 8
 Mesh.071
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.10258 0.03757
@@ -1406,30 +1426,10 @@ refs 4
 2 0.487997 0.330176
 kids 0
 OBJECT poly
-name "rep_gforce.072"
-data 8
-Mesh.073
-crease 30.0
-texture "annunciators.png"
-numvert 4
-0.01166 -0.10258 0.10967
-0.01167 -0.11162 0.10967
-0.01167 -0.11162 0.077
-0.01166 -0.10258 0.077
-numsurf 1
-SURF 0X10
-mat 0
-refs 4
-3 0.502924 0.477449
-0 0.380268 0.476728
-1 0.380492 0.438842
-2 0.503149 0.439563
-kids 0
-OBJECT poly
 name "rep_gforce.073"
 data 8
 Mesh.074
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.10259 0.14693
@@ -1449,7 +1449,7 @@ OBJECT poly
 name "rep_gforce.074"
 data 8
 Mesh.075
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.10259 0.18298
@@ -1469,7 +1469,7 @@ OBJECT poly
 name "rep_gforce.075"
 data 8
 Mesh.076
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.10259 0.21905
@@ -1489,7 +1489,7 @@ OBJECT poly
 name "rep_gforce.076"
 data 8
 Mesh.077
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.10259 0.2563
@@ -1509,7 +1509,7 @@ OBJECT poly
 name "rep_gforce.077"
 data 8
 Mesh.078
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.10259 0.29237
@@ -1529,7 +1529,7 @@ OBJECT poly
 name "rep_gforce.086"
 data 8
 Mesh.087
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.16024 0.03757
@@ -1549,7 +1549,7 @@ OBJECT poly
 name "rep_gforce.087"
 data 8
 Mesh.088
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01159 -0.16024 0.07362
@@ -1569,7 +1569,7 @@ OBJECT poly
 name "rep_gforce.088"
 data 8
 Mesh.089
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01166 -0.16024 0.10967
@@ -1589,7 +1589,7 @@ OBJECT poly
 name "rep_gforce.089"
 data 8
 Mesh.090
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.16024 0.14693
@@ -1609,7 +1609,7 @@ OBJECT poly
 name "rep_gforce.090"
 data 8
 Mesh.091
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.16024 0.18298
@@ -1629,7 +1629,7 @@ OBJECT poly
 name "rep_gforce.091"
 data 8
 Mesh.092
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.16024 0.21905
@@ -1649,7 +1649,7 @@ OBJECT poly
 name "rep_gforce.092"
 data 8
 Mesh.093
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.16024 0.2563
@@ -1669,7 +1669,7 @@ OBJECT poly
 name "rep_gforce.094"
 data 8
 Mesh.095
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.16026 0.32841
@@ -1689,7 +1689,7 @@ OBJECT poly
 name "rep_gforce.095"
 data 8
 Mesh.096
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.16026 0.36568
@@ -1709,7 +1709,7 @@ OBJECT poly
 name "rep_gforce.096"
 data 8
 Mesh.097
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.16026 0.40172
@@ -1729,7 +1729,7 @@ OBJECT poly
 name "rep_gforce.097"
 data 8
 Mesh.098
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.16026 0.43778
@@ -1749,7 +1749,7 @@ OBJECT poly
 name "rep_gforce.098"
 data 8
 Mesh.099
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.17198 0.43778
@@ -1769,7 +1769,7 @@ OBJECT poly
 name "rep_gforce.099"
 data 8
 Mesh.100
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.17198 0.40172
@@ -1789,7 +1789,7 @@ OBJECT poly
 name "rep_gforce.100"
 data 8
 Mesh.101
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.17198 0.36568
@@ -1809,7 +1809,7 @@ OBJECT poly
 name "rep_gforce.101"
 data 8
 Mesh.102
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.17198 0.32841
@@ -1829,7 +1829,7 @@ OBJECT poly
 name "rep_gforce.102"
 data 8
 Mesh.103
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.17197 0.29237
@@ -1849,7 +1849,7 @@ OBJECT poly
 name "rep_gforce.103"
 data 8
 Mesh.104
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.17197 0.2563
@@ -1869,7 +1869,7 @@ OBJECT poly
 name "rep_gforce.104"
 data 8
 Mesh.105
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01167 -0.17197 0.21905
@@ -1889,7 +1889,7 @@ OBJECT poly
 name "rep_gforce.105"
 data 8
 Mesh.106
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.0116 -0.17197 0.18298
@@ -1909,7 +1909,7 @@ OBJECT poly
 name "rep_gforce.106"
 data 8
 Mesh.107
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.17197 0.14693
@@ -1929,7 +1929,7 @@ OBJECT poly
 name "rep_gforce.107"
 data 8
 Mesh.108
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01166 -0.17196 0.10967
@@ -1949,7 +1949,7 @@ OBJECT poly
 name "rep_gforce.108"
 data 8
 Mesh.109
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01159 -0.17196 0.07362
@@ -7389,7 +7389,7 @@ OBJECT poly
 name "report_lights.001_0"
 data 8
 Mesh.507
-crease 45.0
+crease 40.0
 texture "cp.png"
 numvert 10
 0.00632 -0.19219 0.45283
@@ -7458,7 +7458,7 @@ OBJECT poly
 name "report_lights.001_1"
 data 9
 Mesh.1747
-crease 45.0
+crease 40.0
 texture "cp2.png"
 numvert 6
 0.00632 -0.19218 -0.0139
@@ -7497,7 +7497,7 @@ OBJECT poly
 name "ROLL_AUG_1"
 data 8
 Mesh.012
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01159 -0.12528 0.07362
@@ -7517,7 +7517,7 @@ OBJECT poly
 name "ROLL_AUG_LIMITING"
 data 8
 Mesh.044
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01159 -0.14875 0.07362
@@ -7537,7 +7537,7 @@ OBJECT poly
 name "ROLL_AUG_OFF"
 data 8
 Mesh.042
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01159 -0.137 0.07362
@@ -7557,7 +7557,7 @@ OBJECT poly
 name "SMCS"
 data 8
 Mesh.027
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01145 -0.07938 0.2563
@@ -7577,7 +7577,7 @@ OBJECT poly
 name "SPOILER_1"
 data 8
 Mesh.072
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01159 -0.10258 0.07362
@@ -7597,7 +7597,7 @@ OBJECT poly
 name "SPOILER_OFF"
 data 8
 Mesh.046
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01159 -0.11379 0.07362
@@ -7617,7 +7617,7 @@ OBJECT poly
 name "ST_AIR_HOT"
 data 8
 Mesh.067
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.09086 0.03757
@@ -7637,7 +7637,7 @@ OBJECT poly
 name "YAW_AUG_1"
 data 8
 Mesh.022
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.12528 0.03757
@@ -7657,7 +7657,7 @@ OBJECT poly
 name "YAW_AUG_LIMITING"
 data 8
 Mesh.086
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.14875 0.03757
@@ -7677,7 +7677,7 @@ OBJECT poly
 name "YAW_AUG_OFF"
 data 8
 Mesh.043
-crease 30.0
+crease 40.0
 texture "annunciators.png"
 numvert 4
 0.01144 -0.137 0.03757

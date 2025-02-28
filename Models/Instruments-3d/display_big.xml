@@ -25,6 +25,8 @@ sweat by maggse
 	 <object-name>4_ADS</object-name>
 	 <object-name>4_BUS</object-name>
 	 <object-name>4_GEN</object-name>
+	 <object-name>FLAP_1</object-name>
+	 <object-name>FLAP_OFF</object-name>
          <object-name>ELEC</object-name>
          <object-name>FUEL_LOW</object-name>
          <object-name>FIRE_DETR</object-name>
@@ -138,6 +140,10 @@ sweat by maggse
           		 <property>systems/electrical/bus/ac-ess</property>
           		 <value>220</value>
          	</greater-than>
+         	<equals> 
+          		 <property>systems/failures/annunciators/FUEL_LOW</property>
+          		 <value>0</value>
+         	</equals>
              <or>
          	<less-than> 
           		 <property>consumables/fuel/tank[6]/level-lbs</property>
@@ -519,6 +525,56 @@ sweat by maggse
          	</greater-than>
             </or>
            </and>
+          </condition>
+</animation>
+
+ <animation>
+ 	 <object-name>FLAP_1</object-name>
+	 <type>select</type>
+          <condition>
+             <and>
+         	<equals>
+          		 <property>systems/flight-controls/flaps/channel-1</property>
+          		 <value>1</value>
+         	</equals>
+                <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+             </or>
+            </and>
+          </condition>
+</animation>
+
+ <animation>
+ 	 <object-name>FLAP_OFF</object-name>
+	 <type>select</type>
+          <condition>
+             <and>
+         	<equals>
+          		 <property>systems/flight-controls/flaps/channel-1</property>
+          		 <value>1</value>
+         	</equals>
+         	<equals>
+          		 <property>systems/flight-controls/flaps/channel-2</property>
+          		 <value>1</value>
+         	</equals>
+                <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <value>220</value>
+         	</greater-than>
+             </or>
+            </and>
           </condition>
 </animation>
 

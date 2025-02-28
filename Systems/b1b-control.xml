@@ -4,6 +4,8 @@
     <property value="0">/controls/switches/failures/wing-sweep_lever</property>
     <property value="1">/controls/gear/gear-down</property>
     <property value="1">/gear/serviceable</property>
+    <property value="0">/systems/flight-controls/flaps/channel-1</property>
+    <property value="0">/systems/flight-controls/flaps/channel-2</property>
 
     <channel name="Wing Sweep">
 
@@ -122,7 +124,7 @@
 		<actuator name="fcs/left-elevator-pos-hyd">
             <input>fcs/left-elevator-pos-rad</input>
             <rate_limit sense="decr">fcs/left-elevator-pos-hyd-rate</rate_limit> 
-            <rate_limit sense="incr">fcs/left-elevator-pos-hyd-rate</rate_limit> 
+            <rate_limit sense="incr">fcs/left-elevator-pos-hyd-rate</rate_limit>  
         </actuator>
 
 		<fcs_function name="fcs/left-elevator-pos-hyd-rate-low">
@@ -410,18 +412,59 @@
                 </setting>
                 <setting>
                     <position>15</position>
-                    <time>4</time>
+                    <time>10</time>
                 </setting>
                 <setting>
                     <position>30</position>
-                    <time>3</time>
+                    <time>10</time>
                 </setting>
             </traverse>
             <output>fcs/flap-pos-deg</output>
         </kinematic>
 
-        <aerosurface_scale name="flap normalization">
+		<actuator name="fcs/flap-pos-rate">
             <input>fcs/flap-pos-deg</input>
+            <rate_limit sense="decr">fcs/flap-pos-rate-switch</rate_limit> 
+            <rate_limit sense="incr">fcs/flap-pos-rate-switch</rate_limit> 
+        </actuator>
+
+		<switch name="fcs/flap-pos-rate-switch">
+			<default value="2"/>
+			<test logic="AND" value="0.0">
+                                /systems/flight-controls/flaps/channel-1 eq 1
+                                /systems/flight-controls/flaps/channel-2 eq 1
+			</test>
+			<test logic="AND" value="0.8">
+                                /systems/flight-controls/flaps/channel-1 eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/flight-controls/flaps/channel-1">
+			<default value="0"/>
+			<test logic="OR" value="1">
+                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure lt 2000
+                                /systems/hydraulic/system[4]/pipeline/pipeline_pressure lt 2000
+			 </test>
+			<test logic="AND" value="1">
+                                fcs/flap-pos-norm gt 0
+                                /accelerations/pilot-g gt 2
+			</test>
+		</switch>
+
+		<switch name="/systems/flight-controls/flaps/channel-2">
+			<default value="0"/>
+			<test logic="AND" value="1">
+                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure lt 500
+                                /systems/hydraulic/system[4]/pipeline/pipeline_pressure lt 500
+			 </test>
+			<test logic="AND" value="1">
+                                fcs/flap-pos-norm gt 0
+                                /accelerations/pilot-g gt 2
+		        </test>
+		</switch>
+
+        <aerosurface_scale name="flap normalization">
+            <input>fcs/flap-pos-rate</input>
             <domain>
                 <min>0</min>
                 <max>30</max>
@@ -511,133 +554,4 @@
         </kinematic>
     </channel>
 
-    <channel name="bay doors">
-
-<!-- Bay 1 -->
-
-	<fcs_function name="/armament/bay0/door_movement">
-		<function>
-                      <product>
-			<property>/sim/multiplay/generic/float[2]</property>
-			<value>1</value>
-			</product>
-		</function>
-	</fcs_function> 
-
-	<fcs_function name="/armament/bay0/door_movement_rate">
-		<function>
-                      <quotient>
-                        <max>
-			<property>/systems/hydraulic/system[2]/pipeline/pipeline_pressure</property>
-			<property>/systems/hydraulic/system[3]/pipeline/pipeline_pressure</property>
-                        </max>                       
-			<value>12000</value>
-		      </quotient>
-		</function>
-	</fcs_function>  
-
-		<actuator name="/armament/bay0/door_movement_input">
-            <input>/armament/bay0/door_movement</input>
-            <rate_limit sense="decr">/armament/bay0/door_movement_rate</rate_limit> 
-            <rate_limit sense="incr">/armament/bay0/door_movement_rate</rate_limit> 
-        </actuator> 
-
-	<switch name="/armament/bay0/open">
-		<test value="1">
-		   /armament/bay0/door_movement_input eq 1
-		</test>
-		<default value="0"/>
-        </switch>
-	<switch name="/armament/bay0/closed">
-		<test value="1">
-		   /armament/bay0/door_movement_input eq 0
-		</test>
-		<default value="0"/>
-        </switch>
-
-<!-- Bay 2 --> 
-
-	<fcs_function name="/armament/bay1/door_movement">
-		<function>
-                      <product>
-			<property>/sim/multiplay/generic/float[3]</property>
-			<value>1</value>
-			</product>
-		</function>
-	</fcs_function> 
-
-	<fcs_function name="/armament/bay1/door_movement_rate">
-		<function>
-                      <quotient>
-                        <max>
-			<property>/systems/hydraulic/system[2]/pipeline/pipeline_pressure</property>
-			<property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
-                        </max>                       
-			<value>12000</value>
-		      </quotient>
-		</function>
-	</fcs_function>  
-
-		<actuator name="/armament/bay1/door_movement_input">
-            <input>/armament/bay1/door_movement</input>
-            <rate_limit sense="decr">/armament/bay1/door_movement_rate</rate_limit> 
-            <rate_limit sense="incr">/armament/bay1/door_movement_rate</rate_limit> 
-        </actuator> 
-
-	<switch name="/armament/bay1/open">
-		<test value="1">
-		   /armament/bay1/door_movement_input eq 1
-		</test>
-		<default value="0"/>
-        </switch>
-	<switch name="/armament/bay1/closed">
-		<test value="1">
-		   /armament/bay1/door_movement_input eq 0
-		</test>
-		<default value="0"/>
-        </switch>
-
-<!-- Bay 3 -->
-
-	<fcs_function name="/armament/bay2/door_movement">
-		<function>
-                      <product>
-			<property>/sim/multiplay/generic/float[4]</property>
-			<value>1</value>
-			</product>
-		</function>
-	</fcs_function> 
-
-	<fcs_function name="/armament/bay2/door_movement_rate">
-		<function>
-                      <quotient>
-                        <max>
-			<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
-			<property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
-                        </max>                       
-			<value>12000</value>
-		      </quotient>
-		</function>
-	</fcs_function>  
-
-		<actuator name="/armament/bay2/door_movement_input">
-            <input>/armament/bay2/door_movement</input>
-            <rate_limit sense="decr">/armament/bay2/door_movement_rate</rate_limit> 
-            <rate_limit sense="incr">/armament/bay2/door_movement_rate</rate_limit> 
-        </actuator> 
-
-	<switch name="/armament/bay2/open">
-		<test value="1">
-		   /armament/bay2/door_movement_input eq 1
-		</test>
-		<default value="0"/>
-        </switch>
-	<switch name="/armament/bay2/closed">
-		<test value="1">
-		   /armament/bay2/door_movement_input eq 0
-		</test>
-		<default value="0"/>
-        </switch>
-
-    </channel>
 </system>
