@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <path>fg-clock.ac</path>    ### NOT to be used in other variants of the BONE ###
+  <path>clock.ac</path>
 
   <animation>
     <object-name>AdjKnob.h</object-name>
