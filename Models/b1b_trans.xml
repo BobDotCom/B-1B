@@ -202,7 +202,7 @@ sweat by maggse
 	 </axis>
  </animation>
 
- <animation>
+<!--  <animation>
   <type>dist-scale</type>
   <object-name>strobe2</object-name>
   <interpolation>
@@ -217,7 +217,7 @@ sweat by maggse
     <y-m>-4.46</y-m>
     <z-m>-0.80</z-m>
   </center>
-</animation>
+</animation> -->
  
  
  <!-- engine outlets -->

@@ -1438,18 +1438,6 @@ B-1BFS
 		  <pitch-deg>-2</pitch-deg>
 	  </offsets>
   </model>
-
-	<!-- TODO: Where is the AFS_ECU file? -->
-  <model>
-	  <name>AFS_ECU</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/AFS_ECU.xml</path>
-	  <offsets>
-		  <x-m>-15.73374</x-m>
-		  <y-m>-0.48777</y-m>
-		  <z-m>1.40843</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
   
   <model>
 	  <name>SMALL COMPUTER</name>

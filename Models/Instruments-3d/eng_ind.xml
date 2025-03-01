@@ -1574,7 +1574,7 @@ sweat by maggse
 
     <animation>
         <type>textranslate</type>
-        <object-name>ind1.031</object-name>
+        <object-name>oil-qty.ind</object-name>
         <property>engines/engine[0]/oilt-norm</property>
         <interpolation>
             <entry>
@@ -1594,7 +1594,7 @@ sweat by maggse
     </animation>
     <animation>
         <type>material</type>
-        <object-name>ind1.031</object-name>
+        <object-name>oil-qty.ind</object-name>
         <emission>
             <red>0.3</red>
             <green>0.0</green>
@@ -1605,7 +1605,7 @@ sweat by maggse
 
     <animation>
         <type>textranslate</type>
-        <object-name>ind1.030</object-name>
+        <object-name>oil-qty.ind.001</object-name>
         <property>engines/engine[1]/oilt-norm</property>
         <interpolation>
             <entry>
@@ -1625,7 +1625,7 @@ sweat by maggse
     </animation>
     <animation>
         <type>material</type>
-        <object-name>ind1.030</object-name>
+        <object-name>oil-qty.ind.001</object-name>
         <emission>
             <red>0.9</red>
             <green>0.5</green>
@@ -1636,7 +1636,7 @@ sweat by maggse
 
     <animation>
         <type>textranslate</type>
-        <object-name>ind1.028</object-name>
+        <object-name>oil-qty.ind.002</object-name>
         <property>engines/engine[2]/oilt-norm</property>
         <interpolation>
             <entry>
@@ -1656,7 +1656,7 @@ sweat by maggse
     </animation>
     <animation>
         <type>material</type>
-        <object-name>ind1.028</object-name>
+        <object-name>oil-qty.ind.002</object-name>
         <emission>
             <red>0.3</red>
             <green>0.0</green>
@@ -1667,7 +1667,7 @@ sweat by maggse
 
     <animation>
         <type>textranslate</type>
-        <object-name>ind1.029</object-name>
+        <object-name>oil-qty.ind.003</object-name>
         <property>engines/engine[3]/oilt-norm</property>
         <interpolation>
             <entry>
@@ -1687,7 +1687,7 @@ sweat by maggse
     </animation>
     <animation>
         <type>material</type>
-        <object-name>ind1.029</object-name>
+        <object-name>oil-qty.ind.003</object-name>
         <emission>
             <red>0.9</red>
             <green>0.5</green>
@@ -2303,22 +2303,6 @@ sweat by maggse
     <animation>
         <type>material</type>
         <object-name>noz-pos.ind.003</object-name>
-        <emission>
-            <red>0.9</red>
-            <green>0.5</green>
-            <blue>0.9</blue>
-            <factor-prop>controls/lighting/instruments-norm</factor-prop>
-        </emission>
-    </animation>
-
-    <animation>
-        <type>material</type>
-        <object-name>glas_face</object-name>
-        <object-name>glas_face.001</object-name>
-        <object-name>glas_face.002</object-name>
-        <object-name>glas_face.003</object-name>
-        <object-name>glas_face.004</object-name>
-        <object-name>glas_face.005</object-name>
         <emission>
             <red>0.9</red>
             <green>0.5</green>

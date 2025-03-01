@@ -40,7 +40,7 @@ sweat by maggse
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>throttle_lever_1</object-name>
+	<object-name>throttle_lever_1_0</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
@@ -51,7 +51,7 @@ sweat by maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>throttle_lever_1</object-name>
+	<object-name>throttle_lever_1_0</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -110,7 +110,7 @@ sweat by maggse
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>throttle_lever_2</object-name>
+	<object-name>throttle_lever_2_0</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
@@ -123,7 +123,7 @@ sweat by maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>throttle_lever_2</object-name>
+	<object-name>throttle_lever_2_0</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -182,7 +182,7 @@ sweat by maggse
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>throttle_lever_3</object-name>
+	<object-name>throttle_lever_3_0</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
@@ -195,7 +195,7 @@ sweat by maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>throttle_lever_3</object-name>
+	<object-name>throttle_lever_3_0</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
@@ -254,7 +254,7 @@ sweat by maggse
 </animation>
 <animation>
 	<type>material</type>
-	<object-name>throttle_lever_4</object-name>
+	<object-name>throttle_lever_4_0</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
@@ -267,7 +267,7 @@ sweat by maggse
 
 <animation>
 	<type>pick</type>
-	<object-name>throttle_lever_4</object-name>
+	<object-name>throttle_lever_4_0</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
