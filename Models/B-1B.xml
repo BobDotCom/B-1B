@@ -175,6 +175,13 @@ more to come :-)
 	  </offsets>
   </model>
 
+  <effect>
+    <inherits-from>Aircraft/B-1B/Models/Effects/Refuelling-lights</inherits-from>
+    <object-name>bone_4.002</object-name> 
+   </effect>
+
+
+
 <!-- pushback -->
 
 <model>
@@ -1549,7 +1556,7 @@ more to come :-)
 	 <center>
 		 <x-m>-15.99</x-m>
 		 <y-m>0.0</y-m>
-		 <z-m>-1.05</z-m>
+		 <z-m>-0.095</z-m>
 	 </center>
 	 <axis>
 		 <x>0</x>
