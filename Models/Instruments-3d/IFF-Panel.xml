@@ -152,25 +152,25 @@
 
   <animation>
         <type>knob</type>
-        <object-name>Mode_1_dial</object-name>
-        <property>instrumentation/iff/channel-selection</property>
-        <factor>45</factor>
+        <object-name>Singles-1</object-name>
+        <property>instrumentation/iff/channel-selection-singles</property>
+        <factor>0</factor>
         <center>
-            <x-m>0.0239</x-m>
-            <y-m>-0.0262</y-m>
-            <z-m>0.0065</z-m>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
         </center>
         <axis>
             <x>0</x>
-            <y>0</y>
-            <z>1</z>
+            <y>1</y>
+            <z>0</z>
         </axis>
         <action>
             <binding>
                 <command>property-adjust</command>
-                <property>instrumentation/iff/channel-selection</property>
+                <property>instrumentation/iff/channel-selection-singles</property>
                 <min>0</min>
-                <max>99</max>
+                <max>9</max>
                 <wrap>false</wrap>
            </binding>
         </action>
@@ -178,25 +178,25 @@
 
   <animation>
         <type>knob</type>
-        <object-name>Mode_3a_dial_1</object-name>
-        <property>instrumentation/iff/mode_3A_hundred-and-thousand</property>
-        <factor>45</factor>
+        <object-name>Tens-1</object-name>
+        <property>instrumentation/iff/channel-selection-tens</property>
+        <factor>0</factor>
         <center>
-            <x-m>0.0239</x-m>
-            <y-m>0.0039</y-m>
-            <z-m>0.0065</z-m>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
         </center>
         <axis>
             <x>0</x>
-            <y>0</y>
-            <z>1</z>
+            <y>1</y>
+            <z>0</z>
         </axis>
         <action>
             <binding>
                 <command>property-adjust</command>
-                <property>instrumentation/iff/mode_3A_hundred-and-thousand</property>
+                <property>instrumentation/iff/channel-selection-tens</property>
                 <min>0</min>
-                <max>99</max>
+                <max>9</max>
                 <wrap>false</wrap>
            </binding>
         </action>
@@ -204,25 +204,103 @@
 
   <animation>
         <type>knob</type>
-        <object-name>Mode_3a_dial_2</object-name>
-        <property>instrumentation/iff/mode_3A_digits-and-tens</property>
-        <factor>45</factor>
+        <object-name>Singles-3A</object-name>
+        <property>instrumentation/transponder/inputs/digit[0]</property>
+        <factor>0</factor>
         <center>
-            <x-m>0.0239</x-m>
-            <y-m>0.0338</y-m>
-            <z-m>0.0065</z-m>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
         </center>
         <axis>
             <x>0</x>
-            <y>0</y>
-            <z>1</z>
+            <y>1</y>
+            <z>0</z>
         </axis>
         <action>
             <binding>
                 <command>property-adjust</command>
-                <property>instrumentation/iff/mode_3A_digits-and-tens</property>
+                <property>instrumentation/transponder/inputs/digit[0]</property>
                 <min>0</min>
-                <max>99</max>
+                <max>9</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Tens-3A</object-name>
+        <property>instrumentation/transponder/inputs/digit[1]</property>
+        <factor>0</factor>
+        <center>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/transponder/inputs/digit[1]</property>
+                <min>0</min>
+                <max>9</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Hundreds-3A</object-name>
+        <property>instrumentation/transponder/inputs/digit[2]</property>
+        <factor>0</factor>
+        <center>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/transponder/inputs/digit[2]</property>
+                <min>0</min>
+                <max>9</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Thousands-3A</object-name>
+        <property>instrumentation/transponder/inputs/digit[3]</property>
+        <factor>0</factor>
+        <center>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/transponder/inputs/digit[3]</property>
+                <min>0</min>
+                <max>9</max>
                 <wrap>false</wrap>
            </binding>
         </action>
@@ -251,7 +329,7 @@
   <object-name>Cylinder.002</object-name>
   <property>instrumentation/transponder/inputs/digit[1]</property>
   <factor>-0.1</factor>
-  <step>10</step>
+  <step>1</step>
   <axis>
    <x>0</x>
    <y>-1</y>
@@ -282,9 +360,10 @@
         </center>
  </animation>
 
+
  <animation>
   <type>textranslate</type>
-  <object-name>Cylinder.004</object-name>
+  <object-name>Cylinder.005</object-name>
   <property>instrumentation/transponder/inputs/digit[3]</property>
   <factor>-0.1</factor>
   <step>1</step>
@@ -302,8 +381,8 @@
 
  <animation>
   <type>textranslate</type>
-  <object-name>Cylinder.005</object-name>
-  <property>instrumentation/iff/channel-selection</property>
+  <object-name>Cylinder.006</object-name>
+  <property>instrumentation/iff/channel-selection-singles</property>
   <factor>-0.1</factor>
   <step>1</step>
   <axis>
@@ -320,10 +399,10 @@
 
  <animation>
   <type>textranslate</type>
-  <object-name>Cylinder.006</object-name>
-  <property>instrumentation/iff/channel-selection</property>
-  <factor>-0.01</factor>
-  <step>10</step>
+  <object-name>Cylinder.007</object-name>
+  <property>instrumentation/iff/channel-selection-tens</property>
+  <factor>-0.1</factor>
+  <step>1</step>
   <axis>
    <x>0</x>
    <y>-1</y>
