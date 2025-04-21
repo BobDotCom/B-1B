@@ -103,7 +103,7 @@
             <input>fcs/left-elevon-sum</input>
             <range>
                 <min>-0.35</min>
-                <max>0.35</max>
+                <max>0.17</max>
             </range>
             <output>fcs/left-elevator-pos-rad</output>
         </aerosurface_scale>
@@ -182,7 +182,7 @@
             <input>fcs/right-elevon-sum</input>
             <range>
                 <min>-0.35</min>
-                <max>0.35</max>
+                <max>0.17</max>
             </range>
             <output>fcs/right-elevator-pos-rad</output>
         </aerosurface_scale>
@@ -439,6 +439,20 @@
 			</test>
 		</switch>
 
+		<switch name="/systems/flight-controls/flaps/G-out-trigger">
+			<default value="0"/>
+			<test logic="AND" value="1">
+                                fcs/flap-pos-norm gt 0
+                                /accelerations/pilot-g gt 2
+			</test>
+		</switch>
+
+		<actuator name="/systems/flight-controls/flaps/G-out-switch">
+            <input>/systems/flight-controls/flaps/G-out-trigger</input>
+            <rate_limit sense="decr">0</rate_limit> 
+            <rate_limit sense="incr">1</rate_limit> 
+        </actuator>
+
 		<switch name="/systems/flight-controls/flaps/channel-1">
 			<default value="0"/>
 			<test logic="OR" value="1">
@@ -446,8 +460,8 @@
                                 /systems/hydraulic/system[4]/pipeline/pipeline_pressure lt 2000
 			 </test>
 			<test logic="AND" value="1">
-                                fcs/flap-pos-norm gt 0
-                                /accelerations/pilot-g gt 2
+                                /systems/flight-controls/flaps/G-out-switch eq 1
+                                /controls/switches/flap-slat-reset-switch eq 0
 			</test>
 		</switch>
 
@@ -458,8 +472,8 @@
                                 /systems/hydraulic/system[4]/pipeline/pipeline_pressure lt 500
 			 </test>
 			<test logic="AND" value="1">
-                                fcs/flap-pos-norm gt 0
-                                /accelerations/pilot-g gt 2
+                                /systems/flight-controls/flaps/G-out-switch eq 1
+                                /controls/switches/flap-slat-reset-switch eq 0
 		        </test>
 		</switch>
 

@@ -2933,24 +2933,6 @@ more to come :-)
 	 </axis>
  </animation>
 
-  <animation>
-	 <type>rotate</type>
-	 <object-name>elevator_left</object-name>
-	 <object-name>elevator_right</object-name>
-	 <property>surface-positions/elevator-pos-norm</property>
-	 <factor>20</factor>
-	 <center>
-		 <x-m>15.70</x-m>
-		 <y-m>0.0</y-m>
-		 <z-m>2.70</z-m>
-	 </center>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
   <!-- Fwd Canards -->
  <animation>
 	 <type>rotate</type>
