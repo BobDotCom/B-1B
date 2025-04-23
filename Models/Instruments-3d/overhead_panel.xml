@@ -128,8 +128,6 @@ maggse
 		 <binding>
 			 <command>property-toggle</command>
 			 <property>controls/switches/slipway-lighting</property>
-                         <value>0</value> 
-                         <value>1</value>
 		 </binding>
 	 </action>
 </animation> 
@@ -190,9 +188,9 @@ maggse
         <property>controls/switches/voltage-select-switch</property>
         <factor>33</factor>
         <center>
-            <x-m>0.0185</x-m>
-            <y-m>0.027625</y-m>
-            <z-m>-0.0707</z-m>
+            <x-m>0.01913</x-m>
+            <y-m>0.028227</y-m>
+            <z-m>-0.0766</z-m>
         </center>
         <axis>
             <x> -1</x>
@@ -235,8 +233,8 @@ maggse
 	 </axis>
 	 <center>
 		 <x-m>0.006</x-m>
-		 <y-m>-0.030</y-m>
-		 <z-m>-0.054</z-m>
+		 <y-m>-0.031</y-m>
+		 <z-m>-0.0579</z-m>
    </center>
  </animation>
 
@@ -763,9 +761,9 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.01096</x-m>
+		 <x-m>0.009</x-m>
 		 <y-m>0.03256</y-m>
-		 <z-m>0.05371</z-m>
+		 <z-m>0.0411</z-m>
    </center>
  </animation>
 
@@ -1844,9 +1842,9 @@ maggse
 		 <z> 0.0</z>
 	 </axis>
 	 <center>
-		 <x-m> 0.01</x-m>
+		 <x-m> 0.007</x-m>
 		 <y-m>-0.174</y-m>
-		 <z-m> 0.1222</z-m>
+		 <z-m> 0.13</z-m>
    </center>
 	<action>
 		<binding>
@@ -1916,9 +1914,9 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m> 0.019003</x-m>
+		<x-m>0.019003</x-m>
 		<y-m>-0.22423</y-m>
-		<z-m>0.066586</z-m>
+		<z-m>0.0729</z-m>
 	</center>
 	<action>
 		<binding>
@@ -2163,6 +2161,7 @@ maggse
     <object-name>gen_reset_2</object-name>
     <object-name>Needle_1</object-name>
     <object-name>Needle_2</object-name>
+    <object-name>Fuel-Gals.001</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>

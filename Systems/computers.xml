@@ -43,7 +43,7 @@
         </condition>
        <property>systems/computers/INS/heading</property>
       </input> 
-     <output>systems/computers/PFDB1-heading</output>
+     <output>systems/computers/Output-heading</output>
   </filter> 
 
   <filter>
@@ -67,7 +67,7 @@
         </condition>
        <property>systems/computers/INS/pitch</property>
       </input> 
-     <output>systems/computers/PFDB1-pitch</output>
+     <output>systems/computers/Output-pitch</output>
   </filter>
 
   <filter>
@@ -91,7 +91,7 @@
         </condition>
        <property>systems/computers/INS/roll</property>
       </input> 
-     <output>systems/computers/PFDB1-roll</output>
+     <output>systems/computers/Output-roll</output>
   </filter>
 
   <filter>
@@ -221,7 +221,7 @@
         </condition>
        <property>systems/computers/ADC2/airspeed</property>
       </input> 
-     <output>systems/computers/PFDB1-airspeed-kts</output>
+     <output>systems/computers/Output-airspeed-kts</output>
   </filter>
 
   <filter>
@@ -245,7 +245,7 @@
         </condition>
        <property>systems/computers/ADC2/groundspeed</property>
       </input> 
-     <output>systems/computers/PFDB1-groundspeed-kts</output>
+     <output>systems/computers/Output-groundspeed-kts</output>
   </filter>
 
   <filter>
@@ -269,7 +269,7 @@
         </condition>
        <property>systems/computers/ADC2/mach</property>
       </input> 
-     <output>systems/computers/PFDB1-mach</output>
+     <output>systems/computers/Output-mach</output>
   </filter>
 
   <filter>
@@ -293,7 +293,7 @@
         </condition>
        <property>systems/computers/ADC2/baro_altitude</property>
       </input> 
-     <output>systems/computers/PFDB1-baro-altitude</output>
+     <output>systems/computers/Output-baro-altitude</output>
   </filter>
 
   <filter>
@@ -317,7 +317,7 @@
         </condition>
        <property>systems/computers/ADC2/verticalspeed</property>
       </input> 
-     <output>systems/computers/PFDB1-vertical-speed</output>
+     <output>systems/computers/Output-vertical-speed</output>
   </filter>
 
   <filter>
@@ -926,28 +926,6 @@
      <output>instrumentation/transponder/serviceable</output>
     </logic>
 
-  <filter>
-        <type>gain</type>
-        <gain>100</gain>
-        <input>
-         <property>instrumentation/transponder/inputs/mode_3A_hundred-and-thousand</property> 
-        </input>
-        <output>instrumentation/transponder/inputs/mode_3A_hundred-and-thousand-four-figure</output>
-  </filter>
-
-  <filter>
-     <type>gain</type>
-     <gain>1.0</gain> 
-      <input>
-       <expression>  
-        <sum> 
-         <property>instrumentation/transponder/inputs/mode_3A_hundred-and-thousand-four-figure</property>
-         <property>instrumentation/transponder/inputs/mode_3A_digits_and_tens</property>
-        </sum>
-       </expression> 
-       </input>
-       <output>instrumentation/transponder/id-code</output>
-    </filter>
 
   <filter>
         <type>gain</type>

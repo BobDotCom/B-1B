@@ -234,7 +234,7 @@ Syd Adams
    <type>texmultiple</type>
    <object-name>AI</object-name>
    <transform>
-     <property>systems/computers/PFDB1-pitch</property>
+     <property>systems/computers/Output-pitch</property>
      <subtype>textranslate</subtype>
      <factor>0.00314</factor>
      <axis>
@@ -244,7 +244,7 @@ Syd Adams
      </axis>
    </transform>
    <transform>
-     <property>systems/computers/PFDB1-roll</property>
+     <property>systems/computers/Output-roll</property>
      <subtype>texrotate</subtype>
      <center>
        <x>0.25</x>
@@ -261,7 +261,7 @@ Syd Adams
  <animation>
    <type>rotate</type>
    <object-name>rollptr</object-name>
-   <property>systems/computers/PFDB1-roll</property>
+   <property>systems/computers/Output-roll</property>
    <axis>
      <x>1.0</x>
      <y>0.0</y>
@@ -279,7 +279,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>HDGface</object-name>
-   <property>systems/computers/PFDB1-heading</property>
+   <property>systems/computers/Output-heading</property>
    <interpolation>
 	   <entry>
 		   <ind>0</ind>
@@ -305,7 +305,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Asitext</object-name>
-   <property>systems/computers/PFDB1-airspeed-kts</property>
+   <property>systems/computers/Output-airspeed-kts</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -318,7 +318,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Asitext.001</object-name>
-   <property>systems/computers/PFDB1-airspeed-kts</property>
+   <property>systems/computers/Output-airspeed-kts</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -331,7 +331,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Asitext.002</object-name>
-   <property>systems/computers/PFDB1-airspeed-kts</property>
+   <property>systems/computers/Output-airspeed-kts</property>
    <factor>0.1</factor>
    <axis>
      <x>0</x>
@@ -343,7 +343,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>Alt10</object-name>
-   <property>systems/computers/PFDB1-baro-altitude</property>
+   <property>systems/computers/Output-baro-altitude</property>
    <factor>0.01</factor>
    <axis>
      <x>0</x>
@@ -355,7 +355,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Alt100</object-name>
-   <property>systems/computers/PFDB1-baro-altitude</property>
+   <property>systems/computers/Output-baro-altitude</property>
    <factor>0.001</factor>
    <step>100</step>
    <scroll>20</scroll>
@@ -369,7 +369,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Alt1000</object-name>
-   <property>systems/computers/PFDB1-baro-altitude</property>
+   <property>systems/computers/Output-baro-altitude</property>
    <factor>0.0001</factor>
    <step>1000</step>
    <scroll>20</scroll>
@@ -383,7 +383,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>Alt10000</object-name>
-   <property>systems/computers/PFDB1-baro-altitude</property>
+   <property>systems/computers/Output-baro-altitude</property>
    <factor>0.00001</factor>
    <step>10000</step>
    <scroll>20</scroll>
@@ -436,7 +436,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>mach.001</object-name>
-   <property>systems/computers/PFDB1-groundspeed-kts</property>
+   <property>systems/computers/Output-groundspeed-kts</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -449,7 +449,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>mach.002</object-name>
-   <property>systems/computers/PFDB1-groundspeed-kts</property>
+   <property>systems/computers/Output-groundspeed-kts</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -462,7 +462,7 @@ Syd Adams
   <animation>
    <type>textranslate</type>
    <object-name>mach.003</object-name>
-   <property>systems/computers/PFDB1-groundspeed-kts</property>
+   <property>systems/computers/Output-groundspeed-kts</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>
