@@ -27,7 +27,7 @@
 	<value>24</value>
       </greater-than>
     </condition>
-    <property>systems/computers/PFDB1-heading</property>
+    <property>systems/computers/Output-heading</property>
     <axis><x>1</x></axis>
   </animation>
 
