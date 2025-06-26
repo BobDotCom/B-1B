@@ -524,6 +524,32 @@ Syd Adams
    </axis>
  </animation>
 
+  <animation>
+        <type>knob</type>
+        <object-name>mode_knob</object-name>
+        <property>controls/switches/PFDB1_mode_knob</property>
+        <factor>30</factor>
+        <center>
+            <x-m>0.03245</x-m>
+            <y-m>0.0804</y-m>
+            <z-m>-0.097</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y> 0</y>
+            <z> 0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/switches/PFDB1_mode_knob</property>
+                <min>0</min>
+                <max>5</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
 
 	<animation>
 		<type>select</type>
