@@ -1,18 +1,18 @@
 AC3Db
-MATERIAL "chrome.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.027 0.027 0.027  spec 1.000 1.000 1.000  shi 64 trans 0.000
-MATERIAL "chrome.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.027 0.027 0.027  spec 1.000 1.000 1.000  shi 64 trans 0.000
+MATERIAL "chrome.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.000
+MATERIAL "chrome.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.000
 MATERIAL "DefaultWhite.000" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
 MATERIAL "DefaultWhite.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
 MATERIAL "DefaultWhite.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
 MATERIAL "Material.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
 OBJECT world
-name "Blender_exporter_v4.1__pump-panel.ac"
-kids 82
+name "Blender_exporter_v6.1__pump-panel.ac"
+kids 92
 OBJECT poly
 name "aft"
 data 10
 Switch.019
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47024 -0.20782 -0.31134
@@ -2136,7 +2136,7 @@ OBJECT poly
 name "aft.001"
 data 10
 Switch.001
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47024 -0.20782 -0.31134
@@ -4260,7 +4260,7 @@ OBJECT poly
 name "blst_tk_isln"
 data 10
 Switch.013
-crease 30.0
+crease 40.0
 texture "silver.png"
 numvert 256
 -18.45698 -0.14716 -0.42911
@@ -5904,7 +5904,7 @@ OBJECT poly
 name "cg_test"
 data 10
 Switch.018
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.46433 -0.15643 -0.30344
@@ -8956,7 +8956,7 @@ OBJECT poly
 name "clg_sco"
 data 10
 Switch.015
-crease 30.0
+crease 40.0
 texture "silver.png"
 numvert 256
 -18.45739 -0.19887 -0.41462
@@ -10620,7 +10620,7 @@ OBJECT poly
 name "Fuel-Dump-Cover"
 data 20
 Fuel-Dump-cover.mesh
-crease 35.0
+crease 40.0
 texture "Back-panel.png"
 numvert 28
 -18.47093 -0.15986 -0.25608
@@ -10786,7 +10786,7 @@ OBJECT poly
 name "fuel_dump"
 data 10
 Switch.017
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 320
 -18.47347 -0.15298 -0.26757
@@ -13166,7 +13166,7 @@ OBJECT poly
 name "fwd"
 data 10
 Switch.028
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47024 -0.20792 -0.26475
@@ -15290,7 +15290,7 @@ OBJECT poly
 name "gnd_cool"
 data 10
 Switch.016
-crease 30.0
+crease 40.0
 texture "silver.png"
 numvert 253
 -18.45839 -0.2008 -0.44998
@@ -16931,7 +16931,7 @@ OBJECT poly
 name "guides"
 data 19
 pump-panel.mesh.001
-crease 35.0
+crease 40.0
 texture "silver.png"
 numvert 24
 -18.47172 -0.20681 -0.4052
@@ -17091,7 +17091,7 @@ OBJECT poly
 name "intmd"
 data 10
 Switch.027
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47024 -0.20779 -0.28652
@@ -19215,7 +19215,7 @@ OBJECT poly
 name "Pump-1"
 data 10
 Switch.020
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47028 -0.10066 -0.32306
@@ -21339,7 +21339,7 @@ OBJECT poly
 name "Pump-2"
 data 10
 Switch.021
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47028 -0.10066 -0.34449
@@ -23463,7 +23463,7 @@ OBJECT poly
 name "Pump-3"
 data 10
 Switch.022
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47028 -0.10066 -0.36982
@@ -25587,7 +25587,7 @@ OBJECT poly
 name "Pump-4"
 data 10
 Switch.024
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47028 -0.1008 -0.39124
@@ -27711,7 +27711,7 @@ OBJECT poly
 name "Pump-5"
 data 10
 Switch.025
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47028 -0.10066 -0.41616
@@ -29835,7 +29835,7 @@ OBJECT poly
 name "Pump-6"
 data 10
 Switch.026
-crease 41.0
+crease 40.0
 texture "silver.png"
 numvert 288
 -18.47028 -0.10077 -0.43767
@@ -31959,7 +31959,7 @@ OBJECT poly
 name "screws"
 data 9
 Plane.002
-crease 30.0
+crease 40.0
 texture "ST_NUC.png"
 numvert 156
 -18.46727 -0.17402 -0.49744
@@ -32919,7 +32919,7 @@ OBJECT poly
 name "SEQ-INIT"
 data 9
 Plane.006
-crease 30.0
+crease 40.0
 texture "silver.png"
 numvert 128
 -18.47131 -0.14852 -0.47269
@@ -33987,7 +33987,7 @@ OBJECT poly
 name "SwitchNut"
 data 13
 SwitchNut.001
-crease 30.0
+crease 40.0
 texture "silver.png"
 numvert 1932
 -18.47504 -0.10195 -0.42989
@@ -47287,10 +47287,390 @@ refs 4
 1923 0.608336 0.208163
 kids 0
 OBJECT poly
+name "tank-0-1"
+data 21
+Cylinder.019.mesh.006
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47203 -0.12588 -0.36949
+-18.47203 -0.12588 -0.36404
+-18.47156 -0.1283 -0.36949
+-18.47156 -0.1283 -0.36404
+-18.47158 -0.13078 -0.36949
+-18.47158 -0.13078 -0.36404
+-18.47207 -0.1332 -0.36949
+-18.47207 -0.1332 -0.36404
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 1.001145 1.000471
+1 0.511266 1.000471
+3 0.511266 0.969091
+2 1.001145 0.96909
+SURF 0X0
+mat 5
+refs 4
+2 1.001145 0.96909
+3 0.511266 0.969091
+5 0.511266 0.937524
+4 1.001145 0.937523
+SURF 0X0
+mat 5
+refs 4
+4 1.001145 0.937523
+5 0.511266 0.937524
+7 0.511266 0.906096
+6 1.001145 0.906096
+kids 0
+OBJECT poly
+name "tank-0-10"
+data 21
+Cylinder.018.mesh.006
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47203 -0.12588 -0.36387
+-18.47203 -0.12588 -0.35843
+-18.47156 -0.1283 -0.36387
+-18.47156 -0.1283 -0.35843
+-18.47158 -0.13078 -0.36387
+-18.47158 -0.13078 -0.35843
+-18.47207 -0.1332 -0.36387
+-18.47207 -0.1332 -0.35843
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 1.008597 1.000143
+1 0.51847 1.000143
+3 0.51847 0.968587
+2 1.008597 0.968587
+SURF 0X0
+mat 5
+refs 4
+2 1.008597 0.968587
+3 0.51847 0.968587
+5 0.51847 0.936842
+4 1.008597 0.936842
+SURF 0X0
+mat 5
+refs 4
+4 1.008597 0.936842
+5 0.51847 0.936842
+7 0.51847 0.905237
+6 1.008597 0.905237
+kids 0
+OBJECT poly
+name "tank-0-100"
+data 21
+Cylinder.017.mesh.006
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47203 -0.12588 -0.3584
+-18.47203 -0.12588 -0.35295
+-18.47156 -0.1283 -0.3584
+-18.47156 -0.1283 -0.35295
+-18.47158 -0.13078 -0.3584
+-18.47158 -0.13078 -0.35295
+-18.47207 -0.1332 -0.3584
+-18.47207 -0.1332 -0.35295
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 1.0121 1.000507
+1 0.507429 1.000507
+3 0.507429 0.968927
+2 1.0121 0.968926
+SURF 0X0
+mat 5
+refs 4
+2 1.0121 0.968926
+3 0.507429 0.968927
+5 0.507429 0.937158
+4 1.0121 0.937158
+SURF 0X0
+mat 5
+refs 4
+4 1.0121 0.937158
+5 0.507429 0.937158
+7 0.507429 0.90553
+6 1.0121 0.90553
+kids 0
+OBJECT poly
+name "tank-0-1000"
+data 21
+Cylinder.016.mesh.006
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47203 -0.12588 -0.3509
+-18.47203 -0.12588 -0.34545
+-18.47156 -0.1283 -0.3509
+-18.47156 -0.1283 -0.34545
+-18.47158 -0.13078 -0.3509
+-18.47158 -0.13078 -0.34545
+-18.47207 -0.1332 -0.3509
+-18.47207 -0.1332 -0.34545
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 0.977857 0.998107
+1 0.509377 0.998107
+3 0.509377 0.966773
+2 0.977857 0.966772
+SURF 0X0
+mat 5
+refs 4
+2 0.977857 0.966772
+3 0.509377 0.966773
+5 0.509377 0.935251
+4 0.977857 0.935251
+SURF 0X0
+mat 5
+refs 4
+4 0.977857 0.935251
+5 0.509377 0.935251
+7 0.509377 0.903868
+6 0.977857 0.903868
+kids 0
+OBJECT poly
+name "tank-0-10000"
+data 21
+Cylinder.020.mesh.006
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47203 -0.12588 -0.34501
+-18.47203 -0.12588 -0.33956
+-18.47156 -0.1283 -0.34501
+-18.47156 -0.1283 -0.33956
+-18.47158 -0.13078 -0.34501
+-18.47158 -0.13078 -0.33956
+-18.47207 -0.1332 -0.34501
+-18.47207 -0.1332 -0.33956
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 0.982567 0.998883
+1 0.499746 0.998883
+3 0.499746 0.96826
+2 0.982567 0.968259
+SURF 0X0
+mat 5
+refs 4
+2 0.982567 0.968259
+3 0.499746 0.96826
+5 0.499746 0.937453
+4 0.982567 0.937453
+SURF 0X0
+mat 5
+refs 4
+4 0.982567 0.937453
+5 0.499746 0.937453
+7 0.499746 0.906783
+6 0.982567 0.906783
+kids 0
+OBJECT poly
+name "tank-00-1"
+data 21
+Cylinder.025.mesh.005
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47159 -0.15977 -0.3696
+-18.47159 -0.15977 -0.36416
+-18.47155 -0.16223 -0.3696
+-18.47155 -0.16223 -0.36416
+-18.47201 -0.16466 -0.3696
+-18.47201 -0.16466 -0.36416
+-18.47209 -0.15734 -0.3696
+-18.47209 -0.15734 -0.36416
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 0.998078 0.968404
+1 0.511508 0.968404
+3 0.511508 0.935662
+2 0.998078 0.935662
+SURF 0X0
+mat 5
+refs 4
+2 0.998078 0.935662
+3 0.511508 0.935662
+5 0.511511 0.902749
+4 0.998081 0.902749
+SURF 0X0
+mat 5
+refs 4
+6 0.998078 1.00142
+7 0.511511 1.00142
+1 0.511508 0.968404
+0 0.998078 0.968404
+kids 0
+OBJECT poly
+name "tank-00-10"
+data 21
+Cylinder.024.mesh.005
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47159 -0.15977 -0.36383
+-18.47159 -0.15977 -0.35838
+-18.47155 -0.16223 -0.36383
+-18.47155 -0.16223 -0.35838
+-18.47201 -0.16466 -0.36383
+-18.47201 -0.16466 -0.35838
+-18.47209 -0.15734 -0.36383
+-18.47209 -0.15734 -0.35838
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 1.00415 0.96752
+1 0.506104 0.96752
+3 0.506107 0.935192
+2 1.004153 0.935192
+SURF 0X0
+mat 5
+refs 4
+2 1.004153 0.935192
+3 0.506107 0.935192
+5 0.506107 0.902697
+4 1.004153 0.902697
+SURF 0X0
+mat 5
+refs 4
+6 1.004153 1.000117
+7 0.506107 1.000117
+1 0.506104 0.96752
+0 1.00415 0.96752
+kids 0
+OBJECT poly
+name "tank-00-100"
+data 21
+Cylinder.023.mesh.005
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47159 -0.15977 -0.35834
+-18.47159 -0.15977 -0.35289
+-18.47155 -0.16223 -0.35834
+-18.47155 -0.16223 -0.35289
+-18.47201 -0.16466 -0.35834
+-18.47201 -0.16466 -0.35289
+-18.47209 -0.15734 -0.35834
+-18.47209 -0.15734 -0.35289
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 1.004684 0.968274
+1 0.509584 0.968274
+3 0.509586 0.935261
+2 1.004687 0.935261
+SURF 0X0
+mat 5
+refs 4
+2 1.004687 0.935261
+3 0.509586 0.935261
+5 0.509589 0.902076
+4 1.004684 0.902076
+SURF 0X0
+mat 5
+refs 4
+6 1.004682 1.001563
+7 0.509586 1.001563
+1 0.509584 0.968274
+0 1.004684 0.968274
+kids 0
+OBJECT poly
+name "tank-00-1000"
+data 21
+Cylinder.022.mesh.005
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47159 -0.15977 -0.35085
+-18.47159 -0.15977 -0.3454
+-18.47155 -0.16223 -0.35085
+-18.47155 -0.16223 -0.3454
+-18.47201 -0.16466 -0.35085
+-18.47201 -0.16466 -0.3454
+-18.47209 -0.15734 -0.35085
+-18.47209 -0.15734 -0.3454
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 0.999514 0.967765
+1 0.504949 0.967765
+3 0.504951 0.9349
+2 0.999514 0.9349
+SURF 0X0
+mat 5
+refs 4
+2 0.999514 0.9349
+3 0.504951 0.9349
+5 0.504951 0.901865
+4 0.999514 0.901865
+SURF 0X0
+mat 5
+refs 4
+6 0.999512 1.000903
+7 0.504949 1.000903
+1 0.504949 0.967765
+0 0.999514 0.967765
+kids 0
+OBJECT poly
+name "tank-00-10000"
+data 21
+Cylinder.021.mesh.005
+crease 40.0
+texture "A-10-counter-drums.png"
+numvert 8
+-18.47159 -0.15977 -0.34501
+-18.47159 -0.15977 -0.33956
+-18.47155 -0.16223 -0.34501
+-18.47155 -0.16223 -0.33956
+-18.47201 -0.16466 -0.34501
+-18.47201 -0.16466 -0.33956
+-18.47209 -0.15734 -0.34501
+-18.47209 -0.15734 -0.33956
+numsurf 3
+SURF 0X0
+mat 5
+refs 4
+0 1.001296 0.967737
+1 0.502858 0.967737
+3 0.502861 0.934934
+2 1.001296 0.934934
+SURF 0X0
+mat 5
+refs 4
+2 1.001296 0.934934
+3 0.502861 0.934934
+5 0.502861 0.901961
+4 1.001296 0.901961
+SURF 0X0
+mat 5
+refs 4
+6 1.001296 1.000814
+7 0.502861 1.000814
+1 0.502858 0.967737
+0 1.001296 0.967737
+kids 0
+OBJECT poly
 name "tank-1-1"
 data 21
 Cylinder.019.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36949
@@ -47328,7 +47708,7 @@ OBJECT poly
 name "tank-1-10"
 data 21
 Cylinder.018.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36387
@@ -47366,7 +47746,7 @@ OBJECT poly
 name "tank-1-100"
 data 21
 Cylinder.017.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3584
@@ -47404,7 +47784,7 @@ OBJECT poly
 name "tank-1-1000"
 data 21
 Cylinder.016.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3509
@@ -47442,7 +47822,7 @@ OBJECT poly
 name "tank-1-10000"
 data 21
 Cylinder.020.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.34501
@@ -47480,7 +47860,7 @@ OBJECT poly
 name "tank-2-1"
 data 17
 Cylinder.019.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36949
@@ -47518,7 +47898,7 @@ OBJECT poly
 name "tank-2-10"
 data 17
 Cylinder.018.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36387
@@ -47556,7 +47936,7 @@ OBJECT poly
 name "tank-2-100"
 data 17
 Cylinder.017.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3584
@@ -47594,7 +47974,7 @@ OBJECT poly
 name "tank-2-1000"
 data 17
 Cylinder.016.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3509
@@ -47632,7 +48012,7 @@ OBJECT poly
 name "tank-2-10000"
 data 17
 Cylinder.020.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.34501
@@ -47670,7 +48050,7 @@ OBJECT poly
 name "tank-3-1"
 data 17
 Cylinder.025.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.3696
@@ -47708,7 +48088,7 @@ OBJECT poly
 name "tank-3-10"
 data 17
 Cylinder.024.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.36383
@@ -47746,7 +48126,7 @@ OBJECT poly
 name "tank-3-100"
 data 17
 Cylinder.023.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35834
@@ -47784,7 +48164,7 @@ OBJECT poly
 name "tank-3-1000"
 data 17
 Cylinder.022.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35085
@@ -47822,7 +48202,7 @@ OBJECT poly
 name "tank-3-10000"
 data 17
 Cylinder.021.mesh
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.34501
@@ -47860,7 +48240,7 @@ OBJECT poly
 name "tank-4-1"
 data 21
 Cylinder.025.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.3696
@@ -47898,7 +48278,7 @@ OBJECT poly
 name "tank-4-10"
 data 21
 Cylinder.024.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.36383
@@ -47936,7 +48316,7 @@ OBJECT poly
 name "tank-4-100"
 data 21
 Cylinder.023.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35834
@@ -47974,7 +48354,7 @@ OBJECT poly
 name "tank-4-1000"
 data 21
 Cylinder.022.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35085
@@ -48012,7 +48392,7 @@ OBJECT poly
 name "tank-4-10000"
 data 21
 Cylinder.021.mesh.002
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.34501
@@ -48050,7 +48430,7 @@ OBJECT poly
 name "tank-aft-1"
 data 21
 Cylinder.019.mesh.005
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36949
@@ -48088,7 +48468,7 @@ OBJECT poly
 name "tank-aft-10"
 data 21
 Cylinder.018.mesh.005
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36387
@@ -48126,7 +48506,7 @@ OBJECT poly
 name "tank-aft-100"
 data 21
 Cylinder.017.mesh.005
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3584
@@ -48164,7 +48544,7 @@ OBJECT poly
 name "tank-aft-1000"
 data 21
 Cylinder.016.mesh.005
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3509
@@ -48202,7 +48582,7 @@ OBJECT poly
 name "tank-aft-10000"
 data 21
 Cylinder.020.mesh.005
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.34501
@@ -48240,7 +48620,7 @@ OBJECT poly
 name "tank-fwd-1"
 data 21
 Cylinder.019.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36949
@@ -48278,7 +48658,7 @@ OBJECT poly
 name "tank-fwd-10"
 data 21
 Cylinder.018.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36387
@@ -48316,7 +48696,7 @@ OBJECT poly
 name "tank-fwd-100"
 data 21
 Cylinder.017.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3584
@@ -48354,7 +48734,7 @@ OBJECT poly
 name "tank-fwd-1000"
 data 21
 Cylinder.016.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3509
@@ -48392,7 +48772,7 @@ OBJECT poly
 name "tank-fwd-10000"
 data 21
 Cylinder.020.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.34501
@@ -48430,7 +48810,7 @@ OBJECT poly
 name "tank-intmd-1"
 data 21
 Cylinder.025.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.3696
@@ -48468,7 +48848,7 @@ OBJECT poly
 name "tank-intmd-10"
 data 21
 Cylinder.024.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.36383
@@ -48506,7 +48886,7 @@ OBJECT poly
 name "tank-intmd-100"
 data 21
 Cylinder.023.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35834
@@ -48544,7 +48924,7 @@ OBJECT poly
 name "tank-intmd-1000"
 data 21
 Cylinder.022.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35085
@@ -48582,7 +48962,7 @@ OBJECT poly
 name "tank-intmd-10000"
 data 21
 Cylinder.021.mesh.004
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.34501
@@ -48620,7 +49000,7 @@ OBJECT poly
 name "tank-main-l-1"
 data 21
 Cylinder.019.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36949
@@ -48658,7 +49038,7 @@ OBJECT poly
 name "tank-main-l-10"
 data 21
 Cylinder.018.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36387
@@ -48696,7 +49076,7 @@ OBJECT poly
 name "tank-main-l-100"
 data 21
 Cylinder.017.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3584
@@ -48734,7 +49114,7 @@ OBJECT poly
 name "tank-main-l-1000"
 data 21
 Cylinder.016.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3509
@@ -48772,7 +49152,7 @@ OBJECT poly
 name "tank-main-l-10000"
 data 21
 Cylinder.020.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.34501
@@ -48810,7 +49190,7 @@ OBJECT poly
 name "tank-main-r-1"
 data 21
 Cylinder.025.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.3696
@@ -48848,7 +49228,7 @@ OBJECT poly
 name "tank-main-r-10"
 data 21
 Cylinder.024.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.36383
@@ -48886,7 +49266,7 @@ OBJECT poly
 name "tank-main-r-100"
 data 21
 Cylinder.023.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35834
@@ -48924,7 +49304,7 @@ OBJECT poly
 name "tank-main-r-1000"
 data 21
 Cylinder.022.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35085
@@ -48962,7 +49342,7 @@ OBJECT poly
 name "tank-main-r-10000"
 data 21
 Cylinder.021.mesh.003
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.34501
@@ -49000,7 +49380,7 @@ OBJECT poly
 name "tank-wg-l-1"
 data 21
 Cylinder.019.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36949
@@ -49038,7 +49418,7 @@ OBJECT poly
 name "tank-wg-l-10"
 data 21
 Cylinder.018.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.36387
@@ -49076,7 +49456,7 @@ OBJECT poly
 name "tank-wg-l-100"
 data 21
 Cylinder.017.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3584
@@ -49114,7 +49494,7 @@ OBJECT poly
 name "tank-wg-l-1000"
 data 21
 Cylinder.016.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.3509
@@ -49152,7 +49532,7 @@ OBJECT poly
 name "tank-wg-l-10000"
 data 21
 Cylinder.020.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47203 -0.12588 -0.34501
@@ -49190,7 +49570,7 @@ OBJECT poly
 name "tank-wg-r-1"
 data 21
 Cylinder.025.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.3696
@@ -49228,7 +49608,7 @@ OBJECT poly
 name "tank-wg-r-10"
 data 21
 Cylinder.024.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.36383
@@ -49266,7 +49646,7 @@ OBJECT poly
 name "tank-wg-r-100"
 data 21
 Cylinder.023.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35834
@@ -49304,7 +49684,7 @@ OBJECT poly
 name "tank-wg-r-1000"
 data 21
 Cylinder.022.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.35085
@@ -49342,7 +49722,7 @@ OBJECT poly
 name "tank-wg-r-10000"
 data 21
 Cylinder.021.mesh.001
-crease 35.0
+crease 40.0
 texture "A-10-counter-drums.png"
 numvert 8
 -18.47159 -0.15977 -0.34501
@@ -49380,7 +49760,7 @@ OBJECT poly
 name "TNK-SEL"
 data 22
 Rotational-switch.mesh
-crease 35.0
+crease 40.0
 texture "silver.png"
 numvert 218
 -18.46933 -0.20386 -0.34309
@@ -51055,7 +51435,7 @@ OBJECT poly
 name "wing-l"
 data 17
 Cylinder.000.mesh
-crease 35.0
+crease 40.0
 texture "Back-panel.png"
 numvert 8
 -18.47159 -0.12801 -0.3768
@@ -51093,7 +51473,7 @@ OBJECT poly
 name "wing-r"
 data 17
 Cylinder.001.mesh
-crease 35.0
+crease 40.0
 texture "Back-panel.png"
 numvert 12
 -18.47159 -0.15973 -0.37693
@@ -51149,7 +51529,7 @@ OBJECT poly
 name "XFEED"
 data 10
 Switch.012
-crease 30.0
+crease 40.0
 texture "silver.png"
 numvert 416
 -18.46665 -0.1053 -0.4798

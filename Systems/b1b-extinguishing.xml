@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+
+<!-- Copyright (c) 2024 Rob Andrew (RobAndrew[G-RAND]) -->
+
+<system name="Extinguishers">
+
+
+    <property value="0">/systems/failures/extinguishers/engine[0]/loop-a</property>
+    <property value="0">/systems/failures/extinguishers/engine[0]/loop-b</property>
+    <property value="0">/systems/failures/extinguishers/engine[1]/loop-a</property>
+    <property value="0">/systems/failures/extinguishers/engine[1]/loop-b</property>
+    <property value="0">/systems/failures/extinguishers/engine[2]/loop-a</property>
+    <property value="0">/systems/failures/extinguishers/engine[2]/loop-b</property>
+    <property value="0">/systems/failures/extinguishers/engine[3]/loop-a</property>
+    <property value="0">/systems/failures/extinguishers/engine[3]/loop-b</property>
+
+    <channel name="eng_extinguisher lights">
+
+		<switch name="/systems/extinguishers/engine[0]/light">
+			<default value="0"/>
+			 <test logic="AND" value="1">
+                                /systems/engines/engine[0]/current_temperature_degC gt 790
+				/systems/extinguishers/engine[0]/Operable eq 1
+			 </test>
+		</switch> 
+
+		<switch name="/systems/extinguishers/engine[1]/light">
+			<default value="0"/>
+			 <test logic="AND" value="1">
+                                /systems/engines/engine[1]/current_temperature_degC gt 790
+				/systems/extinguishers/engine[1]/Operable eq 1
+			 </test>
+		</switch>
+
+		<switch name="/systems/extinguishers/engine[2]/light">
+			<default value="0"/>
+			 <test logic="AND" value="1">
+                                /systems/engines/engine[2]/current_temperature_degC gt 790
+				/systems/extinguishers/engine[2]/Operable eq 1
+			 </test>
+		</switch>  
+
+		<switch name="/systems/extinguishers/engine[3]/light">
+			<default value="0"/>
+			 <test logic="AND" value="1">
+                                /systems/engines/engine[3]/current_temperature_degC gt 790
+				/systems/extinguishers/engine[3]/Operable eq 1
+			 </test>
+		</switch> 
+  
+    </channel>
+
+    <channel name="eng_extinguisher switches">
+
+<!-- LEFT -->
+
+		<switch name="/systems/extinguishers/left/main_amount-percentage-cmd">
+			<default value="100"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/l_agent_switch gt 0
+			  <test logic="OR">
+                                /controls/switches/engine_1_fire-bottle-discharge gt 0
+                                /controls/switches/engine_2_fire-bottle-discharge gt 0
+			 </test>
+			</test>
+		</switch>
+
+	<actuator name="/systems/extinguishers/left/main_amount-percentage">
+            <input>/systems/extinguishers/left/main_amount-percentage-cmd</input>
+            <rate_limit sense="decr">20</rate_limit> 
+            <rate_limit sense="incr">0</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/extinguishers/left/reserve_amount-percentage-cmd">
+			<default value="100"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/l_agent_switch eq -1
+			  <test logic="OR">
+                                /controls/switches/engine_1_fire-bottle-discharge gt 0
+                                /controls/switches/engine_2_fire-bottle-discharge gt 0
+			 </test>
+			</test>
+		</switch>
+
+	<actuator name="/systems/extinguishers/left/reserve_amount-percentage">
+            <input>/systems/extinguishers/left/reserve_amount-percentage-cmd</input>
+            <rate_limit sense="decr">20</rate_limit> 
+            <rate_limit sense="incr">0</rate_limit> 
+        </actuator>
+
+<!-- RIGHT -->
+
+		<switch name="/systems/extinguishers/right/main_amount-percentage-cmd">
+			<default value="100"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/r_agent_switch gt 0
+			  <test logic="OR">
+                                /controls/switches/engine_3_fire-bottle-discharge gt 0
+                                /controls/switches/engine_4_fire-bottle-discharge gt 0
+			 </test>
+			</test>
+		</switch>
+
+	<actuator name="/systems/extinguishers/right/main_amount-percentage">
+            <input>/systems/extinguishers/right/main_amount-percentage-cmd</input>
+            <rate_limit sense="decr">20</rate_limit> 
+            <rate_limit sense="incr">0</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/extinguishers/right/reserve_amount-percentage-cmd">
+			<default value="100"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/r_agent_switch eq -1
+			  <test logic="OR">
+                                /controls/switches/engine_3_fire-bottle-discharge gt 0
+                                /controls/switches/engine_4_fire-bottle-discharge gt 0
+			 </test>
+			</test>
+		</switch>
+
+	<actuator name="/systems/extinguishers/right/reserve_amount-percentage">
+            <input>/systems/extinguishers/right/reserve_amount-percentage-cmd</input>
+            <rate_limit sense="decr">20</rate_limit> 
+            <rate_limit sense="incr">0</rate_limit> 
+        </actuator>
+
+    </channel>
+
+   <channel name="Loop 1" execrate="8">
+
+		<switch name="/systems/extinguishers/engine[0]/Operable">
+			<default value="1"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/fire_engine_1 eq 0
+			  <test logic="OR">
+                                /systems/failures/extinguishers/engine[0]/loop-a gt 0
+                                /systems/failures/extinguishers/engine[0]/loop-b gt 0
+			 </test>
+			</test>
+			  <test logic="AND" value="0">
+                                /controls/switches/fire_engine_1 eq 1
+                                /systems/failures/extinguishers/engine[0]/loop-b eq 1
+			 </test>
+			  <test logic="AND" value="0">
+                                /controls/switches/fire_engine_1 eq -1
+                                /systems/failures/extinguishers/engine[0]/loop-a eq 1
+			 </test>
+		</switch>
+
+		<switch name="/systems/extinguishers/engine[1]/Operable">
+			<default value="1"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/fire_engine_2 eq 0
+			  <test logic="OR">
+                                /systems/failures/extinguishers/engine[1]/loop-a gt 0
+                                /systems/failures/extinguishers/engine[1]/loop-b gt 0
+			 </test>
+			</test>
+			  <test logic="AND" value="0">
+                                /controls/switches/fire_engine_2 eq 1
+                                /systems/failures/extinguishers/engine[1]/loop-b eq 1
+			 </test>
+			  <test logic="AND" value="0">
+                                /controls/switches/fire_engine_2 eq -1
+                                /systems/failures/extinguishers/engine[1]/loop-a eq 1
+			 </test>
+		</switch>
+
+		<switch name="/systems/extinguishers/engine[2]/Operable">
+			<default value="1"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/fire_engine_3 eq 0
+			  <test logic="OR">
+                                /systems/failures/extinguishers/engine[2]/loop-a gt 0
+                                /systems/failures/extinguishers/engine[2]/loop-b gt 0
+			 </test>
+			</test>
+			  <test logic="AND" value="0">
+                                /controls/switches/fire_engine_3 eq 1
+                                /systems/failures/extinguishers/engine[2]/loop-b eq 1
+			 </test>
+			  <test logic="AND" value="0">
+                                /controls/switches/fire_engine_3 eq -1
+                                /systems/failures/extinguishers/engine[2]/loop-a eq 1
+			 </test>
+		</switch>
+
+		<switch name="/systems/extinguishers/engine[3]/Operable">
+			<default value="1"/>
+			 <test logic="AND" value="0">
+                                /controls/switches/fire_engine_4 eq 0
+			  <test logic="OR">
+                                /systems/failures/extinguishers/engine[3]/loop-a gt 0
+                                /systems/failures/extinguishers/engine[3]/loop-b gt 0
+			 </test>
+			</test>
+			  <test logic="AND" value="0">
+                                /controls/switches/fire_engine_4 eq 1
+                                /systems/failures/extinguishers/engine[3]/loop-b eq 1
+			 </test>
+			  <test logic="AND" value="0">
+                                /controls/switches/fire_engine_4 eq -1
+                                /systems/failures/extinguishers/engine[3]/loop-a eq 1
+			 </test>
+		</switch>
+
+ </channel>
+
+</system>
+
+

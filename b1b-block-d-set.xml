@@ -107,24 +107,10 @@
                 </dot4>
             </MFD-color>
         </model>
+        <systems> 
+            <property-rule n="111">
+                <path>Aircraft/B-1B/Systems/annunciators.xml</path>
+            </property-rule> 
+        </systems>
     </sim>
-
-    <input>
-        <keyboard> 
-            <key n="53">
-                <name>CTRL-5</name>
-                <mod-ctrl>
-                    <desc>Reload MFD display system</desc>
-                    <binding>
-                        <command>nasal-module-reload</command>
-                        <module>displays</module>
-                    </binding>
-                </mod-ctrl>
-            </key>
-        </keyboard>
-    </input> 
-
-    <nasal>
-      <displays><file>Aircraft/B-1B/Nasal/displays/blockD-displays.nas</file></displays>
-    </nasal>
 </PropertyList>

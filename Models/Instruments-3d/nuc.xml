@@ -31,16 +31,6 @@ maggse
 		 <z-m>0.0669</z-m>
 	 </center>
  </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>nuc_sw_cover</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
 
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
@@ -252,137 +242,78 @@ maggse
 	</action>
 </animation>
 
-<!-- time to waypoint -->
 <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.001</object-name>
-	 <property>autopilot/route-manager/route/num</property>
-	 <factor>0.1</factor>
-	 <step>1</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
+	<type>knob</type>
+	<object-name>BRT</object-name>
+	<property>controls/lighting/nuc-panel</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>-1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.014</x-m>
+		<y-m>0.1809</y-m>
+		<z-m>-0.0526</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/nuc-panel</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation>
 
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.003</object-name>
-	 <property>autopilot/route-manager/wp/eta_h</property>
-	 <factor>0.01</factor>
-	 <step>10</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.002</object-name>
-	 <property>autopilot/route-manager/wp/eta_h</property>
-	 <factor>0.1</factor>
-	 <step>1</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.004</object-name>
-	 <property>autopilot/route-manager/wp/eta_m</property>
-	 <factor>0.01</factor>
-	 <step>10</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.005</object-name>
-	 <property>autopilot/route-manager/wp/eta_m</property>
-	 <factor>0.1</factor>
-	 <step>1</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- <!-- distance to wp -->
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt</object-name>
-	 <property>autopilot/route-manager/wp/dist</property>
-	 <factor>0.0001</factor>
-	 <step>1000</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.006</object-name>
-	 <property>autopilot/route-manager/wp/dist</property>
-	 <factor>0.001</factor>
-	 <step>100</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.007</object-name>
-	 <property>autopilot/route-manager/wp/dist</property>
-	 <factor>0.01</factor>
-	 <step>10</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
- <animation>
-	 <type>textranslate</type>
-	 <object-name>nuc_pt.008</object-name>
-	 <property>autopilot/route-manager/wp/dist</property>
-	 <factor>0.1</factor>
-	 <step>1</step>
-	 <axis>
-		 <x>0</x>
-		 <y>1</y>
-		 <z>0</z>
-	 </axis>
- </animation>
+<animation>
+	<type>select</type>
+	<object-name>SEQ_1</object-name> 
+	<object-name>SEQ_10</object-name> 
+	<object-name>SEQ_100</object-name> 
+	<object-name>SEQ_1000</object-name> 
+	<object-name>sec</object-name> 
+	<object-name>sec.2</object-name> 
+	<object-name>min</object-name> 
+	<object-name>min.2</object-name> 
+	<object-name>hr</object-name> 
+	<object-name>nuc_pt.001</object-name> 
+        <condition>  
+         <greater-than> 
+          <property>systems/electrical/bus/ac-2</property>
+          <value>220</value>
+         </greater-than> 
+        </condition>
+</animation>
 
  <animation>
 	<type>material</type>
-	<object-name>nuc_pt</object-name>
+	<object-name>SEQ_1</object-name>
+	<object-name>SEQ_10</object-name>
+	<object-name>SEQ_100</object-name>
+	<object-name>SEQ_1000</object-name>
+	<object-name>sec</object-name>
+	<object-name>sec.2</object-name>
+	<object-name>min</object-name>
+	<object-name>min.2</object-name>
+	<object-name>hr</object-name>
 	<object-name>nuc_pt.001</object-name>
-	<object-name>nuc_pt.002</object-name>
-	<object-name>nuc_pt.003</object-name>
-	<object-name>nuc_pt.004</object-name>
-	<object-name>nuc_pt.005</object-name>
-	<object-name>nuc_pt.006</object-name>
-	<object-name>nuc_pt.007</object-name>
-	<object-name>nuc_pt.008</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/nuc-panel</factor-prop>
 	</emission>
 </animation>
 

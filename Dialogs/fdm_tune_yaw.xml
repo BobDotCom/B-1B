@@ -1,0 +1,194 @@
+<PropertyList>
+    <name>fdm_tune_yaw</name>
+    <modal>false</modal>
+    <layout>vbox</layout>
+    <group>
+        <layout>hbox</layout>
+        <text>
+            <halign>center</halign>
+            <label>Tune Yaw</label>
+        </text>
+    </group>
+    <hrule/>
+    <group>
+        <layout>hbox</layout>
+        <group>
+            <layout>vbox</layout>
+            <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Yaw_beta</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Yaw_beta</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/yaw/beta</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/yaw/beta</property>
+                    <live>true</live>
+                </text>
+            </group>
+                        <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Yaw_damp</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Yaw_damp</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/yaw/damp</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/yaw/damp</property>
+                    <live>true</live>
+                </text>
+            </group>
+                        <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Yaw_rudder</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Yaw_rudder</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/yaw/rudder</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/yaw/rudder</property>
+                    <live>true</live>
+                </text>
+            </group>
+                        <group>
+                <layout>hbox</layout>
+                <text>
+                    <halign>left</halign>
+                    <live>true</live>
+
+                    <pref-width>100</pref-width>
+                    <label>Yaw_aileron</label>
+                </text>
+
+                <text>
+                    <halign>left</halign>
+                    <label>-9.9999</label>
+                    <pref-width>80</pref-width>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/aero/force/Yaw_aileron</property>
+                    <live>true</live>
+                </text>
+
+                <slider>
+                    <vertical>false</vertical>
+                    <pref-width>500</pref-width>
+                    <fraction>0</fraction>
+                    <property>/fdm/jsbsim/tune/yaw/aileron</property>
+                    <min>-2</min>
+                    <max>2</max>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+                </slider>
+                <text>
+                    <halign>right</halign>
+                    <label>-9.9999</label>
+                    <format>%-0.4f</format>
+                    <property>/fdm/jsbsim/tune/yaw/aileron</property>
+                    <live>true</live>
+                </text>
+            </group>
+        </group>
+
+    </group>
+    <hrule />
+    <group>
+        <layout>hbox</layout>
+        <!-- buttons -->
+
+        <button>
+            <legend>Apply</legend>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </button>
+
+        <button>
+            <legend>Close</legend>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+</PropertyList>
