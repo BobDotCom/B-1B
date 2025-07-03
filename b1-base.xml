@@ -849,9 +849,6 @@ B-1B set file.
             </station>
         </armament>
 
-        <gear>
-            <brake-parking type="double">1.0</brake-parking>
-        </gear>
         <flight>
             <wing-sweep type="double">-1.0</wing-sweep>
             <flaps type="double">0.0</flaps>
@@ -1056,6 +1053,9 @@ B-1B set file.
          <M.1_switch type="int">-1</M.1_switch>
          <M.3A_switch type="int">-1</M.3A_switch>
         </iff>
+        <tacan>
+        <serviceable type="bool">0</serviceable>
+        </tacan>
     </instrumentation>
 
     <input>

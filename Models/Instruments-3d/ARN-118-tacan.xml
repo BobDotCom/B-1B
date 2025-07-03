@@ -209,6 +209,97 @@
 		</action>
 	</animation>
 
+<animation> 
+ <type>slider</type> 
+  <object-name>test-button</object-name>
+  <property>instrumentation/tacan/test-button</property>
+    <factor>0.004</factor> 
+ 	<axis>
+		<x>0</x>
+		<y>0</y>
+		<z>-1</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>instrumentation/tacan/test-button</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/tacan/test-button</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
+
+</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>select-knob</object-name>
+		<property>instrumentation/tacan/serviceable</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>35.0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.015757</x-m>
+			<y-m>0.041874</y-m>
+			<z-m>0.010785</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>select-knob</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.2</interval-sec>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/tacan/serviceable</property>
+				<min>0.0</min>
+				<max>1.0</max>
+		        </binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>select</type> 
+		<object-name>test-lamp_0</object-name>
+		<condition>
+                   <and>
+			<equals>
+				<property>instrumentation/tacan/serviceable</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>instrumentation/tacan/test-button</property>
+				<value>1</value>
+			</equals>
+			<greater-than>
+				<property>systems/electrical/bus/ac-4</property>
+				<value>27</value>
+			</greater-than>
+                   </and>
+		</condition>
+	</animation>
 
 	<!-- lighting -->
 
