@@ -2,4 +2,28 @@
 
  <path>pfdb1.ac</path>
 
+    <effect>
+        <inherits-from>Aircraft/B-1B/Models/Effects/displays/crt</inherits-from>
+        <object-name>AI</object-name>
+    </effect>
+
+	<animation>
+        <object-name>AI</object-name>
+        <type>material</type>
+        <ambient>
+            <red>  1</red>
+            <green>1</green>
+            <blue> 1</blue>
+        </ambient>
+        <diffuse>
+            <red>  1</red>
+            <green>1</green>
+            <blue> 1</blue>
+        </diffuse>
+        <emission>
+            <red>  1</red>
+            <green>1</green>
+            <blue> 1</blue>
+        </emission>
+    </animation>
 </PropertyList>

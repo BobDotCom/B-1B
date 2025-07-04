@@ -113,6 +113,12 @@
             </property-rule> 
         </systems>
     </sim>
+    <controls>
+      <pfd>
+        <brightness type="float">1</brightness>
+        <contrast type="float">1.0</contrast>
+      </pfd>
+    </controls>
         <input>
         <keyboard> 
             <key n="53">
