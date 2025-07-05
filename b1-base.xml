@@ -514,6 +514,9 @@ B-1B set file.
             <autopilot n="1">
                 <path>Aircraft/B-1B/Systems/engines.xml</path>
             </autopilot>
+            <autopilot n="2">
+                <path>Aircraft/B-1B/Systems/instrumentation.xml</path>
+            </autopilot>            
             <property-rule n="200">
                 <path>Systems/annunciators.xml</path>
             </property-rule>
