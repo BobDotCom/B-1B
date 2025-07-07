@@ -115,8 +115,8 @@
     </sim>
     <controls>
       <pfd>
-        <brightness type="float">1</brightness>
-        <contrast type="float">1.0</contrast>
+        <brightness type="float">1.45</brightness>
+        <contrast-new type="float">0.5</contrast-new>
       </pfd>
     </controls>
         <input>

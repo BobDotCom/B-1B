@@ -27,8 +27,11 @@
 			<use>controls/pfd/brightness</use>
 		</display-bright>
 		<contrast type="float">
-			<use>controls/pfd/contrast</use>
+			<use>instrumentation/crt/contrast</use>
 		</contrast>
+		<gamma type="float">
+			<use>controls/pfd/contrast-new</use>
+		</gamma>
 	</parameters>
 
 	<technique n="5">
@@ -115,6 +118,11 @@
 				<name>contrast</name>
 				<type>float</type>
 				<value><use>contrast</use></value>
+			</uniform>
+			<uniform>
+				<name>gamma</name>
+				<type>float</type>
+				<value><use>gamma</use></value>
 			</uniform>
 		</pass>
 	</technique>

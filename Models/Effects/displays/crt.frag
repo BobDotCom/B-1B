@@ -12,10 +12,11 @@ uniform samplerCube Environment;
 uniform int display_enabled;
 uniform float display_brt;
 uniform float contrast;
+uniform float gamma; 
 
 float INTENSITY = 0.15;
 float BRIGHTBOOST = 1;
-float DISTORTION = -0;
+float DISTORTION = 0;
 float THRESHOLD = 0.2;
 
 vec2 TextureSize = vec2(800, 950);
@@ -23,7 +24,7 @@ vec2 TextureSize = vec2(800, 950);
 vec4 bloomTexture2D(sampler2D texture, vec2 texCoords)
 {
 	vec4 texel = vec4(0, 0, 0, 0);
-	float blur = 0.3;
+	float blur = 0.35;
 	int size = 3;
 
 	for(int x = -size; x <= size; x++)
@@ -101,13 +102,12 @@ vec3 flickering(vec2 position, vec3 texel)
 void main()
 {
     vec3 texel = vec3(0.0, 0.0, 0.0);
-    vec3 dirt = 0.1*texture2D(DirtTex, gl_TexCoord[0].xy).rgb;
+    vec3 dirt = 0.1 * texture2D(DirtTex, gl_TexCoord[0].xy).rgb;
 
-    // crt-effect
-    if(display_enabled > 0) {
+    if (display_enabled > 0) {
         vec2 position = distort(gl_TexCoord[0].xy);
 
-        if(position.x > 0.0 && position.y > 0.0 && position.x < 1.0 && position.y < 1.0) {
+        if (position.x > 0.0 && position.y > 0.0 && position.x < 1.0 && position.y < 1.0) {
             texel = texture2D(BaseTex, position).rgb;
             texel = bloomTexture2D(BaseTex, position).rgb;
             texel = rdrNoise(position, texel);
@@ -115,6 +115,8 @@ void main()
             texel = scanline(texel);
             texel *= display_brt;
             texel = dispContrast(texel, contrast);
+            texel = pow(max(texel, vec3(1e-4)), vec3(1.0 / gamma));
+
         }
         // texel = frame(position, texel);
     }
