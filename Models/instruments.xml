@@ -640,7 +640,7 @@ B-1BFS
 	  <offsets>
 		  <x-m>-17.7543</x-m>
 		  <y-m>-0.140</y-m>
-		  <z-m>0.705</z-m>
+		  <z-m>0.717</z-m>
 		  <pitch-deg>-90</pitch-deg>
 	  </offsets>
   </model>
@@ -649,8 +649,8 @@ B-1BFS
 	  <name>tacan-sw</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/ARN-118-tacan.xml</path>
 	  <offsets>
-		  <x-m>-17.7183</x-m>
-		  <y-m>-0.292</y-m>
+		  <x-m>-17.7205</x-m>
+		  <y-m>-0.295</y-m>
 		  <z-m>0.720</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -715,8 +715,8 @@ B-1BFS
 	  <name>TO-LDG</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/TO-LDG.xml</path>
 	  <offsets>
-		  <x-m>-17.6133</x-m>
-		  <y-m>-0.288</y-m>
+		  <x-m>-17.612</x-m>
+		  <y-m>-0.29</y-m>
 		  <z-m> 0.709</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
