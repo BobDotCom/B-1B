@@ -158,7 +158,7 @@ more to come :-)
 	  <name>Cockpit_screens</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/MFD.xml</path>   
 	  <offsets>
-		  <x-m>-0.09</x-m>
+		  <x-m>0.095</x-m>
 		  <y-m>0.011</y-m>
 		  <z-m>-0.1</z-m>
 		  <pitch-deg>0</pitch-deg>
