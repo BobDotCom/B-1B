@@ -1,4 +1,5 @@
 # Based upon display-system.nas from F-16
+setprop("fdm/jsbsim/electric/output/tvtab2",1);
 
 var symbolSize = {
 	hsd: {
@@ -366,8 +367,21 @@ var DisplayDevice = {
 	setupProperties: func {
         me.input = {
             alt_ft:               "instrumentation/altimeter/indicated-altitude-ft",
+            heading:              "orientation/heading-deg",
+            ias:                  "velocities/airspeed-kt",
+            inhg:                 "instrumentation/altimeter/setting-inhg",
+            mach:                 "instrumentation/airspeed-indicator/indicated-mach",
+            Nz:                   "accelerations/pilot-gdamped",
+            pitch:                "orientation/pitch-deg",
+            roll:                 "orientation/roll-deg",
+            targetMach:           "autopilot/settings/target-mach",
+            # APHeadingBug:         "autopilot/settings/heading-bug-deg",
+            targetSpeed:          "autopilot/settings/target-speed-kt",
+            targetAltitude:       "autopilot/settings/target-altitude-ft",
+            vFps:                 "velocities/vertical-speed-fps", # Multiply by 60 for fpm
+            FrameRate :           "sim/frame-rate",
+            frame_rate_worst:     "sim/frame-rate-worst",
             alt_true_ft:          "position/altitude-ft",
-            heading:              "instrumentation/heading-indicator/indicated-heading-deg",
             radarStandby:         "instrumentation/radar/radar-standby",
             rad_alt:              "instrumentation/radar-altimeter/radar-altitude-ft",
             rad_alt_ready:        "instrumentation/radar-altimeter/ready",
@@ -376,31 +390,17 @@ var DisplayDevice = {
             rmId:                 "autopilot/route-manager/wp/id",
             rmBearing:            "autopilot/route-manager/wp/true-bearing-deg",
             RMCurrWaypoint:       "autopilot/route-manager/current-wp",
-            roll:                 "instrumentation/attitude-indicator/indicated-roll-deg",
             headTrue:             "orientation/heading-deg",
-            roll:                 "orientation/roll-deg",
-            pitch:                "orientation/pitch-deg",
-            nav0InRange:          "instrumentation/nav[0]/in-range",
             APLockHeading:        "autopilot/locks/heading",
             APTrueHeadingErr:     "autopilot/internal/true-heading-error-deg",
             APnav0HeadingErr:     "autopilot/internal/nav1-heading-error-deg",
-            APHeadingBug:         "autopilot/settings/heading-bug-deg",
             RMActive:             "autopilot/route-manager/active",
-            nav0Heading:          "instrumentation/nav[0]/heading-deg",
-            ias:                  "instrumentation/airspeed-indicator/indicated-speed-kt",
-            tas:                  "instrumentation/airspeed-indicator/true-speed-kt",
+            tas:                  "fdm/jsbsim/velocities/vtrue-kts",
             gearsPos:             "gear/gear/position-norm",
             latitude:             "position/latitude-deg",
             longitude:            "position/longitude-deg",
-            mach:                 "instrumentation/airspeed-indicator/indicated-mach",
-            inhg:                 "instrumentation/altimeter/setting-inhg",
             tacanCh:              "instrumentation/tacan/display/channel",
             ilsCh:                "instrumentation/nav[0]/frequencies/selected-mhz",
-            servStatic:				 "systems/static/serviceable",
-            servPitot:				 "systems/pitot/serviceable",
-            servAtt                   : "instrumentation/attitude-indicator/serviceable",
-            servHead                  : "instrumentation/heading-indicator/serviceable",
-            servTurn                  : "instrumentation/turn-indicator/serviceable",
         };
 
         foreach(var name; keys(me.input)) {
@@ -1252,12 +1252,12 @@ var DisplaySystem = {
 		    #print(me.roll_pointer.getCenter());
 		    me.tspeed.updateText(sprintf("%d", noti.getproper("targetSpeed")));
 
-            me.fpmIndicator.setTranslation(0, -math.clamp(math.clamp(noti.getproper("vFpm"), -1000, 1000) + noti.getproper("vFpm"), -4000, 4000) / 1000 * 35);
+            me.fpmIndicator.setTranslation(0, -math.clamp(math.clamp((noti.getproper("vFps")*60), -1000, 1000) + (noti.getproper("vFps")*60), -4000, 4000) / 1000 * 35);
             me.gforce.setTranslation(0, (noti.getproper("Nz")-1)*29);
             me.speed.setTranslation(0, (noti.getproper("ias")-50)/20*28);
 
 		    # HSI
-		    me.targetHdg.updateText(sprintf("%03d", noti.getproper("APHeadingBug")));
+		    # me.targetHdg.updateText(sprintf("%03d", noti.getproper("APHeadingBug")));
 		},
 		exit: func {
 			printDebug("Exit ",me.name~" on ",me.device.name);
@@ -1570,4 +1570,4 @@ var printfDebug = func {if (displayDebug) {var str = call(sprintf,arg,nil,nil,va
 # Note calling printf directly with call() will sometimes crash the sim, so we call sprintf instead.
 
 
-main(nil);# disable this line if running as module
+# main(nil);# disable this line if running as module

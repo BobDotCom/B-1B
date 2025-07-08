@@ -1,4 +1,4 @@
-disabled<?xml version="1.0"?>
+<?xml version="1.0"?>
 <PropertyList include="b1-base.xml">
     <sim>
         <variant-id>5</variant-id>
@@ -108,8 +108,22 @@ disabled<?xml version="1.0"?>
             </MFD-color>
         </model>
     </sim>
+    <input>
+        <keyboard> 
+            <key n="53">
+                <name>CTRL-5</name>
+                <mod-ctrl>
+                    <desc>Reload MFD display system</desc>
+                    <binding>
+                        <command>nasal-module-reload</command>
+                        <module>displays</module>
+                    </binding>
+                </mod-ctrl>
+            </key>
+        </keyboard>
+    </input> 
 
-    <nasal>
+<!--     <nasal>
       <displays><file>Aircraft/B-1B/Nasal/displays/blockE-displays.nas</file></displays>
-    </nasal>
+    </nasal> -->
 </PropertyList>

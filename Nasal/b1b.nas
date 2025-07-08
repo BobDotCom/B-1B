@@ -1,11 +1,19 @@
 _setlistener("/sim/signals/fdm-initialized", func {
     rtExec_loop();
 	# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
-var hmd = modules.Module.new("displays");
-hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
-hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
-hmd.setMainFile("blockD-displays.nas");
-hmd.load();
+  if (getprop("/sim/variant-id") == 5){
+    var hmd = modules.Module.new("displays");
+    hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
+    hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
+    hmd.setMainFile("blockE-displays.nas");
+    hmd.load();
+  } else {
+    var hmd = modules.Module.new("displays");
+    hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
+    hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
+    hmd.setMainFile("blockD-displays.nas");
+    hmd.load();
+  };
 	init_b1b();
 });
 
@@ -25,10 +33,10 @@ var SubSystem_Main = {
             pitch:                "orientation/pitch-deg",
             roll:                 "orientation/roll-deg",
             targetMach:           "autopilot/settings/target-mach",
-            APHeadingBug:         "autopilot/settings/heading-bug-deg",
+            # APHeadingBug:         "autopilot/settings/heading-bug-deg",
             targetSpeed:          "autopilot/settings/target-speed-kt",
             targetAltitude:       "autopilot/settings/target-altitude-ft",
-            vFpm:                 "instrumentation/vertical-speed-indicator/indicated-speed-fpm",
+            vFps:                 "velocities/vertical-speed-fps", # Multiply by 60 for fpm
             FrameRate :           "sim/frame-rate",
             frame_rate_worst:     "sim/frame-rate-worst",
             alt_true_ft:          "position/altitude-ft",
@@ -45,7 +53,7 @@ var SubSystem_Main = {
             APTrueHeadingErr:     "autopilot/internal/true-heading-error-deg",
             APnav0HeadingErr:     "autopilot/internal/nav1-heading-error-deg",
             RMActive:             "autopilot/route-manager/active",
-            tas:                  "instrumentation/airspeed-indicator/true-speed-kt",
+            tas:                  "fdm/jsbsim/velocities/vtrue-kts",
             gearsPos:             "gear/gear/position-norm",
             latitude:             "position/latitude-deg",
             longitude:            "position/longitude-deg",
