@@ -247,7 +247,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/eng_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.0303</x-m>
-		  <y-m>-0.195</y-m>
+		  <y-m>-0.205</y-m>
 		  <z-m> 1.201</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -258,7 +258,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/mac_ind.xml</path>
 	  <offsets>
 		  <x-m>-18.0303</x-m>
-		  <y-m>-0.213</y-m>
+		  <y-m>-0.219</y-m>
 		  <z-m> 1.208</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -269,7 +269,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fcgms.xml</path>
 	  <offsets>
 		  <x-m>-18.0343</x-m>
-		  <y-m>-0.282</y-m>
+		  <y-m>-0.305</y-m>
 		  <z-m> 1.200</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -280,7 +280,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/fuel_flow.xml</path>
 	  <offsets>
 		  <x-m>-18.0363</x-m>
-		  <y-m> 0.182</y-m>
+		  <y-m> 0.16</y-m>
 		  <z-m> 1.160</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
