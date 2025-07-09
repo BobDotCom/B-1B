@@ -1143,46 +1143,38 @@ var DisplaySystem = {
 		},
 		setup: func {
 			printDebug(me.name," on ",me.device.name," is being setup");
-			canvas.parsesvg(me.group, "Nasal/displays/PFD1.svg");
-            me.altimeterPressure = me.group.getElementById("altimeterPressure").set("font","GordonURW-Med.ttf");
-            me.airspeed = me.group.getElementById("airspeed").set("font","GordonURW-Med.ttf");
-            me.altitude_1k = me.group.getElementById("altitude-1k").set("font","GordonURW-Med.ttf");
-            me.altitude = me.group.getElementById("altitude").set("font","GordonURW-Med.ttf");
-            me.taltitude_1k = me.group.getElementById("taltitude-1k").set("font","GordonURW-Med.ttf");
-            me.taltitude = me.group.getElementById("taltitude").set("font","GordonURW-Med.ttf");
-            me.asi = me.group.getElementById("asi");
-            me.roll_pointer = me.group.getElementById("roll_pointer");
-            #me.asi.setCenter(384, 256);
-            me.gravity = me.group.getElementById("gravity").set("font","GordonURW-Med.ttf");
-            me.hdg = me.group.getElementById("hdg").set("font","GordonURW-Med.ttf");
-            me.mach = me.group.getElementById("mach").set("font","GordonURW-Med.ttf");
-            me.tmach = me.group.getElementById("tmach").set("font","GordonURW-Med.ttf");
-            me.ladder = me.group.getElementById("ladder");
-            me.ground = me.group.getElementById("ground");
-            me.horizon = me.group.getElementById("horizon");
-            me.tspeed = me.group.getElementById("tspeed").set("font","GordonURW-Med.ttf");
-            me.fpmIndicator = me.group.getElementById("fpm-indicator");
+
+			var font_mapper = func(family, weight) {
+				return "DULarge.ttf";
+			};
+		
+			canvas.parsesvg(me.group, "Nasal/displays/PFD1.svg", {"font-mapper": font_mapper});
+		
+			var svgKeys = ["altimeterPressure", "airspeed", "altitude-1k", "altitude", "taltitude-1k", "taltitude", "asi", "roll_pointer", "gravity", "hdg", "mach", "tmach", "ladder", "ground", "horizon", "tspeed", "fpm-indicator"];
+			foreach(var key; svgKeys) {
+				me[key] = me.group.getElementById(key);
+				
+				var clip_el = me.group.getElementById(key ~ "_clip");
+				if (clip_el != nil) {
+					clip_el.setVisible(0);
+					var tranRect = clip_el.getTransformedBounds();
+					
+					var clip_rect = sprintf("rect(%d, %d, %d, %d)", 
+						tranRect[1], # 0 ys
+						tranRect[2], # 1 xe
+						tranRect[3], # 2 ye
+						tranRect[0] # 3 xs
+					);
+					
+					# Coordinates are top, right, bottom, left (ys, xe, ye, xs) ref: l621 of simgear/canvas/CanvasElement.cxx
+					me[key].set("clip", clip_rect);
+					me[key].set("clip-frame", canvas.Element.PARENT);
+				}
+			}
+
             me.gforce = me.group.getElementById("gforce").set("clip", "rect(117px, 156px, 396px, 0px)");
             me.speed = me.group.getElementById("speed").set("clip", "rect(117px, 156px, 396px, 0px)");
 
-            foreach (var child; me.group.getElementById("ladder-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("ib-ladder-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("it-ladder-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("vfpm-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("gforce-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("speed-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
             me.machFunc = func (mach) {
                 if (substr(mach, 0, 1) == "0") {
                     return substr(mach, 1);
@@ -1196,18 +1188,21 @@ var DisplaySystem = {
             me.targetHdg = me.group.getElementById("target-hdg").set("font","GordonURW-Med.ttf");
             me.targetCrs = me.group.getElementById("target-crs").set("font","GordonURW-Med.ttf");
 
+
+
+
             # Enable text updates (updateText is more efficient than setText, but needs initialization)
-            me.altimeterPressure.enableUpdate();
-            me.airspeed.enableUpdate();
-            me.altitude_1k.enableUpdate();
-            me.altitude.enableUpdate();
-            me.taltitude_1k.enableUpdate();
-            me.taltitude.enableUpdate();
-            me.gravity.enableUpdate();
-            me.hdg.enableUpdate();
-            me.mach.enableUpdate();
-            me.tmach.enableUpdate();
-            me.tspeed.enableUpdate();
+            me["altimeterPressure"].enableUpdate();
+            me["airspeed"].enableUpdate();
+            me["altitude-1k"].enableUpdate();
+            me["altitude"].enableUpdate();
+            me["taltitude-1k"].enableUpdate();
+            me["taltitude"].enableUpdate();
+            me["gravity"].enableUpdate();
+            me["hdg"].enableUpdate();
+            me["mach"].enableUpdate();
+            me["tmach"].enableUpdate();
+            me["tspeed"].enableUpdate();
             me.targetHdg.enableUpdate();
             me.targetCrs.enableUpdate();
 		},
@@ -1225,36 +1220,36 @@ var DisplaySystem = {
 			printDebug(me.name,": ",controlName," activated on ",me.device.name);
 		},
 		update: func (noti = nil) {
-		    me.altimeterPressure.updateText(sprintf("%.2f", noti.getproper("inhg")));
-		    me.airspeed.updateText(sprintf("%d", noti.getproper("ias")));
-		    me.altitude_1k.updateText(sprintf("%d", noti.getproper("alt_ft") / 1000)); # XXxxx
+		    me["altimeterPressure"].updateText(sprintf("%.2f", noti.getproper("inhg")));
+		    me["airspeed"].updateText(sprintf("%d", noti.getproper("ias")));
+		    me["altitude-1k"].updateText(sprintf("%d", noti.getproper("alt_ft") / 1000)); # XXxxx
 		    #me.altitude.setText(sprintf("%03d", math.fmod(noti.getproper("alt_ft"), 1000)));  # xxXXX
-		    me.altitude.updateText(sprintf("%02d0", math.fmod(noti.getproper("alt_ft"), 1000) / 10));  # xxXX0
-		    me.taltitude_1k.updateText(sprintf("%d", noti.getproper("targetAltitude") / 1000)); # XXxxx
-		    me.taltitude.updateText(sprintf("%02d0", math.fmod(noti.getproper("targetAltitude"), 1000) / 10));  # xxXX0
-            me.gravity.updateText(sprintf("%.1f", noti.getproper("Nz")));
-            me.hdg.updateText(sprintf("%03d", noti.getproper("heading")));
+		    me["altitude"].updateText(sprintf("%02d0", math.fmod(noti.getproper("alt_ft"), 1000) / 10));  # xxXX0
+		    me["taltitude-1k"].updateText(sprintf("%d", noti.getproper("targetAltitude") / 1000)); # XXxxx
+		    me["taltitude"].updateText(sprintf("%02d0", math.fmod(noti.getproper("targetAltitude"), 1000) / 10));  # xxXX0
+            me["gravity"].updateText(sprintf("%.1f", noti.getproper("Nz")));
+            me["hdg"].updateText(sprintf("%03d", noti.getproper("headingMag")));
 
             # If <1 we want to hide the leading 0, but sprintf doesn't support that directly
-            me.mach.updateText(me.machFunc(sprintf("%.2f/", noti.getproper("mach"))));
-            me.tmach.updateText(me.machFunc(sprintf("%.2f", noti.getproper("targetMach"))));
+            me["mach"].updateText(me.machFunc(sprintf("%.2f/", noti.getproper("mach"))));
+            me["tmach"].updateText(me.machFunc(sprintf("%.2f", noti.getproper("targetMach"))));
 
             # ASI is about 116px per 10deg of pitch
 		    #me.asi.setTranslation(0, noti.getproper("pitch")*11.6);
-		    me.ladder.setTranslation(0, noti.getproper("pitch")*11.6);
-            me.ground.setTranslation(0, noti.getproper("pitch")*11.6);
-            me.horizon.setTranslation(0, noti.getproper("pitch")*11.6);
+		    me["ladder"].setTranslation(0, noti.getproper("pitch")*11.6);
+            me["ground"].setTranslation(0, noti.getproper("pitch")*11.6);
+            me["horizon"].setTranslation(0, noti.getproper("pitch")*11.6);
 		    #me.asiTicks.setTranslation(0, noti.getproper("pitch")*11.6);
 		    #me.asi.setCenter(0, noti.getproper("pitch")*11.6);
-		    me.asi.setRotation(-noti.getproper("roll")*D2R);
+		    me["asi"].setRotation(-noti.getproper("roll")*D2R);
 		    #me.roll_pointer.setRotation(-noti.getproper("roll")*D2R);
-		    me.roll_pointer.setRotation(-math.clamp(noti.getproper("roll"), -45, 45)*D2R);
+		    me["roll_pointer"].setRotation(-math.clamp(noti.getproper("roll"), -45, 45)*D2R);
 		    #print(me.roll_pointer.getCenter());
-		    me.tspeed.updateText(sprintf("%d", noti.getproper("targetSpeed")));
+		    me["tspeed"].updateText(sprintf("%d", noti.getproper("targetSpeed")));
 
-            me.fpmIndicator.setTranslation(0, -math.clamp(math.clamp((noti.getproper("vFps")*60), -1000, 1000) + (noti.getproper("vFps")*60), -4000, 4000) / 1000 * 35);
-            me.gforce.setTranslation(0, (noti.getproper("Nz")-1)*29);
-            me.speed.setTranslation(0, (noti.getproper("ias")-50)/20*28);
+            me["fpm-indicator"].setTranslation(0, -math.clamp(math.clamp((noti.getproper("vFps")*60), -1000, 1000) + (noti.getproper("vFps")*60), -4000, 4000) / 1000 * 35);
+            me["gforce"].setTranslation(0, (noti.getproper("Nz")-1)*29);
+            me["speed"].setTranslation(0, (noti.getproper("ias")-50)/20*28);
 
 		    # HSI
 		    # me.targetHdg.updateText(sprintf("%03d", noti.getproper("APHeadingBug")));

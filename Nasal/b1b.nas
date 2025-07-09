@@ -25,7 +25,8 @@ var SubSystem_Main = {
         input = {
             # PFD
             alt_ft:               "instrumentation/altimeter/indicated-altitude-ft",
-            heading:              "orientation/heading-deg",
+            headingTrue:          "orientation/heading-deg",
+            headingMag:           "orientation/heading-magnetic-deg",
             ias:                  "velocities/airspeed-kt",
             inhg:                 "instrumentation/altimeter/setting-inhg",
             mach:                 "instrumentation/airspeed-indicator/indicated-mach",
