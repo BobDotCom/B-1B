@@ -1058,8 +1058,8 @@
         <factor>-0.0010</factor>
       </pitch>
       <volume>
-        <min>0.7</min>
-        <max>1.0</max>
+        <min>0.2</min>
+        <max>0.5</max>
       </volume>
     </gear>
 
@@ -1077,6 +1077,10 @@
     <gear>
       <name>gear-lock0a</name>
       <path>Aircraft/B-1B/Sounds/gear-lock.wav</path>
+      <volume>
+        <min>0.1</min>
+        <max>0.3</max>
+      </volume>
       <condition>
         <equals>
           <property>/gear/gear[0]/position-norm</property>
