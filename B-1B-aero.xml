@@ -83,6 +83,34 @@
      <y>   0.00 </y>
      <z> -43.80 </z>
    </location>
+
+  <pointmass name="bayF">
+    <weight unit="LBS"> 0 </weight>
+    <location name="POINTMASS" unit="M">
+      <x> -9.84805 </x>
+      <y> -0.02 </y>
+      <z> 0 </z>
+    </location>
+  </pointmass>
+
+  <pointmass name="bayM">
+    <weight unit="LBS"> 0 </weight>
+    <location name="POINTMASS" unit="M">
+      <x> -4.939 </x>
+      <y> -0.02 </y>
+      <z> -0 </z>
+    </location>
+  </pointmass>
+
+  <pointmass name="bayA">
+    <weight unit="LBS"> 0 </weight>
+    <location name="POINTMASS" unit="M">
+      <x> 5.2 </x>
+      <y> -0.02 </y>
+      <z> 0 </z>
+    </location>
+  </pointmass>
+
  </mass_balance>
     <system file="eng_ind.xml"/>
     <system file="b1b-engines.xml"/>
