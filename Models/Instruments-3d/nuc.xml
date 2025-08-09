@@ -291,7 +291,7 @@ maggse
 	<object-name>nuc_pt.001</object-name> 
         <condition>  
          <greater-than> 
-          <property>systems/electrical/bus/ac-2</property>
+          <property>systems/electrical/bus/ac-2/voltage</property>
           <value>220</value>
          </greater-than> 
         </condition>

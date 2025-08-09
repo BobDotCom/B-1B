@@ -285,14 +285,20 @@ maggse
 		<object-name>1_GEN</object-name>
 		<condition>
                     <and>
-			<greater-than-equals>
-				<property>systems/electrical/bus/ac-3/voltage</property>
-				<value>220</value>
-			</greater-than-equals>
 			<equals>
 				<property>systems/electrical/lights/gen-1-fault</property>
 				<value>1</value>
 			</equals>
+                      <or>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ac-3/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ess/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+                      </or>
                     </and>
 		</condition>
 	</animation> 
@@ -342,14 +348,20 @@ maggse
 		<object-name>2_GEN</object-name>
 		<condition>
                     <and>
-			<greater-than-equals>
-				<property>systems/electrical/bus/ac-3/voltage</property>
-				<value>220</value>
-			</greater-than-equals>
 			<equals>
 				<property>systems/electrical/lights/gen-2-fault</property>
 				<value>1</value>
 			</equals>
+                      <or>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ac-3/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ess/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+                      </or>
                     </and>
 		</condition>
 	</animation>
@@ -399,14 +411,20 @@ maggse
 		<object-name>3_GEN</object-name>
 		<condition>
                     <and>
-			<greater-than-equals>
-				<property>systems/electrical/bus/ac-3/voltage</property>
-				<value>220</value>
-			</greater-than-equals>
 			<equals>
 				<property>systems/electrical/lights/gen-3-fault</property>
 				<value>1</value>
 			</equals>
+                      <or>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ac-3/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ess/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+                      </or>
                     </and>
 		</condition>
 	</animation>
