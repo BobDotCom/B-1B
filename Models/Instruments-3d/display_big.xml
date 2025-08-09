@@ -105,7 +105,7 @@ sweat by maggse
           <condition>
              <and>
          	<greater-than> 
-          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <property>systems/electrical/bus/ac-ess/voltage</property>
           		 <value>220</value>
          	</greater-than>
              <or>
@@ -137,7 +137,7 @@ sweat by maggse
           <condition>
              <and>
          	<greater-than> 
-          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <property>systems/electrical/bus/ac-ess/voltage</property>
           		 <value>220</value>
          	</greater-than>
          	<equals> 
@@ -164,7 +164,7 @@ sweat by maggse
           <condition>
              <and>
          	<greater-than> 
-          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <property>systems/electrical/bus/ac-ess/voltage</property>
           		 <value>220</value>
          	</greater-than>
          	<less-than>
@@ -186,11 +186,11 @@ sweat by maggse
          	</less-than>
                 <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
            </or>
@@ -209,11 +209,11 @@ sweat by maggse
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -232,11 +232,11 @@ sweat by maggse
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -254,11 +254,11 @@ sweat by maggse
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -276,11 +276,11 @@ sweat by maggse
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -298,11 +298,11 @@ sweat by maggse
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -316,11 +316,11 @@ sweat by maggse
           <condition>
              <and>
          	<greater-than> 
-          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <property>systems/electrical/bus/ac-ess/voltage</property>
           		 <value>220</value>
          	</greater-than>
          	<less-than>
-          		 <property>systems/electrical/bus/ac-1</property>
+          		 <property>systems/electrical/bus/ac-1/voltage</property>
           		 <value>220</value>
          	</less-than>
             </and>
@@ -333,16 +333,16 @@ sweat by maggse
           <condition>
            <and>
            <less-than>
-            <property>systems/electrical/bus/ac-2</property>
+            <property>systems/electrical/bus/ac-2/voltage</property>
             <value>220</value>
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -373,16 +373,16 @@ sweat by maggse
           <condition>
            <and>
            <less-than>
-            <property>systems/electrical/bus/ac-4</property>
+            <property>systems/electrical/bus/ac-4/voltage</property>
             <value>220</value>
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -396,7 +396,7 @@ sweat by maggse
           <condition>
              <and>
          	<greater-than> 
-          		 <property>systems/electrical/bus/ac-ess</property>
+          		 <property>systems/electrical/bus/ac-ess/voltage</property>
           		 <value>220</value>
          	</greater-than>
          	<less-than>
@@ -418,11 +418,11 @@ sweat by maggse
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -441,11 +441,11 @@ sweat by maggse
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -464,11 +464,11 @@ sweat by maggse
            </less-than>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -516,11 +516,11 @@ sweat by maggse
            </equals>
            <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
             </or>
@@ -539,11 +539,11 @@ sweat by maggse
          	</equals>
                 <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
              </or>
@@ -566,11 +566,11 @@ sweat by maggse
          	</equals>
                 <or>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3</property>
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
           	 <value>220</value>
          	</greater-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ac-ess</property>
+          	 <property>systems/electrical/bus/ac-ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
              </or>

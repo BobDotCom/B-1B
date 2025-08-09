@@ -1060,7 +1060,11 @@
 
 </channel> 
 
+
+
 	<channel name="Temperature" execrate="8">
+
+
 
 <!-- System 1 -->
 
@@ -1127,32 +1131,163 @@
 
 	</channel>
 
+
+
 	<channel name="Accumulators" execrate="8">
 
-<!-- APU_1 starter accumulator -->
 
-		<switch name="/systems/hydraulic/accumulator[0]/pressure-psi-command">
-			<default value="4000"/>
+
+<!-- APU 1 starter accumulator -->
+
+		<fcs_function name="/systems/hydraulic/system[2]/pipeline/max_pump_increase_rate"> <!-- Pump increase APU rate for either pump -->
+			<function>
+					<max>
+						<property>/systems/hydraulic/system[2]/pipeline/pump[1]/APU_induced_increase_rate</property>
+						<property>/systems/hydraulic/system[2]/pipeline/pump[2]/APU_induced_increase_rate</property>
+					</max>
+			</function>
+		</fcs_function>
+		<fcs_function name="/systems/hydraulic/system[3]/pipeline/max_pump_increase_rate"> <!-- Pump increase APU rate for either pump -->
+			<function>
+					<max>
+						<property>/systems/hydraulic/system[3]/pipeline/pump[1]/APU_induced_increase_rate</property>
+						<property>/systems/hydraulic/system[3]/pipeline/pump[2]/APU_induced_increase_rate</property>
+					</max>
+			</function>
+		</fcs_function>
+		<fcs_function name="/systems/hydraulic/system[2]/pipeline/max_pump_increase_rate"> <!-- Pump increase engine rate for either pump -->
+			<function>
+					<max>
+						<property>/systems/hydraulic/system[2]/pipeline/pump[1]/engine_induced_increase_rate</property>
+						<property>/systems/hydraulic/system[2]/pipeline/pump[2]/engine_induced_increase_rate</property>
+					</max>
+			</function>
+		</fcs_function>
+		<fcs_function name="/systems/hydraulic/system[3]/pipeline/max_pump_increase_rate"> <!-- Pump increase engine rate for either pump -->
+			<function>
+					<max>
+						<property>/systems/hydraulic/system[3]/pipeline/pump[1]/engine_induced_increase_rate</property>
+						<property>/systems/hydraulic/system[3]/pipeline/pump[2]/engine_induced_increase_rate</property>
+					</max>
+			</function>
+		</fcs_function>
+
+
+		<switch name="/systems/hydraulic/accumulator[1]/switch">
+			<default value="1"/>
 			<test logic="AND" value="0">
-				/engines/engine[4]/starter eq 1
-			</test>
-			<test logic="AND" value="1600">
-                               /systems/hydraulic/system[1]/pipeline/pipeline_pressure lt 1601
-                               /engines/engine[4]/n2 ge 97 
+				/systems/hydraulic/accumulator[1]/pressure-psi-command eq 4000
 			</test>
 		</switch>
 
-		<actuator name="/systems/hydraulic/accumulator[0]/pressure-psi">
-            <input>/systems/hydraulic/accumulator[0]/pressure-psi-command</input>
-            <rate_limit sense="decr">200</rate_limit> 
-            <rate_limit sense="incr">/systems/hydraulic/system[1]/pipeline/pipeline_pressure</rate_limit> 
+		<switch name="/systems/hydraulic/accumulator[1]/pressure-psi-command">
+			<default value="4000"/>
+			<test logic="AND" value="0">
+				/engines/engine[4]/starter eq 1
+				/systems/electrical/sources/dc/bat-aft/percentage gt 10
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[2]/pipeline/pipeline_pressure">
+                               /engines/engine[4]/n2 ge 99
+			       /engines/engine[0]/n2 ge 1
+			       /engines/engine[1]/n2 ge 1
+		        </test>
+			<test logic="AND" value="4000">
+				/systems/electrical/sources/ext/output-volt eq 230
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/accumulator[1]/pressure-psi">
+            <input>/systems/hydraulic/accumulator[1]/pressure-psi-command</input>
+            <rate_limit sense="decr">/systems/hydraulic/accumulator[1]/pressure-psi-decrease-rate-switch</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/accumulator[1]/pressure-psi-increase-rate-switch</rate_limit> 
         </actuator>
+
+		<switch name="/systems/hydraulic/accumulator[1]/pressure-psi-increase-rate-switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pipeline/max_pump_increase_rate">
+				/engines/engine[4]/n2 ge 99
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[2]/pipeline/max_pump_increase_rate">
+			     <test logic="OR">
+			       /engines/engine[1]/n2 ge 1
+			       /engines/engine[0]/n2 ge 1
+			</test>
+		     </test>
+			<test logic="AND" value="22">
+				/systems/electrical/sources/ext/output-volt eq 230
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/accumulator[1]/pressure-psi-decrease-rate-switch">
+			<default value="0"/>
+			<test logic="AND" value="105">
+				/engines/engine[4]/starter eq 1 
+			</test>
+		</switch>
+
+<!-- APU 2 starter accumulator -->
+
+		<switch name="/systems/hydraulic/accumulator[2]/switch">
+			<default value="1"/>
+			<test logic="AND" value="0">
+				/systems/hydraulic/accumulator[2]/pressure-psi-command eq 4000
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/accumulator[2]/pressure-psi-command">
+			<default value="4000"/>
+			<test logic="AND" value="0">
+				/engines/engine[5]/starter eq 1
+				/systems/electrical/sources/dc/bat-aft/percentage gt 10
+			</test>
+			<test logic="OR" value="/systems/hydraulic/system[3]/pipeline/pipeline_pressure">
+                               /engines/engine[5]/n2 ge 99
+			       /engines/engine[2]/n2 ge 1
+			       /engines/engine[3]/n2 ge 1
+		        </test>
+			<test logic="AND" value="4000">
+                               /systems/electrical/sources/ext/output-volt eq 230
+			</test>
+		</switch>
+
+		<actuator name="/systems/hydraulic/accumulator[2]/pressure-psi">
+            <input>/systems/hydraulic/accumulator[2]/pressure-psi-command</input>
+            <rate_limit sense="decr">/systems/hydraulic/accumulator[2]/pressure-psi-decrease-rate-switch</rate_limit> 
+            <rate_limit sense="incr">/systems/hydraulic/accumulator[2]/pressure-psi-increase-rate-switch</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/hydraulic/accumulator[2]/pressure-psi-increase-rate-switch">
+			<default value="0"/>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pipeline/max_pump_increase_rate">
+				/engines/engine[5]/n2 ge 99
+			</test>
+			<test logic="AND" value="/systems/hydraulic/system[3]/pipeline/max_pump_increase_rate">
+			     <test logic="OR">
+			       /engines/engine[2]/n2 ge 1
+			       /engines/engine[3]/n2 ge 1
+			</test>
+		     </test>
+			<test logic="AND" value="22">
+				/systems/electrical/sources/ext/output-volt eq 230
+			</test>
+		</switch>
+
+		<switch name="/systems/hydraulic/accumulator[2]/pressure-psi-decrease-rate-switch">
+			<default value="0"/>
+			<test logic="AND" value="105">
+				/engines/engine[5]/starter eq 1 
+			</test>
+		</switch>
 
 	</channel>
 
+
+
 	<channel name="Reservoirs" execrate="8">
 
-<!-- System 1-->
+
+
+        <!-- System 1-->
 
 		<switch name="/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-cmd">
 			<default value="0"/>
@@ -1252,7 +1387,11 @@
 
 	</channel> 
 
+
+
   <channel name="Gear-in-transit"> 
+
+
   
   		<switch name="/gear/gear[0]/in-transit">
 			<default value="1"/>

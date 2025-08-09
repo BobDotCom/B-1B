@@ -236,7 +236,7 @@
             <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
-                    /systems/electrical/bus/ac-1 ge 220
+                    /systems/electrical/bus/ac-1/voltage ge 220
 				</test>
                 <test logic="OR">
                     <!-- TODO: Refine adg drive rpm engine start requirements -->
@@ -250,7 +250,7 @@
             <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
-                    /systems/electrical/bus/ac-1 ge 220
+                    /systems/electrical/bus/ac-1/voltage ge 220
 				</test>
                 <test logic="OR">
                     /systems/engines/adg[1]/drive-rpm ge 55
@@ -264,7 +264,7 @@
             <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
-                    /systems/electrical/bus/ac-4 ge 220
+                    /systems/electrical/bus/ac-4/voltage ge 220
 				</test>
                 <test logic="OR">
                     /systems/engines/adg[2]/drive-rpm ge 55
@@ -277,7 +277,7 @@
             <test logic="AND" value="1">
                 <test logic="OR">
 <!--					/systems/electrical/sources/si-1/output-volt ge 220-->
-                    /systems/electrical/bus/ac-4 ge 220
+                    /systems/electrical/bus/ac-4/voltage ge 220
 				</test>
                 <test logic="OR">
                     /systems/engines/adg[3]/drive-rpm ge 55
@@ -285,19 +285,7 @@
                 </test>
             </test>
         </switch>
-        <switch name="/systems/engines/engine[4]/can-start">
-            <default value="0"/>
-            <test logic="AND" value="1">
-                <!-- TODO: Hydraulic APU starter. EDIT: DONE -->
-                /systems/electrical/bus/dc-bat ge 25
-            </test>
-        </switch>
-        <switch name="/systems/engines/engine[5]/can-start">
-            <default value="0"/>
-            <test logic="OR" value="1">
-                /systems/electrical/bus/dc-bat ge 25
-            </test>
-        </switch>
+
         <switch name="/systems/engines/engine[0]/cutoff">
             <default value="1"/>
             <test logic="OR" value="0">
@@ -495,6 +483,21 @@
         </switch>
 
         <!-- APU -->
+
+        <switch name="/systems/engines/engine[4]/can-start">
+            <default value="1"/>
+            <test logic="AND" value="0">
+                /engines/engine[4]/n1 lt 70
+                /systems/hydraulic/accumulator[1]/pressure-psi lt 1
+          </test>
+            <test logic="AND" value="0">
+		/systems/electrical/sources/dc/bat-aft/percentage lt 10
+          </test>
+            <test logic="AND" value="0">
+                /controls/electrical/switches/battery eq 0
+          </test>
+        </switch>
+
         <switch name="/systems/engines/engine[4]/cutoff">
             <default value="1"/>
             <test logic="OR" value="0">
@@ -504,10 +507,14 @@
                     /controls/engines/engine[4]/cutoff-switch eq 1
                 </test>
                 <test logic="AND" value="1">
+                  /systems/electrical/sources/dc/bat-aft/percentage lt 10
+                </test>
+                <test logic="AND" value="1">
                   /controls/switches/engine_4_fire-bottle-discharge eq 1
                 </test>
             </test>
         </switch>
+
         <switch name="/systems/engines/engine[4]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
@@ -525,6 +532,7 @@
                 /systems/engines/engine[4]/can-start eq 1
             </test>
         </switch>
+
         <fcs_function name="/controls/engines/engine[4]/cutoff-switch">
             <function>
                 <ifthen>
@@ -544,6 +552,20 @@
             </function>
         </fcs_function>
 
+         <switch name="/systems/engines/engine[5]/can-start">
+            <default value="1"/>
+            <test logic="AND" value="0">
+                /engines/engine[5]/n1 lt 70
+                /systems/hydraulic/accumulator[2]/pressure-psi lt 1
+          </test>
+            <test logic="AND" value="0">
+		/systems/electrical/sources/dc/bat-aft/percentage lt 10
+          </test>
+            <test logic="AND" value="0">
+                /controls/electrical/switches/battery eq 0
+          </test>
+        </switch>
+
         <switch name="/systems/engines/engine[5]/cutoff">
             <default value="1"/>
             <test logic="OR" value="0">
@@ -552,8 +574,15 @@
                     /engines/engine[5]/n1 ge 5
                     /controls/engines/engine[5]/cutoff-switch eq 1
                 </test>
+                <test logic="AND" value="1">
+                  /systems/electrical/sources/dc/bat-aft/percentage lt 10
+                </test>
+                <test logic="AND" value="1">
+                  /controls/switches/engine_4_fire-bottle-discharge eq 1
+                </test>
             </test>
         </switch>
+
         <switch name="/systems/engines/engine[5]/starter">
             <default value="0"/>
             <test logic="AND" value="1">
@@ -571,6 +600,7 @@
                 /systems/engines/engine[5]/can-start eq 1
             </test>
         </switch>
+
         <fcs_function name="/controls/engines/engine[5]/cutoff-switch">
             <function>
                 <ifthen>

@@ -280,7 +280,7 @@ sweat by maggse
   <object-name>line6_select</object-name>
 	 <condition>
            <greater-than> 
-             <property>systems/electrical/bus/ac-3</property>
+             <property>systems/electrical/bus/ac-3/voltage</property>
              <value>220</value>
            </greater-than> 
 	 </condition>

@@ -424,6 +424,14 @@ B-1B set file.
                         </binding>
                     </item>
                     <item>
+                        <label>External power</label>
+                        <name>Externalpower</name>
+                        <binding>
+                            <command>property-toggle</command>
+                            <property>controls/electrical/switches/ground-cart</property>
+                        </binding>
+                    </item>
+                    <item>
                         <label>Combat event log</label>
                         <name>flightlog</name>
                         <binding>
@@ -513,7 +521,7 @@ B-1B set file.
             </autopilot>
             <autopilot n="2">
                 <path>Aircraft/B-1B/Systems/instrumentation.xml</path>
-            </autopilot>            
+            </autopilot>
             <property-rule n="200">
                 <path>Systems/annunciators.xml</path>
             </property-rule>
@@ -728,16 +736,7 @@ B-1B set file.
             <dc-fwd type="double">0</dc-fwd>
             <dc-aft type="double">0</dc-aft>
         </bus>
-        <relay>
-            <ess-tr-contactor>
-                <contact-pos type="int">0</contact-pos>
-            </ess-tr-contactor>
-        </relay>
-        <some-electric-thingie>
-            <emer-elec-config type="bool">0</emer-elec-config>
-            <emer-gen-operate type="bool">0</emer-gen-operate>
-        </some-electric-thingie>
-        <sources>
+        <sources> 
             <bat-1>
                 <amps type="double">0</amps>
                 <percent-calc type="double">80</percent-calc>
@@ -913,15 +912,15 @@ B-1B set file.
                 <galley type="bool">1</galley>
                 <gen-1 type="int">1</gen-1>
                 <gen-2 type="int">1</gen-2>
-                <gen-4 type="int">1</gen-4>
+                <gen-3 type="int">1</gen-3>
                 <gen-2-line-contactor type="bool">0</gen-2-line-contactor>
                 <ground-cart type="bool">0</ground-cart>
-                <idg-1-disc type="bool">1</idg-1-disc>
-                <idg-2-disc type="bool">1</idg-2-disc>
-                <idg-4-disc type="bool">1</idg-4-disc>
-                <idg-1-disc-momentary type="bool">0</idg-1-disc-momentary>
-                <idg-2-disc-momentary type="bool">0</idg-2-disc-momentary>
-                <idg-4-disc-momentary type="bool">0</idg-4-disc-momentary>
+                <csd-1-disc type="bool">1</csd-1-disc>
+                <csd-2-disc type="bool">1</csd-2-disc>
+                <csd-4-disc type="bool">1</csd-4-disc>
+                <csd-1-disc-momentary type="bool">0</csd-1-disc-momentary>
+                <csd-2-disc-momentary type="bool">0</csd-2-disc-momentary>
+                <csd-4-disc-momentary type="bool">0</csd-4-disc-momentary>
                 <emer-elec-man-on type="bool">0</emer-elec-man-on>
             </switches>
         </electrical>

@@ -294,7 +294,7 @@
 				<value>1</value>
 			</equals>
 			<greater-than>
-				<property>systems/electrical/bus/ac-4</property>
+				<property>systems/electrical/bus/ac-4/voltage</property>
 				<value>27</value>
 			</greater-than>
                    </and>

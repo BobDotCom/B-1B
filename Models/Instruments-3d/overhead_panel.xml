@@ -211,7 +211,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>Needle_1</object-name>
-	 <property>instrumentation/voltage-indicators/voltage-needle</property>
+	 <property>systems/electrical/lights/needle-indicator-voltage</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -243,7 +243,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>gen_reset_1</object-name>
-	 <property>/controls/electrical/switches/gen-1</property>
+	 <property>controls/electrical/switches/gen-1</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -275,7 +275,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>/controls/electrical/switches/gen-1</property>
+			 <property>controls/electrical/switches/gen-1</property>
 		 </binding>
 	 </action>
 </animation>
@@ -286,11 +286,11 @@ maggse
 		<condition>
                     <and>
 			<greater-than-equals>
-				<property>systems/electrical/bus/ac-3</property>
+				<property>systems/electrical/bus/ac-3/voltage</property>
 				<value>220</value>
 			</greater-than-equals>
 			<equals>
-				<property>systems/electrical/light/gen-1-fault</property>
+				<property>systems/electrical/lights/gen-1-fault</property>
 				<value>1</value>
 			</equals>
                     </and>
@@ -300,7 +300,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>gen_reset_2</object-name>
-	 <property>/controls/electrical/switches/gen-2</property>
+	 <property>controls/electrical/switches/gen-2</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -332,7 +332,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>/controls/electrical/switches/gen-2</property>
+			 <property>controls/electrical/switches/gen-2</property>
 		 </binding>
 	 </action>
 </animation>
@@ -343,11 +343,11 @@ maggse
 		<condition>
                     <and>
 			<greater-than-equals>
-				<property>systems/electrical/bus/ac-3</property>
+				<property>systems/electrical/bus/ac-3/voltage</property>
 				<value>220</value>
 			</greater-than-equals>
 			<equals>
-				<property>systems/electrical/light/gen-2-fault</property>
+				<property>systems/electrical/lights/gen-2-fault</property>
 				<value>1</value>
 			</equals>
                     </and>
@@ -357,7 +357,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>gen_reset_3</object-name>
-	 <property>/controls/electrical/switches/gen-4</property>
+	 <property>controls/electrical/switches/gen-3</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -389,7 +389,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>/controls/electrical/switches/gen-4</property>
+			 <property>controls/electrical/switches/gen-3</property>
 		 </binding>
 	 </action>
 </animation>
@@ -400,14 +400,51 @@ maggse
 		<condition>
                     <and>
 			<greater-than-equals>
-				<property>systems/electrical/bus/ac-3</property>
+				<property>systems/electrical/bus/ac-3/voltage</property>
 				<value>220</value>
 			</greater-than-equals>
 			<equals>
-				<property>systems/electrical/light/gen-4-fault</property>
+				<property>systems/electrical/lights/gen-3-fault</property>
 				<value>1</value>
 			</equals>
                     </and>
+		</condition>
+	</animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>emerg_gen</object-name>
+        <property>controls/switches/emerg_gen</property>
+        <factor>30</factor>
+        <center>
+            <x-m>0.01</x-m>
+            <y-m>0.035188</y-m>
+            <z-m>-0.006028</z-m>
+        </center>
+        <axis>
+            <x> 0</x>
+            <y> 1</y>
+            <z> 0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/switches/emerg_gen</property>
+                <min>0</min>
+                <max>2</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>EMR_GEN</object-name>
+		<condition>
+			<equals>
+				<property>/systems/electrical/lights/emer-gen-on</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -538,7 +575,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>csd_1</object-name>
-	 <property>/controls/electrical/switches/idg-1-disc</property>
+	 <property>/controls/electrical/switches/csd-1-disc</property>
 	 <interpolation>
 		 <entry>
 			 <ind>1.0</ind>
@@ -570,7 +607,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>/controls/electrical/switches/idg-1-disc</property>
+			 <property>/controls/electrical/switches/csd-1-disc</property>
                          <condition> 
                           <equals>
                           <property>/controls/electrical/switches/csd_safety1</property> 
@@ -584,7 +621,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>csd_2</object-name>
-	 <property>/controls/electrical/switches/idg-2-disc</property>
+	 <property>/controls/electrical/switches/csd-2-disc</property>
 	 <interpolation>
 		 <entry>
 			 <ind>1.0</ind>
@@ -616,7 +653,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>/controls/electrical/switches/idg-2-disc</property>
+			 <property>/controls/electrical/switches/csd-2-disc</property>
                          <condition> 
                           <equals>
                           <property>/controls/electrical/switches/csd_safety2</property> 
@@ -630,7 +667,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>csd_4</object-name>
-	 <property>/controls/electrical/switches/idg-4-disc</property>
+	 <property>/controls/electrical/switches/csd-4-disc</property>
 	 <interpolation>
 		 <entry>
 			 <ind>1.0</ind>
@@ -662,7 +699,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>/controls/electrical/switches/idg-4-disc</property>
+			 <property>/controls/electrical/switches/csd-4-disc</property>
                          <condition> 
                           <equals>
                           <property>/controls/electrical/switches/csd_safety3</property> 
@@ -744,7 +781,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>ExtPowerSwitch</object-name>
-	 <property>controls/electric/external-power</property>
+	 <property>controls/electrical/switches/external-power</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -776,7 +813,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/electric/external-power</property>
+			 <property>controls/electrical/switches/external-power</property>
 		 </binding>
 	 </action>
 </animation>
