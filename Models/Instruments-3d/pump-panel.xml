@@ -19,7 +19,7 @@
         <object-name>tank-00-10000</object-name>
         <condition>
             <equals>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>0</value>
             </equals>
         </condition>
@@ -105,7 +105,7 @@
                 <value>4</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -191,7 +191,7 @@
                 <value>2</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -277,7 +277,7 @@
                 <value>3</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -363,7 +363,7 @@
                 <value>2</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -449,7 +449,7 @@
                 <value>4</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -535,7 +535,7 @@
                 <value>3</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -621,7 +621,7 @@
                 <value>5</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -707,7 +707,7 @@
                 <value>5</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -793,7 +793,7 @@
                 <value>1</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -879,7 +879,7 @@
                 <value>1</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>
@@ -965,7 +965,7 @@
                 <value>0</value>
             </equals>
             <greater-than>
-                <property>systems/electrical/bus/ac-ess</property>
+                <property>systems/electrical/bus/ess/voltage</property>
                 <value>220</value>
             </greater-than>
         </condition>

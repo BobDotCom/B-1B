@@ -356,11 +356,11 @@ sweat by maggse
           <condition>
            <and>
            <less-than>
-            <property>systems/electrical/bus/ac-3</property>
+            <property>systems/electrical/bus/ac-3/voltage</property>
             <value>220</value>
            </less-than>
          	<greater-than> 
-          	 <property>systems/electrical/bus/ess</property>
+          	 <property>systems/electrical/bus/ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
            </and>
@@ -534,8 +534,8 @@ sweat by maggse
           <condition>
              <and>
          	<equals>
-          		 <property>systems/flight-controls/flaps/channel-1</property>
-          		 <value>1</value>
+          		 <property>systems/flight-controls/flaps/control-channels/active-channels</property>
+          		 <value>3</value>
          	</equals>
                 <or>
          	<greater-than> 
@@ -556,14 +556,10 @@ sweat by maggse
 	 <type>select</type>
           <condition>
              <and>
-         	<equals>
-          		 <property>systems/flight-controls/flaps/channel-1</property>
-          		 <value>1</value>
-         	</equals>
-         	<equals>
-          		 <property>systems/flight-controls/flaps/channel-2</property>
-          		 <value>1</value>
-         	</equals>
+         	<less-than>
+          		 <property>systems/flight-controls/flaps/control-channels/active-channels</property>
+          		 <value>3</value>
+         	</less-than>
                 <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>

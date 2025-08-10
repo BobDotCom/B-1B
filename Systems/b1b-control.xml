@@ -4,8 +4,6 @@
     <property value="0">/controls/switches/failures/wing-sweep_lever</property>
     <property value="1">/controls/gear/gear-down</property>
     <property value="1">/gear/serviceable</property>
-    <property value="0">/systems/flight-controls/flaps/channel-1</property>
-    <property value="0">/systems/flight-controls/flaps/channel-2</property>
 
     <channel name="Wing Sweep">
 
@@ -422,58 +420,95 @@
             <output>fcs/flap-pos-deg</output>
         </kinematic>
 
-		<actuator name="fcs/flap-pos-rate">
+	<switch name="/systems/flight-controls/flaps/movement-rate-cmd">
+		<default value="0"/>
+		<test logic="AND" value="/systems/flight-controls/flaps/full-movement-rate-deg-per-sec">
+                           /systems/flight-controls/flaps/control-channels/active-channels eq 4
+			</test>
+			<test logic="AND" value="/systems/flight-controls/flaps/half-movement-rate-deg-per-sec">
+                           /systems/flight-controls/flaps/control-channels/active-channels eq 3
+		</test>
+	</switch>
+
+	<actuator name="fcs/flap-pos-rate">
             <input>fcs/flap-pos-deg</input>
-            <rate_limit sense="decr">fcs/flap-pos-rate-switch</rate_limit> 
-            <rate_limit sense="incr">fcs/flap-pos-rate-switch</rate_limit> 
+            <rate_limit sense="decr">/systems/flight-controls/flaps/movement-rate-cmd</rate_limit> 
+            <rate_limit sense="incr">/systems/flight-controls/flaps/movement-rate-cmd</rate_limit> 
         </actuator>
 
-		<switch name="fcs/flap-pos-rate-switch">
-			<default value="2"/>
-			<test logic="AND" value="0.0">
-                                /systems/flight-controls/flaps/channel-1 eq 1
-                                /systems/flight-controls/flaps/channel-2 eq 1
-			</test>
-			<test logic="AND" value="0.8">
-                                /systems/flight-controls/flaps/channel-1 eq 1
-			</test>
-		</switch>
+            <!-- Hydraulic power -->
 
-		<switch name="/systems/flight-controls/flaps/G-out-trigger">
+	<pure_gain name="/systems/flight-controls/flaps/full-movement-rate-deg-per-sec">
+		<input>/systems/flight-controls/flaps/hydraulic-pressure</input>
+		<gain>0.001</gain>
+		<clipto>
+                	<min>0</min>
+                	<max>2</max>
+		</clipto>
+	</pure_gain>
+
+	<pure_gain name="/systems/flight-controls/flaps/half-movement-rate-deg-per-sec">
+		<input>/systems/flight-controls/flaps/full-movement-rate-deg-per-sec</input>
+		<gain>0.5</gain>
+	</pure_gain>
+
+		<fcs_function name="/systems/flight-controls/flaps/hydraulic-pressure">
+			<function>
+                             <quotient>
+                              	<sum>
+					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+					<property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
+                              	</sum>
+				<value>4</value>
+			     </quotient>
+			</function>
+		</fcs_function>
+
+            <!-- control channels -->
+
+		<switch name="/systems/flight-controls/flaps/control-channels/input-1">
 			<default value="0"/>
 			<test logic="AND" value="1">
-                                fcs/flap-pos-norm gt 0
-                                /accelerations/pilot-g gt 2
-			</test>
-		</switch>
-
-		<actuator name="/systems/flight-controls/flaps/G-out-switch">
-            <input>/systems/flight-controls/flaps/G-out-trigger</input>
-            <rate_limit sense="decr">0</rate_limit> 
-            <rate_limit sense="incr">1</rate_limit> 
-        </actuator>
-
-		<switch name="/systems/flight-controls/flaps/channel-1">
-			<default value="0"/>
-			<test logic="OR" value="1">
-                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure lt 2000
-                                /systems/hydraulic/system[4]/pipeline/pipeline_pressure lt 2000
+                                /systems/electrical/bus/ess/voltage gt 220
+			   	/controls/switches/Flap-slat-switch eq 1
 			 </test>
-			<test logic="AND" value="1">
-                                /systems/flight-controls/flaps/G-out-switch eq 1
-			</test>
 		</switch>
 
-		<switch name="/systems/flight-controls/flaps/channel-2">
+		<switch name="/systems/flight-controls/flaps/control-channels/input-2">
 			<default value="0"/>
 			<test logic="AND" value="1">
-                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure lt 500
-                                /systems/hydraulic/system[4]/pipeline/pipeline_pressure lt 500
+                                /systems/electrical/bus/ac-1/voltage gt 220
+			  	 /controls/switches/Flap-slat-switch eq 1
 			 </test>
-			<test logic="AND" value="1">
-                                /systems/flight-controls/flaps/G-out-switch eq 1
-		        </test>
 		</switch>
+
+
+		<switch name="/systems/flight-controls/flaps/control-channels/input-3">
+			<default value="0"/>
+			<test logic="AND" value="1">
+                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure gt 0
+			   	/controls/switches/Flap-slat-switch eq 1
+			 </test>
+		</switch>
+
+		<switch name="/systems/flight-controls/flaps/control-channels/input-4">
+			<default value="0"/>
+			<test logic="AND" value="1">
+                                /systems/hydraulic/system[4]/pipeline/pipeline_pressure gt 0
+			  	/controls/switches/Flap-slat-switch eq 1
+			 </test>
+		</switch>
+
+		<fcs_function name="/systems/flight-controls/flaps/control-channels/active-channels">
+			<function>
+                              	<sum>
+					<property>/systems/flight-controls/flaps/control-channels/input-1</property>
+					<property>/systems/flight-controls/flaps/control-channels/input-2</property>
+					<property>/systems/flight-controls/flaps/control-channels/input-3</property>
+					<property>/systems/flight-controls/flaps/control-channels/input-4</property>
+                              	</sum>
+			</function>
+		</fcs_function>
 
         <aerosurface_scale name="flap normalization">
             <input>fcs/flap-pos-rate</input>

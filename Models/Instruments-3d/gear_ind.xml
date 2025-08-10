@@ -159,7 +159,7 @@ sweat by maggse
 			 <value>1.0</value>
 		 </equals>
 		 <greater-than>
-                         <property>systems/electrical/bus/ac-ess</property>
+                         <property>systems/electrical/bus/ess/voltage</property>
 			 <value>220</value>
 		 </greater-than>
              </and>
@@ -183,11 +183,11 @@ sweat by maggse
           <and>
             <or>
 		 <greater-than>
-                         <property>systems/electrical/bus/ac-1</property>
+                         <property>systems/electrical/bus/ac-1/voltage</property>
 			 <value>220</value>
 		 </greater-than>
 		 <greater-than>
-                         <property>systems/electrical/bus/ac-ess</property>
+                         <property>systems/electrical/bus/ess/voltage</property>
 			 <value>220</value>
 		 </greater-than>
             </or>
@@ -216,11 +216,11 @@ sweat by maggse
           <and>
             <or>
 		 <greater-than>
-                         <property>systems/electrical/bus/ac-3</property>
+                         <property>systems/electrical/bus/ac-3/voltage</property>
 			 <value>220</value>
 		 </greater-than>
 		 <greater-than>
-                         <property>systems/electrical/bus/ac-ess</property>
+                         <property>systems/electrical/bus/ess/voltage</property>
 			 <value>220</value>
 		 </greater-than>
             </or>

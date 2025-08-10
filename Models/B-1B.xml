@@ -102,7 +102,7 @@ more to come :-)
       <value>1</value> 
      </equals>
     <greater-than> 
-     <property>systems/electrical/bus/ac-3</property> 
+     <property>systems/electrical/bus/ac-3/voltage</property> 
       <value>220</value> 
      </greater-than> 
      </and>
@@ -120,7 +120,7 @@ more to come :-)
       <value>1</value> 
      </equals> 
     <greater-than> 
-     <property>systems/electrical/bus/ac-3</property> 
+     <property>systems/electrical/bus/ac-3/voltage</property> 
       <value>220</value> 
      </greater-than> 
      </and>
@@ -141,7 +141,7 @@ more to come :-)
       <value>1</value> 
      </equals>
     <greater-than> 
-     <property>systems/electrical/bus/ac-3</property> 
+     <property>systems/electrical/bus/ac-3/voltage</property> 
       <value>220</value> 
      </greater-than>
     </and>
