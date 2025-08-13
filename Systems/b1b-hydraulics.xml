@@ -193,6 +193,13 @@
 			</function>
 		</fcs_function>
 
+		<switch name="/systems/hydraulic/system[1]/pipeline/pipeline_functioning">
+			<default value="0"/>
+			<test logic="AND" value="1">
+                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure gt 200
+			</test>
+		</switch>
+
 <!-- Pump 1 input -->
 
 		<actuator name="/systems/hydraulic/system[1]/pipeline/pump[1]/feed">
@@ -451,6 +458,13 @@
 					</max>
 			</function>
 		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[2]/pipeline/pipeline_functioning">
+			<default value="0"/>
+			<test logic="AND" value="1">
+                                /systems/hydraulic/system[2]/pipeline/pipeline_pressure gt 200
+			</test>
+		</switch>
 
 <!-- Pump 1 input -->
 
@@ -711,6 +725,13 @@
 			</function>
 		</fcs_function>
 
+		<switch name="/systems/hydraulic/system[3]/pipeline/pipeline_functioning">
+			<default value="0"/>
+			<test logic="AND" value="1">
+                                /systems/hydraulic/system[3]/pipeline/pipeline_pressure gt 200
+			</test>
+		</switch>
+
 <!-- Pump 1 input -->
 
 		<actuator name="/systems/hydraulic/system[3]/pipeline/pump[1]/feed">
@@ -969,6 +990,13 @@
 					</max>
 			</function>
 		</fcs_function>
+
+		<switch name="/systems/hydraulic/system[4]/pipeline/pipeline_functioning">
+			<default value="0"/>
+			<test logic="AND" value="1">
+                                /systems/hydraulic/system[4]/pipeline/pipeline_pressure gt 200
+			</test>
+		</switch>
 
 <!-- Pump 1 input -->
 

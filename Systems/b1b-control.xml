@@ -7,17 +7,52 @@
 
     <channel name="Wing Sweep">
 
-	<switch name="fcs/sweep-cmd-norm">
-		<test value="fcs/sweep-cmd-norm-stuck">
-		   /controls/switches/failures/wing-sweep_lever eq 1
-		</test>
-		<default value="/controls/flight/wing-sweep"/>
-        </switch>
+		<actuator name="fcs/sweep-cmd-norm">
+            <input>/controls/flight/wing-sweep</input>
+            <rate_limit sense="decr">/systems/flight-controls/wing-sweep/movement-rate</rate_limit> 
+            <rate_limit sense="incr">/systems/flight-controls/wing-sweep/movement-rate</rate_limit> 
+        </actuator>
 
-	<pure_gain name="fcs/sweep-cmd-norm-stuck">
-		<input>fcs/sweep-cmd-norm</input>
-		<gain>1</gain>
-	</pure_gain> 
+	<switch name="/systems/flight-controls/wing-sweep/movement-rate">
+		<default value="0"/>
+		<test logic="AND" value="/systems/flight-controls/wing-sweep/full-movement-rate-deg-per-sec">
+                           /systems/flight-controls/wing-sweep/hydraulic-pressure-lines/active-lines gt 1
+			</test>
+		<test logic="AND" value="1"><!-- instant forward motion for sim startup -->
+                           /sim/time/elapsed-sec lt 2
+			</test>
+	</switch>
+
+
+	<pure_gain name="/systems/flight-controls/wing-sweep/full-movement-rate-deg-per-sec">
+		<input>/systems/flight-controls/wing-sweep/hydraulic-pressure-lines/full-pressure</input>
+		<gain>0.000004</gain> <!-- deg moved per sec per psi -->
+	</pure_gain>
+
+		<fcs_function name="/systems/flight-controls/wing-sweep/hydraulic-pressure-lines/full-pressure">
+			<function>
+				<quotient>
+                              		<sum>
+						<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+						<property>/systems/hydraulic/system[2]/pipeline/pipeline_pressure</property>
+						<property>/systems/hydraulic/system[3]/pipeline/pipeline_pressure</property>
+						<property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
+                              		</sum>
+					<value>4</value>
+				</quotient>
+			</function>
+		</fcs_function>
+
+		<fcs_function name="/systems/flight-controls/wing-sweep/hydraulic-pressure-lines/active-lines"><!-- on/off indicators for hydraulic lines -->
+			<function>
+                              		<sum>
+						<property>/systems/hydraulic/system[1]/pipeline/pipeline_functioning</property>
+						<property>/systems/hydraulic/system[2]/pipeline/pipeline_functioning</property>
+						<property>/systems/hydraulic/system[3]/pipeline/pipeline_functioning</property>
+						<property>/systems/hydraulic/system[4]/pipeline/pipeline_functioning</property>
+                              		</sum>
+			</function>
+		</fcs_function>
 
         <kinematic name="fcs/sweep-pos-norm">
   <!--      <input>/controls/flight/wing-sweep</input>-->
@@ -30,7 +65,7 @@
                 </setting>
                 <setting>
                     <position>1</position>
-                    <time>12</time>
+                    <time>1</time>
                 </setting>
             </traverse>
             <output>/surface-positions/wing-sweep-pos-norm</output>

@@ -144,6 +144,10 @@ sweat by maggse
           		 <property>systems/failures/annunciators/FUEL_LOW</property>
           		 <value>0</value>
          	</equals>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
              <or>
          	<less-than> 
           		 <property>consumables/fuel/tank[6]/level-lbs</property>
@@ -167,6 +171,10 @@ sweat by maggse
           	  <property>systems/electrical/sources/idg-1/voltage</property>
           	  <value>220</value>
          	</less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
          	<greater-than> 
           		 <property>systems/electrical/bus/ess/voltage</property>
           		 <value>220</value>
@@ -184,6 +192,10 @@ sweat by maggse
           	  <property>systems/electrical/sources/idg-2/voltage</property>
           	  <value>220</value>
          	</less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
                 <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -207,6 +219,10 @@ sweat by maggse
           	  <property>systems/electrical/sources/idg-3/voltage</property>
           	  <value>220</value>
          	</less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
                 <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -230,6 +246,10 @@ sweat by maggse
             <property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
             <value>2150</value>
            </less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -252,6 +272,10 @@ sweat by maggse
             <property>/systems/hydraulic/system[2]/pipeline/pipeline_pressure</property>
             <value>2150</value>
            </less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -274,6 +298,10 @@ sweat by maggse
             <property>/systems/hydraulic/system[3]/pipeline/pipeline_pressure</property>
             <value>2150</value>
            </less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -296,6 +324,10 @@ sweat by maggse
             <property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
             <value>2150</value>
            </less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -323,6 +355,10 @@ sweat by maggse
           		 <property>systems/electrical/bus/ac-1/voltage</property>
           		 <value>220</value>
          	</less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
             </and>
           </condition>
 </animation>
@@ -336,6 +372,10 @@ sweat by maggse
             <property>systems/electrical/bus/ac-2/voltage</property>
             <value>220</value>
            </less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -363,6 +403,10 @@ sweat by maggse
           	 <property>systems/electrical/bus/ess/voltage</property>
           	 <value>220</value>
          	</greater-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            </and>
           </condition>
 </animation>
@@ -376,6 +420,10 @@ sweat by maggse
             <property>systems/electrical/bus/ac-4/voltage</property>
             <value>220</value>
            </less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -403,6 +451,10 @@ sweat by maggse
           		 <property>systems/engines/adg[0]/drive-rpm</property>
           		 <value>10</value>
          	</less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
             </and>
           </condition>
 </animation>
@@ -416,6 +468,10 @@ sweat by maggse
             <property>systems/engines/adg[1]/drive-rpm</property>
             <value>10</value>
            </less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -439,6 +495,10 @@ sweat by maggse
             <property>systems/engines/adg[2]/drive-rpm</property>
             <value>10</value>
            </less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -462,6 +522,10 @@ sweat by maggse
             <property>systems/engines/adg[3]/drive-rpm</property>
             <value>10</value>
            </less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -480,6 +544,11 @@ sweat by maggse
 	 <object-name>ELEC</object-name>
 	 <type>select</type>
           <condition>
+		<and>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
             <or>
            <equals>
             <property>systems/failures/electrical/ac-1-bus</property>
@@ -502,7 +571,8 @@ sweat by maggse
             <value>1</value>
            </equals>
           </or>
-          </condition>
+	</and>
+       </condition>
 </animation>
 
  <animation>
@@ -514,6 +584,10 @@ sweat by maggse
             <property>systems/apu/apu-exhaust-door-failure</property>
             <value>1</value>
            </equals>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
            <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -537,6 +611,10 @@ sweat by maggse
           		 <property>systems/flight-controls/flaps/control-channels/active-channels</property>
           		 <value>3</value>
          	</equals>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
                 <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
@@ -560,6 +638,10 @@ sweat by maggse
           		 <property>systems/flight-controls/flaps/control-channels/active-channels</property>
           		 <value>3</value>
          	</less-than>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
                 <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>

@@ -867,4 +867,22 @@
 
 	</channel>
 
+	<channel name="Flash" execrate="8">
+
+		<fcs_function name="/systems/electrical/lights/blink-fast">
+			<function>
+				<floor>
+					<mod>
+						<product>
+							<property>sim-time-sec</property>
+							<value>4</value>
+						</product>
+						<value>2</value>
+					</mod>
+				</floor>
+			</function>
+		</fcs_function>
+
+	</channel>
+
 </system>
