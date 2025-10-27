@@ -1,5 +1,6 @@
 # Based upon display-system.nas from F-16
 
+
 var symbolSize = {
 	hsd: {
 	    contact: 1,
@@ -49,6 +50,37 @@ var symbolSize = {
 		steerpoint: 1.0,
 		contactVelocity: 0.0045,
 	},
+};
+
+var values = {
+	vsd: {
+		terrainCenter: 0,
+	},
+	hdg: {
+		indicated: 0,
+		tape: {
+			l1: "0",
+			l2: "0",
+			l3: "0",
+			r1: "0",
+			r2: "0",
+			r3: "0",
+			middleOffset: 0,
+			offset: 0,
+			middleText: 0,
+			indicatedHdg: 0,
+		},
+	},
+	nav: {
+		gsInRange: 0,
+		inRange: 0,
+		gsNeedleDeflectionNorm: 0,
+		hasGs: 0,
+		headingNeedleDeflectionNorm: 0,
+		navLoc: 0,
+		selectedMhz: 0,
+	},
+	
 };
 
 var margin = {
@@ -284,7 +316,7 @@ var colorCubeGreen = [0,255,0];
 var colorCubeCyan = [0,255,255];
 
 var colorBackground = [0.005,0.2,0.005, 1];
-var rightPFDColorBackground = [0.005, 0.005, 0.07, 1];
+var rightPFDColorBackground = [0.005,0.2,0.005, 1];
 var variantID = 1;
 var COLOR_YELLOW     = [1.00,1.00,0.00];
 var COLOR_BLUE_LIGHT = [0.50,0.50,1.00];
@@ -310,6 +342,27 @@ var ROCKERSWITCH = 1;
 
 var CursorHSD = 1;
 var FACH3 = variantID == 4 or variantID >= 6;#MLU Tape M4.3
+
+var roundAbout = func(x) {
+	var y = x - int(x);
+	return y < 0.5 ? int(x) : 1 + int(x);
+}
+
+var hdgOutput = "";
+var hdgText = func(x) {
+	if (x == 0) {
+		return "N";
+	} else if (x == 9) {
+		return "E";
+	} else if (x == 18) {
+		return "S";
+	} else if (x == 27) {
+		return "W";
+	} else {
+		hdgOutput = sprintf("%d", x);
+		return hdgOutput;
+	}
+}
 
 #  ██████  ███████ ██    ██ ██  ██████ ███████ 
 #  ██   ██ ██      ██    ██ ██ ██      ██      
@@ -731,9 +784,7 @@ var DisplaySystem = {
 		me.pages = {};
 		me.layers = {};
 
-		me.initPage("PageTMenu");
-		me.initPage("PagePFD1");
-		me.initPage("PageSMS1");
+		me.initPage("PageInit");
 		me.initPage("PageBlank");
 
 #		me.device.doubleTimerRunning = nil;
@@ -891,383 +942,6 @@ var DisplaySystem = {
 	},
 
 
-
-# 88888888888     d8888  .d8888b.  888b     d888 8888888888 888b    888 888     888 
-#     888        d88888 d88P  Y88b 8888b   d8888 888        8888b   888 888     888 
-#     888       d88P888 888    888 88888b.d88888 888        88888b  888 888     888 
-#     888      d88P 888 888        888Y88888P888 8888888    888Y88b 888 888     888 
-#     888     d88P  888 888        888 Y888P 888 888        888 Y88b888 888     888 
-#     888    d88P   888 888    888 888  Y8P  888 888        888  Y88888 888     888 
-#     888   d8888888888 Y88b  d88P 888   "   888 888        888   Y8888 Y88b. .d88P 
-#     888  d88P     888  "Y8888P"  888       888 8888888888 888    Y888  "Y88888P"                                 
-
-	PageTMenu: {
-		name: "PageTMenu",
-		isNew: 1,
-		supportSOI: 0,
-		needGroup: 0,
-		new: func {
-			me.instance = {parents:[DisplaySystem.PageTMenu]};
-			me.instance.group = nil;
-			return me.instance;
-		},
-		setup: func {
-			printDebug(me.name," on ",me.device.name," is being setup");
-		},
-		enter: func {
-			printDebug("Enter ",me.name~" on ",me.device.name);
-			if (me.isNew) {
-				me.setup();
-				me.isNew = 0;
-			}
-			me.device.resetControls();
-			me.device.controls["OSB1"].setControlText("P\nF\nD");
-			me.device.controls["OSB2"].setControlText("S\nM\nS");
-			me.device.controls["OSB28"].setControlText("BLANK")
-
-		},
-		controlAction: func (controlName) {
-			printDebug(me.name,": ",controlName," activated on ",me.device.name);
-		},
-		update: func (noti = nil) {
-			
-		},
-		exit: func {
-			printDebug("Exit ",me.name~" on ",me.device.name);
-		},
-		links: {
-			"OSB1":  "PagePFD1",
-			# "OSB2":  "PageSMS1",
-			"OSB28": "PageBlank",
-		},
-		layers: [],
-	},
-
-
-#  .d8888b.  888b     d888  .d8888b.        d888   
-# d88P  Y88b 8888b   d8888 d88P  Y88b      d8888   
-# Y88b.      88888b.d88888 Y88b.             888   
-#  "Y888b.   888Y88888P888  "Y888b.          888   
-#     "Y88b. 888 Y888P 888     "Y88b.        888   
-#       "888 888  Y8P  888       "888        888   
-# Y88b  d88P 888   "   888 Y88b  d88P        888   
-#  "Y8888P"  888       888  "Y8888P"       8888888
-
-
-	PageSMS1: {
-		name: "PageSMS1",
-		isNew: 1,
-		supportSOI: 0,
-		needGroup: 1,
-		new: func {
-			me.instance = {parents:[DisplaySystem.PageSMS1]};
-			me.instance.group = nil;
-			return me.instance;
-		},
-		setup: func {
-			printDebug(me.name," on ",me.device.name," is being setup");
-			data.type_update.start();
-			me.fwdGrp = me.group.createChild("group")
-				.setTranslation((displayWidthHalf/2)-90,displayHeight/7);
-			me.midGrp = me.group.createChild("group")
-				.setTranslation(displayWidthHalf+25,displayHeight/7);
-			me.aftGrp = me.group.createChild("group")
-				.setTranslation(displayWidthHalf+270,displayHeight/7);
-
-			me.fwdLabel = me.fwdGrp.createChild("text")
-				.setText("Fwd Bay")
-				.setTranslation(0,-50);
-			me.fwd1 = me.fwdGrp.createChild("text")
-				.setFontSize(font.sms.default)
-				.setText("Weapon 1: EMPTY");
-			me.fwd2 = me.fwdGrp.createChild("text")
-				.setText("Weapon 2: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,25);
-			me.fwd3 = me.fwdGrp.createChild("text")
-				.setText("Weapon 3: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,50);
-			me.fwd4 = me.fwdGrp.createChild("text")
-				.setText("Weapon 4: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,75);
-			me.fwd5 = me.fwdGrp.createChild("text")
-				.setText("Weapon 5: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,100);
-			me.fwd6 = me.fwdGrp.createChild("text")
-				.setText("Weapon 6: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,125);
-			me.fwd7 = me.fwdGrp.createChild("text")
-				.setText("Weapon 7: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,150);
-			me.fwd8 = me.fwdGrp.createChild("text")
-				.setText("Weapon 8: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,175);
-
-
-			me.midLabel = me.midGrp.createChild("text")
-				.setText("Mid Bay")
-				.setTranslation(0,-50);
-			me.mid1 = me.midGrp.createChild("text")
-				.setFontSize(font.sms.default)
-				.setText("Weapon 1: EMPTY");
-			me.mid2 = me.midGrp.createChild("text")
-				.setText("Weapon 2: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,25);
-			me.mid3 = me.midGrp.createChild("text")
-				.setText("Weapon 3: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,50);
-			me.mid4 = me.midGrp.createChild("text")
-				.setText("Weapon 4: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,75);
-			me.mid5 = me.midGrp.createChild("text")
-				.setText("Weapon 5: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,100);
-			me.mid6 = me.midGrp.createChild("text")
-				.setText("Weapon 6: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,125);
-			me.mid7 = me.midGrp.createChild("text")
-				.setText("Weapon 7: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,150);
-			me.mid8 = me.midGrp.createChild("text")
-				.setText("Weapon 8: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,175);
-
-
-			me.aftLabel = me.aftGrp.createChild("text")
-				.setText("Aft Bay")
-				.setTranslation(0,-50);
-			me.aft1 = me.aftGrp.createChild("text")
-				.setFontSize(font.sms.default)
-				.setText("Weapon 1: EMPTY");
-			me.aft2 = me.aftGrp.createChild("text")
-				.setText("Weapon 2: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,25);
-			me.aft3 = me.aftGrp.createChild("text")
-				.setText("Weapon 3: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,50);
-			me.aft4 = me.aftGrp.createChild("text")
-				.setText("Weapon 4: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,75);
-			me.aft5 = me.aftGrp.createChild("text")
-				.setText("Weapon 5: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,100);
-			me.aft6 = me.aftGrp.createChild("text")
-				.setText("Weapon 6: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,125);
-			me.aft7 = me.aftGrp.createChild("text")
-				.setText("Weapon 7: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,150);
-			me.aft8 = me.aftGrp.createChild("text")
-				.setText("Weapon 8: EMPTY")
-				.setFontSize(font.sms.default)
-				.setTranslation(0,175);
-
-
-		},
-		enter: func {
-			printDebug("Enter ",me.name~" on ",me.device.name);
-			if (me.isNew) {
-				me.setup();
-				me.isNew = 0;
-			}
-
-			me.device.resetControls();
-			me.device.controls["OSB18"].setControlText("MENU");
-
-		},
-		controlAction: func (controlName) {
-			printDebug(me.name,": ",controlName," activated on ",me.device.name);
-		},
-		update: func (noti = nil) {
-
-			print("DEBUG:UPDATE RAN");
-
-			me.fwd1.setText(sprintf("Weapon 1: %s", getprop("/ai/guided/bay0/bomb/weapon-type")));
-			me.fwd2.setText(sprintf("Weapon 2: %s", getprop("/ai/guided/bay0/bomb[1]/weapon-type")));
-			me.fwd3.setText(sprintf("Weapon 3: %s", getprop("/ai/guided/bay0/bomb[2]/weapon-type")));
-			me.fwd4.setText(sprintf("Weapon 4: %s", getprop("/ai/guided/bay0/bomb[3]/weapon-type")));
-			me.fwd5.setText(sprintf("Weapon 5: %s", getprop("/ai/guided/bay0/bomb[4]/weapon-type")));
-			me.fwd6.setText(sprintf("Weapon 6: %s", getprop("/ai/guided/bay0/bomb[5]/weapon-type")));
-			me.fwd7.setText(sprintf("Weapon 7: %s", getprop("/ai/guided/bay0/bomb[6]/weapon-type")));
-			me.fwd8.setText(sprintf("Weapon 8: %s", getprop("/ai/guided/bay0/bomb[7]/weapon-type")));
-			
-		},
-		exit: func {
-			printDebug("Exit ",me.name~" on ",me.device.name);
-			data.type_update.stop();
-		},
-		links: {
-			"OSB18":  "PageTMenu",
-		},
-		layers: [],
-	},
-
-
-# 8888888b.  8888888888 8888888b.  		8888888b.   d888   
-# 888   Y88b 888        888  "Y88b 		888   Y88b d8888   
-# 888    888 888        888    888 		888    888   888   
-# 888   d88P 8888888    888    888 		888   d88P   888   
-# 8888888P"  888        888    888 		8888888P"    888   
-# 888        888        888    888 		888          888   
-# 888        888        888  .d88P 		888          888   
-# 888        888        8888888P"  		888        8888888
-
-	PagePFD1: {
-		name: "PagePFD1",
-		isNew: 1,
-		supportSOI: 0,
-		needGroup: 1,
-		new: func {
-			me.instance = {parents:[DisplaySystem.PagePFD1]};
-			me.instance.group = nil;
-			return me.instance;
-		},
-		setup: func {
-			printDebug(me.name," on ",me.device.name," is being setup");
-			canvas.parsesvg(me.group, "Nasal/displays/PFD1.svg");
-            me.altimeterPressure = me.group.getElementById("altimeterPressure").set("font","GordonURW-Med.ttf");
-            me.airspeed = me.group.getElementById("airspeed").set("font","GordonURW-Med.ttf");
-            me.altitude_1k = me.group.getElementById("altitude-1k").set("font","GordonURW-Med.ttf");
-            me.altitude = me.group.getElementById("altitude").set("font","GordonURW-Med.ttf");
-            me.taltitude_1k = me.group.getElementById("taltitude-1k").set("font","GordonURW-Med.ttf");
-            me.taltitude = me.group.getElementById("taltitude").set("font","GordonURW-Med.ttf");
-            me.asi = me.group.getElementById("asi");
-            me.roll_pointer = me.group.getElementById("roll_pointer");
-            #me.asi.setCenter(384, 256);
-            me.gravity = me.group.getElementById("gravity").set("font","GordonURW-Med.ttf");
-            me.hdg = me.group.getElementById("hdg").set("font","GordonURW-Med.ttf");
-            me.mach = me.group.getElementById("mach").set("font","GordonURW-Med.ttf");
-            me.tmach = me.group.getElementById("tmach").set("font","GordonURW-Med.ttf");
-            me.ladder = me.group.getElementById("ladder");
-            me.ground = me.group.getElementById("ground");
-            me.horizon = me.group.getElementById("horizon");
-            me.tspeed = me.group.getElementById("tspeed").set("font","GordonURW-Med.ttf");
-            me.fpmIndicator = me.group.getElementById("fpm-indicator");
-            me.gforce = me.group.getElementById("gforce").set("clip", "rect(117px, 156px, 396px, 0px)");
-            me.speed = me.group.getElementById("speed").set("clip", "rect(117px, 156px, 396px, 0px)");
-
-            foreach (var child; me.group.getElementById("ladder-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("ib-ladder-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("it-ladder-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("vfpm-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("gforce-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            foreach (var child; me.group.getElementById("speed-text").getChildren()) {
-                child.set("font","GordonURW-Med.ttf");
-            }
-            me.machFunc = func (mach) {
-                if (substr(mach, 0, 1) == "0") {
-                    return substr(mach, 1);
-                }
-                return mach;
-            }
-
-            # HSI
-            me.group.getElementById("hsi-hdg").set("font","GordonURW-Med.ttf");
-            me.group.getElementById("hsi-crs").set("font","GordonURW-Med.ttf");
-            me.targetHdg = me.group.getElementById("target-hdg").set("font","GordonURW-Med.ttf");
-            me.targetCrs = me.group.getElementById("target-crs").set("font","GordonURW-Med.ttf");
-
-            # Enable text updates (updateText is more efficient than setText, but needs initialization)
-            me.altimeterPressure.enableUpdate();
-            me.airspeed.enableUpdate();
-            me.altitude_1k.enableUpdate();
-            me.altitude.enableUpdate();
-            me.taltitude_1k.enableUpdate();
-            me.taltitude.enableUpdate();
-            me.gravity.enableUpdate();
-            me.hdg.enableUpdate();
-            me.mach.enableUpdate();
-            me.tmach.enableUpdate();
-            me.tspeed.enableUpdate();
-            me.targetHdg.enableUpdate();
-            me.targetCrs.enableUpdate();
-		},
-		enter: func {
-			printDebug("Enter ",me.name~" on ",me.device.name);
-			if (me.isNew) {
-				me.setup();
-				me.isNew = 0;
-			}
-			me.device.resetControls();
-			me.device.controls["OSB18"].setControlText("MENU");
-
-		},
-		controlAction: func (controlName) {
-			printDebug(me.name,": ",controlName," activated on ",me.device.name);
-		},
-		update: func (noti = nil) {
-		    me.altimeterPressure.updateText(sprintf("%.2f", noti.getproper("inhg")));
-		    me.airspeed.updateText(sprintf("%d", noti.getproper("ias")));
-		    me.altitude_1k.updateText(sprintf("%d", noti.getproper("alt_ft") / 1000)); # XXxxx
-		    #me.altitude.setText(sprintf("%03d", math.fmod(noti.getproper("alt_ft"), 1000)));  # xxXXX
-		    me.altitude.updateText(sprintf("%02d0", math.fmod(noti.getproper("alt_ft"), 1000) / 10));  # xxXX0
-		    me.taltitude_1k.updateText(sprintf("%d", noti.getproper("targetAltitude") / 1000)); # XXxxx
-		    me.taltitude.updateText(sprintf("%02d0", math.fmod(noti.getproper("targetAltitude"), 1000) / 10));  # xxXX0
-            me.gravity.updateText(sprintf("%.1f", noti.getproper("Nz")));
-            me.hdg.updateText(sprintf("%03d", noti.getproper("heading")));
-
-            # If <1 we want to hide the leading 0, but sprintf doesn't support that directly
-            me.mach.updateText(me.machFunc(sprintf("%.2f/", noti.getproper("mach"))));
-            me.tmach.updateText(me.machFunc(sprintf("%.2f", noti.getproper("targetMach"))));
-
-            # ASI is about 116px per 10deg of pitch
-		    #me.asi.setTranslation(0, noti.getproper("pitch")*11.6);
-		    me.ladder.setTranslation(0, noti.getproper("pitch")*11.6);
-            me.ground.setTranslation(0, noti.getproper("pitch")*11.6);
-            me.horizon.setTranslation(0, noti.getproper("pitch")*11.6);
-		    #me.asiTicks.setTranslation(0, noti.getproper("pitch")*11.6);
-		    #me.asi.setCenter(0, noti.getproper("pitch")*11.6);
-		    me.asi.setRotation(-noti.getproper("roll")*D2R);
-		    #me.roll_pointer.setRotation(-noti.getproper("roll")*D2R);
-		    me.roll_pointer.setRotation(-math.clamp(noti.getproper("roll"), -45, 45)*D2R);
-		    #print(me.roll_pointer.getCenter());
-		    me.tspeed.updateText(sprintf("%d", noti.getproper("targetSpeed")));
-
-            me.fpmIndicator.setTranslation(0, -math.clamp(math.clamp(noti.getproper("vFpm"), -1000, 1000) + noti.getproper("vFpm"), -4000, 4000) / 1000 * 35);
-            me.gforce.setTranslation(0, (noti.getproper("Nz")-1)*29);
-            me.speed.setTranslation(0, (noti.getproper("ias")-50)/20*28);
-
-		    # HSI
-		    me.targetHdg.updateText(sprintf("%03d", noti.getproper("APHeadingBug")));
-		},
-		exit: func {
-			printDebug("Exit ",me.name~" on ",me.device.name);
-		},
-		links: {
-			"OSB18": "PageTMenu",
-		},
-		layers: [],
-	},
-
                                                                         
 # 888888b.   888             d8888 888b    888 888    d8P  
 # 888  "88b  888            d88888 8888b   888 888   d8P   
@@ -1324,6 +998,211 @@ var DisplaySystem = {
 		},
 		layers: [],
 	},
+
+
+	PageInit: {
+		name: "PageInit",
+		isNew: 1,
+		supportSOI: 0,
+		needGroup: 1,
+		new: func {
+			me.instance = {parents:[DisplaySystem.PageInit]};
+			me.instance.group = nil;
+			return me.instance;
+		},
+		setup: func {
+			printDebug(me.name," on ",me.device.name," is being setup");
+
+			var font_mapper = func(family, weight) {
+				return "DULarge.ttf";
+			};
+
+			canvas.parsesvg(me.group, "Nasal/displays/vsd_v2.svg", {"font-mapper": font_mapper});
+
+			var clippedSVGKeys = ["pitch_ladder", "ils_group", "gs_group", "hdg_scale"];;
+			foreach(var key; clippedSVGKeys) {
+				# print(key);
+				me[key] = me.group.getElementById(key);
+			
+				var clip_el = me.group.getElementById(key ~ "_clip");
+				if (clip_el != nil) {
+					clip_el.setVisible(0);
+					var tranRect = clip_el.getTransformedBounds();
+				
+					var clip_rect = sprintf("rect(%d, %d, %d, %d)", 
+						tranRect[1], # 0 ys
+						tranRect[2], # 1 xe
+						tranRect[3], # 2 ye
+						tranRect[0] # 3 xs
+					);
+					# print(clip_rect);				
+				# Coordinates are top, right, bottom, left (ys, xe, ye, xs) ref: l621 of simgear/canvas/CanvasElement.cxx
+				me[key].set("clip", clip_rect);
+				me[key].set("clip-frame", canvas.Element.GLOBAL);
+				}
+			}
+
+			me.speed = me.group.getElementById("speed");
+			me.hdg = me.group.getElementById("hdg");
+			me.altitude = me.group.getElementById("altitude");
+			me.navMode = me.group.getElementById("nav_mode");
+			me.navIdent = me.group.getElementById("nav_ident");
+			me.navDist = me.group.getElementById("nav_dist");
+			me.ilsDiamond = me.group.getElementById("ils_diamond");
+			me.gsDiamond = me.group.getElementById("gs_diamond");
+			me.navHDG = me.group.getElementById("middle_line");
+			me.hdgT1 = me.group.getElementById("hdg_one");
+			me.hdgT2 = me.group.getElementById("hdg_two");
+			me.hdgT3 = me.group.getElementById("hdg_three");
+			me.hdgT4 = me.group.getElementById("hdg_four");
+			me.hdgT5 = me.group.getElementById("hdg_five");
+			me.hdgT6 = me.group.getElementById("hdg_six");
+			me.hdgT7 = me.group.getElementById("hdg_seven");
+			me.hdgTape = me.group.getElementById("hdg_scale");
+			# me.ladder = me.group.getElementById("pitch_ladder");
+			me.asi = me.group.getElementById("asi");
+			me.rollArrow = me.group.getElementById("roll_arrow");
+			me.gsGroup = me.group.getElementById("gs_group");
+			me.ilsGroup = me.group.getElementById("ils_group");
+			me.gsGroup.setVisible(0);
+			me.ilsGroup.setVisible(0);
+
+			me.speed.enableUpdate();
+			me.hdg.enableUpdate();
+			me.altitude.enableUpdate();
+			values.vsd.terrainCenter = me.asi.getCenter();
+			me.asiTrans = me.asi.createTransform();
+			me.asiRot = me.asi.createTransform();
+			me.hdgT1.enableUpdate();
+			me.hdgT2.enableUpdate();
+			me.hdgT3.enableUpdate();
+			me.hdgT4.enableUpdate();
+			me.hdgT5.enableUpdate();
+			me.hdgT6.enableUpdate();
+			me.hdgT7.enableUpdate();
+
+
+			me.pageText = me.group.createChild("text")
+				.set("z-index", 10)
+				.setColor(0,1,0)
+				.setAlignment("center-center")
+				.setTranslation(displayWidthHalf, displayHeightHalf)
+				.setFontSize(me.device.fontSize*3)
+				.setText("");
+		},
+		enter: func {
+			printDebug("Enter ",me.name~" on ",me.device.name);
+			if (me.isNew) {
+				me.setup();
+				me.isNew = 0;
+			}
+			me.device.resetControls();
+		},
+		controlAction: func (controlName) {
+			printDebug(me.name,": ",controlName," activated on ",me.device.name);
+            if (controlName == "OSB16") {
+                me.device.swap();
+            }
+		},
+		update: func (noti = nil) {	
+			# simulate minimum reading of 30kts IAS
+			if (noti.getproper("ias") <= 30) {
+				me.speed.updateText("0");
+			}else{
+				me.speed.updateText(sprintf("%03d", noti.getproper("ias")));
+			}
+
+			me.altitude.updateText(sprintf("%01d",math.round(noti.getproper("alt_ft"),10)));
+			me.asiTrans.setTranslation(0,noti.getproper("pitch")*6.3);
+			me.asiRot.setRotation(-noti.getproper("roll")*D2R, values.vsd.terrainCenter);
+			me.rollArrow.setRotation(-noti.getproper("roll")*D2R, values.vsd.terrainCenter);
+			me.hdg.updateText(sprintf("%03d",noti.getproper("heading")));
+
+			# hdg tape code + functions adapted from Octal450's MD-11 IESI
+
+			
+			values.hdg.indicatedHdg = noti.getproper("heading");
+			values.hdg.offset = values.hdg.indicatedHdg / 10 - int(values.hdg.indicatedHdg / 10);
+			values.hdg.middleText = roundAbout(values.hdg.indicatedHdg / 10);
+			values.hdg.middleOffset = nil;
+
+			if (values.hdg.middleText == 36){
+				values.hdg.middleText = 0;
+			}
+
+            values.hdg.l1 = values.hdg.middleText == 0 ? 35 : values.hdg.middleText - 1;
+            values.hdg.r1 = values.hdg.middleText == 35 ? 0 : values.hdg.middleText + 1;
+            values.hdg.l2 = values.hdg.l1 == 0 ? 35 : values.hdg.l1 - 1;
+            values.hdg.r2 = values.hdg.r1 == 35 ? 0 : values.hdg.r1 + 1;
+            values.hdg.l3 = values.hdg.l2 == 0 ? 35 : values.hdg.l2 - 1;
+            values.hdg.r3 = values.hdg.r2 == 35 ? 0 : values.hdg.r2 + 1;
+			# L3 + R3 are outside the clip ares intentionally
+			# This is so there is a smooth transition for heading numbers "appearing"
+
+			if (values.hdg.offset > 0.5) {
+				values.hdg.middleOffset = -(values.hdg.offset - 1) * 45.5;
+			} else {
+				values.hdg.middleOffset = -values.hdg.offset * 45.5;
+			}
+			me.hdgTape.setTranslation(values.hdg.middleOffset, 0);
+			me.hdgT1.setText(hdgText(values.hdg.l3));
+			me.hdgT2.setText(hdgText(values.hdg.l2));
+			me.hdgT3.setText(hdgText(values.hdg.l1));
+			me.hdgT4.setText(hdgText(values.hdg.middleText));
+			me.hdgT5.setText(hdgText(values.hdg.r1));
+			me.hdgT6.setText(hdgText(values.hdg.r2));
+			me.hdgT7.setText(hdgText(values.hdg.r3));
+			#ILS (Also from MD-11)
+
+			values.nav.headingNeedleDeflectionNorm = noti.getproper("nav0HdgDeflectionN");
+			values.nav.navLoc = noti.getproper("nav0HasLoc");
+			values.nav.selectedMhz = noti.getproper("nav0Freq");
+			values.nav.signalQuality = noti.getproper("nav0SignalQuality");
+			values.nav.inRange = noti.getproper("nav0InRange");			
+			if (values.nav.selectedMhz != 0) {
+				if (values.nav.navLoc and values.nav.signalQuality >= 0.99) {
+					me.ilsDiamond.setTranslation(values.nav.headingNeedleDeflectionNorm * 134, 0);
+					me.ilsDiamond.show();
+				} else {
+					me.ilsDiamond.hide();
+				}
+				if (values.nav.inRange) {
+					me.ilsGroup.setVisible(1);
+				} else {me.ilsGroup.setVisible(0);}
+			} else {
+				me.ilsDiamond.hide();
+			}
+			
+			
+			# ILS G/S
+			values.nav.gsNeedleDeflectionNorm = noti.getproper("gs0NeedleDeflectN");
+			values.nav.gsInRange = noti.getproper("nav0GSInRange");
+			values.nav.hasGs = noti.getproper("nav0HasGS");		
+			if (values.nav.selectedMhz != 0) {
+				if (values.nav.gsInRange and values.nav.hasGs and values.nav.signalQuality >= 0.99) {
+					me.gsDiamond.setTranslation(0, values.nav.gsNeedleDeflectionNorm * -106.4);
+					me.gsDiamond.show();
+				} else {
+					me.gsDiamond.hide();
+				}
+				if (values.nav.gsInRange) {
+					me.gsGroup.setVisible(1);
+				} else {me.gsGroup.setVisible(0);}
+				# me.gsGroup.setVisible(1);
+			} else {
+				me.gsDiamond.hide();
+			}
+		},
+		exit: func {
+			printDebug("Exit ",me.name~" on ",me.device.name);
+		},
+		links: {
+			"OSB17": "PageBlank",
+			"OSB18": "PageTMenu",
+		},
+		layers: [],
+	},
+
 
 
 
@@ -1417,9 +1296,6 @@ var B1MfdRecipient =
             if (notification.NotificationType == "FrameNotification")
             {
                 leftPFD.update(notification);
-                leftMFD.update(notification);
-                rightPFD.update(notification);
-                rightMFD.update(notification);
                 return emesary.Transmitter.ReceiptStatus_OK;
             }
             return emesary.Transmitter.ReceiptStatus_NotProcessed;
@@ -1432,40 +1308,28 @@ var B1MfdRecipient =
 };
 var B1_display = nil;
 
-var displayWidth     = 512;#552 * 0.795;
-var displayHeight    = 1024;#482 * 1;
+var displayWidth     = 1024;#552 * 0.795;
+var displayHeight    = 512;#482 * 1;
 var displayWidthHalf = displayWidth  *  0.5;
 var displayHeightHalf= displayHeight  *  0.5;
 
 var forcePages = func (v, system) {
 	if (v == 0) {
-        system.selectPage("PageBlank");
+        system.selectPage("PageInit");
     } elsif (v == 1) {
-        system.selectPage("PagePFD1");
+        system.selectPage("PageInit");
     }
 }
 
 var main = func (module) {
 	# TEST CODE:
-	var height = 1024;#482;
-	var width  = 768;#552;
+	var height = 512;#482;
+	var width  = 1024;#552;
 
-	leftPFD = DisplayDevice.new("leftPFD", [width,height], [1, 1], "MFD1_Canvas", "Front_MFD1_Canvas.png");
+	leftPFD = DisplayDevice.new("leftPFD", [width,height], [1, 1], "AI", "vsd_canvas.png");
 	leftPFD.setColorBackground(rightPFDColorBackground);
 
-	leftMFD = DisplayDevice.new("LeftMFD", [width,height], [1, 1], "MFD2_Canvas", "Front_MFD1_Canvas.png");
-	leftMFD.setColorBackground(rightPFDColorBackground);
-
-	rightPFD = DisplayDevice.new("RightPFD", [width,height], [1, 1], "MFD3_Canvas", "Front_MFD1_Canvas.png");
-	rightPFD.setColorBackground(rightPFDColorBackground);
-
-	rightMFD = DisplayDevice.new("RightMFD", [width,height], [1, 1], "MFD4_Canvas", "Front_MFD1_Canvas.png");
-	rightMFD.setColorBackground(rightPFDColorBackground);
-
 	leftPFD.setControlTextColors(colorText1, rightPFDColorBackground);
-	leftMFD.setControlTextColors(colorText1, rightPFDColorBackground);
-	rightPFD.setControlTextColors(colorText1, rightPFDColorBackground);
-	rightMFD.setControlTextColors(colorText1, rightPFDColorBackground);
 
 	width *= 1;#0.795;
 
@@ -1511,29 +1375,16 @@ var main = func (module) {
 	var mfdSystem4 = DisplaySystem.new();
 
 	leftPFD.setDisplaySystem(mfdSystem1);
-	leftMFD.setDisplaySystem(mfdSystem2);
-	rightPFD.setDisplaySystem(mfdSystem3);
-	rightMFD.setDisplaySystem(mfdSystem4);
 
 	mfdSystem1.initDevice(0, osbPositions, font.device.main);
-	mfdSystem2.initDevice(1, osbPositions, font.device.main);
-	mfdSystem3.initDevice(2, osbPositions, font.device.main);
-	mfdSystem4.initDevice(3, osbPositions, font.device.main);
 
 	leftPFD.addControlFeedback();
-	leftMFD.addControlFeedback();
-	rightPFD.addControlFeedback();
-	rightMFD.addControlFeedback();
+
 
 	mfdSystem1.initPages();
-	mfdSystem2.initPages();
-	mfdSystem3.initPages();
-	mfdSystem4.initPages();
+
 
 	forcePages(1, mfdSystem1);
-	forcePages(0, mfdSystem2);
-	forcePages(1, mfdSystem3);
-	forcePages(0, mfdSystem4);
 
 	B1_display = B1MfdRecipient.new("B1-displaySystem");
 	emesary.GlobalTransmitter.Register(B1_display);
@@ -1545,18 +1396,6 @@ var unload = func {
 	if (leftPFD != nil) {
 		leftPFD.del();
 		leftPFD = nil;
-	}
-	if (leftMFD != nil) {
-		leftMFD.del();
-		leftMFD = nil;
-	}
-	if (rightPFD != nil) {
-		rightPFD.del();
-		rightPFD = nil;
-	}
-	if (rightMFD != nil) {
-		rightMFD.del();
-		rightMFD = nil;
 	}
 	DisplayDevice = nil;
 	DisplaySystem = nil;

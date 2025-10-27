@@ -165,16 +165,17 @@ more to come :-)
 	  </offsets>
  </model>
 
-  <model>
-	  <name>copilot fltdir-e</name>
-    <path>Aircraft/B-1B/Models/Instruments-3d/fltdir.xml</path>
-    <offsets>
-      <x-m>-18.0353</x-m>
-      <y-m>0.353</y-m>
-      <z-m>0.85</z-m>
-      <pitch-deg>0</pitch-deg>
-    </offsets>
-  </model>
+ <model>
+	  <name>PFR command</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/PFR_command.xml</path>   
+	  <offsets>
+		  <x-m>0.08</x-m>
+		  <y-m>0.011</y-m>
+		  <z-m>-0.1</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+ </model>
+
 	<model>
 		<name>copilot fltdir-d</name>
 		<path>Aircraft/B-1B/Models/Instruments-3d/fltdir.xml</path>
@@ -361,16 +362,6 @@ more to come :-)
 	  </offsets>
   </model>
 
-  <model>
-	  <name>fltdir-e</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/fltdir.xml</path>
-	  <offsets>
-		  <x-m>-18.0363</x-m>
-		  <y-m>-0.754</y-m>
-		  <z-m>0.85</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
 	<model>
 		<name>fltdir-d</name>
 		<path>Aircraft/B-1B/Models/Instruments-3d/fltdir.xml</path>
@@ -397,7 +388,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/rep_lights.xml</path>
 	  <offsets>
 		  <x-m>-18.0303</x-m>
-		  <y-m>-0.624</y-m>
+		  <y-m>-0.615</y-m>
 		  <z-m> 0.75</z-m>
 		  <pitch-deg>-1</pitch-deg>
 	  </offsets>
@@ -1490,9 +1481,8 @@ B-1BFS
 		<object-name>Cockpit_screens</object-name>
 		<object-name>MFD-gaps</object-name>
 		<object-name>MFD-gaps2</object-name>
-		<object-name>copilot fltdir-e</object-name>
+		<object-name>PFR command</object-name>
 		<object-name>gearind-e</object-name>
-		<object-name>fltdir-e</object-name>
 		<object-name>bomb-doors-e</object-name>
 		<object-name>reporter-lights-e</object-name>
 		<object-name>DSO ai-e</object-name>
