@@ -598,14 +598,14 @@
 
 	<!-- BATTERY BUSSES -->
 
-		<switch name="/systems/electrical/sources/bus/dc-fwd/output-volt">
+		<switch name="/systems/electrical/sources/bus/dc-fwd/voltage">
 			<default value="0"/>
 			<test logic="AND" value="230">	
 			    /systems/electrical/sources/dc/bat-fwd/percentage gt 10
 		      </test>
 		</switch>
 
-		<switch name="/systems/electrical/sources/bus/dc-aft/output-volt">
+		<switch name="/systems/electrical/sources/bus/dc-aft/voltage">
 			<default value="0"/>
 			<test logic="AND" value="230">	
                             /systems/electrical/sources/dc/bat-aft/percentage gt 10
