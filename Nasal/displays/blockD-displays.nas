@@ -420,7 +420,7 @@ var DisplayDevice = {
         me.input = {
             alt_ft:               "instrumentation/altimeter/indicated-altitude-ft",
             alt_true_ft:          "position/altitude-ft",
-            heading:              "instrumentation/heading-indicator/indicated-heading-deg",
+            heading:              "orientation/heading-magnetic-deg",
             radarStandby:         "instrumentation/radar/radar-standby",
             rad_alt:              "instrumentation/radar-altimeter/radar-altitude-ft",
             rad_alt_ready:        "instrumentation/radar-altimeter/ready",
@@ -1116,12 +1116,12 @@ var DisplaySystem = {
 			me.asiTrans.setTranslation(0,noti.getproper("pitch")*6.3);
 			me.asiRot.setRotation(-noti.getproper("roll")*D2R, values.vsd.terrainCenter);
 			me.rollArrow.setRotation(-noti.getproper("roll")*D2R, values.vsd.terrainCenter);
-			me.hdg.updateText(sprintf("%03d",noti.getproper("heading")));
+			me.hdg.updateText(sprintf("%03d",noti.getproper("headingMag")));
 
 			# hdg tape code + functions adapted from Octal450's MD-11 IESI
 
 			
-			values.hdg.indicatedHdg = noti.getproper("heading");
+			values.hdg.indicatedHdg = noti.getproper("headingMag");
 			values.hdg.offset = values.hdg.indicatedHdg / 10 - int(values.hdg.indicatedHdg / 10);
 			values.hdg.middleText = roundAbout(values.hdg.indicatedHdg / 10);
 			values.hdg.middleOffset = nil;
