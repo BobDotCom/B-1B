@@ -596,6 +596,22 @@
 
 	<!-- Busses-->
 
+	<!-- BATTERY BUSSES -->
+
+		<switch name="/systems/electrical/sources/bus/dc-fwd/output-volt">
+			<default value="0"/>
+			<test logic="AND" value="230">	
+			    /systems/electrical/sources/dc/bat-fwd/percentage gt 10
+		      </test>
+		</switch>
+
+		<switch name="/systems/electrical/sources/bus/dc-aft/output-volt">
+			<default value="0"/>
+			<test logic="AND" value="230">	
+                            /systems/electrical/sources/dc/bat-aft/percentage gt 10
+		      </test>
+		</switch>
+
 	<!-- BUS 1 -->
 
 		<switch name="/systems/electrical/bus/ac-1/voltage">
@@ -733,11 +749,8 @@
 		<switch name="/systems/electrical/generic-pwr">
 			<description>This makes the FG stuff work because we killed the generic electrical</description>
 			<default value="0"/>
-			<test value="/systems/electrical/bus/dc-fwd">
-				/systems/electrical/bus/dc-fwd ge 25
-			</test>
-			<test value="/systems/electrical/bus/dc-aft">
-				/systems/electrical/bus/dc-aft ge 25
+			<test value="/systems/electrical/bus/ac-1/voltage">
+				/systems/electrical/bus/ac-1/voltage gt 225 
 			</test>
 			<output>/systems/electrical/outputs/efis</output>
 			<output>/systems/electrical/outputs/fcp-power</output>
@@ -748,41 +761,70 @@
 			<output>/systems/electrical/outputs/tacan</output>
 			<output>/systems/electrical/outputs/turn-coordinator</output>
 			<output>/systems/electrical/outputs/nav</output> 
-			<output>/systems/electrical/outputs/adf</output>
 		</switch>
 
-		<switch name="/systems/electrical/generic-ac-pwr">
-			<description>This makes the FG stuff work because we killed the generic electrical</description>
-			<default value="0"/>
-			<test value="/systems/electrical/bus/ac-ess">
-				/systems/electrical/bus/ac-ess ge 25
-			</test>
-			<test value="/systems/electrical/bus/ac-2">
-				/systems/electrical/bus/ac-2 ge 25
-			</test>
-			<output>/systems/electrical/outputs/gps</output>
-		</switch>
+	</channel>
+
+	<channel name="Instrument power" execrate="8">
+
+	<!-- Radios -->
 
 		<switch name="/instrumentation/comm[0]/power-btn">
 			<default value="0"/>
-			<test logic="AND" value="1">
-				/systems/electrical/bus/dc-ess ge 25
-			</test>
+			<test logic="OR" value="230">	
+			    /systems/electrical/bus/ac-4/voltage gt 225
+			    /systems/electrical/bus/ess/voltage gt 225
+		      </test>
 		</switch>
 
 		<switch name="/instrumentation/comm[1]/power-btn">
 			<default value="0"/>
-			<test logic="AND" value="1">
-				/systems/electrical/bus/dc-aft ge 25
-			</test>
+			<test logic="AND" value="230">	
+			    /systems/electrical/bus/ac-3/voltage gt 225
+		      </test>
 		</switch>
+
+	<!-- HF radio is supplied by ac 1 -->
 
 		<switch name="/instrumentation/comm[2]/power-btn">
 			<default value="0"/>
-			<test logic="AND" value="1">
-				/systems/electrical/bus/dc-fwd ge 25
-			</test>
+			<test logic="AND" value="230">	
+			    /systems/electrical/bus/ac-1/voltage gt 225
+		      </test>
 		</switch>
+
+<!-- 
+
+**** INSTRUMENT LIST ***** 
+
+HSI, PILOT & CO-PILOT - BUS 3 & ESS
+UHF 1 -BUS 4 & ESS
+UHF 2 - BUS 3
+HF - BUS 1 
+ILS 1 - BUS 1
+ILS 2 - BUS 3
+ADF - BUS 1
+TACAN - BUS 4 & ESS
+PILOT DISPLAY - ESS 
+CO-PILOT DISPLAY - BUS 3
+STANDBY ADI - BUS 3 & ESS
+ENGINE PERFORMANCE INDICATORS - BUS 1 & 3
+GSS 1 - ESS
+GSS 2 - BUS 3
+ADC 1 - BUS 1
+ADC 2 - BUS 3
+TFR - BUS 3
+RADAR ALT - BUS 1
+AIRSPEED/MACH INDICATOR, PILOT - BUS 2
+ALTITUDE/VERTICAL VELOCITY INDICATOR, PILOT - BUS 2
+AIRSPEED/MACH INDICATOR, CO-PILOT - BUS 3
+ALTITUDE/VERTICAL VELOCITY INDICATOR, CO-PILOT - BUS 3
+TRUE AIRSPEED/GROUNDSPEED DATA - BUS 2
+IFF - BUS 4 & ESS
+CG & FUEL INDICATORS - ESS
+FLIGHT SURFACE INDICATORS - ESS
+
+ -->
 
 	</channel>
 
