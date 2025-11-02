@@ -523,10 +523,10 @@ B-1B set file.
                 <path>Aircraft/B-1B/Systems/instrumentation.xml</path>
             </autopilot>
             <property-rule n="200">
-                <path>Systems/annunciators.xml</path>
+                <path>systems/annunciators.xml</path>
             </property-rule>
             <property-rule n="201">
-                <path>Systems/computers.xml</path>
+                <path>systems/computers.xml</path>
             </property-rule>
             <path>Aircraft/B-1B/Systems/b1b-airdata.xml</path>
         </systems>

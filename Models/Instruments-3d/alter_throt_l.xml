@@ -289,11 +289,11 @@ maggse
 		<repeatable>true</repeatable>
 		<interval-sec>0.3</interval-sec>
 		<binding>
-			<command>property-adjust</command>
+			<command>property-toggle</command>
 			<property>controls/switches/HDG-select-switch</property>
 			<step>1.0</step>
 			<min>0.0</min>
-			<max>1.00</max>
+			<max>1.0</max>
 		</binding>
 	</action>
 </animation>
