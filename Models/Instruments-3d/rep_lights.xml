@@ -12,20 +12,30 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>1_GSS</object-name>
 	 <condition>
-              <or>
-		 <equals>
-			 <property>sim/failure-manager/systems/computers/INS/heading/failure-level</property>
-			 <value>1.0</value>
-		 </equals>
-		 <equals>
-			 <property>sim/failure-manager/systems/computers/INS/pitch/failure-level</property>
-			 <value>1.0</value>
-		 </equals>
-		 <equals>
-			 <property>sim/failure-manager/systems/computers/INS/roll/failure-level</property>
-			 <value>1.0</value>
-		 </equals>
-              </or>
+	  <and>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
+          	<greater-than>
+           	 <property>systems/electrical/bus/ac-3/voltage</property>
+           	 <value>225</value>
+           	</greater-than>
+	   <or>
+		 <not-equals>
+			 <property>systems/computers/gss[0]/heading/heading_error</property>
+			 <value>0</value>
+		 </not-equals>
+		 <not-equals>
+			 <property>systems/computers/gss[0]/pitch/pitch_error/error_value</property>
+			 <value>0</value>
+		 </not-equals>
+		 <not-equals>
+			 <property>systems/computers/gss[0]/roll/roll_error/error_value</property>
+			 <value>0</value>
+		 </not-equals>
+	   </or>
+	  </and>
 	 </condition>
  </animation>
 
@@ -33,20 +43,30 @@ sweat by maggse
 	 <type>select</type>
 	 <object-name>2_GSS</object-name>
 	 <condition>
-              <or>
-		 <equals>
-			 <property>sim/failure-manager/systems/computers/GSS/heading/failure-level</property>
-			 <value>1.0</value>
-		 </equals>
-		 <equals>
-			 <property>sim/failure-manager/systems/computers/GSS/pitch/failure-level</property>
-			 <value>1.0</value>
-		 </equals>
-		 <equals>
-			 <property>sim/failure-manager/systems/computers/GSS/roll/failure-level</property>
-			 <value>1.0</value>
-		 </equals>
-              </or>
+	  <and>
+          	<equals>
+           	 <property>/systems/electrical/lights/blink-fast</property>
+           	 <value>1</value>
+           	</equals>
+          	<greater-than>
+           	 <property>systems/electrical/bus/ac-3/voltage</property>
+           	 <value>225</value>
+           	</greater-than>
+	   <or>
+		 <not-equals>
+			 <property>systems/computers/gss[1]/heading/heading_error</property>
+			 <value>0</value>
+		 </not-equals>
+		 <not-equals>
+			 <property>systems/computers/gss[1]/pitch/pitch_error/error_value</property>
+			 <value>0</value>
+		 </not-equals>
+		 <not-equals>
+			 <property>systems/computers/gss[1]/roll/roll_error/error_value</property>
+			 <value>0</value>
+		 </not-equals>
+	   </or>
+	  </and>
 	 </condition>
  </animation>
 

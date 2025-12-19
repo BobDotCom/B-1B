@@ -24,20 +24,20 @@ var SubSystem_Main = {
         var obj = { parents: [SubSystem_Main]};
         input = {
             # PFD
-            alt_ft:               "instrumentation/altimeter/indicated-altitude-ft",
-            headingTrue:          "orientation/heading-deg",
+            alt_ft:               "systems/computers/adc_switch/indicated-altitude-ft_output",
+            headingTrue:          "systems/computers/gss_switch/heading_output",
             headingMag:           "orientation/heading-magnetic-deg",
-            ias:                  "velocities/airspeed-kt",
+            ias:                  "systems/computers/adc_switch/indicated_airspeed_knts_output",
             inhg:                 "instrumentation/altimeter/setting-inhg",
-            mach:                 "instrumentation/airspeed-indicator/indicated-mach",
+            mach:                 "systems/computers/adc_switch/indicated_mach_output",
             Nz:                   "accelerations/pilot-gdamped",
-            pitch:                "orientation/pitch-deg",
-            roll:                 "orientation/roll-deg",
+            pitch:                "systems/computers/gss_switch/pitch_output",
+            roll:                 "systems/computers/gss_switch/roll_output",
             targetMach:           "autopilot/settings/target-mach",
             # APHeadingBug:         "autopilot/settings/heading-bug-deg",
             targetSpeed:          "autopilot/settings/target-speed-kt",
             targetAltitude:       "autopilot/settings/target-altitude-ft",
-            vFps:                 "velocities/vertical-speed-fps", # Multiply by 60 for fpm
+            vFps:                 "systems/computers/adc_switch/vertical_speed_fps_output", # Multiply by 60 for fpm
             FrameRate :           "sim/frame-rate",
             frame_rate_worst:     "sim/frame-rate-worst",
             alt_true_ft:          "position/altitude-ft",
@@ -54,7 +54,7 @@ var SubSystem_Main = {
             APTrueHeadingErr:     "autopilot/internal/true-heading-error-deg",
             APnav0HeadingErr:     "autopilot/internal/nav1-heading-error-deg",
             RMActive:             "autopilot/route-manager/active",
-            tas:                  "fdm/jsbsim/velocities/vtrue-kts",
+            tas:                  "systems/computers/adc_switch/true_airspeed_knts_output",
             gearsPos:             "gear/gear/position-norm",
             latitude:             "position/latitude-deg",
             longitude:            "position/longitude-deg",

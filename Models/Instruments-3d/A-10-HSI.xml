@@ -10,11 +10,11 @@
     <object-name>hsi</object-name>
     <condition>
       <greater-than>
-	<property>systems/electrical/outputs/hsi</property>
-	<value>24</value>
+	<property>systems/electrical/bus/ac-1/voltage</property>
+	<value>225</value>
       </greater-than>
     </condition>
-   <property>orientation/heading-deg</property>
+   <property>systems/computers/gss_switch/heading_output</property>
    <axis><x>1</x></axis>  
    </animation>
 
@@ -23,11 +23,11 @@
     <object-name>cdi</object-name>
     <condition>
       <greater-than>
-	<property>systems/electrical/outputs/hsi</property>
-	<value>24</value>
+	<property>systems/electrical/bus/ac-1/voltage</property>
+	<value>225</value>
       </greater-than>
     </condition>
-    <property>systems/computers/Output-heading</property>
+    <property>systems/computers/gss_switch/heading_output</property>
     <axis><x>1</x></axis>
   </animation>
 
@@ -37,8 +37,8 @@
     <object-name>bearing-needle-1</object-name>
     <condition> 
       <greater-than>
-       <property>systems/electrical/outputs/hsi</property>
-       <value>24</value>
+       <property>systems/electrical/bus/ac-1/voltage</property>
+       <value>225</value>
       </greater-than> 
     </condition>
     <property>instrumentation/heading-indicator/bearing-needle</property>
@@ -76,8 +76,8 @@
     <object-name>off-flag</object-name>
     <condition>
       <less-than>
-	<property>systems/electrical/outputs/hsi</property>
-	<value>24</value>
+	<property>systems/electrical/bus/ac-1/voltage</property>
+	<value>225</value>
       </less-than>
     </condition>
   </animation>
@@ -86,29 +86,26 @@
   <animation>
     <type>textranslate</type>
     <object-name>miles-drum-1</object-name>
-    <property>instrumentation/heading-indicator/miles-drums</property>
-    <factor>0.1</factor>
-    <offset>-1</offset>
-    <step>1</step>
+    <property>systems/computers/hsi/miles_drums_output</property>
+    <factor>0.0001</factor>
+    <step>1000</step>
     <axis><y>-1</y></axis>
   </animation>
   <animation>
     <type>textranslate</type>
     <object-name>miles-drum-2</object-name>
-    <property>instrumentation/heading-indicator/miles-drums</property>
-    <factor>0.01</factor>
-    <offset>-10</offset>
-    <step>10</step>
+    <property>systems/computers/hsi/miles_drums_output</property>
+    <factor>0.00001</factor>
+    <step>10000</step>
     <scroll>0.9</scroll>
     <axis><y>-1</y></axis>
   </animation>
   <animation>
     <type>textranslate</type>
     <object-name>miles-drum-3</object-name>
-    <property>instrumentation/heading-indicator/miles-drums</property>
-    <factor>0.001</factor>
-    <offset>-100</offset>
-    <step>100</step>
+    <property>systems/computers/hsi/miles_drums_output</property>
+    <factor>0.000001</factor>
+    <step>100000</step>
     <scroll>0.9</scroll>
     <axis><y>-1</y></axis>
   </animation> 
@@ -249,8 +246,8 @@
     <condition>
       <or>
 	<less-than>
-	  <property>systems/electrical/outputs/hsi</property>
-	  <value>24</value>
+	  <property>systems/electrical/bus/ac-1/voltage</property>
+	  <value>225</value>
 	</less-than>
 	<and>
 	  <property>instrumentation/nav/serviceable</property>
@@ -306,8 +303,8 @@
 	<value>true</value>
       </equals>
       <greater-than>
-	<property>systems/electrical/outputs/hsi</property>
-	<value>24</value>
+	<property>systems/electrical/bus/ac-1/voltage</property>
+	<value>225</value>
       </greater-than>
       <property>instrumentation/nav/serviceable</property>
       <property>instrumentation/nav/in-range</property>
@@ -329,8 +326,8 @@
 	<value>true</value>
       </equals>
       <greater-than>
-	<property>systems/electrical/outputs/hsi</property>
-	<value>24</value>
+	<property>systems/electrical/bus/ac-1/voltage</property>
+	<value>225</value>
       </greater-than>
       <property>instrumentation/nav/serviceable</property>
       <property>instrumentation/nav/in-range</property>
