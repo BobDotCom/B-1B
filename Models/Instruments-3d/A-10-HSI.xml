@@ -72,14 +72,29 @@
   </animation> -->
 
   <animation>
-    <type>select</type>
+    <type>translate</type>
     <object-name>off-flag</object-name>
-    <condition>
-      <less-than>
-	<property>systems/electrical/bus/ac-1/voltage</property>
-	<value>225</value>
-      </less-than>
-    </condition>
+	 <property>systems/electrical/bus/ac-2/voltage</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+
+		 <entry>
+			 <ind>200.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>230.0</ind>
+			 <dep>0.005</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
   </animation>
 
   <!-- ILS distance digital display -->
