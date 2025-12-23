@@ -6,21 +6,50 @@ maggse
 
  <path>hud_alt.ac</path>
 
+<animation>
+	 <type>rotate</type>
+	 <object-name>Altitude_off_marker</object-name>
+	 <property>systems/electrical/bus/ac-2/voltage</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
 
+		 <entry>
+			 <ind>200.0</ind>
+			 <dep>-0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>230.0</ind>
+			 <dep>-55.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.00499</x-m>
+		 <y-m>-0.1899</y-m>
+		 <z-m>0.03516</z-m>
+  	 </center>
+ </animation>
 
 
  <animation>
    <type>textranslate</type>
-   <object-name>ind_alt_t</object-name>
-   <property>instrumentation/altimeter/indicated-altitude-ft</property>
+   <object-name>ind_alt_thousands</object-name>
+   <property>systems/computers/adc_switch/indicated-altitude-ft_output</property>
 <interpolation>
      <entry>
              <ind>0</ind>
              <dep>0</dep>
      </entry>
      <entry>
-	     <ind>69000</ind>
-	     <dep>0.96</dep>
+	     <ind>51400</ind>
+	     <dep>1</dep>
      </entry>
 </interpolation>
   <axis>
@@ -37,8 +66,8 @@ maggse
 
  <animation>
 	 <type>textranslate</type>
-	 <object-name>ind_alt_h</object-name>
-	 <property>instrumentation/altimeter/indicated-altitude-ft</property>
+	 <object-name>ind_alt_hundreds</object-name>
+	 <property>systems/computers/adc_switch/indicated-altitude-ft_output</property>
 	 <factor>0.001</factor>
 		<offset>0</offset>
 		 <axis>
@@ -55,36 +84,36 @@ maggse
 
  <animation>
 	 <type>translate</type>
-	 <object-name>ind_alt_lmob</object-name>
-	 <property>autopilot/settings/vertical-speed-fpm</property>
+	 <object-name>Vertical_velocity_indicator</object-name>
+	 <property>systems/computers/adc_switch/vertical_speed_fpm_output</property>
 	 <interpolation>
 		 <entry>
 			 <ind>-10000</ind>
-			 <dep>-0.045</dep>
+			 <dep>-0.053</dep>
 		 </entry>
 		 <entry>
-			 <ind>-1000</ind>
-			 <dep>-0.030</dep>
+			 <ind>-2000</ind>
+			 <dep>-0.053</dep>
 		 </entry>
 		 <entry>
-			 <ind>-500</ind>
-			 <dep>-0.015</dep>
+			 <ind>-1500</ind>
+			 <dep>-0.0375</dep>
 		 </entry>
 		 <entry>
 			 <ind>0</ind>
 			 <dep>0</dep>
 		 </entry>
 		 <entry>
-			 <ind>500</ind>
-			 <dep>0.015</dep>
+			 <ind>-1500</ind>
+			 <dep>-0.0375</dep>
 		 </entry>
 		 <entry>
-			 <ind>1000</ind>
-			 <dep>0.030</dep>
+			 <ind>2000</ind>
+			 <dep>0.053</dep>
 		 </entry>
 		 <entry>
 			 <ind>10000</ind>
-			 <dep>0.045</dep>
+			 <dep>0.053</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -97,6 +126,66 @@ maggse
 		 <y-m>-0.26520</y-m>
 		 <z-m> 0.00856</z-m>
 	 </center>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>Vertical_velocity_+</object-name>
+	 <property>systems/computers/adc_switch/vertical_speed_fpm_output</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>2000</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>10000</ind>
+			 <dep>0.155</dep>
+		 </entry>
+	 </interpolation>
+		 <axis>
+			 <x>0</x>
+			 <y>1</y>
+			 <z>0</z>
+		 </axis>
+		 <center>
+			 <x-m>0.00</x-m>
+			 <y-m>0.00</y-m>
+			 <z-m>0.00</z-m>
+		 </center>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>Vertical_velocity_-</object-name>
+	 <property>systems/computers/adc_switch/vertical_speed_fpm_output</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>-2000</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>-10000</ind>
+			 <dep>0.15</dep>
+		 </entry>
+	 </interpolation>
+		 <axis>
+			 <x>0</x>
+			 <y>-1</y>
+			 <z>0</z>
+		 </axis>
+		 <center>
+			 <x-m>0.00</x-m>
+			 <y-m>0.00</y-m>
+			 <z-m>0.00</z-m>
+		 </center>
  </animation>
 
  <animation>
@@ -195,8 +284,8 @@ maggse
 
  <animation>
 	 <type>textranslate</type>
-	 <object-name>Baro_pressure10</object-name>
-	 <property>instrumentation/altimeter/setting-inhg</property>
+	 <object-name>Inhg_10.00</object-name>
+	 <property>systems/computers/adc_switch/pressure-inhg_output</property>
 	 <factor>0.01</factor>
 	 <step>10</step>
 	 <axis>
@@ -208,8 +297,8 @@ maggse
 
  <animation>
 	 <type>textranslate</type>
-	 <object-name>Baro_pressure01</object-name>
-	 <property>instrumentation/altimeter/setting-inhg</property>
+	 <object-name>Inhg_01.00</object-name>
+	 <property>systems/computers/adc_switch/pressure-inhg_output</property>
 	 <factor>0.1</factor>
 	 <step>1</step>
 	 <axis>
@@ -221,8 +310,8 @@ maggse
 
  <animation>
 	 <type>textranslate</type>
-	 <object-name>Baro_pressure0.1</object-name>
-	 <property>instrumentation/altimeter/setting-inhg</property>
+	 <object-name>Inhg_00.10</object-name>
+	 <property>systems/computers/adc_switch/pressure-inhg_output</property>
 	 <factor>1.0</factor>
 	 <step>0.1</step>
 	 <axis>
@@ -234,8 +323,8 @@ maggse
 
  <animation>
 	 <type>textranslate</type>
-	 <object-name>Baro_pressure0.01</object-name>
-	 <property>instrumentation/altimeter/setting-inhg</property>
+	 <object-name>Inhg_00.01</object-name>
+	 <property>systems/computers/adc_switch/pressure-inhg_output</property>
 	 <factor>10.0</factor>
 	 <step>0.01</step>
 	 <axis>
@@ -249,7 +338,7 @@ maggse
 
 <animation>
 	<type>rotate</type>
-	<object-name>VFP_set</object-name>
+	<object-name>Inhg_set</object-name>
 	 <interpolation>
 		 <entry>
 			 <ind> 21.0</ind>
@@ -261,9 +350,9 @@ maggse
 		 </entry>
 	 </interpolation>
         <center>
-         <x>0.0055</x> 
-         <y>-0.2618</y> 
-         <z>-0.08966</z>
+         <x>0.0161</x> 
+         <y>-0.253</y> 
+         <z>-0.089</z>
         </center>
         <axis>
 	 <x>1</x>
@@ -274,7 +363,7 @@ maggse
 
 	<animation>
 		<type>pick</type>
-		<object-name>VFP_set</object-name>
+		<object-name>Inhg_set</object-name>
 		  <action>
 		    <button>4</button>
 		    <repeatable>true</repeatable>

@@ -214,7 +214,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/102kt.xml</path>
 	  <offsets>
 		  <x-m>-18.0303</x-m>
-		  <y-m>-0.312</y-m>
+		  <y-m>-0.317</y-m>
 		  <z-m> 1.245</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -225,7 +225,7 @@ more to come :-)
 		<path>Aircraft/B-1B/Models/Instruments-3d/hud_alt.xml</path>
 		<offsets>
 			<x-m>-18.0303</x-m>
-			<y-m>-0.265</y-m>
+			<y-m>-0.275</y-m>
 			<z-m>1.160</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
@@ -236,7 +236,7 @@ more to come :-)
 		<path>Aircraft/B-1B/Models/Instruments-3d/hud_mach.xml</path>
 		<offsets>
 			<x-m>-18.0303</x-m>
-			<y-m>-0.276</y-m>
+			<y-m>-0.286</y-m>
 			<z-m>1.160</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
@@ -292,7 +292,7 @@ more to come :-)
 		<offsets>
 			<x-m>-18.0303</x-m>
 			<y-m>-0.505</y-m>
-			<z-m>1.305</z-m>
+			<z-m>1.315</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -324,7 +324,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/clock.xml</path>
 	  <offsets>
 		  <x-m>-18.0303</x-m>
-		  <y-m>-0.916</y-m>
+		  <y-m>-0.926</y-m>
 		  <z-m> 1.075</z-m>
 		  <pitch-deg>-1</pitch-deg>
 	  </offsets>
@@ -431,8 +431,8 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/apmode.xml</path>
 	  <offsets>
 		  <x-m>-17.8633</x-m>
-		  <y-m>-0.630</y-m>
-		  <z-m> 0.990</z-m>
+		  <y-m>-0.640</y-m>
+		  <z-m> 0.970</z-m>
 		  <roll-deg>-20</roll-deg>
           <heading-deg>-4</heading-deg>
 	  </offsets>
@@ -443,7 +443,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/alt2-3d.xml</path>
 	  <offsets>
 		  <x-m>-18.0303</x-m>
-		  <y-m>-0.315</y-m>
+		  <y-m>-0.325</y-m>
 		  <z-m>1.175</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -454,7 +454,7 @@ more to come :-)
 	  <path>Aircraft/B-1B/Models/Instruments-3d/vsi-3d.xml</path>
 	  <offsets>
 		  <x-m>-18.0303</x-m>
-		  <y-m>-0.400</y-m>
+		  <y-m>-0.405</y-m>
 		  <z-m>1.175</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
@@ -464,7 +464,7 @@ more to come :-)
 	  <name>ai</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>
 	  <offsets>
-		  <x-m>-18.0563</x-m>
+		  <x-m>-18.0585</x-m>
 		  <y-m>-0.400</y-m>
 		  <z-m>1.260</z-m>
 		  <pitch-deg>0</pitch-deg>

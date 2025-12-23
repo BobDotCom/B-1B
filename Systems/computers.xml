@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
 <system name="Computers">
 
@@ -351,16 +351,16 @@
        		</actuator>
 
 
-		<switch name="/systems/computers/adc[0]/altitide/pressure-hpa-rate">
+		<switch name="/systems/computers/adc[0]/altitide/pressure-inhg-rate">
 			<default value="0"/>			
                 	<test logic="AND" value="100">
 					/systems/electrical/bus/ac-1/voltage gt 225
 			</test>
 		</switch>
-		<actuator name="/systems/computers/adc[0]/altitide/pressure-hpa">
-            		<input>/instrumentation/altimeter/setting-hpa</input>
-            		<rate_limit sense="decr">/systems/computers/adc[0]/altitide/pressure-hpa-rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[0]/altitide/pressure-hpa-rate</rate_limit> 
+		<actuator name="/systems/computers/adc[0]/altitide/pressure-inhg">
+            		<input>/instrumentation/altimeter/setting-inhg</input>
+            		<rate_limit sense="decr">/systems/computers/adc[0]/altitide/pressure-inhg-rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[0]/altitide/pressure-inhg-rate</rate_limit> 
        		</actuator>
 
 
@@ -372,7 +372,7 @@
 			</test>
 		</switch>
 		<actuator name="/systems/computers/adc[0]/velocities/indicated_mach">
-            		<input>/instrumentation/airspeed-indicator/indicated-mach</input>
+            		<input>/velocities/mach</input>
             		<rate_limit sense="decr">/systems/computers/adc[0]/velocities/indicated_mach_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/adc[0]/velocities/indicated_mach_rate</rate_limit> 
        		</actuator>
@@ -390,6 +390,15 @@
             		<rate_limit sense="decr">/systems/computers/adc[0]/vertical_fps/vertical_speed_fps_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/adc[0]/vertical_fps/vertical_speed_fps_rate</rate_limit> 
        		</actuator>
+
+		<fcs_function name="/systems/computers/adc[0]/vertical_fps/vertical_speed_fpm">
+			<function>
+				<product>
+					<property>/systems/computers/adc[0]/vertical_fps/vertical_speed_fps</property>
+					<value>60</value>
+				</product>
+			</function>
+		</fcs_function>
 
 
 		<switch name="/systems/computers/adc[0]/airspeed/true_airspeed_knts_rate">
@@ -436,16 +445,16 @@
        		</actuator>
 
 
-		<switch name="/systems/computers/adc[1]/altitide/pressure-hpa-rate">
+		<switch name="/systems/computers/adc[1]/altitide/pressure-inhg-rate">
 			<default value="0"/>			
                 	<test logic="AND" value="100">
 					/systems/electrical/bus/ac-3/voltage gt 225
 			</test>
 		</switch>
-		<actuator name="/systems/computers/adc[1]/altitide/pressure-hpa">
-            		<input>/instrumentation/altimeter/setting-hpa</input>
-            		<rate_limit sense="decr">/systems/computers/adc[1]/altitide/pressure-hpa-rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[1]/altitide/pressure-hpa-rate</rate_limit> 
+		<actuator name="/systems/computers/adc[1]/altitide/pressure-inhg">
+            		<input>/instrumentation/altimeter/setting-inhg</input>
+            		<rate_limit sense="decr">/systems/computers/adc[1]/altitide/pressure-inhg-rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[1]/altitide/pressure-inhg-rate</rate_limit> 
        		</actuator>
 
 
@@ -457,7 +466,7 @@
 			</test>
 		</switch>
 		<actuator name="/systems/computers/adc[1]/velocities/indicated_mach">
-            		<input>/instrumentation/airspeed-indicator/indicated-mach</input>
+            		<input>/velocities/mach</input>
             		<rate_limit sense="decr">/systems/computers/adc[1]/velocities/indicated_mach_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/adc[1]/velocities/indicated_mach_rate</rate_limit> 
        		</actuator>
@@ -475,6 +484,16 @@
             		<rate_limit sense="decr">/systems/computers/adc[1]/vertical_fps/vertical_speed_fps_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/adc[1]/vertical_fps/vertical_speed_fps_rate</rate_limit> 
        		</actuator>
+
+
+		<fcs_function name="/systems/computers/adc[1]/vertical_fps/vertical_speed_fpm">
+			<function>
+				<product>
+					<property>/systems/computers/adc[1]/vertical_fps/vertical_speed_fps</property>
+					<value>60</value>
+				</product>
+			</function>
+		</fcs_function>
 
 
 		<switch name="/systems/computers/adc[1]/airspeed/true_airspeed_knts_rate">
@@ -514,9 +533,9 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/computers/adc_switch/pressure-hpa_output">
-			<default value="/systems/computers/adc[0]/altitide/pressure-hpa"/>			
-                	<test logic="AND" value="/systems/computers/adc[1]/altitide/pressure-hpa">
+		<switch name="/systems/computers/adc_switch/pressure-inhg_output">
+			<default value="/systems/computers/adc[0]/altitide/pressure-inhg"/>			
+                	<test logic="AND" value="/systems/computers/adc[1]/altitide/pressure-inhg">
 					/controls/switches/ADC-select-switch eq 1
 			</test>
 		</switch>
@@ -531,6 +550,13 @@
 		<switch name="/systems/computers/adc_switch/vertical_speed_fps_output">
 			<default value="/systems/computers/adc[0]/vertical_fps/vertical_speed_fps"/>			
                 	<test logic="AND" value="/systems/computers/adc[1]/vertical_fps/vertical_speed_fps">
+					/controls/switches/ADC-select-switch eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/computers/adc_switch/vertical_speed_fpm_output">
+			<default value="/systems/computers/adc[0]/vertical_fps/vertical_speed_fpm"/>			
+                	<test logic="AND" value="/systems/computers/adc[1]/vertical_fps/vertical_speed_fpm">
 					/controls/switches/ADC-select-switch eq 1
 			</test>
 		</switch>
@@ -556,9 +582,29 @@
 
             <!-- Needle -->
 
+		<switch name="/instrumentation/heading-indicator/bearing-needle/switch">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/adf/indicated-bearing-deg">
+					/instrumentation/adf/in-range eq 1
+					/controls/switches/fltdir eq 0.3
+			</test>			
+		</switch>
+		<switch name="/instrumentation/heading-indicator/bearing-needle/rate">
+			<default value="0"/>
+                	<test logic="OR" value="50">
+				/systems/electrical/bus/ac-3/voltage gt 225
+				/systems/electrical/bus/ess/voltage gt 225
+			</test>			
+		</switch>
+		<actuator name="/instrumentation/heading-indicator/bearing-needle/output">
+            		<input>/instrumentation/heading-indicator/bearing-needle/switch</input>
+            		<rate_limit sense="decr">/instrumentation/heading-indicator/bearing-needle/rate</rate_limit> 
+            		<rate_limit sense="incr">/instrumentation/heading-indicator/bearing-needle/rate</rate_limit> 
+       		</actuator>
+
             <!-- Miles drums -->
 
-		<switch name="/systems/computers/hsi/miles_drums_output_switch">
+		<switch name="/systems/computers/hsi/miles_drums/output_switch">
 			<default value="0"/>
                 	<test logic="AND" value="/autopilot/route-manager/wp/dist">
 					/controls/switches/fltdir eq 0.2
@@ -574,19 +620,19 @@
 			</test>
 		</switch>
 
-		<switch name="/systems/computers/hsi/miles_drums_rate">
+		<switch name="/systems/computers/hsi/miles_drums/rate">
 			<default value="0"/>			
                 	<test logic="AND" value="10000">
 					/systems/failures/computers/hsi/miles_drums ne 1
 					/systems/electrical/bus/ac-3/voltage gt 225
-					/systems/computers/hsi/miles_drums_output_switch ne 0
+					/systems/computers/hsi/miles_drums/output_switch ne 0
 			</test>
 		</switch>
 
-		<actuator name="/systems/computers/hsi/miles_drums_output">
-            		<input>/systems/computers/hsi/miles_drums_output_switch</input>
-            		<rate_limit sense="decr">/systems/computers/hsi/miles_drums_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/hsi/miles_drums_rate</rate_limit> 
+		<actuator name="/systems/computers/hsi/miles_drums/output">
+            		<input>/systems/computers/hsi/miles_drums/output_switch</input>
+            		<rate_limit sense="decr">/systems/computers/hsi/miles_drums/rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/hsi/miles_drums/rate</rate_limit> 
        		</actuator>
 
 </channel>
