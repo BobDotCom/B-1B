@@ -101,7 +101,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>miles-drum-1</object-name>
-    <property>systems/computers/hsi/miles_drums_output</property>
+    <property>systems/computers/hsi/miles_drums/output</property>
     <factor>0.0001</factor>
     <step>1000</step>
     <axis><y>-1</y></axis>
@@ -109,7 +109,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>miles-drum-2</object-name>
-    <property>systems/computers/hsi/miles_drums_output</property>
+    <property>systems/computers/hsi/miles_drums/output</property>
     <factor>0.00001</factor>
     <step>10000</step>
     <scroll>0.9</scroll>
@@ -118,7 +118,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>miles-drum-3</object-name>
-    <property>systems/computers/hsi/miles_drums_output</property>
+    <property>systems/computers/hsi/miles_drums/output</property>
     <factor>0.000001</factor>
     <step>100000</step>
     <scroll>0.9</scroll>

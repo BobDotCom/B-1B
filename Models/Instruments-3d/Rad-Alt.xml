@@ -14,6 +14,54 @@
   </animation> 
 
   <animation>
+    <type>rotate</type>
+    <object-name>fly_up</object-name>
+    <property>instrumentation/radar-altimeter/target</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>1</ind><dep>-150</dep></entry>
+      <entry><ind>4000</ind><dep>-150</dep></entry>
+    </interpolation>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+        <center>
+            <x-m>-0.0078</x-m>
+            <y-m>-0.0369</y-m>
+            <z-m>0.0005</z-m>
+        </center>
+  </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>auto</object-name>
+        <property>instrumentation/radar-altimeter/altimeter_switch</property>
+        <factor>37</factor>
+        <center>
+            <x-m>0.019411</x-m>
+            <y-m>0.002328</y-m>
+            <z-m>0.015482</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/radar-altimeter/altimeter_switch</property>
+        	<factor>1</factor>
+                <min>0</min>
+                <max>3</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
 
     <type>material</type>
     <object-name>Auto-ltdn-switch</object-name>

@@ -240,14 +240,14 @@ sweat by maggse
 	<object-name>MINDECNHGT</object-name> 
         <condition> 
          <and>
-         <equals>
-          <property>instrumentation/annunciators/mindechgt</property>
-          <value>1</value>
-         </equals>
-         <equals>
-          <property>controls/switches/terrain-avoid</property>
-          <value>1</value>
-         </equals>
+         <greater-than>
+          <property>instrumentation/radar-altimeter/target</property>
+          <property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
+         </greater-than>
+         <greater-than>
+          <property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
+           <value>0</value>
+         </greater-than>
                 <or>
          	<greater-than> 
           	 <property>systems/electrical/bus/ac-3/voltage</property>
