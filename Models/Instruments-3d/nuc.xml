@@ -165,17 +165,6 @@ maggse
 	 </center>
  </animation>
 
- <animation>
-	 <type>material</type>
-	 <object-name>close_cover</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
-
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
  <animation>
@@ -208,17 +197,6 @@ maggse
 		 <z-m>-0.059323</z-m>
 	 </center>
  </animation>
-
-<animation>
-	<type>material</type>
-	<object-name>door-close</object-name>
-	 <emission>
-		 <red>0.3</red>
-		 <green>0.0</green>
-		 <blue>0.0</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
 
 <animation>
 	<type>pick</type>

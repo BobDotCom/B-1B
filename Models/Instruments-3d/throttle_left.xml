@@ -38,16 +38,6 @@ sweat by maggse
 		<z-m>0.23</z-m>
 	</center>
 </animation>
-<animation>
-	<type>material</type>
-	<object-name>throttle_lever_1_0</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
 
 <animation>
 	<type>pick</type>
@@ -107,16 +97,6 @@ sweat by maggse
 		<y-m>-0.19</y-m>
 		<z-m>0.23</z-m>
 	</center>
-</animation>
-<animation>
-	<type>material</type>
-	<object-name>throttle_lever_2_0</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
 </animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
@@ -180,16 +160,6 @@ sweat by maggse
 		<z-m>0.23</z-m>
 	</center>
 </animation>
-<animation>
-	<type>material</type>
-	<object-name>throttle_lever_3_0</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
@@ -251,16 +221,6 @@ sweat by maggse
 		<y-m>-0.1668</y-m>
 		<z-m>0.2334</z-m>
 	</center>
-</animation>
-<animation>
-	<type>material</type>
-	<object-name>throttle_lever_4_0</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
 </animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->

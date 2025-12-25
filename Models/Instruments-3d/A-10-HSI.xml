@@ -392,6 +392,7 @@
     <object-name>NO-miles-drum-1</object-name>
     <object-name>NO-miles-drum-2</object-name>
     <object-name>NO-miles-drum-3</object-name>
+    <object-name>lubber-line</object-name>
     <type>material</type>
     <condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 	 <emission>

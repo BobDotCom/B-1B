@@ -392,23 +392,28 @@ maggse
 
  <animation>
 	 <type>material</type>
-	 <object-name>ind_alt_t</object-name>
-	 <object-name>ind_alt_h</object-name>
+	 <object-name>ind_alt_thousands</object-name>
+	 <object-name>ind_alt_hundreds</object-name>
 	 <object-name>switch_alt_set</object-name>
 	 <object-name>altft_1</object-name>
 	 <object-name>altft_10</object-name>
 	 <object-name>altft_100</object-name>
 	 <object-name>altft_1000</object-name>
 	 <object-name>altft_10000</object-name>
-	 <object-name>ind_alt_lmob.001</object-name>
-	 <object-name>ind_alt_l</object-name>
-	 <object-name>ind_alt_lmob</object-name>
-	 <object-name>VFP_set</object-name>
+	 <object-name>Altitude_command_marker</object-name>
+	 <object-name>Inhg_00.01</object-name>
+	 <object-name>Inhg_00.10</object-name>
+	 <object-name>Inhg_01.00</object-name>
+	 <object-name>Inhg_10.00</object-name>
+	 <object-name>Vertical_velocity_scale</object-name>
+	 <object-name>Vertical_velocity_indicator</object-name>
+	 <object-name>Vertical_velocity_+</object-name>
+	 <object-name>Vertical_velocity_-</object-name>
 	 <emission>
 		<red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
 </animation>
 

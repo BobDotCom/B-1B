@@ -23,8 +23,8 @@
   <animation>
     <type>material</type>
     <object-name>IFF-PANEL</object-name>
-    <object-name>knob_oh.4</object-name>
-    <object-name>knob_oh.020</object-name>
+    <object-name>Code</object-name>
+    <object-name>Master</object-name>
     <object-name>Left-hand-large-switch</object-name>
     <object-name>Right-hand-large-switch</object-name>
     <object-name>Small-knob-1</object-name>
@@ -37,13 +37,27 @@
     <object-name>switch_oh.057</object-name>
     <object-name>switch_oh.058</object-name>
     <object-name>switch_oh.059</object-name>
-    <object-name>button.001</object-name>
-    <object-name>button.002</object-name>
     <object-name>knob_oh.009</object-name>
     <object-name>knob_oh.016</object-name>
     <object-name>knob_oh.017</object-name>
     <object-name>knob_oh.018</object-name>
     <object-name>knob_oh.019</object-name>
+    <object-name>Cylinder.001</object-name>
+    <object-name>Cylinder.007</object-name>
+    <object-name>Cylinder.002</object-name>
+    <object-name>Cylinder.003</object-name>
+    <object-name>Cylinder.005</object-name>
+    <object-name>Cylinder.006</object-name>
+    <object-name>Singles-3A</object-name>
+    <object-name>Tens-3A</object-name>
+    <object-name>Hundreds-3A</object-name>
+    <object-name>Thousands-3A</object-name>
+    <object-name>Singles-1</object-name>
+    <object-name>Tens-1</object-name>
+    <object-name>M.1_switch</object-name>
+    <object-name>M.3A_switch</object-name>
+    <object-name>Covers</object-name>
+    <object-name>NUTS</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>

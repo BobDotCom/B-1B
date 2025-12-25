@@ -245,24 +245,26 @@ maggse
 
  <animation>
 	 <type>material</type>
-	 <object-name>ind_alt_l.001</object-name>
-	 <object-name>ind_alt_1mob.002</object-name>
-	 <object-name>ind_alt_lmob.003</object-name>
 	 <object-name>ind_knots1</object-name>
 	 <object-name>ind_mach1</object-name>
-	 <object-name>macfuel1.002</object-name>
-	 <object-name>macfuel1.003</object-name>
-	 <object-name>macfuel2.002</object-name>
-	 <object-name>macfuel2.003</object-name>
-	 <object-name>macfuel3.002</object-name>
-	 <object-name>macfuel3.003</object-name>
+	 <object-name>ind_alt_lmob.003</object-name>
+	 <object-name>Mach_command_single</object-name>
+	 <object-name>Mach_command_ten</object-name>
+	 <object-name>Mach_command_hundred</object-name>
+	 <object-name>Mach_command_marker</object-name>
+	 <object-name>Mach_off_marker</object-name>
+	 <object-name>Airspeed_command_single</object-name>
+	 <object-name>Airspeed_command_ten</object-name>
+	 <object-name>Airspeed_command_hundred</object-name>
+	 <object-name>Airspeed_command_marker</object-name>
+	 <object-name>Airspeed_off_marker</object-name>
 	 <object-name>set_speed</object-name>
 	 <object-name>set_mach</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
 </animation>
 
