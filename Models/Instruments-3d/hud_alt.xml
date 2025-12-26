@@ -400,7 +400,8 @@ maggse
 	 <object-name>altft_100</object-name>
 	 <object-name>altft_1000</object-name>
 	 <object-name>altft_10000</object-name>
-	 <object-name>Altitude_command_marker</object-name>
+	 <object-name>Altitude_command_marker_1000</object-name>
+	 <object-name>Altitude_off_marker</object-name>
 	 <object-name>Inhg_00.01</object-name>
 	 <object-name>Inhg_00.10</object-name>
 	 <object-name>Inhg_01.00</object-name>

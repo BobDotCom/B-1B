@@ -9,7 +9,7 @@ maggse
  <animation>
    <type>rotate</type>
    <object-name>needle</object-name>
-   <property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
+   <property>/systems/computers/altitude_radars/dial_needle_rate</property>
 <interpolation>
      <entry>
        <ind>0</ind>
@@ -76,7 +76,7 @@ maggse
   <animation>
     <type>translate</type>
     <object-name>off_flag</object-name>
-	 <property>systems/electrical/bus/ac-1/voltage</property>
+	 <property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -84,11 +84,11 @@ maggse
 		 </entry>
 
 		 <entry>
-			 <ind>200.0</ind>
-			 <dep>0.0</dep>
+			 <ind>9.0</ind>
+			 <dep>-0.007</dep>
 		 </entry>
 		 <entry>
-			 <ind>230.0</ind>
+			 <ind>4000.0</ind>
 			 <dep>-0.007</dep>
 		 </entry>
 	 </interpolation>
@@ -97,12 +97,6 @@ maggse
 		 <y>0.0</y>
 		 <z>1.0</z>
 	 </axis>
-		<condition>
-  			<greater-than>
-    			<property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
-    			<value>0</value>
-  			</greater-than>
-		</condition>
   </animation>
 
   <animation>

@@ -59,5 +59,11 @@
     <number>0</number>
   </adf>
 
+<radar-altimeter>
+    <name>radar-altimeter</name>
+    <number>0</number>
+    <update-interval-sec>0.1</update-interval-sec>
+</radar-altimeter>
+
 
 </PropertyList>

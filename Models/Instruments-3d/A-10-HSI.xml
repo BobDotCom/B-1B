@@ -102,16 +102,16 @@
     <type>textranslate</type>
     <object-name>miles-drum-1</object-name>
     <property>systems/computers/hsi/miles_drums/output</property>
-    <factor>0.0001</factor>
-    <step>1000</step>
+    <factor>0.1</factor>
+    <step>1</step>
     <axis><y>-1</y></axis>
   </animation>
   <animation>
     <type>textranslate</type>
     <object-name>miles-drum-2</object-name>
     <property>systems/computers/hsi/miles_drums/output</property>
-    <factor>0.00001</factor>
-    <step>10000</step>
+    <factor>0.01</factor>
+    <step>10</step>
     <scroll>0.9</scroll>
     <axis><y>-1</y></axis>
   </animation>
@@ -119,8 +119,8 @@
     <type>textranslate</type>
     <object-name>miles-drum-3</object-name>
     <property>systems/computers/hsi/miles_drums/output</property>
-    <factor>0.000001</factor>
-    <step>100000</step>
+    <factor>0.001</factor>
+    <step>100</step>
     <scroll>0.9</scroll>
     <axis><y>-1</y></axis>
   </animation> 
@@ -227,8 +227,8 @@
     <object-name>bearing-validity-flag</object-name>
     <condition>
       <greater-than>
-	<property>systems/electrical/outputs/hsi</property>
-	<value>24</value>
+	<property>systems/electrical/bus/ac-1/voltage</property>
+	<value>225</value>
       </greater-than>
       <or>
 	<and>
