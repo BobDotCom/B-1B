@@ -1295,12 +1295,6 @@ B-1B set file.
         <airbases>
             <file>Aircraft/B-1B/Nasal/airbases.nas</file>
         </airbases>
-        <engines>
-            <file>Aircraft/B-1B/Nasal/engines.nas</file>
-        </engines>
-        <controls>
-            <file>Aircraft/B-1B/Nasal/controls.nas</file>
-        </controls>
         <failures>
             <file>Aircraft/B-1B/Nasal/B-1B-failures.nas</file>
 	</failures>
