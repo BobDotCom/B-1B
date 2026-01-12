@@ -582,6 +582,12 @@
 	<name>engine01_internal</name>
 	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path> 
 	<mode>looped</mode>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	</condition>
 	<position>
 		<x>8.0</x>
 		<y>4.1</y>
@@ -605,6 +611,12 @@
 	<name>engine02_internal</name>
 	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
 	<mode>looped</mode>
+	<condition>
+		<equals>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>0</value>
+		</equals>
+	</condition>
 	<position>
 		<x>8.0</x>
 		<y>4.1</y>
