@@ -529,7 +529,7 @@ maggse
 
  <animation>
    <type>rotate</type>
-   <object-name>conv_arm</object-name>
+   <object-name>switch_oh.058</object-name>
    <property>armament/oso/conv_arm</property>
    <factor>45</factor>
    <min>0</min>
@@ -548,7 +548,7 @@ maggse
 
   <animation>
    <type>pick</type>
-   <object-name>conv_arm</object-name>
+   <object-name>switch_oh.058</object-name>
    <action>
     <button>0</button>
       <binding>
@@ -605,7 +605,7 @@ maggse
 
  <animation>
    <type>rotate</type>
-   <object-name>nuc_arm</object-name>
+   <object-name>switch_oh.035</object-name>
    <property>armament/oso/nuc_arm</property>
    <factor>45</factor>
    <min>0</min>
@@ -624,7 +624,7 @@ maggse
 
   <animation>
    <type>pick</type>
-   <object-name>nuc_arm</object-name>
+   <object-name>switch_oh.035</object-name>
    <action>
     <button>0</button>
       <binding>
@@ -681,7 +681,7 @@ maggse
 
  <animation>
    <type>rotate</type>
-   <object-name>nuc_prearm</object-name>
+   <object-name>switch_oh.057</object-name>
    <property>armament/oso/nuc_prearm</property>
    <factor>45</factor>
    <min>0</min>
@@ -700,7 +700,7 @@ maggse
 
   <animation>
    <type>pick</type>
-   <object-name>nuc_prearm</object-name>
+   <object-name>switch_oh.057</object-name>
    <action>
     <button>0</button>
       <binding>
