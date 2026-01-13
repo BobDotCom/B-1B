@@ -190,7 +190,7 @@ maggse
 
  <animation>
 	 <type>pick</type>
-	 <object-name>switch_alt_set</object-name>
+	 <object-name>set_altitude</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
