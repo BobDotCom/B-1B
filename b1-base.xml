@@ -520,10 +520,13 @@ B-1B set file.
                 <path>Aircraft/B-1B/Systems/engines.xml</path>
             </autopilot>
             <autopilot n="2">
-                <path>Aircraft/B-1B/Systems/libraries.xml</path>
+                <path>Aircraft/B-1B/Systems/instrumentation.xml</path>
             </autopilot>
             <property-rule n="200">
-                <path>Systems/annunciators.xml</path>
+                <path>systems/annunciators.xml</path>
+            </property-rule>
+            <property-rule n="201">
+                <path>systems/computers.xml</path>
             </property-rule>
             <path>Aircraft/B-1B/Systems/b1b-airdata.xml</path>
         </systems>
@@ -748,26 +751,6 @@ B-1B set file.
 
     <payload n="0" include= "Systems/b1-payload.xml"/>
 
-
-    <autopilot>
-        <settings>
-            <target-agl-ft type="float">1000</target-agl-ft>
-            <target-altitude-ft type="float">8000</target-altitude-ft>
-            <target-pitch-deg type="float">0</target-pitch-deg>
-            <target-vfps type="float">0</target-vfps>
-            <take-off-pitch-deg type="float">2.0</take-off-pitch-deg>
-            <target-speed-kt type="float">250.0</target-speed-kt>
-            <climb-out-initial-pitch-deg type="float">6.0</climb-out-initial-pitch-deg>
-            <climb-out-final-pitch-deg type="float">3.0</climb-out-final-pitch-deg>
-            <target-climb-rate-fpm type="float">2500.0</target-climb-rate-fpm>
-            <target-descent-rate-fpm type="float">2000.0</target-descent-rate-fpm>
-            <ground-roll-heading-deg type="float">-999.9</ground-roll-heading-deg>
-            <target-mach type="float">0.9</target-mach>
-            <target-aoa-deg type="float">1.0</target-aoa-deg>
-            <max-roll-deg type="float">60</max-roll-deg>
-        </settings>
-
-    </autopilot>
     	<fdm>
 		<jsbsim>
 			<!-- for in-flight FDM tuning -->
@@ -1049,6 +1032,9 @@ B-1B set file.
          <M.1_switch type="int">-1</M.1_switch>
          <M.3A_switch type="int">-1</M.3A_switch>
         </iff>
+        <tacan> 
+         <serviceable type="int">0</serviceable>
+        </tacan>
     </instrumentation>
 
     <input>
