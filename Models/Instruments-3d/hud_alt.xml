@@ -189,35 +189,6 @@ maggse
  </animation>
 
  <animation>
-	 <type>pick</type>
-	 <object-name>set_altitude</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>autopilot/settings/target-altitude-ft</property>
-			 <step>100</step>
-			 <min>0.0</min>
-			 <max>69000</max>
-		 </binding>
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>autopilot/settings/target-altitude-ft</property>
-			 <step>-100</step>
-			 <min>0.0</min>
-			 <max>69000</max>
-		 </binding>
-	 </action>
- </animation>
-
- <animation>
 	 <type>textranslate</type>
 	 <object-name>altft_10000</object-name>
 	 <property>autopilot/settings/target-altitude-ft</property>

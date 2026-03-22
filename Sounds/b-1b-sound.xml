@@ -582,12 +582,17 @@
 	<name>engine01_internal</name>
 	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path> 
 	<mode>looped</mode>
-	<condition>
-		<equals>
-			<property>/controls/engines/engine[0]/cutoff</property>
-			<value>0</value>
-		</equals>
-	</condition>
+	  <condition>
+		  <and>
+		  <equals>
+			  <property>/controls/engines/engine[0]/cutoff</property>
+			  <value>0</value>
+		  </equals>
+		  <equals>
+			<property>/sim/current-view/internal</property>
+		  </equals>
+	          </and>
+	  </condition>
 	<position>
 		<x>8.0</x>
 		<y>4.1</y>
@@ -611,12 +616,17 @@
 	<name>engine02_internal</name>
 	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
 	<mode>looped</mode>
-	<condition>
-		<equals>
-			<property>/controls/engines/engine[0]/cutoff</property>
-			<value>0</value>
-		</equals>
-	</condition>
+	  <condition>
+		  <and>
+		  <equals>
+			  <property>/controls/engines/engine[0]/cutoff</property>
+			  <value>0</value>
+		  </equals>
+		  <equals>
+			<property>/sim/current-view/internal</property>
+		  </equals>
+	          </and>
+	  </condition>
 	<position>
 		<x>8.0</x>
 		<y>4.1</y>
@@ -691,12 +701,17 @@
 	<name>engine11_internal</name>
 	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
 	<mode>looped</mode>
-	<condition>
-		<equals>
-			<property>/controls/engines/engine[1]/cutoff</property>
-			<value>0</value>
-		</equals>
-	</condition>
+	  <condition>
+		  <and>
+		  <equals>
+			  <property>/controls/engines/engine[1]/cutoff</property>
+			  <value>0</value>
+		  </equals>
+		  <equals>
+			<property>/sim/current-view/internal</property>
+		  </equals>
+	          </and>
+	  </condition>
 	<position>
 		<x>8.0</x>
 		<y>2.5</y>
@@ -720,12 +735,17 @@
 	<name>engine12_internal</name>
 	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
 	<mode>looped</mode>
-	<condition>
-		<equals>
-			<property>/controls/engines/engine[0]/cutoff</property>
-			<value>0</value>
-		</equals>
-	</condition>
+	  <condition>
+		  <and>
+		  <equals>
+			  <property>/controls/engines/engine[1]/cutoff</property>
+			  <value>0</value>
+		  </equals>
+		  <equals>
+			<property>/sim/current-view/internal</property>
+		  </equals>
+	          </and>
+	  </condition>
 	<position>
 		<x>8.0</x>
 		<y>2.5</y>
@@ -764,9 +784,9 @@
 			  <property>/controls/engines/engine[1]/cutoff</property>
 			  <value>0</value>
 		  </equals>
-		<not>
+		  <equals>
 			<property>/sim/current-view/internal</property>
-		</not>
+		  </equals>
 	          </and>
 	  </condition>
 
@@ -801,12 +821,17 @@
 	<name>engine21_internal</name>
 	<path>Aircraft/B-1B/Sounds/jet-blast.wav</path>
 	<mode>looped</mode>
-	<condition>
-		<equals>
-			<property>/controls/engines/engine[2]/cutoff</property>
-			<value>0</value>
-		</equals>
-	</condition>
+	  <condition>
+		  <and>
+		  <equals>
+			  <property>/controls/engines/engine[2]/cutoff</property>
+			  <value>0</value>
+		  </equals>
+		  <equals>
+			<property>/sim/current-view/internal</property>
+		  </equals>
+	          </and>
+	  </condition>
 	<position>
 		<x>8.0</x>
 		<y>-2.5</y>
@@ -830,12 +855,17 @@
 	<name>engine22_internal</name>
 	<path>Aircraft/B-1B/Sounds/engine-int.wav</path>
 	<mode>looped</mode>
-	<condition>
-		<equals>
-			<property>/controls/engines/engine[0]/cutoff</property>
-			<value>0</value>
-		</equals>
-	</condition>
+	  <condition>
+		  <and>
+		  <equals>
+			  <property>/controls/engines/engine[2]/cutoff</property>
+			  <value>0</value>
+		  </equals>
+		  <equals>
+			<property>/sim/current-view/internal</property>
+		  </equals>
+	          </and>
+	  </condition>
 	<position>
 		<x>8.0</x>
 		<y>-2.5</y>
@@ -874,9 +904,9 @@
 			  <property>/controls/engines/engine[2]/cutoff</property>
 			  <value>0</value>
 		  </equals>
-		  <not>
+		  <equals>
 			<property>/sim/current-view/internal</property>
-		  </not>
+		  </equals>
 	          </and>
 	  </condition>
 
@@ -916,6 +946,9 @@
 			<property>/controls/engines/engine[3]/cutoff</property>
 			<value>0</value>
 		</equals>
+		  <equals>
+			<property>/sim/current-view/internal</property>
+		  </equals>
 	</condition>
 	<position>
 		<x>8.0</x>
@@ -945,6 +978,9 @@
 			<property>/controls/engines/engine[0]/cutoff</property>
 			<value>0</value>
 		</equals>
+		  <equals>
+			<property>/sim/current-view/internal</property>
+		  </equals>
 	</condition>
 	<position>
 		<x>8.0</x>

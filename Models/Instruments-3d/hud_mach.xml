@@ -132,7 +132,7 @@ maggse
 <animation>
 	<type>knob</type>
 	 <object-name>set_mach</object-name>
-	<property>controls/switches/target-mach</property>
+	<property>controls/switches/target-mach/mode-1</property>
 	<factor>30</factor>
 	<center>
 		<x-m>0.005</x-m>
@@ -149,7 +149,7 @@ maggse
 	 <action>
 		 <binding>
 			 <command>property-adjust</command>
-			 <property>controls/switches/target-mach</property>
+			 <property>controls/switches/target-mach/mode-1</property>
 			 <min>-1</min>
 			 <max>1</max>
 		 </binding>
@@ -157,7 +157,7 @@ maggse
 	<release>
 		<binding>
 			<command>property-adjust</command>
-			<property>controls/switches/target-mach</property>
+			<property>controls/switches/target-mach/mode-1</property>
 			<step>0</step>
 			<min>0</min>
 			<max>0</max>
@@ -169,7 +169,7 @@ maggse
 <animation>
 	<type>knob</type>
 	 <object-name>set_speed</object-name>
-	<property>controls/switches/target-speed</property>
+	<property>controls/switches/target-speed/mode-1</property>
 	<factor>30</factor>
 	<center>
 		<x-m>0.005</x-m>
@@ -178,7 +178,7 @@ maggse
 	</center>
 	 <axis>
 		 <x>0.0</x>
-		 <y>1.0</y>
+		 <y>-1.0</y>
 		 <z>0.0</z>
 	 </axis>
 
@@ -186,7 +186,7 @@ maggse
 	 <action>
 		 <binding>
 			 <command>property-adjust</command>
-			 <property>controls/switches/target-speed</property>
+			 <property>controls/switches/target-speed/mode-1</property>
 			 <min>-1</min>
 			 <max>1</max>
 		 </binding>
@@ -194,54 +194,13 @@ maggse
 	<release>
 		<binding>
 			<command>property-adjust</command>
-			<property>controls/switches/target-speed</property>
+			<property>controls/switches/target-speed/mode-1</property>
 			<step>0</step>
 			<min>0</min>
 			<max>0</max>
 		</binding>
 	</release>
 </animation>
-
-
-
-<animation>
-	<type>textranslate</type>
-	<object-name>macfuel1.002</object-name>
-	<property>autopilot/settings/target-speed-kt</property>
-	<factor>0.001</factor>
-	<step>100</step>
-	<axis>
-		<x>0</x>
-		<y>1</y>
-		<z>0</z>
-	</axis>
-</animation>
-
-<animation>
-	<type>textranslate</type>
-	<object-name>macfuel2.002</object-name>
-	<property>autopilot/settings/target-speed-kt</property>
-	<factor>0.01</factor>
-	<step>10</step>
-	<axis>
-		<x>0</x>
-		<y>1</y>
-		<z>0</z>
-	</axis>
-</animation>
-
-<animation>
-	<type>textranslate</type>
-	<object-name>macfuel3.002</object-name>
-	<property>autopilot/settings/target-speed-kt</property>
-	<factor>0.1</factor>
-	<step>1</step>
-	<axis>
-		<x>0</x>
-		<y>1</y>
-		<z>0</z>
-	</axis>
- </animation>
 
  <animation>
 	 <type>material</type>
