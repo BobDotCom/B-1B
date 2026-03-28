@@ -44,7 +44,7 @@
         <center>
             <x-m>0.049427</x-m>
             <y-m>-0.055447</y-m>
-            <z-m>-0.099651</z-m>
+            <z-m>-0.10295</z-m>
         </center>
         <axis>
             <x>-1</x>
@@ -78,9 +78,9 @@
         </entry>
     </interpolation>
         <center>
-            <x-m>0.049427</x-m>
+            <x-m>0.031752</x-m>
             <y-m>-0.055447</y-m>
-            <z-m>-0.099651</z-m>
+            <z-m>-0.10312</z-m>
         </center>
         <axis>
             <x>-1</x>
@@ -94,6 +94,96 @@
                 <factor>0.02</factor>
                 <min>0.25</min>
                 <max>1.7</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>ATTD</object-name>
+        <property>controls/pfd/ATTD-new</property>
+        <factor>45</factor>
+        <center>
+            <x-m>0.031752</x-m>
+            <y-m>-0.095666</y-m>
+            <z-m>-0.10309</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y> 0</y>
+            <z> 0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/pfd/ATTD-new</property>
+                <min>0</min>
+                <max>2</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+
+
+  <animation>
+        <type>knob</type>
+        <object-name>BRT.001</object-name>
+        <property>controls/pfd/sym-brightness-new</property>
+    <interpolation>
+        <entry>
+            <ind>0.25</ind>
+            <dep>0.0</dep>
+        </entry>
+        <entry>
+            <ind>1.7</ind>
+            <dep>360.0</dep>
+        </entry>
+    </interpolation>
+        <center>
+            <x-m>0.031752</x-m>
+            <y-m>-0.095666</y-m>
+            <z-m>-0.10309</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/pfd/sym-brightness-new</property> 
+                <factor>0.02</factor>
+                <min>0.25</min>
+                <max>1.7</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>screen_mode</object-name>
+        <property>controls/pfd/mode_select</property>
+        <factor>30</factor>
+        <center>
+            <x-m>0.032418</x-m>
+            <y-m>0.080228</y-m>
+            <z-m>-0.097695</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y> 0</y>
+            <z> 0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/pfd/mode_select</property>
+                <min>0</min>
+                <max>5</max>
                 <wrap>false</wrap>
            </binding>
         </action>
