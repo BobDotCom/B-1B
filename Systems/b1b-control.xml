@@ -102,8 +102,8 @@
             <input>fcs/aileron-cmd-norm</input>
             <input>fcs/roll-trim-cmd-norm</input>
             <clipto>
-                <min>-1</min>
-                <max>1</max>
+                <min>-1.0</min>
+                <max>1.0</max>
             </clipto>
         </summer>
 
@@ -141,68 +141,11 @@
             <output>fcs/left-elevator-pos-rad</output>
         </aerosurface_scale>
 
-		<actuator name="fcs/left-elevator-pos-mech">
-            <input>fcs/left-elevator-pos-rad</input>
-            <rate_limit sense="decr">0.1</rate_limit> 
-            <rate_limit sense="incr">0.1</rate_limit> 
-        </actuator>
-
-		<switch name="fcs/left-elevator-pos-input">
-			<default value="fcs/left-elevator-pos-mech"/>
-			<test logic="AND" value="fcs/left-elevator-pos-hyd">
-                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure gt 100
-			</test>
-		</switch>
-
-		<actuator name="fcs/left-elevator-pos-hyd">
-            <input>fcs/left-elevator-pos-rad</input>
-            <rate_limit sense="decr">fcs/left-elevator-pos-hyd-rate</rate_limit> 
-            <rate_limit sense="incr">fcs/left-elevator-pos-hyd-rate</rate_limit>  
-        </actuator>
-
-		<fcs_function name="fcs/left-elevator-pos-hyd-rate-low">
-			<function>
-                          <sum>
-                            <value>0.3</value>
-				<quotient>
-					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
-					<value>8000</value>
-				</quotient>
-                            </sum>
-			</function>
-		</fcs_function>
-
-		<fcs_function name="fcs/left-elevator-pos-hyd-rate-high">
-			<function>
-				<quotient>
-					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
-					<value>3000</value>
-				</quotient>
-			</function>
-                        <clipto> 
-                 	 <max>1.0</max> 
-                 	 <min>0.0</min> 
-                	</clipto>
-		</fcs_function>
-
-		<fcs_function name="fcs/left-elevator-pos-hyd-rate">
-			<function>
-                            <ifthen>
-                             <lt>
-                              <property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
-                              <value>1601</value>
-                             </lt>
-                		<property>fcs/left-elevator-pos-hyd-rate-low</property>
-                		<property>fcs/left-elevator-pos-hyd-rate-high</property>
-                            </ifthen>                                   
-			</function>
-		</fcs_function>
-
         <aerosurface_scale name="fcs/left-elevator-pos-norm">
-            <input>fcs/left-elevator-pos-input</input>
+            <input>fcs/left-elevator-pos-rad</input>
             <domain>
                 <min>-0.35</min>
-                <max>0.35</max>
+                <max>0.17</max>
             </domain>
             <range>
                 <min>-1</min>
@@ -220,67 +163,11 @@
             <output>fcs/right-elevator-pos-rad</output>
         </aerosurface_scale>
 
-		<actuator name="fcs/right-elevator-pos-mech">
-            <input>fcs/right-elevator-pos-rad</input>
-            <rate_limit sense="decr">0.1</rate_limit> 
-            <rate_limit sense="incr">0.1</rate_limit> 
-        </actuator>
-
-		<switch name="fcs/right-elevator-pos-input">
-			<default value="fcs/right-elevator-pos-mech"/>
-			<test logic="AND" value="fcs/right-elevator-pos-hyd">
-                                /systems/hydraulic/system[1]/pipeline/pipeline_pressure gt 100
-			</test>
-		</switch>
-
-		<actuator name="fcs/right-elevator-pos-hyd">
-            <input>fcs/right-elevator-pos-rad</input>
-            <rate_limit sense="decr">fcs/right-elevator-pos-hyd-rate</rate_limit> 
-            <rate_limit sense="incr">fcs/right-elevator-pos-hyd-rate</rate_limit> 
-        </actuator>
-
-		<fcs_function name="fcs/right-elevator-pos-hyd-rate-low">
-			<function>
-                          <sum>
-                            <value>0.3</value>
-				<quotient>
-					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
-					<value>8000</value>
-				</quotient>
-                            </sum>
-			</function>
-		</fcs_function>
-		<fcs_function name="fcs/right-elevator-pos-hyd-rate-high">
-			<function>
-				<quotient>
-					<property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
-					<value>3000</value>
-				</quotient>
-			</function>
-                        <clipto> 
-                 	 <max>1.0</max> 
-                 	 <min>0.0</min> 
-                	</clipto>
-		</fcs_function>
-
-		<fcs_function name="fcs/right-elevator-pos-hyd-rate">
-			<function>
-                            <ifthen>
-                             <lt>
-                              <property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
-                              <value>1601</value>
-                             </lt>
-                		<property>fcs/right-elevator-pos-hyd-rate-low</property>
-                		<property>fcs/right-elevator-pos-hyd-rate-high</property>
-                            </ifthen>                                   
-			</function>
-		</fcs_function>
-
         <aerosurface_scale name="fcs/right-elevator-pos-norm">
-            <input>fcs/right-elevator-pos-input</input>
+            <input>fcs/right-elevator-pos-rad</input>
             <domain>
                 <min>-0.35</min>
-                <max>0.35</max>
+                <max>0.17</max>
             </domain>
             <range>
                 <min>-1</min>
