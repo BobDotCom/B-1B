@@ -7,6 +7,18 @@
 
   <animation>
     <type>rotate</type>
+    <object-name>heading-bug</object-name>
+    <property>systems/computers/hsi/heading_knob/output</property>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis><x>-1</x></axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
     <object-name>hsi</object-name>
     <condition>
       <greater-than>
@@ -179,7 +191,7 @@
   <animation>
     <type>knob</type>
     <object-name>heading-set-knob</object-name>
-    <property>autopilot/settings/heading-bug-deg</property>
+    <property>systems/computers/hsi/heading_knob/output</property>
     <center>
       <y-m>-0.0491</y-m>
       <z-m>-0.0413</z-m>
@@ -188,10 +200,10 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>autopilot/settings/heading-bug-deg</property>
+        <property>systems/computers/hsi/heading_knob/output</property>
         <factor>1</factor>
         <min>0</min>
-        <max>361</max>
+        <max>360</max>
         <wrap>true</wrap>
       </binding>
     </action>

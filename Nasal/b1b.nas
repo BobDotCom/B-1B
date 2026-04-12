@@ -837,68 +837,56 @@ setlistener("controls/flight/wing-sweep", checkSweep);
 ###
 var checkapmode = func {
 
-var althold = getprop("controls/switches/apmode/alt-hold");
-var vfpmhold = getprop("controls/switches/apmode/vfpm-hold");
-var ptchhold = getprop("controls/switches/apmode/ptch-hold");
-var bhdghold = getprop("controls/switches/apmode/bhdg-hold");
-var thdghold = getprop("controls/switches/apmode/thdg-hold");
-var spdhold = getprop("controls/switches/apmode/spd-hold");
-var spdptchhold = getprop("controls/switches/apmode/spdptch-hold");
-var aglhold = getprop("controls/switches/terrain-follow");
+var engage = getprop("controls/switches/apmode/engage");
+var althold = getprop("controls/switches/apmode/alt");
+var flthold = getprop("controls/switches/apmode/flt_dir");
+var ashold = getprop("controls/switches/apmode/as");
+var throthold = getprop("controls/switches/apmode/auto_throt");
 
-if (althold == 1) {
+if ((engage == 1) and (althold == 0) and (flthold == 0) and (ashold == 0) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "pitch-hold");
+        setprop("autopilot/locks/heading", "wing-leveler");
+        setprop("autopilot/locks/speed", "");
+} elsif ((engage == 1) and (althold == 1) and (flthold == 0) and (ashold == 0) and (throthold == 0)) {
         setprop("autopilot/locks/altitude", "altitude-hold");
-} elsif (vfpmhold == 1) {
- setprop("autopilot/locks/altitude", "vertical-speed-hold");
-} elsif (ptchhold == 1) {
- setprop("autopilot/locks/altitude", "pitch-hold");
-} elsif ((ptchhold != 1) and (vfpmhold != 1) and (althold != 1) and (aglhold != 1)) {
- setprop("autopilot/locks/altitude", "");
-}
-if (bhdghold == 1) {
+        setprop("autopilot/locks/heading", "");
+        setprop("autopilot/locks/speed", "");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 1) and (ashold == 0) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "");
         setprop("autopilot/locks/heading", "dg-heading-hold");
-} elsif (thdghold == 1) {
- setprop("autopilot/locks/heading", "true-heading-hold");
-} elsif ((bhdghold != 1) and (thdghold != 1)) {
- setprop("autopilot/locks/heading", "");
-}
-if (spdhold == 1) {
+        setprop("autopilot/locks/speed", "");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 0) and (ashold == 1) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "");
+        setprop("autopilot/locks/heading", "wing-leveler");
+        setprop("autopilot/locks/speed", "speed-with-pitch-trim");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 0) and (ashold == 0) and (throthold == 1)) {
+        setprop("autopilot/locks/altitude", "pitch-hold");
+        setprop("autopilot/locks/heading", "wing-leveler");
         setprop("autopilot/locks/speed", "speed-with-throttle");
-} elsif (spdptchhold == 1) {
- setprop("autopilot/locks/speed", "speed-with-pitch-trim");
-} elsif ((spdhold != 1) and (spdptchhold != 1)) {
- setprop("autopilot/locks/speed", "");
-}
-
-}
-
-###
-# flight director modes selector
-###
-var fltdir = func {
-
-var fltd = getprop("controls/switches/fltdir");
-
-if (fltd == 0.00) {
-  setprop("instrumentation/adf/serviceable", "0");
-  setprop("instrumentation/nav/serviceable", "0");
-  setprop("instrumentation/tacan/serviceable", "0");
-} elsif (fltd == 0.25) {
-  setprop("instrumentation/adf/serviceable", "1");
-  setprop("instrumentation/nav/serviceable", "1");
-  setprop("instrumentation/tacan/serviceable", "1");
-} elsif (fltd == 0.50) {
-  setprop("instrumentation/adf/serviceable", "1");
-  setprop("instrumentation/nav/serviceable", "1");
-  setprop("instrumentation/tacan/serviceable", "0");
-} elsif (fltd == 0.75) {
-  setprop("instrumentation/adf/serviceable", "1");
-  setprop("instrumentation/nav/serviceable", "0");
-  setprop("instrumentation/tacan/serviceable", "0");
-} elsif (fltd == 1.00) {
-  setprop("instrumentation/adf/serviceable", "0");
-#  setprop("instrumentation/nav/serviceable", "0");
-  setprop("instrumentation/tacan/serviceable", "1");
+} elsif ((engage == 1) and (althold == 1) and (flthold == 1) and (ashold == 0) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "altitude-hold");
+        setprop("autopilot/locks/heading", "dg-heading-hold");
+        setprop("autopilot/locks/speed", "");
+} elsif ((engage == 1) and (althold == 1) and (flthold == 1) and (ashold == 0) and (throthold == 1)) {
+        setprop("autopilot/locks/altitude", "altitude-hold");
+        setprop("autopilot/locks/heading", "dg-heading-hold");
+        setprop("autopilot/locks/speed", "speed-with-throttle");
+} elsif ((engage == 1) and (althold == 1) and (flthold == 0) and (ashold == 0) and (throthold == 1)) {
+        setprop("autopilot/locks/altitude", "altitude-hold");
+        setprop("autopilot/locks/heading", "");
+        setprop("autopilot/locks/speed", "speed-with-throttle");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 1) and (ashold == 0) and (throthold == 1)) {
+        setprop("autopilot/locks/altitude", "");
+        setprop("autopilot/locks/heading", "dg-heading-hold");
+        setprop("autopilot/locks/speed", "speed-with-throttle");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 1) and (ashold == 1) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "");
+        setprop("autopilot/locks/heading", "dg-heading-hold");
+        setprop("autopilot/locks/speed", "speed-with-pitch-trim");
+} elsif (engage == 0) {
+        setprop("autopilot/locks/altitude", "");
+        setprop("autopilot/locks/heading", "");
+        setprop("autopilot/locks/speed", "");
 }
 
 }
