@@ -529,9 +529,6 @@ B-1B set file.
                 <path>systems/computers.xml</path>
             </property-rule>
             <path>Aircraft/B-1B/Systems/b1b-airdata.xml</path>
-            <autopilot n="3">
-                <path>Aircraft/B-1B/Systems/autopilot.xml</path>
-            </autopilot>
         </systems>
 
         <rendering>
