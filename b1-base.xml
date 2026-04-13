@@ -520,7 +520,7 @@ B-1B set file.
                 <path>Aircraft/B-1B/Systems/engines.xml</path>
             </autopilot>
             <autopilot n="2">
-                <path>Aircraft/B-1B/Systems/instrumentation.xml</path>
+                <path>Aircraft/B-1B/Systems/Libraries.xml</path>
             </autopilot>
             <property-rule n="200">
                 <path>systems/annunciators.xml</path>
