@@ -20061,7 +20061,7 @@ Plane.017
 crease 40.0
 kids 0
 OBJECT poly
-name "PFR_switch"
+name "PFR_set"
 data 10
 Switch.013
 crease 40.0
