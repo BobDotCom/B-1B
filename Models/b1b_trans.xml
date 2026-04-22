@@ -171,37 +171,6 @@ sweat by maggse
 	 <path>Aircraft/B-1B/Models/Lights/strobe-wing-right.xml</path>
 </model>
 
-
-  <animation>
-	 <type>spin</type>
-	 <object-name>turbine_4.001</object-name>
-	 <property>engines/engine[3]/n2</property>
-	 <!--<interpolation>
-		 <entry>
-			 <ind>72.0</ind>
-			 <dep>2</dep>
-		 </entry>
-		 <entry>
-			 <ind>78.0</ind>
-			 <dep>10.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>100.0</ind>
-			 <dep>50.0</dep>
-		 </entry>
-	 </interpolation>-->
-	 <center>
-		 <x-m>-15.993</x-m>
-		 <y-m>4.160</y-m>
-		 <z-m>-1.680</z-m>
-	 </center>
-	 <axis>
-		 <x>1</x>
-		 <y>0</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
 <!--  <animation>
   <type>dist-scale</type>
   <object-name>strobe2</object-name>
@@ -323,24 +292,28 @@ sweat by maggse
 	 <type>spin</type>
 	 <object-name>turbine_1.001</object-name>
 	 <property>engines/engine[0]/n2</property>
-	 <!-- <interpolation>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
 		 <entry>
 			 <ind>72.0</ind>
-			 <dep>-2.0</dep>
+			 <dep>400</dep>
 		 </entry>
 		 <entry>
 			 <ind>78.0</ind>
-			 <dep>-10.0</dep>
+			 <dep>700.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>100.0</ind>
-			 <dep>-50.0</dep>
+			 <dep>900.0</dep>
 		 </entry>
-	 </interpolation -->
+	 </interpolation>
 	 <center>
 		 <x-m>-15.993</x-m>
-		 <y-m>-4.112</y-m>
-		 <z-m>-1.679</z-m>
+		 <y-m>-4.116</y-m>
+		 <z-m>-1.678</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -353,23 +326,27 @@ sweat by maggse
 	 <type>spin</type>
 	 <object-name>turbine_2.001</object-name>
 	 <property>engines/engine[1]/n2</property>
-	 <!--<interpolation>
+	 <interpolation>
 		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	         <entry>
 			 <ind>72.0</ind>
-			 <dep>2</dep>
+			 <dep>400</dep>
 		 </entry>
 		 <entry>
 			 <ind>78.0</ind>
-			 <dep>10.0</dep>
+			 <dep>700.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>100.0</ind>
-			 <dep>50.0</dep>
+			 <dep>900.0</dep>
 		 </entry>
-	 </interpolation>-->
+	 </interpolation>
 	 <center>
 		 <x-m>-15.993</x-m>
-		 <y-m>-2.492</y-m>
+		 <y-m>-2.483</y-m>
 		 <z-m>-1.687</z-m>
 	 </center>
 	 <axis>
@@ -383,23 +360,27 @@ sweat by maggse
 	 <type>spin</type>
 	 <object-name>turbine_3.001</object-name>
 	 <property>engines/engine[2]/n2</property>
-	 <!--<interpolation>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
 		 <entry>
 			 <ind>72.0</ind>
-			 <dep>-2</dep>
+			 <dep>400</dep>
 		 </entry>
 		 <entry>
 			 <ind>78.0</ind>
-			 <dep>-10.0</dep>
+			 <dep>700.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>100.0</ind>
-			 <dep>-50.0</dep>
+			 <dep>900.0</dep>
 		 </entry>
-	 </interpolation>-->
+	 </interpolation>
 	 <center>
 		 <x-m>-15.993</x-m>
-		 <y-m>2.533</y-m>
+		 <y-m>2.532</y-m>
 		 <z-m>-1.678</z-m>
 	 </center>
 	 <axis>
@@ -413,20 +394,24 @@ sweat by maggse
 	 <type>spin</type>
 	 <object-name>turbine_4.001</object-name>
 	 <property>engines/engine[3]/n2</property>
-	 <!--<interpolation>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
 		 <entry>
 			 <ind>72.0</ind>
-			 <dep>2</dep>
+			 <dep>400</dep>
 		 </entry>
 		 <entry>
 			 <ind>78.0</ind>
-			 <dep>10.0</dep>
+			 <dep>700.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>100.0</ind>
-			 <dep>50.0</dep>
+			 <dep>900.0</dep>
 		 </entry>
-	 </interpolation>-->
+	 </interpolation>
 	 <center>
 		 <x-m>-15.993</x-m>
 		 <y-m>4.160</y-m>
