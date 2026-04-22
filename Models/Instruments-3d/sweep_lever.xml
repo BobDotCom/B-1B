@@ -45,16 +45,6 @@ sweat by maggse
 		<z-m> 0.1891 </z-m>
 	</center>
 </animation>
-<animation>
-	<type>material</type>
-	<object-name>sweep_lever</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 

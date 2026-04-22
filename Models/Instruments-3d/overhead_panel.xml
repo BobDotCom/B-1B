@@ -51,26 +51,16 @@ maggse
 		 <binding>
 			 <command>property-toggle</command>
 			 <property>controls/switches/refuel-lid</property>
-			 <condition>
-				 <property>controls/switches/refuel-slipway</property>
-				 <value>1</value>
-			 </condition>
+	                 <value>1</value>
 		 </binding>
 		 <binding>
 			 <command>nasal</command>
 			 <script>b1b.refuel_door()</script>
-			 <condition>
-				 <property>controls/switches/refuel-slipway</property>
-				 <value>1</value>
-			 </condition>
 		 </binding>
 		 <binding>
 			 <command>property-toggle</command>
 			 <property>systems/refuel/serviceable</property>
-			 <condition>
-				 <property>controls/switches/refuel-slipway</property>
-				 <value>1</value>
-			 </condition>
+			 <value>1</value>
 		 </binding>
 	 </action>
 </animation>
@@ -103,8 +93,8 @@ maggse
 
 <animation>
 	 <type>rotate</type>
-	 <object-name>refuel-slipway</object-name>
-	 <property>controls/switches/refuel-slipway</property>
+	 <object-name>slipway-lighting</object-name>
+	 <property>controls/switches/slipway-lighting</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -115,80 +105,636 @@ maggse
 			 <dep>-80.0</dep>
 		 </entry>
 	 </interpolation>
-	 <axis>
-		 <x>1.0</x>
-		 <y>0.0</y>
-		 <z>0.0</z>
-	 </axis>
-	 <center>
-		 <x-m> 0.01898</x-m>
-		 <y-m> 0.039558</y-m>
-		 <z-m> 0.21598</z-m>
-   </center>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>0.01898</x-m>
+		<y-m>0.0395</y-m>
+		<z-m>0.2158</z-m>
+	</center>
+
  </animation>
 
  <animation>
 	 <type>pick</type>
-	 <object-name>refuel-slipway</object-name>
+	 <object-name>slipway-lighting</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/switches/refuel-slipway</property>
+			 <property>controls/switches/slipway-lighting</property>
 		 </binding>
 	 </action>
 </animation> 
 
-	 <!-- Annunciator lighting-->
+<animation>
+	<type>knob</type>
+	<object-name>air_refuel_annun</object-name>
+	<property>controls/lighting/refuel-annunciator</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.019</x-m>
+		<y-m>-0.007</y-m>
+		<z-m>0.216</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/refuel-annunciator</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation>
+
+	 <!-- OPENUNLCK light--> 
+
+<animation> 
+ <type>select</type> 
+  <object-name>OPENUNLK</object-name> 
+   <condition> 
+    <equals> 
+      <property>sim/multiplay/generic/float[5]</property> 
+      <value>1</value> 
+     </equals> 
+    </condition> 
+  </animation>
+
+ <!-- Electric current selector-->
+ 
+  <animation>
+        <type>knob</type>
+        <object-name>voltage_select</object-name>
+        <property>controls/switches/voltage-select-switch</property>
+        <factor>33</factor>
+        <center>
+            <x-m>0.01913</x-m>
+            <y-m>0.028227</y-m>
+            <z-m>-0.0766</z-m>
+        </center>
+        <axis>
+            <x> -1</x>
+            <y> 0</y>
+            <z> 0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/switches/voltage-select-switch</property>
+                <min>0</min>
+                <max>11</max>
+                <wrap>true</wrap>
+           </binding>
+        </action>
+    </animation>
 
  <animation>
 	 <type>rotate</type>
-	 <object-name>int_dim</object-name>
-	 <property>controls/switches/annunciator-lighting</property>
+	 <object-name>Needle_1</object-name>
+	 <property>systems/electrical/lights/needle-indicator-voltage</property>
 	 <interpolation>
 		 <entry>
-			 <ind> 0.0</ind>
-			 <dep> -30.0</dep>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
-			 <ind> 1.0</ind>
-			 <dep> 30.0</dep>
+			 <ind>200.0</ind>
+			 <dep>5.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>260.0</ind>
+			 <dep>180.0</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
-		 <x> 0.0</x>
-		 <y> 1.0</y>
-		 <z> 0.0</z>
+		 <x>-1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m> 0.01237</x-m>
-		 <y-m>-0.1752</y-m>
-		 <z-m> 0.1227</z-m>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.031</y-m>
+		 <z-m>-0.0579</z-m>
+   </center>
+ </animation>
+
+ <!-- Generator-reset switches-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gen_reset_1</object-name>
+	 <property>controls/electrical/switches/gen-1</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.2308</z-m>
    </center>
  </animation>
 
  <animation>
 	 <type>pick</type>
-	 <object-name>int_dim</object-name>
+	 <object-name>gen_reset_1</object-name>
 	 <action>
 		 <button>0</button>
 		 <repeatable>true</repeatable>
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/switches/annunciator-lighting</property>
+			 <property>controls/electrical/switches/gen-1</property>
 		 </binding>
 	 </action>
 </animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>1_GEN</object-name>
+		<condition>
+                    <and>
+			<equals>
+				<property>systems/electrical/lights/gen-1-fault</property>
+				<value>1</value>
+			</equals>
+                      <or>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ac-3/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ess/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+                      </or>
+                    </and>
+		</condition>
+	</animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gen_reset_2</object-name>
+	 <property>controls/electrical/switches/gen-2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.2308</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>gen_reset_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/electrical/switches/gen-2</property>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>2_GEN</object-name>
+		<condition>
+                    <and>
+			<equals>
+				<property>systems/electrical/lights/gen-2-fault</property>
+				<value>1</value>
+			</equals>
+                      <or>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ac-3/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ess/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+                      </or>
+                    </and>
+		</condition>
+	</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>gen_reset_3</object-name>
+	 <property>controls/electrical/switches/gen-3</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.2308</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>gen_reset_3</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>controls/electrical/switches/gen-3</property>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>3_GEN</object-name>
+		<condition>
+                    <and>
+			<equals>
+				<property>systems/electrical/lights/gen-3-fault</property>
+				<value>1</value>
+			</equals>
+                      <or>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ac-3/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+			<greater-than-equals>
+				<property>systems/electrical/bus/ess/voltage</property>
+				<value>220</value>
+			</greater-than-equals>
+                      </or>
+                    </and>
+		</condition>
+	</animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>emerg_gen</object-name>
+        <property>controls/switches/emerg_gen</property>
+        <factor>30</factor>
+        <center>
+            <x-m>0.01</x-m>
+            <y-m>0.035188</y-m>
+            <z-m>-0.006028</z-m>
+        </center>
+        <axis>
+            <x> 0</x>
+            <y> 1</y>
+            <z> 0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/switches/emerg_gen</property>
+                <min>0</min>
+                <max>2</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>EMR_GEN</object-name>
+		<condition>
+			<equals>
+				<property>/systems/electrical/lights/emer-gen-on</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+ <!-- CSD De-couple safetys-->
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>CSD_safety_1</object-name>
+	 <property>/controls/electrical/switches/csd_safety1</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.173</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>CSD_safety_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd_safety1</property>
+		 </binding>
+	 </action>
+</animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>CSD_safety_2</object-name>
+	 <property>/controls/electrical/switches/csd_safety2</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.173</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>CSD_safety_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd_safety2</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>CSD_safety_3</object-name>
+	 <property>/controls/electrical/switches/csd_safety3</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>-90.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.006</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.173</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>CSD_safety_3</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd_safety3</property>
+		 </binding>
+	 </action>
+</animation>
+
+ <!-- CSD De-couple--> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>csd_1</object-name>
+	 <property>/controls/electrical/switches/csd-1-disc</property>
+	 <interpolation>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.192</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>csd_1</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd-1-disc</property>
+                         <condition> 
+                          <equals>
+                          <property>/controls/electrical/switches/csd_safety1</property> 
+                          <value>1</value> 
+                          </equals>
+                         </condition>
+		 </binding>
+	 </action>
+</animation> 
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>csd_2</object-name>
+	 <property>/controls/electrical/switches/csd-2-disc</property>
+	 <interpolation>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.192</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>csd_2</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd-2-disc</property>
+                         <condition> 
+                          <equals>
+                          <property>/controls/electrical/switches/csd_safety2</property> 
+                          <value>1</value> 
+                          </equals>
+                         </condition>
+		 </binding>
+	 </action>
+</animation>
+
+ <animation>
+	 <type>rotate</type>
+	 <object-name>csd_4</object-name>
+	 <property>/controls/electrical/switches/csd-4-disc</property>
+	 <interpolation>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-30.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.01</x-m>
+		 <y-m>-0.0563</y-m>
+		 <z-m>-0.192</z-m>
+   </center>
+ </animation>
+
+ <animation>
+	 <type>pick</type>
+	 <object-name>csd_4</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>true</repeatable>
+		 <interval-sec>0.5</interval-sec>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/electrical/switches/csd-4-disc</property>
+                         <condition> 
+                          <equals>
+                          <property>/controls/electrical/switches/csd_safety3</property> 
+                          <value>1</value> 
+                          </equals>
+                         </condition>
+		 </binding>
+	 </action>
+</animation>
+
 
  <!-- Battery-->
 
  <animation>
 	 <type>rotate</type>
 	 <object-name>BATT</object-name>
-	 <property>controls/electric/battery-switch</property>
+	 <property>controls/electrical/switches/battery</property>
 	 <interpolation>
 		 <entry>
 			 <ind> 0.0</ind>
@@ -220,7 +766,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/electric/battery-switch</property>
+			 <property>controls/electrical/switches/battery</property>
 		 </binding>
 		 <binding>
 			 <command>property-assign</command> 
@@ -253,7 +799,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>ExtPowerSwitch</object-name>
-	 <property>controls/electric/external-power</property>
+	 <property>controls/electrical/switches/external-power</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -270,9 +816,9 @@ maggse
 		 <z>0.0</z>
 	 </axis>
 	 <center>
-		 <x-m>0.01096</x-m>
+		 <x-m>0.009</x-m>
 		 <y-m>0.03256</y-m>
-		 <z-m>0.05371</z-m>
+		 <z-m>0.0411</z-m>
    </center>
  </animation>
 
@@ -285,7 +831,7 @@ maggse
 		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/electric/external-power</property>
+			 <property>controls/electrical/switches/external-power</property>
 		 </binding>
 	 </action>
 </animation>
@@ -293,309 +839,159 @@ maggse
 <!-- APU-->
 
 <animation>
-	 <type>rotate</type>
+	<type>knob</type>
 	 <object-name>APUL</object-name>
-	 <property>controls/APU/APUL_running</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-	 </interpolation>
+	<property>controls/engines/engine[4]/cutoff-switch</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.01066</x-m>
+		<y-m>0.16280</y-m>
+		<z-m>0.28120</z-m>
+	</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01066</x-m>
-		 <y-m>0.16280</y-m>
-		 <z-m>0.28120</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUL</object-name>
+
 	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUL_running</property>
-			 <condition>
-		           <or>
-		           <equals>
-			   <property>controls/electric/battery-switch</property>
-			   <value>1</value>
-		           </equals>
-		           <equals>
-			   <property>controls/APU/APUR_running</property>
-			   <value>1</value>
-		           </equals>
-		           <equals>
-			   <property>controls/APU/APUL_running</property>
-			   <value>1</value>
-		           </equals>
-	 	           </or>
-	                 </condition>
+			 <command>property-adjust</command>
+			 <property>controls/engines/engine[4]/cutoff-switch</property>
+			 <min>-1</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[4]/cutoff-switch</property>
+			<step>0</step>
+			<min>-1</min>
+			<max>0</max>
+		</binding>
+	</release>
 </animation>
 
 <animation>
-	 <type>rotate</type>
+	<type>knob</type>
 	 <object-name>APUR</object-name>
-	 <property>controls/APU/APUR_running</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>0.0</dep>
-		 </entry>
-	 </interpolation>
+	<property>controls/engines/engine[5]/cutoff-switch</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.01066</x-m>
+		<y-m>0.20060</y-m>
+		<z-m>0.28120</z-m>
+	</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01066</x-m>
-		 <y-m>0.20060</y-m>
-		 <z-m>0.28120</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUR</object-name>
+
 	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUR_running</property>
-			 	 <condition>
-		                   <or>
-		                   <equals>
-			           <property>controls/electric/battery-switch</property>
-			           <value>1</value>
-		                   </equals>
-		                   <equals>
-			           <property>controls/APU/APUL_running</property>
-			           <value>1</value>
-		                   </equals>
-		                   <equals>
-			           <property>controls/APU/APUR_running</property>
-			           <value>1</value>
-		                   </equals>
-	 	                   </or>
-	                   </condition>
-		             </binding>
-	             </action>
-           </animation>
+			 <command>property-adjust</command>
+			 <property>controls/engines/engine[5]/cutoff-switch</property>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[5]/cutoff-switch</property>
+			<step>0</step>
+			<min>-1</min>
+			<max>0</max>
+		</binding>
+	</release>
+</animation>
+
 
 <animation>
-	 <type>rotate</type>
+	<type>knob</type>
 	 <object-name>APUL_couple</object-name>
-	 <property>controls/APU/APUL_couple</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
+	<property>controls/apu/apu[0]/couple_switch</property>
+        <factor>60</factor>
+	<center>
+		<x-m>0.011</x-m>
+		<y-m>0.1440</y-m>
+		<z-m>0.3309</z-m>
+	</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.0108</x-m>
-		 <y-m>0.1440</y-m>
-		 <z-m>0.3309</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUL_couple</object-name>
+
 	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/APU/APUL_couple</property>
-			 <condition>
-		           <or>
-		           <equals>
-			   <property>controls/APU/APUL_running</property>
-			   <value>1</value>
-		           </equals>
-	 	           </or>
-	                 </condition>
+	                 <property>controls/apu/apu[0]/couple_switch</property>
+			 <min>0</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
 </animation>
 
-<animation>
-	 <type>rotate</type>
+
+	<animation>
+		<type>knob</type>
 	 <object-name>APUR_couple</object-name>
-	 <property>controls/APU/APUR_couple</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
+	<property>controls/apu/apu[1]/couple_switch</property>
+        <factor>60</factor>
+	<center>
+		<x-m>0.011</x-m>
+		<y-m>0.1440</y-m>
+		<z-m>0.3309</z-m>
+	</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01077</x-m>
-		 <y-m>0.21970</y-m>
-		 <z-m>0.33090</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUR_couple</object-name>
+
 	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
 		 <binding>
 			 <command>property-toggle</command>
-			 <property>controls/APU/APUR_couple</property>
-			 <condition>
-		           <or>
-		           <equals>
-			   <property>controls/APU/APUR_running</property>
-			   <value>1</value>
-		           </equals>
-	 	           </or>
-	                 </condition>
+	                 <property>controls/apu/apu[1]/couple_switch</property>
+			 <min>0</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
+
 </animation>
 
-<animation>
-	 <type>rotate</type>
-	 <object-name>APUL_bleed</object-name>
-	 <property>controls/APU/APUL_bleed</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
-	 <center>
-		 <x-m>0.01091</x-m>
-		 <y-m>0.12770</y-m>
-		 <z-m>0.28010</z-m>
-   </center>
- </animation>
+	<animation>
+		<type>select</type>
+		<object-name>APUL_run</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>engines/engine[4]/n1</property>
+				<value>95</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>APUR_run</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>engines/engine[5]/n1</property>
+				<value>95</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APUL_bleed</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUL_bleed</property>
-			 <condition>
-		           <equals>
-			     <property>controls/APU/APUL_running</property>
-			     <value>1</value>
-		           </equals>
-	                 </condition>
-		 </binding>
-	 </action>
-</animation>
-
-<animation>
-	 <type>rotate</type>
-	 <object-name>APUR_bleed</object-name>
-	 <property>controls/APU/APUR_bleed</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
-	 <axis>
-		 <x>0.0</x>
-		 <y>1.0</y>
-		 <z>0.0</z>
-	 </axis>
-	 <center>
-		 <x-m>0.01085</x-m>
-		 <y-m>0.23420</y-m>
-		 <z-m>0.28010</z-m>
-   </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>APUR_bleed</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUR_bleed</property>
-			 <condition>
-		           <equals>
-			   <property>controls/APU/APUR_running</property>
-			   <value>1</value>
-		           </equals>
-	                 </condition>
-		 </binding>
-	 </action>
-</animation>
-
-<animation>
-	 <type>rotate</type>
+	<animation>
+		<type>knob</type>
 	 <object-name>APU_X_Bleed</object-name>
-	 <property>controls/APU/APU_crossbleed</property>
+		<property>controls/apu/crossbleed</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -606,46 +1002,763 @@ maggse
 			 <dep>30.0</dep>
 		 </entry>
 	 </interpolation>
+		<center>
+			<x-m>0.01077</x-m>
+			<y-m>0.18210</y-m>
+			<z-m>0.33980</z-m>
+		</center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.01077</x-m>
-		 <y-m>0.18210</y-m>
-		 <z-m>0.33980</z-m>
-   </center>
- </animation>
 
- <animation>
-	 <type>pick</type>
-	 <object-name>APU_X_Bleed</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
+		<action>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APU_crossbleed</property>
-			 <condition>
-		           <or>
-		             <equals>
-			       <property>controls/APU/APUL_running</property>
-			       <value>1</value>
-		             </equals>
-		             <equals>
-			       <property>controls/APU/APUR_running</property>
-			       <value>1</value>
-		             </equals>
-	 	           </or>
-	                 </condition>
+			 <command>property-adjust</command>
+			 <property>controls/apu/crossbleed</property>
+			 <min>0</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
 </animation>
 
+                               <!-- hydraulic gauges-->
 
-<!-- nav lights-->
+<!-- pressure-->
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_1_pressure</object-name>
+  <property>/systems/hydraulic/system[1]/pipeline/pipeline_pressure</property>
+  <factor>0.065</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0086</x-m>
+	<y-m>-0.0455</y-m>
+	<z-m>0.386</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_2_pressure</object-name>
+  <property>/systems/hydraulic/system[2]/pipeline/pipeline_pressure</property>
+  <factor>0.065</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0086</x-m>
+	<y-m>-0.0164</y-m>
+	<z-m>0.386</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_3_pressure</object-name>
+  <property>/systems/hydraulic/system[3]/pipeline/pipeline_pressure</property>
+  <factor>0.065</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0086</x-m>
+	<y-m>0.0166</y-m>
+	<z-m>0.386</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_4_pressure</object-name>
+  <property>/systems/hydraulic/system[4]/pipeline/pipeline_pressure</property>
+  <factor>0.065</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0086</x-m>
+	<y-m>0.046</y-m>
+	<z-m>0.386</z-m>
+	</center>
+ </animation>
+
+<!-- ammount-->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_1_ammount</object-name>
+  <property>/systems/hydraulic/system[1]/Reservoir_fluid_ammount-gal-movement</property>
+  <factor>26</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0095</x-m>
+	<y-m>-0.045</y-m>
+	<z-m>0.413</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_2_ammount</object-name>
+  <property>/systems/hydraulic/system[2]/Reservoir_fluid_ammount-gal-movement</property>
+  <factor>15</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0095</x-m>
+	<y-m>-0.016</y-m>
+	<z-m>0.413</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_3_ammount</object-name>
+  <property>/systems/hydraulic/system[3]/Reservoir_fluid_ammount-gal-movement</property>
+  <factor>15</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0095</x-m>
+	<y-m>0.0166</y-m>
+	<z-m>0.413</z-m>
+	</center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle_sys_4_ammount</object-name>
+  <property>/systems/hydraulic/system[4]/Reservoir_fluid_ammount-gal-movement</property>
+  <factor>26</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+	<center>
+	<x-m>0.0095</x-m>
+	<y-m>0.0459</y-m>
+	<z-m>0.413</z-m>
+	</center>
+ </animation>
+
+<animation> 
+ <type>slider</type> 
+  <object-name>hyd_test</object-name>
+  <property>controls/switches/hyd_amount_gauge_test</property>
+    <factor>0.004</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/hyd_amount_gauge_test</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/hyd_amount_gauge_test</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
+
+</animation>
+
+
+
+                               <!-- Fire loops -->
+
+<!-- Annunciators -->
+
+<animation> 
+ <type>slider</type> 
+  <object-name>fire_detr_test</object-name>
+  <property>controls/switches/fire_loop_test</property>
+    <factor>0.004</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/fire_loop_test</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/fire_loop_test</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
+
+</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>1-LOOP-A</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                    <or>
+			 <equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			 </equals>
+			 <equals>
+				<property>systems/failures/extinguishers/engine[0]/loop-a</property>
+				<value>1</value>
+			 </equals>
+                        </or>
+                  </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>1-LOOP-B</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[0]/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>2-LOOP-A</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[1]/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>2-LOOP-B</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[1]/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>3-LOOP-A</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[2]/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>3-LOOP-B</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[2]/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>4-LOOP-A</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[3]/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>4-LOOP-B</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/engine[3]/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>L-APU-LOOP-A</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/apu_l/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>L-APU-LOOP-B</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/apu_l/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>R-APU-LOOP-A</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/apu_r/loop-a</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>R-APU-LOOP-B</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+                  <or>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>systems/failures/extinguishers/apu_r/loop-b</property>
+				<value>1</value>
+			</equals>
+                  </or>
+                 </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>L-OWF-LOOP-A</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+                   </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>L-OWF-LOOP-B</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+                  </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>R-OWF-LOOP-A</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+                  </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>R-OWF-LOOP-B</object-name>
+		<condition>
+                  <and> 
+         		<greater-than> 
+          		 <property>systems/electrical/bus/ac-3</property>
+          		 <value>220</value>
+         		</greater-than>
+			<equals>
+				<property>controls/switches/fire_loop_test</property>
+				<value>1</value>
+			</equals>
+                  </and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>1-LOOP-A</object-name>
+		<object-name>1-LOOP-B</object-name>
+		<object-name>2-LOOP-A</object-name>
+		<object-name>2-LOOP-B</object-name>
+		<object-name>3-LOOP-A</object-name>
+		<object-name>3-LOOP-B</object-name>
+		<object-name>4-LOOP-A</object-name>
+		<object-name>4-LOOP-B</object-name>
+		<object-name>L-APU-LOOP-A</object-name>
+		<object-name>L-APU-LOOP-B</object-name>
+		<object-name>R-APU-LOOP-A</object-name>
+		<object-name>R-APU-LOOP-B</object-name>
+		<object-name>L-OWF-LOOP-A</object-name>
+		<object-name>L-OWF-LOOP-B</object-name>
+		<object-name>R-OWF-LOOP-A</object-name>
+		<object-name>R-OWF-LOOP-B</object-name>
+		<emission>
+			<red>0.9</red>
+			<green>0.5</green>
+			<blue>0.9</blue>
+			<factor-prop>controls/switches/annunciators-norm</factor-prop>
+		</emission>
+	</animation>
+
+<!-- switches -->
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_l_apu</object-name>
+	<property>controls/switches/fire_l_apu</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.215</y-m>
+            <z-m>0.461</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_l_apu</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_r_apu</object-name>
+	<property>controls/switches/fire_r_apu</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.215</y-m>
+            <z-m>0.461</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_r_apu</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_engine_1</object-name>
+	<property>controls/switches/fire_engine_1</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.194</y-m>
+            <z-m>0.391</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_engine_1</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_engine_2</object-name>
+	<property>controls/switches/fire_engine_2</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.194</y-m>
+            <z-m>0.391</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_engine_2</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_engine_3</object-name>
+	<property>controls/switches/fire_engine_3</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.194</y-m>
+            <z-m>0.391</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_engine_3</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+	<animation>
+		<type>knob</type>
+	 <object-name>fire_engine_4</object-name>
+	<property>controls/switches/fire_engine_4</property>
+        <factor>30</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+            <x-m>0.008</x-m>
+            <y-m>-0.194</y-m>
+            <z-m>0.391</z-m>
+	</center>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+	                 <property>controls/switches/fire_engine_4</property>
+                         <factor>1</factor>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+                               <!-- nav lights-->
+
  <animation>
 	 <type>rotate</type>
 	 <object-name>nav_lights</object-name>
@@ -686,7 +1799,7 @@ maggse
 	 </action>
 </animation>
 
-<!-- anti collision lights-->
+                        <!-- anti collision lights-->
 
 <animation>
 	<type>rotate</type>
@@ -727,7 +1840,7 @@ maggse
 		</binding>
 	</action>
 </animation>
-                   <!--STROBES--> 
+                             <!--STROBES--> 
 
 <animation>
 	<type>rotate</type>
@@ -771,6 +1884,71 @@ maggse
 
 <!-- instrument lights-->
 
+	               <!-- Annunciator lighting-->
+
+<animation>
+	<type>knob</type>
+	<object-name>int_dim</object-name>
+	<property>controls/switches/annunciators-norm</property>
+	<factor>60</factor>
+	 <axis>
+		 <x> 0.0</x>
+		 <y> 1.0</y>
+		 <z> 0.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.007</x-m>
+		 <y-m>-0.174</y-m>
+		 <z-m> 0.13</z-m>
+   </center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/annunciators-norm</property>
+                        <min>0.3</min>
+                        <max>1</max>
+		</binding>
+	</action>
+</animation>
+
+
+	                  <!--Side Panel lighting-->
+
+<animation>
+	<type>knob</type>
+	<object-name>l_csl</object-name>
+	<property>controls/lighting/side_panel-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.016137</x-m>
+		<y-m>-0.22666</y-m>
+		<z-m>-0.20731</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/side_panel-norm</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation>
+
 <animation>
 	<type>knob</type>
 	<object-name>Panel_Lights</object-name>
@@ -791,9 +1969,9 @@ maggse
 		<z>0.0</z>
 	</axis>
 	<center>
-		<x-m> 0.019003</x-m>
+		<x-m>0.019003</x-m>
 		<y-m>-0.22423</y-m>
-		<z-m>0.066586</z-m>
+		<z-m>0.0729</z-m>
 	</center>
 	<action>
 		<binding>
@@ -805,6 +1983,9 @@ maggse
 		</binding>
 	</action>
 </animation>
+
+
+	                  <!-- screen lighting-->
 
 <animation>
 	<type>knob</type>
@@ -876,10 +2057,56 @@ maggse
 	</action>
 </animation>
 
+                      <!-- centre console lighting-->
+
+<animation>
+	<type>knob</type>
+	<object-name>centre_csl</object-name>
+	<property>controls/lighting/centre_console</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-250.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m> 0.019462</x-m>
+		<y-m>-0.17861</y-m>
+		<z-m>-0.20792</z-m>
+	</center>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/centre_console</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>0.04</factor>
+		</binding>
+	</action>
+</animation>
+
  <animation>
 	<type>material</type>
     <object-name>Panel_Lights</object-name>
-	<object-name>oh_panel</object-name>
+	<object-name>AERIAL_REFUEL</object-name>
+	<object-name>ELEC</object-name>
+	<object-name>LT_1</object-name>
+	<object-name>LT_2</object-name>
+	<object-name>CSD</object-name>
+	<object-name>APU</object-name>
+	<object-name>ENVIR_2</object-name>
+	<object-name>ENVIR_1</object-name>
+	<object-name>EXT_FUEL_JETT</object-name>
+	<object-name>JETT</object-name>
     <object-name>oh_panel_left</object-name>
 	<object-name>APU_X_Bleed</object-name>
     <object-name>APU_couple</object-name>
@@ -898,12 +2125,11 @@ maggse
 	<object-name>Clkheures</object-name>
 	<object-name>Clkminutes</object-name>
 	<object-name>Clksecondes</object-name>
-    <object-name>refuel-slipway</object-name>
+    <object-name>slipway-lighting</object-name>
     <object-name>refuel-lid</object-name>
-	<object-name>1CSD</object-name>
-	<object-name>2CSD</object-name>
-	<object-name>2CSD.002</object-name>
-	<object-name>4CSD</object-name>
+	<object-name>CSD_safety_1</object-name>
+	<object-name>CSD_safety_2</object-name>
+	<object-name>CSD_safety_3</object-name>
 	<object-name>AdjKnob</object-name>
 	<object-name>AmpRim</object-name>
 	<object-name>ESS.BUSS</object-name>
@@ -912,7 +2138,6 @@ maggse
 	<object-name>Fuel-Gauge</object-name>
 	<object-name>Fuel-PSI</object-name>
 	<object-name>Fuel-Press</object-name>
-	<object-name>Grey</object-name>
 	<object-name>Needles</object-name>
 	<object-name>OH lock</object-name>
 	<object-name>OvHdHyd</object-name>
@@ -989,12 +2214,26 @@ maggse
     <object-name>hyd_test_2</object-name>
     <object-name>gen_reset_1</object-name>
     <object-name>gen_reset_2</object-name>
+    <object-name>Needle_1</object-name>
+    <object-name>Needle_2</object-name>
+    <object-name>Fuel-Gals.001</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
 		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
 	</emission>
-</animation>
+       </animation>
+	<animation>
+		<type>material</type>
+		<object-name>APUL_run</object-name>
+		<object-name>APUR_run</object-name>
+		<emission>
+			<red>0.9</red>
+			<green>0.5</green>
+			<blue>0.9</blue>
+			<factor-prop>controls/switches/annunciators-norm</factor-prop>
+		</emission>
+	</animation>
 
 </PropertyList>

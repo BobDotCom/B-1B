@@ -73,149 +73,80 @@
   </axis>
  </animation>
 
-	<animation>
-		<type>rotate</type>
-		<object-name>units-knob</object-name>
-		<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-		<axis>
-			<x1-m>-0.00079</x1-m>
-			<y1-m>-0.03547</y1-m>
-			<z1-m> 0.00105</z1-m>
-			<x2-m>-0.00071</x2-m>
-			<y2-m>-0.03546</y2-m>
-			<z2-m>-0.00056</z2-m>
-		</axis>
-	</animation>
 
-	<animation>
-		<type>knob</type>
-		<object-name>units-knob</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-				<step>1</step>
-				<min>108</min>
-				<max>118</max>
-				<wrap>true</wrap>
-			</binding>
-		</action>
-		<action>
-			<button>4</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-				<step>1</step>
-				<min>108</min>
-				<max>118</max>
-				<wrap>true</wrap>
-			</binding>
-		</action>
-	</animation>
+<animation>
+	<type>knob</type>
+	<object-name>units-knob</object-name>
+	<property>instrumentation/nav[0]/frequencies/selected-mhz</property>
+	<interpolation>
+		<entry>
+			<ind>108.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>118.0</ind>
+			<dep>-180.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>-0.0353</y-m>
+		<z-m>0.0061</z-m>
+	</center>
+	<action>			
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav[0]/frequencies/selected-mhz</property>
+                        <min>108</min>
+                        <max>118</max>
+                        <factor>1</factor>
+		</binding>
+	</action>
+</animation>
 
-	<animation>
-		<type>knob</type>
-		<object-name>units-knob</object-name>
-		<action>
-			<button>1</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-				<step>-1</step>
-				<max>118</max>
-				<min>108</min>
-				<wrap>true</wrap>
-			</binding>
-		</action>
-		<action>
-			<button>3</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-				<step>-1</step>
-				<max>118</max>
-				<min>108</min>
-				<wrap>true</wrap>
-			</binding>
-		</action>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-		<object-name>deci-knob</object-name>
-		<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-		<axis>
-			<x1-m>-0.00071</x1-m>
-			<y1-m> 0.03775</y1-m>
-			<z1-m> 0.00105</z1-m>
-			<x2-m>-0.00069</x2-m>
-			<y2-m> 0.03776</y2-m>
-			<z2-m>-0.00056</z2-m>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>knob</type>
-		<object-name>deci-knob</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-				<step>0.01</step>
-				<min>108.00</min>
-				<max>118.00</max>
-				<wrap>true</wrap>
-			</binding>
-		</action>
-		<action>
-			<button>4</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-				<step>0.01</step>
-				<min>108.00</min>
-				<max>118.00</max>
-				<wrap>true</wrap>
-			</binding>
-		</action>
-	</animation>
-
-	<animation>
-		<type>knob</type>
-		<object-name>deci-knob</object-name>
-		<action>
-			<button>1</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-				<step>-0.01</step>
-				<max>118.00</max>
-				<min>108.00</min>
-				<wrap>true</wrap>
-			</binding>
-		</action>
-		<action>
-			<button>3</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
-				<step>-0.01</step>
-				<max>118.00</max>
-				<min>108.00</min>
-				<wrap>true</wrap>
-			</binding>
-		</action>
-	</animation>
+<animation>
+	<type>knob</type>
+	<object-name>deci-knob</object-name>
+	<property>instrumentation/nav[0]/frequencies/selected-mhz</property>
+	<interpolation>
+		<entry>
+			<ind>108.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>118</ind>
+			<dep>-3600.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0324</y-m>
+		<z-m>0.0056</z-m>
+	</center>
+	<action>			
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav[0]/frequencies/selected-mhz</property>
+                        <min>0</min>
+                        <max>118</max>
+                        <factor>0.01</factor>
+		</binding>
+	</action>
+</animation>
 
 <!-- lighting -->
   <animation>
@@ -225,7 +156,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
 
@@ -236,7 +167,7 @@
 		<red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
 
@@ -247,7 +178,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
 
@@ -259,7 +190,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
   <animation>
@@ -269,7 +200,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
   <animation>
@@ -279,7 +210,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
   <animation>
@@ -289,7 +220,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
   <animation>
@@ -299,7 +230,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
   <animation>
@@ -309,7 +240,7 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
 

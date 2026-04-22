@@ -6,21 +6,50 @@ maggse
 
  <path>hud_alt.ac</path>
 
+<animation>
+	 <type>rotate</type>
+	 <object-name>Altitude_off_marker</object-name>
+	 <property>systems/electrical/bus/ac-2/voltage</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
 
+		 <entry>
+			 <ind>200.0</ind>
+			 <dep>-0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>230.0</ind>
+			 <dep>-55.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.00499</x-m>
+		 <y-m>-0.1899</y-m>
+		 <z-m>0.03516</z-m>
+  	 </center>
+ </animation>
 
 
  <animation>
    <type>textranslate</type>
-   <object-name>ind_alt_t</object-name>
-   <property>instrumentation/altimeter/indicated-altitude-ft</property>
+   <object-name>ind_alt_thousands</object-name>
+   <property>systems/computers/adc_switch/indicated-altitude-ft_output</property>
 <interpolation>
      <entry>
              <ind>0</ind>
              <dep>0</dep>
      </entry>
      <entry>
-	     <ind>69000</ind>
-	     <dep>0.96</dep>
+	     <ind>51400</ind>
+	     <dep>1</dep>
      </entry>
 </interpolation>
   <axis>
@@ -37,8 +66,8 @@ maggse
 
  <animation>
 	 <type>textranslate</type>
-	 <object-name>ind_alt_h</object-name>
-	 <property>instrumentation/altimeter/indicated-altitude-ft</property>
+	 <object-name>ind_alt_hundreds</object-name>
+	 <property>systems/computers/adc_switch/indicated-altitude-ft_output</property>
 	 <factor>0.001</factor>
 		<offset>0</offset>
 		 <axis>
@@ -55,36 +84,36 @@ maggse
 
  <animation>
 	 <type>translate</type>
-	 <object-name>ind_alt_lmob</object-name>
-	 <property>autopilot/settings/vertical-speed-fpm</property>
+	 <object-name>Vertical_velocity_indicator</object-name>
+	 <property>systems/computers/adc_switch/vertical_speed_fpm_output</property>
 	 <interpolation>
 		 <entry>
 			 <ind>-10000</ind>
-			 <dep>-0.045</dep>
+			 <dep>-0.053</dep>
 		 </entry>
 		 <entry>
-			 <ind>-1000</ind>
-			 <dep>-0.030</dep>
+			 <ind>-2000</ind>
+			 <dep>-0.053</dep>
 		 </entry>
 		 <entry>
-			 <ind>-500</ind>
-			 <dep>-0.015</dep>
+			 <ind>-1500</ind>
+			 <dep>-0.0375</dep>
 		 </entry>
 		 <entry>
 			 <ind>0</ind>
 			 <dep>0</dep>
 		 </entry>
 		 <entry>
-			 <ind>500</ind>
-			 <dep>0.015</dep>
+			 <ind>-1500</ind>
+			 <dep>-0.0375</dep>
 		 </entry>
 		 <entry>
-			 <ind>1000</ind>
-			 <dep>0.030</dep>
+			 <ind>2000</ind>
+			 <dep>0.053</dep>
 		 </entry>
 		 <entry>
 			 <ind>10000</ind>
-			 <dep>0.045</dep>
+			 <dep>0.053</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -100,32 +129,63 @@ maggse
  </animation>
 
  <animation>
-	 <type>pick</type>
-	 <object-name>switch_alt_set</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>autopilot/settings/target-altitude-ft</property>
-			 <step>100</step>
-			 <min>0.0</min>
-			 <max>69000</max>
-		 </binding>
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>autopilot/settings/target-altitude-ft</property>
-			 <step>-100</step>
-			 <min>0.0</min>
-			 <max>69000</max>
-		 </binding>
-	 </action>
+	 <type>textranslate</type>
+	 <object-name>Vertical_velocity_+</object-name>
+	 <property>systems/computers/adc_switch/vertical_speed_fpm_output</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>2000</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>10000</ind>
+			 <dep>0.155</dep>
+		 </entry>
+	 </interpolation>
+		 <axis>
+			 <x>0</x>
+			 <y>1</y>
+			 <z>0</z>
+		 </axis>
+		 <center>
+			 <x-m>0.00</x-m>
+			 <y-m>0.00</y-m>
+			 <z-m>0.00</z-m>
+		 </center>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>Vertical_velocity_-</object-name>
+	 <property>systems/computers/adc_switch/vertical_speed_fpm_output</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>-2000</ind>
+			 <dep>0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>-10000</ind>
+			 <dep>0.15</dep>
+		 </entry>
+	 </interpolation>
+		 <axis>
+			 <x>0</x>
+			 <y>-1</y>
+			 <z>0</z>
+		 </axis>
+		 <center>
+			 <x-m>0.00</x-m>
+			 <y-m>0.00</y-m>
+			 <z-m>0.00</z-m>
+		 </center>
  </animation>
 
  <animation>
@@ -194,88 +254,138 @@ maggse
  </animation>
 
  <animation>
-	<type>knob</type>
-	<object-name>VFP_set</object-name>
-	<property>autopilot/settings/vertical-speed-fpm</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>0.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>-250.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>-1.0</x>
-		<y> 0.0</y>
-		<z> 0.0</z>
-	</axis>
-	<center>
-		<x-m> 0.00747</x-m>
-		<y-m>-0.2589</y-m>
-		<z-m>-0.08963</z-m>
-	</center>
-	<action>
-		<binding>
-			<command>property-adjust</command>
-			<property>autopilot/settings/vertical-speed-fpm</property>
-                        <min>-10000</min>
-                        <max> 10000</max>
-                       <factor>250</factor>
-		</binding>
-	</action>
-</animation>
-
-  <animation>
-	 <type>knob</type>
-	 <object-name>VFP_set</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>autopilot/settings/vertical-speed-fpm</property>
-			 <step>100</step>
-			 <min>-10000</min>
-			 <max>10000</max>
-		 </binding>
-	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>autopilot/settings/vertical-speed-fpm</property>
-			 <step>-100</step>
-			 <min>-10000</min>
-			 <max> 10000</max>
-		 </binding>
-	 </action>
+	 <type>textranslate</type>
+	 <object-name>Inhg_10.00</object-name>
+	 <property>systems/computers/adc_switch/pressure-inhg_output</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
  </animation>
 
  <animation>
+	 <type>textranslate</type>
+	 <object-name>Inhg_01.00</object-name>
+	 <property>systems/computers/adc_switch/pressure-inhg_output</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>Inhg_00.10</object-name>
+	 <property>systems/computers/adc_switch/pressure-inhg_output</property>
+	 <factor>1.0</factor>
+	 <step>0.1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>Inhg_00.01</object-name>
+	 <property>systems/computers/adc_switch/pressure-inhg_output</property>
+	 <factor>10.0</factor>
+	 <step>0.01</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+</animation>
+
+
+
+<animation>
+	<type>rotate</type>
+	<object-name>Inhg_set</object-name>
+	 <interpolation>
+		 <entry>
+			 <ind> 21.0</ind>
+			 <dep> 0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind> 36.0</ind>
+			 <dep> 360.0</dep>
+		 </entry>
+	 </interpolation>
+        <center>
+         <x>0.0161</x> 
+         <y>-0.253</y> 
+         <z>-0.089</z>
+        </center>
+        <axis>
+	 <x>1</x>
+	 <y>0</y>
+         <z>0</z>
+	</axis>
+</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Inhg_set</object-name>
+		  <action>
+		    <button>4</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>instrumentation/altimeter/setting-inhg</property>
+		      <step>0.01</step>
+		      <min>21</min>
+		      <max>36</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+		  <action>
+		    <button>3</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>instrumentation/altimeter/setting-inhg</property>
+		      <step>-0.01</step>
+		      <min>21</min>
+		      <max>36</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+	</animation>
+
+ <animation>
 	 <type>material</type>
-	 <object-name>ind_alt_t</object-name>
-	 <object-name>ind_alt_h</object-name>
+	 <object-name>ind_alt_thousands</object-name>
+	 <object-name>ind_alt_hundreds</object-name>
 	 <object-name>switch_alt_set</object-name>
 	 <object-name>altft_1</object-name>
 	 <object-name>altft_10</object-name>
 	 <object-name>altft_100</object-name>
 	 <object-name>altft_1000</object-name>
 	 <object-name>altft_10000</object-name>
-	 <object-name>ind_alt_lmob.001</object-name>
-	 <object-name>ind_alt_l</object-name>
-	 <object-name>ind_alt_lmob</object-name>
-	 <object-name>VFP_set</object-name>
+	 <object-name>Altitude_command_marker_1000</object-name>
+	 <object-name>Altitude_off_marker</object-name>
+	 <object-name>Inhg_00.01</object-name>
+	 <object-name>Inhg_00.10</object-name>
+	 <object-name>Inhg_01.00</object-name>
+	 <object-name>Inhg_10.00</object-name>
+	 <object-name>Vertical_velocity_scale</object-name>
+	 <object-name>Vertical_velocity_indicator</object-name>
+	 <object-name>Vertical_velocity_+</object-name>
+	 <object-name>Vertical_velocity_-</object-name>
 	 <emission>
 		<red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
 </animation>
 

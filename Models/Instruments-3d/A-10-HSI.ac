@@ -1,11 +1,11 @@
 AC3Db
 MATERIAL "ac3dmat1" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
+MATERIAL "ac3dmat1.003" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.000
 MATERIAL "ac3dmat1.001" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
 MATERIAL "ac3dmat1.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 64 trans 0.000
-MATERIAL "ac3dmat1.003" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.000
 OBJECT world
-name "Blender_exporter_v4.1__A-10-HSI.ac"
-kids 1
+name "Blender_exporter_v6.1__A-10-HSI.ac"
+kids 2
 OBJECT group
 name "A-10-HSI"
 kids 2
@@ -19,7 +19,7 @@ OBJECT poly
 name "bearing-validity-flag"
 data 26
 bearing-validity-flag.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 4
 -0.0015 0.01878 -0.0051
@@ -39,7 +39,7 @@ OBJECT poly
 name "course-deviation-indicator-off"
 data 35
 course-deviation-indicator-off.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 4
 -0.00092 0.01955 -0.00085
@@ -59,7 +59,7 @@ OBJECT poly
 name "course-deviation-indicator-on"
 data 34
 course-deviation-indicator-on.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 4
 -0.00092 -0.0197 -0.00085
@@ -79,7 +79,7 @@ OBJECT poly
 name "HSI-course-card"
 data 20
 HSI-course-card.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 29
 -0.00185 -0.03023 -0.0009
@@ -275,7 +275,7 @@ OBJECT poly
 name "tcn-course-deviation-indicator-on"
 data 38
 tcn-course-deviation-indicator-on.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 4
 -0.00092 0.01955 -0.00085
@@ -295,7 +295,7 @@ OBJECT poly
 name "tcn-to-from-from"
 data 21
 tcn-to-from-from.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 3
 -0.00144 -0.01142 0.00259
@@ -313,7 +313,7 @@ OBJECT poly
 name "tcn-to-from-to"
 data 19
 tcn-to-from-to.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 3
 -0.00144 0.01317 0.00016
@@ -331,7 +331,7 @@ OBJECT poly
 name "to-from-from"
 data 17
 to-from-from.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 3
 -0.00144 -0.01549 0.0001
@@ -349,7 +349,7 @@ OBJECT poly
 name "to-from-to"
 data 15
 to-from-to.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 3
 -0.00144 0.00911 -0.00233
@@ -367,43 +367,32 @@ OBJECT group
 name "hsi"
 kids 2
 OBJECT poly
-name "bearing-needle-1"
-data 21
-bearing-needle-1.mesh
-crease 45.0
+name "heading-bug"
+data 5
+Plane
+crease 40.0
 texture "A-10-HSI-mount.png"
-numvert 9
--0.00182 0.04502 -0.00143
--0.00182 0.03989 -0.00154
--0.00182 0.03977 0.00173
--0.00182 0.0449 0.00183
--0.00182 0.04746 0.0002
--0.00182 -0.04025 -0.00154
--0.00182 -0.04025 0.00163
--0.00182 -0.04674 0.00163
--0.00182 -0.04674 -0.00154
-numsurf 2
-SURF 0X10
-mat 0
+numvert 5
+-0.00239 0.04289 0.00251
+-0.00239 0.03796 0.00251
+-0.00239 0.04289 -0.00243
+-0.00239 0.03796 -0.00243
+-0.00239 0.04124 0.00004
+numsurf 1
+SURF 0X0
+mat 1
 refs 5
-4 0.541991 0.142584
-3 0.525193 0.116872
-2 0.526243 0.065448
-1 0.559839 0.066616
-0 0.558789 0.118041
-SURF 0X10
-mat 0
-refs 4
-5 0.559879 0.069489
-6 0.526112 0.069489
-7 0.526112 0.00114
-8 0.559879 0.00114
+0 0.854857 0.794066
+1 0.877565 0.794066
+3 0.877565 0.816774
+2 0.854857 0.816774
+4 0.862101 0.80542
 kids 0
 OBJECT poly
 name "HSI-compass-card"
 data 21
 HSI-compass-card.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-compass-card.png"
 numvert 25
 -0.00233 -0.00011 0.03989
@@ -433,145 +422,145 @@ numvert 25
 -0.00233 -0.00011 -0.00003
 numsurf 24
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 1 0.017011 0.62941
 0 0 0.5
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 2 0.066884 0.749999
 1 0.017011 0.62941
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 3 0.14622 0.853553
 2 0.066884 0.749999
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 4 0.249613 0.933012
 3 0.14622 0.853553
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 5 0.370016 0.982962
 4 0.249613 0.933012
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 6 0.499226 1
 5 0.370016 0.982962
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 7 0.628435 0.982962
 6 0.499226 1
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 8 0.748839 0.933012
 7 0.628435 0.982962
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 9 0.852232 0.853553
 8 0.748839 0.933012
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 10 0.931567 0.749999
 9 0.852232 0.853553
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 11 0.98144 0.62941
 10 0.931567 0.749999
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 12 0.998452 0.5
 11 0.98144 0.62941
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 13 0.98144 0.37059
 12 0.998452 0.5
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 14 0.931567 0.250001
 13 0.98144 0.37059
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 15 0.852232 0.146447
 14 0.931567 0.250001
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 16 0.748839 0.066988
 15 0.852232 0.146447
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 17 0.628435 0.017037
 16 0.748839 0.066988
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 18 0.499226 0
 17 0.628435 0.017037
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 19 0.370016 0.017037
 18 0.499226 0
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 20 0.249613 0.066988
 19 0.370016 0.017037
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 21 0.14622 0.146447
 20 0.249613 0.066988
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 22 0.066884 0.250001
 21 0.14622 0.146447
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 23 0.017011 0.37059
 22 0.066884 0.250001
 SURF 0X10
-mat 1
+mat 2
 refs 3
 24 0.499226 0.5
 0 0 0.5
@@ -579,12 +568,12 @@ refs 3
 kids 0
 OBJECT group
 name "static"
-kids 14
+kids 8
 OBJECT poly
 name "course-drum-1"
 data 18
 course-drum-1.mesh
-crease 45.0
+crease 40.0
 texture "numbers.png"
 numvert 4
 -0.00241 0.0409 -0.05471
@@ -593,7 +582,7 @@ numvert 4
 -0.00234 0.02449 -0.05927
 numsurf 1
 SURF 0X10
-mat 2
+mat 3
 refs 4
 1 0.260014 0.745398
 3 0.800372 0.745398
@@ -604,7 +593,7 @@ OBJECT poly
 name "course-drum-2"
 data 18
 course-drum-2.mesh
-crease 45.0
+crease 40.0
 texture "numbers.png"
 numvert 4
 -0.00234 0.02521 -0.05447
@@ -613,7 +602,7 @@ numvert 4
 -0.00241 0.04162 -0.04979
 numsurf 1
 SURF 0X10
-mat 2
+mat 3
 refs 4
 2 0.260014 0.719127
 0 0.800372 0.719127
@@ -624,7 +613,7 @@ OBJECT poly
 name "course-drum-3"
 data 18
 course-drum-3.mesh
-crease 45.0
+crease 40.0
 texture "numbers.png"
 numvert 4
 -0.00241 0.04162 -0.04496
@@ -633,78 +622,18 @@ numvert 4
 -0.00234 0.02521 -0.04955
 numsurf 1
 SURF 0X10
-mat 2
+mat 3
 refs 4
 1 0.260014 0.719127
 3 0.800372 0.719127
 2 0.800372 0.999281
 0 0.260014 0.999281
-kids 0
-OBJECT poly
-name "ILS-miles-drum-1"
-data 21
-miles-drum-1.mesh.001
-crease 45.0
-texture "numbers.png"
-numvert 4
--0.00234 0.02521 0.0449
--0.00241 0.04162 0.0449
--0.00234 0.02521 0.04946
--0.00241 0.04162 0.04946
-numsurf 1
-SURF 0X10
-mat 2
-refs 4
-2 0.260014 0.719127
-0 0.800372 0.719127
-1 0.800372 0.999281
-3 0.260014 0.999281
-kids 0
-OBJECT poly
-name "ILS-miles-drum-2"
-data 21
-miles-drum-2.mesh.001
-crease 45.0
-texture "numbers.png"
-numvert 4
--0.00241 0.04162 0.05438
--0.00234 0.02521 0.05438
--0.00241 0.04162 0.0497
--0.00234 0.02521 0.0497
-numsurf 1
-SURF 0X10
-mat 2
-refs 4
-1 0.260014 0.719127
-3 0.800372 0.719127
-2 0.800372 0.999281
-0 0.260014 0.999281
-kids 0
-OBJECT poly
-name "ILS-miles-drum-3"
-data 21
-miles-drum-3.mesh.001
-crease 45.0
-texture "numbers.png"
-numvert 4
--0.00234 0.02521 0.05461
--0.00241 0.04162 0.05462
--0.00234 0.02521 0.05921
--0.00241 0.04162 0.05921
-numsurf 1
-SURF 0X10
-mat 2
-refs 4
-2 0.260014 0.719127
-0 0.800372 0.719127
-1 0.800372 0.999281
-3 0.260014 0.999281
 kids 0
 OBJECT poly
 name "lubber-line"
 data 16
 lubber-line.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 36
 -0.00076 -0.0467 -0.00022
@@ -745,21 +674,21 @@ numvert 36
 -0.00076 0.04709 -0.00022
 numsurf 19
 SURF 0X10
-mat 3
+mat 1
 refs 4
 1 0.138209 0.259581
 5 0.138209 0.259581
 4 0.138209 0.259581
 0 0.138209 0.259581
 SURF 0X10
-mat 3
+mat 1
 refs 4
 22 0.136586 0.26841
 2 0.136586 0.26841
 3 0.136586 0.26841
 23 0.136586 0.26841
 SURF 0X10
-mat 3
+mat 1
 refs 4
 33 0.136586 0.26841
 17 0.136586 0.26841
@@ -825,7 +754,7 @@ refs 4
 19 0.603722 0.085113
 20 0.603722 0.085113
 SURF 0X10
-mat 3
+mat 1
 refs 4
 18 0.603722 0.085113
 13 0.603722 0.085113
@@ -846,7 +775,7 @@ refs 4
 26 0.603722 0.085113
 27 0.603722 0.085113
 SURF 0X10
-mat 3
+mat 1
 refs 4
 16 0.603722 0.085113
 21 0.603722 0.085113
@@ -867,7 +796,7 @@ refs 4
 33 0.138209 0.259581
 32 0.14575 0.259581
 SURF 0X10
-mat 3
+mat 1
 refs 4
 34 0.138209 0.289498
 35 0.138278 0.289498
@@ -878,16 +807,16 @@ OBJECT poly
 name "miles-drum-1"
 data 17
 miles-drum-1.mesh
-crease 45.0
+crease 40.0
 texture "numbers.png"
 numvert 4
--0.00234 0.02521 0.0449
--0.00241 0.04162 0.0449
--0.00234 0.02521 0.04946
--0.00241 0.04162 0.04946
+-0.00234 0.01931 0.0449
+-0.00241 0.03572 0.0449
+-0.00234 0.01931 0.04946
+-0.00241 0.03572 0.04946
 numsurf 1
 SURF 0X10
-mat 2
+mat 3
 refs 4
 2 0.260014 0.719127
 0 0.800372 0.719127
@@ -898,16 +827,16 @@ OBJECT poly
 name "miles-drum-2"
 data 17
 miles-drum-2.mesh
-crease 45.0
+crease 40.0
 texture "numbers.png"
 numvert 4
--0.00241 0.04162 0.05438
--0.00234 0.02521 0.05438
--0.00241 0.04162 0.0497
--0.00234 0.02521 0.0497
+-0.00241 0.03572 0.05438
+-0.00234 0.01931 0.05438
+-0.00241 0.03572 0.0497
+-0.00234 0.01931 0.0497
 numsurf 1
 SURF 0X10
-mat 2
+mat 3
 refs 4
 1 0.260014 0.719127
 3 0.800372 0.719127
@@ -918,16 +847,16 @@ OBJECT poly
 name "miles-drum-3"
 data 17
 miles-drum-3.mesh
-crease 45.0
+crease 40.0
 texture "numbers.png"
 numvert 4
--0.00234 0.02521 0.05461
--0.00241 0.04162 0.05462
--0.00234 0.02521 0.05921
--0.00241 0.04162 0.05921
+-0.00234 0.01931 0.05461
+-0.00241 0.03572 0.05462
+-0.00234 0.01931 0.05921
+-0.00241 0.03572 0.05921
 numsurf 1
 SURF 0X10
-mat 2
+mat 3
 refs 4
 2 0.260014 0.719127
 0 0.800372 0.719127
@@ -935,70 +864,10 @@ refs 4
 3 0.260014 0.999281
 kids 0
 OBJECT poly
-name "NO-miles-drum-1"
-data 21
-miles-drum-1.mesh.002
-crease 45.0
-texture "numbers.png"
-numvert 4
--0.00234 0.02521 0.0449
--0.00241 0.04162 0.0449
--0.00234 0.02521 0.04946
--0.00241 0.04162 0.04946
-numsurf 1
-SURF 0X10
-mat 2
-refs 4
-2 0.260014 0.820689
-0 0.800372 0.820689
-1 0.800372 1.100843
-3 0.260014 1.100843
-kids 0
-OBJECT poly
-name "NO-miles-drum-2"
-data 21
-miles-drum-2.mesh.002
-crease 45.0
-texture "numbers.png"
-numvert 4
--0.00241 0.04162 0.05438
--0.00234 0.02521 0.05438
--0.00241 0.04162 0.0497
--0.00234 0.02521 0.0497
-numsurf 1
-SURF 0X10
-mat 2
-refs 4
-1 0.260014 0.820689
-3 0.800372 0.820689
-2 0.800372 1.100843
-0 0.260014 1.100843
-kids 0
-OBJECT poly
-name "NO-miles-drum-3"
-data 21
-miles-drum-3.mesh.002
-crease 45.0
-texture "numbers.png"
-numvert 4
--0.00234 0.02521 0.05461
--0.00241 0.04162 0.05462
--0.00234 0.02521 0.05921
--0.00241 0.04162 0.05921
-numsurf 1
-SURF 0X10
-mat 2
-refs 4
-2 0.260014 0.820689
-0 0.800372 0.820689
-1 0.800372 1.100843
-3 0.260014 1.100843
-kids 0
-OBJECT poly
 name "off-flag"
 data 13
 off-flag.mesh
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 4
 -0.00152 0.00392 -0.0617
@@ -1021,7 +890,7 @@ OBJECT poly
 name "course-knob"
 data 8
 Mesh.003
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 49
 0.01855 -0.03733 -0.03973
@@ -1399,7 +1268,7 @@ OBJECT poly
 name "heading-set-knob"
 data 8
 Mesh.001
-crease 45.0
+crease 40.0
 texture "A-10-HSI-mount.png"
 numvert 49
 0.00037 -0.0452 0.05824
@@ -1817,49 +1686,49 @@ numvert 100
 -0.002 -0.03346 0.03346
 -0.002 -0.04098 0.02366
 -0.002 -0.04571 0.01225
--0.002 -0.04732 -0
+-0.002 -0.04732 0
 -0.002 -0.04571 -0.01225
 -0.002 -0.04098 -0.02366
 -0.002 -0.03346 -0.03346
 -0.002 -0.02366 -0.04098
 -0.002 -0.01225 -0.04571
--0.002 0 -0.04732
+-0.002 -0 -0.04732
 -0.002 0.01225 -0.04571
 -0.002 0.02366 -0.04098
 -0.002 0.03346 -0.03346
 -0.002 0.04098 -0.02366
 -0.002 0.04571 -0.01225
--0.002 0.04732 0
+-0.002 0.04732 -0
 -0.002 0.04571 0.01225
 -0.002 0.04098 0.02366
 -0.002 0.03346 0.03346
 -0.002 0.02366 0.04098
 -0.002 0.01225 0.04571
--0.002 -0 0.04732
+-0.002 0 0.04732
 -0.00449 0.04184 -0.01121
 -0.00449 0.03752 -0.02166
 -0.00449 0.03063 -0.03063
 -0.00449 0.02166 -0.03752
 -0.00449 0.01121 -0.04184
--0.00449 0 -0.04332
+-0.00449 -0 -0.04332
 -0.00449 -0.01121 -0.04184
 -0.00449 -0.02166 -0.03752
 -0.00449 -0.03063 -0.03063
 -0.00449 -0.03752 -0.02166
 -0.00449 -0.04184 -0.01121
--0.00449 -0.04332 -0
+-0.00449 -0.04332 0
 -0.00449 -0.04184 0.01121
 -0.00449 -0.03752 0.02166
 -0.00449 -0.03063 0.03063
 -0.00449 -0.02166 0.03752
 -0.00449 -0.01121 0.04184
--0.00449 -0 0.04332
+-0.00449 0 0.04332
 -0.00449 0.01121 0.04184
 -0.00449 0.02166 0.03752
 -0.00449 0.03063 0.03063
 -0.00449 0.03752 0.02166
 -0.00449 0.04184 0.01121
--0.00449 0.04332 0
+-0.00449 0.04332 -0
 -0.002 0.0533 -0.04777
 -0.002 0.03802 -0.0621
 -0.002 -0.01667 -0.06215
@@ -2537,4 +2406,37 @@ refs 4
 93 0.975138 0.442831
 4 1 0.18753
 6 1 0.974705
+kids 0
+OBJECT poly
+name "bearing-needle-1"
+data 21
+bearing-needle-1.mesh
+crease 40.0
+texture "A-10-HSI-mount.png"
+numvert 9
+-0.00241 0.04502 -0.00143
+-0.00241 0.03989 -0.00154
+-0.00241 0.03977 0.00173
+-0.00241 0.0449 0.00183
+-0.00241 0.04746 0.0002
+-0.00241 -0.04025 -0.00154
+-0.00241 -0.04025 0.00163
+-0.00241 -0.04674 0.00163
+-0.00241 -0.04674 -0.00154
+numsurf 2
+SURF 0X10
+mat 0
+refs 5
+4 0.541991 0.142584
+3 0.525193 0.116872
+2 0.526243 0.065448
+1 0.559839 0.066616
+0 0.558789 0.118041
+SURF 0X10
+mat 0
+refs 4
+5 0.559879 0.069489
+6 0.526112 0.069489
+7 0.526112 0.00114
+8 0.559879 0.00114
 kids 0

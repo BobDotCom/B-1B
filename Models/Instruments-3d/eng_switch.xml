@@ -6,397 +6,130 @@ sweat by maggse
 
  <path>eng_switch.ac</path>
 
-
- <!-- engines on/off -->
+ <animation>
+	 <type>material</type>
+	 <object-name>switch_eng0</object-name>
+	 <object-name>switch_eng1</object-name>
+	 <object-name>switch_eng2</object-name>
+	 <object-name>switch_eng3</object-name>
+	 <object-name>fuel_cov.001</object-name>
+	 <object-name>fuel_cov.002</object-name>
+	 <object-name>fuel_cov.005</object-name>
+	 <object-name>Cube.003</object-name>
+	 <emission>
+		 <red>0.9</red>
+		 <green>0.5</green>
+		 <blue>0.9</blue>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
+	</emission>
+</animation>
 
  <animation>
-	 <type>rotate</type>
+	 <type>knob</type>
 	 <object-name>switch_eng0</object-name>
-	 <property>controls/engines/engine[0]/cutoff</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-	 </interpolation>
+	 <property>controls/engines/engine[0]/cutoff-switch</property>
+	 <factor>-30</factor>
+	 <center>
+		 <x-m>0.00136</x-m>
+		 <y-m>-0.44896</y-m>
+		 <z-m>0.15779</z-m>
+	 </center>
 	 <axis>
 		 <x>0.0</x>
 		 <y>1.0</y>
 		 <z>0.0</z>
 	 </axis>
-	 <center>
-		 <x-m>0.00136</x-m>
-		 <y-m>-0.44896</y-m>
-		 <z-m>0.15779</z-m>
-   </center>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>switch_eng0</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
 
- <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
- <animation>
-	 <type>pick</type>
-	 <object-name>switch_eng0</object-name>
 	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
 		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/engines/engine[0]/cutoff</property>
-			 <condition>
-		 <or>
-	          <and>
-		   <equals>
-			 <property>controls/APU/APUL_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APUL_couple</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <and>
-		   <equals>
-			 <property>controls/APU/APUL_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APUL_bleed</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <and>
-		   <equals>
-			 <property>controls/APU/APUR_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APU_crossbleed</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <and>
-		  <equals>
-			 <property>controls/engines/engine[0]/cutoff</property>
-			 <value>0</value>
-		   </equals>
-	         </and>
-	 	 </or>
-	         </condition>
-		 </binding>
-		 <binding>
-			 <command>nasal</command>
-			 <script>b1b.eng_state(0)</script>
+			 <command>property-adjust</command>
+			 <property>controls/engines/engine[0]/cutoff-switch</property>
+			 <min>-1</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
 </animation>
 
-<animation>
-	<type>rotate</type>
-	<object-name>switch_eng1</object-name>
-	<property>controls/engines/engine[1]/cutoff</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>-30.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>30.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
-		<z>0.0</z>
-	</axis>
-	<center>
-		<x-m>0.00136</x-m>
-		<y-m>-0.42175</y-m>
-		<z-m>0.15780</z-m>
-	</center>
-</animation>
-<animation>
-	<type>material</type>
-	<object-name>switch_eng1</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
+	<animation>
+		<type>knob</type>
+		<object-name>switch_eng1</object-name>
+		<property>controls/engines/engine[1]/cutoff-switch</property>
+		<factor>-30</factor>
+		<center>
+			<x-m>0.00136</x-m>
+			<y-m>-0.42175</y-m>
+			<z-m>0.15780</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+
+
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[1]/cutoff-switch</property>
+				<min>-1</min>
+				<max>1</max>
+			</binding>
+		</action>
 </animation>
 
-<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+	<animation>
+		<type>knob</type>
+		<object-name>switch_eng2</object-name>
+		<property>controls/engines/engine[2]/cutoff-switch</property>
+		<factor>-30</factor>
+		<center>
+			<x-m>0.00136</x-m>
+			<y-m>-0.39317</y-m>
+			<z-m>0.15776</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
 
-<animation>
-	<type>pick</type>
-	<object-name>switch_eng1</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.5</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/engines/engine[1]/cutoff</property>
-			<condition>
-		 <or>
-	          <and>
-		   <equals>
-			 <property>controls/APU/APUL_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APUL_couple</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <and>
-		   <equals>
-			 <property>controls/APU/APUL_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APUL_bleed</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <and>
-		   <equals>
-			 <property>controls/APU/APUR_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APU_crossbleed</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
 
-		  <equals>
-			 <property>controls/engines/engine[1]/cutoff</property>
-			 <value>0</value>
-		   </equals>
-	 	 </or>
-	        </condition>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>b1b.eng_state(0)</script>
-		</binding>
-	</action>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[2]/cutoff-switch</property>
+				<min>-1</min>
+				<max>1</max>
+			</binding>
+		</action>
 </animation>
 
-<animation>
-	<type>rotate</type>
-	<object-name>switch_eng2</object-name>
-	<property>controls/engines/engine[2]/cutoff</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>-30.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>30.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
-		<z>0.0</z>
-	</axis>
-	<center>
-		<x-m>0.00136</x-m>
-		<y-m>-0.39317</y-m>
-		<z-m>0.15776</z-m>
-	</center>
-</animation>
-<animation>
-	<type>material</type>
-	<object-name>switch_eng2</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
+	<animation>
+		<type>knob</type>
+		<object-name>switch_eng3</object-name>
+		<property>controls/engines/engine[3]/cutoff-switch</property>
+		<factor>-30</factor>
+		<center>
+			<x-m>0.00136</x-m>
+			<y-m>-0.36587</y-m>
+			<z-m>0.15777</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
 
-<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
-<animation>
-	<type>pick</type>
-	<object-name>switch_eng2</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.5</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/engines/engine[2]/cutoff</property>
-			<condition>
-		 <or>
-	          <and>
-		   <equals>
-			 <property>controls/APU/APUR_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APUR_couple</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <and>
-		   <equals>
-			 <property>controls/APU/APUR_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APUR_bleed</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <and>
-		   <equals>
-			 <property>controls/APU/APUL_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APU_crossbleed</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <equals>
-			 <property>controls/engines/engine[2]/cutoff</property>
-			 <value>0</value>
-		   </equals>
-	 	 </or>
-	 </condition>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>b1b.eng_state(0)</script>
-		</binding>
-	</action>
-</animation>
-
-<animation>
-	<type>rotate</type>
-	<object-name>switch_eng3</object-name>
-	<property>controls/engines/engine[3]/cutoff</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>-30.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>30.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
-		<z>0.0</z>
-	</axis>
-	<center>
-		<x-m>0.00136</x-m>
-		<y-m>-0.36587</y-m>
-		<z-m>0.15777</z-m>
-	</center>
-</animation>
-<animation>
-	<type>material</type>
-	<object-name>switch_eng3</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
-
-<!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-<animation>
-	<type>pick</type>
-	<object-name>switch_eng3</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.5</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/engines/engine[3]/cutoff</property>
-			<condition>
-		 <or>
-	          <and>
-		   <equals>
-			 <property>controls/APU/APUR_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APUR_couple</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <and>
-		   <equals>
-			 <property>controls/APU/APUR_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APUR_bleed</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <and>
-		   <equals>
-			 <property>controls/APU/APUL_running</property>
-			 <value>1</value>
-		   </equals>
-		   <equals>
-			 <property>controls/APU/APU_crossbleed</property>
-			 <value>1</value>
-		   </equals>
-	          </and>
-		  <equals>
-			 <property>controls/engines/engine[3]/cutoff</property>
-			 <value>0</value>
-		   </equals>
-	 	 </or>
-	 </condition>
-		</binding>
-		<binding>
-			<command>nasal</command>
-			<script>b1b.eng_state(0)</script>
-		</binding>
-	</action>
-</animation>
-
-<animation>
-	<type>material</type>
-	<object-name>fuel_cov.005</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[3]/cutoff-switch</property>
+				<min>-1</min>
+				<max>1</max>
+			</binding>
+		</action>
 </animation>
 
 </PropertyList>

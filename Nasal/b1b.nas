@@ -1,11 +1,19 @@
 _setlistener("/sim/signals/fdm-initialized", func {
     rtExec_loop();
 	# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
-var hmd = modules.Module.new("displays");
-hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
-hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
-hmd.setMainFile("displays.nas");
-hmd.load();
+  if (getprop("/sim/variant-id") == 5){
+    var hmd = modules.Module.new("displays");
+    hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
+    hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
+    hmd.setMainFile("blockE-displays.nas");
+    hmd.load();
+  } else {
+    var hmd = modules.Module.new("displays");
+    hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
+    hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
+    hmd.setMainFile("blockD-displays.nas");
+    hmd.load();
+  };
 	init_b1b();
 });
 
@@ -16,25 +24,22 @@ var SubSystem_Main = {
         var obj = { parents: [SubSystem_Main]};
         input = {
             # PFD
-            alt_ft:               "instrumentation/altimeter/indicated-altitude-ft",
-            heading:              "instrumentation/heading-indicator/indicated-heading-deg",
-            ias:                  "instrumentation/airspeed-indicator/indicated-speed-kt",
+            alt_ft:               "systems/computers/adc_switch/indicated-altitude-ft_output",
+            headingTrue:          "systems/computers/gss_switch/heading_output",
+            headingMag:           "orientation/heading-magnetic-deg",
+            ias:                  "systems/computers/adc_switch/indicated_airspeed_knts_output",
             inhg:                 "instrumentation/altimeter/setting-inhg",
-            mach:                 "instrumentation/airspeed-indicator/indicated-mach",
+            mach:                 "systems/computers/adc_switch/indicated_mach_output",
             Nz:                   "accelerations/pilot-gdamped",
-            #pitch:                "instrumentation/attitude-indicator/indicated-pitch-deg",
-            #roll:                 "instrumentation/attitude-indicator/indicated-roll-deg",
-            pitch:                "orientation/pitch-deg",
-            roll:                 "orientation/roll-deg",
+            pitch:                "systems/computers/gss_switch/pitch_output",
+            roll:                 "systems/computers/gss_switch/roll_output",
             targetMach:           "autopilot/settings/target-mach",
-            APHeadingBug:         "autopilot/settings/heading-bug-deg",
+            # APHeadingBug:         "autopilot/settings/heading-bug-deg",
             targetSpeed:          "autopilot/settings/target-speed-kt",
             targetAltitude:       "autopilot/settings/target-altitude-ft",
-            #vSpeed:                "velocities/vertical-speed-fps",
-            vFpm:                 "instrumentation/vertical-speed-indicator/indicated-speed-fpm",
-
-            FrameRate                 : "sim/frame-rate",
-            frame_rate_worst          : "sim/frame-rate-worst",
+            vFps:                 "systems/computers/adc_switch/vertical_speed_fps_output", # Multiply by 60 for fpm
+            FrameRate :           "sim/frame-rate",
+            frame_rate_worst:     "sim/frame-rate-worst",
             alt_true_ft:          "position/altitude-ft",
             radarStandby:         "instrumentation/radar/radar-standby",
             rad_alt:              "instrumentation/radar-altimeter/radar-altitude-ft",
@@ -45,25 +50,31 @@ var SubSystem_Main = {
             rmBearing:            "autopilot/route-manager/wp/true-bearing-deg",
             RMCurrWaypoint:       "autopilot/route-manager/current-wp",
             headTrue:             "orientation/heading-deg",
-            #rollTrue:             "orientation/roll-deg",
-            #pitchTrue:            "orientation/pitch-deg",
-            nav0InRange:          "instrumentation/nav[0]/in-range",
             APLockHeading:        "autopilot/locks/heading",
             APTrueHeadingErr:     "autopilot/internal/true-heading-error-deg",
             APnav0HeadingErr:     "autopilot/internal/nav1-heading-error-deg",
             RMActive:             "autopilot/route-manager/active",
-            nav0Heading:          "instrumentation/nav[0]/heading-deg",
-            tas:                  "instrumentation/airspeed-indicator/true-speed-kt",
+            tas:                  "systems/computers/adc_switch/true_airspeed_knts_output",
             gearsPos:             "gear/gear/position-norm",
             latitude:             "position/latitude-deg",
             longitude:            "position/longitude-deg",
             tacanCh:              "instrumentation/tacan/display/channel",
             ilsCh:                "instrumentation/nav[0]/frequencies/selected-mhz",
-            servStatic:				 "systems/static/serviceable",
-            servPitot:				 "systems/pitot/serviceable",
-            servAtt                   : "instrumentation/attitude-indicator/serviceable",
-            servHead                  : "instrumentation/heading-indicator/serviceable",
-            servTurn                  : "instrumentation/turn-indicator/serviceable",
+            servStatic:           "systems/static/serviceable",
+            servPitot:            "systems/pitot/serviceable",
+            servAtt:              "instrumentation/attitude-indicator/serviceable",
+            servHead:             "instrumentation/heading-indicator/serviceable",
+            servTurn:             "instrumentation/turn-indicator/serviceable",
+            nav0InRange:          "instrumentation/nav[0]/in-range",
+            nav0Heading:          "instrumentation/nav[0]/heading-deg",
+            nav0HdgDeflectionN:   "instrumentation/nav[0]/heading-needle-deflection-norm",
+            gs0NeedleDeflectN:    "instrumentation/nav[0]/gs-needle-deflection-norm",
+            nav0HasGS:            "instrumentation/nav[0]/has-gs",
+            nav0GSInRange:        "instrumentation/nav[0]/gs-in-range",
+            nav0HasLoc:           "instrumentation/nav[0]/nav-loc",
+            nav0SignalQuality:    "instrumentation/nav[0]/signal-quality-norm",
+            nav0FreqT:            "instrumentation/nav[0]/selected-mhz-fmt",
+            nav0Freq:             "instrumentation/nav[0]/selected-mhz",
         };
 
         foreach (var name; keys(input)) {
@@ -114,9 +125,8 @@ setprop("autopilot/settings/vertical-speed-fpm", 0);
 setprop("instrumentation/teravd/alt-reached", 1);
 setprop("instrumentation/teravd/ridge-clear", 0);
 setprop("autopilot/settings/target-pitch-deg", 2);
-setprop("controls/electric/battery-switch", 0);
+setprop("controls/electrical/switches/battery", 0);
 setprop("controls/switches/terra-report", 0);
-setprop("controls/switches/fltdir", 0.25);
 setprop("controls/switches/radar-range", 0.25);
 setprop("controls/switches/terrain-avoid-clrpln", 0);
 setprop("controls/switches/terrain-avoid-rng", 0);
@@ -319,36 +329,36 @@ setlistener("controls/engines/engine[0]/throttle-lever", func(n) {
   var lever_eng0 = n.getValue();
   var enabled = getprop("controls/switches/engines/afterburner[0]");
   if ((lever_eng0 >= 0.98) and (enabled)) {
-    setprop("controls/engines/engine[0]/afterburner", 1);
+    setprop("controls/engines/engine[0]/augmentation", 1);
   } else {
-    setprop("controls/engines/engine[0]/afterburner", 0);
+    setprop("controls/engines/engine[0]/augmentation", 0);
     }
 });
 setlistener("controls/engines/engine[1]/throttle-lever", func(n) {
   var lever_eng1 = n.getValue();
   var enabled = getprop("controls/switches/engines/afterburner[1]");
   if ((lever_eng1 >= 0.98) and (enabled)) {
-    setprop("controls/engines/engine[1]/afterburner", 1);
+    setprop("controls/engines/engine[1]/augmentation", 1);
   } else {
-    setprop("controls/engines/engine[1]/afterburner", 0);
+    setprop("controls/engines/engine[1]/augmentation", 0);
     }
 });
 setlistener("controls/engines/engine[2]/throttle-lever", func(n) {
   var lever_eng2 = n.getValue();
   var enabled = getprop("controls/switches/engines/afterburner[2]");
   if ((lever_eng2 >= 0.98) and (enabled)) {
-    setprop("controls/engines/engine[2]/afterburner", 1);
+    setprop("controls/engines/engine[2]/augmentation", 1);
   } else {
-    setprop("controls/engines/engine[2]/afterburner", 0);
+    setprop("controls/engines/engine[2]/augmentation", 0);
     }
 });
 setlistener("controls/engines/engine[3]/throttle-lever", func(n) {
   var lever_eng3 = n.getValue();
   var enabled = getprop("controls/switches/engines/afterburner[3]");
   if ((lever_eng3 >= 0.98) and (enabled)) {
-    setprop("controls/engines/engine[3]/afterburner", 1);
+    setprop("controls/engines/engine[3]/augmentation", 1);
   } else {
-    setprop("controls/engines/engine[3]/afterburner", 0);
+    setprop("controls/engines/engine[3]/augmentation", 0);
     }
 });
 
@@ -455,14 +465,32 @@ var rcs = getprop("controls/switches/terrain-avoid-clrpln");
 if(rcs == 0) {
 setprop("controls/switches/terrain-avoid-clr1000", 0);
 }
-if(rcs == 0.25) {
+if(rcs == 0.1) {
 setprop("controls/switches/terrain-avoid-clr1000", 100);
 }
-if(rcs == 0.5) {
+if(rcs == 0.2) {
+setprop("controls/switches/terrain-avoid-clr1000", 200);
+}
+if(rcs == 0.3) {
+setprop("controls/switches/terrain-avoid-clr1000", 250);
+}
+if(rcs == 0.4) {
 setprop("controls/switches/terrain-avoid-clr1000", 300);
 }
-if(rcs == 0.75) {
+if(rcs == 0.5) {
+setprop("controls/switches/terrain-avoid-clr1000", 400);
+}
+if(rcs == 0.6) {
 setprop("controls/switches/terrain-avoid-clr1000", 500);
+}
+if(rcs == 0.7) {
+setprop("controls/switches/terrain-avoid-clr1000", 600);
+}
+if(rcs == 0.8) {
+setprop("controls/switches/terrain-avoid-clr1000", 700);
+}
+if(rcs == 0.9) {
+setprop("controls/switches/terrain-avoid-clr1000", 800);
 }
 if(rcs == 1.0) {
 setprop("controls/switches/terrain-avoid-clr1000", 1000);
@@ -809,68 +837,56 @@ setlistener("controls/flight/wing-sweep", checkSweep);
 ###
 var checkapmode = func {
 
-var althold = getprop("controls/switches/apmode/alt-hold");
-var vfpmhold = getprop("controls/switches/apmode/vfpm-hold");
-var ptchhold = getprop("controls/switches/apmode/ptch-hold");
-var bhdghold = getprop("controls/switches/apmode/bhdg-hold");
-var thdghold = getprop("controls/switches/apmode/thdg-hold");
-var spdhold = getprop("controls/switches/apmode/spd-hold");
-var spdptchhold = getprop("controls/switches/apmode/spdptch-hold");
-var aglhold = getprop("controls/switches/terrain-follow");
+var engage = getprop("controls/switches/apmode/engage");
+var althold = getprop("controls/switches/apmode/alt");
+var flthold = getprop("controls/switches/apmode/flt_dir");
+var ashold = getprop("controls/switches/apmode/as");
+var throthold = getprop("controls/switches/apmode/auto_throt");
 
-if (althold == 1) {
+if ((engage == 1) and (althold == 0) and (flthold == 0) and (ashold == 0) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "pitch-hold");
+        setprop("autopilot/locks/heading", "wing-leveler");
+        setprop("autopilot/locks/speed", "");
+} elsif ((engage == 1) and (althold == 1) and (flthold == 0) and (ashold == 0) and (throthold == 0)) {
         setprop("autopilot/locks/altitude", "altitude-hold");
-} elsif (vfpmhold == 1) {
- setprop("autopilot/locks/altitude", "vertical-speed-hold");
-} elsif (ptchhold == 1) {
- setprop("autopilot/locks/altitude", "pitch-hold");
-} elsif ((ptchhold != 1) and (vfpmhold != 1) and (althold != 1) and (aglhold != 1)) {
- setprop("autopilot/locks/altitude", "");
-}
-if (bhdghold == 1) {
+        setprop("autopilot/locks/heading", "");
+        setprop("autopilot/locks/speed", "");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 1) and (ashold == 0) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "");
         setprop("autopilot/locks/heading", "dg-heading-hold");
-} elsif (thdghold == 1) {
- setprop("autopilot/locks/heading", "true-heading-hold");
-} elsif ((bhdghold != 1) and (thdghold != 1)) {
- setprop("autopilot/locks/heading", "");
-}
-if (spdhold == 1) {
+        setprop("autopilot/locks/speed", "");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 0) and (ashold == 1) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "");
+        setprop("autopilot/locks/heading", "wing-leveler");
+        setprop("autopilot/locks/speed", "speed-with-pitch-trim");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 0) and (ashold == 0) and (throthold == 1)) {
+        setprop("autopilot/locks/altitude", "pitch-hold");
+        setprop("autopilot/locks/heading", "wing-leveler");
         setprop("autopilot/locks/speed", "speed-with-throttle");
-} elsif (spdptchhold == 1) {
- setprop("autopilot/locks/speed", "speed-with-pitch-trim");
-} elsif ((spdhold != 1) and (spdptchhold != 1)) {
- setprop("autopilot/locks/speed", "");
-}
-
-}
-
-###
-# flight director modes selector
-###
-var fltdir = func {
-
-var fltd = getprop("controls/switches/fltdir");
-
-if (fltd == 0.00) {
-  setprop("instrumentation/adf/serviceable", "0");
-  setprop("instrumentation/nav/serviceable", "0");
-  setprop("instrumentation/tacan/serviceable", "0");
-} elsif (fltd == 0.25) {
-  setprop("instrumentation/adf/serviceable", "1");
-  setprop("instrumentation/nav/serviceable", "1");
-  setprop("instrumentation/tacan/serviceable", "1");
-} elsif (fltd == 0.50) {
-  setprop("instrumentation/adf/serviceable", "1");
-  setprop("instrumentation/nav/serviceable", "1");
-  setprop("instrumentation/tacan/serviceable", "0");
-} elsif (fltd == 0.75) {
-  setprop("instrumentation/adf/serviceable", "1");
-  setprop("instrumentation/nav/serviceable", "0");
-  setprop("instrumentation/tacan/serviceable", "0");
-} elsif (fltd == 1.00) {
-  setprop("instrumentation/adf/serviceable", "0");
-#  setprop("instrumentation/nav/serviceable", "0");
-  setprop("instrumentation/tacan/serviceable", "1");
+} elsif ((engage == 1) and (althold == 1) and (flthold == 1) and (ashold == 0) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "altitude-hold");
+        setprop("autopilot/locks/heading", "dg-heading-hold");
+        setprop("autopilot/locks/speed", "");
+} elsif ((engage == 1) and (althold == 1) and (flthold == 1) and (ashold == 0) and (throthold == 1)) {
+        setprop("autopilot/locks/altitude", "altitude-hold");
+        setprop("autopilot/locks/heading", "dg-heading-hold");
+        setprop("autopilot/locks/speed", "speed-with-throttle");
+} elsif ((engage == 1) and (althold == 1) and (flthold == 0) and (ashold == 0) and (throthold == 1)) {
+        setprop("autopilot/locks/altitude", "altitude-hold");
+        setprop("autopilot/locks/heading", "");
+        setprop("autopilot/locks/speed", "speed-with-throttle");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 1) and (ashold == 0) and (throthold == 1)) {
+        setprop("autopilot/locks/altitude", "");
+        setprop("autopilot/locks/heading", "dg-heading-hold");
+        setprop("autopilot/locks/speed", "speed-with-throttle");
+} elsif ((engage == 1) and (althold == 0) and (flthold == 1) and (ashold == 1) and (throthold == 0)) {
+        setprop("autopilot/locks/altitude", "");
+        setprop("autopilot/locks/heading", "dg-heading-hold");
+        setprop("autopilot/locks/speed", "speed-with-pitch-trim");
+} elsif (engage == 0) {
+        setprop("autopilot/locks/altitude", "");
+        setprop("autopilot/locks/heading", "");
+        setprop("autopilot/locks/speed", "");
 }
 
 }
@@ -1018,3 +1034,41 @@ var startDLListener = func {
     };
     emesary.GlobalTransmitter.Register(DLRecipient);
 }
+
+var sendABtoMP = func {
+    # Some of this is duplicated in F16.xml for effects over MP.
+
+    var red = getprop("rendering/scene/diffuse/red");
+
+    # non-tied property for effect:
+    setprop("rendering/scene/diffuse/red-unbound", red);
+
+    # afterburner density:
+    setprop("sim/multiplay/b1b/ab-density",  1-red*0.90);
+
+    # turbine emission:
+    setprop("sim/multiplay/generic/float[20]",  getprop("sim/multiplay/generic/bool[0]") ? (1.0-red)*(getprop("fdm/jsbsim/fcs/throttle-pos-norm")-1.0) : 0.0);
+    setprop("sim/multiplay/generic/float[21]",  getprop("sim/multiplay/generic/bool[1]") ? (1.0-red)*(getprop("fdm/jsbsim/fcs/throttle-pos-norm[1]")-1.0) : 0.0);
+    setprop("sim/multiplay/generic/float[22]",  getprop("sim/multiplay/generic/bool[2]") ? (1.0-red)*(getprop("fdm/jsbsim/fcs/throttle-pos-norm[2]")-1.0) : 0.0);
+    setprop("sim/multiplay/generic/float[23]",  getprop("sim/multiplay/generic/bool[3]") ? (1.0-red)*(getprop("fdm/jsbsim/fcs/throttle-pos-norm[3]")-1.0) : 0.0);
+
+    # color of afterburner:
+    # *0.5 is to prevent it from getting too white during night
+    setprop("sim/multiplay/b1b/ab-r",  0.75+(0.25-red*0.25)*0.5);#red
+    setprop("sim/multiplay/b1b/ab-g",  0.25+(0.75-red*0.75)*0.5);#green
+    setprop("sim/multiplay/b1b/ab-b",  0.2+(0.4-red*0.4)*0.5);   #blue
+
+    # scene red inverted:
+    setprop("sim/multiplay/generic/float[14]",  (1-red)*0.5);
+}
+var ab_loop = maketimer(0.5, sendABtoMP);
+ab_loop.start();
+
+var sendThrottletoMP = func {
+    setprop("sim/multiplay/generic/float[16]", getprop("controls/engines/engine[0]/throttle"));
+    setprop("sim/multiplay/generic/float[17]", getprop("controls/engines/engine[1]/throttle"));
+    setprop("sim/multiplay/generic/float[18]", getprop("controls/engines/engine[2]/throttle"));
+    setprop("sim/multiplay/generic/float[19]", getprop("controls/engines/engine[3]/throttle"));
+}
+var throttle_loop = maketimer(0.1, sendThrottletoMP);
+throttle_loop.start();

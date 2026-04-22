@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <transponder>
+      <name type="string">transponder</name>
+      <number type="int">0</number>
+      <mode type="int">2</mode>
+      <!-- 0 = Mode A, 1 = Mode C, 2 = Mode S -->
+      <bus-volts type="double">8.0</bus-volts>
+      <encoder-path type="string">/systems/computers/Output-baro-altitude</encoder-path>
+      <kt70-compatibility type="bool">0</kt70-compatibility>
+  </transponder>
+
+  <altimeter>
+      <name>altimeter</name>
+      <number>0</number>
+      <static-pressure>/systems/static/pressure-inhg</static-pressure>
+      <quantum>0</quantum>
+      <tau>0</tau>
+  </altimeter>
+
+  <tacan>
+    <name>tacan</name>
+    <number>0</number>
+  </tacan>
+
+  <nav-radio>
+    <name>nav</name>
+    <number>0</number>
+  </nav-radio>
+
+  <nav-radio>
+    <name>nav</name>
+    <number>1</number>
+  </nav-radio>
+
+  <dme>
+    <name>dme</name>
+    <number>0</number>
+  </dme>
+
+  <adf>
+    <name>adf</name>
+    <number>0</number>
+  </adf>
+
+  <radar-altimeter>
+      <name>radar-altimeter</name>
+      <number>0</number>
+      <update-interval-sec>0.1</update-interval-sec>
+  </radar-altimeter>
+
+</PropertyList>
