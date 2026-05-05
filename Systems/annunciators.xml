@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?> 
+
 <PropertyList> 
+
+    <logic>
+      <input> 
+    	<or> 
+    	<equals> 
+      	<property>sim/multiplay/generic/float[5]</property> 
+      	<value>1</value> 
+     	</equals> 
+     	<and>
+    	<equals> 
+      	<property>controls/gear/gear-down</property>
+      	<value>1</value> 
+     	</equals>
+   	 <greater-than> 
+     	<property>systems/electrical/bus/ac-3/voltage</property> 
+      	<value>220</value> 
+    	 </greater-than> 
+     	</and>
+     	</or>                 
+     </input>
+     <output>instrumentation/annunciators/nws</output>
+    </logic>
+
+    <logic>
+      <input> 
+    	<and>
+    	<equals> 
+     	<property>/systems/refuel/contact</property> 
+      	<value>1</value> 
+     	</equals> 
+   	 <greater-than> 
+     	<property>systems/electrical/bus/ac-3/voltage</property> 
+      	<value>220</value> 
+    	 </greater-than> 
+    	 </and>                
+     	</input>
+     <output>instrumentation/annunciators/latched</output>
+    </logic>
+ 
+    <logic>
+      <input> 
+    	<and>
+    	<equals> 
+     	<property>/systems/refuel/contact</property> 
+      	<value>0</value> 
+     	</equals>
+   	 <equals> 
+      	<property>sim/multiplay/generic/float[5]</property>  
+      	<value>1</value> 
+     	</equals>
+    	<greater-than> 
+     	<property>systems/electrical/bus/ac-3/voltage</property> 
+      	<value>220</value> 
+     	</greater-than>
+    	</and>               
+     	</input>
+     <output>instrumentation/annunciators/disc</output>
+    </logic>
 
     <logic>
       <input> 
@@ -61,10 +120,26 @@
 
     <logic>
      <input>
-      <less-than>           
-	  <property>systems/computers/PFDB1-baro-altitude</property>
-	  <property>controls/switches/terrain-avoid-clr1000</property>
-      </less-than>              
+        <and>
+         <greater-than>
+          <property>instrumentation/radar-altimeter/target</property>
+          <property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
+         </greater-than>
+         <greater-than>
+          <property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
+           <value>0</value>
+         </greater-than>
+                <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ess/voltage</property>
+          	 <value>220</value>
+         	</greater-than>
+           </or>
+        </and>     
       </input>
       <output>instrumentation/annunciators/mindechgt</output>
  </logic> 
@@ -85,6 +160,66 @@
       <output>instrumentation/annunciators/stall</output>
  </logic>
 
+    <logic>
+     <input> 
+	<and>
+         <equals>
+	  <property>instrumentation/nav/gs-in-range</property>
+	  <value>1.0</value> 
+         </equals>
+         <greater-than>       
+	  <property>instrumentation/nav/gs-needle-deflection</property>
+	  <value>-0.9</value> 
+         </greater-than>               
+          <less-than>      
+	  <property>instrumentation/nav/gs-needle-deflection</property>
+	  <value>0.9</value>
+         </less-than>
+            <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ess/voltage</property>
+          	 <value>220</value>
+         	</greater-than>
+           </or>  
+	</and>
+      </input> 
+      <output>instrumentation/annunciators/glideslope</output>
+ </logic>
+
+     <logic>
+     <input> 
+      <and>    
+         <greater-than>       
+	  <property>instrumentation/nav/heading-needle-deflection</property>
+	  <value>-1.0</value> 
+         </greater-than>               
+          <less-than>      
+	  <property>instrumentation/nav/heading-needle-deflection</property>
+	  <value>1.0</value>
+         </less-than>
+         <equals>
+	  <property>gear/gear[4]/wow</property>
+	  <value>0.0</value> 
+         </equals>
+                  <or>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ac-3/voltage</property>
+          	 <value>220</value>
+         	</greater-than>
+         	<greater-than> 
+          	 <property>systems/electrical/bus/ess/voltage</property>
+          	 <value>220</value>
+         	</greater-than>
+           </or>   
+       </and>
+      </input>
+      <output>instrumentation/annunciators/loc</output>
+ </logic>
+
 <!-- SOUND EFFECTS -->
 
     <logic>
@@ -95,23 +230,27 @@
 	 <value>1</value> 
         </equals>
         <equals>       
-	 <property>/systems/extinguishers/engine[0]/light</property>
+	 <property>systems/extinguishers/lights/engine[0]/on</property>
 	 <value>1</value> 
         </equals>
         <equals>       
-	 <property>/systems/extinguishers/engine[1]/light</property>
+	 <property>systems/extinguishers/lights/engine[1]/on</property>
 	 <value>1</value> 
         </equals>
         <equals>       
-	 <property>/systems/extinguishers/engine[2]/light</property>
+	 <property>systems/extinguishers/lights/engine[2]/on</property>
 	 <value>1</value> 
         </equals>
         <equals>       
-	 <property>/systems/extinguishers/engine[3]/light</property>
+	 <property>systems/extinguishers/lights/engine[3]/on</property>
 	 <value>1</value> 
         </equals>
         <equals>       
-         <property>instrumentation/annunciators/stall</property>
+	 <property>systems/extinguishers/lights/l_apu/on</property>
+	 <value>1</value> 
+        </equals>
+        <equals>       
+	 <property>systems/extinguishers/lights/r_apu/on</property>
 	 <value>1</value> 
         </equals>
         <equals>       
@@ -147,5 +286,4 @@
      <output>sound/eject</output>
     </logic>
     
-
 </PropertyList> 

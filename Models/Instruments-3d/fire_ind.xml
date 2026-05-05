@@ -8,553 +8,281 @@ sweat by maggse
 
  			   <!-- fire test switch -->
 
- <animation>
-	 <type>translate</type>
-	 <object-name>switch_firetest</object-name>
-	 <property>controls/switches/fire</property>
-		<factor>0.002</factor>
-		<axis>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>
-	 <center>
-		 <x-m>-0.02538</x-m>
-		 <y-m>-0.28511</y-m>
-		 <z-m> 0.07045</z-m>
-	 </center>
- </animation>
- <animation>
-	 <type>material</type>
-	 <object-name>switch_firetest</object-name>
-     <object-name>switch_ANN</object-name>
-     <object-name>FIRE_WARN</object-name>
-     <object-name>switch_lagent</object-name>
-     <object-name>switch_ragent</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
+
+<animation> 
+ <type>slider</type> 
+  <object-name>switch_firetest</object-name>
+  <property>controls/switches/extinguishers/fire_test</property>
+    <factor>0.002</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/extinguishers/fire_test</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/extinguishers/fire_test</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
+
 </animation>
-
- <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
- <animation>
-	 <type>pick</type>
-	 <object-name>switch_firetest</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/switches/fire</property>
-		 </binding>
-	 </action>
-</animation>
-
 
 				<!-- fire ind -->
 
 <!-- ENG_1 -->
 
- <animation>
-	 <type>translate</type>
-	 <object-name>ENG_1</object-name>
-	 <property>controls/switches/engine_1_fire-bottle-discharge</property>
-		<factor>0.002</factor>
-		<axis>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>
-	 <center>
-		 <x-m>-0.0301</x-m>
-		 <y-m>-0.3807</y-m>
-		 <z-m> 0.077</z-m>
-	 </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>ENG_1</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-assign</command>
-			 <property>controls/switches/engine_1_fire-bottle-discharge</property>
-                         <value>1</value>
-		 </binding>
-		 <binding>
-			 <command>property-assign</command>
-			 <property>controls/engines/engine[0]/cutoff</property>
-                         <value>1</value>
-		 </binding>
-	 </action>
+<animation> 
+ <type>slider</type> 
+  <object-name>ENG_1</object-name>
+  <property>controls/switches/extinguishers/engine_1_fire-bottle-discharge</property>
+    <factor>0.002</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/extinguishers/engine_1_fire-bottle-discharge</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/extinguishers/engine_1_fire-bottle-discharge</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
 </animation>
 
  <animation>
 	 <type>select</type>
-	 <object-name>rep_fire1</object-name>
+	 <object-name>eng_fire_light1</object-name>
 	 <condition>
-		 <or>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>systems/extinguishers/lights/engine[0]/on</property>
 			 <value>1.0</value>
 		 </equals>
-		 <equals>
-			 <property>/systems/extinguishers/engine[0]/light</property>
-			 <value>1</value>
-		 </equals>
-	         </or>
 	 </condition>
  </animation>
-
- <animation>
-	 <type>translate</type>
-	 <object-name>rep_fire1</object-name>
-	 <property>controls/switches/engine_1_fire-bottle-discharge</property>
-		<factor>0.002</factor>
-		<axis>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>
-	 <center>
-		 <x-m>-0.0289</x-m>
-		 <y-m>-0.379</y-m>
-		 <z-m> 0.076</z-m>
-	 </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>rep_fire1</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-	 </action>
-</animation>
-
- <animation>
+<animation>
 	 <type>material</type>
-	 <object-name>rep_fire1</object-name>
+	 <object-name>eng_fire_light1</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/switches/brightness_switch</factor-prop>
+		 <factor-prop>controls/switches/extinguishers/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
 <!-- ENG_2 -->
 
- <animation>
-	 <type>translate</type>
-	 <object-name>ENG_2</object-name>
-	 <property>controls/switches/engine_2_fire-bottle-discharge</property>
-		<factor>0.002</factor>
-		<axis>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>
-	 <center>
-		 <x-m>-0.0301</x-m>
-		 <y-m>-0.325</y-m>
-		 <z-m> 0.076</z-m>
-	 </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>ENG_2</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-assign</command>
-			 <property>controls/switches/engine_2_fire-bottle-discharge</property>
-                         <value>1</value>
-		 </binding>
-		 <binding>
-			 <command>property-assign</command>
-			 <property>controls/engines/engine[1]/cutoff</property>
-                         <value>1</value>
-		 </binding>
-	 </action>
+<animation> 
+ <type>slider</type> 
+  <object-name>ENG_2</object-name>
+  <property>controls/switches/extinguishers/engine_2_fire-bottle-discharge</property>
+    <factor>0.002</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/extinguishers/engine_2_fire-bottle-discharge</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/extinguishers/engine_2_fire-bottle-discharge</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
 </animation>
 
  <animation>
 	 <type>select</type>
-	 <object-name>rep_fire2</object-name>
+	 <object-name>eng_fire_light2</object-name>
 	 <condition>
-		 <or>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>systems/extinguishers/lights/engine[1]/on</property>
 			 <value>1.0</value>
 		 </equals>
-		 <equals>
-			 <property>/systems/extinguishers/engine[1]/light</property>
-			 <value>1</value>
-		 </equals>
-	         </or>
 	 </condition>
  </animation>
-
- <animation>
-	 <type>translate</type>
-	 <object-name>rep_fire2</object-name>
-	 <property>controls/switches/engine_2_fire-bottle-discharge</property>
-		<factor>0.002</factor>
-		<axis>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>
-	 <center>
-		 <x-m>-0.0284</x-m>
-		 <y-m>-0.325</y-m>
-		 <z-m> 0.076</z-m>
-	 </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>rep_fire2</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-	 </action>
-</animation>
-
- <animation>
+<animation>
 	 <type>material</type>
-	 <object-name>rep_fire2</object-name>
+	 <object-name>eng_fire_light2</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/switches/brightness_switch</factor-prop>
+		 <factor-prop>controls/switches/extinguishers/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
 <!-- ENG_3 -->
 
- <animation>
-	 <type>translate</type>
-	 <object-name>ENG_3</object-name>
-	 <property>controls/switches/engine_3_fire-bottle-discharge</property>
-		<factor>0.002</factor>
-		<axis>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>
-	 <center>
-		 <x-m>-0.0301</x-m>
-		 <y-m>-0.2468</y-m>
-		 <z-m> 0.076</z-m>
-	 </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>ENG_3</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-assign</command>
-			 <property>controls/switches/engine_3_fire-bottle-discharge</property>
-                         <value>1</value>
-		 </binding>
-		 <binding>
-			 <command>property-assign</command>
-			 <property>controls/engines/engine[2]/cutoff</property>
-                         <value>1</value>
-		 </binding>
-	 </action>
+<animation> 
+ <type>slider</type> 
+  <object-name>ENG_3</object-name>
+  <property>controls/switches/extinguishers/engine_3_fire-bottle-discharge</property>
+    <factor>0.002</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/extinguishers/engine_3_fire-bottle-discharge</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/extinguishers/engine_3_fire-bottle-discharge</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
 </animation>
 
  <animation>
 	 <type>select</type>
-	 <object-name>rep_fire3</object-name>
+	 <object-name>eng_fire_light3</object-name>
 	 <condition>
-		 <or>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>systems/extinguishers/lights/engine[2]/on</property>
 			 <value>1.0</value>
 		 </equals>
-		 <equals>
-			 <property>/systems/extinguishers/engine[2]/light</property>
-			 <value>1</value>
-		 </equals>
-	         </or>
 	 </condition>
  </animation>
-
- <animation>
-	 <type>translate</type>
-	 <object-name>rep_fire3</object-name>
-	 <property>controls/switches/engine_3_fire-bottle-discharge</property>
-		<factor>0.002</factor>
-		<axis>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>
-	 <center>
-		 <x-m>-0.0286</x-m>
-		 <y-m>-0.246</y-m>
-		 <z-m> 0.076</z-m>
-	 </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>rep_fire3</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-	 </action>
-</animation>
-
- <animation>
+<animation>
 	 <type>material</type>
-	 <object-name>rep_fire3</object-name>
+	 <object-name>eng_fire_light3</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/switches/brightness_switch</factor-prop>
+		 <factor-prop>controls/switches/extinguishers/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
 <!-- ENG_4 -->
 
- <animation>
-	 <type>translate</type>
-	 <object-name>ENG_4</object-name>
-	 <property>controls/switches/engine_4_fire-bottle-discharge</property>
-		<factor>0.002</factor>
-		<axis>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>
-	 <center>
-		 <x-m>-0.0289</x-m>
-		 <y-m>-0.1992</y-m>
-		 <z-m> 0.076</z-m>
-	 </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>ENG_4</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-assign</command>
-			 <property>controls/switches/engine_4_fire-bottle-discharge</property>
-                         <value>1</value>
-		 </binding>
-		 <binding>
-			 <command>property-assign</command>
-			 <property>controls/engines/engine[3]/cutoff</property>
-                         <value>1</value>
-		 </binding>
-	 </action>
+<animation> 
+ <type>slider</type> 
+  <object-name>ENG_4</object-name>
+  <property>controls/switches/extinguishers/engine_4_fire-bottle-discharge</property>
+    <factor>0.002</factor> 
+ 	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis> 
+	<action>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/extinguishers/engine_4_fire-bottle-discharge</property> 
+			<value>1</value>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/extinguishers/engine_4_fire-bottle-discharge</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
 </animation>
 
- <animation>
+<animation>
 	 <type>select</type>
-	 <object-name>rep_fire4</object-name>
+	 <object-name>eng_fire_light4</object-name>
 	 <condition>
-		 <or>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>systems/extinguishers/lights/engine[3]/on</property>
 			 <value>1.0</value>
 		 </equals>
-		 <equals>
-			 <property>/systems/extinguishers/engine[3]/light</property>
-			 <value>1</value>
-		 </equals>
-	         </or>
 	 </condition>
  </animation>
-
- <animation>
-	 <type>translate</type>
-	 <object-name>rep_fire4</object-name>
-	 <property>controls/switches/engine_4_fire-bottle-discharge</property>
-		<factor>0.002</factor>
-		<axis>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-		</axis>
-	 <center>
-		 <x-m>-0.0289</x-m>
-		 <y-m>-0.379</y-m>
-		 <z-m> 0.076</z-m>
-	 </center>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>rep_fire4</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-	 </action>
-</animation>
-
- <animation>
+<animation>
 	 <type>material</type>
-	 <object-name>rep_fire4</object-name>
+	 <object-name>eng_fire_light4</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/switches/brightness_switch</factor-prop>
+		 <factor-prop>controls/switches/extinguishers/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
- <animation>
+<animation>
 	 <type>select</type>
-	 <object-name>rep_fire5</object-name>
+	 <object-name>eng_fire_light_lapu</object-name>
 	 <condition>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>systems/extinguishers/lights/l_apu/on</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
  </animation>
- <animation>
+<animation>
 	 <type>material</type>
-	 <object-name>rep_fire5</object-name>
+	 <object-name>eng_fire_light_lapu</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/switches/brightness_switch</factor-prop>
+		 <factor-prop>controls/switches/extinguishers/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
-
- <animation>
+<animation>
 	 <type>select</type>
-	 <object-name>rep_fire6</object-name>
+	 <object-name>eng_fire_light_rapu</object-name>
 	 <condition>
 		 <equals>
-			 <property>controls/switches/fire</property>
+			 <property>systems/extinguishers/lights/r_apu/on</property>
 			 <value>1.0</value>
 		 </equals>
 	 </condition>
  </animation>
- <animation>
+<animation>
 	 <type>material</type>
-	 <object-name>rep_fire6</object-name>
+	 <object-name>eng_fire_light_rapu</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/switches/brightness_switch</factor-prop>
-	 </emission>
-</animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_firelapu</object-name>
-	 <condition>
-		 <or>
-		 <equals>
-			 <property>controls/switches/fire</property>
-			 <value>1.0</value>
-		 </equals>
-		 <equals>
-			 <property>controls/APU/APUL-fire</property>
-			 <value type="double">1.0</value>
-		 </equals>
-	         </or>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>rep_firelapu</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-	 </action>
-</animation>
-
- <animation>
-	 <type>material</type>
-	 <object-name>rep_firelapu</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/switches/brightness_switch</factor-prop>
-	 </emission>
-</animation>
-
- <animation>
-	 <type>select</type>
-	 <object-name>rep_firerapu</object-name>
-	 <condition>
-		 <or>
-		 <equals>
-			 <property>controls/switches/fire</property>
-			 <value>1.0</value>
-		 </equals>
-
-		 <equals>
-			 <property>controls/APU/APUR-fire</property>
-			 <value type="double">1.0</value>
-		 </equals>
-	         </or>
-	 </condition>
- </animation>
-
- <animation>
-	 <type>pick</type>
-	 <object-name>rep_firerapu</object-name>
-	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.5</interval-sec>
-		 <binding>
-			 <command>property-toggle</command>
-			 <property>controls/APU/APUR-fire-bottle-discharge</property>
-		 </binding>
-	 </action>
-</animation>
-
- <animation>
-	 <type>material</type>
-	 <object-name>rep_firerapu</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/switches/brightness_switch</factor-prop>
+		 <factor-prop>controls/switches/extinguishers/brightness_switch</factor-prop>
 	 </emission>
 </animation>
 
@@ -565,7 +293,7 @@ sweat by maggse
 	<animation>
 		<type>knob</type>
 	 <object-name>switch_lagent</object-name>
-	<property>controls/switches/l_agent_switch</property>
+	<property>controls/switches/extinguishers/l_agent_switch</property>
         <factor>-30</factor>
 		<axis>
 			<x> 0 </x>
@@ -580,7 +308,7 @@ sweat by maggse
 	 <action>
 		 <binding>
 			 <command>property-adjust</command>
-	                 <property>controls/switches/l_agent_switch</property>
+	                 <property>controls/switches/extinguishers/l_agent_switch</property>
                          <factor>1</factor>
 			 <min>-1</min>
 			 <max>1</max>
@@ -593,7 +321,7 @@ sweat by maggse
 	<animation>
 		<type>knob</type>
 	 <object-name>switch_ragent</object-name>
-	<property>controls/switches/r_agent_switch</property>
+	<property>controls/switches/extinguishers/r_agent_switch</property>
         <factor>-30</factor>
 		<axis>
 			<x> 0 </x>
@@ -608,7 +336,7 @@ sweat by maggse
 	 <action>
 		 <binding>
 			 <command>property-adjust</command>
-	                 <property>controls/switches/r_agent_switch</property>
+	                 <property>controls/switches/extinguishers/r_agent_switch</property>
                          <factor>1</factor>
 			 <min>-1</min>
 			 <max>1</max>
@@ -621,7 +349,7 @@ sweat by maggse
 	<animation>
 		<type>knob</type>
 	 <object-name>switch_ANN</object-name>
-	<property>controls/switches/brightness_switch</property>
+	<property>controls/switches/extinguishers/brightness_switch</property>
         <factor>30</factor>
 		<axis>
 			<x> 0 </x>
@@ -636,37 +364,12 @@ sweat by maggse
 	 <action>
 		 <binding>
 			 <command>property-adjust</command>
-	                 <property>controls/switches/brightness_switch</property>
+	                 <property>controls/switches/extinguishers/brightness_switch</property>
 			 <min>0.3</min>
 			 <max>1</max>
 		 </binding>
 	 </action>
 </animation>
-
-<!-- Label Text -->
-
-<text>
-	<name>LabelText</name>
-	<type type="string">literal</type>
-		<text type="string">FIRE_WARN</text>
-	<draw-text type="bool">true</draw-text>
-	<font>Helvetica.txf</font>
-		<character-size type="double">0.012</character-size>
-		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
-	<axis-alignment>yz-plane</axis-alignment>
-	<max-height>0.2</max-height>
-	<max-width>0.07</max-width>
-	<font-resolution>
-		<width type="int">32</width>
-		<height type="int">32</height>
-	</font-resolution>
-	<alignment>center-center</alignment>
-	<offsets>
-		<x-m> 0.20</x-m>
-		<y-m>-0.45</y-m>
-		<z-m> 0.14</z-m>
-	</offsets>
-</text>
 
 <animation>
 	<type>material</type>

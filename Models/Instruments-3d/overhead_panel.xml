@@ -1236,7 +1236,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                     <or>
@@ -1245,7 +1245,7 @@ maggse
 				<value>1</value>
 			 </equals>
 			 <equals>
-				<property>systems/failures/extinguishers/engine[0]/loop-a</property>
+				<property>systems/failures/extinguishers/detectors/engine[0]/loop-a</property>
 				<value>1</value>
 			 </equals>
                         </or>
@@ -1259,7 +1259,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1268,7 +1268,7 @@ maggse
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>systems/failures/extinguishers/engine[0]/loop-b</property>
+				<property>systems/failures/extinguishers/detectors/engine[0]/loop-b</property>
 				<value>1</value>
 			</equals>
                   </or>
@@ -1282,7 +1282,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1291,7 +1291,7 @@ maggse
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>systems/failures/extinguishers/engine[1]/loop-a</property>
+				<property>systems/failures/extinguishers/detectors/engine[1]/loop-a</property>
 				<value>1</value>
 			</equals>
                   </or>
@@ -1305,7 +1305,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1314,7 +1314,7 @@ maggse
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>systems/failures/extinguishers/engine[1]/loop-b</property>
+				<property>systems/failures/extinguishers/detectors/engine[1]/loop-b</property>
 				<value>1</value>
 			</equals>
                   </or>
@@ -1328,7 +1328,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1337,7 +1337,7 @@ maggse
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>systems/failures/extinguishers/engine[2]/loop-a</property>
+				<property>systems/failures/extinguishers/detectors/engine[2]/loop-a</property>
 				<value>1</value>
 			</equals>
                   </or>
@@ -1351,7 +1351,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1360,7 +1360,7 @@ maggse
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>systems/failures/extinguishers/engine[2]/loop-b</property>
+				<property>systems/failures/extinguishers/detectors/engine[2]/loop-b</property>
 				<value>1</value>
 			</equals>
                   </or>
@@ -1374,7 +1374,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1383,7 +1383,7 @@ maggse
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>systems/failures/extinguishers/engine[3]/loop-a</property>
+				<property>systems/failures/extinguishers/detectors/engine[3]/loop-a</property>
 				<value>1</value>
 			</equals>
                   </or>
@@ -1397,7 +1397,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1406,7 +1406,7 @@ maggse
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>systems/failures/extinguishers/engine[3]/loop-b</property>
+				<property>systems/failures/extinguishers/detectors/engine[3]/loop-b</property>
 				<value>1</value>
 			</equals>
                   </or>
@@ -1420,7 +1420,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1443,7 +1443,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1466,7 +1466,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1489,7 +1489,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
                   <or>
@@ -1512,7 +1512,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
 			<equals>
@@ -1529,7 +1529,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
 			<equals>
@@ -1546,7 +1546,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
 			<equals>
@@ -1563,7 +1563,7 @@ maggse
 		<condition>
                   <and> 
          		<greater-than> 
-          		 <property>systems/electrical/bus/ac-3</property>
+          		 <property>systems/electrical/bus/ac-3/voltage</property>
           		 <value>220</value>
          		</greater-than>
 			<equals>
@@ -1657,7 +1657,7 @@ maggse
 	<animation>
 		<type>knob</type>
 	 <object-name>fire_engine_1</object-name>
-	<property>controls/switches/fire_engine_1</property>
+	<property>controls/switches/extinguishers/engine_1_detector_switch</property>
         <factor>30</factor>
 	<axis>
 		<x>0.0</x>
@@ -1672,7 +1672,7 @@ maggse
 	 <action>
 		 <binding>
 			 <command>property-adjust</command>
-	                 <property>controls/switches/fire_engine_1</property>
+	                 <property>controls/switches/extinguishers/engine_1_detector_switch</property>
                          <factor>1</factor>
 			 <min>-1</min>
 			 <max>1</max>
@@ -1683,7 +1683,7 @@ maggse
 	<animation>
 		<type>knob</type>
 	 <object-name>fire_engine_2</object-name>
-	<property>controls/switches/fire_engine_2</property>
+	<property>controls/switches/extinguishers/engine_2_detector_switch</property>
         <factor>30</factor>
 	<axis>
 		<x>0.0</x>
@@ -1698,7 +1698,7 @@ maggse
 	 <action>
 		 <binding>
 			 <command>property-adjust</command>
-	                 <property>controls/switches/fire_engine_2</property>
+	                 <property>controls/switches/extinguishers/engine_2_detector_switch</property>
                          <factor>1</factor>
 			 <min>-1</min>
 			 <max>1</max>
@@ -1709,7 +1709,7 @@ maggse
 	<animation>
 		<type>knob</type>
 	 <object-name>fire_engine_3</object-name>
-	<property>controls/switches/fire_engine_3</property>
+	<property>controls/switches/extinguishers/engine_3_detector_switch</property>
         <factor>30</factor>
 	<axis>
 		<x>0.0</x>
@@ -1724,7 +1724,7 @@ maggse
 	 <action>
 		 <binding>
 			 <command>property-adjust</command>
-	                 <property>controls/switches/fire_engine_3</property>
+	                 <property>controls/switches/extinguishers/engine_3_detector_switch</property>
                          <factor>1</factor>
 			 <min>-1</min>
 			 <max>1</max>
@@ -1735,7 +1735,7 @@ maggse
 	<animation>
 		<type>knob</type>
 	 <object-name>fire_engine_4</object-name>
-	<property>controls/switches/fire_engine_4</property>
+	<property>controls/switches/extinguishers/engine_4_detector_switch</property>
         <factor>30</factor>
 	<axis>
 		<x>0.0</x>
@@ -1750,7 +1750,7 @@ maggse
 	 <action>
 		 <binding>
 			 <command>property-adjust</command>
-	                 <property>controls/switches/fire_engine_4</property>
+	                 <property>controls/switches/extinguishers/engine_4_detector_switch</property>
                          <factor>1</factor>
 			 <min>-1</min>
 			 <max>1</max>
