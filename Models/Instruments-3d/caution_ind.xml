@@ -168,16 +168,10 @@ sweat by maggse
 	<type>select</type>
 	<object-name>GLIDESLOPE</object-name> 
         <condition> 
-         <or> 
          <equals> 
-          <property>instrumentation/nav/gs-in-range</property>
+          <property>instrumentation/annunciators/glideslope</property>
           <value>1</value> 
          </equals>
-         <equals> 
-          <property>instrumentation/nav[1]/gs-in-range</property>
-          <value>1</value> 
-         </equals>
-         </or>
         </condition>
 </animation>
 <animation>
@@ -239,26 +233,10 @@ sweat by maggse
 	<type>select</type>
 	<object-name>MINDECNHGT</object-name> 
         <condition> 
-         <and>
-         <greater-than>
-          <property>instrumentation/radar-altimeter/target</property>
-          <property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
-         </greater-than>
-         <greater-than>
-          <property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
-           <value>0</value>
-         </greater-than>
-                <or>
-         	<greater-than> 
-          	 <property>systems/electrical/bus/ac-3/voltage</property>
-          	 <value>220</value>
-         	</greater-than>
-         	<greater-than> 
-          	 <property>systems/electrical/bus/ess/voltage</property>
-          	 <value>220</value>
-         	</greater-than>
-           </or>
-        </and>
+		 <equals>
+			 <property>instrumentation/annunciators/mindechgt</property>
+			 <value>1.0</value>
+		 </equals>
         </condition>
 </animation>
 
@@ -321,13 +299,9 @@ sweat by maggse
 	<object-name>LOC</object-name> 
         <condition>  
          <equals> 
-          <property>instrumentation/nav/nav-loc</property>
+          <property>instrumentation/annunciators/loc</property>
           <value>1</value> 
          </equals>  
-         <equals> 
-          <property>instrumentation/nav[1]/nav-loc</property>
-          <value>1</value> 
-         </equals>
         </condition>
 </animation>
  <animation>
