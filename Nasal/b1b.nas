@@ -1,5 +1,6 @@
 _setlistener("/sim/signals/fdm-initialized", func {
     rtExec_loop();
+    hack.init();
 	# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
   if (getprop("/sim/variant-id") == 5){
     var hmd = modules.Module.new("displays");
