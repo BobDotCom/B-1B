@@ -22,18 +22,10 @@ sweat by maggse
            	 <value>225</value>
            	</greater-than>
 	   <or>
-		 <not-equals>
-			 <property>systems/computers/gss[0]/heading/heading_error</property>
-			 <value>0</value>
-		 </not-equals>
-		 <not-equals>
-			 <property>systems/computers/gss[0]/pitch/pitch_error/error_value</property>
-			 <value>0</value>
-		 </not-equals>
-		 <not-equals>
-			 <property>systems/computers/gss[0]/roll/roll_error/error_value</property>
-			 <value>0</value>
-		 </not-equals>
+		 <less-than>
+			 <property>instrumentation/heading-indicator/spin</property>
+			 <value>0.9</value>
+		 </less-than>
 	   </or>
 	  </and>
 	 </condition>
@@ -53,18 +45,10 @@ sweat by maggse
            	 <value>225</value>
            	</greater-than>
 	   <or>
-		 <not-equals>
-			 <property>systems/computers/gss[1]/heading/heading_error</property>
-			 <value>0</value>
-		 </not-equals>
-		 <not-equals>
-			 <property>systems/computers/gss[1]/pitch/pitch_error/error_value</property>
-			 <value>0</value>
-		 </not-equals>
-		 <not-equals>
-			 <property>systems/computers/gss[1]/roll/roll_error/error_value</property>
-			 <value>0</value>
-		 </not-equals>
+		 <less-than>
+			 <property>instrumentation/heading-indicator[1]/spin</property>
+			 <value>0.9</value>
+		 </less-than>
 	   </or>
 	  </and>
 	 </condition>

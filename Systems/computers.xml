@@ -11,95 +11,30 @@
         <property value="0">/systems/failures/computers/hsi/miles_drums</property>
         <property value="0">/systems/failures/computers/altitude_radars/altitude_radar[0]</property>
         <property value="0">/systems/failures/computers/altitude_radars/altitude_radar[1]</property>
+        <property value="1">/systems/pitot[1]/serviceable</property>
+        <property value="1">/systems/static[1]/serviceable</property>
 
 <channel name="GSS 1" execrate="8">
 
-            <!-- Timer -->
-
-		<actuator name="/systems/computers/gss[0]/startup_timer">
-            		<input>/systems/computers/gss[0]/startup_timer_limits</input>
-            		<rate_limit sense="decr">1</rate_limit> 
-            		<rate_limit sense="incr">1</rate_limit> 
-       		</actuator>
-
-		<switch name="/systems/computers/gss[0]/startup_timer_limits">
-			<default value="0"/>			
-                	<test logic="AND" value="20">
-					/systems/electrical/bus/ess/voltage gt 225					
-			</test>
-		</switch>
-
             <!-- Heading -->
 
-		<switch name="/systems/computers/gss[0]/heading/heading_error/target">
-			<default value="/orientation/heading-deg"/>			
-                	<test logic="AND" value="0">
-					/systems/electrical/bus/ess/voltage gt 225
-			</test>
-		</switch>
-
-		<actuator name="/systems/computers/gss[0]/heading/heading_error">
-            		<input>/systems/computers/gss[0]/heading/heading_error/target</input>
-            		<rate_limit sense="decr">/systems/computers/gss[0]/heading/heading_error/degree_per_sec</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/gss[0]/heading/heading_error/degree_per_sec</rate_limit> 
+		<actuator name="/systems/computers/gss[0]/heading/output/output">
+            		<input>/instrumentation/heading-indicator/indicated-heading-deg</input>
+            		<rate_limit sense="decr">/systems/computers/gss[0]/heading/output/output_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/gss[0]/heading/output/output_rate</rate_limit> 
        		</actuator>
 
-
-		<fcs_function name="/systems/computers/gss[0]/heading/heading_error/degree_per_sec">
-			<function>
-				<quotient>
-					<property>/orientation/heading-deg</property>
-					<value>20</value>
-				</quotient>
-			</function>
-		</fcs_function> 
-
-		<fcs_function name="/systems/computers/gss[0]/heading/output">
-			<function>
-				<difference>
-					<property>/orientation/heading-deg</property>
-					<property>/systems/computers/gss[0]/heading/heading_error</property>
-				</difference>
-			</function>
-		</fcs_function> 
-
+		<switch name="/systems/computers/gss[0]/heading/output/output_rate">
+			<default value="100"/>			
+                	<test logic="AND" value="0">
+					/systems/failures/computers/gss[0]/heading_failure eq 1					
+			</test>
+		</switch>
+ 
             <!-- Pitch -->
 
-            <!-- Start up Error -->
-
-		<switch name="/systems/computers/gss[0]/pitch/pitch_error/error_value_switch">
-			<default value="60"/>			
-                	<test logic="AND" value="0">
-					/systems/electrical/bus/ess/voltage gt 225
-			</test>
-		</switch>
-
-		<actuator name="/systems/computers/gss[0]/pitch/pitch_error/error_value">
-            		<input>/systems/computers/gss[0]/pitch/pitch_error/error_value_switch</input>
-            		<rate_limit sense="decr">/systems/computers/gss[0]/pitch/pitch_error/error_value_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/gss[0]/pitch/pitch_error/error_value_rate</rate_limit> 
-       		</actuator>
-
-		<switch name="/systems/computers/gss[0]/pitch/pitch_error/error_value_rate">
-			<default value="3"/>			
-                	<test logic="AND" value="10">
-					/systems/computers/gss[0]/startup_timer eq 20
-			</test>
-		</switch>
-
-            <!-- Output -->
-
-		<fcs_function name="/systems/computers/gss[0]/pitch/output/output_error">
-			<function>
-				<difference>
-					<property>/orientation/pitch-deg</property>
-					<property>/systems/computers/gss[0]/pitch/pitch_error/error_value</property>
-				</difference>
-			</function>
-		</fcs_function>  
-
 		<actuator name="/systems/computers/gss[0]/pitch/output/output">
-            		<input>/systems/computers/gss[0]/pitch/output/output_error</input>
+            		<input>/instrumentation/attitude-indicator/indicated-pitch-deg</input>
             		<rate_limit sense="decr">/systems/computers/gss[0]/pitch/output/output_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/gss[0]/pitch/output/output_rate</rate_limit> 
        		</actuator>
@@ -111,49 +46,16 @@
 			</test>
 		</switch>
 
-            <!-- Roll -->
-
-            <!-- Start up Error -->
-
-		<switch name="/systems/computers/gss[0]/roll/roll_error/error_value_switch">
-			<default value="60"/>			
-                	<test logic="AND" value="0">
-					/systems/electrical/bus/ess/voltage gt 225
-			</test>
-		</switch>
-
-		<actuator name="/systems/computers/gss[0]/roll/roll_error/error_value">
-            		<input>/systems/computers/gss[0]/roll/roll_error/error_value_switch</input>
-            		<rate_limit sense="decr">/systems/computers/gss[0]/roll/roll_error/error_value_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/gss[0]/roll/roll_error/error_value_rate</rate_limit> 
-       		</actuator>
-
-		<switch name="/systems/computers/gss[0]/roll/roll_error/error_value_rate">
-			<default value="3"/>			
-                	<test logic="AND" value="10">
-					/systems/computers/gss[0]/startup_timer eq 20
-			</test>
-		</switch>
-
-            <!-- Output -->
-
-		<fcs_function name="/systems/computers/gss[0]/roll/output/output_error">
-			<function>
-				<difference>
-					<property>/orientation/roll-deg</property>
-					<property>/systems/computers/gss[0]/roll/roll_error/error_value</property>
-				</difference>
-			</function>
-		</fcs_function>  
+            <!-- Roll --> 
 
 		<actuator name="/systems/computers/gss[0]/roll/output/output">
-            		<input>/systems/computers/gss[0]/roll/output/output_error</input>
+            		<input>/instrumentation/attitude-indicator/indicated-roll-deg</input>
             		<rate_limit sense="decr">/systems/computers/gss[0]/roll/output/output_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/gss[0]/roll/output/output_rate</rate_limit> 
        		</actuator>
 
 		<switch name="/systems/computers/gss[0]/roll/output/output_rate">
-			<default value="20"/>			
+			<default value="100"/>			
                 	<test logic="AND" value="0">
 					/systems/failures/computers/gss[0]/roll_failure eq 1					
 			</test>
@@ -164,92 +66,25 @@
 
 <channel name="GSS 2" execrate="8">
 
-            <!-- Timer -->
-
-		<actuator name="/systems/computers/gss[1]/startup_timer">
-            		<input>/systems/computers/gss[1]/startup_timer_limits</input>
-            		<rate_limit sense="decr">1</rate_limit> 
-            		<rate_limit sense="incr">1</rate_limit> 
-       		</actuator>
-
-		<switch name="/systems/computers/gss[1]/startup_timer_limits">
-			<default value="0"/>			
-                	<test logic="AND" value="20">
-					/systems/electrical/bus/ess/voltage gt 225					
-			</test>
-		</switch>
-
             <!-- Heading -->
 
-		<switch name="/systems/computers/gss[1]/heading/heading_error/target">
-			<default value="/orientation/heading-deg"/>			
-                	<test logic="AND" value="0">
-					/systems/electrical/bus/ess/voltage gt 225
-			</test>
-		</switch>
-
-		<actuator name="/systems/computers/gss[1]/heading/heading_error">
-            		<input>/systems/computers/gss[1]/heading/heading_error/target</input>
-            		<rate_limit sense="decr">/systems/computers/gss[1]/heading/heading_error/degree_per_sec</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/gss[1]/heading/heading_error/degree_per_sec</rate_limit> 
+		<actuator name="/systems/computers/gss[1]/heading/output/output">
+            		<input>/instrumentation/heading-indicator/indicated-heading-deg</input>
+            		<rate_limit sense="decr">/systems/computers/gss[1]/heading/output/output_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/gss[1]/heading/output/output_rate</rate_limit> 
        		</actuator>
 
-
-		<fcs_function name="/systems/computers/gss[1]/heading/heading_error/degree_per_sec">
-			<function>
-				<quotient>
-					<property>/orientation/heading-deg</property>
-					<value>20</value>
-				</quotient>
-			</function>
-		</fcs_function> 
-
-		<fcs_function name="/systems/computers/gss[1]/heading/output">
-			<function>
-				<difference>
-					<property>/orientation/heading-deg</property>
-					<property>/systems/computers/gss[1]/heading/heading_error</property>
-				</difference>
-			</function>
-		</fcs_function> 
+		<switch name="/systems/computers/gss[1]/heading/output/output_rate">
+			<default value="100"/>			
+                	<test logic="AND" value="0">
+					/systems/failures/computers/gss[1]/heading_failure eq 1					
+			</test>
+		</switch> 
 
             <!-- Pitch -->
 
-            <!-- Start up Error -->
-
-		<switch name="/systems/computers/gss[1]/pitch/pitch_error/error_value_switch">
-			<default value="60"/>			
-                	<test logic="AND" value="0">
-					/systems/electrical/bus/ess/voltage gt 225
-			</test>
-		</switch>
-
-		<actuator name="/systems/computers/gss[1]/pitch/pitch_error/error_value">
-            		<input>/systems/computers/gss[1]/pitch/pitch_error/error_value_switch</input>
-            		<rate_limit sense="decr">/systems/computers/gss[1]/pitch/pitch_error/error_value_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/gss[1]/pitch/pitch_error/error_value_rate</rate_limit> 
-       		</actuator>
-
-		<switch name="/systems/computers/gss[1]/pitch/pitch_error/error_value_rate">
-			<default value="3"/>			
-                	<test logic="AND" value="10">
-					/systems/computers/gss[1]/startup_timer eq 20
-			</test>
-		</switch>
-
-            <!-- Output -->
-
-		<fcs_function name="/systems/computers/gss[1]/pitch/output/output_error">
-			<function>
-				<difference>
-					<property>/orientation/pitch-deg</property>
-					<property>/systems/computers/gss[1]/pitch/pitch_error/error_value</property>
-				</difference>
-			</function>
-		</fcs_function>  
-
 		<actuator name="/systems/computers/gss[1]/pitch/output/output">
-            		<input>/systems/computers/gss[1]/pitch/output/output_error</input>
+            		<input>/instrumentation/attitude-indicator/indicated-pitch-deg</input>
             		<rate_limit sense="decr">/systems/computers/gss[1]/pitch/output/output_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/gss[1]/pitch/output/output_rate</rate_limit> 
        		</actuator>
@@ -261,49 +96,16 @@
 			</test>
 		</switch>
 
-            <!-- Roll -->
-
-            <!-- Start up Error -->
-
-		<switch name="/systems/computers/gss[1]/roll/roll_error/error_value_switch">
-			<default value="60"/>			
-                	<test logic="AND" value="0">
-					/systems/electrical/bus/ess/voltage gt 225
-			</test>
-		</switch>
-
-		<actuator name="/systems/computers/gss[1]/roll/roll_error/error_value">
-            		<input>/systems/computers/gss[1]/roll/roll_error/error_value_switch</input>
-            		<rate_limit sense="decr">/systems/computers/gss[1]/roll/roll_error/error_value_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/gss[1]/roll/roll_error/error_value_rate</rate_limit> 
-       		</actuator>
-
-		<switch name="/systems/computers/gss[1]/roll/roll_error/error_value_rate">
-			<default value="3"/>			
-                	<test logic="AND" value="10">
-					/systems/computers/gss[1]/startup_timer eq 20
-			</test>
-		</switch>
-
-            <!-- Output -->
-
-		<fcs_function name="/systems/computers/gss[1]/roll/output/output_error">
-			<function>
-				<difference>
-					<property>/orientation/roll-deg</property>
-					<property>/systems/computers/gss[1]/roll/roll_error/error_value</property>
-				</difference>
-			</function>
-		</fcs_function>  
+            <!-- Roll --> 
 
 		<actuator name="/systems/computers/gss[1]/roll/output/output">
-            		<input>/systems/computers/gss[1]/roll/output/output_error</input>
+            		<input>/instrumentation/attitude-indicator/indicated-roll-deg</input>
             		<rate_limit sense="decr">/systems/computers/gss[1]/roll/output/output_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/gss[1]/roll/output/output_rate</rate_limit> 
        		</actuator>
 
 		<switch name="/systems/computers/gss[1]/roll/output/output_rate">
-			<default value="20"/>			
+			<default value="100"/>			
                 	<test logic="AND" value="0">
 					/systems/failures/computers/gss[1]/roll_failure eq 1					
 			</test>
@@ -314,8 +116,8 @@
 <channel name="GSS Switch" execrate="8">
 
 		<switch name="/systems/computers/gss_switch/heading_output">
-			<default value="/systems/computers/gss[0]/heading/output"/>			
-                	<test logic="AND" value="/systems/computers/gss[1]/heading/output">
+			<default value="/systems/computers/gss[0]/heading/output/output"/>			
+                	<test logic="AND" value="/systems/computers/gss[1]/heading/output/output">
 					/controls/switches/HDG-select-switch eq 1
 			</test>
 		</switch>
@@ -339,104 +141,10 @@
 
 <channel name="ADC1" execrate="8">
 
-		<switch name="/systems/computers/adc[0]/altitide/indicated-altitude-ft-rate">
-			<default value="0"/>			
-                	<test logic="AND" value="100">
-					/systems/electrical/bus/ac-1/voltage gt 225
-					            <!-- Implement failures here -->
-			</test>
-		</switch>
-		<actuator name="/systems/computers/adc[0]/altitide/indicated-altitude-ft">
-            		<input>/instrumentation/altimeter/indicated-altitude-ft</input>
-            		<rate_limit sense="decr">/systems/computers/adc[0]/altitide/indicated-altitude-ft-rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[0]/altitide/indicated-altitude-ft-rate</rate_limit> 
-       		</actuator>
-
-
-		<switch name="/systems/computers/adc[0]/altitide/pressure-inhg-rate">
-			<default value="0"/>			
-                	<test logic="AND" value="100">
-					/systems/electrical/bus/ac-1/voltage gt 225
-			</test>
-		</switch>
-		<actuator name="/systems/computers/adc[0]/altitide/pressure-inhg">
-            		<input>/instrumentation/altimeter/setting-inhg</input>
-            		<rate_limit sense="decr">/systems/computers/adc[0]/altitide/pressure-inhg-rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[0]/altitide/pressure-inhg-rate</rate_limit> 
-       		</actuator>
-
-
-		<switch name="/systems/computers/adc[0]/velocities/indicated_mach_rate">
-			<default value="0"/>			
-                	<test logic="AND" value="100">
-					/systems/electrical/bus/ac-1/voltage gt 225
-					            <!-- Implement failures here -->
-			</test>
-		</switch>
-		<actuator name="/systems/computers/adc[0]/velocities/indicated_mach">
-            		<input>/velocities/mach</input>
-            		<rate_limit sense="decr">/systems/computers/adc[0]/velocities/indicated_mach_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[0]/velocities/indicated_mach_rate</rate_limit> 
-       		</actuator>
-
-
-		<switch name="/systems/computers/adc[0]/vertical_fps/vertical_speed_fps_rate">
-			<default value="0"/>			
-                	<test logic="AND" value="100">
-					/systems/electrical/bus/ac-1/voltage gt 225
-					            <!-- Implement failures here -->
-			</test>
-		</switch>
-		<actuator name="/systems/computers/adc[0]/vertical_fps/vertical_speed_fps">
-            		<input>/velocities/vertical-speed-fps</input>
-            		<rate_limit sense="decr">/systems/computers/adc[0]/vertical_fps/vertical_speed_fps_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[0]/vertical_fps/vertical_speed_fps_rate</rate_limit> 
-       		</actuator>
-
-		<fcs_function name="/systems/computers/adc[0]/vertical_fps/vertical_speed_fpm">
-			<function>
-				<product>
-					<property>/systems/computers/adc[0]/vertical_fps/vertical_speed_fps</property>
-					<value>60</value>
-				</product>
-			</function>
-		</fcs_function>
-
-
-		<switch name="/systems/computers/adc[0]/airspeed/true_airspeed_knts_rate">
-			<default value="0"/>			
-                	<test logic="AND" value="1000">
-					/systems/electrical/bus/ac-1/voltage gt 225
-					            <!-- Implement failures here -->
-			</test>
-		</switch>
-		<actuator name="/systems/computers/adc[0]/airspeed/true_airspeed_knts">
-            		<input>velocities/vtrue-kts</input>
-            		<rate_limit sense="decr">/systems/computers/adc[0]/airspeed/true_airspeed_knts_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[0]/airspeed/true_airspeed_knts_rate</rate_limit> 
-       		</actuator>
-
-		<switch name="/systems/computers/adc[0]/airspeed/indicated_airspeed_knts_rate">
-			<default value="0"/>			
-                	<test logic="AND" value="1000">
-					/systems/electrical/bus/ac-1/voltage gt 225
-					            <!-- Implement failures here -->
-			</test>
-		</switch>
-		<actuator name="/systems/computers/adc[0]/airspeed/indicated_airspeed_knts">
-            		<input>/velocities/airspeed-kt</input>
-            		<rate_limit sense="decr">/systems/computers/adc[0]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[0]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
-       		</actuator>
-
-</channel>
-
-<channel name="ADC2" execrate="8">
-
 		<switch name="/systems/computers/adc[1]/altitide/indicated-altitude-ft-rate">
 			<default value="0"/>			
                 	<test logic="AND" value="100">
-					/systems/electrical/bus/ac-3/voltage gt 225
+					/systems/electrical/bus/ac-1/voltage gt 225
 					            <!-- Implement failures here -->
 			</test>
 		</switch>
@@ -450,7 +158,8 @@
 		<switch name="/systems/computers/adc[1]/altitide/pressure-inhg-rate">
 			<default value="0"/>			
                 	<test logic="AND" value="100">
-					/systems/electrical/bus/ac-3/voltage gt 225
+					/systems/electrical/bus/ac-1/voltage gt 225
+					            <!-- Implement failures here -->
 			</test>
 		</switch>
 		<actuator name="/systems/computers/adc[1]/altitide/pressure-inhg">
@@ -462,66 +171,139 @@
 
 		<switch name="/systems/computers/adc[1]/velocities/indicated_mach_rate">
 			<default value="0"/>			
-                	<test logic="AND" value="100">
-					/systems/electrical/bus/ac-3/voltage gt 225
+                	<test logic="AND" value="100"> 
+					/systems/electrical/bus/ac-1/voltage gt 225
 					            <!-- Implement failures here -->
 			</test>
 		</switch>
 		<actuator name="/systems/computers/adc[1]/velocities/indicated_mach">
-            		<input>/velocities/mach</input>
+            		<input>/instrumentation/airspeed-indicator/indicated-mach</input>
             		<rate_limit sense="decr">/systems/computers/adc[1]/velocities/indicated_mach_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/adc[1]/velocities/indicated_mach_rate</rate_limit> 
        		</actuator>
 
 
-		<switch name="/systems/computers/adc[1]/vertical_fps/vertical_speed_fps_rate">
+		<switch name="/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm_rate">
 			<default value="0"/>			
                 	<test logic="AND" value="100">
-					/systems/electrical/bus/ac-3/voltage gt 225
+					/systems/electrical/bus/ac-1/voltage gt 225
 					            <!-- Implement failures here -->
 			</test>
 		</switch>
-		<actuator name="/systems/computers/adc[1]/vertical_fps/vertical_speed_fps">
-            		<input>/velocities/vertical-speed-fps</input>
-            		<rate_limit sense="decr">/systems/computers/adc[1]/vertical_fps/vertical_speed_fps_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[1]/vertical_fps/vertical_speed_fps_rate</rate_limit> 
+		<actuator name="/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm">
+            		<input>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</input>
+            		<rate_limit sense="decr">/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm_rate</rate_limit> 
        		</actuator>
-
-
-		<fcs_function name="/systems/computers/adc[1]/vertical_fps/vertical_speed_fpm">
-			<function>
-				<product>
-					<property>/systems/computers/adc[1]/vertical_fps/vertical_speed_fps</property>
-					<value>60</value>
-				</product>
-			</function>
-		</fcs_function>
-
 
 		<switch name="/systems/computers/adc[1]/airspeed/true_airspeed_knts_rate">
 			<default value="0"/>			
-                	<test logic="AND" value="1000">
-					/systems/electrical/bus/ac-3/voltage gt 225
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-1/voltage gt 225
 					            <!-- Implement failures here -->
 			</test>
 		</switch>
 		<actuator name="/systems/computers/adc[1]/airspeed/true_airspeed_knts">
-            		<input>velocities/vtrue-kts</input>
+            		<input>/instrumentation/airspeed-indicator/true-speed-kt</input>
             		<rate_limit sense="decr">/systems/computers/adc[1]/airspeed/true_airspeed_knts_rate</rate_limit> 
             		<rate_limit sense="incr">/systems/computers/adc[1]/airspeed/true_airspeed_knts_rate</rate_limit> 
        		</actuator>
 
 		<switch name="/systems/computers/adc[1]/airspeed/indicated_airspeed_knts_rate">
 			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-1/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[1]/airspeed/indicated_airspeed_knts">
+            		<input>/instrumentation/airspeed-indicator/indicated-speed-kt</input>
+            		<rate_limit sense="decr">/systems/computers/adc[1]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[1]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
+       		</actuator>
+
+</channel>
+
+<channel name="ADC2" execrate="8">
+
+		<switch name="/systems/computers/adc[2]/altitide/indicated-altitude-ft-rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-3/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/altitide/indicated-altitude-ft">
+            		<input>/instrumentation/altimeter[1]/indicated-altitude-ft</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/altitide/indicated-altitude-ft-rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/altitide/indicated-altitude-ft-rate</rate_limit> 
+       		</actuator>
+
+
+		<switch name="/systems/computers/adc[2]/altitide/pressure-inhg-rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-3/voltage gt 225
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/altitide/pressure-inhg">
+            		<input>/instrumentation/altimeter[1]/setting-inhg</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/altitide/pressure-inhg-rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/altitide/pressure-inhg-rate</rate_limit> 
+       		</actuator>
+
+
+		<switch name="/systems/computers/adc[2]/velocities/indicated_mach_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-3/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/velocities/indicated_mach">
+            		<input>/instrumentation/airspeed-indicator[1]/indicated-mach</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/velocities/indicated_mach_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/velocities/indicated_mach_rate</rate_limit> 
+       		</actuator>
+
+
+		<switch name="/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-3/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm">
+            		<input>/instrumentation/vertical-speed-indicator[1]/indicated-speed-fpm</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/adc[2]/airspeed/true_airspeed_knts_rate">
+			<default value="0"/>			
                 	<test logic="AND" value="1000">
 					/systems/electrical/bus/ac-3/voltage gt 225
 					            <!-- Implement failures here -->
 			</test>
 		</switch>
-		<actuator name="/systems/computers/adc[1]/airspeed/indicated_airspeed_knts">
-            		<input>/velocities/airspeed-kt</input>
-            		<rate_limit sense="decr">/systems/computers/adc[1]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/adc[1]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
+		<actuator name="/systems/computers/adc[2]/airspeed/true_airspeed_knts">
+            		<input>/instrumentation/airspeed-indicator[1]/true-speed-kt</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/airspeed/true_airspeed_knts_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/airspeed/true_airspeed_knts_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/adc[2]/airspeed/indicated_airspeed_knts_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="1000">
+					/systems/electrical/bus/ac-3/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/airspeed/indicated_airspeed_knts">
+            		<input>/instrumentation/airspeed-indicator[1]/indicated-speed-kt</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
        		</actuator>
 
 </channel>
@@ -529,50 +311,43 @@
 <channel name="ADC Switch" execrate="8">
 
 		<switch name="/systems/computers/adc_switch/indicated-altitude-ft_output">
-			<default value="/systems/computers/adc[0]/altitide/indicated-altitude-ft"/>			
-                	<test logic="AND" value="/systems/computers/adc[1]/altitide/indicated-altitude-ft">
+			<default value="/systems/computers/adc[1]/altitide/indicated-altitude-ft"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/altitide/indicated-altitude-ft">
 					/controls/switches/ADC-select-switch eq 1
 			</test>
 		</switch>
 
 		<switch name="/systems/computers/adc_switch/pressure-inhg_output">
-			<default value="/systems/computers/adc[0]/altitide/pressure-inhg"/>			
-                	<test logic="AND" value="/systems/computers/adc[1]/altitide/pressure-inhg">
+			<default value="/systems/computers/adc[1]/altitide/pressure-inhg"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/altitide/pressure-inhg">
 					/controls/switches/ADC-select-switch eq 1
 			</test>
 		</switch>
 
 		<switch name="/systems/computers/adc_switch/indicated_mach_output">
-			<default value="/systems/computers/adc[0]/velocities/indicated_mach"/>			
-                	<test logic="AND" value="/systems/computers/adc[1]/velocities/indicated_mach">
-					/controls/switches/ADC-select-switch eq 1
-			</test>
-		</switch>
-
-		<switch name="/systems/computers/adc_switch/vertical_speed_fps_output">
-			<default value="/systems/computers/adc[0]/vertical_fps/vertical_speed_fps"/>			
-                	<test logic="AND" value="/systems/computers/adc[1]/vertical_fps/vertical_speed_fps">
+			<default value="/systems/computers/adc[1]/velocities/indicated_mach"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/velocities/indicated_mach">
 					/controls/switches/ADC-select-switch eq 1
 			</test>
 		</switch>
 
 		<switch name="/systems/computers/adc_switch/vertical_speed_fpm_output">
-			<default value="/systems/computers/adc[0]/vertical_fps/vertical_speed_fpm"/>			
-                	<test logic="AND" value="/systems/computers/adc[1]/vertical_fps/vertical_speed_fpm">
+			<default value="/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm">
 					/controls/switches/ADC-select-switch eq 1
 			</test>
 		</switch>
 
 		<switch name="/systems/computers/adc_switch/true_airspeed_knts_output">
-			<default value="/systems/computers/adc[0]/airspeed/true_airspeed_knts"/>			
-                	<test logic="AND" value="/systems/computers/adc[1]/airspeed/true_airspeed_knts">
+			<default value="/systems/computers/adc[1]/airspeed/true_airspeed_knts"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/airspeed/true_airspeed_knts">
 					/controls/switches/ADC-select-switch eq 1
 			</test>
 		</switch>
 
 		<switch name="/systems/computers/adc_switch/indicated_airspeed_knts_output">
-			<default value="/systems/computers/adc[0]/airspeed/indicated_airspeed_knts"/>			
-                	<test logic="AND" value="/systems/computers/adc[1]/airspeed/indicated_airspeed_knts">
+			<default value="/systems/computers/adc[1]/airspeed/indicated_airspeed_knts"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/airspeed/indicated_airspeed_knts">
 					/controls/switches/ADC-select-switch eq 1
 			</test>
 		</switch>
@@ -753,7 +528,5 @@
        		</actuator>
 
 </channel>
-
-
 
 </system>
