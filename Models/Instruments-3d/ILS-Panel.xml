@@ -132,7 +132,7 @@
 	</axis>
 	<center>
 		<x-m>0.0</x-m>
-		<y-m>0.0324</y-m>
+		<y-m>0.0393</y-m>
 		<z-m>0.0056</z-m>
 	</center>
 	<action>			
@@ -144,6 +144,43 @@
                         <min>0</min>
                         <max>118</max>
                         <factor>0.01</factor>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>knob</type>
+	<object-name>power-switch</object-name>
+	<property>instrumentation/nav[0]/power-btn</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>0.0</dep>
+		</entry>
+		<entry>
+			<ind>1</ind>
+			<dep>30.0</dep>
+		</entry>
+	</interpolation>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>-1.0</z>
+	</axis>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>-0.0353</y-m>
+		<z-m>-0.0006</z-m>
+	</center>
+	<action>			
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/nav[0]/power-btn</property>
+                        <min>0</min>
+                        <max>1</max>
+                        <factor>1</factor>
 		</binding>
 	</action>
 </animation>
@@ -243,48 +280,5 @@
 		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
-
-<!-- Label Text -->
-
-<text>
-	<name>LabelText</name>
-	<type type="string">literal</type>
-		<text type="string">ILS</text>
-	<draw-text type="bool">true</draw-text>
-	<font>Helvetica.txf</font>
-		<character-size type="double">0.012</character-size>
-		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
-	<axis-alignment>yz-plane</axis-alignment>
-	<max-height>0.2</max-height>
-	<max-width>0.07</max-width>
-	<font-resolution>
-		<width type="int">32</width>
-		<height type="int">32</height>
-	</font-resolution>
-	<alignment>center-center</alignment>
-	<offsets>
-		<x-m> 0.055</x-m>
-		<y-m>-0.03 </y-m>
-		<z-m> 0.05</z-m>
-	</offsets>
-</text>
-
-<animation>
-	<type>material</type>
-		<object-name>LabelText</object-name>
-	<emission>
-		<red>1.0</red>
-		<green>0.8</green>
-		<blue>0.0</blue>
-	</emission>
-</animation>
-
-<animation>
-	<type>select</type>
-		<object-name>LabelText</object-name>
-	<condition>
-		<property>/sim/panel-hotspots</property>
-	</condition>
-</animation>
 
 </PropertyList>

@@ -20,12 +20,6 @@
   <animation>
     <type>rotate</type>
     <object-name>hsi</object-name>
-    <condition>
-      <greater-than>
-	<property>systems/electrical/bus/ac-1/voltage</property>
-	<value>225</value>
-      </greater-than>
-    </condition>
    <property>systems/computers/gss_switch/heading_output</property>
    <axis><x>1</x></axis>  
    </animation>
@@ -33,12 +27,6 @@
   <animation>
     <type>rotate</type>
     <object-name>cdi</object-name>
-    <condition>
-      <greater-than>
-	<property>systems/electrical/bus/ac-1/voltage</property>
-	<value>225</value>
-      </greater-than>
-    </condition>
     <property>systems/computers/gss_switch/heading_output</property>
     <axis><x>1</x></axis>
   </animation>
@@ -47,13 +35,7 @@
    <animation>
     <type>rotate</type>
     <object-name>bearing-needle-1</object-name>
-    <condition> 
-      <greater-than>
-       <property>systems/electrical/bus/ac-1/voltage</property>
-       <value>225</value>
-      </greater-than> 
-    </condition>
-    <property>instrumentation/heading-indicator/bearing-needle</property>
+    <property>systems/computers/hsi/bearing-needle/output</property>
     <axis><x>-1</x></axis>
    </animation>
 

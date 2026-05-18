@@ -359,25 +359,43 @@
 
             <!-- Needle -->
 
-		<switch name="/instrumentation/heading-indicator/bearing-needle/switch">
+		<switch name="/systems/computers/hsi/bearing-needle/current-value">
 			<default value="0"/>
                 	<test logic="AND" value="/instrumentation/adf/indicated-bearing-deg">
 					/instrumentation/adf/in-range eq 1
 					/controls/switches/fltdir eq 0.3
-			</test>			
+			</test>	
+		        <test logic="AND" value="/instrumentation/tacan/indicated-bearing-offset-deg">
+					/instrumentation/tacan/in-range eq 1
+					/controls/switches/fltdir eq 0.5
+			</test>
 		</switch>
-		<switch name="/instrumentation/heading-indicator/bearing-needle/rate">
+		<switch name="/systems/computers/hsi/bearing-needle/rate">
 			<default value="0"/>
                 	<test logic="OR" value="50">
 				/systems/electrical/bus/ac-3/voltage gt 225
 				/systems/electrical/bus/ess/voltage gt 225
 			</test>			
 		</switch>
-		<actuator name="/instrumentation/heading-indicator/bearing-needle/output">
-            		<input>/instrumentation/heading-indicator/bearing-needle/switch</input>
-            		<rate_limit sense="decr">/instrumentation/heading-indicator/bearing-needle/rate</rate_limit> 
-            		<rate_limit sense="incr">/instrumentation/heading-indicator/bearing-needle/rate</rate_limit> 
+		<actuator name="/systems/computers/hsi/bearing-needle/output">
+            		<input>/systems/computers/hsi/bearing-needle/current-value</input>
+            		<rate_limit sense="decr">/systems/computers/hsi/bearing-needle/rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/hsi/bearing-needle/rate</rate_limit> 
        		</actuator>
+
+		<fcs_function name="/instrumentation/tacan/indicated-bearing-offset-deg">
+			<function>
+			 <product>
+				<difference>
+					<property>/orientation/heading-magnetic-deg</property>
+					<property>/instrumentation/tacan/indicated-bearing-true-deg</property>
+				</difference>
+                                <value>-1</value> 
+                         </product>
+			</function>
+			<min>-180</min>
+			<max>180</max>
+		</fcs_function>
 
             <!-- Miles drums -->
 
