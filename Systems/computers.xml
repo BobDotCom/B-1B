@@ -9,8 +9,8 @@
         <property value="0">/systems/failures/computers/gss[1]/pitch_failure</property>
         <property value="0">/systems/failures/computers/gss[1]/roll_failure</property>
         <property value="0">/systems/failures/computers/hsi/miles_drums</property>
-        <property value="0">/systems/failures/computers/altitude_radars/altitude_radar[0]</property>
-        <property value="0">/systems/failures/computers/altitude_radars/altitude_radar[1]</property>
+        <property value="0">/systems/failures/computers/altitude_radar/channel_1</property>
+        <property value="0">/systems/failures/computers/altitude_radar/channel_2</property>
         <property value="1">/systems/pitot[1]/serviceable</property>
         <property value="1">/systems/static[1]/serviceable</property>
 
@@ -18,18 +18,10 @@
 
             <!-- Heading -->
 
-		<actuator name="/systems/computers/gss[0]/heading/output/output">
-            		<input>/instrumentation/heading-indicator/indicated-heading-deg</input>
-            		<rate_limit sense="decr">/systems/computers/gss[0]/heading/output/output_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/gss[0]/heading/output/output_rate</rate_limit> 
-       		</actuator>
-
-		<switch name="/systems/computers/gss[0]/heading/output/output_rate">
-			<default value="100"/>			
-                	<test logic="AND" value="0">
-					/systems/failures/computers/gss[0]/heading_failure eq 1					
-			</test>
-		</switch>
+		<pure_gain name="/systems/computers/gss[0]/heading/output/output">
+			<input>/instrumentation/heading-indicator/indicated-heading-deg</input>
+			<gain>1.0</gain>
+		</pure_gain>
  
             <!-- Pitch -->
 
@@ -63,23 +55,14 @@
 
 </channel>
 
-
 <channel name="GSS 2" execrate="8">
 
             <!-- Heading -->
 
-		<actuator name="/systems/computers/gss[1]/heading/output/output">
-            		<input>/instrumentation/heading-indicator/indicated-heading-deg</input>
-            		<rate_limit sense="decr">/systems/computers/gss[1]/heading/output/output_rate</rate_limit> 
-            		<rate_limit sense="incr">/systems/computers/gss[1]/heading/output/output_rate</rate_limit> 
-       		</actuator>
-
-		<switch name="/systems/computers/gss[1]/heading/output/output_rate">
-			<default value="100"/>			
-                	<test logic="AND" value="0">
-					/systems/failures/computers/gss[1]/heading_failure eq 1					
-			</test>
-		</switch> 
+		<pure_gain name="/systems/computers/gss[1]/heading/output/output">
+			<input>/instrumentation/heading-indicator/indicated-heading-deg</input>
+			<gain>1.0</gain>
+		</pure_gain>
 
             <!-- Pitch -->
 
@@ -443,97 +426,130 @@
 
 <channel name="Radar Altitude" execrate="8">
 
-           <!-- Altitude radars and panel -->
+           <!-- Altitude radar and panel -->
 
-           <!-- Altimeter 1 -->
+           <!-- Channel 1 -->
 
-		<switch name="/systems/computers/altitude_radars/altitude_radar[0]/output">
+		<switch name="/systems/computers/altitude_radar/channel_1/output">
 			<default value="0"/>
                 	<test logic="AND" value="/instrumentation/radar-altimeter/radar-altitude-ft">
 					/systems/electrical/bus/ac-1/voltage gt 220
-					/systems/failures/computers/altitude_radars/altitude_radar[0] eq 0
-					/systems/computers/altitude_radars/altitude_radar[0]/warm_up/warm_up eq 1
+					/systems/failures/computers/altitude_radar/channel_1 eq 0
+					/systems/computers/altitude_radar/channel_1/warm_up/warmed_up eq 1
 			</test>				
 		</switch>
 
-           <!-- Altimeter 1 warm up period-->
-
-		<switch name="/systems/computers/altitude_radars/altitude_radar[0]/warm_up/warm_up_target">
+		<switch name="/systems/computers/altitude_radar/channel_1/serviceable">
 			<default value="0"/>
                 	<test logic="AND" value="1">
 					/systems/electrical/bus/ac-1/voltage gt 220
-                	<test logic="OR">
-					/instrumentation/radar-altimeter/altimeter_switch eq 1
-					/instrumentation/radar-altimeter/altimeter_switch eq 2
-			 </test>	
+					/systems/failures/computers/altitude_radar/channel_1 eq 0
+			</test>				
+		</switch>
+
+           <!-- Channel 1 warm up period-->
+
+		<switch name="/systems/computers/altitude_radar/channel_1/warm_up/warm_up_target">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/systems/electrical/bus/ac-1/voltage gt 220
+					/instrumentation/radar-altimeter/altimeter_switch gt 0	
 			</test>		
 		</switch>
 
-		<actuator name="/systems/computers/altitude_radars/altitude_radar[0]/warm_up/warm_up">
-            		<input>/systems/computers/altitude_radars/altitude_radar[0]/warm_up/warm_up_target</input>
+		<actuator name="/systems/computers/altitude_radar/channel_1/warm_up/warmed_up">
+            		<input>/systems/computers/altitude_radar/channel_1/warm_up/warm_up_target</input>
             		<rate_limit sense="decr">0.0053</rate_limit> <!-- Three minutes-->
             		<rate_limit sense="incr">0.0053</rate_limit> <!-- Three minutes-->
        		</actuator>
 
-           <!-- Altimeter 2 -->
+           <!-- Channel 2 -->
 
-		<switch name="/systems/computers/altitude_radars/altitude_radar[1]/output">
+		<switch name="/systems/computers/altitude_radar/channel_2/output">
 			<default value="0"/>
                 	<test logic="AND" value="/instrumentation/radar-altimeter/radar-altitude-ft">
-					/systems/electrical/bus/ac-3/voltage gt 220 
-					/systems/failures/computers/altitude_radars/altitude_radar[1] eq 0
-					/systems/computers/altitude_radars/altitude_radar[1]/warm_up/warm_up eq 1
+					/systems/electrical/bus/ac-3/voltage gt 220
+					/systems/failures/computers/altitude_radar/channel_2 eq 0
+					/systems/computers/altitude_radar/channel_2/warm_up/warmed_up eq 1
 			</test>				
 		</switch>
 
-           <!-- Altimeter 2 warm up period-->
 
-		<switch name="/systems/computers/altitude_radars/altitude_radar[1]/warm_up/warm_up_target">
+		<switch name="/systems/computers/altitude_radar/channel_2/serviceable">
 			<default value="0"/>
                 	<test logic="AND" value="1">
 					/systems/electrical/bus/ac-3/voltage gt 220
-                	<test logic="OR">
-					/instrumentation/radar-altimeter/altimeter_switch ge 2
-			 </test>
-			</test>			
+					/systems/failures/computers/altitude_radar/channel_2 eq 0
+			</test>				
 		</switch>
 
-		<actuator name="/systems/computers/altitude_radars/altitude_radar[1]/warm_up/warm_up">
-            		<input>/systems/computers/altitude_radars/altitude_radar[1]/warm_up/warm_up_target</input>
+           <!-- Channel 2 warm up period-->
+
+		<switch name="/systems/computers/altitude_radar/channel_2/warm_up/warm_up_target">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/systems/electrical/bus/ac-3/voltage gt 220
+					/instrumentation/radar-altimeter/altimeter_switch gt 0	
+			</test>		
+		</switch>
+
+		<actuator name="/systems/computers/altitude_radar/channel_2/warm_up/warmed_up">
+            		<input>/systems/computers/altitude_radar/channel_2/warm_up/warm_up_target</input>
             		<rate_limit sense="decr">0.0053</rate_limit> <!-- Three minutes-->
             		<rate_limit sense="incr">0.0053</rate_limit> <!-- Three minutes-->
        		</actuator>
 
            <!-- Altimeter panel switch-->
 
-		<switch name="/instrumentation/radar-altimeter/serviceable">
+		<switch name="/instrumentation/radar-altimeter[0]/serviceable">
 			<default value="0"/>
                 	<test logic="AND" value="1">
 				/instrumentation/radar-altimeter/altimeter_switch gt 0
 			</test>				
 		</switch>
 
-		<fcs_function name="/systems/computers/altitude_radars/altitude_radar_switch/auto_function">
-			<function>
-					<max>
-						<property>/systems/computers/altitude_radars/altitude_radar[0]/output</property>
-						<property>/systems/computers/altitude_radars/altitude_radar[1]/output</property>
-					</max>
-			</function>
-		</fcs_function>
-
-
-		<switch name="/systems/computers/altitude_radars/altitude_radar_switch/current_value">
+		<switch name="/instrumentation/radar-altimeter[1]/serviceable">
 			<default value="0"/>
-                	<test logic="AND" value="/systems/computers/altitude_radars/altitude_radar[0]/output">
+                	<test logic="AND" value="1">
+				/instrumentation/radar-altimeter/altimeter_switch gt 0
+			</test>				
+		</switch>
+
+		<switch name="/systems/computers/altitude_radar/altitude_radar_switch/current_value">
+			<default value="0"/>
+                	<test logic="AND" value="/systems/computers/altitude_radar/channel_1/output">
 					/instrumentation/radar-altimeter/altimeter_switch eq 1
 			 </test>
-                	<test logic="AND" value="/systems/computers/altitude_radars/altitude_radar_switch/auto_function">
+                	<test logic="AND" value="/systems/computers/altitude_radar/altitude_radar_switch/auto_function/value">
 					/instrumentation/radar-altimeter/altimeter_switch eq 2
 			 </test>
-                	<test logic="AND" value="/systems/computers/altitude_radars/altitude_radar[1]/output">
+                	<test logic="AND" value="/systems/computers/altitude_radar/channel_2/output">
 					/instrumentation/radar-altimeter/altimeter_switch eq 3
 			 </test>		
+		</switch>
+
+		<switch name="/systems/computers/altitude_radar/altitude_radar_switch/auto_function/value">
+			<default value="/systems/computers/altitude_radar/channel_1/output"/>
+                	<test logic="AND" value="/systems/computers/altitude_radar/channel_2/output">
+					/systems/failures/computers/altitude_radar/channel_1 eq 1
+			 </test>	
+		</switch>
+
+		<switch name="/systems/computers/altitude_radar/altitude_radar_switch/window_barrel_deg">
+			<default value="0"/>
+                	<test logic="AND" value="50">
+					/instrumentation/radar-altimeter/altimeter_switch gt 0
+                	<test logic="OR">
+                	<test logic="AND">
+					/instrumentation/radar-altimeter/altimeter_switch lt 3
+					/systems/failures/computers/altitude_radar/channel_1 eq 0
+			</test>	
+			</test>
+			</test>
+                	<test logic="AND" value="100">
+					/instrumentation/radar-altimeter/altimeter_switch gt 1
+					/systems/failures/computers/altitude_radar/channel_2 eq 0
+			</test>			
 		</switch>
 
 
