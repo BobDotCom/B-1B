@@ -195,11 +195,11 @@
       <and>    
          <greater-than>       
 	  <property>instrumentation/nav/heading-needle-deflection</property>
-	  <value>-1.0</value> 
+	  <value>-5.0</value> 
          </greater-than>               
           <less-than>      
 	  <property>instrumentation/nav/heading-needle-deflection</property>
-	  <value>1.0</value>
+	  <value>5.0</value>
          </less-than>
          <equals>
 	  <property>gear/gear[4]/wow</property>

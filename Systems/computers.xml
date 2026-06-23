@@ -11,6 +11,10 @@
         <property value="0">/systems/failures/computers/hsi/miles_drums</property>
         <property value="0">/systems/failures/computers/altitude_radar/channel_1</property>
         <property value="0">/systems/failures/computers/altitude_radar/channel_2</property>
+        <property value="0">/systems/failures/instrumentation/transponder/transponder</property>
+        <property value="0">/systems/failures/instrumentation/transponder/mode_1</property>
+        <property value="0">/systems/failures/instrumentation/transponder/mode_2</property>
+        <property value="0">/systems/failures/instrumentation/transponder/mode_3A</property>
         <property value="1">/systems/pitot[1]/serviceable</property>
         <property value="1">/systems/static[1]/serviceable</property>
 
@@ -561,6 +565,122 @@
             		<rate_limit sense="incr">250</rate_limit>
        		</actuator>
 
+</channel>
+
+<channel name="IFF/Transponder" execrate="8">
+
+           <!-- IFF part-->
+
+		<switch name="/instrumentation/iff/power">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/systems/electrical/bus/ac-1/voltage gt 220
+					/instrumentation/transponder/inputs/knob-mode eq 3
+					/controls/switches/iff/mode_1 gt -1
+					/systems/failures/instrumentation/transponder/transponder eq 0
+					/systems/failures/instrumentation/transponder/mode_1 eq 0
+			 </test>
+		</switch>
+
+		<fcs_function name="/instrumentation/iff/channel-selection">
+			<function>
+                             <sum>
+				<product>
+					<property>/instrumentation/iff/mode_1/channel-selection-tens</property>
+					<value>10</value>
+				</product>
+				<property>/instrumentation/iff/mode_1/channel-selection-singles</property>
+                             </sum>
+			</function>
+		</fcs_function>
+
+		<switch name="/instrumentation/iff/test_function">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/controls/switches/iff/mode_1 eq 1
+					/instrumentation/transponder/inputs/knob-mode eq 3
+					/systems/failures/instrumentation/transponder/transponder eq 0
+					/systems/failures/instrumentation/transponder/mode_1 eq 0
+			 </test>
+                	<test logic="AND" value="1">
+					/controls/switches/iff/mode_2 eq 1
+					/instrumentation/transponder/inputs/knob-mode eq 3
+					/systems/failures/instrumentation/transponder/transponder eq 0
+					/systems/failures/instrumentation/transponder/mode_2 eq 0
+			 </test>
+                	<test logic="AND" value="1">
+					/controls/switches/iff/mode_3A eq 1
+					/instrumentation/transponder/inputs/knob-mode eq 3
+					/systems/failures/instrumentation/transponder/transponder eq 0
+					/systems/failures/instrumentation/transponder/mode_3A eq 0
+			 </test>
+		</switch>
+
+          <!-- Transponder part -->
+
+		<switch name="/instrumentation/transponder/inputs/digit[0]">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/transponder/inputs/mode_3A_digit[0]">
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+                	<test logic="AND" value="7">
+                                        /controls/switches/iff/mode_2 gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_2 eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+		</switch>
+
+		<switch name="/instrumentation/transponder/inputs/digit[1]">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/transponder/inputs/mode_3A_digit[1]">
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+		</switch>
+
+		<switch name="/instrumentation/transponder/inputs/digit[2]">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/transponder/inputs/mode_3A_digit[2]">
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+                	<test logic="AND" value="1">
+                                        /controls/switches/iff/mode_2 gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_2 eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+                	<test logic="AND" value="5">
+                                        /instrumentation/transponder/inputs/knob-mode eq 4
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+		</switch>
+
+		<switch name="/instrumentation/transponder/inputs/digit[3]">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/transponder/inputs/mode_3A_digit[3]">
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+                	<test logic="AND" value="7">
+                                        /instrumentation/transponder/inputs/knob-mode eq 4
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+		</switch>
 </channel>
 
 </system>

@@ -845,6 +845,11 @@ B-1B set file.
                 <afterburner n="2">0</afterburner>
                 <afterburner n="3">0</afterburner>
             </engines>
+	    <iff>
+             <mode_1 type="double">-1</mode_1>
+             <mode_2 type="double">-1</mode_2>
+             <mode_3A type="double">-1</mode_3A>
+ 	    </iff>               
         </switches>
 
         <engines>
@@ -1029,8 +1034,6 @@ B-1B set file.
         <iff>
          <power_prop type="string">/instrumentation/iff/power</power_prop>
          <channel_prop type="string">/instrumentation/iff/channel-selection</channel_prop>
-         <M.1_switch type="int">-1</M.1_switch>
-         <M.3A_switch type="int">-1</M.3A_switch>
         </iff>
         <tacan> 
          <serviceable type="int">0</serviceable>

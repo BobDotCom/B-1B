@@ -6,8 +6,9 @@
       <number type="int">0</number>
       <mode type="int">2</mode>
       <!-- 0 = Mode A, 1 = Mode C, 2 = Mode S -->
-      <bus-volts type="double">8.0</bus-volts>
-      <encoder-path type="string">/systems/computers/Output-baro-altitude</encoder-path>
+      <minimum-supply-volts type="double">0</minimum-supply-volts>
+      <encoder-path type="string">systems/computers/adc_switch/indicated-altitude-ft_output</encoder-path>
+      <airspeed-path type="string">systems/computers/adc_switch/indicated_airspeed_knts_output</airspeed-path>
       <kt70-compatibility type="bool">0</kt70-compatibility>
   </transponder>
 
@@ -76,7 +77,7 @@
       <spin-up-sec>180.0</spin-up-sec>
       <spin-down-sec>300.0</spin-down-sec>
     </gyro>
-    <power-supply>systems/electrical/bus/ac-3/voltage</power-supply>
+    <power-supply>/systems/electrical/bus/ess/voltage</power-supply>
     <minimum-supply-volts>220.0</minimum-supply-volts>
 </attitude-indicator-electric>
 
@@ -111,7 +112,7 @@
 <heading-indicator-dg>
     <name>heading-indicator</name>
     <number>1</number>
-    <power-supply>/systems/electrical/bus/ess/voltage</power-supply>
+    <power-supply>systems/electrical/bus/ac-3/voltage</power-supply>
     <minimum-supply-volts>220.0</minimum-supply-volts>
     <limits>
       <yaw-limit-rate>12.5</yaw-limit-rate>
