@@ -1,20 +1,13 @@
 _setlistener("/sim/signals/fdm-initialized", func {
     rtExec_loop();
     hack.init();
-	# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
-  if (getprop("/sim/variant-id") == 5){
-    var hmd = modules.Module.new("displays");
-    hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
-    hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
-    hmd.setMainFile("blockE-displays.nas");
-    hmd.load();
-  } else {
-    var hmd = modules.Module.new("displays");
-    hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
-    hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
-    hmd.setMainFile("blockD-displays.nas");
-    hmd.load();
-  };
+	# One reloadable display module serves both Block D and Block E. Its config
+	# selects the variant-specific pages and physical display definitions.
+	var displaysModule = modules.Module.new("displays");
+	displaysModule.setDebug(0); # Keep disabled: module resource tracing has previously destabilized FG.
+	displaysModule.setFilePath(getprop("/sim/aircraft-dir") ~ "/Nasal/displays");
+	displaysModule.setMainFile("main.nas");
+	displaysModule.load();
 	init_b1b();
 });
 
@@ -109,13 +102,6 @@ var SubSystem_Main = {
 
 subsystem = SubSystem_Main.new("SubSystem_Main");
 
-
-# This loads displays/displays.nas as a module. This can sometimes be buggy, please disable when not needed for development and add to -set
-#var hmd = modules.Module.new("displays");
-#hmd.setDebug(0); # From previous testing this causes FG to crash, So if you use this and FG crashes, check this is at 0
-#hmd.setFilePath(getprop("/sim/aircraft-dir")~"/Nasal/displays");
-##hmd.setMainFile("displays.nas");
-#hmd.load();
 
 var init_b1b = func {
 setprop("systems/refuel/serviceable", 'false');
