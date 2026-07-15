@@ -8,7 +8,13 @@ var PagePFD1 = {
 	svg: {
 		file: "Nasal/displays/PFD1.svg",
 		font: DISPLAY_SVG_FONT_FILE,
-		keys: ["altimeterPressure", "airspeed", "altitude-1k", "altitude", "taltitude-1k", "taltitude", "asi", "roll_pointer", "gravity", "hdg", "mach", "tmach", "ladder", "ground", "horizon", "tspeed", "fpm-indicator"],
+		keys: [
+			"altimeterPressure", "airspeed", "altitude-1k", "altitude",
+			"taltitude-1k", "taltitude", "asi", "roll_pointer", "gravity",
+			"hdg", "mach", "tmach", "ladder", "ground", "horizon", "tspeed",
+			"fpm-indicator", "gforce", "speed", "hsi-hdg", "hsi-crs",
+			"target-hdg", "target-crs",
+		],
 		clipFrame: canvas.Element.PARENT,
 	},
 	new: func {
@@ -19,8 +25,8 @@ var PagePFD1 = {
 	setup: func {
 		printDebug(me.name," on ",me.device.name," is being setup");
 
-            me.gforce = me.group.getElementById("gforce").set("clip", "rect(117px, 156px, 396px, 0px)");
-            me.speed = me.group.getElementById("speed").set("clip", "rect(117px, 156px, 396px, 0px)");
+			me["gforce"].set("clip", "rect(117px, 156px, 396px, 0px)");
+			me["speed"].set("clip", "rect(117px, 156px, 396px, 0px)");
 
             me.machFunc = func (mach) {
                 if (substr(mach, 0, 1) == "0") {
@@ -29,11 +35,11 @@ var PagePFD1 = {
                 return mach;
             }
 
-            # HSI
-			me.group.getElementById("hsi-hdg").set("font", DISPLAY_FONT_FILE);
-			me.group.getElementById("hsi-crs").set("font", DISPLAY_FONT_FILE);
-			me.targetHdg = me.group.getElementById("target-hdg").set("font", DISPLAY_FONT_FILE);
-			me.targetCrs = me.group.getElementById("target-crs").set("font", DISPLAY_FONT_FILE);
+			# HSI
+			me["hsi-hdg"].set("font", DISPLAY_FONT_FILE);
+			me["hsi-crs"].set("font", DISPLAY_FONT_FILE);
+			me["target-hdg"].set("font", DISPLAY_FONT_FILE);
+			me["target-crs"].set("font", DISPLAY_FONT_FILE);
 
 
 
@@ -50,8 +56,8 @@ var PagePFD1 = {
             me["mach"].enableUpdate();
             me["tmach"].enableUpdate();
             me["tspeed"].enableUpdate();
-            me.targetHdg.enableUpdate();
-            me.targetCrs.enableUpdate();
+			me["target-hdg"].enableUpdate();
+			me["target-crs"].enableUpdate();
 	},
 	enter: func {
 		printDebug("Enter ",me.name~" on ",me.device.name);
@@ -99,7 +105,7 @@ var PagePFD1 = {
             me["speed"].setTranslation(0, (noti.getproper("ias")-50)/20*28);
 
 	    # HSI
-	    # me.targetHdg.updateText(sprintf("%03d", noti.getproper("APHeadingBug")));
+	    # me["target-hdg"].updateText(sprintf("%03d", noti.getproper("APHeadingBug")));
 	},
 	exit: func {
 		printDebug("Exit ",me.name~" on ",me.device.name);

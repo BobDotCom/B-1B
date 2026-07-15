@@ -8,7 +8,12 @@ var PageInit = {
 	svg: {
 		file: "Nasal/displays/vsd_v2.svg",
 		font: DISPLAY_SVG_FONT_FILE,
-		keys: ["pitch_ladder", "ils_group", "gs_group", "hdg_scale"],
+		keys: [
+			"pitch_ladder", "ils_group", "gs_group", "hdg_scale",
+			"speed", "hdg", "altitude", "ils_diamond", "gs_diamond",
+			"hdg_one", "hdg_two", "hdg_three", "hdg_four",
+			"hdg_five", "hdg_six", "hdg_seven", "asi", "roll_arrow",
+		],
 		clipFrame: canvas.Element.GLOBAL,
 	},
 	new: func {
@@ -19,44 +24,22 @@ var PageInit = {
 	setup: func {
 		printDebug(me.name," on ",me.device.name," is being setup");
 
-		me.speed = me.group.getElementById("speed");
-		me.hdg = me.group.getElementById("hdg");
-		me.altitude = me.group.getElementById("altitude");
-		me.navMode = me.group.getElementById("nav_mode");
-		me.navIdent = me.group.getElementById("nav_ident");
-		me.navDist = me.group.getElementById("nav_dist");
-		me.ilsDiamond = me.group.getElementById("ils_diamond");
-		me.gsDiamond = me.group.getElementById("gs_diamond");
-		me.navHDG = me.group.getElementById("middle_line");
-		me.hdgT1 = me.group.getElementById("hdg_one");
-		me.hdgT2 = me.group.getElementById("hdg_two");
-		me.hdgT3 = me.group.getElementById("hdg_three");
-		me.hdgT4 = me.group.getElementById("hdg_four");
-		me.hdgT5 = me.group.getElementById("hdg_five");
-		me.hdgT6 = me.group.getElementById("hdg_six");
-		me.hdgT7 = me.group.getElementById("hdg_seven");
-		me.hdgTape = me.group.getElementById("hdg_scale");
-		# me.ladder = me.group.getElementById("pitch_ladder");
-		me.asi = me.group.getElementById("asi");
-		me.rollArrow = me.group.getElementById("roll_arrow");
-		me.gsGroup = me.group.getElementById("gs_group");
-		me.ilsGroup = me.group.getElementById("ils_group");
-		me.gsGroup.setVisible(0);
-		me.ilsGroup.setVisible(0);
+		me["gs_group"].setVisible(0);
+		me["ils_group"].setVisible(0);
 
-		me.speed.enableUpdate();
-		me.hdg.enableUpdate();
-		me.altitude.enableUpdate();
-		displayValues.vsd.terrainCenter = me.asi.getCenter();
-		me.asiTrans = me.asi.createTransform();
-		me.asiRot = me.asi.createTransform();
-		me.hdgT1.enableUpdate();
-		me.hdgT2.enableUpdate();
-		me.hdgT3.enableUpdate();
-		me.hdgT4.enableUpdate();
-		me.hdgT5.enableUpdate();
-		me.hdgT6.enableUpdate();
-		me.hdgT7.enableUpdate();
+		me["speed"].enableUpdate();
+		me["hdg"].enableUpdate();
+		me["altitude"].enableUpdate();
+		displayValues.vsd.terrainCenter = me["asi"].getCenter();
+		me.asiTrans = me["asi"].createTransform();
+		me.asiRot = me["asi"].createTransform();
+		me["hdg_one"].enableUpdate();
+		me["hdg_two"].enableUpdate();
+		me["hdg_three"].enableUpdate();
+		me["hdg_four"].enableUpdate();
+		me["hdg_five"].enableUpdate();
+		me["hdg_six"].enableUpdate();
+		me["hdg_seven"].enableUpdate();
 
 
 		me.pageText = me.group.createChild("text")
@@ -84,16 +67,16 @@ var PageInit = {
 	update: func (noti = nil) {	
 		# simulate minimum reading of 30kts IAS
 		if (noti.getproper("ias") <= 30) {
-			me.speed.updateText("0");
+			me["speed"].updateText("0");
 		}else{
-			me.speed.updateText(sprintf("%03d", noti.getproper("ias")));
+			me["speed"].updateText(sprintf("%03d", noti.getproper("ias")));
 		}
 
-		me.altitude.updateText(sprintf("%01d",math.round(noti.getproper("alt_ft"),10)));
+		me["altitude"].updateText(sprintf("%01d",math.round(noti.getproper("alt_ft"),10)));
 		me.asiTrans.setTranslation(0,noti.getproper("pitch")*6.3);
 		me.asiRot.setRotation(-noti.getproper("roll")*D2R, displayValues.vsd.terrainCenter);
-		me.rollArrow.setRotation(-noti.getproper("roll")*D2R, displayValues.vsd.terrainCenter);
-		me.hdg.updateText(sprintf("%03d",noti.getproper("headingMag")));
+		me["roll_arrow"].setRotation(-noti.getproper("roll")*D2R, displayValues.vsd.terrainCenter);
+		me["hdg"].updateText(sprintf("%03d",noti.getproper("headingMag")));
 
 		# hdg tape code + functions adapted from Octal450's MD-11 IESI
 
@@ -121,14 +104,14 @@ var PageInit = {
 		} else {
 			displayValues.hdg.middleOffset = -displayValues.hdg.offset * 45.5;
 		}
-		me.hdgTape.setTranslation(displayValues.hdg.middleOffset, 0);
-		me.hdgT1.setText(hdgText(displayValues.hdg.l3));
-		me.hdgT2.setText(hdgText(displayValues.hdg.l2));
-		me.hdgT3.setText(hdgText(displayValues.hdg.l1));
-		me.hdgT4.setText(hdgText(displayValues.hdg.middleText));
-		me.hdgT5.setText(hdgText(displayValues.hdg.r1));
-		me.hdgT6.setText(hdgText(displayValues.hdg.r2));
-		me.hdgT7.setText(hdgText(displayValues.hdg.r3));
+		me["hdg_scale"].setTranslation(displayValues.hdg.middleOffset, 0);
+		me["hdg_one"].setText(hdgText(displayValues.hdg.l3));
+		me["hdg_two"].setText(hdgText(displayValues.hdg.l2));
+		me["hdg_three"].setText(hdgText(displayValues.hdg.l1));
+		me["hdg_four"].setText(hdgText(displayValues.hdg.middleText));
+		me["hdg_five"].setText(hdgText(displayValues.hdg.r1));
+		me["hdg_six"].setText(hdgText(displayValues.hdg.r2));
+		me["hdg_seven"].setText(hdgText(displayValues.hdg.r3));
 		#ILS (Also from MD-11)
 
 		displayValues.nav.headingNeedleDeflectionNorm = noti.getproper("nav0HdgDeflectionN");
@@ -138,16 +121,16 @@ var PageInit = {
 		displayValues.nav.inRange = noti.getproper("nav0InRange");			
 		if (displayValues.nav.selectedMhz != 0) {
 			if (displayValues.nav.navLoc and displayValues.nav.signalQuality >= 0.99) {
-				me.ilsDiamond.setTranslation(displayValues.nav.headingNeedleDeflectionNorm * 134, 0);
-				me.ilsDiamond.show();
+				me["ils_diamond"].setTranslation(displayValues.nav.headingNeedleDeflectionNorm * 134, 0);
+				me["ils_diamond"].show();
 			} else {
-				me.ilsDiamond.hide();
+				me["ils_diamond"].hide();
 			}
 			if (displayValues.nav.inRange) {
-				me.ilsGroup.setVisible(1);
-			} else {me.ilsGroup.setVisible(0);}
+				me["ils_group"].setVisible(1);
+			} else {me["ils_group"].setVisible(0);}
 		} else {
-			me.ilsDiamond.hide();
+			me["ils_diamond"].hide();
 		}
 		
 		
@@ -157,17 +140,16 @@ var PageInit = {
 		displayValues.nav.hasGs = noti.getproper("nav0HasGS");		
 		if (displayValues.nav.selectedMhz != 0) {
 			if (displayValues.nav.gsInRange and displayValues.nav.hasGs and displayValues.nav.signalQuality >= 0.99) {
-				me.gsDiamond.setTranslation(0, displayValues.nav.gsNeedleDeflectionNorm * -106.4);
-				me.gsDiamond.show();
+				me["gs_diamond"].setTranslation(0, displayValues.nav.gsNeedleDeflectionNorm * -106.4);
+				me["gs_diamond"].show();
 			} else {
-				me.gsDiamond.hide();
+				me["gs_diamond"].hide();
 			}
 			if (displayValues.nav.gsInRange) {
-				me.gsGroup.setVisible(1);
-			} else {me.gsGroup.setVisible(0);}
-			# me.gsGroup.setVisible(1);
+				me["gs_group"].setVisible(1);
+			} else {me["gs_group"].setVisible(0);}
 		} else {
-			me.gsDiamond.hide();
+			me["gs_diamond"].hide();
 		}
 	},
 	exit: func {
