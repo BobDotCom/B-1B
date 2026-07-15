@@ -4,6 +4,7 @@ var PageInit = {
 	name: DISPLAY_PAGES.init,
 	isNew: 1,
 	supportSOI: 0,
+	showFrame: 0,
 	needGroup: 1,
 	svg: {
 		file: "Nasal/displays/vsd_v2.svg",
@@ -67,12 +68,12 @@ var PageInit = {
 	update: func (noti = nil) {	
 		# simulate minimum reading of 30kts IAS
 		if (noti.getproper("ias") <= 30) {
-			me["speed"].updateText("0");
+			me["speed"].updateText("000");
 		}else{
 			me["speed"].updateText(sprintf("%03d", noti.getproper("ias")));
 		}
 
-		me["altitude"].updateText(sprintf("%01d",math.round(noti.getproper("alt_ft"),10)));
+		me["altitude"].updateText(sprintf("%05d",math.round(noti.getproper("alt_ft"),10)));
 		me.asiTrans.setTranslation(0,noti.getproper("pitch")*6.3);
 		me.asiRot.setRotation(-noti.getproper("roll")*D2R, displayValues.vsd.terrainCenter);
 		me["roll_arrow"].setRotation(-noti.getproper("roll")*D2R, displayValues.vsd.terrainCenter);

@@ -4,6 +4,7 @@ var PageSMS1 = {
 	name: DISPLAY_PAGES.sms,
 	isNew: 1,
 	supportSOI: 0,
+	showFrame: 0,
 	needGroup: 1,
 	new: func {
 		me.instance = {parents:[PageSMS1]};

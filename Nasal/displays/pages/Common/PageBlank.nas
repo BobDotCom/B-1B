@@ -4,6 +4,7 @@ var PageBlank = {
 	name: DISPLAY_PAGES.blank,
 	isNew: 1,
 	supportSOI: 0,
+	showFrame: 0,
 	needGroup: 1,
 	new: func {
 		me.instance = {parents:[PageBlank]};

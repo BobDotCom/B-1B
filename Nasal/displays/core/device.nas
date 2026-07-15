@@ -96,19 +96,80 @@ var DisplayDevice = {
     },
 
 	addSOILines: func () {
-		me.tempMarginX = 11;
-		me.tempMarginY = 10;
-		me.soiLine = me.controlGrp.createChild("path")
+		me.tempFrameMarginX = margin.device.frame;
+		me.tempFrameMarginY = margin.device.frame;
+		# Black mask outside the tactical-format frame. Four closed strips leave
+		# the complete framed interior untouched while covering the screen edges.
+		me.pageFrameFillGrp = me.canvas.createGroup()
+				.set("z-index", zIndex.device.frameFill);
+		me.pageFrameFill = me.pageFrameFillGrp.createChild("path")
+				.rect(
+					0,
+					0,
+					me.uvMap[0]*me.resolution[0],
+					me.tempFrameMarginY
+				)
+				.rect(
+					0,
+					me.resolution[1]-me.tempFrameMarginY,
+					me.uvMap[0]*me.resolution[0],
+					me.tempFrameMarginY
+				)
+				.rect(
+					0,
+					me.tempFrameMarginY,
+					me.tempFrameMarginX,
+					me.resolution[1]-me.tempFrameMarginY*2
+				)
+				.rect(
+					me.uvMap[0]*me.resolution[0]-me.tempFrameMarginX,
+					me.tempFrameMarginY,
+					me.tempFrameMarginX,
+					me.resolution[1]-me.tempFrameMarginY*2
+				)
+				.setColorFill(displayFrameFillColor)
+				.setStrokeLineWidth(0)
+				.hide();
+		# Tactical-format frame. Pages opt into this independently of SOI.
+		me.pageFrame = me.controlGrp.createChild("path")
+				.set("z-index", zIndex.deviceObs.frame)
+				.moveTo(me.tempFrameMarginX,me.tempFrameMarginY)
+				.horiz(me.uvMap[0]*me.resolution[0]-me.tempFrameMarginX*2)
+				.vert(me.resolution[1]-me.tempFrameMarginY*2)
+				.horiz(-me.uvMap[0]*me.resolution[0]+me.tempFrameMarginX*2)
+				.lineTo(me.tempFrameMarginX,me.tempFrameMarginY)
+				.setColor(me.colorFront[0], me.colorFront[1], me.colorFront[2], 0.8)
+				.hide()
+				.setStrokeLineWidth(lineWidth.device.frame);
+		# SOI remains a separate cue around the outer display perimeter.
+		me.tempSOIMarginX = margin.device.soi;
+		me.tempSOIMarginY = margin.device.soi;
+		me.soiGlow = me.controlGrp.createChild("path")
 				.set("z-index", zIndex.deviceObs.soi)
-				.moveTo(me.tempMarginX,me.tempMarginY)
-				.horiz(me.uvMap[0]*me.resolution[0]-me.tempMarginX*2)
-				.vert(me.resolution[1]-me.tempMarginY*2)
-				.horiz(-me.uvMap[0]*me.resolution[0]+me.tempMarginX*2)
-				.lineTo(me.tempMarginX,me.tempMarginY)
+				.moveTo(me.tempSOIMarginX,me.tempSOIMarginY)
+				.horiz(me.uvMap[0]*me.resolution[0]-me.tempSOIMarginX*2)
+				.vert(me.resolution[1]-me.tempSOIMarginY*2)
+				.horiz(-me.uvMap[0]*me.resolution[0]+me.tempSOIMarginX*2)
+				.lineTo(me.tempSOIMarginX,me.tempSOIMarginY)
+				.setColor(me.colorFront[0], me.colorFront[1], me.colorFront[2], 0.22)
+				.hide()
+				.setStrokeLineWidth(lineWidth.device.soiGlow);
+		me.soiLine = me.controlGrp.createChild("path")
+				.set("z-index", zIndex.deviceObs.soi + 1)
+				.moveTo(me.tempSOIMarginX,me.tempSOIMarginY)
+				.horiz(me.uvMap[0]*me.resolution[0]-me.tempSOIMarginX*2)
+				.vert(me.resolution[1]-me.tempSOIMarginY*2)
+				.horiz(-me.uvMap[0]*me.resolution[0]+me.tempSOIMarginX*2)
+				.lineTo(me.tempSOIMarginX,me.tempSOIMarginY)
 				.setColor(me.colorFront)
 				.hide()
 				.setStrokeLineWidth(lineWidth.device.soi);
 		return me.soiLine;
+	},
+
+	setPageFrame: func (visible) {
+		me.pageFrameFill.setVisible(visible == 1);
+		me.pageFrame.setVisible(visible == 1);
 	},
 
 	addSOIText: func (info) {
@@ -123,9 +184,11 @@ var DisplayDevice = {
 	},
 
 	setSOI: func (soi) {
-		# -1 will remove both text and square
-		# me.soiLine.setVisible(1); #really good hack to simulate it always being SOI...
-		me.soiText.setVisible(soi == 1);
+		# -1 removes the separate outer SOI cue. Retain the legacy text node,
+		# but do not show the inherited "NOT SOI" presentation.
+		var selected = soi == 1;
+		me.soiGlow.setVisible(selected);
+		me.soiLine.setVisible(selected);
 		me.soiText.setVisible(0);
 		me.soi = soi;
 	},

@@ -4,6 +4,7 @@ var PageOSB = {
 	name: DISPLAY_PAGES.osb,
 	isNew: 1,
 	supportSOI: 0,
+	showFrame: 0,
 	needGroup: 1,
 	new: func {
 		me.instance = {parents:[PageOSB]};

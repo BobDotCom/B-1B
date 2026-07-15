@@ -92,6 +92,9 @@ var margin = {
 		feedbackRadius: 45,
 		fillHeight: 1,
 		outline: 1,
+		# The tactical format frame is inset; SOI is a separate outer cue.
+		frame: 37,
+		soi: 8,
 	},
 	fcr: {
 		trackText: 20,
@@ -118,7 +121,10 @@ var lineWidth = {
 		feedback: 2,
 		outline: 2,
 		x: 3,
-		soi: 2,
+		frame: 3,
+		# Separate outer SOI cue: bright core plus a subdued bloom.
+		soi: 3,
+		soiGlow: 7,
 	},
 	fcr: {
 		dlz: 2,
@@ -180,7 +186,7 @@ var font = {
 	device: {
 		main: 17,
 		# The original B-1B controls used the device font size for OSB labels.
-		osbLabels: 17,
+		osbLabels: 25,
 	},
 	hsd: {
 		threat: 17,
@@ -209,6 +215,8 @@ var font = {
 
 var zIndex = {
 	device: {
+		# Above page artwork (5), below OSB/control labels (100).
+		frameFill: 50,
 		osb: 100,
 		page: 5,
 		pullUp: 20000,
@@ -219,6 +227,7 @@ var zIndex = {
 		outline: 11,
 		fill: 9,
 		feedback: 7,
+		frame: 10001,
 		soi: 8,
 		soiText: 10,
 	},
@@ -324,6 +333,7 @@ var colorCubeCyan = [0,255,255];
 
 var colorBackground = [0.005,0.2,0.005, 1];
 var rightPFDColorBackground = DISPLAY_IS_BLOCK_E ? [0.005, 0.005, 0.07, 1] : [0.005, 0.2, 0.005, 1];
+var displayFrameFillColor = [0, 0, 0, 1];
 var variantID = 1;
 var COLOR_YELLOW     = [1.00,1.00,0.00];
 var COLOR_BLUE_LIGHT = [0.50,0.50,1.00];
@@ -348,7 +358,8 @@ var PUSHBUTTON   = 0;
 var ROCKERSWITCH = 1;
 
 var CursorHSD = 1;
-var FACH3 = variantID == 4 or variantID >= 6;#MLU Tape M4.3
+# var FACH3 = variantID == 4 or variantID >= 6;#MLU Tape M4.3
+var FACH3 = 1;
 
 var roundAbout = func(x) {
 	var y = x - int(x);

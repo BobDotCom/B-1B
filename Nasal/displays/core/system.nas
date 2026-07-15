@@ -152,6 +152,7 @@ var DisplaySystem = {
 		me.currPage = me.pages[pageName];
 		if(me.currPage.needGroup) me.currPage.group.show();
 		me.currPage.enter();
+		me.device.setPageFrame(me.currPage.showFrame);
 		#me.currPage.update(nil);
 		foreach(var layer; me.currPage.layers) {
 			me.fetchLayer(layer).group.show();

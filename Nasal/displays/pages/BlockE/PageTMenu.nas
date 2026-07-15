@@ -3,7 +3,9 @@
 var PageTMenu = {
 	name: DISPLAY_PAGES.menu,
 	isNew: 1,
-	supportSOI: 0,
+	supportSOI: 1,
+	soiPrio: 1,
+	showFrame: 1,
 	needGroup: 0,
 	new: func {
 		me.instance = {parents:[PageTMenu]};

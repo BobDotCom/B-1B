@@ -4,6 +4,7 @@ var PagePFD1 = {
 	name: DISPLAY_PAGES.pfd,
 	isNew: 1,
 	supportSOI: 0,
+	showFrame: 0,
 	needGroup: 1,
 	svg: {
 		file: "Nasal/displays/PFD1.svg",
