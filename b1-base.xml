@@ -525,9 +525,6 @@ B-1B set file.
             <property-rule n="200">
                 <path>systems/annunciators.xml</path>
             </property-rule>
-            <property-rule n="201">
-                <path>systems/computers.xml</path>
-            </property-rule>
             <path>Aircraft/B-1B/Systems/b1b-airdata.xml</path>
         </systems>
 

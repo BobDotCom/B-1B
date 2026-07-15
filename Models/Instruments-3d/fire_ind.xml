@@ -371,22 +371,4 @@ sweat by maggse
 	 </action>
 </animation>
 
-<animation>
-	<type>material</type>
-		<object-name>LabelText</object-name>
-	<emission>
-		<red>1.0</red>
-		<green>0.8</green>
-		<blue>0.0</blue>
-	</emission>
-</animation>
-
-<animation>
-	<type>select</type>
-		<object-name>LabelText</object-name>
-	<condition>
-		<property>/sim/panel-hotspots</property>
-	</condition>
-</animation>
-
 </PropertyList>

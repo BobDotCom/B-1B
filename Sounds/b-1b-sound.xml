@@ -590,6 +590,7 @@
 		  </equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			  <value>1</value>
 		  </equals>
 	          </and>
 	  </condition>
@@ -624,6 +625,7 @@
 		  </equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			  <value>1</value>
 		  </equals>
 	          </and>
 	  </condition>
@@ -709,6 +711,7 @@
 		  </equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			  <value>1</value>
 		  </equals>
 	          </and>
 	  </condition>
@@ -743,6 +746,7 @@
 		  </equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			  <value>1</value>
 		  </equals>
 	          </and>
 	  </condition>
@@ -786,6 +790,7 @@
 		  </equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			 <value>1</value>
 		  </equals>
 	          </and>
 	  </condition>
@@ -829,6 +834,7 @@
 		  </equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			  <value>1</value>
 		  </equals>
 	          </and>
 	  </condition>
@@ -863,6 +869,7 @@
 		  </equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			  <value>1</value>
 		  </equals>
 	          </and>
 	  </condition>
@@ -906,6 +913,7 @@
 		  </equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			  <value>1</value>
 		  </equals>
 	          </and>
 	  </condition>
@@ -948,6 +956,7 @@
 		</equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			  <value>1</value>
 		  </equals>
 	</condition>
 	<position>
@@ -980,6 +989,7 @@
 		</equals>
 		  <equals>
 			<property>/sim/current-view/internal</property>
+			  <value>1</value>
 		  </equals>
 	</condition>
 	<position>
