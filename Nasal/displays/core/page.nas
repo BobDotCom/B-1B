@@ -94,6 +94,9 @@ var DisplayPageSupport = {
 						.hide();
 		layer.group = me.tempGrp;
 		layer.device = me;
+		# Layers use the same declarative SVG configuration as pages. Parse the
+		# artwork and resolve configured element keys before layer setup uses them.
+		me.initPageSvg(layer);
 		layer.setup();
 	},
 };
