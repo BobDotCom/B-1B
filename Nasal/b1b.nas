@@ -31,7 +31,7 @@ var SubSystem_Main = {
             # APHeadingBug:         "autopilot/settings/heading-bug-deg",
             targetSpeed:          "autopilot/settings/target-speed-kt",
             targetAltitude:       "autopilot/settings/target-altitude-ft",
-            vFps:                 "systems/computers/adc_switch/vertical_speed_fps_output", # Multiply by 60 for fpm
+            vFpm:                 "/systems/computers/adc_switch/vertical_speed_fpm_output",
             FrameRate :           "sim/frame-rate",
             frame_rate_worst:     "sim/frame-rate-worst",
             alt_true_ft:          "position/altitude-ft",

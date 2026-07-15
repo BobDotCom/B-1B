@@ -101,7 +101,7 @@ var PagePFD1 = {
 	    #print(me.roll_pointer.getCenter());
 	    me["tspeed"].updateText(sprintf("%d", noti.getproper("targetSpeed")));
 
-            me["fpm-indicator"].setTranslation(0, -math.clamp(math.clamp((noti.getproper("vFps")*60), -1000, 1000) + (noti.getproper("vFps")*60), -4000, 4000) / 1000 * 35);
+            me["fpm-indicator"].setTranslation(0, -math.clamp(math.clamp(noti.getproper("vFpm"), -1000, 1000) + noti.getproper("vFpm"), -4000, 4000) / 1000 * 35);
             me["gforce"].setTranslation(0, (noti.getproper("Nz")-1)*29);
             me["speed"].setTranslation(0, (noti.getproper("ias")-50)/20*28);
 
