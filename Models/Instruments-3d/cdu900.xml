@@ -57,12 +57,9 @@ sweat by maggse
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
 
-  <type type="string">number-value</type>
+  <type type="string">text-value</type>
   <property type="string">instrumentation/cdu900/line2</property>
-  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
-  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
-  <format type="string">%5.2lf</format> <!-- the printf() format to display the value -->
-  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <format type="string">%s</format>
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
@@ -130,12 +127,9 @@ sweat by maggse
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
 
-  <type type="string">number-value</type>
+  <type type="string">text-value</type>
   <property type="string">instrumentation/cdu900/line4</property>
-  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
-  <offset type="double">0.0</offset> <!-- optional, used to shift the propertie's value -->
-  <format type="string">%5.2lf</format> <!-- the printf() format to display the value -->
-  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <format type="string">%s</format>
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
@@ -203,12 +197,9 @@ sweat by maggse
   <axis-alignment>yz-plane</axis-alignment>
   <alignment>right-center</alignment>
 
-  <type type="string">number-value</type>
+  <type type="string">text-value</type>
   <property type="string">instrumentation/cdu900/line6</property>
-  <factor type="double">1.0</factor> <!-- optional, used to scale the propertie's value -->
-  <offset type="double">0.0</offset> <!--  optional, used to shift the propertie's value -->
-  <format type="string">%5.2lf</format> <!-- the printf() format to display the value -->
-  <truncate type="bool">false</truncate> <!-- set to true to truncate to an integer value -->
+  <format type="string">%s</format>
   <layout>left-to-right</layout>
 
   <font>lucida.txf</font>
@@ -509,6 +500,208 @@ sweat by maggse
     <binding>
       <command>nasal</command>
       <script>b1b.cdu_set(-10,0.05)</script>
+    </binding>
+  </action>
+</animation>
+
+<!-- inputting commands -->
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.edit</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.edit_check()</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.clr</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.cdu_inputting = 0;b1b.inputed_string = "";</script>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.mark</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.confirm_input()</script>
+    </binding>
+  </action>
+</animation>
+
+<!-- inputting keys -->
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.1</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.one_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.2</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.two_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.3</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.three_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.4</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.four_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.5</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.five_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.6</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.six_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.7</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.seven_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.8</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.eight_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.9</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.nine_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.0</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.zero_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.stop</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.dec_key = 1</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>cdu_b.minus</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+    <binding>
+      <command>nasal</command>
+      <script>b1b.hyphen_key = 1</script>
     </binding>
   </action>
 </animation>
