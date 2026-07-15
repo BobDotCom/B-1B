@@ -136,15 +136,15 @@ sweat by maggse
 	 <path>Aircraft/B-1B/Models/Lights/posgreen.xml</path>
 </model>
 
-<!--model-->
+<model>
 	 <name>Whitelightleft</name>
 	 <path>Aircraft/B-1B/Models/Lights/Whitelightleft.xml</path>
-<!--/model-->
+</model>
 
-<!--model-->
+<model>
 	 <name>Whitelightright</name>
 	 <path>Aircraft/B-1B/Models/Lights/Whitelightright.xml</path>
-<!--/model-->
+</model>
  
 <model>
 	 <name>refuellight</name>
@@ -171,38 +171,7 @@ sweat by maggse
 	 <path>Aircraft/B-1B/Models/Lights/strobe-wing-right.xml</path>
 </model>
 
-
-  <animation>
-	 <type>spin</type>
-	 <object-name>turbine_4.001</object-name>
-	 <property>engines/engine[3]/n2</property>
-	 <!--<interpolation>
-		 <entry>
-			 <ind>72.0</ind>
-			 <dep>2</dep>
-		 </entry>
-		 <entry>
-			 <ind>78.0</ind>
-			 <dep>10.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>100.0</ind>
-			 <dep>50.0</dep>
-		 </entry>
-	 </interpolation>-->
-	 <center>
-		 <x-m>-15.993</x-m>
-		 <y-m>4.160</y-m>
-		 <z-m>-1.680</z-m>
-	 </center>
-	 <axis>
-		 <x>1</x>
-		 <y>0</y>
-		 <z>0</z>
-	 </axis>
- </animation>
-
- <animation>
+<!--  <animation>
   <type>dist-scale</type>
   <object-name>strobe2</object-name>
   <interpolation>
@@ -217,7 +186,7 @@ sweat by maggse
     <y-m>-4.46</y-m>
     <z-m>-0.80</z-m>
   </center>
-</animation>
+</animation> -->
  
  
  <!-- engine outlets -->
@@ -323,24 +292,28 @@ sweat by maggse
 	 <type>spin</type>
 	 <object-name>turbine_1.001</object-name>
 	 <property>engines/engine[0]/n2</property>
-	 <!-- <interpolation>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
 		 <entry>
 			 <ind>72.0</ind>
-			 <dep>-2.0</dep>
+			 <dep>400</dep>
 		 </entry>
 		 <entry>
 			 <ind>78.0</ind>
-			 <dep>-10.0</dep>
+			 <dep>700.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>100.0</ind>
-			 <dep>-50.0</dep>
+			 <dep>900.0</dep>
 		 </entry>
-	 </interpolation -->
+	 </interpolation>
 	 <center>
 		 <x-m>-15.993</x-m>
-		 <y-m>-4.112</y-m>
-		 <z-m>-1.679</z-m>
+		 <y-m>-4.116</y-m>
+		 <z-m>-1.678</z-m>
 	 </center>
 	 <axis>
 		 <x>1</x>
@@ -353,23 +326,27 @@ sweat by maggse
 	 <type>spin</type>
 	 <object-name>turbine_2.001</object-name>
 	 <property>engines/engine[1]/n2</property>
-	 <!--<interpolation>
+	 <interpolation>
 		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	         <entry>
 			 <ind>72.0</ind>
-			 <dep>2</dep>
+			 <dep>400</dep>
 		 </entry>
 		 <entry>
 			 <ind>78.0</ind>
-			 <dep>10.0</dep>
+			 <dep>700.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>100.0</ind>
-			 <dep>50.0</dep>
+			 <dep>900.0</dep>
 		 </entry>
-	 </interpolation>-->
+	 </interpolation>
 	 <center>
 		 <x-m>-15.993</x-m>
-		 <y-m>-2.492</y-m>
+		 <y-m>-2.483</y-m>
 		 <z-m>-1.687</z-m>
 	 </center>
 	 <axis>
@@ -383,23 +360,27 @@ sweat by maggse
 	 <type>spin</type>
 	 <object-name>turbine_3.001</object-name>
 	 <property>engines/engine[2]/n2</property>
-	 <!--<interpolation>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
 		 <entry>
 			 <ind>72.0</ind>
-			 <dep>-2</dep>
+			 <dep>400</dep>
 		 </entry>
 		 <entry>
 			 <ind>78.0</ind>
-			 <dep>-10.0</dep>
+			 <dep>700.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>100.0</ind>
-			 <dep>-50.0</dep>
+			 <dep>900.0</dep>
 		 </entry>
-	 </interpolation>-->
+	 </interpolation>
 	 <center>
 		 <x-m>-15.993</x-m>
-		 <y-m>2.533</y-m>
+		 <y-m>2.532</y-m>
 		 <z-m>-1.678</z-m>
 	 </center>
 	 <axis>
@@ -413,20 +394,24 @@ sweat by maggse
 	 <type>spin</type>
 	 <object-name>turbine_4.001</object-name>
 	 <property>engines/engine[3]/n2</property>
-	 <!--<interpolation>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
 		 <entry>
 			 <ind>72.0</ind>
-			 <dep>2</dep>
+			 <dep>400</dep>
 		 </entry>
 		 <entry>
 			 <ind>78.0</ind>
-			 <dep>10.0</dep>
+			 <dep>700.0</dep>
 		 </entry>
 		 <entry>
 			 <ind>100.0</ind>
-			 <dep>50.0</dep>
+			 <dep>900.0</dep>
 		 </entry>
-	 </interpolation>-->
+	 </interpolation>
 	 <center>
 		 <x-m>-15.993</x-m>
 		 <y-m>4.160</y-m>
@@ -649,161 +634,78 @@ sweat by maggse
     <pitch-deg>   0 </pitch-deg>
   </offsets>
 </model>
-	
 
-<!-- particle system for engine afterburner-->
 
-<model>
-  <name>afterburner1</name>
-  <path>Aircraft/B-1B/Models/Effects/afterburner1.xml</path>
-	 <condition>
-		 <greater-than>
-			 <property>/sim/time/sun-angle-rad</property>
-			 <value>1.53</value>
-		 </greater-than>
-	 </condition>
-	<offsets>
-    <x-m>8.700</x-m>
+	<!-- Engine afterburners -->
+
+	<model>
+		<name>AB_Flame0</name>
+		<path>Aircraft/B-1B/Models/Effects/afterburner_0.xml</path>
+		<offsets>
+			<x-m>8.700</x-m>
 		<y-m>-4.11</y-m>
 		<z-m>-1.68</z-m>
-    <heading-deg>0</heading-deg>
-    <roll-deg>    0 </roll-deg>
-    <pitch-deg>   0 </pitch-deg>
-	</offsets>
-</model>
-	
-<model>
-  <name>afterburner2</name>
-  <path>Aircraft/B-1B/Models/Effects/afterburner2.xml</path>
-	 <condition>
-		 <greater-than>
-			 <property>/sim/time/sun-angle-rad</property>
-			 <value>1.53</value>
-		 </greater-than>
-	 </condition>
-	<offsets>
-    <x-m>8.700</x-m>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>AB_Flame0</object-name>
+		<condition>
+			<property>sim/multiplay/generic/bool[0]</property>
+		</condition>
+	</animation>
+	<model>
+		<name>AB_Flame1</name>
+		<path>Aircraft/B-1B/Models/Effects/afterburner_1.xml</path>
+		<offsets>
+			<x-m>8.700</x-m>
 		<y-m>-2.48</y-m>
 		<z-m>-1.68</z-m>
-    <heading-deg>0</heading-deg>
-    <roll-deg>    0 </roll-deg>
-    <pitch-deg>   0 </pitch-deg>
-	</offsets>
-</model>
-	
-<model>
-  <name>afterburner3</name>
-  <path>Aircraft/B-1B/Models/Effects/afterburner3.xml</path>
-	 <condition>
-		 <greater-than>
-			 <property>/sim/time/sun-angle-rad</property>
-			 <value>1.53</value>
-		 </greater-than>
-	 </condition>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>AB_Flame1</object-name>
+		<condition>
+			<property>sim/multiplay/generic/bool[1]</property>
+		</condition>
+	</animation>
+	<model>
+		<name>AB_Flame2</name>
+		<path>Aircraft/B-1B/Models/Effects/afterburner_2.xml</path>
   <offsets>
-    <x-m>8.700</x-m>
+	  <x-m>8.700</x-m>
     <y-m>2.48</y-m>
     <z-m>-1.68</z-m>
-    <heading-deg>0</heading-deg>
-    <roll-deg>    0 </roll-deg>
-    <pitch-deg>   0 </pitch-deg>
   </offsets>
-</model>
-	
-<model>
-  <name>afterburner4</name>
-  <path>Aircraft/B-1B/Models/Effects/afterburner4.xml</path>
-	 <condition>
-		 <greater-than>
-			 <property>/sim/time/sun-angle-rad</property>
-			 <value>1.53</value>
-		 </greater-than>
-	 </condition>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>AB_Flame2</object-name>
+		<condition>
+			<property>sim/multiplay/generic/bool[2]</property>
+		</condition>
+	</animation>
+	<model>
+		<name>AB_Flame3</name>
+		<path>Aircraft/B-1B/Models/Effects/afterburner_3.xml</path>
   <offsets>
-    <x-m>8.700</x-m>
-    <y-m>4.11</y-m>
+	  <x-m>8.700</x-m>
+	  <y-m>4.11</y-m>
     <z-m>-1.68</z-m>
-    <heading-deg>0</heading-deg>
-    <roll-deg>    0 </roll-deg>
-    <pitch-deg>   0 </pitch-deg>
   </offsets>
-</model>
-	
-<model>
-  <name>afterburner5</name>
-  <path>Aircraft/B-1B/Models/Effects/afterburner5.xml</path>
-	 <condition>
-		 <less-than>
-			 <property>/sim/time/sun-angle-rad</property>
-			 <value>1.53</value>
-		 </less-than>
-	  </condition>
-	<offsets>
-    <x-m>8.700</x-m>
-		<y-m>-4.11</y-m>
-		<z-m>-1.68</z-m>
-    <heading-deg>0</heading-deg>
-    <roll-deg>    0 </roll-deg>
-    <pitch-deg>   0 </pitch-deg>
-	</offsets>
-</model>
-	
-<model>
-  <name>afterburner6</name>
-  <path>Aircraft/B-1B/Models/Effects/afterburner6.xml</path>
-  	 <condition>
-		 <less-than>
-			 <property>/sim/time/sun-angle-rad</property>
-			 <value>1.53</value>
-		 </less-than>
-      </condition>
-	<offsets>
-    <x-m>8.700</x-m>
-		<y-m>-2.48</y-m>
-		<z-m>-1.68</z-m>
-    <heading-deg>0</heading-deg>
-    <roll-deg>    0 </roll-deg>
-    <pitch-deg>   0 </pitch-deg>
-	</offsets>
-</model>
-	
-<model>
-  <name>afterburner7</name>
-  <path>Aircraft/B-1B/Models/Effects/afterburner7.xml</path>
-  	 <condition>
-		 <less-than>
-			 <property>/sim/time/sun-angle-rad</property>
-			 <value>1.53</value>
-		 </less-than>
-	 </condition>
-  <offsets>
-    <x-m>8.700</x-m>
-    <y-m>2.48</y-m>
-    <z-m>-1.68</z-m>
-    <heading-deg>0</heading-deg>
-    <roll-deg>    0 </roll-deg>
-    <pitch-deg>   0 </pitch-deg>
-  </offsets>
-</model>
-	
-<model>
-  <name>afterburner8</name>
-  <path>Aircraft/B-1B/Models/Effects/afterburner8.xml</path>
-  	 <condition>
-		 <less-than>
-			 <property>/sim/time/sun-angle-rad</property>
-			 <value>1.53</value>
-		 </less-than>
-	 </condition>
-  <offsets>
-    <x-m>8.700</x-m>
-    <y-m>4.11</y-m>
-    <z-m>-1.68</z-m>
-    <heading-deg>0</heading-deg>
-    <roll-deg>    0 </roll-deg>
-    <pitch-deg>   0 </pitch-deg>
-  </offsets>
-</model>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>AB_Flame3</object-name>
+		<condition>
+			<property>sim/multiplay/generic/bool[3]</property>
+		</condition>
+	</animation>
 	
 <!-- add wing contrails/vapour -->
 		
@@ -987,6 +889,32 @@ sweat by maggse
 
   <animation>
 	  <type>rotate</type>
+          <object-name>Whitelightright</object-name>
+	  <property>rotors/main/blade[0]/position-deg</property>
+	  <interpolation>
+		  <entry>
+			  <ind>0.0</ind>
+			  <dep>0.0</dep>
+		  </entry>
+		  <entry>
+			  <ind>1.0</ind>
+			  <dep>21.7</dep>
+		  </entry>
+	  </interpolation>
+	  <center>
+		  <x-m>0.1</x-m>
+		  <y-m>3.99</y-m>
+		  <z-m>0.00</z-m>
+	  </center>
+	  <axis>
+		  <x>0</x>
+		  <y>0</y>
+		  <z>1</z>
+	  </axis>
+ </animation>
+
+  <animation>
+	  <type>rotate</type>
           <object-name>posleft</object-name>
 	  <property>rotors/main/blade[0]/position-deg</property>
 	  <interpolation>
@@ -1010,6 +938,33 @@ sweat by maggse
 		  <z>-1</z>
 	  </axis>
  </animation>
-	
+
+  <animation>
+	  <type>rotate</type>
+          <object-name>Whitelightleft</object-name>
+	  <property>rotors/main/blade[0]/position-deg</property>
+	  <interpolation>
+		  <entry>
+			  <ind>0.0</ind>
+			  <dep>0.0</dep>
+		  </entry>
+		  <entry>
+			  <ind>1.0</ind>
+			  <dep>21.5</dep>
+		  </entry>
+	  </interpolation>
+	  <center>
+		  <x-m>0.1</x-m>
+		  <y-m>-3.99</y-m>
+		  <z-m>0.00</z-m>
+	  </center>
+	  <axis>
+		  <x>0</x>
+		  <y>0</y>
+		  <z>-1</z>
+	  </axis>
+ </animation>
+
+
 
 </PropertyList>

@@ -9,7 +9,7 @@ maggse
  <animation>
    <type>rotate</type>
    <object-name>sweep</object-name>
-   <property>controls/flight/wing-sweep</property>
+   <property>surface-positions/wing-sweep-pos-norm</property>
 <interpolation>
      <entry>
        <ind>0</ind>
@@ -47,7 +47,7 @@ maggse
  <animation>
 	 <type>rotate</type>
 	 <object-name>flaps</object-name>
-	 <property>controls/flight/flaps</property>
+	 <property>surface-positions/flap-pos-norm</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0</ind>

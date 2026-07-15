@@ -2,13 +2,12 @@
 
 <PropertyList>
 
-  <path>fg-clock.ac</path>    ### NOT to be used in other variants of the BONE ###
+  <path>clock.ac</path>
 
   <animation>
     <object-name>AdjKnob.h</object-name>
     <object-name>AdjKnob.m</object-name>
     <object-name>fond</object-name>
-    <object-name>tenths</object-name>
     <object-name>face</object-name>
     <object-name>hour</object-name>
     <object-name>minute</object-name>
@@ -18,7 +17,6 @@
 
   <animation>
     <type>material</type>
-    <object-name>tenths</object-name>
     <object-name>face</object-name>
     <object-name>hour</object-name>
     <object-name>minute</object-name>
@@ -27,7 +25,7 @@
 		 <red>0.1</red>
 		 <green>0.9</green>
 		 <blue>0.5</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
   </animation>
 
@@ -82,21 +80,5 @@
     </axis>
   </animation>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>tenths</object-name>
-    <property>/instrumentation/clock/indicated-sec</property>
-    <factor>1</factor>
-      <center>
-   <x-m> 0.005699</x-m>
-   <y-m>-0.010095</y-m>
-   <z-m> 0.000319</z-m>
-  </center>
-    <axis>
-      <x> -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
 
 </PropertyList>

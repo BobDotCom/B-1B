@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<system name="Engine Indicators">
+
+    <property value="0">/systems/failures/engines/engine[0]/fire</property>
+    <property value="0">/systems/failures/engines/engine[1]/fire</property>
+    <property value="0">/systems/failures/engines/engine[2]/fire</property>
+    <property value="0">/systems/failures/engines/engine[3]/fire</property>
+
+    <channel name="end_ind">
+        <!-- ENG TEMP -->
+        <!-- Convert the engine temp from Fahrenheit to Celsius. C = (F - 32) * 5/9 -->
+        <fcs_function name="/systems/engines/engine[0]/degF-degC">
+            <function>
+                <product>
+                    <difference>
+                        <property>/engines/engine[0]/egt-degf</property>
+                        <value>32</value>
+                    </difference>
+                    <quotient>
+                        <value>5</value>
+                        <value>9</value>
+                    </quotient>
+                </product>
+            </function>
+        </fcs_function>
+        <fcs_function name="/systems/engines/engine[1]/degF-degC">
+            <function>
+                <product>
+                    <difference>
+                        <property>/engines/engine[1]/egt-degf</property>
+                        <value>32</value>
+                    </difference>
+                    <quotient>
+                        <value>5</value>
+                        <value>9</value>
+                    </quotient>
+                </product>
+            </function>
+        </fcs_function>
+        <fcs_function name="/systems/engines/engine[2]/degF-degC">
+            <function>
+                <product>
+                    <difference>
+                        <property>/engines/engine[2]/egt-degf</property>
+                        <value>32</value>
+                    </difference>
+                    <quotient>
+                        <value>5</value>
+                        <value>9</value>
+                    </quotient>
+                </product>
+            </function>
+        </fcs_function>
+        <fcs_function name="/systems/engines/engine[3]/degF-degC">
+            <function>
+                <product>
+                    <difference>
+                        <property>/engines/engine[3]/egt-degf</property>
+                        <value>32</value>
+                    </difference>
+                    <quotient>
+                        <value>5</value>
+                        <value>9</value>
+                    </quotient>
+                </product>
+            </function>
+        </fcs_function>
+    </channel>
+
+    <channel name="eng_fires">
+
+	<switch name="/systems/engines/engine[0]/current_temperature_degC-cmd">
+		<default value="1000"/>
+		<test logic="AND" value="/systems/engines/engine[0]/degF-degC">
+                       /systems/failures/engines/engine[0]/fire eq 0
+		</test>
+	</switch>
+
+	<actuator name="/systems/engines/engine[0]/current_temperature_degC">
+            <input>/systems/engines/engine[0]/current_temperature_degC-cmd</input>
+            <rate_limit sense="decr">60</rate_limit> 
+            <rate_limit sense="incr">60</rate_limit> 
+            <clipto> 
+             <min>/systems/engines/engine[0]/degF-degC</min>
+             <max>1000</max>
+            </clipto>
+        </actuator>
+
+	<switch name="/systems/engines/engine[1]/current_temperature_degC-cmd">
+		<default value="1000"/>
+		<test logic="AND" value="/systems/engines/engine[1]/degF-degC">
+                       /systems/failures/engines/engine[1]/fire eq 0
+		</test>
+	</switch>
+
+	<actuator name="/systems/engines/engine[1]/current_temperature_degC">
+            <input>/systems/engines/engine[1]/current_temperature_degC-cmd</input>
+            <rate_limit sense="decr">60</rate_limit> 
+            <rate_limit sense="incr">60</rate_limit> 
+            <clipto> 
+             <min>/systems/engines/engine[1]/degF-degC</min>
+             <max>1000</max>
+            </clipto>
+        </actuator>
+
+	<switch name="/systems/engines/engine[2]/current_temperature_degC-cmd">
+		<default value="1000"/>
+		<test logic="AND" value="/systems/engines/engine[2]/degF-degC">
+                       /systems/failures/engines/engine[2]/fire eq 0
+		</test>
+	</switch>
+
+	<actuator name="/systems/engines/engine[2]/current_temperature_degC">
+            <input>/systems/engines/engine[2]/current_temperature_degC-cmd</input>
+            <rate_limit sense="decr">60</rate_limit> 
+            <rate_limit sense="incr">60</rate_limit> 
+            <clipto> 
+             <min>/systems/engines/engine[2]/degF-degC</min>
+             <max>1000</max>
+            </clipto>
+        </actuator>
+
+	<switch name="/systems/engines/engine[3]/current_temperature_degC-cmd">
+		<default value="1000"/>
+		<test logic="AND" value="/systems/engines/engine[3]/degF-degC">
+                       /systems/failures/engines/engine[3]/fire eq 0
+		</test>
+	</switch>
+
+	<actuator name="/systems/engines/engine[3]/current_temperature_degC">
+            <input>/systems/engines/engine[3]/current_temperature_degC-cmd</input>
+            <rate_limit sense="decr">60</rate_limit> 
+            <rate_limit sense="incr">60</rate_limit> 
+            <clipto> 
+             <min>/systems/engines/engine[3]/degF-degC</min>
+             <max>1000</max>
+            </clipto>
+        </actuator>
+
+    </channel>
+
+</system>

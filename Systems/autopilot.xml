@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<system name="Landing Gear">
+
+    <property value="0">/controls/switches/apmode/engage</property>
+    <property value="0">/controls/switches/apmode/alt</property>
+    <property value="0">/controls/switches/apmode/as</property>
+    <property value="0">/controls/switches/apmode/auto_throt</property>
+    <property value="0">/controls/switches/apmode/flt_dir</property>
+
+  <channel name="Engage mode">
+
+<!-- Roll half  -->
+
+	<actuator name="/autopilot/settings/attitudes_when_set/roll-deg">
+            	<input>/systems/computers/gss_switch/roll_output</input>
+            	<rate_limit sense="decr">/autopilot/settings/attitudes_when_set/roll-deg-switch</rate_limit> 
+            	<rate_limit sense="incr">/autopilot/settings/attitudes_when_set/roll-deg-switch</rate_limit> 
+       	</actuator>
+
+   <switch name="/autopilot/settings/attitudes_when_set/roll-deg-switch">
+     <default value="500"/>
+     <test logic="AND" value="0">
+         /controls/switches/apmode/engage eq 1
+     </test>
+   </switch>
+
+   <switch name="/autopilot/settings/target-roll-deg">
+     <default value="0"/>
+     <test logic="AND" value="/autopilot/settings/attitudes_when_set/roll-deg">
+         /controls/switches/apmode/engage eq 1
+           <test logic="OR">
+            /systems/computers/gss_switch/roll_output lt -7
+            /systems/computers/gss_switch/roll_output gt 7
+	  </test>
+     </test>
+     <test logic="OR" value="30">
+         /systems/computers/gss_switch/roll_output ge 30
+         /systems/computers/gss_switch/roll_output le -30
+     </test>
+   </switch>
+
+<!-- Pitch half  -->
+
+	<actuator name="/autopilot/settings/attitudes_when_set/pitch-deg">
+            	<input>/systems/computers/gss_switch/pitch_output</input>
+            	<rate_limit sense="decr">/autopilot/settings/attitudes_when_set/pitch-deg-switch</rate_limit> 
+            	<rate_limit sense="incr">/autopilot/settings/attitudes_when_set/pitch-deg-switch</rate_limit> 
+       	</actuator>
+
+   <switch name="/autopilot/settings/attitudes_when_set/pitch-deg-switch">
+     <default value="500"/>
+     <test logic="AND" value="0">
+         /controls/switches/apmode/engage eq 1
+     </test>
+   </switch>
+
+   <switch name="/autopilot/settings/target-pitch-deg">
+     <default value="0"/>
+     <test logic="AND" value="/autopilot/settings/attitudes_when_set/pitch-deg">
+         /controls/switches/apmode/engage eq 1
+     </test>
+     <test logic="AND" value="15">
+         /systems/computers/gss_switch/pitch_output gt 15
+     </test>
+   </switch>
+
+  </channel>
+
+  <channel name="Alt mode">
+
+	<actuator name="/autopilot/settings/attitudes_when_set/alt">
+            	<input>/systems/computers/adc_switch/indicated-altitude-ft_output</input>
+            	<rate_limit sense="decr">/autopilot/settings/attitudes_when_set/alt-switch</rate_limit> 
+            	<rate_limit sense="incr">/autopilot/settings/attitudes_when_set/alt-switch</rate_limit> 
+       	</actuator>
+
+   <switch name="/autopilot/settings/attitudes_when_set/alt-switch">
+     <default value="500"/>
+     <test logic="AND" value="0">
+         /controls/switches/apmode/alt eq 1
+     </test>
+   </switch>
+
+   <switch name="/autopilot/settings/target-altitude-ft">
+     <default value="0"/>
+     <test logic="AND" value="/autopilot/settings/attitudes_when_set/alt">
+         /controls/switches/apmode/alt eq 1                                             
+     </test>
+   </switch>
+
+  </channel>
+
+  <channel name="As mode">
+
+	<actuator name="/autopilot/settings/attitudes_when_set/as">
+            	<input>/systems/computers/adc_switch/indicated_airspeed_knts_output</input>
+            	<rate_limit sense="decr">/autopilot/settings/attitudes_when_set/as-switch</rate_limit> 
+            	<rate_limit sense="incr">/autopilot/settings/attitudes_when_set/as-switch</rate_limit> 
+       	</actuator>
+
+   <switch name="/autopilot/settings/attitudes_when_set/as-switch">
+     <default value="500"/>
+     <test logic="AND" value="0">
+         /controls/switches/apmode/as eq 1
+     </test>
+   </switch>
+
+   <switch name="/autopilot/settings/target-speed-kt">
+     <default value="0"/>
+     <test logic="AND" value="/autopilot/settings/attitudes_when_set/as">
+         /controls/switches/apmode/as eq 1
+     </test>
+            <test logic="AND" value="/autopilot/settings/attitudes_when_set/autothrot">
+         /controls/switches/apmode/auto_throt eq 1                                                                                   
+     </test>
+   </switch>
+
+  </channel>
+
+  <channel name="flt dir mode">
+
+  <switch name="/systems/computers/flt_dir/curent_value">
+     <default value="0"/>
+     <test logic="AND" value="/systems/computers/hsi/heading_knob/output">
+         /controls/switches/fltdir eq 0.1
+     </test>
+     <test logic="AND" value="/instrumentation/gps/desired-course-deg">
+         /controls/switches/fltdir eq 0.2
+     </test>
+   </switch>
+
+   <switch name="/autopilot/settings/heading-bug-deg">
+     <default value="0"/>
+     <test logic="AND" value="/systems/computers/flt_dir/curent_value">
+         /controls/switches/apmode/flt_dir eq 1                                             
+     </test>
+   </switch>
+
+  </channel>
+
+  <channel name="Auto throttle mode">
+
+	<actuator name="/autopilot/settings/attitudes_when_set/autothrot">
+            	<input>/systems/computers/adc_switch/indicated_airspeed_knts_output</input>
+            	<rate_limit sense="decr">/autopilot/settings/attitudes_when_set/autothrot-switch</rate_limit> 
+            	<rate_limit sense="incr">/autopilot/settings/attitudes_when_set/autothrot-switch</rate_limit> 
+       	</actuator>
+
+   <switch name="/autopilot/settings/attitudes_when_set/autothrot-switch">
+     <default value="500"/>
+     <test logic="AND" value="0">
+         /controls/switches/apmode/auto_throt eq 1
+     </test>
+   </switch>
+
+  </channel>
+
+</system>

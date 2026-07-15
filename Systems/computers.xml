@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+
+<system name="Computers">
+
+        <property value="0">/systems/failures/computers/gss[0]/heading_failure</property>
+        <property value="0">/systems/failures/computers/gss[0]/pitch_failure</property>
+        <property value="0">/systems/failures/computers/gss[0]/roll_failure</property>
+        <property value="0">/systems/failures/computers/gss[1]/heading_failure</property>
+        <property value="0">/systems/failures/computers/gss[1]/pitch_failure</property>
+        <property value="0">/systems/failures/computers/gss[1]/roll_failure</property>
+        <property value="0">/systems/failures/computers/hsi/miles_drums</property>
+        <property value="0">/systems/failures/computers/altitude_radar/channel_1</property>
+        <property value="0">/systems/failures/computers/altitude_radar/channel_2</property>
+        <property value="0">/systems/failures/instrumentation/transponder/transponder</property>
+        <property value="0">/systems/failures/instrumentation/transponder/mode_1</property>
+        <property value="0">/systems/failures/instrumentation/transponder/mode_2</property>
+        <property value="0">/systems/failures/instrumentation/transponder/mode_3A</property>
+        <property value="1">/systems/pitot[1]/serviceable</property>
+        <property value="1">/systems/static[1]/serviceable</property>
+
+<channel name="GSS 1" execrate="8">
+
+            <!-- Heading -->
+
+		<pure_gain name="/systems/computers/gss[0]/heading/output/output">
+			<input>/instrumentation/heading-indicator/indicated-heading-deg</input>
+			<gain>1.0</gain>
+		</pure_gain>
+ 
+            <!-- Pitch -->
+
+		<actuator name="/systems/computers/gss[0]/pitch/output/output">
+            		<input>/instrumentation/attitude-indicator/indicated-pitch-deg</input>
+            		<rate_limit sense="decr">/systems/computers/gss[0]/pitch/output/output_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/gss[0]/pitch/output/output_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/gss[0]/pitch/output/output_rate">
+			<default value="20"/>			
+                	<test logic="AND" value="0">
+					/systems/failures/computers/gss[0]/pitch_failure eq 1					
+			</test>
+		</switch>
+
+            <!-- Roll --> 
+
+		<actuator name="/systems/computers/gss[0]/roll/output/output">
+            		<input>/instrumentation/attitude-indicator/indicated-roll-deg</input>
+            		<rate_limit sense="decr">/systems/computers/gss[0]/roll/output/output_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/gss[0]/roll/output/output_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/gss[0]/roll/output/output_rate">
+			<default value="100"/>			
+                	<test logic="AND" value="0">
+					/systems/failures/computers/gss[0]/roll_failure eq 1					
+			</test>
+		</switch>
+
+</channel>
+
+<channel name="GSS 2" execrate="8">
+
+            <!-- Heading -->
+
+		<pure_gain name="/systems/computers/gss[1]/heading/output/output">
+			<input>/instrumentation/heading-indicator/indicated-heading-deg</input>
+			<gain>1.0</gain>
+		</pure_gain>
+
+            <!-- Pitch -->
+
+		<actuator name="/systems/computers/gss[1]/pitch/output/output">
+            		<input>/instrumentation/attitude-indicator/indicated-pitch-deg</input>
+            		<rate_limit sense="decr">/systems/computers/gss[1]/pitch/output/output_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/gss[1]/pitch/output/output_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/gss[1]/pitch/output/output_rate">
+			<default value="20"/>			
+                	<test logic="AND" value="0">
+					/systems/failures/computers/gss[1]/pitch_failure eq 1					
+			</test>
+		</switch>
+
+            <!-- Roll --> 
+
+		<actuator name="/systems/computers/gss[1]/roll/output/output">
+            		<input>/instrumentation/attitude-indicator/indicated-roll-deg</input>
+            		<rate_limit sense="decr">/systems/computers/gss[1]/roll/output/output_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/gss[1]/roll/output/output_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/gss[1]/roll/output/output_rate">
+			<default value="100"/>			
+                	<test logic="AND" value="0">
+					/systems/failures/computers/gss[1]/roll_failure eq 1					
+			</test>
+		</switch>
+
+</channel>
+
+<channel name="GSS Switch" execrate="8">
+
+		<switch name="/systems/computers/gss_switch/heading_output">
+			<default value="/systems/computers/gss[0]/heading/output/output"/>			
+                	<test logic="AND" value="/systems/computers/gss[1]/heading/output/output">
+					/controls/switches/HDG-select-switch eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/computers/gss_switch/roll_output">
+			<default value="/systems/computers/gss[0]/roll/output/output"/>			
+                	<test logic="AND" value="/systems/computers/gss[1]/roll/output/output">
+					/controls/switches/HDG-select-switch eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/computers/gss_switch/pitch_output">
+			<default value="/systems/computers/gss[0]/pitch/output/output"/>			
+                	<test logic="AND" value="/systems/computers/gss[1]/pitch/output/output">
+					/controls/switches/HDG-select-switch eq 1
+			</test>
+		</switch>
+
+
+</channel>
+
+<channel name="ADC1" execrate="8">
+
+		<switch name="/systems/computers/adc[1]/altitide/indicated-altitude-ft-rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-1/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[1]/altitide/indicated-altitude-ft">
+            		<input>/instrumentation/altimeter/indicated-altitude-ft</input>
+            		<rate_limit sense="decr">/systems/computers/adc[1]/altitide/indicated-altitude-ft-rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[1]/altitide/indicated-altitude-ft-rate</rate_limit> 
+       		</actuator>
+
+
+		<switch name="/systems/computers/adc[1]/altitide/pressure-inhg-rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-1/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[1]/altitide/pressure-inhg">
+            		<input>/instrumentation/altimeter/setting-inhg</input>
+            		<rate_limit sense="decr">/systems/computers/adc[1]/altitide/pressure-inhg-rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[1]/altitide/pressure-inhg-rate</rate_limit> 
+       		</actuator>
+
+
+		<switch name="/systems/computers/adc[1]/velocities/indicated_mach_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100"> 
+					/systems/electrical/bus/ac-1/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[1]/velocities/indicated_mach">
+            		<input>/instrumentation/airspeed-indicator/indicated-mach</input>
+            		<rate_limit sense="decr">/systems/computers/adc[1]/velocities/indicated_mach_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[1]/velocities/indicated_mach_rate</rate_limit> 
+       		</actuator>
+
+
+		<switch name="/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-1/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm">
+            		<input>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</input>
+            		<rate_limit sense="decr">/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/adc[1]/airspeed/true_airspeed_knts_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-1/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[1]/airspeed/true_airspeed_knts">
+            		<input>/instrumentation/airspeed-indicator/true-speed-kt</input>
+            		<rate_limit sense="decr">/systems/computers/adc[1]/airspeed/true_airspeed_knts_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[1]/airspeed/true_airspeed_knts_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/adc[1]/airspeed/indicated_airspeed_knts_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-1/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[1]/airspeed/indicated_airspeed_knts">
+            		<input>/instrumentation/airspeed-indicator/indicated-speed-kt</input>
+            		<rate_limit sense="decr">/systems/computers/adc[1]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[1]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
+       		</actuator>
+
+</channel>
+
+<channel name="ADC2" execrate="8">
+
+		<switch name="/systems/computers/adc[2]/altitide/indicated-altitude-ft-rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-3/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/altitide/indicated-altitude-ft">
+            		<input>/instrumentation/altimeter[1]/indicated-altitude-ft</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/altitide/indicated-altitude-ft-rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/altitide/indicated-altitude-ft-rate</rate_limit> 
+       		</actuator>
+
+
+		<switch name="/systems/computers/adc[2]/altitide/pressure-inhg-rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-3/voltage gt 225
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/altitide/pressure-inhg">
+            		<input>/instrumentation/altimeter[1]/setting-inhg</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/altitide/pressure-inhg-rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/altitide/pressure-inhg-rate</rate_limit> 
+       		</actuator>
+
+
+		<switch name="/systems/computers/adc[2]/velocities/indicated_mach_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-3/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/velocities/indicated_mach">
+            		<input>/instrumentation/airspeed-indicator[1]/indicated-mach</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/velocities/indicated_mach_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/velocities/indicated_mach_rate</rate_limit> 
+       		</actuator>
+
+
+		<switch name="/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="100">
+					/systems/electrical/bus/ac-3/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm">
+            		<input>/instrumentation/vertical-speed-indicator[1]/indicated-speed-fpm</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/adc[2]/airspeed/true_airspeed_knts_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="1000">
+					/systems/electrical/bus/ac-3/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/airspeed/true_airspeed_knts">
+            		<input>/instrumentation/airspeed-indicator[1]/true-speed-kt</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/airspeed/true_airspeed_knts_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/airspeed/true_airspeed_knts_rate</rate_limit> 
+       		</actuator>
+
+		<switch name="/systems/computers/adc[2]/airspeed/indicated_airspeed_knts_rate">
+			<default value="0"/>			
+                	<test logic="AND" value="1000">
+					/systems/electrical/bus/ac-3/voltage gt 225
+					            <!-- Implement failures here -->
+			</test>
+		</switch>
+		<actuator name="/systems/computers/adc[2]/airspeed/indicated_airspeed_knts">
+            		<input>/instrumentation/airspeed-indicator[1]/indicated-speed-kt</input>
+            		<rate_limit sense="decr">/systems/computers/adc[2]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/adc[2]/airspeed/indicated_airspeed_knts_rate</rate_limit> 
+       		</actuator>
+
+</channel>
+
+<channel name="ADC Switch" execrate="8">
+
+		<switch name="/systems/computers/adc_switch/indicated-altitude-ft_output">
+			<default value="/systems/computers/adc[1]/altitide/indicated-altitude-ft"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/altitide/indicated-altitude-ft">
+					/controls/switches/ADC-select-switch eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/computers/adc_switch/pressure-inhg_output">
+			<default value="/systems/computers/adc[1]/altitide/pressure-inhg"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/altitide/pressure-inhg">
+					/controls/switches/ADC-select-switch eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/computers/adc_switch/indicated_mach_output">
+			<default value="/systems/computers/adc[1]/velocities/indicated_mach"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/velocities/indicated_mach">
+					/controls/switches/ADC-select-switch eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/computers/adc_switch/vertical_speed_fpm_output">
+			<default value="/systems/computers/adc[1]/vertical_fpm/vertical_speed_fpm"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/vertical_fpm/vertical_speed_fpm">
+					/controls/switches/ADC-select-switch eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/computers/adc_switch/true_airspeed_knts_output">
+			<default value="/systems/computers/adc[1]/airspeed/true_airspeed_knts"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/airspeed/true_airspeed_knts">
+					/controls/switches/ADC-select-switch eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/computers/adc_switch/indicated_airspeed_knts_output">
+			<default value="/systems/computers/adc[1]/airspeed/indicated_airspeed_knts"/>			
+                	<test logic="AND" value="/systems/computers/adc[2]/airspeed/indicated_airspeed_knts">
+					/controls/switches/ADC-select-switch eq 1
+			</test>
+		</switch>
+
+
+</channel>
+
+<channel name="HSI" execrate="8">
+
+            <!-- Needle -->
+
+		<switch name="/systems/computers/hsi/bearing-needle/current-value">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/adf/indicated-bearing-deg">
+					/instrumentation/adf/in-range eq 1
+					/controls/switches/fltdir eq 0.3
+			</test>	
+		        <test logic="AND" value="/instrumentation/tacan/indicated-bearing-offset-deg">
+					/instrumentation/tacan/in-range eq 1
+					/controls/switches/fltdir eq 0.5
+			</test>
+		</switch>
+		<switch name="/systems/computers/hsi/bearing-needle/rate">
+			<default value="0"/>
+                	<test logic="OR" value="50">
+				/systems/electrical/bus/ac-3/voltage gt 225
+				/systems/electrical/bus/ess/voltage gt 225
+			</test>			
+		</switch>
+		<actuator name="/systems/computers/hsi/bearing-needle/output">
+            		<input>/systems/computers/hsi/bearing-needle/current-value</input>
+            		<rate_limit sense="decr">/systems/computers/hsi/bearing-needle/rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/hsi/bearing-needle/rate</rate_limit> 
+       		</actuator>
+
+		<fcs_function name="/instrumentation/tacan/indicated-bearing-offset-deg">
+			<function>
+			 <product>
+				<difference>
+					<property>/orientation/heading-magnetic-deg</property>
+					<property>/instrumentation/tacan/indicated-bearing-true-deg</property>
+				</difference>
+                                <value>-1</value> 
+                         </product>
+			</function>
+			<min>-180</min>
+			<max>180</max>
+		</fcs_function>
+
+            <!-- Miles drums -->
+
+		<fcs_function name="/instrumentation/nav/nav-distance-mi">
+			<function>
+				<product>
+					<property>/instrumentation/nav/nav-distance</property>
+					<value>0.000621371</value>
+				</product>
+			</function>
+		</fcs_function>
+
+		<switch name="/systems/computers/hsi/miles_drums/output_value">
+			<default value="0"/>
+                	<test logic="AND" value="/autopilot/route-manager/wp/dist">
+					/controls/switches/fltdir eq 0.2
+					/autopilot/route-manager/active eq 1
+			</test>			
+                	<test logic="AND" value="/instrumentation/nav/nav-distance-mi">
+					/controls/switches/fltdir eq 0.4
+					/instrumentation/nav/in-range eq 1
+			</test>
+                	<test logic="AND" value="/instrumentation/tacan/indicated-distance-nm">
+					/controls/switches/fltdir eq 0.5
+					/instrumentation/tacan/in-range eq 1
+			</test>
+		</switch>
+
+		<switch name="/systems/computers/hsi/miles_drums/rate">
+			<default value="0"/>			
+                	<test logic="AND" value="5">
+					/systems/failures/computers/hsi/miles_drums ne 1
+					/systems/electrical/bus/ac-3/voltage gt 225
+					/systems/computers/hsi/miles_drums/output_value ne 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/computers/hsi/miles_drums/output">
+            		<input>/systems/computers/hsi/miles_drums/output_value</input>
+            		<rate_limit sense="decr">/systems/computers/hsi/miles_drums/rate</rate_limit> 
+            		<rate_limit sense="incr">/systems/computers/hsi/miles_drums/rate</rate_limit> 
+       		</actuator>
+
+</channel>
+
+<channel name="Radar Altitude" execrate="8">
+
+           <!-- Altitude radar and panel -->
+
+           <!-- Channel 1 -->
+
+		<switch name="/systems/computers/altitude_radar/channel_1/output">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/radar-altimeter/radar-altitude-ft">
+					/systems/electrical/bus/ac-1/voltage gt 220
+					/systems/failures/computers/altitude_radar/channel_1 eq 0
+					/systems/computers/altitude_radar/channel_1/warm_up/warmed_up eq 1
+			</test>				
+		</switch>
+
+		<switch name="/systems/computers/altitude_radar/channel_1/serviceable">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/systems/electrical/bus/ac-1/voltage gt 220
+					/systems/failures/computers/altitude_radar/channel_1 eq 0
+			</test>				
+		</switch>
+
+           <!-- Channel 1 warm up period-->
+
+		<switch name="/systems/computers/altitude_radar/channel_1/warm_up/warm_up_target">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/systems/electrical/bus/ac-1/voltage gt 220
+					/instrumentation/radar-altimeter/altimeter_switch gt 0	
+			</test>		
+		</switch>
+
+		<actuator name="/systems/computers/altitude_radar/channel_1/warm_up/warmed_up">
+            		<input>/systems/computers/altitude_radar/channel_1/warm_up/warm_up_target</input>
+            		<rate_limit sense="decr">0.0053</rate_limit> <!-- Three minutes-->
+            		<rate_limit sense="incr">0.0053</rate_limit> <!-- Three minutes-->
+       		</actuator>
+
+           <!-- Channel 2 -->
+
+		<switch name="/systems/computers/altitude_radar/channel_2/output">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/radar-altimeter/radar-altitude-ft">
+					/systems/electrical/bus/ac-3/voltage gt 220
+					/systems/failures/computers/altitude_radar/channel_2 eq 0
+					/systems/computers/altitude_radar/channel_2/warm_up/warmed_up eq 1
+			</test>				
+		</switch>
+
+
+		<switch name="/systems/computers/altitude_radar/channel_2/serviceable">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/systems/electrical/bus/ac-3/voltage gt 220
+					/systems/failures/computers/altitude_radar/channel_2 eq 0
+			</test>				
+		</switch>
+
+           <!-- Channel 2 warm up period-->
+
+		<switch name="/systems/computers/altitude_radar/channel_2/warm_up/warm_up_target">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/systems/electrical/bus/ac-3/voltage gt 220
+					/instrumentation/radar-altimeter/altimeter_switch gt 0	
+			</test>		
+		</switch>
+
+		<actuator name="/systems/computers/altitude_radar/channel_2/warm_up/warmed_up">
+            		<input>/systems/computers/altitude_radar/channel_2/warm_up/warm_up_target</input>
+            		<rate_limit sense="decr">0.0053</rate_limit> <!-- Three minutes-->
+            		<rate_limit sense="incr">0.0053</rate_limit> <!-- Three minutes-->
+       		</actuator>
+
+           <!-- Altimeter panel switch-->
+
+		<switch name="/instrumentation/radar-altimeter[0]/serviceable">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+				/instrumentation/radar-altimeter/altimeter_switch gt 0
+			</test>				
+		</switch>
+
+		<switch name="/instrumentation/radar-altimeter[1]/serviceable">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+				/instrumentation/radar-altimeter/altimeter_switch gt 0
+			</test>				
+		</switch>
+
+		<switch name="/systems/computers/altitude_radar/altitude_radar_switch/current_value">
+			<default value="0"/>
+                	<test logic="AND" value="/systems/computers/altitude_radar/channel_1/output">
+					/instrumentation/radar-altimeter/altimeter_switch eq 1
+			 </test>
+                	<test logic="AND" value="/systems/computers/altitude_radar/altitude_radar_switch/auto_function/value">
+					/instrumentation/radar-altimeter/altimeter_switch eq 2
+			 </test>
+                	<test logic="AND" value="/systems/computers/altitude_radar/channel_2/output">
+					/instrumentation/radar-altimeter/altimeter_switch eq 3
+			 </test>		
+		</switch>
+
+		<switch name="/systems/computers/altitude_radar/altitude_radar_switch/auto_function/value">
+			<default value="/systems/computers/altitude_radar/channel_1/output"/>
+                	<test logic="AND" value="/systems/computers/altitude_radar/channel_2/output">
+					/systems/failures/computers/altitude_radar/channel_1 eq 1
+			 </test>	
+		</switch>
+
+		<switch name="/systems/computers/altitude_radar/altitude_radar_switch/window_barrel_deg">
+			<default value="0"/>
+                	<test logic="AND" value="50">
+					/instrumentation/radar-altimeter/altimeter_switch gt 0
+                	<test logic="OR">
+                	<test logic="AND">
+					/instrumentation/radar-altimeter/altimeter_switch lt 3
+					/systems/failures/computers/altitude_radar/channel_1 eq 0
+			</test>	
+			</test>
+			</test>
+                	<test logic="AND" value="100">
+					/instrumentation/radar-altimeter/altimeter_switch gt 1
+					/systems/failures/computers/altitude_radar/channel_2 eq 0
+			</test>			
+		</switch>
+
+
+           <!-- Altimeter dial rate-->
+
+		<actuator name="/systems/computers/altitude_radars/dial_needle_rate">
+            		<input>/systems/computers/altitude_radars/altitude_radar_switch/current_value</input>
+            		<rate_limit sense="decr">250</rate_limit>
+            		<rate_limit sense="incr">250</rate_limit>
+       		</actuator>
+
+</channel>
+
+<channel name="IFF/Transponder" execrate="8">
+
+           <!-- IFF part-->
+
+		<switch name="/instrumentation/iff/power">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/systems/electrical/bus/ac-1/voltage gt 220
+					/instrumentation/transponder/inputs/knob-mode eq 3
+					/controls/switches/iff/mode_1 gt -1
+					/systems/failures/instrumentation/transponder/transponder eq 0
+					/systems/failures/instrumentation/transponder/mode_1 eq 0
+			 </test>
+		</switch>
+
+		<fcs_function name="/instrumentation/iff/channel-selection">
+			<function>
+                             <sum>
+				<product>
+					<property>/instrumentation/iff/mode_1/channel-selection-tens</property>
+					<value>10</value>
+				</product>
+				<property>/instrumentation/iff/mode_1/channel-selection-singles</property>
+                             </sum>
+			</function>
+		</fcs_function>
+
+		<switch name="/instrumentation/iff/test_function">
+			<default value="0"/>
+                	<test logic="AND" value="1">
+					/controls/switches/iff/mode_1 eq 1
+					/instrumentation/transponder/inputs/knob-mode eq 3
+					/systems/failures/instrumentation/transponder/transponder eq 0
+					/systems/failures/instrumentation/transponder/mode_1 eq 0
+			 </test>
+                	<test logic="AND" value="1">
+					/controls/switches/iff/mode_2 eq 1
+					/instrumentation/transponder/inputs/knob-mode eq 3
+					/systems/failures/instrumentation/transponder/transponder eq 0
+					/systems/failures/instrumentation/transponder/mode_2 eq 0
+			 </test>
+                	<test logic="AND" value="1">
+					/controls/switches/iff/mode_3A eq 1
+					/instrumentation/transponder/inputs/knob-mode eq 3
+					/systems/failures/instrumentation/transponder/transponder eq 0
+					/systems/failures/instrumentation/transponder/mode_3A eq 0
+			 </test>
+		</switch>
+
+          <!-- Transponder part -->
+
+		<switch name="/instrumentation/transponder/inputs/digit[0]">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/transponder/inputs/mode_3A_digit[0]">
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+                	<test logic="AND" value="7">
+                                        /controls/switches/iff/mode_2 gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_2 eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+		</switch>
+
+		<switch name="/instrumentation/transponder/inputs/digit[1]">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/transponder/inputs/mode_3A_digit[1]">
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+		</switch>
+
+		<switch name="/instrumentation/transponder/inputs/digit[2]">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/transponder/inputs/mode_3A_digit[2]">
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+                	<test logic="AND" value="1">
+                                        /controls/switches/iff/mode_2 gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_2 eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+                	<test logic="AND" value="5">
+                                        /instrumentation/transponder/inputs/knob-mode eq 4
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+		</switch>
+
+		<switch name="/instrumentation/transponder/inputs/digit[3]">
+			<default value="0"/>
+                	<test logic="AND" value="/instrumentation/transponder/inputs/mode_3A_digit[3]">
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /instrumentation/transponder/inputs/knob-mode lt 4
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+                	<test logic="AND" value="7">
+                                        /instrumentation/transponder/inputs/knob-mode eq 4
+                                        /controls/switches/iff/mode_3A gt -1
+                                        /systems/failures/instrumentation/transponder/mode_3A eq 0
+                                        /systems/failures/instrumentation/transponder/transponder eq 0
+			 </test>
+		</switch>
+</channel>
+
+</system>
