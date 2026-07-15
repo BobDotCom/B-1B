@@ -155,7 +155,7 @@ var DisplayControls = {
 							.set("z-index", zIndex.deviceObs.text)
 							.setAlignment(colAlign)
 							.setTranslation(colX, colY)
-							.setFontSize(font.device.osbLabels, 1.1)
+							.setFontSize(font.device.osbLabels, 1.0)
 							.setDrawMode(canvas.Text.TEXT)
 							.setText(wordText)
 							.setColor(me.boxTextColor);
@@ -230,7 +230,7 @@ var DisplayControls = {
 				.set("z-index", zIndex.deviceObs.text)
 				.setAlignment(me.alignment)
 				.setTranslation(me.tempX, me.textY)
-				.setFontSize(font.device.osbLabels, 1.1)
+				.setFontSize(font.device.osbLabels, 1.0)
 				.setText(right(controlName,4))
 				.setColor(me.colorFront);
 		me.controls[controlName].outline = me.controlGrp.createChild("path")
