@@ -295,21 +295,6 @@ if ((eta == nil) or (eta == '')) {
   }
 }
 
-### bug heading selector
-var bug_hdg = func(n) {
-var hdg = getprop("autopilot/settings/heading-bug-deg");
-if (hdg == nil){
-var hdg = 0;
-}
-var hdg_new = hdg + n;
-if (hdg_new == 360){
-var hdg_new = 0;
-}
-if (hdg_new == -1){
-var hdg_new = 359;
-}
-setprop("autopilot/settings/heading-bug-deg",hdg_new);
-}
 
 ### autoengage afterburner when full throttle applied
 setlistener("controls/engines/engine[0]/throttle-lever", func(n) {
