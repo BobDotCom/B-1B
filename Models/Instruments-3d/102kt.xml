@@ -78,20 +78,6 @@
 
     <animation>
         <type>select</type>
-        <object-name>10thsAS</object-name>
-        <object-name>10sAS</object-name>
-        <object-name>100sAS</object-name>
-        <object-name>1000sAS</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/speed-indicator</property>
-                <value>0.5</value>
-            </equals>
-        </condition> 
-     </animation> 
-
-    <animation>
-        <type>select</type>
         <object-name>OFF</object-name>
         <condition>
             <less-than>
@@ -100,74 +86,6 @@
             </less-than>
         </condition> 
      </animation>
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>1000sGS</object-name> 
-   <property>velocities/groundspeed-kt</property>
-   <factor>0.0001</factor> 
-   <step>1000</step> 
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis> 
-  </animation>  
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>100sGS</object-name>
-   <property>velocities/groundspeed-kt</property>
-   <factor>0.001</factor> 
-   <step>100</step> 
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis> 
-  </animation>  
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>10sGS</object-name>
-   <property>velocities/groundspeed-kt</property>
-   <factor>0.01</factor> 
-   <step>10</step>   
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis> 
-  </animation> 
-
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>10thsGS</object-name>
-   <property>velocities/groundspeed-kt</property>
-   <factor>0.1</factor> 
-   <step>1</step> 
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis>
-  </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>10thsGS</object-name>
-        <object-name>10sGS</object-name>
-        <object-name>100sGS</object-name>
-        <object-name>1000sGS</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/speed-indicator</property>
-                <value>1.0</value>
-            </equals>
-        </condition> 
-     </animation>
-
 
 <animation>
 	<type>rotate</type>
@@ -193,9 +111,9 @@
 		<z>0.0</z>
 	</axis>
 	<center>
-            <x-m>0.0065</x-m>
-            <y-m>0.0086</y-m>
-            <z-m>-0.0115</z-m>
+            <x-m>0.0055</x-m>
+            <y-m>0.0082</y-m>
+            <z-m>-0.0122</z-m>
 	</center>
 </animation> 
 
@@ -227,7 +145,6 @@
 		</binding>
 	</action>
 </animation>  
-
 
 </PropertyList>
 
