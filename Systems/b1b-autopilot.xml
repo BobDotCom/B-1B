@@ -68,7 +68,7 @@
     <input>
       <prop>/autopilot/internal/fdm-heading-bug-error-deg</prop>
     </input>
-    <reference>
+    <reference> 
       <value>0.0</value>
     </reference>
     <output>
@@ -192,13 +192,13 @@
       <value>nav1-hold</value>
     </enable>
     <input>
-      <prop>/autopilot/internal/nav1-track-error-deg</prop>
+      <prop>/instrumentation/nav/heading-needle-deflection</prop>
     </input>
     <reference>
       <value>0.0</value>
     </reference>
     <output>
-      <prop>/autopilot/internal/target-roll-deg</prop>
+      <prop>/controls/flight/aileron</prop>
     </output>
     <config>
       <Kp>-1.0</Kp>        <!-- proportional gain -->
@@ -206,40 +206,10 @@
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
                            <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->
+      <Ti>0.05</Ti>        <!-- integrator time -->
       <Td>0.00001</Td>
-      <u_min>-30.0</u_min> <!-- minimum output clamp -->
-      <u_max>30.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
-
-  <!-- Stage #2 drives the ailerons to achieve the desired roll deg. -->
-  <pid-controller>
-    <name>Nav1 Hold Stage 2</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>nav1-hold</value>
-    </enable>
-    <input>
-      <prop>/orientation/roll-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/internal/target-roll-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/aileron</prop>
-    </output>
-    <config>
-      <Kp>0.02</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
+      <u_min>-0.16</u_min> <!-- minimum output clamp -->
+      <u_max>0.16</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
 
@@ -256,7 +226,7 @@
       <prop>/orientation/roll-deg</prop>
     </input>
     <reference>
-      <prop>/autopilot/internal/target-roll-deg</prop>
+      <value>0.0</value>
     </reference>
     <output>
       <prop>/controls/flight/rudder</prop>
@@ -267,10 +237,10 @@
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.000000001</Td>    <!-- derivator time -->
-      <u_min>-0.25</u_min> <!-- minimum output clamp -->
-      <u_max>0.25</u_max>  <!-- maximum output clamp -->
+      <Ti>1.0</Ti>       <!-- integrator time -->
+      <Td>0.0000000001</Td>    <!-- derivator time -->
+      <u_min>-0.08259</u_min> <!-- minimum output clamp -->
+      <u_max>0.08259</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
 
@@ -528,7 +498,7 @@
 
   <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
   <pid-controller>
-    <name>Glideslop Hold</name>
+    <name>Glideslope Hold</name>
     <debug>false</debug>
     <enable>
       <prop>/autopilot/locks/altitude</prop>
@@ -602,10 +572,10 @@
       <value>speed-with-throttle</value>
     </enable>
     <input>
-      <prop>/autopilot/internal/lookahead-5-sec-airspeed-kt</prop>
+      <prop>/instrumentation/airspeed-indicator/indicated-speed-kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-speed-kt</prop>
+     <prop>/autopilot/settings/target-speed-kt</prop>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>
@@ -635,7 +605,7 @@
       <value>speed-with-pitch</value>
     </enable>
     <input>
-      <prop>/autopilot/internal/lookahead-5-sec-airspeed-kt</prop>
+      <prop>/instrumentation/airspeed-indicator/indicated-speed-kt</prop>
     </input>
     <reference>
       <prop>/autopilot/settings/target-speed-kt</prop>

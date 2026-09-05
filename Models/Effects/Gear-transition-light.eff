@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+    <name>Gear-transition-light</name>
+    <inherits-from>Effects/model-combined</inherits-from>
+    <parameters>
+        <lightmap-enabled>1</lightmap-enabled>
+        <lightmap-multi>1</lightmap-multi>
+        <lightmap-factor n="0"><use>/controls/switches/gear-locked</use></lightmap-factor>
+        <lightmap-color n="0"> 1.0 0.0 0.0 </lightmap-color>
+        <lightmap-factor n="1"><use>/controls/switches/gear-locked</use></lightmap-factor>
+        <lightmap-color n="1"> 0.0 1.0 0.0 </lightmap-color>
+        <lightmap-factor n="2"><use>/controls/switches/gear-locked</use></lightmap-factor>
+        <lightmap-color n="2"> 0.0 0.0 1.0 </lightmap-color>
+        <lightmap-factor n="3">0.0</lightmap-factor>
+        <lightmap-color n="3"> 0.0 0.0 0.0 </lightmap-color>
+        <texture n="3">
+            <image>Aircraft/B-1B/Models/Instruments-3D/Gear_moving.png</image>
+        </texture>
+    </parameters>
+</PropertyList>
+
+

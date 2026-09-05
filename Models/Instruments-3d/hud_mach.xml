@@ -6,13 +6,73 @@ maggse
 
  <path>hud_mach.ac</path>
 
+<animation>
+	 <type>rotate</type>
+	 <object-name>Mach_off_marker</object-name>
+	 <property>systems/electrical/bus/ac-2/voltage</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
 
+		 <entry>
+			 <ind>200.0</ind>
+			 <dep>-0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>230.0</ind>
+			 <dep>-60.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.005317</x-m>
+		 <y-m>-0.556</y-m>
+		 <z-m>-0.02344</z-m>
+  	 </center>
+ </animation>
+
+<animation>
+	 <type>rotate</type>
+	 <object-name>Airspeed_off_marker</object-name>
+	 <property>systems/electrical/bus/ac-2/voltage</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+
+		 <entry>
+			 <ind>200.0</ind>
+			 <dep>-0.0</dep>
+		 </entry>
+		 <entry>
+			 <ind>230.0</ind>
+			 <dep>-60.0</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>-1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m> 0.004989</x-m>
+		 <y-m>-0.556</y-m>
+		 <z-m>0.03977</z-m>
+  	 </center>
+ </animation>
 
 
  <animation>
    <type>textranslate</type>
    <object-name>ind_mach1</object-name>
-   <property>velocities/mach</property>
+   <property>systems/computers/adc_switch/indicated_mach_output</property>
 <interpolation>
 	<entry>
 		<ind>0</ind>
@@ -24,7 +84,7 @@ maggse
      </entry>
      <entry>
 	     <ind>1.5</ind>
-	     <dep>-0.703</dep>
+	     <dep>-0.720</dep>
      </entry>
 </interpolation>
   <axis>
@@ -42,7 +102,7 @@ maggse
  <animation>
 	 <type>textranslate</type>
 	 <object-name>ind_knots1</object-name>
-	 <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+	 <property>systems/computers/adc_switch/indicated_airspeed_knts_output</property>
 	 <interpolation>
 		 <entry>
 			 <ind>0</ind>
@@ -69,94 +129,101 @@ maggse
 		 </center>
  </animation>
 
- <animation>
-	 <type>pick</type>
+<animation>
+	<type>knob</type>
+	 <object-name>set_mach</object-name>
+	<property>controls/switches/target-mach/mode-1</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.5423</y-m>
+		<z-m>-0.09183</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+
+
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/target-mach/mode-1</property>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/target-mach/mode-1</property>
+			<step>0</step>
+			<min>0</min>
+			<max>0</max>
+		</binding>
+	</release>
+
+</animation>
+
+<animation>
+	<type>knob</type>
 	 <object-name>set_speed</object-name>
+	<property>controls/switches/target-speed/mode-1</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.005</x-m>
+		<y-m>-0.5423</y-m>
+		<z-m>-0.09183</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+
+
 	 <action>
-		 <button>0</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
 		 <binding>
 			 <command>property-adjust</command>
-			 <property>autopilot/settings/target-speed-kt</property>
-			 <step>1</step>
-			 <min>0.0</min>
-			 <max>900.0</max>
+			 <property>controls/switches/target-speed/mode-1</property>
+			 <min>-1</min>
+			 <max>1</max>
 		 </binding>
 	 </action>
-	 <action>
-		 <button>1</button>
-		 <repeatable>true</repeatable>
-		 <interval-sec>0.1</interval-sec>
-		 <binding>
-			 <command>property-adjust</command>
-			 <property>autopilot/settings/target-speed-kt</property>
-			 <step>-1</step>
-			 <min>0.0</min>
-			 <max>900.0</max>
-		 </binding>
-	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/target-speed/mode-1</property>
+			<step>0</step>
+			<min>0</min>
+			<max>0</max>
+		</binding>
+	</release>
 </animation>
-
-<animation>
-	<type>textranslate</type>
-	<object-name>macfuel1.002</object-name>
-	<property>autopilot/settings/target-speed-kt</property>
-	<factor>0.001</factor>
-	<step>100</step>
-	<axis>
-		<x>0</x>
-		<y>1</y>
-		<z>0</z>
-	</axis>
-</animation>
-
-<animation>
-	<type>textranslate</type>
-	<object-name>macfuel2.002</object-name>
-	<property>autopilot/settings/target-speed-kt</property>
-	<factor>0.01</factor>
-	<step>10</step>
-	<axis>
-		<x>0</x>
-		<y>1</y>
-		<z>0</z>
-	</axis>
-</animation>
-
-<animation>
-	<type>textranslate</type>
-	<object-name>macfuel3.002</object-name>
-	<property>autopilot/settings/target-speed-kt</property>
-	<factor>0.1</factor>
-	<step>1</step>
-	<axis>
-		<x>0</x>
-		<y>1</y>
-		<z>0</z>
-	</axis>
- </animation>
 
  <animation>
 	 <type>material</type>
-	 <object-name>ind_alt_l.001</object-name>
-	 <object-name>ind_alt_1mob.002</object-name>
-	 <object-name>ind_alt_lmob.003</object-name>
 	 <object-name>ind_knots1</object-name>
 	 <object-name>ind_mach1</object-name>
-	 <object-name>macfuel1.002</object-name>
-	 <object-name>macfuel1.003</object-name>
-	 <object-name>macfuel2.002</object-name>
-	 <object-name>macfuel2.003</object-name>
-	 <object-name>macfuel3.002</object-name>
-	 <object-name>macfuel3.003</object-name>
+	 <object-name>ind_alt_lmob.003</object-name>
+	 <object-name>Mach_command_single</object-name>
+	 <object-name>Mach_command_ten</object-name>
+	 <object-name>Mach_command_hundred</object-name>
+	 <object-name>Mach_command_marker</object-name>
+	 <object-name>Mach_off_marker</object-name>
+	 <object-name>Airspeed_command_single</object-name>
+	 <object-name>Airspeed_command_ten</object-name>
+	 <object-name>Airspeed_command_hundred</object-name>
+	 <object-name>Airspeed_command_marker</object-name>
+	 <object-name>Airspeed_off_marker</object-name>
 	 <object-name>set_speed</object-name>
 	 <object-name>set_mach</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
 </animation>
 

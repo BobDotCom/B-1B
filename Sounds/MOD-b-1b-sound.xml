@@ -850,6 +850,10 @@
                 <property>velocities/airspeed-kt</property>
                 <value>150</value>
             </less-than>
+            <equals> 
+             <property>instrumentation/annunciators/flapwing</property>
+             <value>1</value>
+            </equals>
             <not>
                 <property>/gear/gear[0]/wow</property>
                 <property>/gear/gear[1]/wow</property>
@@ -868,6 +872,28 @@
         <reference-dist>1.0</reference-dist>
         <max-dist>2.0</max-dist>
     </stall>
+
+      <Overspeed>
+        <name>overspeed</name>
+        <mode>looped</mode>
+        <path>Aircraft/B-1B/Sounds/overspeed.wav</path>
+        <condition>
+            <equals>
+                <property>instrumentation/annunciators/reducespeed</property>
+                <value>1</value>
+            </equals>              
+        </condition>
+        <volume>
+            <max>0.5</max>
+        </volume>
+        <position>
+            <x>-23</x>
+            <y>0</y>
+            <z>1</z>
+        </position>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>2.0</max-dist>
+    </Overspeed>
 
     <!--   <stall>
         <name>stall</name>

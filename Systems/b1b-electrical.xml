@@ -1,0 +1,930 @@
+<?xml version="1.0"?>
+
+<!-- Copyright (c) 2021 Jonathan Redpath (legoboyvdlp), Joshua Davidson (Octal450) -->
+<!-- Copyright (c) 2023 BobDotCom 2025 Rob Andrew -->
+
+
+<system name="B-1B Electrical">
+
+	<property value="0">/systems/electrical/relay/gen-1-glc/contact-pos</property>
+	<property value="0">/systems/electrical/relay/gen-2-glc/contact-pos</property>
+
+		<!-- pre-existing properties -->
+
+	<property value="0">/systems/electrical/bus/dc-ess</property>
+	<property value="0">/systems/electrical/sources/idg-1/gcu-1-fault</property>
+
+
+	<property value="100">/systems/electrical/sources/dc/bat-aft/percentage-cmd</property>
+
+	<property value="0">/engines/engine[4]/starter</property>
+	<property value="0">/engines/engine[5]/starter</property>
+
+	<property value="0">/systems/failures/electrical/csd-1</property>
+	<property value="0">/systems/failures/electrical/gen-1</property>
+	<property value="0">/systems/failures/electrical/csd-2</property>
+	<property value="0">/systems/failures/electrical/gen-2</property>
+	<property value="0">/systems/failures/electrical/csd-4</property>
+	<property value="0">/systems/failures/electrical/gen-3</property>
+	<property value="0">/systems/failures/electrical/stat-inv</property>
+	<property value="0">/systems/failures/electrical/emer-gen</property>
+	<property value="0">/systems/failures/electrical/tr-1</property>
+	<property value="0">/systems/failures/electrical/tr-2</property>
+	<property value="0">/systems/failures/electrical/ess-tr</property>
+	<property value="0">/systems/failures/electrical/ac-ess-bus</property>
+	<property value="0">/systems/failures/electrical/ac-1-bus</property>
+	<property value="0">/systems/failures/electrical/ac-2-bus</property>
+	<property value="0">/systems/failures/electrical/ac-3-bus</property>
+	<property value="0">/systems/failures/electrical/ac-4-bus</property>
+	<property value="0">/systems/failures/electrical/dc-bat-bus</property>
+	<property value="0">/systems/failures/electrical/dc-ess-bus</property>
+	<property value="0">/systems/failures/electrical/dc-fwd-bus</property>
+	<property value="0">/systems/failures/electrical/dc-aft-bus</property>
+
+	<property value="0">/controls/engines/engine[0]/fire-btn</property>
+	<property value="0">/controls/engines/engine[1]/fire-btn</property>
+	<property value="0">/controls/engines/engine[3]/fire-btn</property>
+
+	<property value="0">/systems/electrical/lights/gen-1-fault</property>
+	<property value="0">/systems/electrical/lights/gen-2-fault</property>
+	<property value="0">/systems/electrical/lights/gen-3-fault</property>
+
+	<channel name="DC system" execrate="8">
+
+		<!-- BAT FWD -->
+
+		<!-- Battery charge/discharge command -->
+
+		<switch name="/systems/electrical/sources/dc/bat-fwd/percentage-cmd">
+			<default value="100"/>
+			<test logic="AND" value="1">
+				/systems/electrical/bus/ac-3/voltage lt 220
+				/sim/time/elapsed-sec gt 1
+				/systems/electrical/sources/ext/output-volt eq 0
+			</test>
+		</switch>
+
+		<!-- percentage property -->
+
+		<actuator name="/systems/electrical/sources/dc/bat-fwd/percentage">
+            <input>/systems/electrical/sources/dc/bat-fwd/percentage-cmd</input>
+            <rate_limit sense="decr">/systems/electrical/sources/dc/bat-fwd/rate-decrease</rate_limit> 
+            <rate_limit sense="incr">/systems/electrical/sources/dc/bat-fwd/rate-increase</rate_limit> 
+        </actuator>
+
+
+		<!-- Discharging rates -->
+
+	<switch name="/systems/electrical/sources/dc/bat-fwd/rate-decrease">
+	                <!-- Natural Decay -->
+			<default value="0.0001"/>
+		</switch>
+
+	        <!-- charging rates -->
+	<switch name="/systems/electrical/sources/dc/bat-fwd/rate-increase">
+			<default value="0"/>
+		<!-- high rate -->
+			<test logic="AND" value="0.02">
+				/systems/electrical/bus/ac-3/voltage gt 220
+				/systems/electrical/sources/dc/bat-fwd/percentage lt 10
+		       </test>
+		<!-- Low rate -->
+			<test logic="AND" value="0.01">
+				/systems/electrical/bus/ac-3/voltage gt 220
+				/systems/electrical/sources/dc/bat-fwd/percentage ge 10
+		      </test>
+		</switch>
+
+		<!-- external rate? -->
+
+		<!-- BAT AFT -->
+
+		<!-- Battery charge/discharge command -->
+
+		<switch name="/systems/electrical/sources/dc/bat-aft/percentage-cmd">
+			<default value="100"/>
+			<test logic="AND" value="1">
+				/systems/electrical/bus/ac-3/voltage lt 220
+				/sim/time/elapsed-sec gt 1
+				/systems/electrical/sources/ext/output-volt eq 0
+			</test>
+		</switch>
+
+		<!-- percentage property -->
+
+		<actuator name="/systems/electrical/sources/dc/bat-aft/percentage">
+            <input>/systems/electrical/sources/dc/bat-aft/percentage-cmd</input>
+            <rate_limit sense="decr">/systems/electrical/sources/dc/bat-aft/rate-decrease</rate_limit> 
+            <rate_limit sense="incr">/systems/electrical/sources/dc/bat-aft/rate-increase</rate_limit> 
+        </actuator>
+
+	        <!-- charging rates -->
+
+	<switch name="/systems/electrical/sources/dc/bat-aft/rate-increase">
+			<default value="0"/>
+		<!-- high rate -->
+			<test logic="AND" value="0.02">
+				/systems/electrical/bus/ac-3/voltage gt 220
+				/systems/electrical/sources/dc/bat-aft/percentage lt 10
+		        </test>
+		<!-- Low rate -->
+			<test logic="AND" value="0.01">
+				/systems/electrical/bus/ac-3/voltage  gt 220
+				/systems/electrical/sources/dc/bat-aft/percentage ge 10
+		      </test>
+		</switch>
+
+
+		<!-- Discharging rates -->
+
+	<switch name="/systems/engines/engine[4]/battery-percentage-draw-rate">
+			<default value="0"/>
+		 	<test logic="OR" value="0.15">
+                             /engines/engine[4]/n2 gt 50
+			</test> 
+		</switch>
+
+	<switch name="/systems/engines/engine[5]/battery-percentage-draw-rate">
+			<default value="0"/>
+		 	<test logic="OR" value="0.15">
+                             /engines/engine[5]/n2 gt 50
+			</test> 
+		</switch>
+
+		<fcs_function name="/systems/electrical/sources/dc/bat-aft/rate-decrease">
+			<function>
+				<sum>
+					<property>/systems/engines/engine[4]/battery-percentage-draw-rate</property>
+					<property>/systems/engines/engine[5]/battery-percentage-draw-rate</property>
+                                        <value>0.0001</value> 	<!-- Natural decay -->
+				</sum>
+			</function>
+		</fcs_function>
+
+		<!-- external rate? -->
+
+        </channel>
+
+
+
+
+	<channel name="Electrical Sources" execrate="8">
+
+		<!-- CSD 1 -->
+
+		<pure_gain name="/systems/electrical/sources/csd-1/drive-rpm-input">
+			<input>/systems/engines/adg[0]/drive-rpm</input>
+			<gain>90.298</gain> <!-- 1% N2 RPM value * 0.604 -->
+		</pure_gain>
+
+		<switch name="/systems/electrical/sources/csd-1/working">
+			<default value="1"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/csd-1 eq 1
+				/controls/electrical/switches/csd-1-disc eq 0
+			</test>
+		</switch>
+
+		<pure_gain name="/systems/electrical/sources/csd-1/drive-rpm">
+			<input>/systems/electrical/sources/csd-1/drive-rpm-input</input>
+			<gain>/systems/electrical/sources/csd-1/working</gain>
+		</pure_gain>
+
+		<fcs_function name="/systems/electrical/sources/csd-1/gearbox-ratio-cmd">
+			<function>
+				<quotient>
+					<value>12000</value>
+					<property>/systems/electrical/sources/csd-1/drive-rpm</property>
+				</quotient>
+			</function>
+			<clipto>
+				<min>1.315</min>
+				<max>2.667</max>
+			</clipto>
+		</fcs_function>
+
+		<lag_filter name="/systems/electrical/sources/csd-1/gearbox-ratio">
+			<input>/systems/electrical/sources/csd-1/gearbox-ratio-cmd</input>
+			<c1>40</c1>
+		</lag_filter>
+
+		<pure_gain name="/systems/electrical/sources/csd-1/rpm-output">
+			<input>/systems/electrical/sources/csd-1/drive-rpm</input>
+			<gain>/systems/electrical/sources/csd-1/gearbox-ratio</gain>
+		</pure_gain>
+
+		<fcs_function name="/systems/electrical/sources/csd-1/pmg-volt">
+			<function>
+				<product>
+					<property>/systems/electrical/sources/csd-1/rpm-output</property>
+					<quotient>
+						<value>230</value>
+						<value>12000</value>
+					</quotient>
+				</product>
+			</function>
+		</fcs_function>
+
+		<fcs_function name="/systems/electrical/sources/csd-1/pmg-hertz">
+			<function>
+				<quotient>
+					<product>
+						<property>/systems/electrical/sources/csd-1/rpm-output</property>
+						<value>4</value> <!-- Number of poles in generator -->
+					</product>
+					<value>120</value>
+				</quotient>
+			</function>
+		</fcs_function>
+
+		<!-- CSD 2 -->
+
+		<pure_gain name="/systems/electrical/sources/csd-2/drive-rpm-input">
+			<input>/systems/engines/adg[1]/drive-rpm</input>
+			<gain>90.298</gain> <!-- 1% N2 RPM value * 0.604 -->
+		</pure_gain>
+
+		<switch name="/systems/electrical/sources/csd-2/working">
+			<default value="1"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/csd-2 eq 1
+				/controls/electrical/switches/csd-2-disc eq 0
+			</test>
+		</switch>
+
+		<pure_gain name="/systems/electrical/sources/csd-2/drive-rpm">
+			<input>/systems/electrical/sources/csd-2/drive-rpm-input</input>
+			<gain>/systems/electrical/sources/csd-2/working</gain>
+		</pure_gain>
+
+		<fcs_function name="/systems/electrical/sources/csd-2/gearbox-ratio-cmd">
+			<function>
+				<quotient>
+					<value>12000</value>
+					<property>/systems/electrical/sources/csd-2/drive-rpm</property>
+				</quotient>
+			</function>
+			<clipto>
+				<min>1.315</min>
+				<max>2.667</max>
+			</clipto>
+		</fcs_function>
+
+		<lag_filter name="/systems/electrical/sources/csd-2/gearbox-ratio">
+			<input>/systems/electrical/sources/csd-2/gearbox-ratio-cmd</input>
+			<c1>40</c1>
+		</lag_filter>
+
+		<pure_gain name="/systems/electrical/sources/csd-2/rpm-output">
+			<input>/systems/electrical/sources/csd-2/drive-rpm</input>
+			<gain>/systems/electrical/sources/csd-2/gearbox-ratio</gain>
+		</pure_gain>
+
+		<fcs_function name="/systems/electrical/sources/csd-2/pmg-volt">
+			<function>
+				<product>
+					<property>/systems/electrical/sources/csd-2/rpm-output</property>
+					<quotient>
+						<value>230</value>
+						<value>12000</value>
+					</quotient>
+				</product>
+			</function>
+		</fcs_function>
+
+		<fcs_function name="/systems/electrical/sources/csd-2/pmg-hertz">
+			<function>
+				<quotient>
+					<product>
+						<property>/systems/electrical/sources/csd-2/rpm-output</property>
+						<value>4</value> <!-- Number of poles in generator -->
+					</product>
+					<value>120</value>
+				</quotient>
+			</function>
+		</fcs_function>
+
+		<!-- CSD 4 -->
+
+		<pure_gain name="/systems/electrical/sources/csd-4/drive-rpm-input">
+			<input>/systems/engines/adg[2]/drive-rpm</input>
+			<gain>90.298</gain> <!-- 1% N2 RPM value * 0.604 -->
+		</pure_gain>
+
+		<switch name="/systems/electrical/sources/csd-4/working">
+			<default value="1"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/csd-4 eq 1
+				/controls/electrical/switches/csd-4-disc eq 0
+			</test>
+		</switch>
+
+		<pure_gain name="/systems/electrical/sources/csd-4/drive-rpm">
+			<input>/systems/electrical/sources/csd-4/drive-rpm-input</input>
+			<gain>/systems/electrical/sources/csd-4/working</gain>
+		</pure_gain>
+
+		<fcs_function name="/systems/electrical/sources/csd-4/gearbox-ratio-cmd">
+			<function>
+				<quotient>
+					<value>12000</value>
+					<property>/systems/electrical/sources/csd-4/drive-rpm</property>
+				</quotient>
+			</function>
+			<clipto>
+				<min>1.315</min>
+				<max>2.667</max>
+			</clipto>
+		</fcs_function>
+
+		<lag_filter name="/systems/electrical/sources/csd-4/gearbox-ratio">
+			<input>/systems/electrical/sources/csd-4/gearbox-ratio-cmd</input>
+			<c1>40</c1>
+		</lag_filter>
+
+		<pure_gain name="/systems/electrical/sources/csd-4/rpm-output">
+			<input>/systems/electrical/sources/csd-4/drive-rpm</input>
+			<gain>/systems/electrical/sources/csd-4/gearbox-ratio</gain>
+		</pure_gain>
+
+		<fcs_function name="/systems/electrical/sources/csd-4/pmg-volt">
+			<function>
+				<product>
+					<property>/systems/electrical/sources/csd-4/rpm-output</property>
+					<quotient>
+						<value>230</value>
+						<value>12000</value>
+					</quotient>
+				</product>
+			</function>
+		</fcs_function>
+
+		<fcs_function name="/systems/electrical/sources/csd-4/pmg-hertz">
+			<function>
+				<quotient>
+					<product>
+						<property>/systems/electrical/sources/csd-4/rpm-output</property>
+						<value>4</value> <!-- Number of poles in generator -->
+					</product>
+					<value>120</value>
+				</quotient>
+			</function>
+		</fcs_function>
+
+		<!-- IDG-1 -->
+
+		<switch name="/systems/electrical/sources/idg-1/rpm-cmd">
+			<default value="/systems/electrical/sources/csd-1/rpm-output"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/gen-1 eq 1
+			</test>
+			<test logic="OR" value="0">
+				/controls/electrical/switches/gen-1 eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/electrical/sources/idg-1/rpm">
+            <input>/systems/electrical/sources/idg-1/rpm-cmd</input>
+            <rate_limit sense="decr">1000</rate_limit> 
+            <rate_limit sense="incr">/systems/electrical/sources/idg-1/rpm-inc-rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/electrical/sources/idg-1/rpm-inc-rate">
+			<default value="0"/>
+			<test logic="OR" value="3000">	<!-- csd-1 rate -->
+                            /systems/electrical/sources/idg-1/rpm-cmd gt 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/electrical/sources/idg-1/voltage">
+            <input>/systems/electrical/sources/idg-1/voltage-cmd</input>
+            <rate_limit sense="decr">100</rate_limit> 
+            <rate_limit sense="incr">100</rate_limit> 
+        </actuator>
+
+		<fcs_function name="/systems/electrical/sources/idg-1/voltage-cmd">
+			<function>
+				<product>
+					<property>/systems/electrical/sources/idg-1/rpm</property>
+					<quotient>
+						<value>230</value>
+						<value>12000</value>
+					</quotient>
+				</product>
+			</function>
+		</fcs_function>
+
+		<!-- IDG-2 -->
+
+		<switch name="/systems/electrical/sources/idg-2/rpm-cmd">
+			<default value="/systems/electrical/sources/csd-2/rpm-output"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/gen-2 eq 1
+			</test>
+			<test logic="OR" value="0">
+				/controls/electrical/switches/gen-2 eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/electrical/sources/idg-2/rpm">
+            <input>/systems/electrical/sources/idg-2/rpm-cmd</input>
+            <rate_limit sense="decr">1000</rate_limit> 
+            <rate_limit sense="incr">/systems/electrical/sources/idg-2/rpm-inc-rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/electrical/sources/idg-2/rpm-inc-rate">
+			<default value="0"/>
+			<test logic="OR" value="3000">	<!-- csd-2 rate -->
+                            /systems/electrical/sources/idg-2/rpm-cmd gt 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/electrical/sources/idg-2/voltage">
+            <input>/systems/electrical/sources/idg-2/voltage-cmd</input>
+            <rate_limit sense="decr">100</rate_limit> 
+            <rate_limit sense="incr">100</rate_limit> 
+        </actuator>
+
+		<fcs_function name="/systems/electrical/sources/idg-2/voltage-cmd">
+			<function>
+				<product>
+					<property>/systems/electrical/sources/idg-2/rpm</property>
+					<quotient>
+						<value>230</value>
+						<value>12000</value>
+					</quotient>
+				</product>
+			</function>
+		</fcs_function>
+
+		<!-- IDG-3 -->
+
+		<switch name="/systems/electrical/sources/idg-3/rpm-cmd">
+			<default value="/systems/electrical/sources/csd-4/rpm-output"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/gen-3 eq 1
+			</test>
+			<test logic="OR" value="0">
+				/controls/electrical/switches/gen-3 eq 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/electrical/sources/idg-3/rpm">
+            <input>/systems/electrical/sources/idg-3/rpm-cmd</input>
+            <rate_limit sense="decr">1000</rate_limit> 
+            <rate_limit sense="incr">/systems/electrical/sources/idg-3/rpm-inc-rate</rate_limit> 
+        </actuator>
+
+		<switch name="/systems/electrical/sources/idg-3/rpm-inc-rate">
+			<default value="0"/>
+			<test logic="OR" value="3000">	<!-- csd-4 rate -->
+                            /systems/electrical/sources/idg-3/rpm-cmd gt 0
+			</test>
+		</switch>
+
+		<actuator name="/systems/electrical/sources/idg-3/voltage">
+            <input>/systems/electrical/sources/idg-3/voltage-cmd</input>
+            <rate_limit sense="decr">100</rate_limit> 
+            <rate_limit sense="incr">100</rate_limit> 
+        </actuator>
+
+		<fcs_function name="/systems/electrical/sources/idg-3/voltage-cmd">
+			<function>
+				<product>
+					<property>/systems/electrical/sources/idg-3/rpm</property>
+					<quotient>
+						<value>230</value>
+						<value>12000</value>
+					</quotient>
+				</product>
+			</function>
+		</fcs_function>
+
+		<!-- Hydraulically powered Emergency Generator -->
+
+		<switch name="/systems/electrical/sources/emer-gen/rpm-cmd">
+			<default value="0"/>
+			<test logic="AND" value="250">	<!-- idle rate -->
+                            /systems/hydraulic/system[4]/pipeline/pipeline_pressure gt 1599
+            		    /systems/failures/electrical/emer-gen eq 0
+			    /controls/switches/emerg_gen eq 0            
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/emer-gen/rpm-auto">
+            		    /systems/failures/electrical/emer-gen eq 0
+			    /controls/switches/emerg_gen eq 1            
+			</test>
+			<test logic="AND" value="8000">	<!-- powered rate -->
+                            /systems/hydraulic/system[4]/pipeline/pipeline_pressure gt 1599
+            		    /systems/failures/electrical/emer-gen eq 0
+			    /controls/switches/emerg_gen eq 2             
+			</test>
+		</switch>
+
+
+		<switch name="/systems/electrical/sources/emer-gen/rpm-auto">
+			<default value="0"/>
+			<test logic="AND" value="250">	
+                            /systems/hydraulic/system[4]/pipeline/pipeline_pressure gt 1599
+				<test logic="OR">
+			    /systems/electrical/sources/idg-1/voltage gt 200   
+			    /systems/electrical/sources/idg-2/voltage gt 200
+			    /systems/electrical/sources/idg-3/voltage gt 200         
+			</test>
+		       </test>
+			<test logic="AND" value="8000">	<!-- powered rate -->
+                            /systems/hydraulic/system[4]/pipeline/pipeline_pressure gt 1599
+				<test logic="AND">
+			    /systems/electrical/sources/idg-1/voltage lt 200   
+			    /systems/electrical/sources/idg-2/voltage lt 200
+			    /systems/electrical/sources/idg-3/voltage lt 200         
+			</test>
+		       </test>
+		</switch>
+
+		<switch name="/systems/electrical/sources/emer-gen/rpm-rate-switch">
+			<default value="0"/>
+			<test logic="OR" value="50">	
+                            /systems/electrical/sources/emer-gen/rpm-cmd eq 250
+			</test>
+			<test logic="OR" value="500">	<!-- csd-4 rate -->
+                            /systems/electrical/sources/emer-gen/rpm-cmd eq 8000
+			</test>
+		</switch>
+
+		<actuator name="/systems/electrical/sources/emer-gen/rpm">
+            <input>/systems/electrical/sources/emer-gen/rpm-cmd</input>
+            <rate_limit sense="decr">250</rate_limit> 
+            <rate_limit sense="incr">/systems/electrical/sources/emer-gen/rpm-rate-switch</rate_limit> 
+        </actuator>
+
+		<pure_gain name="/systems/electrical/sources/emer-gen/voltage">
+			<input>/systems/electrical/sources/emer-gen/rpm</input>
+			<gain>0.029</gain>
+                        <max>230</max>
+		</pure_gain>
+
+
+	<!-- Relays-->
+
+
+
+	<!-- Contactors-->
+
+		<switch name="/systems/electrical/contactors/IDG-1_load_contactor/Energised">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/systems/electrical/sources/idg-1/voltage gt 200
+				/systems/electrical/sources/idg-1/voltage lt 240
+			</test>
+		</switch>
+
+		<switch name="/systems/electrical/contactors/IDG-2_load_contactor/Energised">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/systems/electrical/sources/idg-2/voltage gt 200
+				/systems/electrical/sources/idg-2/voltage lt 240
+			</test>
+		</switch>
+
+		<switch name="/systems/electrical/contactors/IDG-3_load_contactor/Energised">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/systems/electrical/sources/idg-3/voltage gt 200
+				/systems/electrical/sources/idg-3/voltage lt 240
+			</test>
+		</switch>
+
+	<!-- Busses-->
+
+	<!-- BATTERY BUSSES -->
+
+		<switch name="/systems/electrical/sources/bus/dc-fwd/voltage">
+			<default value="0"/>
+			<test logic="AND" value="230">	
+			    /systems/electrical/sources/dc/bat-fwd/percentage gt 10
+		      </test>
+		</switch>
+
+		<switch name="/systems/electrical/sources/bus/dc-aft/voltage">
+			<default value="0"/>
+			<test logic="AND" value="230">	
+                            /systems/electrical/sources/dc/bat-aft/percentage gt 10
+		      </test>
+		</switch>
+
+	<!-- BUS 1 -->
+
+		<switch name="/systems/electrical/bus/ac-1/voltage">
+			<default value="0"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/ac-1-bus eq 1
+			</test>
+			<test logic="OR" value="/systems/electrical/sources/idg-1/voltage">
+				/systems/electrical/contactors/IDG-1_load_contactor/Energised eq 1
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/ext/output-volt">
+				/systems/electrical/sources/ext/output-volt eq 230
+		      </test>
+		</switch>
+
+	<!-- BUS 2 -->
+
+		<switch name="/systems/electrical/bus/ac-2/voltage">
+			<default value="0"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/ac-2-bus eq 1
+			</test>
+			<test logic="OR" value="/systems/electrical/sources/idg-2/voltage">
+				/systems/electrical/contactors/IDG-2_load_contactor/Energised eq 1
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/ext/output-volt">
+				/systems/electrical/sources/ext/output-volt eq 230
+		      </test>
+		</switch>
+
+	<!-- BUS 3 -->
+
+		<switch name="/systems/electrical/bus/ac-3/voltage">
+			<default value="0"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/ac-3-bus eq 1
+			</test>
+			<test logic="OR" value="/systems/electrical/sources/idg-3/voltage">
+				/systems/electrical/contactors/IDG-3_load_contactor/Energised eq 1
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/ext/output-volt">
+				/systems/electrical/sources/ext/output-volt eq 230
+		      </test>
+		</switch>
+
+	<!-- BUS 4 -->
+
+		<switch name="/systems/electrical/bus/ac-4/voltage">
+			<default value="0"/>
+			<test logic="OR" value="0">
+				/systems/failures/electrical/ac-4-bus eq 1
+			</test>
+			<test logic="OR" value="/systems/electrical/sources/idg-3/voltage">
+				/systems/electrical/contactors/IDG-3_load_contactor/Energised eq 1
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/ext/output-volt">
+				/systems/electrical/sources/ext/output-volt eq 230
+		      </test>
+		</switch>
+
+
+	<!-- BUS ESS -->
+
+		<switch name="/systems/electrical/bus/ess/voltage-cmd">
+			<default value="0"/>
+			<test logic="AND" value="/systems/electrical/bus/ac-2/voltage">	<!-- idle rate -->
+			    /controls/switches/emerg_gen eq 0            
+			</test>
+			<test logic="AND" value="/systems/electrical/bus/ess/voltage-auto-cmd">
+			    /controls/switches/emerg_gen eq 1            
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/emer-gen/voltage">
+			    /controls/switches/emerg_gen eq 2            
+			</test>
+		</switch>
+
+		<switch name="/systems/electrical/bus/ess/voltage-auto-cmd">
+			<default value="0"/>
+			<test logic="AND" value="/systems/electrical/bus/ac-2/voltage">	
+                            /systems/electrical/bus/ac-2/voltage gt 200
+		       </test>
+			<test logic="AND" value="/systems/electrical/sources/emer-gen/voltage">	
+                            /systems/electrical/bus/ac-2/voltage lt 200
+		       </test>
+		</switch>
+
+		<actuator name="/systems/electrical/bus/ess/voltage">
+            <input>/systems/electrical/bus/ess/voltage-cmd</input>
+            <rate_limit sense="decr">100</rate_limit> 
+            <rate_limit sense="incr">100</rate_limit> 
+        </actuator>
+
+
+	<!-- External Power -->
+
+		<switch name="/systems/electrical/sources/ext/output-volt">
+			<default value="0"/>
+			<test logic="AND" value="230">	
+                            /controls/electrical/switches/ground-cart eq 1
+			    /controls/electrical/switches/external-power eq 1
+			    /systems/electrical/sources/idg-power eq 0
+		      </test>
+		</switch>
+
+		<switch name="/systems/electrical/sources/idg-power">
+			<default value="0"/>
+			<test logic="OR" value="1">	
+			    /systems/electrical/sources/idg-1/voltage gt 225
+			    /systems/electrical/sources/idg-2/voltage gt 225
+			    /systems/electrical/sources/idg-3/voltage gt 225
+		      </test>
+		</switch>
+
+		<fcs_function name="/systems/electrical/sources/ext/output-hertz">
+			<function>
+				<ifthen>
+					<ge>
+						<property>/systems/electrical/sources/ext/output-volt</property>
+						<value>220</value>
+					</ge>
+					<value>400</value>
+					<value>0</value>
+				</ifthen>
+			</function>
+		</fcs_function>
+
+	</channel>
+
+
+
+
+	<channel name="Emergency Electric Logic" execrate="8">
+
+		<!-- Output to Generics to keep FG things working, temporary, until we know what gets power by what bus -->
+		<switch name="/systems/electrical/generic-pwr">
+			<description>This makes the FG stuff work because we killed the generic electrical</description>
+			<default value="0"/>
+			<test value="/systems/electrical/bus/ac-1/voltage">
+				/systems/electrical/bus/ac-1/voltage gt 225 
+			</test>
+			<output>/systems/electrical/outputs/efis</output>
+			<output>/systems/electrical/outputs/fcp-power</output>
+			<output>/systems/electrical/outputs/fuel-pump[0]</output>
+			<output>/systems/electrical/outputs/fuel-pump[1]</output>
+			<output>/systems/electrical/outputs/fuel-pump[2]</output>
+			<output>/systems/electrical/outputs/mk-viii</output>
+			<output>/systems/electrical/outputs/tacan</output>
+			<output>/systems/electrical/outputs/turn-coordinator</output>
+			<output>/systems/electrical/outputs/nav</output> 
+		</switch>
+
+	</channel>
+
+	<channel name="Instrument power" execrate="8">
+
+	<!-- Radios -->
+
+		<switch name="/instrumentation/comm[0]/power-btn">
+			<default value="0"/>
+			<test logic="OR" value="230">	
+			    /systems/electrical/bus/ac-4/voltage gt 225
+			    /systems/electrical/bus/ess/voltage gt 225
+		      </test>
+		</switch>
+
+		<switch name="/instrumentation/comm[1]/power-btn">
+			<default value="0"/>
+			<test logic="AND" value="230">	
+			    /systems/electrical/bus/ac-3/voltage gt 225
+		      </test>
+		</switch>
+
+	<!-- HF radio is supplied by ac 1 -->
+
+		<switch name="/instrumentation/comm[2]/power-btn">
+			<default value="0"/>
+			<test logic="AND" value="230">	
+			    /systems/electrical/bus/ac-1/voltage gt 225
+		      </test>
+		</switch>
+
+<!-- 
+
+**** INSTRUMENT LIST ***** 
+
+HSI, PILOT & CO-PILOT - BUS 3 & ESS
+UHF 1 -BUS 4 & ESS
+UHF 2 - BUS 3
+HF - BUS 1 
+ILS 1 - BUS 1
+ILS 2 - BUS 3
+ADF - BUS 1
+TACAN - BUS 4 & ESS
+PILOT DISPLAY - ESS 
+CO-PILOT DISPLAY - BUS 3
+STANDBY ADI - BUS 3 & ESS
+ENGINE PERFORMANCE INDICATORS - BUS 1 & 3
+GSS 1 - ESS
+GSS 2 - BUS 3
+ADC 1 - BUS 1
+ADC 2 - BUS 3
+TFR - BUS 3
+RADAR ALT - BUS 1
+AIRSPEED/MACH INDICATOR, PILOT - BUS 2
+ALTITUDE/VERTICAL VELOCITY INDICATOR, PILOT - BUS 2
+AIRSPEED/MACH INDICATOR, CO-PILOT - BUS 3
+ALTITUDE/VERTICAL VELOCITY INDICATOR, CO-PILOT - BUS 3
+TRUE AIRSPEED/GROUNDSPEED DATA - BUS 2
+IFF - BUS 4 & ESS
+CG & FUEL INDICATORS - ESS
+FLIGHT SURFACE INDICATORS - ESS
+
+ -->
+
+	</channel>
+
+	<channel name="Fault lights" execrate="8">
+
+
+		<switch name="/systems/electrical/lights/gen-1-fault">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/systems/electrical/sources/idg-1/voltage lt 220
+			</test>
+		</switch>
+
+		<switch name="/systems/electrical/lights/gen-2-fault">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/systems/electrical/sources/idg-2/voltage lt 220
+			</test>
+		</switch>
+
+		<switch name="/systems/electrical/lights/gen-3-fault">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/systems/electrical/sources/idg-3/voltage lt 220
+			</test>
+		</switch>
+
+		<switch name="/systems/electrical/lights/emer-gen-on">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/systems/electrical/sources/emer-gen/rpm eq 8000
+			</test>
+		</switch>
+
+	</channel>
+
+	<channel name="voltage needles" execrate="8">
+
+		<actuator name="/systems/electrical/lights/needle-indicator-voltage">
+            <input>/systems/electrical/lights/needle-indicator-voltage-cmd</input>
+            <rate_limit sense="decr">100</rate_limit> 
+            <rate_limit sense="incr">100</rate_limit> 
+        </actuator>
+
+
+		<switch name="/systems/electrical/lights/needle-indicator-voltage-cmd">
+			<default value="0"/>
+			<test logic="AND" value="/systems/electrical/sources/idg-1/voltage">
+				/controls/switches/voltage-select-switch eq 1
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/idg-2/voltage">
+				/controls/switches/voltage-select-switch eq 2
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/idg-3/voltage">
+				/controls/switches/voltage-select-switch eq 3
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/emer-gen/voltage">
+				/controls/switches/voltage-select-switch eq 4
+			</test>
+			<test logic="AND" value="/systems/electrical/bus/ac-1/voltage">
+				/controls/switches/voltage-select-switch eq 5
+			</test>
+			<test logic="AND" value="/systems/electrical/bus/ac-2/voltage">
+				/controls/switches/voltage-select-switch eq 6
+			</test>
+			<test logic="AND" value="/systems/electrical/bus/ac-3/voltage">
+				/controls/switches/voltage-select-switch eq 7
+			</test>
+			<test logic="AND" value="/systems/electrical/bus/ac-4/voltage">
+				/controls/switches/voltage-select-switch eq 8
+			</test>
+			<test logic="AND" value="/systems/electrical/bus/ess/voltage">
+				/controls/switches/voltage-select-switch eq 9
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/dc/bat-fwd/percentage">
+				/controls/switches/voltage-select-switch eq 10
+			</test>
+			<test logic="AND" value="/systems/electrical/sources/dc/bat-aft/percentage">
+				/controls/switches/voltage-select-switch eq 11
+			</test>
+		</switch>
+
+	</channel>
+
+	<channel name="Flash" execrate="8">
+
+		<fcs_function name="/systems/electrical/lights/blink-fast">
+			<function>
+				<floor>
+					<mod>
+						<product>
+							<property>sim-time-sec</property>
+							<value>4</value>
+						</product>
+						<value>2</value>
+					</mod>
+				</floor>
+			</function>
+		</fcs_function>
+
+	</channel>
+
+</system>

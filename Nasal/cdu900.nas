@@ -37,7 +37,7 @@ var cdu = [
   ],
 #FLPN(CODE) entries
   [ "FLIGHTPLAN", 
-    { sub1: "LISTING",sub2: "instrumentation/cdu900/expr/none", sub3: "---", sub4: "instrumentation/cdu900/expr/none", sub5: "NOT AVAILABLE", sub6: "instrumentation/cdu900/expr/none"},
+    { sub1: "LISTING",sub2: "autopilot/route-manager/wp/dist", sub3: "WYPT DIST", sub4: "instrumentation/cdu900/expr/none", sub5: "NOT AVAILABLE", sub6: "instrumentation/cdu900/expr/none"},
   ],
 #PSN(FDLS) entries
   [ "POS INFO", 

@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <transponder>
+      <name type="string">transponder</name>
+      <number type="int">0</number>
+      <mode type="int">2</mode>
+      <!-- 0 = Mode A, 1 = Mode C, 2 = Mode S -->
+      <minimum-supply-volts type="double">0</minimum-supply-volts>
+      <encoder-path type="string">systems/computers/adc_switch/indicated-altitude-ft_output</encoder-path>
+      <airspeed-path type="string">systems/computers/adc_switch/indicated_airspeed_knts_output</airspeed-path>
+      <kt70-compatibility type="bool">0</kt70-compatibility>
+  </transponder>
+
+<!-- CADC 1 -->
+
+  <altimeter>
+      <name>altimeter</name>
+      <number>0</number>
+      <static-pressure>/systems/static[0]/pressure-inhg</static-pressure>
+      <quantum>0</quantum>
+      <tau>0</tau>
+  </altimeter>
+
+<airspeed-indicator>
+    <name>airspeed-indicator</name>
+    <number>0</number>
+    <total-pressure>/systems/pitot[0]/total-pressure-inhg</total-pressure>
+    <static-pressure>/systems/static[0]/pressure-inhg</static-pressure>
+    <has-overspeed-indicator>0</has-overspeed-indicator>
+    <pressure-alt-source>/instrumentation/altimeter/pressure-alt-ft</pressure-alt-source>
+    <ias-limit>999.0</ias-limit>
+    <mach-limit>2.00</mach-limit>
+    <alt-threshold>65000</alt-threshold>
+</airspeed-indicator>
+
+<vertical-speed-indicator>
+    <name>vertical-speed-indicator</name>
+    <number>0</number>
+    <static-pressure>/systems/static[0]/pressure-inhg</static-pressure>
+</vertical-speed-indicator>
+
+<heading-indicator-dg>
+    <name>heading-indicator</name>
+    <number>0</number>
+    <power-supply>/systems/electrical/bus/ess/voltage</power-supply>
+    <minimum-supply-volts>220.0</minimum-supply-volts>
+    <limits>
+      <yaw-limit-rate>12.5</yaw-limit-rate>
+      <g-limit-lower>-1.5</g-limit-lower>
+      <g-limit-upper>2.5</g-limit-upper>
+      <yaw-error-factor>0.033</yaw-error-factor>
+      <g-error-factor>0.033</g-error-factor>
+      <g-limit-tumble-factor>2.0</g-limit-tumble-factor>
+      <g-node>/accelerations/pilot-gdamped</g-node>
+      <g-filter-time>0.0</g-filter-time>
+      <yaw-rate-source>/orientation/yaw-rate-degps</yaw-rate-source>
+    </limits>
+    <gyro>
+      <minimum-spin-norm>0.85</minimum-spin-norm>
+      <spin-up-sec>180.0</spin-up-sec>
+      <spin-down-sec>300.0</spin-down-sec>
+    </gyro>
+    <heading-source>/orientation/heading-deg</heading-source>
+</heading-indicator-dg>
+
+<attitude-indicator-electric>
+    <name>attitude-indicator</name>
+    <number>0</number>
+    <config>
+        <spin-thresh>0.85</spin-thresh>
+        <max-roll-error-deg>40.</max-roll-error-deg>
+        <max-pitch-error-deg>12.0</max-pitch-error-deg>
+    </config>
+    <gyro>
+      <minimum-spin-norm>0.85</minimum-spin-norm>
+      <spin-up-sec>180.0</spin-up-sec>
+      <spin-down-sec>300.0</spin-down-sec>
+    </gyro>
+    <power-supply>/systems/electrical/bus/ess/voltage</power-supply>
+    <minimum-supply-volts>220.0</minimum-supply-volts>
+</attitude-indicator-electric>
+
+<!-- CADC 2 -->
+
+  <altimeter>
+      <name>altimeter</name> 
+      <number>1</number>
+      <static-pressure>/systems/static[1]/pressure-inhg</static-pressure>
+      <quantum>0</quantum>
+      <tau>0</tau>
+  </altimeter>
+
+<airspeed-indicator>
+    <name>airspeed-indicator</name>
+    <number>1</number>
+    <total-pressure>/systems/pitot[1]/total-pressure-inhg</total-pressure>
+    <static-pressure>/systems/static[1]/pressure-inhg</static-pressure>
+    <has-overspeed-indicator>0</has-overspeed-indicator>
+    <pressure-alt-source>/instrumentation/altimeter/pressure-alt-ft</pressure-alt-source>
+    <ias-limit>999.0</ias-limit>
+    <mach-limit>2.00</mach-limit>
+    <alt-threshold>65000</alt-threshold>
+</airspeed-indicator>
+
+<vertical-speed-indicator>
+    <name>vertical-speed-indicator</name>
+    <number>1</number>
+    <static-pressure>/systems/static[1]/pressure-inhg</static-pressure>
+</vertical-speed-indicator>
+
+<heading-indicator-dg>
+    <name>heading-indicator</name>
+    <number>1</number>
+    <power-supply>systems/electrical/bus/ac-3/voltage</power-supply>
+    <minimum-supply-volts>220.0</minimum-supply-volts>
+    <limits>
+      <yaw-limit-rate>12.5</yaw-limit-rate>
+      <g-limit-lower>-1.5</g-limit-lower>
+      <g-limit-upper>2.5</g-limit-upper>
+      <yaw-error-factor>0.033</yaw-error-factor>
+      <g-error-factor>0.033</g-error-factor>
+      <g-limit-tumble-factor>2.0</g-limit-tumble-factor>
+      <g-node>/accelerations/pilot-gdamped</g-node>
+      <g-filter-time>0.0</g-filter-time>
+      <yaw-rate-source>/orientation/yaw-rate-degps</yaw-rate-source>
+    </limits>
+    <gyro>
+      <minimum-spin-norm>0.85</minimum-spin-norm>
+      <spin-up-sec>180.0</spin-up-sec>
+      <spin-down-sec>300.0</spin-down-sec>
+    </gyro>
+    <heading-source>/orientation/heading-deg</heading-source>
+</heading-indicator-dg>
+
+<attitude-indicator-electric>
+    <name>attitude-indicator</name>
+    <number>1</number>
+    <config>
+        <spin-thresh>0.85</spin-thresh>
+        <max-roll-error-deg>40.</max-roll-error-deg>
+        <max-pitch-error-deg>12.0</max-pitch-error-deg>
+    </config>
+    <gyro>
+      <minimum-spin-norm>0.85</minimum-spin-norm>
+      <spin-up-sec>180.0</spin-up-sec>
+      <spin-down-sec>300.0</spin-down-sec>
+    </gyro>
+    <power-supply>systems/electrical/bus/ac-3/voltage</power-supply>
+    <minimum-supply-volts>220.0</minimum-supply-volts>
+</attitude-indicator-electric>
+
+<!-- Backups-->
+
+  <tacan>
+    <name>tacan</name>
+    <number>0</number>
+  </tacan>
+
+  <nav-radio>
+    <name>nav</name>
+    <number>0</number>
+  </nav-radio>
+
+  <nav-radio>
+    <name>nav</name>
+    <number>1</number>
+  </nav-radio>
+
+  <dme>
+    <name>dme</name>
+    <number>0</number>
+  </dme>
+
+  <adf>
+    <name>adf</name>
+    <number>0</number>
+  </adf>
+
+  <radar-altimeter>
+      <name>radar-altimeter</name>
+      <number>0</number>
+      <update-interval-sec>0.1</update-interval-sec>
+  </radar-altimeter>
+
+</PropertyList>
