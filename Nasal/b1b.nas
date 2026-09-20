@@ -234,6 +234,14 @@ setprop("sim/multiplay/generic/float[3]",0);
 setprop("sim/multiplay/generic/float[4]",0);
 setprop("sim/multiplay/generic/float[5]",0);
 b1b.elevon();
+setprop("instrumentation/cdu900/line0", "");  # We make sure these props are strings and not doubles
+setprop("instrumentation/cdu900/line1", "");
+setprop("instrumentation/cdu900/line2", "");
+setprop("instrumentation/cdu900/line3", "");
+setprop("instrumentation/cdu900/line4", "");
+setprop("instrumentation/cdu900/line5", "");
+setprop("instrumentation/cdu900/line6", "");
+b1b.input_loop();  # Initiate the CDU
 b1b.cdu_set(2,1);
 print ("B-1B systems starting!");
 }
