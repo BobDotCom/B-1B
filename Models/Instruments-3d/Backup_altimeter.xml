@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>Backup_altimeter.ac</path>
+
+
+    <animation>
+        <type>material</type>
+        <object-name>00.01hg</object-name>
+        <object-name>00.10hg</object-name>
+        <object-name>01.00hg</object-name>
+        <object-name>10.00hg</object-name>
+        <object-name>1000ft</object-name>
+        <object-name>10000ft</object-name>
+        <object-name>Backing</object-name>
+        <object-name>Needle</object-name>
+	 <emission>
+		   <red>0.9</red>
+		 <green>0.5</green>
+		  <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+    </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle</object-name>
+  <property>instrumentation/Backup-altimeter/indicated-altitude-ft</property>
+  <factor>0.36</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>Backup_mach-indicator.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>Knots_plate</object-name>
+        <object-name>Needle</object-name>
+	 <emission>
+		   <red>0.9</red>
+		 <green>0.5</green>
+		  <blue>0.9</blue>
+		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+	</emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Needle</object-name>
+        <property>/instrumentation/Backup-airspeed-indicator[0]/indicated-speed-kt</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>20</ind><dep>0.0</dep></entry>
+            <entry><ind>100</ind><dep>35.0</dep></entry>
+            <entry><ind>150</ind><dep>90.0</dep></entry>
+            <entry><ind>200</ind><dep>135.0</dep></entry>
+            <entry><ind>500</ind><dep>266.0</dep></entry>
+            <entry><ind>900</ind><dep>360.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>Set_index</object-name>
+    <property>instrumentation/Backup-airspeed-indicator/Set_index</property>
+    <center>
+      <y-m>0.03199</y-m>
+      <z-m>-0.03327</z-m>
+    </center>
+    <axis><x>-1</x></axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/Backup-airspeed-indicator/Set_index</property>
+        <factor>10</factor>
+        <min>0</min>
+        <max>720</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Index_arrow_2</object-name>
+        <property>instrumentation/Backup-airspeed-indicator/Set_index</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>720</ind><dep>359</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+</PropertyList>

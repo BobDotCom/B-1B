@@ -440,7 +440,7 @@ more to come :-)
 
   <model>
 	  <name>alt</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/alt2-3d.xml</path>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/Backup_altimeter.xml</path>
 	  <offsets>
 		  <x-m>-18.0303</x-m>
 		  <y-m>-0.325</y-m>
@@ -450,8 +450,8 @@ more to come :-)
   </model>
 
   <model>
-	  <name>vsi</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/vsi-3d.xml</path>
+	  <name>Backup mach indicator</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/Backup_mach-indicator.xml</path>
 	  <offsets>
 		  <x-m>-18.0303</x-m>
 		  <y-m>-0.405</y-m>
@@ -748,7 +748,7 @@ B-1BFS
   </model>
 
 
-  <!-- OSO instruments xxxxxxxxxxxxxxxxxxxxxxxxx -->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxx OSO instruments xxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 
   <model>
@@ -1078,8 +1078,8 @@ B-1BFS
 	  <path>Aircraft/B-1B/Models/Instruments-3d/illum.xml</path>
 	  <offsets>
 		  <x-m>-15.789</x-m>
-		  <y-m>-0.3325</y-m>
-		  <z-m>1.7</z-m>
+		  <y-m>-0.55</y-m>
+		  <z-m>1.865</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -1218,7 +1218,7 @@ B-1BFS
   </model>
 
 
-                     <!--- DSO Instruments -->
+  <!--- xxxxxxxxxxxxxxxxxxxxxxxxx DSO Instruments xxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 
   <model>
@@ -1240,29 +1240,6 @@ B-1BFS
 		  <x-m>-15.780</x-m>
 		  <y-m>-0.79</y-m>
 		  <z-m>1.82</z-m>
-		  <pitch-deg>0</pitch-deg>
-	  </offsets>
-  </model>
-
-  <model>
-	  <name>DSO AI E variant</name>
-	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>
-	  <condition>
-		  <or>
-		 <equals>
-			 <property>sim/current-view/name</property>
-			 <value>OSO view</value>
-		 </equals>
-			  <equals>
-				  <property>sim/current-view/name</property>
-				  <value>DSO/OSO centered view</value>
-			  </equals>
-		  </or>
-	 </condition>
-	  <offsets>
-		  <x-m>-15.812</x-m>
-		  <y-m>-0.52</y-m>
-		  <z-m>1.81</z-m>
 		  <pitch-deg>0</pitch-deg>
 	  </offsets>
   </model>
@@ -1290,6 +1267,29 @@ B-1BFS
 		</offsets>
 	</model>
 
+
+  <model>
+	  <name>DSO AI E variant</name>
+	  <path>Aircraft/B-1B/Models/Instruments-3d/ai.xml</path>
+	  <condition>
+		  <or>
+		 <equals>
+			 <property>sim/current-view/name</property>
+			 <value>OSO view</value>
+		 </equals>
+			  <equals>
+				  <property>sim/current-view/name</property>
+				  <value>DSO/OSO centered view</value>
+			  </equals>
+		  </or>
+	 </condition>
+	  <offsets>
+		  <x-m>-15.812</x-m>
+		  <y-m>-0.52</y-m>
+		  <z-m>1.81</z-m>
+		  <pitch-deg>0</pitch-deg>
+	  </offsets>
+  </model>
   <model>
 	  <name>DSO Airspeed Indicator</name>
 	  <path>Aircraft/B-1B/Models/Instruments-3d/rear-102kt.xml</path>

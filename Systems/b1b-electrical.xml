@@ -49,6 +49,14 @@
 	<property value="0">/systems/electrical/lights/gen-2-fault</property>
 	<property value="0">/systems/electrical/lights/gen-3-fault</property>
 
+	<property value="0">/instrumentation/CADC1-altimeter/serviceable</property>
+	<property value="0">/instrumentation/CADC1-airspeed-indicator/serviceable</property>
+	<property value="0">/instrumentation/CADC1-vertical-speed-indicator/serviceable</property>
+	<property value="0">/instrumentation/CADC2-altimeter/serviceable</property>
+	<property value="0">/instrumentation/CADC2-airspeed-indicator/serviceable</property>
+	<property value="0">/instrumentation/CADC2-vertical-speed-indicator/serviceable</property>
+
+
 	<channel name="DC system" execrate="8">
 
 		<!-- BAT FWD -->
@@ -859,6 +867,36 @@ FLIGHT SURFACE INDICATORS - ESS
 			</test>
 		</switch>
 
+	</channel>
+
+	<channel name="CADC power supply" execrate="8">
+
+		<switch name="/systems/electrical/outputs/CADC1-pwr">
+			<default value="0"/>
+			<test value="1">
+				/systems/electrical/bus/ac-1/voltage gt 225 
+			</test>
+			<output>/instrumentation/CADC1-altimeter/serviceable</output>
+			<output>/instrumentation/CADC1-airspeed-indicator/serviceable</output>
+			<output>/instrumentation/CADC1-vertical-speed-indicator/serviceable</output>
+		</switch>
+		<switch name="/systems/electrical/outputs/CADC2-pwr">
+			<default value="0"/>
+			<test value="1">
+				/systems/electrical/bus/ac-3/voltage gt 225 
+			</test>
+			<output>/instrumentation/CADC2-altimeter/serviceable</output>
+			<output>/instrumentation/CADC2-airspeed-indicator/serviceable</output>
+			<output>/instrumentation/CADC2-vertical-speed-indicator/serviceable</output>
+		</switch>
+		<switch name="/systems/electrical/outputs/backup-instrument-pwr">
+			<default value="0"/>
+			<test value="1">
+				/systems/electrical/bus/ess/voltage gt 225 
+			</test>
+			<output>/instrumentation/Backup-altimeter/serviceable</output>
+			<output>/instrumentation/Backup-airspeed-indicator/serviceable</output>
+		</switch>
 	</channel>
 
 	<channel name="voltage needles" execrate="8">

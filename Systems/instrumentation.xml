@@ -15,7 +15,7 @@
 <!-- CADC 1 -->
 
   <altimeter>
-      <name>altimeter</name>
+      <name>CADC1-altimeter</name>
       <number>0</number>
       <static-pressure>/systems/static[0]/pressure-inhg</static-pressure>
       <quantum>0</quantum>
@@ -23,25 +23,27 @@
   </altimeter>
 
 <airspeed-indicator>
-    <name>airspeed-indicator</name>
+    <name>CADC1-airspeed-indicator</name>
     <number>0</number>
     <total-pressure>/systems/pitot[0]/total-pressure-inhg</total-pressure>
     <static-pressure>/systems/static[0]/pressure-inhg</static-pressure>
     <has-overspeed-indicator>0</has-overspeed-indicator>
-    <pressure-alt-source>/instrumentation/altimeter/pressure-alt-ft</pressure-alt-source>
+    <pressure-alt-source>/instrumentation/CADC1-altimeter/pressure-alt-ft</pressure-alt-source>
     <ias-limit>999.0</ias-limit>
     <mach-limit>2.00</mach-limit>
     <alt-threshold>65000</alt-threshold>
 </airspeed-indicator>
 
 <vertical-speed-indicator>
-    <name>vertical-speed-indicator</name>
+    <name>CADC1-vertical-speed-indicator</name>
     <number>0</number>
     <static-pressure>/systems/static[0]/pressure-inhg</static-pressure>
 </vertical-speed-indicator>
 
+<!-- GSS 1 -->
+
 <heading-indicator-dg>
-    <name>heading-indicator</name>
+    <name>GSS1-heading-indicator</name>
     <number>0</number>
     <power-supply>/systems/electrical/bus/ess/voltage</power-supply>
     <minimum-supply-volts>220.0</minimum-supply-volts>
@@ -65,11 +67,11 @@
 </heading-indicator-dg>
 
 <attitude-indicator-electric>
-    <name>attitude-indicator</name>
+    <name>GSS1-attitude-indicator</name>
     <number>0</number>
     <config>
         <spin-thresh>0.85</spin-thresh>
-        <max-roll-error-deg>40.</max-roll-error-deg>
+        <max-roll-error-deg>40.0</max-roll-error-deg>
         <max-pitch-error-deg>12.0</max-pitch-error-deg>
     </config>
     <gyro>
@@ -84,34 +86,36 @@
 <!-- CADC 2 -->
 
   <altimeter>
-      <name>altimeter</name> 
-      <number>1</number>
+      <name>CADC2-altimeter</name> 
+      <number>0</number>
       <static-pressure>/systems/static[1]/pressure-inhg</static-pressure>
       <quantum>0</quantum>
       <tau>0</tau>
   </altimeter>
 
 <airspeed-indicator>
-    <name>airspeed-indicator</name>
-    <number>1</number>
+    <name>CADC2-airspeed-indicator</name>
+    <number>0</number>
     <total-pressure>/systems/pitot[1]/total-pressure-inhg</total-pressure>
     <static-pressure>/systems/static[1]/pressure-inhg</static-pressure>
     <has-overspeed-indicator>0</has-overspeed-indicator>
-    <pressure-alt-source>/instrumentation/altimeter/pressure-alt-ft</pressure-alt-source>
+    <pressure-alt-source>/instrumentation/CADC2-altimeter/pressure-alt-ft</pressure-alt-source>
     <ias-limit>999.0</ias-limit>
     <mach-limit>2.00</mach-limit>
     <alt-threshold>65000</alt-threshold>
 </airspeed-indicator>
 
 <vertical-speed-indicator>
-    <name>vertical-speed-indicator</name>
-    <number>1</number>
+    <name>CADC2-vertical-speed-indicator</name>
+    <number>0</number>
     <static-pressure>/systems/static[1]/pressure-inhg</static-pressure>
 </vertical-speed-indicator>
 
+<!-- GSS 2 -->
+
 <heading-indicator-dg>
-    <name>heading-indicator</name>
-    <number>1</number>
+    <name>GSS2-heading-indicator</name>
+    <number>0</number>
     <power-supply>systems/electrical/bus/ac-3/voltage</power-supply>
     <minimum-supply-volts>220.0</minimum-supply-volts>
     <limits>
@@ -134,11 +138,11 @@
 </heading-indicator-dg>
 
 <attitude-indicator-electric>
-    <name>attitude-indicator</name>
-    <number>1</number>
+    <name>GSS2-attitude-indicator</name>
+    <number>0</number>
     <config>
         <spin-thresh>0.85</spin-thresh>
-        <max-roll-error-deg>40.</max-roll-error-deg>
+        <max-roll-error-deg>40.0</max-roll-error-deg>
         <max-pitch-error-deg>12.0</max-pitch-error-deg>
     </config>
     <gyro>
@@ -151,6 +155,33 @@
 </attitude-indicator-electric>
 
 <!-- Backups-->
+
+<airspeed-indicator>
+    <name>Backup-airspeed-indicator</name>
+    <number>0</number>
+    <total-pressure>/systems/pitot[0]/total-pressure-inhg</total-pressure>
+    <static-pressure>/systems/static[0]/pressure-inhg</static-pressure>
+    <has-overspeed-indicator>0</has-overspeed-indicator>
+    <pressure-alt-source>/instrumentation/altimeter/pressure-alt-ft</pressure-alt-source>
+    <ias-limit>900.0</ias-limit>
+    <mach-limit>2.00</mach-limit>
+    <alt-threshold>65000</alt-threshold>
+</airspeed-indicator>
+
+  <altimeter>
+      <name>Backup-altimeter</name> 
+      <number>0</number>
+      <static-pressure>/systems/static[1]/pressure-inhg</static-pressure>
+      <quantum>0</quantum>
+      <tau>0</tau>
+  </altimeter>
+
+<comm-radio>
+    <name>comm</name>
+    <number>0</number>
+    <eight-point-three>0</eight-point-three>
+    <full-duplex>0</full-duplex>
+</comm-radio>
 
   <tacan>
     <name>tacan</name>
