@@ -11,6 +11,7 @@
         <object-name>00.10hg</object-name>
         <object-name>01.00hg</object-name>
         <object-name>10.00hg</object-name>
+        <object-name>100ft</object-name>
         <object-name>1000ft</object-name>
         <object-name>10000ft</object-name>
         <object-name>Backing</object-name>
@@ -19,7 +20,7 @@
 		   <red>0.9</red>
 		 <green>0.5</green>
 		  <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
     </animation>
 
@@ -34,6 +35,119 @@
    <z>0</z>
   </axis>
  </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>10.00hg</object-name>
+  <property>instrumentation/Backup-altimeter/setting-inhg</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>01.00hg</object-name>
+  <property>instrumentation/Backup-altimeter/setting-inhg</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>00.10hg</object-name>
+  <property>instrumentation/Backup-altimeter/setting-inhg</property>
+  <factor>1</factor>
+  <step>0.1</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>00.01hg</object-name>
+  <property>instrumentation/Backup-altimeter/setting-inhg</property>
+  <factor>10</factor>
+  <step>0.01</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>100ft</object-name>
+  <property>instrumentation/Backup-altimeter/indicated-altitude-ft</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>1000ft</object-name>
+  <property>instrumentation/Backup-altimeter/indicated-altitude-ft</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>10000ft</object-name>
+  <property>instrumentation/Backup-altimeter/indicated-altitude-ft</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>Set_index</object-name>
+    <property>instrumentation/Backup-altimeter/setting-inhg</property>
+    <center>
+      <y-m>-0.029549</y-m>
+      <z-m>-0.027844</z-m>
+    </center>
+    <axis><x>-1</x></axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/Backup-altimeter/setting-inhg</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>360</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
 
 </PropertyList>
 

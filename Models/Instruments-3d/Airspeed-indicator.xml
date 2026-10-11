@@ -1,19 +1,16 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-   <path>102kt.ac</path>
+   <path>Airspeed-indicator.ac</path>
    <animation>
     <type>material</type>
        <object-name>Cube.001</object-name>
-       <object-name>10thsGS</object-name>
-       <object-name>10sGS</object-name>
-       <object-name>100sGS</object-name>
-       <object-name>1000sGS</object-name>
        <object-name>10thsAS</object-name>
        <object-name>10sAS</object-name>
        <object-name>100sAS</object-name>
        <object-name>1000sAS</object-name>
        <object-name>needle</object-name>
+       <object-name>OFF</object-name>
 	   <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
@@ -22,11 +19,10 @@
 	  </emission>
     </animation> 
 
-
   <animation>
    <type>textranslate</type>
    <object-name>1000sAS</object-name> 
-   <property>velocities/airspeed-kt</property>
+   <property>instrumentation/airspeed-indicator/displayed-speed</property>
    <factor>0.0001</factor> 
    <step>1000</step> 
    <axis> 
@@ -39,7 +35,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>100sAS</object-name>
-   <property>velocities/airspeed-kt</property>
+   <property>instrumentation/airspeed-indicator/displayed-speed</property>
    <factor>0.001</factor> 
    <step>100</step> 
    <axis> 
@@ -52,7 +48,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>10sAS</object-name>
-   <property>velocities/airspeed-kt</property>
+   <property>instrumentation/airspeed-indicator/displayed-speed</property>
    <factor>0.01</factor> 
    <step>10</step>   
    <axis> 
@@ -66,7 +62,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>10thsAS</object-name>
-   <property>velocities/airspeed-kt</property>
+   <property>instrumentation/airspeed-indicator/displayed-speed</property>
    <factor>0.1</factor> 
    <step>1</step> 
    <axis> 
@@ -80,17 +76,23 @@
         <type>select</type>
         <object-name>OFF</object-name>
         <condition>
+           <or>
             <less-than>
-                <property>controls/switches/speed-indicator</property>
+                <property>instrumentation/airspeed-indicator/needle-value</property>
                 <value>0.5</value>
             </less-than>
+            <less-than>
+                <property>systems/electrical/bus/ac-2/voltage</property>
+                <value>220</value>
+            </less-than>
+           </or>
         </condition> 
      </animation>
 
 <animation>
 	<type>rotate</type>
 	<object-name>needle</object-name>
-	<property>controls/switches/speed-indicator</property>
+	<property>instrumentation/airspeed-indicator/needle-value</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -126,7 +128,7 @@
 		<interval-sec>0.3</interval-sec>
 		<binding>
 			<command>property-adjust</command>
-			<property>controls/switches/speed-indicator</property>
+			<property>instrumentation/airspeed-indicator/needle-value</property>
 			<step>0.5</step>
 			<min>0.0</min>
 			<max>1.00</max>
@@ -138,7 +140,7 @@
 		<interval-sec>0.3</interval-sec>
 		<binding>
 			<command>property-adjust</command>
-			<property>controls/switches/speed-indicator</property>
+			<property>instrumentation/airspeed-indicator/needle-value</property>
 			<step>-0.5</step>
 			<min>0.0</min>
 			<max>1.00</max>

@@ -426,4 +426,18 @@
 		</switch>
 </channel>
 
+<channel name="Airspeed indicator logic" execrate="8">
+
+		<switch name="/instrumentation/airspeed-indicator/displayed-speed">
+			<default value="0"/>
+                	<test logic="AND" value="/systems/computers/adc_switch/true_airspeed_knts_output">
+					/instrumentation/airspeed-indicator/needle-value eq 0.5
+			 </test>
+                	<test logic="AND" value="/systems/computers/adc_switch/true_airspeed_knts_output">
+					/instrumentation/airspeed-indicator/needle-value eq 1.0
+			 </test>
+		</switch>
+
+</channel>
+
 </system>

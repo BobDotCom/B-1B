@@ -8,11 +8,13 @@
         <type>material</type>
         <object-name>Knots_plate</object-name>
         <object-name>Needle</object-name>
+        <object-name>Index_arrow_2</object-name>
+        <object-name>Index_arrow</object-name>
 	 <emission>
 		   <red>0.9</red>
 		 <green>0.5</green>
 		  <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
     </animation>
 
@@ -41,8 +43,8 @@
     <object-name>Set_index</object-name>
     <property>instrumentation/Backup-airspeed-indicator/Set_index</property>
     <center>
-      <y-m>0.03199</y-m>
-      <z-m>-0.03327</z-m>
+      <y-m>0.028792</y-m>
+      <z-m>-0.02994</z-m>
     </center>
     <axis><x>-1</x></axis>
     <action>
