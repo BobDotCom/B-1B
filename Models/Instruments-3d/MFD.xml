@@ -2415,5 +2415,13 @@
             <blue> 1</blue>
         </emission>
     </animation>
+
+<!--     <effect>
+        <inherits-from>Aircraft/B-1B/Models/Effects/displays/lcd</inherits-from>
+        <object-name>MFD1_Canvas</object-name>
+        <object-name>MFD2_Canvas</object-name>
+        <object-name>MFD3_Canvas</object-name>
+        <object-name>MFD4_Canvas</object-name>
+    </effect> -->
 </PropertyList>
   

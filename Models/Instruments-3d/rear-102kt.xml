@@ -5,10 +5,6 @@
    <animation>
     <type>material</type>
        <object-name>Cube.001</object-name>
-       <object-name>10thsGS</object-name>
-       <object-name>10sGS</object-name>
-       <object-name>100sGS</object-name>
-       <object-name>1000sGS</object-name>
        <object-name>10thsAS</object-name>
        <object-name>10sAS</object-name>
        <object-name>100sAS</object-name>
@@ -24,7 +20,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>1000sAS</object-name> 
-   <property>velocities/airspeed-kt</property>
+   <property>velocities/groundspeed-kt</property>
    <factor>0.0001</factor> 
    <step>1000</step> 
    <axis> 
@@ -37,7 +33,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>100sAS</object-name>
-   <property>velocities/airspeed-kt</property>
+   <property>velocities/groundspeed-kt</property>
    <factor>0.001</factor> 
    <step>100</step> 
    <axis> 
@@ -50,74 +46,6 @@
   <animation>
    <type>textranslate</type>
    <object-name>10sAS</object-name>
-   <property>velocities/airspeed-kt</property>
-   <factor>0.01</factor> 
-   <step>10</step>   
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis> 
-  </animation> 
-
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>10thsAS</object-name>
-   <property>velocities/airspeed-kt</property>
-   <factor>0.1</factor> 
-   <step>1</step> 
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis>
-  </animation> 
-
-    <animation>
-        <type>select</type>
-        <object-name>10thsAS</object-name>
-        <object-name>10sAS</object-name>
-        <object-name>100sAS</object-name>
-        <object-name>1000sAS</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/speed-indicator</property>
-                <value>0.5</value>
-            </equals>
-        </condition> 
-     </animation> 
-
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>1000sGS</object-name> 
-   <property>velocities/groundspeed-kt</property>
-   <factor>0.0001</factor> 
-   <step>1000</step> 
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis> 
-  </animation>  
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>100sGS</object-name>
-   <property>velocities/groundspeed-kt</property>
-   <factor>0.001</factor> 
-   <step>100</step> 
-   <axis> 
-    <x>0</x> 
-    <y>-1</y> 
-    <z>0</z> 
-   </axis> 
-  </animation>  
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>10sGS</object-name>
    <property>velocities/groundspeed-kt</property>
    <factor>0.01</factor> 
    <step>10</step>   
@@ -131,7 +59,7 @@
 
   <animation>
    <type>textranslate</type>
-   <object-name>10thsGS</object-name>
+   <object-name>DigitsAS</object-name>
    <property>velocities/groundspeed-kt</property>
    <factor>0.1</factor> 
    <step>1</step> 
@@ -141,21 +69,6 @@
     <z>0</z> 
    </axis>
   </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>10thsGS</object-name>
-        <object-name>10sGS</object-name>
-        <object-name>100sGS</object-name>
-        <object-name>1000sGS</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/speed-indicator</property>
-                <value>1.0</value>
-            </equals>
-        </condition> 
-     </animation>
-
 
   <animation>
    <type>textranslate</type>
@@ -199,7 +112,7 @@
 
   <animation>
    <type>textranslate</type>
-   <object-name>10thsAlt</object-name>
+   <object-name>DigitsAlt</object-name>
    <property>position/altitude-agl-ft</property>
    <factor>0.1</factor> 
    <step>1</step> 
@@ -208,23 +121,12 @@
     <y>-1</y> 
     <z>0</z> 
    </axis>
-  </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>off</object-name>
-        <condition>
-            <equals>
-                <property>controls/switches/speed-indicator</property>
-                <value>0.0</value>
-            </equals>
-        </condition> 
-     </animation> 
+  </animation> 
 
 <animation>
 	<type>rotate</type>
 	<object-name>needle</object-name>
-	<property>controls/switches/speed-indicator</property>
+	<property>controls/switches/rear-speed-indicator</property>
 	<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -245,9 +147,9 @@
 		<z>0.0</z>
 	</axis>
 	<center>
-            <x-m>0.0094</x-m>
-            <y-m>0.0121</y-m>
-            <z-m>-0.0139</z-m>
+            <x-m>0.0085</x-m>
+            <y-m>0.0265</y-m>
+            <z-m>-0.0244</z-m>
 	</center>
 </animation> 
 
@@ -260,7 +162,7 @@
 		<interval-sec>0.3</interval-sec>
 		<binding>
 			<command>property-adjust</command>
-			<property>controls/switches/speed-indicator</property>
+			<property>controls/switches/rear-speed-indicator</property>
 			<step>0.5</step>
 			<min>0.0</min>
 			<max>1.00</max>
@@ -272,14 +174,12 @@
 		<interval-sec>0.3</interval-sec>
 		<binding>
 			<command>property-adjust</command>
-			<property>controls/switches/speed-indicator</property>
+			<property>controls/switches/rear-speed-indicator</property>
 			<step>-0.5</step>
 			<min>0.0</min>
 			<max>1.00</max>
 		</binding>
 	</action>
 </animation>  
-
-
 </PropertyList>
 

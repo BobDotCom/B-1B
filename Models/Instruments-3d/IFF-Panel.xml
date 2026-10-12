@@ -23,68 +23,485 @@
   <animation>
     <type>material</type>
     <object-name>IFF-PANEL</object-name>
-    <object-name>Knob-1</object-name>
-    <object-name>Knob-2</object-name>
+    <object-name>Code</object-name>
+    <object-name>Master</object-name>
     <object-name>Left-hand-large-switch</object-name>
     <object-name>Right-hand-large-switch</object-name>
     <object-name>Small-knob-1</object-name>
     <object-name>Small-knob-2</object-name>
-    <object-name>Switch-1</object-name>
-    <object-name>Switch-2</object-name>
-    <object-name>Switch-3</object-name>
-    <object-name>Switch-4</object-name>
-    <object-name>Switch-5</object-name>
-    <object-name>Switch-6</object-name>
-    <object-name>Switch-7</object-name>
+    <object-name>switch_oh.000</object-name>
+    <object-name>switch_oh.28</object-name>
+    <object-name>switch_oh.035</object-name>
+    <object-name>switch_oh.41</object-name>
+    <object-name>switch_oh.052</object-name>
+    <object-name>switch_oh.057</object-name>
+    <object-name>switch_oh.058</object-name>
+    <object-name>switch_oh.059</object-name>
+    <object-name>knob_oh.009</object-name>
+    <object-name>knob_oh.016</object-name>
+    <object-name>knob_oh.017</object-name>
+    <object-name>knob_oh.018</object-name>
+    <object-name>knob_oh.019</object-name>
+    <object-name>Cylinder.001</object-name>
+    <object-name>Cylinder.007</object-name>
+    <object-name>Cylinder.002</object-name>
+    <object-name>Cylinder.003</object-name>
+    <object-name>Cylinder.005</object-name>
+    <object-name>Cylinder.006</object-name>
+    <object-name>Singles-3A</object-name>
+    <object-name>Tens-3A</object-name>
+    <object-name>Hundreds-3A</object-name>
+    <object-name>Thousands-3A</object-name>
+    <object-name>Singles-1</object-name>
+    <object-name>Tens-1</object-name>
+    <object-name>M.1_switch</object-name>
+    <object-name>M.3A_switch</object-name>
+    <object-name>Covers</object-name>
+    <object-name>NUTS</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
 
-
-<!-- Label Text -->
-
-<text>
-	<name>LabelText</name>
-	<type type="string">literal</type>
-		<text type="string">IFF</text>
-	<draw-text type="bool">true</draw-text>
-	<font>Helvetica.txf</font>
-		<character-size type="double">0.012</character-size>
-		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
-	<axis-alignment>yz-plane</axis-alignment>
-	<max-height>0.2</max-height>
-	<max-width>0.07</max-width>
-	<font-resolution>
-		<width type="int">32</width>
-		<height type="int">32</height>
-	</font-resolution>
-	<alignment>center-center</alignment>
-	<offsets>
-		<x-m> 0.07</x-m>
-		<y-m>-0.02</y-m>
-		<z-m> 0.05</z-m>
-	</offsets>
-</text>
+<animation>
+	<type>knob</type>
+	 <object-name>M.1_switch</object-name>
+	<property>controls/switches/iff/mode_1</property>
+	<factor>20</factor>
+	<center>
+		<x-m>0.00627</x-m>
+		<y-m>-0.026</y-m>
+		<z-m>0.006</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+         <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/iff/mode_1</property>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/iff/mode_1</property>
+			<step>0</step>
+			<min>-1</min>
+			<max>0</max>
+		</binding>
+	</release>
+</animation>
 
 <animation>
-	<type>material</type>
-		<object-name>LabelText</object-name>
+	<type>knob</type>
+	 <object-name>M.2_switch</object-name>
+	<property>controls/switches/iff/mode_2</property>
+	<factor>20</factor>
+	<center>
+		<x-m>0.00627</x-m>
+		<y-m>-0.026</y-m>
+		<z-m>0.006</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+         <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/iff/mode_2</property>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/iff/mode_2</property>
+			<step>0</step>
+			<min>-1</min>
+			<max>0</max>
+		</binding>
+	</release>
+</animation>
+
+<animation>
+	<type>knob</type>
+	 <object-name>M.3A_switch</object-name>
+	<property>controls/switches/iff/mode_3A</property>
+	<factor>20</factor>
+	<center>
+		<x-m>0.00605</x-m>
+		<y-m>-0.0137</y-m>
+		<z-m>0.006</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/iff/mode_3A</property>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/iff/mode_3A</property>
+			<step>0</step>
+			<min>-1</min>
+			<max>0</max>
+		</binding>
+	</release>
+</animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Master</object-name>
+        <property>instrumentation/transponder/inputs/knob-mode</property>
+        <factor>45</factor>
+        <center>
+            <x-m>-0.034</x-m>
+            <y-m>0.041</y-m>
+            <z-m>0.0088</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/transponder/inputs/knob-mode</property>
+                <min>0</min>
+                <max>4</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Singles-1</object-name>
+        <property>instrumentation/iff/mode_1/channel-selection-singles</property>
+        <factor>0</factor>
+        <center>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/iff/mode_1/channel-selection-singles</property>
+                <min>0</min>
+                <max>9</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Tens-1</object-name>
+        <property>instrumentation/iff/mode_1/channel-selection-tens</property>
+        <factor>0</factor>
+        <center>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/iff/mode_1/channel-selection-tens</property>
+                <min>0</min>
+                <max>9</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Singles-3A</object-name>
+        <property>instrumentation/transponder/inputs/mode_3A_digit[0]</property>
+        <factor>0</factor>
+        <center>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/transponder/inputs/mode_3A_digit[0]</property>
+                <min>0</min>
+                <max>9</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Tens-3A</object-name>
+        <property>instrumentation/transponder/inputs/mode_3A_digit[1]</property>
+        <factor>0</factor>
+        <center>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/transponder/inputs/mode_3A_digit[1]</property>
+                <min>0</min>
+                <max>9</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Hundreds-3A</object-name>
+        <property>instrumentation/transponder/inputs/mode_3A_digit[2]</property>
+        <factor>0</factor>
+        <center>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/transponder/inputs/mode_3A_digit[2]</property>
+                <min>0</min>
+                <max>9</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>Thousands-3A</object-name>
+        <property>instrumentation/transponder/inputs/mode_3A_digit[3]</property>
+        <factor>0</factor>
+        <center>
+            <x-m>0.049</x-m>
+            <y-m>0.03746</y-m>
+            <z-m>-0.013</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/transponder/inputs/mode_3A_digit[3]</property>
+                <min>0</min>
+                <max>9</max>
+                <wrap>false</wrap>
+           </binding>
+        </action>
+    </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>Cylinder.001</object-name>
+  <property>instrumentation/transponder/inputs/mode_3A_digit[0]</property>
+  <factor>-0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+        <center>
+            <x-m>0.04943</x-m>
+            <y-m>-0.0320</y-m>
+            <z-m>-0.0089</z-m>
+        </center>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>Cylinder.002</object-name>
+  <property>instrumentation/transponder/inputs/mode_3A_digit[1]</property>
+  <factor>-0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+        <center>
+            <x-m>0.04943</x-m>
+            <y-m>-0.0320</y-m>
+            <z-m>-0.0089</z-m>
+        </center>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>Cylinder.003</object-name>
+  <property>instrumentation/transponder/inputs/mode_3A_digit[2]</property>
+  <factor>-0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+        <center>
+            <x-m>0.04943</x-m>
+            <y-m>-0.0320</y-m>
+            <z-m>-0.0089</z-m>
+        </center>
+ </animation>
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>Cylinder.005</object-name>
+  <property>instrumentation/transponder/inputs/mode_3A_digit[3]</property>
+  <factor>-0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+        <center>
+            <x-m>0.04943</x-m>
+            <y-m>-0.0320</y-m>
+            <z-m>-0.0089</z-m>
+        </center>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>Cylinder.006</object-name>
+  <property>instrumentation/iff/mode_1/channel-selection-singles</property>
+  <factor>-0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+        <center>
+            <x-m>0.04943</x-m>
+            <y-m>-0.0320</y-m>
+            <z-m>-0.0089</z-m>
+        </center>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>Cylinder.007</object-name>
+  <property>instrumentation/iff/mode_1/channel-selection-tens</property>
+  <factor>-0.1</factor>
+  <step>1</step>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+        <center>
+            <x-m>0.04943</x-m>
+            <y-m>-0.0320</y-m>
+            <z-m>-0.0089</z-m>
+        </center>
+ </animation>
+
+<animation>
+	<type>knob</type>
+	 <object-name>switch_ident</object-name>
+	<property>instrumentation/transponder/ident</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.03538</x-m>
+		<y-m>0.05388</y-m>
+		<z-m>0.0066</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>instrumentation/transponder/ident</property>
+			 <min>0</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>instrumentation/transponder/ident</property>
+			<step>-1</step>
+			<min>0</min>
+			<max>1</max>
+		</binding>
+	</release>
+</animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Test_light</object-name>
 	<emission>
-		<red>1.0</red>
-		<green>0.8</green>
-		<blue>0.0</blue>
+		 <red>0</red>
+		 <green>1</green>
+		 <blue>0</blue>
+		 <factor-prop>instrumentation/iff/test_function</factor-prop>
 	</emission>
-</animation>
+  </animation>
 
-<animation>
-	<type>select</type>
-		<object-name>LabelText</object-name>
-	<condition>
-		<property>/sim/panel-hotspots</property>
-	</condition>
-</animation>
 </PropertyList>

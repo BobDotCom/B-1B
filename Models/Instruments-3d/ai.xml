@@ -36,28 +36,22 @@ if you contacted me before making any changes to this software.
 		<object-name>ZR.Alt</object-name>
 		<object-name>gs-scale</object-name>
 		<object-name>ai-dir</object-name>
-		<condition>
-			<less-than><property>controls/lighting/instruments-norm</property><value>0.8</value></less-than>
-		</condition>
 		<emission>
 			<red>0.9</red>
 			<green>0.5</green>
 			<blue>0.9</blue>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 		</emission>
 	</animation>
 
 	<animation>
 		<type>material</type>
 		<object-name>sphere</object-name>
-		<condition>
-			<less-than><property>controls/lighting/instruments-norm</property><value>0.8</value></less-than>
-		</condition>
 		<emission>
-			<red>0.2</red>
-			<green>0.0</green>
-			<blue>0.0</blue>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>0.9</red>
+			<green>0.5</green>
+			<blue>0.9</blue>
+			<factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 		</emission>
 	</animation>
 
@@ -65,55 +59,11 @@ if you contacted me before making any changes to this software.
 		<type>material</type>
 		<object-name>dir-knob</object-name>
 		<object-name>adi-knob</object-name>
-		<condition>
-			<less-than><property>scontrols/lighting/instruments-norm</property><value>0.8</value></less-than>
-		</condition>
 		<emission>
-			<red>0.3</red>
-			<green>0.0</green>
-			<blue>0.0</blue>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-		</emission>
-	</animation>
-
-	<animation>
-		<type>material</type>
-		<object-name>bank-index</object-name>
-		<object-name>off-flag</object-name>
-		<object-name>off-nav</object-name>
-		<object-name>reticl</object-name>
-		<object-name>ZR.Azi</object-name>
-		<object-name>ZR.Alt</object-name>
-		<object-name>gs-scale</object-name>
-		<object-name>ai-dir</object-name>
-		<object-name>sphere</object-name>
-		<object-name>mount</object-name>
-		<object-name>shadow</object-name>
-		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>controls/lighting/instruments-norm</property>
-		</condition>
-		<emission>
-		  <red>0.4</red>
-		  <green>0.05</green>
-		  <blue>0.05</blue>
-		  <factor-prop>controls/lighting/instruments-norm</factor-prop>
-		</emission>
-	</animation>
-
-	<animation>
-		<type>material</type>
-		<object-name>dir-knob</object-name>
-		<object-name>adi-knob</object-name>
-		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>controls/lighting/instruments-norm</property>
-		</condition>
-		<emission>
-		  <red>0.4</red>
-		  <green>0.05</green>
-		  <blue>0.05</blue>
-		  <factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>0.9</red>
+			<green>0.5</green>
+			<blue>0.9</blue>
+			<factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 		</emission>
 	</animation>
 
@@ -482,9 +432,9 @@ if you contacted me before making any changes to this software.
 	<type>material</type>
 		<object-name>LabelText</object-name>
 	<emission>
-		<red>1.0</red>
-		<green>0.8</green>
-		<blue>0.0</blue>
+		<red>0.5</red>
+		<green>0.9</green>
+		<blue>0.5</blue>
 	</emission>
 </animation>
 

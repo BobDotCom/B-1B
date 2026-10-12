@@ -38,18 +38,6 @@ sweat by maggse
 		<z-m>0.250</z-m>
 	</center>
 </animation>
-<animation>
-	<type>material</type>
-	<object-name>switch_flaps.002</object-name> 
-	<object-name>switch_flaps.002</object-name>
-	<object-name>switch_flaps.003</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
@@ -134,16 +122,6 @@ sweat by maggse
 		<z-m>0.250</z-m>
 	</center>
 </animation>
-<animation>
-	<type>material</type>
-	<object-name>throttle_lever_1</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
@@ -204,16 +182,6 @@ sweat by maggse
 		<y-m>-0.205</y-m>
 		<z-m>0.250</z-m>
 	</center>
-</animation>
-<animation>
-	<type>material</type>
-	<object-name>throttle_lever_2</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
 </animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
@@ -276,16 +244,6 @@ sweat by maggse
 		<z-m>0.250</z-m>
 	</center>
 </animation>
-<animation>
-	<type>material</type>
-	<object-name>throttle_lever_3</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
-</animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
@@ -346,16 +304,6 @@ sweat by maggse
 		<y-m>-0.205</y-m>
 		<z-m>0.250</z-m>
 	</center>
-</animation>
-<animation>
-	<type>material</type>
-	<object-name>throttle_lever_4</object-name>
-	 <emission>
-		 <red>0.9</red>
-		 <green>0.5</green>
-		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
-	</emission>
 </animation>
 
 <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->

@@ -11,14 +11,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.001</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -38,14 +38,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.002</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -65,14 +65,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.003</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -92,14 +92,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.004</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -119,14 +119,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.005</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -146,14 +146,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.006</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -173,14 +173,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.007</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -200,14 +200,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.008</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -227,14 +227,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.009</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -254,14 +254,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.010</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -281,14 +281,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.011</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -308,14 +308,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.012</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -335,14 +335,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.013</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -362,14 +362,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.014</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -389,14 +389,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.015</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>
@@ -416,14 +416,14 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>engine_outlet.016</object-name>
-	 <property>engines/engine[2]/n2</property>
+	 <property>engines/engine[2]/nozzle-pos-norm</property>
 	 <interpolation>
 		 <entry>
-			 <ind>100.0</ind>
+			 <ind>1</ind>
 			 <dep>2.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>75.0</ind>
+			 <ind>0</ind>
 			 <dep>17.0</dep>
 		 </entry>
 	 </interpolation>

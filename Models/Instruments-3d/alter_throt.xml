@@ -6,209 +6,264 @@ maggse
 
 <path>alter_throt.ac</path>
 
-<!-- afterburner switches -->
-<animation>
-	<type>rotate</type>
-	<object-name>eng_0</object-name>
-	<property>controls/switches/engines/afterburner[0]</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>30.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>-30.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
-		<z>0.0</z>
-	</axis>
-	<center>
-		<x-m>0.01273</x-m>
-		<y-m>0.2201</y-m>
-		<z-m>0.06411    </z-m>
-	</center>
-</animation>
-
-<animation>
-	<type>pick</type>
-	<object-name>eng_0</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.3</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/switches/engines/afterburner[0]</property>
-		</binding>
-	</action>
-</animation>
-
-<animation>
-	<type>rotate</type>
-	<object-name>eng_1</object-name>
-	<property>controls/switches/engines/afterburner[1]</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>30.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>-30.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
-		<z>0.0</z>
-	</axis>
-	<center>
-		<x-m>0.01273</x-m>
-		<y-m>0.25530</y-m>
-		<z-m>0.06418</z-m>
-	</center>
-</animation>
-
-<animation>
-	<type>pick</type>
-	<object-name>eng_1</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.3</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/switches/engines/afterburner[1]</property>
-		</binding>
-	</action>
-</animation>
-
-<animation>
-	<type>rotate</type>
-	<object-name>eng_2</object-name>
-	<property>controls/switches/engines/afterburner[2]</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>30.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>-30.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
-		<z>0.0</z>
-	</axis>
-	<center>
-		<x-m>0.01273</x-m>
-		<y-m>0.29520</y-m>
-		<z-m>0.06418</z-m>
-	</center>
-</animation>
-
-<animation>
-	<type>pick</type>
-	<object-name>eng_2</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.3</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/switches/engines/afterburner[2]</property>
-		</binding>
-	</action>
-</animation>
-
-<animation>
-	<type>rotate</type>
-	<object-name>eng_3</object-name>
-	<property>controls/switches/engines/afterburner[3]</property>
-	<interpolation>
-		<entry>
-			<ind>0.0</ind>
-			<dep>30.0</dep>
-		</entry>
-		<entry>
-			<ind>1.0</ind>
-			<dep>-30.0</dep>
-		</entry>
-	</interpolation>
-	<axis>
-		<x>0.0</x>
-		<y>1.0</y>
-		<z>0.0</z>
-	</axis>
-	<center>
-		<x-m>0.01273</x-m>
-		<y-m>0.33050</y-m>
-		<z-m>0.06418</z-m>
-	</center>
-</animation>
-
-<animation>
-	<type>pick</type>
-	<object-name>eng_3</object-name>
-	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.3</interval-sec>
-		<binding>
-			<command>property-toggle</command>
-			<property>controls/switches/engines/afterburner[3]</property>
-		</binding>
-	</action>
-</animation>
-
 <animation> 
 	<type>select</type>
 	<object-name>TTO_light</object-name> 
-        <condition>  
+        <condition> 
+         <and> 
+         <equals>  
+          <property>controls/flight/elevator-trim</property>
+           <value>-0.5</value>
+         </equals>
+         <equals>  
+          <property>controls/flight/rudder</property>
+           <value>0.0</value>
+         </equals>
+         <equals>  
+          <property>controls/flight/flaps</property>
+           <value>0.5</value>
+         </equals>
          <equals>  
           <property>controls/switches/TTO_button</property>
-           <value>1</value>
+           <value>1.0</value>
          </equals>
+         </and>
         </condition> 
- </animation> 
+ </animation>
 
 <animation> 
- <type>translate</type> 
+ <type>knob</type> 
+  <object-name>eng_0</object-name>
+  <property>controls/switches/eng_0_stby_throttle</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.009</x-m>
+		<y-m>0.275047</y-m>
+		<z-m>0.063526</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/eng_0_stby_throttle</property>  
+                        <min>-1</min> 
+                        <max>1</max>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/eng_0_stby_throttle</property> 
+                        <value>0</value> 
+		</binding>
+	</release>
+      </animation> 
+
+
+<animation> 
+ <type>knob</type> 
+  <object-name>eng_1</object-name>
+  <property>controls/switches/eng_1_stby_throttle</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.009</x-m>
+		<y-m>0.275047</y-m>
+		<z-m>0.063526</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/eng_1_stby_throttle</property>  
+                        <min>-1</min> 
+                        <max>1</max>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/eng_1_stby_throttle</property> 
+                        <value>0</value> 
+		</binding>
+	</release>
+      </animation> 
+
+
+<animation> 
+ <type>knob</type> 
+  <object-name>eng_2</object-name>
+  <property>controls/switches/eng_2_stby_throttle</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.009</x-m>
+		<y-m>0.275047</y-m>
+		<z-m>0.063526</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/eng_2_stby_throttle</property>  
+                        <min>-1</min> 
+                        <max>1</max>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/eng_2_stby_throttle</property> 
+                        <value>0</value> 
+		</binding>
+	</release>
+      </animation> 
+
+
+<animation> 
+ <type>knob</type> 
+  <object-name>eng_3</object-name>
+  <property>controls/switches/eng_3_stby_throttle</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.009</x-m>
+		<y-m>0.275047</y-m>
+		<z-m>0.063526</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/eng_3_stby_throttle</property>  
+                        <min>-1</min> 
+                        <max>1</max>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/eng_3_stby_throttle</property> 
+                        <value>0</value> 
+		</binding>
+	</release>
+      </animation> 
+
+
+<animation> 
+ <type>knob</type> 
+  <object-name>stby_trim_pitch</object-name>
+  <property>controls/switches/stby_trim_pitch</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.01</x-m>
+		<y-m>0.227725</y-m>
+		<z-m>0.000634</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/stby_trim_pitch</property>  
+                        <min>-1</min> 
+                        <max>1</max>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/stby_trim_pitch</property> 
+                        <value>0</value> 
+		</binding>
+	</release>
+      </animation> 
+
+<animation> 
+ <type>knob</type> 
+  <object-name>stby_trim_roll</object-name>
+  <property>controls/switches/stby_trim_roll</property>
+	<factor>30</factor>
+	<center>
+		<x-m>0.009</x-m>
+		<y-m>0.276869</y-m>
+		<z-m>0.00031</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>0.0</y>
+		 <z>1.0</z>
+	 </axis>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/stby_trim_roll</property>  
+                        <min>-1</min> 
+                        <max>1</max>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/stby_trim_roll</property> 
+                        <value>0</value> 
+		</binding>
+	</release>
+      </animation> 
+
+<animation> 
+ <type>slider</type> 
   <object-name>TTO</object-name>
   <property>controls/switches/TTO_button</property>
-    <factor>0.003</factor> 
+    <factor>0.008</factor> 
  	<axis>
 		<x>-1</x>
 		<y>0</y>
 		<z>0</z>
-	</axis>
-	 <center>
-		 <x-m>0.01585</x-m>
-		 <y-m>0.2761</y-m>
-		 <z-m>-0.053</z-m>
-	 </center>   
-   </animation> 
-
-<animation>
-	<type>pick</type>
-	<object-name>TTO</object-name>
+	</axis> 
 	<action>
-		<button>0</button>
-		<repeatable>true</repeatable>
-		<interval-sec>0.3</interval-sec>
 		<binding>
-			<command>property-toggle</command>
+			<command>property-assign</command>
 			<property>controls/switches/TTO_button</property> 
-			<min>0.0</min>
-			<max>1.0</max>
+			<value>1</value>			
+		</binding>
+		<binding>
+	        <command>property-assign</command>
+		<property>controls/flight/elevator-trim</property> 
+                <value>-0.5</value>
+		</binding>
+		<binding>
+	        <command>property-assign</command>
+		<property>controls/flight/rudder</property> 
+                <value>0.0</value>
 		</binding>
 	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/TTO_button</property> 
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>0</max>
+		</binding>
+	</release>
+
 </animation>
 
  <animation>
@@ -223,11 +278,13 @@ maggse
 	<object-name>stby_ptch</object-name>
     <object-name>trim</object-name>
 	<object-name>TTO</object-name>
+	 <object-name>4Screws</object-name>
+	 <object-name>tto</object-name>
 	<emission>
 		<red>0.9</red>
 		<green>0.5</green>
 		<blue>0.9</blue>
-		<factor-prop>controls/lighting/instruments-norm</factor-prop>
+		<factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
 </animation>
 

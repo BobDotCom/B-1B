@@ -2,20 +2,20 @@
 <PropertyList> 
 
 <model>
- <name>WhiteLightleft</name>
+ <name>Whitelightleft</name>
  <path>Aircraft/generic/spotlight.xml</path>
  <offsets>
-  <x-m>3.5</x-m>
-  <y-m>-21.2</y-m>
-  <z-m>-1.0</z-m>
+ <x-m>15.8</x-m>
+ <y-m>-10.2</y-m>
+ <z-m>-0.969</z-m>
  </offsets>
  <overlay>
   <params>
-   <name>WhiteLightleft</name>
+   <name>Whitelightleft</name>
    <power-source>controls/lighting/nav-lights</power-source>
    <direction>
-    <x>0.5</x>
-    <y>0.8</y>
+    <x>-0.1</x>
+    <y>-0.0</y>
     <z>0.0</z>
    </direction> 
    <ambient>
@@ -32,17 +32,18 @@
  </overlay>
 </model> 
 
-<animation>
-  <name>WhiteLightleft</name>  
+
+ <animation>
+  <name>Whitelightleft</name>
   <type>scale</type>
-  <x-offset>2.0</x-offset>
-  <y-offset>2.0</y-offset>
-  <z-offset>2.0</z-offset>
+  <x-offset>1.5</x-offset>
+  <y-offset>1.5</y-offset>
+  <z-offset>1.5</z-offset>
   <center>
-  <x-m>3.5</x-m>
-  <y-m>-21.2</y-m>
-  <z-m>-1.0</z-m>
-  </center> 
+ <x-m>15.55</x-m>
+ <y-m>-10.45</y-m>
+ <z-m>-0.969</z-m>
+  </center>
  </animation>
 
 
