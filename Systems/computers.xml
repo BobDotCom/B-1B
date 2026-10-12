@@ -440,4 +440,19 @@
 
 </channel>
 
+<channel name="Fuel flow indicator logic" execrate="8">
+
+		<fcs_function name="/engines/full_fuel_flow">
+			<function>
+				<sum>
+					<property>/engines/engine[0]/fuel-flow_pph</property>
+					<property>/engines/engine[1]/fuel-flow_pph</property>
+					<property>/engines/engine[2]/fuel-flow_pph</property>
+					<property>/engines/engine[3]/fuel-flow_pph</property>
+				</sum>
+			</function>
+		</fcs_function>
+
+</channel>
+
 </system>

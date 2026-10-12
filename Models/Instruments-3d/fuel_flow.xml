@@ -5,16 +5,12 @@
 <animation> 
   <type>select</type> 
    <condition> 
-    <greater-than> 
+    <less-than> 
      <property>systems/electrical/generic-pwr</property>
      <value>27</value> 
-    </greater-than>
+    </less-than>
    </condition> 
    <object-name>Bar</object-name>
-   <object-name>Digit_100</object-name>
-   <object-name>Digit_10</object-name>
-   <object-name>Digit_1</object-name>
-   <object-name>Digit_0.1</object-name>
   </animation> 
   
   <animation> 
@@ -92,6 +88,11 @@
  <animation>
 	 <type>material</type>
 	 <object-name>fuel_flow</object-name>
+	 <object-name>Digit_0.1</object-name>
+	 <object-name>Digit_1</object-name>
+	 <object-name>Digit_10</object-name>
+	 <object-name>Digit_100</object-name>
+	 <object-name>Bar</object-name>
 	 <emission>
 		 <red>0.9</red>
 		 <green>0.5</green>
