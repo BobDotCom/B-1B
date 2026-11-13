@@ -48,8 +48,8 @@
 		</switch>
 
 		<switch name="/systems/computers/adc_switch/pressure-inhg_output">
-			<default value="/systems/pitot[0]/total-pressure-inhg"/>			
-                	<test logic="AND" value="/systems/pitot[1]/total-pressure-inhg">
+			<default value="/instrumentation/CADC1-altimeter/setting-inhg"/>			
+                	<test logic="AND" value="/instrumentation/CADC2-altimeter/setting-inhg">
 					/controls/switches/ADC-select-switch eq 1
 			</test>
 		</switch>
@@ -454,5 +454,7 @@
 		</fcs_function>
 
 </channel>
+
+
 
 </system>

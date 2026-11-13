@@ -340,7 +340,15 @@ maggse
 		    <repeatable>true</repeatable>
 		    <binding>
 		      <command>property-adjust</command>
-		      <property>instrumentation/altimeter/setting-inhg</property>
+		      <property>instrumentation/CADC1-altimeter/setting-inhg</property>
+		      <step>0.01</step>
+		      <min>21</min>
+		      <max>36</max>
+		      <wrap>false</wrap>
+		    </binding>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>instrumentation/CADC2-altimeter/setting-inhg</property>
 		      <step>0.01</step>
 		      <min>21</min>
 		      <max>36</max>
@@ -352,7 +360,15 @@ maggse
 		    <repeatable>true</repeatable>
 		    <binding>
 		      <command>property-adjust</command>
-		      <property>instrumentation/altimeter/setting-inhg</property>
+		      <property>instrumentation/CADC1-altimeter/setting-inhg</property>
+		      <step>-0.01</step>
+		      <min>21</min>
+		      <max>36</max>
+		      <wrap>false</wrap>
+		    </binding>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>instrumentation/CADC2-altimeter/setting-inhg</property>
 		      <step>-0.01</step>
 		      <min>21</min>
 		      <max>36</max>
