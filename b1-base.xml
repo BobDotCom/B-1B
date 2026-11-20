@@ -677,6 +677,14 @@ B-1B set file.
 
     <!-- Start with the Parking Brake On -->
     <controls>
+        <cdu-900>
+            <date-string type="string">howdy</date-string>
+            <dec-string type="string">howdy</dec-string>
+            <dms-string type="string">howdy</dms-string>
+            <curr-stpt-id-string type="string">howdy</curr-stpt-id-string>
+            <curr-stpt-dist-string type="string">howdy</curr-stpt-dist-string>
+            <curr-stpt-bear-string type="string">howdy</curr-stpt-bear-string>
+        </cdu-900>
         <armament>
             <master-arm-switch type="int">0</master-arm-switch>
             <trigger type="bool">false</trigger>
