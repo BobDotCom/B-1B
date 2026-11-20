@@ -9,23 +9,23 @@ maggse
  <animation>
    <type>rotate</type>
    <object-name>needle</object-name>
-   <property>position/altitude-agl-ft</property>
+   <property>/systems/computers/altitude_radars/dial_needle_rate</property>
 <interpolation>
      <entry>
        <ind>0</ind>
-       <dep>-5</dep>
+       <dep>0</dep>
      </entry>
      <entry>
        <ind>500</ind>
-       <dep>-170</dep>
+       <dep>-180</dep>
      </entry>
      <entry>
        <ind>1000</ind>
-       <dep>-205</dep>
+       <dep>-215</dep>
      </entry>
      <entry>
-	     <ind>35000</ind>
-	     <dep>-324</dep>
+	     <ind>4000</ind>
+	     <dep>-325</dep>
      </entry>
 </interpolation>
   <axis>
@@ -43,19 +43,95 @@ maggse
   <animation>
     <type>rotate</type>
     <object-name>bug</object-name>
-    <property>sim/model/jrb-usn/radar-altitude-decision-height</property>
+    <property>instrumentation/radar-altimeter/target</property>
     <interpolation>
-      <entry><ind>    0 </ind><dep>   0 </dep></entry>
-      <entry><ind>  200 </ind><dep> 212 </dep></entry>
-      <entry><ind> 1000 </ind><dep> 272 </dep></entry>
-      <entry><ind> 5000 </ind><dep> 320 </dep></entry>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>500</ind><dep>-180</dep></entry>
+      <entry><ind>1000</ind><dep>-215</dep></entry>
+      <entry><ind>4000</ind><dep>-325</dep></entry>
     </interpolation>
     <axis>
-      <x> -1 </x>
+      <x>  1 </x>
       <y>  0 </y>
       <z>  0 </z>
     </axis>
   </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bug</object-name>
+    <property>systems/electrical/bus/ac-1/voltage</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>10</dep></entry>
+      <entry><ind>200</ind><dep>10</dep></entry>
+      <entry><ind>230</ind><dep>0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>off_flag</object-name>
+	 <property>systems/computers/altitude_radars/altitude_radar_switch/current_value</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+
+		 <entry>
+			 <ind>9.0</ind>
+			 <dep>-0.007</dep>
+		 </entry>
+		 <entry>
+			 <ind>4000.0</ind>
+			 <dep>-0.007</dep>
+		 </entry>
+	 </interpolation>
+	 <axis>
+		 <x>0.0</x>
+		 <y>0.0</y>
+		 <z>1.0</z>
+	 </axis>
+  </animation>
+
+  <animation>
+        <type>knob</type>
+        <object-name>AGL_set</object-name>
+        <property>instrumentation/radar-altimeter/target</property>
+        <center>
+            <x-m>0.009203</x-m>
+            <y-m>-0.031464</y-m>
+            <z-m>-0.031657</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/radar-altimeter/target</property>
+        	<factor>20</factor>
+                <min>0</min>
+                <max>4000</max>
+                <wrap>false</wrap>
+		<condition>
+  			<greater-than>
+    			<property>systems/electrical/bus/ac-1/voltage</property>
+    			<value>220</value>
+  			</greater-than>
+		</condition>
+           </binding>
+        </action>
+    </animation>
+
+
  <animation>
 	 <type>material</type>
 	 <object-name>needle</object-name>
@@ -65,7 +141,7 @@ maggse
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/AFCS_indexers_pilot</factor-prop>
 	</emission>
 </animation>
 

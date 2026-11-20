@@ -19,8 +19,8 @@ sweat by maggse
 			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>35000.0</ind>
-			 <dep>0.108</dep>
+			 <ind>30000.0</ind>
+			 <dep>0.095</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -51,8 +51,12 @@ sweat by maggse
 			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
+			 <ind>34500.0</ind>
+			 <dep>0.077</dep>
+		 </entry>
+		 <entry>
 			 <ind>40000.0</ind>
-			 <dep>0.108</dep>
+			 <dep>0.096</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -83,8 +87,8 @@ sweat by maggse
 			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>25000.0</ind>
-			 <dep>0.108</dep>
+			 <ind>20000.0</ind>
+			 <dep>0.091</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -116,7 +120,7 @@ sweat by maggse
 		 </entry>
 		 <entry>
 			 <ind>50000.0</ind>
-			 <dep>0.108</dep>
+			 <dep>0.097</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -147,8 +151,12 @@ sweat by maggse
 			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>35000.0</ind>
-			 <dep>0.108</dep>
+			 <ind>29250.0</ind>
+			 <dep>0.093</dep>
+		 </entry>
+		 <entry>
+			 <ind>30000.0</ind>
+			 <dep>0.095</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -179,8 +187,12 @@ sweat by maggse
 			 <dep>0.0</dep>
 		 </entry>
 		 <entry>
-			 <ind>35000.0</ind>
-			 <dep>0.108</dep>
+			 <ind>29250.0</ind>
+			 <dep>0.093</dep>
+		 </entry>
+		 <entry>
+			 <ind>30000.0</ind>
+			 <dep>0.095</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -214,7 +226,7 @@ sweat by maggse
 		 </entry>
 		 <entry>
 			 <ind>10000.0</ind>
-			 <dep>0.108</dep>
+			 <dep>0.095</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>
@@ -246,7 +258,7 @@ sweat by maggse
 		 </entry>
 		 <entry>
 			 <ind>10000.0</ind>
-			 <dep>0.108</dep>
+			 <dep>0.095</dep>
 		 </entry>
 	 </interpolation>
 	 <axis>

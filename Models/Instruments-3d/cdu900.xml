@@ -262,8 +262,28 @@ sweat by maggse
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>line0</object-name>
+  <object-name>line1</object-name>
+  <object-name>line2</object-name>
+  <object-name>line3</object-name>
+  <object-name>line4</object-name>
+  <object-name>line5</object-name>
+  <object-name>line6</object-name>
+  <object-name>line2_select</object-name>
+  <object-name>line4_select</object-name>
+  <object-name>line6_select</object-name>
+	 <condition>
+           <greater-than> 
+             <property>systems/electrical/bus/ac-3/voltage</property>
+             <value>220</value>
+           </greater-than> 
+	 </condition>
 </animation>
 
 <!-- menu buttons -->
@@ -586,7 +606,7 @@ sweat by maggse
 		<red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
 </animation>
 
@@ -597,7 +617,7 @@ sweat by maggse
 		<red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
 </animation>
 

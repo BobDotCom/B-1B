@@ -37,35 +37,308 @@
 		 <red>0.9</red>
 		 <green>0.5</green>
 		 <blue>0.9</blue>
-		 <factor-prop>controls/lighting/instruments-norm</factor-prop>
+		 <factor-prop>controls/lighting/centre_console</factor-prop>
 	</emission>
   </animation>
 
-   <animation>
-	 <type>rotate</type>
-	 <object-name>SPOILERS</object-name>
-	 <property>controls/flight/spoilers</property>
-	 <interpolation>
-		 <entry>
-			 <ind>0.0</ind>
-			 <dep>30.0</dep>
-		 </entry>
-		 <entry>
-			 <ind>1.0</ind>
-			 <dep>-30.0</dep>
-		 </entry>
-	 </interpolation>
+<animation>
+	<type>knob</type>
+	 <object-name>ROLL-AUG</object-name>
+	<property>controls/switches/Roll-aug-switch</property>
+	<factor>30</factor>
+	 <center>
+		 <x-m>-0.0356</x-m>
+		 <y-m>-0.0338</y-m>
+		 <z-m>0.0015/</z-m>
+    	 </center>
 	 <axis>
 		 <x>0.0</x>
-		 <y>1.0</y>
+		 <y>-1.0</y>
 		 <z>0.0</z>
 	 </axis>
+
+
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/Roll-aug-switch</property>
+			 <min>0</min>
+			 <max>2</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/Roll-aug-switch</property>
+			<step>0</step>
+			<min>0</min>
+			<max>1</max>
+		</binding>
+	</release>
+</animation>
+
+<animation>
+	<type>knob</type>
+	 <object-name>YAW-AUG</object-name>
+	<property>controls/switches/Yaw-aug-switch</property>
+	<factor>30</factor>
+	 <center>
+		 <x-m>-0.0356</x-m>
+		 <y-m>-0.0007</y-m>
+		 <z-m>0.0007/</z-m>
+   	 </center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+
+
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/Yaw-aug-switch</property>
+			 <min>0</min>
+			 <max>2</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/Yaw-aug-switch</property>
+			<step>0</step>
+			<min>0</min>
+			<max>1</max>
+		</binding>
+	</release>
+</animation>
+
+<animation>
+	<type>knob</type>
+	 <object-name>PTCH-AUG</object-name>
+	<property>controls/switches/Pitch-aug-switch</property>
+	<factor>30</factor>
+	 <center>
+		 <x-m>-0.0354</x-m>
+		 <y-m>-0.064</y-m>
+		 <z-m>0.000/</z-m>
+  	 </center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+
+
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/Pitch-aug-switch</property>
+			 <min>0</min>
+			 <max>2</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/Pitch-aug-switch</property>
+			<step>0</step>
+			<min>0</min>
+			<max>1</max>
+		</binding>
+	</release>
+</animation>
+
+
+<animation> 
+ <type>knob</type> 
+  <object-name>ALT-WG-SWP</object-name>
+  <property>controls/switches/alt-wing-sweep</property>
+	<factor>35</factor>
+	<center>
+		<x-m>-0.000958</x-m>
+		<y-m>-0.0488</y-m>
+		<z-m>0.01251</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>0.0</y>
+		 <z>-1.0</z>
+	 </axis>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/alt-wing-sweep</property>  
+                        <min>0</min> 
+                        <max>3</max>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/alt-wing-sweep</property>
+                        <step>0</step> 
+                        <min>0</min> 
+                        <max>2</max> 
+		</binding>
+	</release>
+      </animation>
+
+<animation>
+	<type>knob</type>
+	 <object-name>SPOILERS</object-name>
+	<property>controls/switches/Spoilers-switch</property>
+	<factor>30</factor>
 	 <center>
 		 <x-m>-0.03563</x-m>
 		 <y-m> 0.03027</y-m>
 		 <z-m> 0.00165/</z-m>
-   </center>
- </animation>
+   	 </center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+
+
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/Spoilers-switch</property>
+			 <min>0</min>
+			 <max>2</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/Spoilers-switch</property>
+			<step>0</step>
+			<min>0</min>
+			<max>1</max>
+		</binding>
+	</release>
+</animation>
+
+<animation>
+	<type>knob</type>
+	 <object-name>Flap-Slat-Reset</object-name>
+	<property>controls/switches/Flap-slat-switch</property>
+	<factor>30</factor>
+	 <center>
+		 <x-m>-0.069064</x-m>
+		 <y-m>0.025878</y-m>
+		 <z-m>0.001</z-m>
+   	 </center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+
+
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/Flap-slat-switch</property>
+			 <min>0</min>
+			 <max>2</max>
+		 </binding>
+	 </action>
+	<release>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/Flap-slat-switch</property>
+			<step>0</step>
+			<min>0</min>
+			<max>1</max>
+		</binding>
+	</release>
+</animation>
+
+
+<animation>
+	<type>knob</type>
+	 <object-name>YAW-TRM</object-name>
+	<property>controls/switches/Yaw-trim-aug-switch</property>
+	<factor>30</factor>
+	 <center>
+		 <x-m>-0.069064</x-m>
+		 <y-m>0.025878</y-m>
+		 <z-m>0.001</z-m>
+   	 </center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+
+
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/Yaw-trim-aug-switch</property>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+
+<animation>
+	<type>knob</type>
+	 <object-name>ROLL-TRM</object-name>
+	<property>controls/switches/Roll-trim-aug-switch</property>
+	<factor>30</factor>
+	 <center>
+		 <x-m>-0.069064</x-m>
+		 <y-m>0.025878</y-m>
+		 <z-m>0.001</z-m>
+   	 </center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+
+
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/Roll-trim-aug-switch</property>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
+
+
+<animation>
+	<type>knob</type>
+	 <object-name>PTCH-TRM</object-name>
+	<property>controls/switches/Pitch-trim-aug-switch</property>
+	<factor>30</factor>
+	 <center>
+		 <x-m>-0.069064</x-m>
+		 <y-m>0.025878</y-m>
+		 <z-m>0.001</z-m>
+   	 </center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>-1.0</y>
+		 <z>0.0</z>
+	 </axis>
+
+
+	 <action>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>controls/switches/Pitch-trim-aug-switch</property>
+			 <min>-1</min>
+			 <max>1</max>
+		 </binding>
+	 </action>
+</animation>
 
  <!-- clickable buttons block (osg only!) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 

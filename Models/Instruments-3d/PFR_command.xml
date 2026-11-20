@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>PFR_command.ac</path>
+
+<animation> 
+ <type>knob</type> 
+  <object-name>PFR_set</object-name>
+  <property>controls/switches/PFR_set</property>
+	<factor>30</factor>
+	<center>
+		<x-m>-18.107</x-m>
+		<y-m>0.34312</y-m>
+		<z-m>1.04</z-m>
+	</center>
+	 <axis>
+		 <x>0.0</x>
+		 <y>1.0</y>
+		 <z>0.0</z>
+	 </axis>
+	<action>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/switches/PFR_set</property>  
+                        <min>-1</min> 
+                        <max>1</max>			
+		</binding>
+	</action>
+	<release> 
+		<binding>
+			<command>property-assign</command>
+			<property>controls/switches/PFR_set</property> 
+                        <value>0</value> 
+		</binding>
+	</release>
+      </animation> 
+
+</PropertyList>
